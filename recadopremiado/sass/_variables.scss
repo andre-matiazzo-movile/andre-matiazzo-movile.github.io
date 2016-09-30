@@ -1,0 +1,63 @@
+@font-face {
+	font-family: 'OfficinaSerifBookNormal';
+	src: url('../fonts/offs_-webfont.eot');
+	src: url('../fonts/offs_-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/offs_-webfont.woff') format('woff'),
+	url('../fonts/offs_-webfont.ttf') format('truetype'),
+	url('../fonts/offs_-webfont.svg#OfficinaSerifBookNormal') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OfficinaSerifBoldNormal';
+	src: url('../fonts/offs_b-webfont.eot');
+	src: url('../fonts/offs_b-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/offs_b-webfont.woff') format('woff'),
+	url('../fonts/offs_b-webfont.ttf') format('truetype'),
+	url('../fonts/offs_b-webfont.svg#OfficinaSerifBoldNormal') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+// COLORS
+$accent: #660099;
+$darkgray: #7E7E7E;
+$silver: #CACACA;
+
+// GRADIENT PINK TO PURPLE
+@mixin gr-pink-purple {
+	background: rgb(235,60,125); /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(235,60,125,1) 20%, rgba(102,0,153,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(235,60,125,1) 20%,rgba(102,0,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(235,60,125,1) 20%,rgba(102,0,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb3c7d', endColorstr='#660099',GradientType=1 ); /* IE6-9 */
+}
+
+// FONTS
+$regular: 'OfficinaSerifBookNormal', Verdana, Arial, sans-serif;
+$bold: 'OfficinaSerifBoldNormal', Verdana, Arial, sans-serif;
+@mixin f6 {
+	font-size: 0.875rem;
+	line-height: 1.25;
+}
+@mixin f5 {
+	font-size: 1rem;
+	line-height: 1.25;
+}
+@mixin f4 {
+	font-size: 1.25rem;
+	line-height: 1.25;
+}
+@mixin f3 {
+	font-size: 1.5rem;
+	line-height: 1.35;
+}
+@mixin f2 {
+	font-size: 2.25rem;
+	line-height: 1.15;
+}
+@mixin f1 {
+	font-size: 3rem;
+	line-height: 1;
+}

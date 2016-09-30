@@ -1,0 +1,117 @@
+doctype html
+html
+	head
+		include _head.pug
+	body
+		header
+			.container
+				img(src="img/vivo-logo.png")
+				ul.vivo-nav
+					li 
+						a(href="http://www.vivo.com.br/portalweb/appmanager/env/web?_nfpb=true&_nfls=false&_pageLabel=vcPrincipalBook") para você
+					li 
+						a(href="http://www.vivo.com.br/portalweb/appmanager/env/web?_nfpb=true&_nfls=false&_pageLabel=empPrincipalBook") para empresas
+					li 
+						a(href="http://www.vivo.com.br/portalweb/appmanager/env/web?_nfpb=true&_nfls=false&_pageLabel=vcOfertaAtacadoPage") para operadoras
+					li 
+						a(href="http://www.vivo.com.br//portalweb/appmanager/env/web?_nfpb=true&_nfls=false&_pageLabel=aVivoPrincipalBook") a vivo
+		nav
+			.container
+				div.nav-mobile__trigger Mais
+				ul
+					li 
+						a(href="#") Prêmios
+					li 	
+						a(href="#") Veja se ganhou
+					li.nav-mobile 
+						ul
+							li
+								a(href="#") Regulamento
+							li 
+								a(href="#") A promoção
+							li 
+								a(href="#") Dúvidas frequentes
+							li 
+								a(href="#") Fale conosco
+		section.hero
+			div.hero__title
+				h1 Recado premiado
+				p Acesse sua caixa postal e ganhe prêmios na hora
+		section.prizes
+			.container
+				.prizes__title
+					h2 Todo mundo ganha
+					p São prêmios em dinheiro, descontos e gratuidade em marcas como:
+				#prizes__grid
+					.grid__row
+						div.grid__item
+							img(src="img/grid/polishop.jpg")
+						div.grid__item
+							img(src="img/grid/fnac.jpg")
+						div.grid__item
+							img(src="img/grid/nike.jpg")
+						div.grid__item
+							img(src="img/grid/americanas.jpg")
+						div.grid__item
+							img(src="img/grid/saraiva.jpg")
+						div.grid__item
+							img(src="img/grid/kipling.jpg")
+						div.grid__item
+							img(src="img/grid/camiseteria.jpg")
+						div.grid__item
+							img(src="img/grid/centauro.jpg")
+					.grid__row
+						div.grid__item
+							img(src="img/grid/quem-disse-berenice.jpg")
+						div.grid__item
+							img(src="img/grid/boticario.jpg")
+						div.grid__item
+							img(src="img/grid/playkids.jpg")
+						div.grid__item
+							img(src="img/grid/cultura.jpg")
+						div.grid__item
+							img(src="img/grid/allbags.jpg")
+						div.grid__item
+							img(src="img/grid/beauty-box.jpg")
+						div.grid__item
+							img(src="img/grid/carrefour.jpg")
+						div.grid__item
+							img(src="img/grid/torpedo-info.jpg")
+					.grid__row
+						div.grid__item
+							img(src="img/grid/sephora.jpg")
+						div.grid__item
+							img(src="img/grid/the-north-face.jpg")
+						div.grid__item
+							img(src="img/grid/quiz.jpg")
+						div.grid__item
+							img(src="img/grid/pandora.jpg")
+						div.grid__item
+							img(src="img/grid/drogaria-saopaulo.jpg")
+						div.grid__item
+							img(src="img/grid/pandora.jpg")
+						div.grid__item
+							img(src="img/grid/livraria-da-folha.jpg")
+						div.grid__item
+							img(src="img/grid/havan.jpg")
+				.prizes__see-more
+					a(href="#") Veja todos os prêmios
+		section.cta-banner
+			.container
+				h1 Ligue agora para *555 e comece a concorrer
+				.cta-sticker
+					img(src="img/vivinho.png")
+				p Veja também #[a(href="#") se você ganhou] ou #[a(href="#") conheça o regulamento]
+		.container
+			footer
+				img(src="img/telefonica.jpg").telefonica
+				img(src="img/vivo-patrocinadora.png").patrocinadora
+				img(src="img/viva-tudo.png").assinatura
+
+
+						
+
+
+		script(src="js/jquery.min.js", type="text/javascript")
+		script(src="js/menu-mobile.js", type="text/javascript")
+
