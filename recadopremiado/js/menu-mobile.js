@@ -6,7 +6,7 @@ $(document).ready(function () {
 		if (toggleText == "Mais") {
 			$('.nav-mobile__trigger').text("Menos");
 			$('.nav-mobile').css({
-				'height': '212px',
+				'height': '232px',
 				'opacity': '1'
 			});
 		} else {

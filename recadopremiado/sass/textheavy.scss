@@ -1,0 +1,37 @@
+// A stylesheet for pages in which the main content are big blocks of text
+
+#textheavy {
+	float: left;
+	width: 100%;
+	margin-top: 36px;
+	h1 {
+		color: $accent;
+	}
+	h2 {
+		margin-top: 16px;
+	}
+	h4 {
+		margin-top: 32px;
+		font-family: $bold;
+		letter-spacing: 0.05rem;
+		color: #000;
+		&::first-letter {
+			margin-left: -24px;
+		}
+	}
+	p {
+		margin-top: 16px;
+		color: $darkgray;
+		max-width: 700px;
+		@include f5;
+	}
+}
+
+@media (max-width: 750px) {
+	
+	#textheavy {
+		h4::first-letter {
+			margin-left: 0;
+		}
+	}
+}

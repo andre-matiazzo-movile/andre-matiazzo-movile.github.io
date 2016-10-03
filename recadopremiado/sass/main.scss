@@ -1,4 +1,6 @@
 @import "_variables";
+@import "_tables";
+@import "textheavy";
 
 html {
 	-moz-osx-font-smoothing: grayscale;
@@ -32,8 +34,20 @@ h2 {
 	font-family: $bold;
 }
 
+h3 {
+	@include f3;
+}
+
+h4 {
+	@include f4;
+}
+
 li {
 	list-style-type: none;
+}
+
+a {
+	color: $accent;
 }
 
 .container {
@@ -80,6 +94,7 @@ nav {
 			float: left;
 			padding: 24px 0;
 			margin-right: 32px;
+			@include f5;
 			a {
 				padding-bottom: 2px;
 				text-decoration: none;
@@ -100,6 +115,7 @@ nav {
 	padding: 0;
 	margin-right: 0;
 	height: 0;
+	opacity: 0;
 	-webkit-transition: all ease 200ms;
 	-o-transition: all ease 200ms;
 	transition: all ease 200ms;
@@ -261,10 +277,16 @@ footer {
 	}
 }
 
+@media (max-width: 1200px) {
+	.container {
+		max-width: 95%;
+	}
+}
+
 @media (max-width: 750px) {
 
 	.nav-mobile {
-		// display: none;
+		float: left;
 		width: 100%;
 		height: 0;
 		opacity: 0;

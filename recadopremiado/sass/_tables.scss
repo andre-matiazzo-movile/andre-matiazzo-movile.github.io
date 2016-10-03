@@ -1,0 +1,97 @@
+@import "_variables";
+
+table { 
+	width: 100%; 
+	max-width: 840px;
+	border-collapse: collapse;
+	margin: 24px 0;
+	color: $darkgray;
+}
+/* Zebra striping */
+th { 
+	color: #000;
+	border-bottom: 1px solid #000;
+	font-family: $bold;
+	vertical-align: top;
+}
+td, th { 
+	padding: 8px 16px 8px 0; 
+	text-align: left; 
+	line-height: 1.25rem;
+}
+
+@media only screen and (max-width: 750px) {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr {
+		border: 1px solid $silver;
+		border-bottom: none;
+	}
+
+	tr:last-child {
+		border-bottom: 1px solid $silver;
+	}
+
+	tr td:last-child {
+		border-bottom: none;
+	}
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 8px;
+		left: 8px;
+		width: 45%; 
+		padding-right: 10px; 
+		font-family: $bold;
+		color: #000;
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Série"; }
+	td:nth-of-type(2):before { content: "Contemplados - Vivo Recado"; }
+	td:nth-of-type(3):before { content: "Valor líquido unitário (em R$)"; }
+	td:nth-of-type(4):before { content: "Sugestão de uso"; }
+
+	.sorteio {
+		td:nth-of-type(1):before { content: "Série"; }
+		td:nth-of-type(2):before { content: "Contemplados - Vivo Recado"; }
+		td:nth-of-type(3):before { content: "Valor líquido unitário (em R$)"; }
+		td:nth-of-type(4):before { content: "Sugestão de uso"; }
+	}
+}
+
+@media only screen and (max-width: 580px) {
+
+	td {
+		padding-left: 60%;
+		&::before {
+			width: 55%;
+		}
+	}
+
+
+}

@@ -1,11 +1,12 @@
 doctype html
 html
 	head
-		include _head.pug
+		include includes/_head.pug
 	body
 		header
 			.container
-				img(src="img/vivo-logo.png")
+				a(href="www.vivo.com.br")
+					img(src="img/vivo-logo.png")
 				ul.vivo-nav
 					li 
 						a(href="http://www.vivo.com.br/portalweb/appmanager/env/web?_nfpb=true&_nfls=false&_pageLabel=vcPrincipalBook") para você
@@ -26,7 +27,7 @@ html
 					li.nav-mobile 
 						ul
 							li
-								a(href="#") Regulamento
+								a(href="regulamento.html") Regulamento
 							li 
 								a(href="#") A promoção
 							li 
