@@ -95,6 +95,9 @@ nav {
 			padding: 24px 0;
 			margin-right: 32px;
 			@include f5;
+			&:last-child {
+				margin-right: 0;
+			}
 			a {
 				padding-bottom: 2px;
 				text-decoration: none;
@@ -115,7 +118,6 @@ nav {
 	padding: 0;
 	margin-right: 0;
 	height: 0;
-	opacity: 0;
 	-webkit-transition: all ease 200ms;
 	-o-transition: all ease 200ms;
 	transition: all ease 200ms;
@@ -283,7 +285,7 @@ footer {
 	}
 }
 
-@media (max-width: 750px) {
+@media (max-width: 760px) {
 
 	.nav-mobile {
 		float: left;
