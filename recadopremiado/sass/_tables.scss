@@ -87,9 +87,10 @@ td, th {
 @media only screen and (max-width: 580px) {
 
 	td {
-		padding-left: 60%;
+		padding-left: 8px;
+		padding-top: 32px;
 		&::before {
-			width: 55%;
+			width: 100%;
 		}
 	}
 
