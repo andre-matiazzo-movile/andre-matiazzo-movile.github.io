@@ -1,0 +1,77 @@
+doctype html
+html
+	head
+		include includes/_head.pug
+		title Recado Premiado – Prêmios
+	body
+		header
+			.container
+				a(href="http://www.vivo.com.br")
+					img(src="img/vivo-logo.png")
+				ul.vivo-nav
+					li 
+						a(href="http://www.vivo.com.br/portalweb/appmanager/env/web?_nfpb=true&_nfls=false&_pageLabel=vcPrincipalBook") para você
+					li 
+						a(href="http://www.vivo.com.br/portalweb/appmanager/env/web?_nfpb=true&_nfls=false&_pageLabel=empPrincipalBook") para empresas
+					li 
+						a(href="http://www.vivo.com.br/portalweb/appmanager/env/web?_nfpb=true&_nfls=false&_pageLabel=vcOfertaAtacadoPage") para operadoras
+					li 
+						a(href="http://www.vivo.com.br//portalweb/appmanager/env/web?_nfpb=true&_nfls=false&_pageLabel=aVivoPrincipalBook") a vivo
+		nav
+			.container
+				div.nav-mobile__trigger Mais
+				ul
+					li 
+						a(href="premios.html").active Prêmios
+					li 	
+						a(href="#") Veja se ganhou
+					li.nav-mobile 
+						ul
+							li
+								a(href="regulamento.html") Regulamento
+							li 
+								a(href="#") A promoção
+							li 
+								a(href="#") Dúvidas frequentes
+							li 
+								a(href="#") Fale conosco
+		article#prizes-page
+			.container
+				.prizes__title
+					h1 Prêmios
+					p Você pode ganhar prêmios em dinheiro, descontos e gratuidade em produtos Vivo
+				.prizes__section
+					h3 Prêmios em dinheiro
+					.section__money
+						.money__item
+							h4 2 mil
+								span reais
+						.money__item
+							h4 3 mil
+								span reais
+						.money__item
+							h4 10 mil
+								span reais
+						.money__item
+							h4 20 mil
+								span reais
+				.prizes__section
+					h3 Descontos
+					.section__discounts
+						.discounts__item
+							img 
+
+
+		.container
+			footer
+				img(src="img/telefonica.jpg").telefonica
+				img(src="img/vivo-patrocinadora.png").patrocinadora
+				img(src="img/viva-tudo.png").assinatura
+
+
+						
+
+
+		script(src="js/jquery.min.js", type="text/javascript")
+		script(src="js/menu-mobile.js", type="text/javascript")
+

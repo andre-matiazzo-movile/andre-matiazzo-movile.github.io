@@ -50,6 +50,15 @@ a {
 	color: $accent;
 }
 
+article {
+	float: left;
+	width: 100%;
+	margin-top: 40px;
+	h1 {
+		color: $accent;
+	}
+}
+
 .container {
 	max-width: 1140px;
 	margin-left: auto;
@@ -177,11 +186,13 @@ nav {
 
 .prizes__title {
 	float: left;
-	margin-top: 40px;
+	width: 100%;
 	h2 {
 		color: $accent;
+		margin-top: 40px;
 	}
 	p {
+		max-width: 30rem;
 		@include f4;
 		color: $darkgray;
 	}
@@ -219,6 +230,35 @@ nav {
 	a {
 		@include f4;
 		color: $accent;
+	}
+}
+
+.prizes__section {
+	float: left;
+	width: 100%;
+	margin-top: 48px;
+	h3 {
+		font-family: $bold;
+		color: $accent;
+		border-bottom: 1px solid $accent;
+	}
+}
+
+.section__money {
+	display: flex;
+	justify-content: space-between;
+	.money__item {
+		margin-top: 32px;
+		h4 {
+			font-size: 3.5rem;
+			line-height: 0.8;
+			color: $accent;
+			span {
+				display: block;
+				@include f3;
+				color: $darkgray;
+			}
+		}
 	}
 }
 
@@ -344,6 +384,13 @@ footer {
 		padding: 0;
 	}
 
+	.section__money {
+		flex-wrap: wrap;
+		.money__item {
+			width: 50%;
+		}
+	}
+
 }
 
 @media (max-width: 580px) {
@@ -358,7 +405,16 @@ footer {
 			display: none;
 		}
 		img {
+			@include f4;
 			padding: 16px;
+		}
+	}
+
+	.section__money {
+		.money__item {
+			h4 {
+				font-size: 2.5rem;
+			}
 		}
 	}
 
