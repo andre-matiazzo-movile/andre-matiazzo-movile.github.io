@@ -24,6 +24,10 @@ body {
 	color: $darkgray;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
 h1 {
 	@include f1;
 	font-family: $bold;
@@ -250,6 +254,7 @@ nav {
 	.money__item {
 		margin-top: 32px;
 		h4 {
+			font-family: $bold;
 			font-size: 3.5rem;
 			line-height: 0.8;
 			color: $accent;
@@ -259,6 +264,38 @@ nav {
 				color: $darkgray;
 			}
 		}
+	}
+}
+
+.products__column {
+	float: left;
+	width: 50%;
+	&:first-child {
+		padding-right: 24px;
+	}
+	&:last-child {
+		padding-left: 24px;
+	}
+}
+
+.products__item {
+	float: left;
+	width: 100%;
+	padding: 24px 0;
+	border-bottom: 1px solid $silver;
+	clear: both;
+	img {
+		float: left;
+		width: 20%;
+		padding: 8px;
+		border: 1px solid $silver;
+	}
+	h4 {
+		font-family: $regular;
+		float: left;
+		width: 80%;
+		margin-top: 8%;
+		padding-left: 16px;
 	}
 }
 
