@@ -284,6 +284,9 @@ nav {
 	padding: 24px 0;
 	border-bottom: 1px solid $silver;
 	clear: both;
+	&:last-child {
+		border-bottom: none;
+	}
 	img {
 		float: left;
 		width: 20%;
@@ -406,6 +409,15 @@ footer {
 		&:nth-child(7),
 		&:nth-child(8) {
 			display: none;
+		}
+	}
+
+	.products__column {
+		width: 100%;
+		&:first-child,
+		&:last-child {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 
