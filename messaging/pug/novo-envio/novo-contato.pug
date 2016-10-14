@@ -1,0 +1,156 @@
+doctype html
+html(lang='pt-br')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Movile Messaging – Novo envio
+		meta(name='movile-messaging', content='Movile Messaging')
+		// Main CSS
+		link(rel='stylesheet', href='../stylesheets/main.css')
+		// Typekit
+		script(src='https://use.typekit.net/fja4naa.js')
+		script.
+			try{Typekit.load({ async: false });}catch(e){}
+	body.send-new
+		aside
+			.logo
+				img.blue(src='../img/logo-white.png', alt='Logo Movile Messaging')
+			//
+				<nav>
+				<ul class="primary-nav">
+				<li><a href="">Dashboard</a></li>
+				<li><a href="">Novo envio</a></li>
+				<li><a href="" class="active">Relatórios</a></li>
+				<li><a href="">Contatos</a></li>
+				<li><a href="">Configurações</a></li>
+				<li><a href="">Suporte</a></li>
+				</ul>
+				</nav>
+		section.upper-bar
+			h1 Novo envio
+		section.main-content
+			h1 Novo contato
+			p.help-text * Campos obrigatórios
+			.columns
+				.column__half.first-column
+					form.input-group
+						label.main-label(for='contato-nome') Primeiro nome*
+						input#contato-nome(type='text', name='contato-nome', autofocus='')
+						label.main-label(for='contato-sobrenome') Sobrenome*
+						input#contato-sobrenome(type='text', name='contato-sobrenome')
+						label.main-label(for='contato-apelido') Apelido
+						input#contato-apelido(type='text', name='contato-apelido')
+						.input-with-select
+							label.main-label(for='contato-grupo') Celular*
+							.input.select
+								span +55
+							input#contato-celular(type='text', name='contato-celular')
+							p.help-text Formato: +55 21 998790987
+							.dropdown
+								ul#ddi
+									li
+										span +78 
+										| Brasil
+									li
+										span +99
+										| Brasil
+									li
+										span +106
+										| Brasil
+									li
+										span +45
+										| Brasil
+									li
+										span +78 
+										| Brasil
+									li
+										span +78 
+										| Brasil
+									li
+										span +78 
+										| Brasil
+						label.main-label(for='contato-email') Email
+						input#contato-email(type='text', name='contato-email')
+						label.main-label(for='contato-grupo') Faz parte de algum grupo?
+						.select-only
+							.input.select
+								span Selecione o grupo
+							.dropdown
+								ul
+									li
+										span Grupo Grupo Grupo
+									li
+										span Grupo 
+									li
+										span Grupo Grupo
+									li
+										span Grupo Grupo Grupo
+									li
+										span Grupo Grupo Grupo
+									li
+										span Grupo Grupo Grupo
+				.column__half.second-column
+					.improve-contact
+						.improve-contact__cta
+							button.cta.floating-cta melhorar esse contato
+							p.help-text
+								| Cadastre mais informações para criar contatos mais qualificados para suas campanhas
+						form.input-group
+							.input-with-select
+								label.main-label(for='contato-cidade') Estado e Cidade
+								.input.select
+									span AM
+								input#contato-cidade(type='text', name='contato-idade')
+								.dropdown
+									ul
+										li
+											span AC 
+											| Acre
+										li
+											span AL 
+											| Alagoas
+										li
+											span AP
+											| Amapá
+										li
+											span AM
+											| Amazonas
+										li
+											span BA 
+											| Bahia
+										li
+											span CE 
+											| Ceará
+										li
+											span DF
+											| Distrito Federal
+							label.main-label(for='contato-grupo') Gênero
+							.select-only
+								.input.select
+									span Escolha
+								.dropdown
+									ul
+										li
+											span Feminino
+										li
+											span Masculino
+										li.outro-genero 
+											span Outro:
+												input#contato-outro-genero(type='text', name='contato-outro-genero')
+											.filter__actions
+												a.cta.inner-cta.has-icon-left.icon-check(href='javascript:;') confirmar
+							label.main-label(for='contato-empresa') Empresa
+							input#contato-empresa(type='text', name='contato-empresa')
+							label.main-label(for='contato-nascimento') Data de nascimento
+							input#contato-nascimento(type='text', name='contato-nascimento')
+							p.help-text Formato: dd/mm/aaaa
+				.cta-group
+					.cta-container
+						a.cta.cta-secondary(href='./destinatarios.html') cancelar
+						a.cta.cta-accent(href='')
+							span.has-icon-left.icon-check.icon-check--white confirmar
+	// jQuery
+	script(src='../js/jquery-3.1.0.min.js')
+	// Filters
+	script(src='../js/forms.js')

@@ -1,0 +1,320 @@
+.calendar-picker {
+	float: right;
+	position: relative;
+	padding: 12px 42px;
+	margin: 20px 12px;
+	font-size: 1em;
+	font-weight: 800;
+	color: #84ADFF;
+	&:before {
+		position: absolute;
+		left: 18px;
+		top: 50%;
+		@include vertical-center;
+		width: 13px;
+		height: 12px;
+		content: "";
+		background: url('../img/icons/calendar.png') no-repeat center center;
+		background-size: 13px 12px;
+	}
+	&:after {
+		position: absolute;
+		right: 18px;
+		top: 50%;
+		@include vertical-center;
+		width: 10px;
+		height: 5px;
+		content: "";
+		background: url('../img/icons/caretdown.png') no-repeat center center;
+		background-size: 10px 5px;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	label:hover {
+		cursor: pointer;
+	}
+}
+
+//OVERWRITE JQUERY-UI CALENDAR PICKER
+.ui-widget-header {
+	border: none;
+	background: transparent;
+}
+
+.comiseo-daterangepicker-triggerbutton.ui-button {
+	float: right;
+	position: relative;
+	padding: 12px 42px;
+	margin: 12px 12px;
+	font-family: $base-font;
+	font-size: 1em;
+	font-weight: 800;
+	color: #84ADFF;
+	background-color: #fff;
+	border: none;
+	border-radius: 0;
+	&:before {
+		position: absolute;
+		left: 18px;
+		top: 50%;
+		top: 50%;
+		@include vertical-center;
+		width: 13px;
+		height: 12px;
+		content: "";
+		background: url("../img/icons/calendar.png") no-repeat center center;
+		background-size: 13px 12px;
+	}
+	&:after {
+		position: absolute;
+		right: 18px;
+		top: 50%;
+		@include vertical-center;
+		width: 10px;
+		height: 5px;
+		content: "";
+		background: url('../img/icons/caretdown.png') no-repeat center center;
+		background-size: 10px 5px;
+	}
+}
+
+.comiseo-daterangepicker {
+	@include box-with-shadow;
+	border-radius: 0;
+	background-color: #fff;
+	padding: 18px;
+}
+
+.ui-widget.ui-widget-content {
+	border-color: #DCDEE0;
+	border-color: $lighter-gray;
+}
+
+.comiseo-daterangepicker-presets {
+	position: absolute;
+	top: 18px;
+	left: 18px;
+	right: 18px;
+	height: auto;
+	padding: 0;
+	border: none;
+}
+
+.comiseo-daterangepicker-left .comiseo-daterangepicker-presets,
+.comiseo-daterangepicker-right .comiseo-daterangepicker-presets {
+	padding: 0;
+	border-bottom: 1px solid $lighter-gray;
+	padding-bottom: 18px;
+}
+
+.comiseo-daterangepicker > .comiseo-daterangepicker-main.ui-widget-content {
+	margin-top: 48px;
+	// display: block;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+	padding: 0;
+	@include text-label;
+	font-size: 0.75em;
+	color: $accent;
+	text-transform: uppercase;
+	letter-spacing: 0.75px;
+	// border-bottom: 1px solid;
+}
+
+.ui-menu .ui-menu-item {
+	float: left;
+	margin-right: 18px;
+	text-align: left;
+	cursor: auto;
+}
+
+.ui-datepicker {
+	padding: 0;
+}
+
+.ui-datepicker th span {
+	text-transform: uppercase;
+	font-size: 0.625em;
+	font-weight: $bold;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+	padding: .45em .15em 0.8em;
+	text-align: center;
+	font-size: 0.85em;
+	font-weight: $bold;
+	color: $theblack;
+}
+
+.ui-datepicker-title {
+	color: $theblack;
+	font-weight: $black;
+}
+
+.ui-datepicker-group-first {
+	padding-right: 18px;
+	& .ui-datepicker-title {
+		margin: 0 0 0 2.3em;
+		text-align: left;
+	}
+}
+
+.ui-datepicker-group-last {
+	padding-left: 18px;
+	& .ui-datepicker-title {
+		margin: 0 2.3em 0 0;
+		text-align: right;
+	}
+}
+
+.comiseo-daterangepicker-calendar .ui-state-highlight a.ui-state-default {
+	background-color: $accent;
+	color: $ice-white;
+}
+
+.ui-datepicker .ui-datepicker-prev:hover,
+.ui-datepicker .ui-datepicker-next:hover {
+	cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+	background: url('../img/icons/caretleft.png') no-repeat center center;
+	background-size: 5px 10px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+	background: url('../img/icons/caretright.png') no-repeat center center;
+	background-size: 5px 10px;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover {
+	top: 2px;
+	left: 2px;
+}
+
+.ui-datepicker .ui-datepicker-next-hover {
+	top: 2px;
+	right: 2px;
+}
+
+.comiseo-daterangepicker-main + .ui-helper-clearfix {
+	border-top: 1px solid $lighter-gray;
+}
+
+.comiseo-daterangepicker-left .comiseo-daterangepicker-buttonpanel > button,
+.comiseo-daterangepicker-right .comiseo-daterangepicker-buttonpanel > button {
+	float: right;
+	margin: 0;
+	padding: 0 24px 0 0;
+	@include text-label;
+	font-family: $base-font;
+	font-size: 0.75em;
+	text-transform: uppercase;
+	letter-spacing: 0.75px;
+	color: $main-gray;
+	border: none;
+	background-color: #fff;
+	&:first-child {
+		color: $accent;
+		background: url('../img/icons/check.png') no-repeat 2px center;
+		background-size: 12px;
+		padding-left: 18px;
+		padding-right: 0;
+	}
+}
+
+.comiseo-daterangepicker-left .comiseo-daterangepicker-buttonpanel,
+.comiseo-daterangepicker-right .comiseo-daterangepicker-buttonpanel {
+	margin-top: 18px;
+	float: right;
+}
+
+td.ui-state-disabled span {
+	color: $lighter-gray;
+}
+
+@media (max-width: 1100px) {
+	.comiseo-daterangepicker-triggerbutton.ui-button {
+		margin: 3px 0 0 0;
+		padding-right: 24px;
+		&:after {
+			right: 0;
+		}
+	}
+}
+
+@media (max-width: 750px) {
+
+	.comiseo-daterangepicker-triggerbutton.ui-button {
+		width: 100%;
+		max-width: 280px;
+		padding: 12px 24px 12px 24px;
+		float: left;
+		clear: left;
+		&:before {
+			left: 0;
+		}
+	}
+}
+
+@media (max-width: 586px) {
+	
+	.ui-menu .ui-menu-item  {
+		float: none;
+		display: inline-block;
+		width: auto;
+	}
+
+	// .comiseo-daterangepicker>.comiseo-daterangepicker-main.ui-widget-content {
+	// 	margin-top: 100px;
+	// }
+
+	.comiseo-daterangepicker {
+		top: 18px !important;
+		right: 18px;
+	}
+
+	.comiseo-daterangepicker-presets {
+		overflow-x: hidden;
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 24px;
+			height: 16px;
+			background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 99%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 99%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+		}
+	}
+
+	ul.ui-widget.ui-widget-content {
+		position: relative;	
+		white-space: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		&::-webkit-scrollbar {
+			-webkit-appearance: none;
+			height: 0;
+		}
+	}
+
+	.ui-menu .ui-menu-item-wrapper {
+		font-size: 0.8125em;
+	}
+
+	.ui-datepicker .ui-datepicker-prev {
+		left: -16px;
+	}
+
+	.ui-datepicker .ui-datepicker-next {
+		right: -16px;
+	}
+
+}

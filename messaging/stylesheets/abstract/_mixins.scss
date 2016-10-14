@@ -1,0 +1,38 @@
+@mixin transition ($time) {
+	-webkit-transition: all ease-in-out $time;
+	-ms-transition: all ease-in-out $time;
+	-o-transition: all ease-in-out $time;
+	transition: all ease-in-out $time;
+}
+
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin box-with-shadow {
+	border: 1px solid #DCDEE0;
+	border: 1px solid $lighter-gray;
+	-moz-box-shadow: 0px 2px 3px 0px rgba(54,70,79,0.30);
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(54,70,79,0.30);
+	box-shadow: 0px 2px 3px 0px rgba(54,70,79,0.30);
+}
+
+@mixin text-label {
+	font-size: 0.875em; //14px
+	font-weight: $bold;
+	// letter-spacing: 0.06em;
+}
+
+@mixin vertical-center {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin icon-check {
+	background: url('../img/icons/accept.png')
+}

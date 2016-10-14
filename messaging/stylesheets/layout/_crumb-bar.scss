@@ -1,0 +1,47 @@
+#crumb-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #566fa5;
+	width: 100%;
+	.primary-nav {
+		margin-left: 200px;
+		padding-left: 30px;
+		& li {
+			position: relative;
+			float: left;
+			padding: 18px 24px 18px 12px;
+			&:first-child {
+				padding-left: 0;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				width: 12px;
+				height: 12px;
+				top: calc(50% - 5px);
+				right: 0;
+				background: url('../img/icons/arrow-right-white.png') center center no-repeat;
+				background-size: 12px;
+			}
+			&:last-child::after {
+				background: none;
+			}
+		}
+	}
+}
+
+.crumb-bar__cta {
+	cursor: pointer;
+	float: right;
+	padding: 18px 24px;
+	font-family: $base-font;
+	font-size: 0.875em;
+	text-align: right;
+	background-color: $sidebar;
+	color: $ice-white;
+	border: none;
+	&:hover {
+		background-color: $accent;
+	}
+}

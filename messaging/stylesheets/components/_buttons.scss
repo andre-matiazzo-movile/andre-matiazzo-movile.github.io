@@ -1,0 +1,66 @@
+.cta-group {
+	margin-top: 24px;
+	float: left;
+	width: 50%;
+	max-width: 360px;
+	clear: both;
+	.cta-container {
+		float: right;
+	}
+	a {
+		float: left;
+	}
+}
+
+.cta {
+	position: relative;
+	font-size: 0.75rem;
+	font-weight: $bold;
+	text-transform: uppercase;
+	letter-spacing: 0.75px;
+	line-height: 1.4;
+}
+
+.inner-cta {
+	color: $accent;
+	letter-spacing: 0.75px;
+	&.has-icon-left {
+		padding-left: 18px !important;
+		&::after {
+			left: 0 !important;
+		}
+	}
+	&.has-icon-right {
+		padding-right: 18px !important;
+		&::after {
+			right: 0 !important;
+		}
+	}
+}
+
+.floating-cta {
+	color: $main-gray;
+	background: #fff;
+	@include box-with-shadow;
+	padding: 10px 12px;
+	&:hover {
+		
+	}
+}
+
+.cta-accent {
+	color: $ice-white;
+	background-color: $accent;
+	padding: 10px 12px;
+}
+
+.cta-secondary {
+	padding-top: 10px;
+	color: $main-gray;
+	border-bottom: 2px solid;
+	margin-right: 24px;
+	&.inner-cta {
+		margin-right: 0;
+		border-bottom: none;
+	}
+}

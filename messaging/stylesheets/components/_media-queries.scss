@@ -1,0 +1,350 @@
+@media (max-width: 1100px) {
+	aside {
+		position: relative;
+		float: left;
+		width: 100%;
+		height: auto;
+		.logo {
+			padding: 24px;
+			float: left;
+			width: auto;
+			& img {
+				max-width: 75px;
+			}
+		}
+		nav {
+			float: right;
+			padding: 20px 24px;
+			margin-top: 0;
+			.primary-nav li {
+				float: left;
+				padding-left: 24px;
+			}
+			.secondary-nav {
+				position: relative;
+				&.nav--active {
+					ul {
+						display: block;
+						opacity: 1;
+						// @include transition(150ms);
+					}
+					button {
+						background-color: $accent-pressed;
+					}
+				}
+				button {
+					display: block;
+				}
+				ul {
+					display: none;
+					opacity: 0;
+					background-color: #fff;
+					position: absolute;
+					right: 0;
+					top: 42px;
+					z-index: 1;
+					padding: 0;
+					@include box-with-shadow;
+					li {
+						float: none;
+						padding: 12px 24px;
+						a {
+							color: $theblack;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.upper-bar {
+		width: 100%;
+		padding: 24px;
+		margin-left: 0;
+		border-bottom: 1px solid $lighter-gray;
+		&:after {
+			display: none;
+		}
+		h1 {
+			padding: 0;
+		}
+	}
+
+	.calendar-picker {
+		margin: 3px 0 0 0;
+		padding-right: 24px;
+		&:after {
+			right: 0;
+		}
+	}
+
+	.main-content {
+		margin-left: 0;
+		width: 100%;
+		padding: 24px;
+	}
+}
+
+@media (min-width: 851px) {
+	.mobile-only {
+		display: none;
+	}
+}
+
+@media (max-width: 850px) {
+
+	aside nav {
+		overflow-x: hidden;
+		position: relative;
+		.primary-nav {
+			white-space: nowrap;
+			overflow-x: auto;
+			overflow-y: hidden;
+			-webkit-overflow-scrolling: touch;
+			-ms-overflow-style: -ms-autohiding-scrollbar;
+			&::-webkit-scrollbar {
+				-webkit-appearance: none;
+				height: 0;
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 10px;
+				right: 0;
+				width: 24px;
+				height: 16px;
+				background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(107,132,182,1) 99%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(107,132,182,1) 99%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(107,132,182,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+			}
+			// &::-webkit-scrollbar-thumb {
+			// 	border-radius: 1px;
+			// 	background-color: $main-gray;
+			// 	-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+			// }
+			li {
+				display: inline-block;
+				float: none;
+			}
+		}
+	}
+
+	// Here, filters div act like a modal that comes from the bottom
+	.bottom-bar-modal {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 5; /* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		-webkit-animation-name: fadeIn; /* Fade in the background */
+		-webkit-animation-duration: 0.2s;
+		animation-name: fadeIn;
+		animation-duration: 0.2s;
+	}
+
+	.actions-container {
+		position: fixed;
+		float: none;
+		top: 24px;
+		right: 24px;
+		bottom: 0;
+		padding: 12px;
+		// margin-left: auto;
+		// margin-right: auto;
+		max-width: 550px;
+		background-color: #fff;
+		-webkit-animation-name: slideIn;
+		-webkit-animation-duration: 0.2s;
+		animation-name: slideIn;
+		animation-duration: 0.2s;
+		border: 1px solid $lighter-gray;
+	}
+
+	/* Add Animation */
+	@-webkit-keyframes slideIn {
+		from {top: 100%; opacity: 0}
+		to {top: 24px; opacity: 1}
+	}
+
+	@keyframes slideIn {
+		from {top: 100%; opacity: 0}
+		to {top: 24px; opacity: 1}
+	}
+
+	@-webkit-keyframes fadeIn {
+		from {opacity: 0}
+		to {opacity: 1}
+	}
+
+	@keyframes fadeIn {
+		from {opacity: 0}
+		to {opacity: 1}
+	}
+
+	.filters__header {
+		padding: 12px;
+	}
+
+	.filters {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.filters__item {
+		width: 100%;
+		margin-top: 12px;
+	}
+
+	.filters__item--carriers .input {
+		margin-top: 0;
+	}
+
+	.secondary-actions {
+		// position: absolute;
+		width: auto;
+		float: right;
+		padding: 0 24px;
+		.actions__container a {
+			padding: 20px 0 20px 42px;
+			border-left: 1px solid $lighter-gray;
+			background-position: 18px center;
+		}
+	}
+
+	.bottom-bar-modal .secondary-actions {
+		display: none;
+	}
+
+	.close {
+		position: absolute;
+		right: 24px;
+		top: 24px;
+		font-size: 18px;
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 750px) {
+
+	aside {
+		.logo {
+			padding: 18px 18px 12px;
+		}
+		nav {
+			float: left;
+			width: 100%;
+			padding: 0px 6px 0px 18px;
+		}
+	}
+
+	aside nav .primary-nav li {
+		// float: left;
+		padding-left: 0;
+		padding-right: 24px;
+		a {
+			padding-bottom: 9px;
+			border-bottom: 3px solid transparent;
+			position: relative;
+			&.active,
+			&:hover {
+				border-color: transparent;
+			}
+			&.active::before,
+			&:hover::before {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				height: 4px;
+				width: 100%;
+				background-color: #fff;
+			}
+		}
+	}
+
+	.secondary-nav {
+		float: right;
+	}
+
+	.upper-bar {
+		padding: 18px 18px 6px;
+		h1 {
+			font-size: 1.5em;
+		}
+	}
+
+	.calendar-picker {
+		width: 100%;
+		padding: 12px 24px 12px 24px;
+		float: left;
+		&:before {
+			left: 0;
+		}
+	}
+
+	.actions-container {
+		top: 12px;
+		right: 12px;
+		left: 12px;
+		padding: 6px;
+	}
+
+	.filter__dropdown {
+		position: fixed;
+		top: 12px;
+		right: 12px;
+		// bottom: 12px;
+		left: 12px;
+		width: auto;
+		margin-left: auto;
+		margin-right: auto;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border: none;
+		ul {
+			max-height: none;
+		}
+	}
+
+	.filter__actions {
+		position: fixed;
+		right: 24px;
+		bottom: 0;
+		left: 24px;
+		width: auto;
+	}
+
+	.bottom-bar {
+		right: 12px;
+		left: 12px;
+		width: auto;
+		.secondary-actions {
+			padding: 0;
+			position: relative;
+			.download-report:first-child {
+				display: none;
+			}
+			.download-report:last-child {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+
+	.bottom-bar__filters {
+		padding: 14px 18px;
+	}
+
+	.close {
+		right: 18px;
+		top: 18px;
+	}
+}

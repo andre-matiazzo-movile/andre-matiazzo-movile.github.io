@@ -1,0 +1,43 @@
+.bottom-bar {
+	position: fixed;
+	bottom: 0;
+	right: 24px;
+	width: 100%;
+	max-width: 500px;
+	background-color: #fff;
+	z-index: 5;
+	border: 1px solid $lighter-gray;
+	@include transition (150ms);
+}
+
+.bottom-bar__filters {
+	padding: 14px 18px;
+	float: left;
+	button {
+		float: left;
+		padding: 0;
+		font-size: 1em;
+		font-family: $base-font;
+		font-weight: $regular;
+		color: $main-gray;
+		border: none;
+		cursor: pointer;
+		background-color: #fff;
+		&:focus {
+			outline: 0;
+		}
+		span {
+			color: $accent;
+			border-bottom: 2px solid;
+		}
+	}
+}
+
+.bottom-bar .download-report:last-child {
+	display: none;
+	padding: 27px;
+	width: 18px;
+	height: 18px;
+	background: url('../img/icons/download.png') no-repeat center;
+	background-size: 12px; 
+}

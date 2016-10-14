@@ -1,0 +1,100 @@
+doctype html
+html(lang='pt-br')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='x-ua-compatible', content='ie=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Movile Messaging – Novo envio
+        meta(name='movile-messaging', content='Movile Messaging')
+        // Main CSS
+        link(rel='stylesheet', href='../stylesheets/main.css')
+        // Typekit
+        script(src='https://use.typekit.net/fja4naa.js')
+        script.
+            try{Typekit.load({ async: false });}catch(e){}
+    body.send-new
+        aside
+            .logo
+                img.blue(src='../img/logo-white.png', alt='Logo Movile Messaging')
+            //
+                <nav>
+                <ul class="primary-nav">
+                <li><a href="">Dashboard</a></li>
+                <li><a href="">Novo envio</a></li>
+                <li><a href="" class="active">Relatórios</a></li>
+                <li><a href="">Contatos</a></li>
+                <li><a href="">Configurações</a></li>
+                <li><a href="">Suporte</a></li>
+                </ul>
+                </nav>
+        section.upper-bar
+            h1 Novo envio
+        section.main-content
+            h1 Escolha o tipo de envio
+            .columns
+                .column__half.first-column
+                    h2 Envio em massa
+                    p
+                        | Envie para toda a sua base usando contatos e grupos cadastrados por diversas mídias
+                    form(action='')
+                        .input-container
+                            .input.multichoice.has-description
+                                .checkbox
+                                    input#mass--sms(type='checkbox', name='midia')
+                                    label(for='mass--sms') SMS
+                            p.help-text O formato clássico, ideal para mensagens curtas e diretas
+                        .input-container
+                            .input.multichoice.has-description
+                                .checkbox
+                                    input#mass--email(type='checkbox', name='midia')
+                                    label(for='mass--email') Email
+                            p.help-text
+                                | Recomendado para mensagens mais longas ou que permitem a interação de seus clientes
+                        .input-container
+                            .input.multichoice.has-description
+                                .checkbox
+                                    input#mass--voice(type='checkbox', name='midia')
+                                    label(for='mass--voice') Torpedo de voz
+                            p.help-text Envie ligações em massa simultâneas, que chegam até em telefones fixos
+                .column__half.second-column
+                    h2 Envio rápido
+                    p Em um único passo, mande uma mensagem para um ou mais contatos
+                    form(action='')
+                        .input-container
+                            .input.multichoice.has-description
+                                .radio
+                                    input#unique--sms(type='radio', name='midia')
+                                    label(for='unique--sms') SMS
+                            p.help-text O formato clássico, ideal para mensagens curtas e diretas
+                        .input-container
+                            .input.multichoice.has-description
+                                .radio
+                                    input#unique--email(type='radio', name='midia')
+                                    label(for='unique--email') Email
+                            p.help-text
+                                | Recomendado para mensagens mais longas ou que permitem a interação de seus clientes
+                        .input-container
+                            .input.multichoice.has-description
+                                .radio
+                                    input#unique--voice(type='radio', name='midia')
+                                    label(for='unique--voice') Torpedo de voz
+                            p.help-text Envie ligações em massa simultâneas, que chegam até em telefones fixos
+            #crumb-bar
+                ul.primary-nav
+                    li
+                        a.active(href='') Tipo de envio
+                    li
+                        a(href='./destinatarios.html') Destinatários
+                    li
+                        a(href='./mensagem.html') Mensagem
+                    li
+                        a(href='') Campanha
+                    li
+                        a(href='') Resumo
+                button.crumb-bar__cta
+                    span.has-icon-right.icon-continue Continuar
+    // jQuery
+    script(src='../js/jquery-3.1.0.min.js')
+    // Filters
+    script(src='../js/forms.js')
+    script(src='../js/send-new.js')

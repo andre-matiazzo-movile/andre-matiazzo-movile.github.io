@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movile Messaging – Relatórios</title>
+    <meta name="movile-messaging" content="Movile Messaging">
+    <!-- For the calendar-->
+    <link href="calendar/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="calendar/jquery.comiseo.daterangepicker.css" rel="stylesheet">
+    <!-- For the charts-->
+    <link href="charts/chartist.min.css" rel="stylesheet">
+    <script src="charts/chartist.min.js" charset="utf-8"></script>
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- Typekit-->
+    <script src="https://use.typekit.net/fja4naa.js"></script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+  </head>
+  <body>
+    <aside>
+      <div class="logo"><img class="blue" src="img/logo-white.png" alt="Logo Movile Messaging"></div>
+      <nav>
+        <ul class="primary-nav">
+          <li><a href="">Dashboard</a></li>
+          <li><a href="">Novo envio</a></li>
+          <li><a class="active" href="">Relatórios</a></li>
+          <li><a href="">Contatos</a></li>
+          <li><a href="">Configurações</a></li>
+          <li><a href="">Suporte</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="upper-bar">
+      <h1>Relatórios</h1>
+      <!-- Calendar-->
+      <input class="calendar-picker" id="datepicker" name="e1">
+      <!-- /Calendar-->
+    </section>
+    <section class="main-content">
+      <div class="bottom-bar-modal" id="bottomModal">
+        <div class="actions-container">
+          <div class="filters">
+            <div class="filters__header mobile-only">
+              <h2>Filtros</h2><span class="close">&times</span>
+            </div>
+            <!-- CAMPANHA-->
+            <div class="filters__item filters__item--campaign">
+              <label class="main-label">Campanha</label>
+              <div class="input select"><span>Dia das Mães</span></div>
+              <div class="dropdown dropdown--campaign">
+                <label class="main-label">Campanha</label>
+                <form class="search-active" role="search">
+                  <!-- <label for="search">Buscar</label>-->
+                  <input type="search" autofocus="">
+                </form>
+                <ul>
+                  <li><span>Todas as campanhas</span></li>
+                  <li class="search__subheading"> <span>Buscas recentes</span></li>
+                  <li><span>Dia das Mães em Pindamonhangaba</span></li>
+                  <li><span>Dia das Mães</span></li>
+                  <li><span>Festa junina</span></li>
+                  <li><span>Coleção de inverno</span></li>
+                  <li><span>Liquidação de inverno</span></li>
+                  <li><span>Dia das Mães em Pindamonhangaba</span></li>
+                  <li><span>Dia das Mães</span></li>
+                </ul>
+              </div>
+            </div>
+            <!-- USUARIO OU LA-->
+            <div class="filters__item filters__item--user-or-la">
+              <label class="main-label">Usuário ou LA</label>
+              <div class="input search"><span>Usuário ou LA</span></div>
+              <div class="dropdown dropdown--user-or-la">
+                <label class="main-label">Usuário ou LA</label>
+                <form class="search-active" role="search">
+                  <input type="search" autofocus="">
+                </form>
+                <ul>
+                  <li class="search__subheading"> <span>Buscas recentes</span></li>
+                  <li><span>Bruno Farias</span></li>
+                  <li><span>Nayara Rodrigues</span></li>
+                  <li><span>Neto Andrade</span></li>
+                  <li><span>Hudson Souza</span></li>
+                  <li><span>Edson Koji</span></li>
+                  <li><span>Henrique Perticarati</span></li>
+                  <li><span>Juliana Gaspari</span></li>
+                </ul>
+              </div>
+            </div>
+            <!-- CARRIERS-->
+            <div class="filters__item filters__item--carriers">
+              <form>
+                <div class="input multichoice">
+                  <div class="checkbox">
+                    <input id="operadoras__checkbox" type="checkbox" name="carriers">
+                    <label for="operadoras__checkbox">Dividir por operadoras</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="secondary-actions">
+            <div class="actions__container"><a class="cta--secondary" href="javascript:;">download</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-bar mobile-only">
+        <div class="bottom-bar__filters" id="modalTrigger">
+          <button>Você tem <span>2 filtros</span> ativos</button>
+        </div>
+        <div class="secondary-actions">
+          <div class="actions__container"><a class="download-report">download</a><a class="download-report"></a></div>
+        </div>
+      </div>
+      <div class="ct-chart ct-double-octave"></div>
+    </section>
+  </body>
+  <!-- jQuery-->
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <!-- Filters-->
+  <script src="js/forms.js"></script>
+  <!-- For the calendar-->
+  <script src="calendar/jquery-ui/jquery-ui.min.js"></script>
+  <script src="calendar/moment.js"></script>
+  <script src="calendar/jquery.comiseo.daterangepicker.js"></script>
+  <script src="charts/custom-charts.js"></script>
+  <script>
+    $(function() {
+    $("#datepicker").daterangepicker({
+    presetRanges: [{
+    text: 'Últimos 7 dias',
+    dateStart: function() { return moment().add(-7, 'days') },
+    dateEnd: function() { return moment().add(0, 'days') }
+    }, {
+    text: 'Últimos 30 dias',
+    dateStart: function() { return moment().add(-30, 'days') },
+    dateEnd: function() { return moment().add(0, 'days') }
+    }, {
+    text: 'Últimos 90 dias',
+    dateStart: function() { return moment().add(-90, 'days') },
+    dateEnd: function() { return moment().add(0, 'days') }
+    }],
+    applyOnMenuSelect: false,
+    dateFormat: 'd M yy',
+    rangeSplitter: ' – ',
+    initialText: 'Escolha um período',
+    applyButtonText: 'confirmar',
+    clearButtonText: 'limpar',
+    cancelButtonText: 'cancelar',
+    verticalOffset: -50,
+    datepickerOptions: {
+    dayNamesMin: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
+    monthNames: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'  ],
+    monthNamesShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
+    numberOfMonths: 2,
+    minDate: null,
+    maxDate: 0
+    }
+    });
+    });
+  </script>
+</html>

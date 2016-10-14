@@ -1,0 +1,100 @@
+.messages {
+
+	.upper-bar {
+		background-color: #566fa5;
+		h1 {
+			color: $ice-white;
+			padding-bottom: 16px;
+		}
+		&:after {
+			display: none;
+		}
+	}
+
+	aside {
+		height: auto;
+		position: absolute;
+	}
+
+	.main-content h1 {
+		padding-top: 0;
+		margin-bottom: 18px;
+		width: 100%;
+	}
+
+	#mensagem-texto {
+		margin-top: 24px;
+	}
+
+	.help-text {
+		float: right;
+		margin-top: 0;
+		line-height: 1.3;
+	}
+
+	.main-label {
+		display: inline-block;
+		margin-top: 6px;
+	}
+
+	.phone-preview {
+		position: relative;
+		width: 240px;
+		height: auto;
+		margin-top: 12px;
+		img {
+			display: block;
+			max-width: 100%;
+		}
+	}
+
+	.speak-bubble-container {
+		position: absolute;
+		position: absolute;
+		top: 67px;
+		left: 28px;
+		right: 28px;
+	}
+
+	.speak-bubble {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: -6px;
+			width: 0;
+			height: 0;
+			border-top: 12px solid $accent;
+			border-left: 12px solid transparent;
+		}
+		p {
+			padding: 6px 12px;
+			font-size: 0.75rem;
+			line-height: 1.15rem;
+			color: $ice-white;
+			background: $accent;
+			border-radius: 3px;
+		}
+	}
+
+	.automatic-msg {
+		float: left;
+		width: 100%;
+		margin-top: 36px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.automatic-msg__details {
+		float: left;
+		width: 100%;
+		margin-top: 12px;
+		.help-text {
+			float: left;
+		}
+		.inner-cta {
+			float: right;
+		}
+	}
+}

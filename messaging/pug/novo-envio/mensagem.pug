@@ -1,0 +1,100 @@
+doctype html
+html(lang='pt-br')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Movile Messaging – Mensagem
+		meta(name='movile-messaging', content='Movile Messaging')
+		// Main CSS
+		link(rel='stylesheet', href='../stylesheets/main.css')
+		link(rel='stylesheet', href='../stylesheets/autocomplete/awesomplete.css')
+		// Typekit
+		script(src='https://use.typekit.net/fja4naa.js')
+		script.
+			try{Typekit.load({ async: false });}catch(e){}
+	body.messages
+		div.sidemodal__bg
+		aside#sidemodal
+			.sidemodal__wrapper
+				a.back-btn.main-label.has-icon-left.icon-arrow-left(href="javascript:;") Voltar
+				h1 Mensagens prontas
+				.search-active(role='search')
+					input(type='search', autofocus='')
+				.sidemodal__main-content
+					.automatic-msg
+						h4.main-label Acesso da conta por aplicativo
+						p Olá, Primeiro nome! Sabia que agora é possível acessar sua conta pelo nosso aplicativo? Baixe agora na Google Play e tenha mais facilidade na vida!
+						.automatic-msg__details
+							p.help-text kkk
+							a(href="javascript:;").cta.inner-cta 
+								span.has-icon-left.icon-check quero essa
+					.automatic-msg
+						h4.main-label Protocolo de atendimento
+						p Primeiro nome, o número de atendimento do seu protocolo é 87909870-014. Para saber mais detalhes, entre com seu login e senha no nosso portal.
+						.automatic-msg__details
+							p.help-text kkk
+							a(href="javascript:;").cta.inner-cta 
+								span.has-icon-left.icon-check quero essa
+					.automatic-msg
+						h4.main-label Acesso da conta por aplicativo
+						p Olá, Primeiro nome! Sabia que agora é possível acessar sua conta pelo nosso aplicativo? Baixe agora na Google Play e tenha mais facilidade na vida!
+						.automatic-msg__details
+							p.help-text kkk
+							a(href="javascript:;").cta.inner-cta 
+								span.has-icon-left.icon-check quero essa
+		aside
+			.logo
+				img.blue(src='../img/logo-white.png', alt='Logo Movile Messaging')
+			//
+				<nav>
+				<ul class="primary-nav">
+				<li><a href="">Dashboard</a></li>
+				<li><a href="">Novo envio</a></li>
+				<li><a href="" class="active">Relatórios</a></li>
+				<li><a href="">Contatos</a></li>
+				<li><a href="">Configurações</a></li>
+				<li><a href="">Suporte</a></li>
+				</ul>
+				</nav>
+		section.upper-bar
+			h1 Novo envio
+		section.main-content
+			h1 Escreva sua mensagem
+			.columns
+				.column__half.first-column
+					p Use #[a(href="javascript:;") Primeiro nome], #[a(href="javascript:;") Nome completo] ou #[a(href="javascript:;") Apelido] no seu texto para enviar mensagens personalizadas aos seus contatos
+					textarea#mensagem-texto.characterCount.awesomeplete(name='mensagem-texto', cols='30', rows='10', maxlength="160", data-list="Primeiro nome, Nome completeo, Apelido")
+					a.cta.inner-cta.has-icon-left.icon-sidemodal(href='javascript:;') mensagem pronta
+					p.help-text.mensagem-texto
+				.column__half.second-column
+					label.main-label Prévia da mensagem
+					div.phone-preview
+						img(src="../img/phone.png")
+						.speak-bubble-container
+							.speak-bubble
+								p Digite sua mensagem ao lado e veja como funciona
+					
+			#crumb-bar
+				ul.primary-nav
+					li
+						a(href='./tipo-envio.html') Tipo de envio
+					li
+						a(href='./destinatarios.html') Destinatários
+					li
+						a.active(href='') Mensagem
+					li
+						a(href='') Campanha
+					li
+						a(href='') Resumo
+				button.crumb-bar__cta
+					span.has-icon-right.icon-continue Continuar
+	// jQuery
+	script(src='../js/jquery-3.1.0.min.js')
+	// Filters
+	script(src='../js/forms.js')
+	script(src='../js/messages.js')
+	script(src='../js/replicate-text.js')
+	script(src='../js/character-count.js')
+	script(src='../js/sidemodal.js')
+	script(src='../js/autocomplete/awesomplete.min.js')

@@ -1,0 +1,24 @@
+.upper-bar,
+.main-content {
+	float: left;
+	width: calc(100% - 200px);
+	padding-left: 30px;
+	margin-left: 200px;
+	h1 {
+		float: left;
+		padding-top: 24px;
+		color: $theblack;
+		line-height: 1.3;
+	}
+}
+
+.upper-bar:after {
+	position: absolute;
+	content: "";
+	top: 70px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #DCDEE0;
+	background-color: $lighter-gray;
+}

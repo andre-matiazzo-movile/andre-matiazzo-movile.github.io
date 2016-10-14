@@ -1,0 +1,28 @@
+.columns {
+	float: left;
+	width: 100%;
+}
+
+.help-text + .columns {
+	margin-top: 24px;
+}
+
+.column__half {
+	float: left;
+	width: 50%;
+	max-width: 360px;
+	margin-left: 72px;
+}
+
+.first-column {
+	margin-left: 0;
+	// &:hover {
+	// 	opacity: 1 !important;
+	// }
+}
+
+// .second-column {
+// 	&:hover {
+// 		opacity: 1 !important;
+// 	}
+// }

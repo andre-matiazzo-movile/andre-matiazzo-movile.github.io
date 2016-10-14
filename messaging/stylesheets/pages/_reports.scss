@@ -1,0 +1,69 @@
+.filters-container {
+	float: left;
+	width: 100%;
+}
+
+.filters {
+	float: left;
+	width: 100%;
+	max-width: 990px;
+	margin-left: -12px;
+	margin-right: -12px;
+}
+
+.filters__item {
+	float: left;
+	width: 33.33333%;
+	padding: 0 12px;
+}
+
+.filters__item--campaign {
+	position: relative;
+}
+
+.filters__item--user-or-la {
+	position: relative;
+	// padding: 0 24px;
+	& > label {
+		opacity: 0;
+	}
+}
+
+.filters__item--carriers .multichoice {
+	margin-left: 0;
+	margin-top: 24px;
+	padding: 12px 16px 12px 24px;
+	& label {
+		@include vertical-center;
+	}
+}
+
+.filter__actions {
+	float: right;
+	width: 100%;
+	text-align: right;
+	padding: 18px 0 20px;
+	border-top: 1px solid $lighter-gray;
+	background-color: #fff;
+}
+
+.secondary-actions {
+	float: left;
+	width: 100%;
+	padding-top: 36px;
+	.actions__container {
+		float: right;
+		a {
+			float: left;
+			padding: 12px 0 12px 36px;
+			font-size: 0.75em;  //12px;
+			font-weight: $bold;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			color: $main-gray;
+			background: url('../img/icons/download.png') no-repeat 14px center;
+			background-size: 10px; 
+			cursor: pointer;
+		}
+	}
+}

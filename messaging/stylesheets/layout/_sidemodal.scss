@@ -1,0 +1,37 @@
+#sidemodal {
+	position: fixed;
+	width: 480px;
+	height: 100%;
+	right: -480px;
+	background-color: #fff;
+	z-index: 2;
+	overflow-y: auto;
+	.sidemodal__wrapper {
+		float: left;
+		padding: 0 72px 36px;
+		margin-top: 54px;
+		& > .main-label {
+			font-size: 0.75rem;
+			text-transform: uppercase;
+			letter-spacing: 0.06rem;
+			color: $main-gray;
+		}
+		h1 {
+			margin: 18px 0;
+		}
+	}
+	.sidemodal__main-content {
+		margin-top: 24px;
+	}
+}
+
+.sidemodal__bg {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.6);
+	z-index: 1;
+}

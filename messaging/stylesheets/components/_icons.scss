@@ -1,0 +1,79 @@
+.has-icon-left {
+	position: relative;
+	padding-left: 18px !important;
+	&:after {		
+		left: 0px !important;
+	}
+}
+
+.has-icon-right {
+	position: relative;
+	padding-right: 18px !important;
+	&:after {
+		right: 0px !important;
+	}
+}
+
+.icon-check {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/check.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+	&.icon-check--white::after {
+		background: url(../img/icons/check-white.png) no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
+.icon-plus {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/plus-gray.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
+.icon-continue {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/arrow-right-white.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
+.icon-sidemodal {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/sidemodal.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
+.icon-arrow-left {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/arrow-left.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}

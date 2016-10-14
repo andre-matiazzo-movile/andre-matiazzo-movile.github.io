@@ -1,0 +1,72 @@
+//Everything goes into .send-new to don't conflict in the final CSS
+.send-new {
+	.upper-bar {
+		background-color: #566fa5;
+		h1 {
+			color: $ice-white;
+			padding-bottom: 16px;
+		}
+		&:after {
+			display: none;
+		}
+	}
+
+	aside {
+		height: auto;
+		position: absolute;
+	}
+
+	.main-content h1 {
+		padding-top: 0;
+		margin-bottom: 18px;
+		width: 100%;
+	}
+
+	.recipients-container {
+		margin-top: 36px;
+		h1 {
+			margin-bottom: 0;
+		}
+		.recipients-buttons {
+			float: left;
+			width: 100%;
+			margin-top: 18px;
+			a {
+				margin-right: 24px;
+				float: left;
+			}
+		}
+	}
+
+	.improve-contact {
+		float: left;
+		width: 100%;
+		.floating-cta {
+			display: block;
+			float: left;
+			margin-top: 18px;
+		}
+		.floating-cta + p {
+			float: left;
+			width: 100%;
+			max-width: 250px;
+			margin-top: 12px;
+		}
+		.input-group {
+			display: none;
+		}
+	}
+
+
+	.dropdown {
+		width: calc(100% + 24px);
+		top: 0;
+		padding-top: 0;
+		margin-left: -12px;
+		margin-right: -12px;
+	}
+
+	.input-with-select .dropdown {
+		top: 20px;
+	}
+}
