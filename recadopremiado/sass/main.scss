@@ -121,6 +121,19 @@ nav {
 					color: $accent;
 					border-color: $accent;
 				}
+				&[href="cupons.html"] {
+					padding-top: 6px;
+					padding: 12px 12px 10px;
+					font-family: $bold;
+					color: $accent;
+					// background: $accent;
+					border: 2px solid $accent;
+					border-radius: 2px;
+					&:hover {
+						color: #fff;
+						background: $accent;
+					}
+				}
 			}
 		}
 	}
@@ -316,15 +329,31 @@ nav {
 		// max-width: 24rem;
 		padding: 48px 0;
 	}
-	p {
+	div.links {
 		float: left;
 		width: 40%;
 		margin-left: 20%;
 		padding: 48px 32px;
-		@include f3;
+		// @include f3;
+		line-height: 2;
 		color: #fff;
 		a {
+			float: left;
+			clear: both;
+			@include f3;
+			display: inline-block;
+			text-decoration: none;
+			padding: 12px 14px;
+			margin-top: 12px;
+			border: 2px solid #fff;
+			border-radius: 2px;
 			color: #fff;
+			cursor: pointer;
+			&[href="cupons.html"] {
+				margin-top: 0;
+				background: #fff;
+				color: #609;
+			}
 		}
 	}
 }
@@ -426,7 +455,7 @@ footer {
 		padding: 48px 0 24px;
 	}
 
-	.cta-banner p {
+	.cta-banner div.links {
 		width: 100%;
 		margin-left: 0;
 		margin-bottom: 174px; //150px (from sticker height) + 24px from real spacing
