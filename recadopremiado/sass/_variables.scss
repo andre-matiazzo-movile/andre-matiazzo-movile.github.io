@@ -22,15 +22,16 @@
 
 // COLORS
 $accent: #660099;
+$contrast: rgb(255,153,0);
 $darkgray: #7E7E7E;
 $silver: #CACACA;
 
 // GRADIENT PINK TO PURPLE
 @mixin gr-pink-purple {
 	background: rgb(235,60,125); /* Old browsers */
-	background: -moz-linear-gradient(left, rgba(235,60,125,1) 20%, rgba(102,0,153,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, rgba(235,60,125,1) 20%,rgba(102,0,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, rgba(235,60,125,1) 20%,rgba(102,0,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: -moz-linear-gradient(left, rgba(235,60,125,1) 10%, rgba(102,0,153,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(235,60,125,1) 10%,rgba(102,0,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(235,60,125,1) 10%,rgba(102,0,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb3c7d', endColorstr='#660099',GradientType=1 ); /* IE6-9 */
 }
 

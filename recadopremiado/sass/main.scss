@@ -125,13 +125,14 @@ nav {
 					padding-top: 6px;
 					padding: 12px 12px 10px;
 					font-family: $bold;
-					color: $accent;
+					color: #fff;
 					// background: $accent;
-					border: 2px solid $accent;
+					border: 2px solid $contrast;
 					border-radius: 2px;
+					background: $contrast;
 					&:hover {
-						color: #fff;
-						background: $accent;
+						color: $contrast;
+						background: transparent;
 					}
 				}
 			}
@@ -353,6 +354,7 @@ nav {
 				margin-top: 0;
 				background: #fff;
 				color: #609;
+				border-color: #fff;
 			}
 		}
 	}
