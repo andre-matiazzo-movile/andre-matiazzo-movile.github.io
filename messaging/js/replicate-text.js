@@ -5,6 +5,9 @@ $(document).ready(function() {
 	$('.atwho-view').click(function(){
 		phonePreview();
 	});
+	$('.automatic-msg__details a').click(function(){
+		phonePreview();
+	});
 	function phonePreview() {
 		var text = $("#mensagem-texto").text();
 		$(".phone-preview p").text(text);
