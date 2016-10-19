@@ -8,7 +8,7 @@
     <meta name="movile-messaging" content="Movile Messaging">
     <!-- Main CSS-->
     <link rel="stylesheet" href="../stylesheets/main.css">
-    <link rel="stylesheet" href="../stylesheets/autocomplete/awesomplete.css">
+    <link rel="stylesheet" href="../stylesheets/autocomplete/atwho.css">
     <!-- Typekit-->
     <script src="https://use.typekit.net/fja4naa.js"></script>
     <script>try{Typekit.load({ async: false });}catch(e){}</script>
@@ -69,7 +69,7 @@
       <div class="columns">
         <div class="column__half first-column">
           <p>Use <a href="javascript:;">Primeiro nome</a>, <a href="javascript:;">Nome completo</a> ou <a href="javascript:;">Apelido</a> no seu texto para enviar mensagens personalizadas aos seus contatos</p>
-          <textarea class="characterCount awesomeplete" id="mensagem-texto" name="mensagem-texto" cols="30" rows="10" maxlength="160" data-list="Primeiro nome, Nome completeo, Apelido"></textarea><a class="cta inner-cta has-icon-left icon-sidemodal" href="javascript:;">mensagem pronta</a>
+          <div class="fake-textarea characterCount autocomplete" id="mensagem-texto" contenteditable data-length="160"></div><a class="cta inner-cta has-icon-left icon-sidemodal" href="javascript:;">mensagem pronta</a>
           <p class="help-text mensagem-texto"></p>
         </div>
         <div class="column__half second-column">
@@ -100,8 +100,10 @@
   <!-- Filters-->
   <script src="../js/forms.js"></script>
   <script src="../js/messages.js"></script>
-  <script src="../js/replicate-text.js"></script>
   <script src="../js/character-count.js"></script>
+  <script src="../js/replicate-text.js"></script>
   <script src="../js/sidemodal.js"></script>
-  <script src="../js/autocomplete/awesomplete.min.js"></script>
+  <script src="../js/autocomplete/caret.js"></script>
+  <script src="../js/autocomplete/atwho.min.js"></script>
+  <script src="../js/autocomplete.js"></script>
 </html>

@@ -64,3 +64,16 @@
 		border-bottom: none;
 	}
 }
+
+.label-with-bg {
+	float: left;
+	@include text-label;
+	padding: 10px 12px;
+	margin: 6px 6px 0 0;
+	color: $accent;
+	background-color: $accent-hover;
+}
+
+.labels__container:empty + .main-label {
+	display: none;
+}

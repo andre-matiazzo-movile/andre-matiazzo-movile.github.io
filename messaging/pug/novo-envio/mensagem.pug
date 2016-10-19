@@ -8,7 +8,7 @@ html(lang='pt-br')
 		meta(name='movile-messaging', content='Movile Messaging')
 		// Main CSS
 		link(rel='stylesheet', href='../stylesheets/main.css')
-		link(rel='stylesheet', href='../stylesheets/autocomplete/awesomplete.css')
+		link(rel='stylesheet', href='../stylesheets/autocomplete/atwho.css')
 		// Typekit
 		script(src='https://use.typekit.net/fja4naa.js')
 		script.
@@ -64,7 +64,8 @@ html(lang='pt-br')
 			.columns
 				.column__half.first-column
 					p Use #[a(href="javascript:;") Primeiro nome], #[a(href="javascript:;") Nome completo] ou #[a(href="javascript:;") Apelido] no seu texto para enviar mensagens personalizadas aos seus contatos
-					textarea#mensagem-texto.characterCount.awesomeplete(name='mensagem-texto', cols='30', rows='10', maxlength="160", data-list="Primeiro nome, Nome completeo, Apelido")
+					#mensagem-texto.fake-textarea.characterCount.autocomplete(contenteditable, data-length="160")
+					//- textarea#mensagem-texto.characterCount.autocomplete(name='mensagem-texto', cols='30', rows='10', maxlength="160")
 					a.cta.inner-cta.has-icon-left.icon-sidemodal(href='javascript:;') mensagem pronta
 					p.help-text.mensagem-texto
 				.column__half.second-column
@@ -94,7 +95,9 @@ html(lang='pt-br')
 	// Filters
 	script(src='../js/forms.js')
 	script(src='../js/messages.js')
-	script(src='../js/replicate-text.js')
 	script(src='../js/character-count.js')
+	script(src='../js/replicate-text.js')
 	script(src='../js/sidemodal.js')
-	script(src='../js/autocomplete/awesomplete.min.js')
+	script(src='../js/autocomplete/caret.js')
+	script(src='../js/autocomplete/atwho.min.js')
+	script(src='../js/autocomplete.js')

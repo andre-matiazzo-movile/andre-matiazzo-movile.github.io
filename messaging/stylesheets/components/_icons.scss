@@ -1,3 +1,5 @@
+// Use them on <span> inside links or buttons
+
 .has-icon-left {
 	position: relative;
 	padding-left: 18px !important;
@@ -75,5 +77,18 @@
 		top: calc(50% - 5px);
 		background: url('../img/icons/arrow-left.png') no-repeat 2px center;
 		background-size: 12px;
+	}
+}
+
+.icon-close-blue {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/close-blue.png') no-repeat center center;
+		background-size: 12px;
+		cursor: pointer;
 	}
 }
