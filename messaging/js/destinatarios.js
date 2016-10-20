@@ -10,7 +10,9 @@ $(document).ready(function() {
 			$('.second-column').find('.checkout__label:visible').length == 1){
 			setTimeout(function(){
 				$('.second-column').fadeOut();
-			}, 200);
+			}, 400);
 	}
 });
+	$('.feedback-msg').delay(2000).animate({opacity: 0}, 400);
+	$('.feedback-msg').slideUp();
 });
