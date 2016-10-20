@@ -436,6 +436,11 @@ footer {
 
 @media (max-width: 760px) {
 
+	.container {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
 	.hero__title {
 		margin-left: auto;
 		margin-right: auto;
