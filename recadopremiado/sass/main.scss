@@ -144,7 +144,11 @@ li.logo {
 	padding: 12px 0 0;
 	a {
 		display: inline-block;
-		height: 46px;
+		height: 36px;
+		margin-top: 6px;
+		&:hover {
+			border-bottom-color: transparent;
+		}
 		img {
 			max-height: 100%;
 		}
@@ -508,6 +512,11 @@ footer {
 				font-size: 2.5rem;
 			}
 		}
+	}
+
+	li.logo a {
+		height: 30px;
+		margin-top: 10px;
 	}
 
 	footer {
