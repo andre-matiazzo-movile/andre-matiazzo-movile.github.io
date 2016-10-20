@@ -121,33 +121,35 @@ nav {
 					color: $accent;
 					border-color: $accent;
 				}
-				&[href="cupons.html"] {
-					padding-top: 6px;
-					padding: 12px 12px 10px;
-					font-family: $bold;
-					color: #fff;
-					// background: $accent;
-					border: 2px solid $contrast;
-					border-radius: 2px;
-					background: $contrast;
-					&:hover {
-						color: $contrast;
-						background: transparent;
-					}
-					&.mobile-only {
-						display: none;
-					}
-				}
 			}
 		}
 	}
-}	
+}
+
+.cta {
+	padding-top: 6px;
+	padding: 12px 12px 10px;
+	font-family: $bold;
+	color: #fff;
+	border: 2px solid $contrast;
+	border-radius: 2px;
+	background: $contrast;
+	text-decoration: none;
+	&:hover {
+		color: $contrast;
+		background: transparent;
+	}
+	&.mobile-only {
+		display: none;
+	}
+}
 
 li.logo {
 	padding: 12px 0 0;
 	a {
 		display: inline-block;
 		height: 36px;
+		width: 110px;
 		margin-top: 6px;
 		&:hover {
 			border-bottom-color: transparent;
@@ -522,15 +524,20 @@ footer {
 		}
 	}
 
-	li.logo a {
-		height: 30px;
-		margin-top: 10px;
+	li.logo	{
+		padding: 12px 0;
+		a {
+			height: 30px;
+			width: auto;
+			margin-top: 10px;
+		}
 	}
 
-	nav ul li a[href="cupons.html"] {
+	.cta {
 		display: none;
 		&.mobile-only {
-			display: inline;
+			display: inline-block;
+			margin-top: 18px;
 		}
 	}
 
