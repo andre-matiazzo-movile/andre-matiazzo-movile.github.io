@@ -134,6 +134,9 @@ nav {
 						color: $contrast;
 						background: transparent;
 					}
+					&.mobile-only {
+						display: none;
+					}
 				}
 			}
 		}
@@ -522,6 +525,13 @@ footer {
 	li.logo a {
 		height: 30px;
 		margin-top: 10px;
+	}
+
+	nav ul li a[href="cupons.html"] {
+		display: none;
+		&.mobile-only {
+			display: inline;
+		}
 	}
 
 	footer {
