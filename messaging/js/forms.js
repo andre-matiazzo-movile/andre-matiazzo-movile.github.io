@@ -27,6 +27,15 @@ $(document).ready(function() {
 		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 	});
 
+	//Specific for Gender dropdown on New Contact
+	$('.outro-genero a').bind('click', function() {
+		if ($('#contato-outro-genero').val().length > 0) {
+			var anotherGender = $('#contato-outro-genero').val();
+			$('.outro-genero').parents('.dropdown').siblings('.input').find('span').text(anotherGender);
+			$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
+		}
+	});
+
 
 
 // Filters' Modal on Mobile

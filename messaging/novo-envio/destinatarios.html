@@ -32,6 +32,7 @@
       <h1>Novo envio</h1>
     </section>
     <section class="main-content">
+      <p class="feedback-msg success-msg"><span>Contato</span> criado com sucesso!</p>
       <h1>Escolha quem vai receber</h1>
       <div class="columns">
         <div class="column__half first-column">
@@ -44,16 +45,34 @@
             <div class="recipients-buttons"><a class="cta floating-cta" href="./novo-grupo.html"><span class="has-icon-left icon-plus">novo grupo</span></a><a class="cta floating-cta" href="./novo-contato.html"><span class="has-icon-left icon-plus">novo contato</span></a></div>
           </div>
         </div>
+        <div class="column__half second-column">
+          <h2>Destinatários</h2>
+          <div class="recipients__checkout checkout--groups">
+            <div class="main-label">Grupos</div>
+            <div class="labels__container">
+              <div class="checkout__label label-with-bg"><span class="has-icon-left icon-close-blue">Grupo</span></div>
+              <div class="checkout__label label-with-bg"><span class="has-icon-left icon-close-blue">GrupoGrupoGrupo</span></div>
+              <div class="checkout__label label-with-bg"><span class="has-icon-left icon-close-blue">GrupoGrupo</span></div>
+            </div>
+          </div>
+          <div class="recipients__checkout checkout--contacts">
+            <div class="main-label">Contatos</div>
+            <div class="labels__container">
+              <div class="checkout__label label-with-bg"><span class="has-icon-left icon-close-blue">Contato</span></div>
+              <div class="checkout__label label-with-bg"><span class="has-icon-left icon-close-blue">ContatoContatoContato</span></div>
+              <div class="checkout__label label-with-bg"><span class="has-icon-left icon-close-blue">ContatoContato</span></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="crumb-bar">
         <ul class="primary-nav">
           <li><a href="./tipo-envio.html">Tipo de envio</a></li>
-          <li><a class="active" href="">Destinatários</a></li>
+          <li><a class="active" href="javascript:;">Destinatários</a></li>
           <li><a href="./mensagem.html">Mensagem</a></li>
-          <li><a href="">Campanha</a></li>
-          <li><a href="">Resumo</a></li>
-        </ul>
-        <button class="crumb-bar__cta"><span class="has-icon-right icon-continue">Continuar</span></button>
+          <li><a href="./campanha.html">Campanha</a></li>
+          <li><a href="./resumo.html">Resumo</a></li>
+        </ul><a class="crumb-bar__cta" href="mensagem.html"><span class="has-icon-right icon-continue">Continuar</span></a>
       </div>
     </section>
   </body>
@@ -61,4 +80,5 @@
   <script src="../js/jquery-3.1.0.min.js"></script>
   <!-- Filters-->
   <script src="../js/forms.js"></script>
+  <script src="../js/destinatarios.js"></script>
 </html>

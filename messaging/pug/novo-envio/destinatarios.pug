@@ -30,6 +30,9 @@ html(lang='pt-br')
 		section.upper-bar
 			h1 Novo envio
 		section.main-content
+			p.feedback-msg.success-msg
+				span Contato
+				|  criado com sucesso!
 			h1 Escolha quem vai receber
 			.columns
 				.column__half.first-column
@@ -43,21 +46,42 @@ html(lang='pt-br')
 								span.has-icon-left.icon-plus novo grupo
 							a.cta.floating-cta(href='./novo-contato.html')
 								span.has-icon-left.icon-plus novo contato
+				.column__half.second-column
+					h2 Destinatários
+					.recipients__checkout.checkout--groups
+						.main-label Grupos
+						.labels__container
+							.checkout__label.label-with-bg
+								span.has-icon-left.icon-close-blue Grupo
+							.checkout__label.label-with-bg
+								span.has-icon-left.icon-close-blue GrupoGrupoGrupo
+							.checkout__label.label-with-bg
+								span.has-icon-left.icon-close-blue GrupoGrupo
+					.recipients__checkout.checkout--contacts
+						.main-label Contatos
+						.labels__container
+							.checkout__label.label-with-bg
+								span.has-icon-left.icon-close-blue Contato
+							.checkout__label.label-with-bg
+								span.has-icon-left.icon-close-blue ContatoContatoContato
+							.checkout__label.label-with-bg
+								span.has-icon-left.icon-close-blue ContatoContato
 			#crumb-bar
 				ul.primary-nav
 					li
 						a(href='./tipo-envio.html') Tipo de envio
 					li
-						a.active(href='') Destinatários
+						a.active(href='javascript:;') Destinatários
 					li
 						a(href='./mensagem.html') Mensagem
 					li
-						a(href='') Campanha
+						a(href='./campanha.html') Campanha
 					li
-						a(href='') Resumo
-				button.crumb-bar__cta
+						a(href='./resumo.html') Resumo
+				a.crumb-bar__cta(href="mensagem.html")
 					span.has-icon-right.icon-continue Continuar
 	// jQuery
 	script(src='../js/jquery-3.1.0.min.js')
 	// Filters
 	script(src='../js/forms.js')
+	script(src='../js/destinatarios.js')
