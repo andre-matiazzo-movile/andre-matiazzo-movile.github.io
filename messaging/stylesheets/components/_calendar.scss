@@ -43,10 +43,10 @@
 }
 
 .comiseo-daterangepicker-triggerbutton.ui-button {
-	float: right;
+	// float: right;
 	position: relative;
-	padding: 12px 42px;
-	margin: 12px 12px;
+	padding: 12px 20px;
+	// margin: 12px 12px;
 	font-family: $base-font;
 	font-size: 1em;
 	font-weight: 800;
@@ -54,9 +54,10 @@
 	background-color: #fff;
 	border: none;
 	border-radius: 0;
+	min-width: 1em;
 	&:before {
 		position: absolute;
-		left: 18px;
+		left: 0px;
 		top: 50%;
 		top: 50%;
 		@include vertical-center;
@@ -68,7 +69,7 @@
 	}
 	&:after {
 		position: absolute;
-		right: 18px;
+		right: 0px;
 		top: 50%;
 		@include vertical-center;
 		width: 10px;
