@@ -36,49 +36,156 @@
     </aside>
     <section class="upper-bar">
       <h1>Relatórios</h1>
-     
     </section>
     <section class="main-content">
       <div class="bottom-bar-modal" id="bottomModal">
         <div class="actions-container">
-
-			<form class="pa0 mid-gray">
-				<div class="flex justify-between items-center mt3 mb3">
-					<h3>Filtros</h3>
-					 <!-- Calendar-->
-				      <input class="calendar-picker" id="datepicker" name="e1">
-				      <!-- /Calendar-->
-				</div>
-				<div class="flex justify-between">
-					<div class="dib w-100 mr3">
-						<label for="name" class="f6 db mb2">Tipo de relatório</label>
-	    				<input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">	
-					</div>
-					<div class="dib w-100 mr3">
-						<label for="name" class="f6 db mb2">Subconta</label>
-	    				<input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">	
-					</div>
-					<div class="dib w-100">
-						<label for="name" class="f6 db mb2">Usuários</label>
-	    				<input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">	
-					</div>
-				</div>
-				<div class="flex justify-between mt3">
-					<div class="dib w-100 mr3">
-						<label for="name" class="f6 db mb2">Campanha, Lote ou Número</label>
-	    				<input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">	
-					</div>
-					<div class="dib w-100 mr3">
-						<label for="name" class="f6 db mb2">Operadoras</label>
-	    				<input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">	
-					</div>
-					<div class="dib w-100">
-						<label for="name" class="f6 db mb2">Status das mensagens</label>
-	    				<input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">	
-					</div>
-				</div>
-			</form>
-
+          <form>
+            <div class="flex justify-between items-center mt3 mb3">
+              <h3>Filtros</h3>
+              <!-- Calendar-->
+              <input class="calendar-picker" id="datepicker" name="e1">
+              <!-- /Calendar-->
+            </div>
+            <div class="flex justify-between">
+              <div class="w-100 mr3">
+                <div class="filters__item--user-or-la">
+                  <label class="main-label">Usuário ou LA</label>
+                  <div class="input search"><span>Usuário ou LA</span></div>
+                  <div class="dropdown dropdown--user-or-la">
+                    <label class="main-label">Usuário ou LA</label>
+                    <form class="search-active" role="search">
+                      <input type="search" autofocus="">
+                    </form>
+                    <ul>
+                      <li class="search__subheading"><span>Buscas recentes</span></li>
+                      <li><span>Bruno Farias</span></li>
+                      <li><span>Nayara Rodrigues</span></li>
+                      <li><span>Neto Andrade</span></li>
+                      <li><span>Hudson Souza</span></li>
+                      <li><span>Edson Koji</span></li>
+                      <li><span>Henrique Perticarati</span></li>
+                      <li><span>Juliana Gaspari</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 mr3">
+                <!-- USUARIO OU LA-->
+                <div class="filters__item--user-or-la">
+                  <label class="main-label">Usuário ou LA</label>
+                  <div class="input search"><span>Usuário ou LA</span></div>
+                  <div class="dropdown dropdown--user-or-la">
+                    <label class="main-label">Usuário ou LA</label>
+                    <form class="search-active" role="search">
+                      <input type="search" autofocus="">
+                    </form>
+                    <ul>
+                      <li class="search__subheading"><span>Buscas recentes</span></li>
+                      <li><span>Bruno Farias</span></li>
+                      <li><span>Nayara Rodrigues</span></li>
+                      <li><span>Neto Andrade</span></li>
+                      <li><span>Hudson Souza</span></li>
+                      <li><span>Edson Koji</span></li>
+                      <li><span>Henrique Perticarati</span></li>
+                      <li><span>Juliana Gaspari</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100">
+                <div class="filters__item--user-or-la">
+                  <label class="main-label">Usuário ou LA</label>
+                  <div class="input search"><span>Usuário ou LA</span></div>
+                  <div class="dropdown dropdown--user-or-la">
+                    <label class="main-label">Usuário ou LA</label>
+                    <form class="search-active" role="search">
+                      <input type="search" autofocus="">
+                    </form>
+                    <ul>
+                      <li class="search__subheading"><span>Buscas recentes</span></li>
+                      <li><span>Bruno Farias</span></li>
+                      <li><span>Nayara Rodrigues</span></li>
+                      <li><span>Neto Andrade</span></li>
+                      <li><span>Hudson Souza</span></li>
+                      <li><span>Edson Koji</span></li>
+                      <li><span>Henrique Perticarati</span></li>
+                      <li><span>Juliana Gaspari</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div class="w-100 mr3">
+                <div class="filters__item--user-or-la">
+                  <label class="main-label">Usuário ou LA</label>
+                  <div class="input search"><span>Usuário ou LA</span></div>
+                  <div class="dropdown dropdown--user-or-la">
+                    <label class="main-label">Usuário ou LA</label>
+                    <form class="search-active" role="search">
+                      <input type="search" autofocus="">
+                    </form>
+                    <ul>
+                      <li class="search__subheading"><span>Buscas recentes</span></li>
+                      <li><span>Bruno Farias</span></li>
+                      <li><span>Nayara Rodrigues</span></li>
+                      <li><span>Neto Andrade</span></li>
+                      <li><span>Hudson Souza</span></li>
+                      <li><span>Edson Koji</span></li>
+                      <li><span>Henrique Perticarati</span></li>
+                      <li><span>Juliana Gaspari</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 mr3">
+                <!-- USUARIO OU LA-->
+                <div class="filters__item--user-or-la">
+                  <label class="main-label">Usuário ou LA</label>
+                  <div class="input search"><span>Usuário ou LA</span></div>
+                  <div class="dropdown dropdown--user-or-la">
+                    <label class="main-label">Usuário ou LA</label>
+                    <form class="search-active" role="search">
+                      <input type="search" autofocus="">
+                    </form>
+                    <ul>
+                      <li class="search__subheading"><span>Buscas recentes</span></li>
+                      <li><span>Bruno Farias</span></li>
+                      <li><span>Nayara Rodrigues</span></li>
+                      <li><span>Neto Andrade</span></li>
+                      <li><span>Hudson Souza</span></li>
+                      <li><span>Edson Koji</span></li>
+                      <li><span>Henrique Perticarati</span></li>
+                      <li><span>Juliana Gaspari</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100">
+                <div class="filters__item--user-or-la">
+                  <label class="main-label">Usuário ou LA</label>
+                  <div class="input search"><span>Usuário ou LA</span></div>
+                  <div class="dropdown dropdown--user-or-la">
+                    <label class="main-label">Usuário ou LA</label>
+                    <form class="search-active" role="search">
+                      <input type="search" autofocus="">
+                    </form>
+                    <ul>
+                      <li class="search__subheading"><span>Buscas recentes</span></li>
+                      <li><span>Bruno Farias</span></li>
+                      <li><span>Nayara Rodrigues</span></li>
+                      <li><span>Neto Andrade</span></li>
+                      <li><span>Hudson Souza</span></li>
+                      <li><span>Edson Koji</span></li>
+                      <li><span>Henrique Perticarati</span></li>
+                      <li><span>Juliana Gaspari</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
           <div class="secondary-actions">
             <div class="actions__container"><a class="cta--secondary" href="javascript:;">download</a></div>
           </div>
@@ -99,6 +206,12 @@
   <script src="js/jquery-3.1.0.min.js"></script>
   <!-- Filters-->
   <script src="js/forms.js"></script>
+  <script>
+    $('.select').click(function(){
+    	$('.dropdown').css('display','block');
+    	$('.dropdown').css('opacity','1');
+    });
+  </script>
   <!-- For the calendar-->
   <script src="calendar/jquery-ui/jquery-ui.min.js"></script>
   <script src="calendar/moment.js"></script>
