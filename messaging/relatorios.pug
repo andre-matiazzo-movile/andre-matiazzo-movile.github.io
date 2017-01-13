@@ -41,197 +41,191 @@ html(lang='pt-br')
 		section.upper-bar
 			h1 Relatórios
 		section.main-content
-			#bottomModal.bottom-bar-modal
-				.actions-container
-					form
-						.flex.justify-between.items-center.mt3.mb3
-							h3 Filtros
-							// Calendar
-							input#datepicker.calendar-picker(name='e1')
-							// /Calendar
-						.flex.justify-between
-							.w-100.mr3
-								.filters__item--user-or-la
+			//- #bottomModal.bottom-bar-modal
+			.actions-container
+				.bg-lightest-gray.theblack.filter__container
+					.flex.justify-between.items-center
+						h3.theblack.f4 Filtros
+						// Calendar
+						input#datepicker.calendar-picker(name='e1')
+						// /Calendar
+					.flex.justify-between.mt3
+						.w-100.mr3
+							.filters__item--user-or-la
+								label.main-label Usuário ou LA
+								.input.caret-down
+									span Usuário ou LA
+								.dropdown.dropdown--user-or-la
 									label.main-label Usuário ou LA
-									.input.search
-										span Usuário ou LA
-									.dropdown.dropdown--user-or-la
-										label.main-label Usuário ou LA
-										form.search-active(role='search')
-											input(type='search', autofocus='')
-										ul
-											li.search__subheading
-												span Buscas recentes
-											li
-												span Bruno Farias
-											li
-												span Nayara Rodrigues
-											li
-												span Neto Andrade
-											li
-												span Hudson Souza
-											li
-												span Edson Koji
-											li
-												span Henrique Perticarati
-											li
-												span Juliana Gaspari
-							.w-100.mr3
-								// USUARIO OU LA
-								.filters__item--user-or-la
+									form.search-active(role='search')
+										input(type='search', autofocus='')
+									ul
+										li.search__subheading
+											span Buscas recentes
+										li
+											span Bruno Farias
+										li
+											span Nayara Rodrigues
+										li
+											span Neto Andrade
+										li
+											span Hudson Souza
+										li
+											span Edson Koji
+										li
+											span Henrique Perticarati
+										li
+											span Juliana Gaspari
+						.w-100.mr3
+							// USUARIO OU LA
+							.filters__item--user-or-la
+								label.main-label Usuário ou LA
+								.input.caret-down
+									span Usuário ou LA
+								.dropdown.dropdown--user-or-la
 									label.main-label Usuário ou LA
-									.input.search
-										span Usuário ou LA
-									.dropdown.dropdown--user-or-la
-										label.main-label Usuário ou LA
-										form.search-active(role='search')
-											input(type='search', autofocus='')
-										ul
-											li.search__subheading
-												span Buscas recentes
-											li
-												span Bruno Farias
-											li
-												span Nayara Rodrigues
-											li
-												span Neto Andrade
-											li
-												span Hudson Souza
-											li
-												span Edson Koji
-											li
-												span Henrique Perticarati
-											li
-												span Juliana Gaspari
-							.w-100
-								.filters__item--user-or-la
+									form.search-active(role='search')
+										input(type='search', autofocus='')
+									ul
+										li.search__subheading
+											span Buscas recentes
+										li
+											span Bruno Farias
+										li
+											span Nayara Rodrigues
+										li
+											span Neto Andrade
+										li
+											span Hudson Souza
+										li
+											span Edson Koji
+										li
+											span Henrique Perticarati
+										li
+											span Juliana Gaspari
+						.w-100
+							.filters__item--user-or-la
+								label.main-label Usuário ou LA
+								.input.caret-down
+									span Usuário ou LA
+								.dropdown.dropdown--user-or-la
 									label.main-label Usuário ou LA
-									.input.search
-										span Usuário ou LA
-									.dropdown.dropdown--user-or-la
-										label.main-label Usuário ou LA
-										form.search-active(role='search')
-											input(type='search', autofocus='')
-										ul
-											li.search__subheading
-												span Buscas recentes
-											li
-												span Bruno Farias
-											li
-												span Nayara Rodrigues
-											li
-												span Neto Andrade
-											li
-												span Hudson Souza
-											li
-												span Edson Koji
-											li
-												span Henrique Perticarati
-											li
-												span Juliana Gaspari
-						.flex.justify-between
-							.w-100.mr3
-								.filters__item--user-or-la
+									form.search-active(role='search')
+										input(type='search', autofocus='')
+									ul
+										li.search__subheading
+											span Buscas recentes
+										li
+											span Bruno Farias
+										li
+											span Nayara Rodrigues
+										li
+											span Neto Andrade
+										li
+											span Hudson Souza
+										li
+											span Edson Koji
+										li
+											span Henrique Perticarati
+										li
+											span Juliana Gaspari
+					.flex.justify-between.mt3
+						.w-100.mr3
+							.filters__item--user-or-la
+								label.main-label Usuário ou LA
+								.input.caret-down
+									span Usuário ou LA
+								.dropdown.dropdown--user-or-la
 									label.main-label Usuário ou LA
-									.input.search
-										span Usuário ou LA
-									.dropdown.dropdown--user-or-la
-										label.main-label Usuário ou LA
-										form.search-active(role='search')
-											input(type='search', autofocus='')
-										ul
-											li.search__subheading
-												span Buscas recentes
-											li
-												span Bruno Farias
-											li
-												span Nayara Rodrigues
-											li
-												span Neto Andrade
-											li
-												span Hudson Souza
-											li
-												span Edson Koji
-											li
-												span Henrique Perticarati
-											li
-												span Juliana Gaspari
-							.w-100.mr3
-								// USUARIO OU LA
-								.filters__item--user-or-la
+									form.search-active(role='search')
+										input(type='search', autofocus='')
+									ul
+										li.search__subheading
+											span Buscas recentes
+										li
+											span Bruno Farias
+										li
+											span Nayara Rodrigues
+										li
+											span Neto Andrade
+										li
+											span Hudson Souza
+										li
+											span Edson Koji
+										li
+											span Henrique Perticarati
+										li
+											span Juliana Gaspari
+						.w-100.mr3
+							// USUARIO OU LA
+							.filters__item--user-or-la
+								label.main-label Usuário ou LA
+								.input.caret-down
+									span Usuário ou LA
+								.dropdown.dropdown--user-or-la
 									label.main-label Usuário ou LA
-									.input.search
-										span Usuário ou LA
-									.dropdown.dropdown--user-or-la
-										label.main-label Usuário ou LA
-										form.search-active(role='search')
-											input(type='search', autofocus='')
-										ul
-											li.search__subheading
-												span Buscas recentes
-											li
-												span Bruno Farias
-											li
-												span Nayara Rodrigues
-											li
-												span Neto Andrade
-											li
-												span Hudson Souza
-											li
-												span Edson Koji
-											li
-												span Henrique Perticarati
-											li
-												span Juliana Gaspari
-							.w-100
-								.filters__item--user-or-la
+									form.search-active(role='search')
+										input(type='search', autofocus='')
+									ul
+										li.search__subheading
+											span Buscas recentes
+										li
+											span Bruno Farias
+										li
+											span Nayara Rodrigues
+										li
+											span Neto Andrade
+										li
+											span Hudson Souza
+										li
+											span Edson Koji
+										li
+											span Henrique Perticarati
+										li
+											span Juliana Gaspari
+						.w-100
+							.filters__item--user-or-la
+								label.main-label Usuário ou LA
+								.input.caret-down
+									span Usuário ou LA
+								.dropdown.dropdown--user-or-la
 									label.main-label Usuário ou LA
-									.input.search
-										span Usuário ou LA
-									.dropdown.dropdown--user-or-la
-										label.main-label Usuário ou LA
-										form.search-active(role='search')
-											input(type='search', autofocus='')
-										ul
-											li.search__subheading
-												span Buscas recentes
-											li
-												span Bruno Farias
-											li
-												span Nayara Rodrigues
-											li
-												span Neto Andrade
-											li
-												span Hudson Souza
-											li
-												span Edson Koji
-											li
-												span Henrique Perticarati
-											li
-												span Juliana Gaspari
-					.secondary-actions
-						.actions__container
-							a.cta--secondary(href='javascript:;') download
-			.bottom-bar.mobile-only
-				#modalTrigger.bottom-bar__filters
-					button
-						| Você tem 
-						span 2 filtros
-						|  ativos
-				.secondary-actions
-					.actions__container
-						a.download-report download
-						a.download-report
+									form.search-active(role='search')
+										input(type='search', autofocus='')
+									ul
+										li.search__subheading
+											span Buscas recentes
+										li
+											span Bruno Farias
+										li
+											span Nayara Rodrigues
+										li
+											span Neto Andrade
+										li
+											span Hudson Souza
+										li
+											span Edson Koji
+										li
+											span Henrique Perticarati
+										li
+											span Juliana Gaspari
+					.flex.justify-end.mt3
+						a.cta.cta-accent
+							span.has-icon-left.icon-refresh--white atualizar
+			.flex.justify-between.items-center.mt4.mb4.item-start
+					.flex.flex-column.items-left
+						span.f7.b.tracked CAMPANHA
+						h3.theblack.f4.mt1 Carnaval 2014, por mês
+					a.cta
+						span.has-icon-right.icon-dropdown__blue download
+			div
+				span Procure por destinatários
+			//- Display the table
 			.ct-chart.ct-double-octave
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
 	// Filters
 	script(src='js/forms.js')
-	script.
-		$('.select').click(function(){
-			$('.dropdown').css('display','block');
-			$('.dropdown').css('opacity','1');
-		});
 	// For the calendar
 	script(src='calendar/jquery-ui/jquery-ui.min.js')
 	script(src='calendar/moment.js')

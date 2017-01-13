@@ -4,7 +4,16 @@ $accent-hover: #E0EAFF;
 $accent-pressed: #5a6f9a;
 $main-gray: #A2B7C1;
 $lighter-gray: rgba(55,71,79,0.18);
+.lighter-gray{color:$lighter-gray}
+.bg-lighter-gray{background-color:$lighter-gray}
+// $lightest-gray: rgba(55,71,79,0.06);
+// not using alpha color because the calendar picker stays over the filter__container background and 2 alphas overlapping are creating a new color 12% black;
+$lightest-gray: #F3F4F5;
+.lightest-gray{color:$lightest-gray}
+.bg-lightest-gray{background-color:$lightest-gray}
 $theblack: #37474F;
+.theblack{color:$theblack}
+.bg-theblack{background-color:$theblack}
 $sidebar: #6B84B6;
 $sidebar-border: #576E95;
 $ice-white: #F3F9FF;
