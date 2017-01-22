@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+	var n = $(".dropdown-item-box").length;
+	$(document).find(".dropdown-item-box").each(function(){
+		var w = $(this).width();
+		alert(w);
+		var w2 = Math.round(w);
+		$(this).parents(".has-dropdown").find(".view-box-close").css("min-width", w2+"px");
+		$(this).children(".insert-criteria").css("min-width", w2+"px");
+	});
+	$(".view-box-open").hide();
+	$(".view-box-open").removeClass("o-0");
+
+
 	// Closes the dropdown by clicking out of it
 	$(document).bind('click', function(toggleDropdown) {
 		if (!$(toggleDropdown.target).closest('.dropdown, .input').length) {

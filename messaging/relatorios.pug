@@ -52,11 +52,11 @@ html(lang='pt-br')
 					.flex.justify-between.mt3
 						.w-100.mr3
 							.filters__item--user-or-la
-								label.main-label Usuário ou LA
+								label.main-label Tipo de relatório
 								.input.caret-down
-									span Usuário ou LA
+									span Envios consolidados
 								.dropdown.dropdown--user-or-la
-									label.main-label Usuário ou LA
+									label.main-label Tipo de relatório
 									input(type='search', autofocus='')
 									ul
 										li.search__subheading
@@ -78,11 +78,11 @@ html(lang='pt-br')
 						.w-100.mr3
 							// USUARIO OU LA
 							.filters__item--user-or-la
-								label.main-label Usuário ou LA
+								label.main-label Subconta
 								.input.caret-down
-									span Usuário ou LA
+									span Todas as subcontas
 								.dropdown.dropdown--user-or-la
-									label.main-label Usuário ou LA
+									label.main-label Subconta
 									input(type='search', autofocus='')
 									ul
 										li.search__subheading
@@ -103,11 +103,11 @@ html(lang='pt-br')
 											span Juliana Gaspari
 						.w-100
 							.filters__item--user-or-la
-								label.main-label Usuário ou LA
+								label.main-label Usuários
 								.input.caret-down
-									span Usuário ou LA
+									span Todos os usuários
 								.dropdown.dropdown--user-or-la
-									label.main-label Usuário ou LA
+									label.main-label Usuários
 									input(type='search', autofocus='')
 									ul
 										li.search__subheading
@@ -129,11 +129,11 @@ html(lang='pt-br')
 					.flex.justify-between.mt3
 						.w-100.mr3
 							.filters__item--user-or-la
-								label.main-label Usuário ou LA
+								label.main-label Campanha, Lote ou Número
 								.input.caret-down
-									span Usuário ou LA
+									span Carnaval 2014
 								.dropdown.dropdown--user-or-la
-									label.main-label Usuário ou LA
+									label.main-label Campanha, Lote ou Número
 									input(type='search', autofocus='')
 									ul
 										li.search__subheading
@@ -155,11 +155,11 @@ html(lang='pt-br')
 						.w-100.mr3
 							// USUARIO OU LA
 							.filters__item--user-or-la
-								label.main-label Usuário ou LA
+								label.main-label Operadoras
 								.input.caret-down
-									span Usuário ou LA
+									span Todas as operadoras
 								.dropdown.dropdown--user-or-la
-									label.main-label Usuário ou LA
+									label.main-label Operadoras
 									input(type='search', autofocus='')
 									ul
 										li.search__subheading
@@ -180,11 +180,11 @@ html(lang='pt-br')
 											span Juliana Gaspari
 						.w-100
 							.filters__item--user-or-la
-								label.main-label Usuário ou LA
+								label.main-label Status das mensagens
 								.input.caret-down
-									span Usuário ou LA
+									span Todos os status
 								.dropdown.dropdown--user-or-la
-									label.main-label Usuário ou LA
+									label.main-label Status das mensagens
 									input(type='search', autofocus='')
 									ul
 										li.search__subheading
@@ -228,9 +228,9 @@ html(lang='pt-br')
 				.flex.mr2.has-dropdown.relative
 						span.f6.theblack Visualização por
 						span.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer Operadora
-						.flex.view-box-open.shadow-2.pv2.ph3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt2.nl3(style='display:none')
+						.flex.view-box-open.shadow-2.pv2.ph3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt2.nl3.o-0
 							span.f6.w-100.theblack Visualização por
-							.flex.flex-column
+							.flex.flex-column.dropdown-item-box
 								span.f6.theblack.b.ml1.bb.relative.has-icon-right.icon-dropdown.insert-criteria Operadora
 								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Hora
 								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Dia
@@ -264,9 +264,9 @@ html(lang='pt-br')
 					.flex.mr2.has-dropdown.relative
 						span.f6 Consolidar por
 						span.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer Operadora
-						.flex.view-box-open.shadow-2.pv2.ph3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt2.nl3(style='display:none')
+						.flex.view-box-open.shadow-2.pv2.ph3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt2.nl3.o-0
 							span.f6.w-100 Consolidar por
-							.flex.flex-column
+							.flex.flex-column.dropdown-item-box
 								span.f6.theblack.b.ml1.bb.relative.has-icon-right.icon-dropdown.insert-criteria Operadora
 								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Hora
 								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Dia
@@ -275,9 +275,9 @@ html(lang='pt-br')
 					.flex.mr2.has-dropdown.relative
 						span.f6 e por
 						span.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer Hora
-						.flex.view-box-open.shadow-2.pv2.ph3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt2.nl3(style='display:none')
+						.flex.view-box-open.shadow-2.pv2.ph3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt2.nl3.o-0
 							span.f6.w-100 e por
-							.flex.flex-column
+							.flex.flex-column.dropdown-item-box
 								span.f6.theblack.b.ml1.bb.relative.has-icon-right.icon-dropdown.insert-criteria Hora
 								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Hora
 								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Dia
@@ -335,6 +335,21 @@ html(lang='pt-br')
 					
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
+
+	//- //Adjust width of the inline dropdown
+	//- script.
+	//- 	$(document).ready(function(){
+	//- 		var n = $(".dropdown-item-box").length;
+	//- 		$(document).find(".dropdown-item-box").each(function(){
+	//- 			var w = $(this).width();
+	//- 			alert(w);
+	//- 			var w2 = Math.round(w);
+	//- 			$(this).parents(".has-dropdown").find(".view-box-close").css("min-width", w2+"px");
+	//- 			$(this).children(".insert-criteria").css("min-width", w2+"px");
+	//- 		});
+	//- 		$(".view-box-open").hide();
+	//- 		$(".view-box-open").removeClass("o-0");
+	//- 	});
 
 	// when clicked on the dropdown word, it opens the full box
 	script.
