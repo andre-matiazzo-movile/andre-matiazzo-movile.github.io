@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movile Messaging – Relatórios</title>
+    <meta name="movile-messaging" content="Movile Messaging">
+    <!-- For the calendar-->
+    <link href="calendar/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="calendar/jquery.comiseo.daterangepicker.css" rel="stylesheet">
+    <!-- For the charts-->
+    <link href="charts/chartist.min.css" rel="stylesheet">
+    <script src="charts/chartist.min.js" charset="utf-8"></script>
+    <!-- Tachyons CSS-->
+    <link rel="stylesheet" href="stylesheets/tachyons.min.css">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- Typekit-->
+    <script src="https://use.typekit.net/fja4naa.js"></script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+  </head>
+  <body>
+    <aside>
+      <div class="logo"><img class="blue" src="img/logo-white.png" alt="Logo Movile Messaging"></div>
+      <nav>
+        <ul class="primary-nav">
+          <li><a href="">Dashboard</a></li>
+          <li><a href="">Novo envio</a></li>
+          <li><a class="active" href="">Relatórios</a></li>
+          <li><a href="">Contatos</a></li>
+          <li><a href="">Configurações</a></li>
+          <li><a href="">Suporte</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="upper-bar">
+      <h1>Relatórios</h1>
+    </section>
+    <section class="main-content">
+      <div class="bottom-bar-modal" id="bottomModal">
+        <div class="actions-container">
+          <form class="pa0 mid-gray">
+            <div class="flex justify-between items-center mt3 mb3">
+              <h3>Filtros</h3>
+              <!-- Calendar-->
+              <input class="calendar-picker" id="datepicker" name="e1">
+              <!-- /Calendar-->
+            </div>
+            <div class="flex justify-between">
+              <div class="dib w-100 mr3">
+                <label class="f6 db mb2" for="name">Tipo de relatório</label>
+                <input class="input-reset ba b--black-20 pa2 mb2 db w-100" id="report-type" type="text" aria-describedby="name-desc">
+              </div>
+              <div class="dib w-100 mr3">
+                <label class="f6 db mb2" for="name">Subconta</label>
+                <input class="input-reset ba b--black-20 pa2 mb2 db w-100" id="subaccount" type="text" aria-describedby="name-desc">
+              </div>
+              <div class="dib w-100">
+                <label class="f6 db mb2" for="name">Usuários</label>
+                <input class="input-reset ba b--black-20 pa2 mb2 db w-100" id="user" type="text" aria-describedby="name-desc">
+              </div>
+            </div>
+            <div class="flex justify-between mt3">
+              <div class="dib w-100 mr3">
+                <label class="f6 db mb2" for="name">Campanha, Lote ou Número</label>
+                <input class="input-reset ba b--black-20 pa2 mb2 db w-100" id="campaign" type="text" aria-describedby="name-desc">
+              </div>
+              <div class="dib w-100 mr3">
+                <label class="f6 db mb2" for="name">Operadoras</label>
+                <input class="input-reset ba b--black-20 pa2 mb2 db w-100" id="carrier" type="text" aria-describedby="name-desc">
+              </div>
+              <div class="dib w-100 relative select">
+                <label class="f6 db mb2" for="name">Status das mensagens</label>
+                <input class="input-reset ba b--black-20 pa2 mb2 db w-100" id="name" type="text" aria-describedby="name-desc">
+                <div class="dropdown dropdown--campaign">
+                  <label class="main-label">Status da mensagem</label>
+                  <form class="search-active" role="search">
+                    <input type="search" autofocus>
+                  </form>
+                  <ul>
+                    <li><span>Todos os status</span></li>
+                    <li class="search__subheading"><span>Buscas recentes</span></li>
+                    <li><span>teste</span></li>
+                    <li><span>teste</span></li>
+                    <li><span>teste</span></li>
+                    <li><span>teste</span></li>
+                    <li><span>teste</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="secondary-actions">
+            <div class="actions__container"><a class="cta--secondary" href="javascript:;">download</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-bar mobile-only">
+        <div class="bottom-bar__filters" id="modalTrigger">
+          <button>Você tem <span>2 filtros</span> ativos</button>
+        </div>
+        <div class="secondary-actions">
+          <div class="actions__container"><a class="download-report">download</a><a class="download-report"></a></div>
+        </div>
+      </div>
+      <div class="ct-chart ct-double-octave"></div>
+    </section>
+  </body>
+  <!-- jQuery-->
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <!-- Filters-->
+  <script src="js/forms.js"></script>
+  <script>
+    $('.select').click(function(){
+    	$('.dropdown').css('display','block');
+    	$('.dropdown').css('opacity','1');
+    });
+  </script>
+  <!-- For the calendar-->
+  <script src="calendar/jquery-ui/jquery-ui.min.js"></script>
+  <script src="calendar/moment.js"></script>
+  <script src="calendar/jquery.comiseo.daterangepicker.js"></script>
+  <script src="charts/custom-charts.js"></script>
+  <script>
+    $(function() {
+    $("#datepicker").daterangepicker({
+    presetRanges: [{
+    text: 'Últimos 7 dias',
+    dateStart: function() { return moment().add(-7, 'days') },
+    dateEnd: function() { return moment().add(0, 'days') }
+    }, {
+    text: 'Últimos 30 dias',
+    dateStart: function() { return moment().add(-30, 'days') },
+    dateEnd: function() { return moment().add(0, 'days') }
+    }, {
+    text: 'Últimos 90 dias',
+    dateStart: function() { return moment().add(-90, 'days') },
+    dateEnd: function() { return moment().add(0, 'days') }
+    }],
+    applyOnMenuSelect: false,
+    dateFormat: 'd M yy',
+    rangeSplitter: ' – ',
+    initialText: 'Escolha um período',
+    applyButtonText: 'confirmar',
+    clearButtonText: 'limpar',
+    cancelButtonText: 'cancelar',
+    verticalOffset: -50,
+    datepickerOptions: {
+    dayNamesMin: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
+    monthNames: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'  ],
+    monthNamesShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
+    numberOfMonths: 2,
+    minDate: null,
+    maxDate: 0
+    }
+    });
+    });
+  </script>
+</html>

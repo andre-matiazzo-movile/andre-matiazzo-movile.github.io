@@ -132,11 +132,26 @@
 	}
 }
 
+.icon-dropdown {
+	&:after {
+		content: "";
+		width: 10px;
+		height: 10px;
+		right: 0;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/caretdown-gray.png') no-repeat center center;
+		background-size: 12px;
+		cursor: pointer;
+	}
+}
+
 .icon-dropdown__blue {
 	&:after {
 		content: "";
 		width: 10px;
 		height: 10px;
+		right: 0;
 		position: absolute;
 		top: calc(50% - 5px);
 		background: url('../img/icons/caretdown-blue.png') no-repeat center center;

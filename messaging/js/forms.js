@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
 	// Closes the dropdown by clicking out of it
-	$(document).bind('click', function(toggleDropdown) {
-		if (!$(toggleDropdown.target).closest('.dropdown, .input').length) {
+	$(document).bind('click', function() {
+		if (!$(this.target).closest('.dropdown, .input').length) {
 			$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 		}
 	});
@@ -38,28 +38,28 @@ $(document).ready(function() {
 
 
 
-// Filters' Modal on Mobile
-// Get the modal
-var modal = document.getElementById('bottomModal');
-// Get the button that opens the modal
-var btn = document.getElementById("modalTrigger");
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// // Filters' Modal on Mobile
+// // Get the modal
+// var modal = document.getElementById('bottomModal');
+// // Get the button that opens the modal
+// var btn = document.getElementById("modalTrigger");
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-	modal.style.display = "block";
-}
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-	modal.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-document.onclick = function(event) {
-	if (event.target == modal) {
-		modal.style.display = "none";
-	}
+// // When the user clicks the button, open the modal
+// btn.onclick = function() {
+// 	modal.style.display = "block";
+// }
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() {
+// 	modal.style.display = "none";
+// }
+// // When the user clicks anywhere outside of the modal, close it
+// document.onclick = function(event) {
+// 	if (event.target == modal) {
+// 		modal.style.display = "none";
+// 	}
 
-}
+// }
 
 });

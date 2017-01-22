@@ -188,10 +188,11 @@
       <!-- legenda do gráfico-->
       <div class="flex mt4 justify-between items-start relative">
         <div><span class="bg-green br-100 pa1 dib"></span><span class="f7 blue-gray ml1 ttu b tracked">Mensagens enviadas</span><span class="bg-red br-100 pa1 dib ml4"></span><span class="f7 blue-gray ml1 ttu b tracked">Mensagens com erro</span></div>
-        <div class="flex mr2 has-dropdown relative"><span class="f6 theblack">Visualização por</span><span class="f6 theblack b ml1 pr5 bb relative has-icon-right icon-dropdown insert-criteria view-box-close pointer">Operadora</span>
-          <div class="flex view-box-open shadow-2 pv2 ph3 absolute top-0 left-0 bg-white z-3 w-100 content-box nt2 nl3" style="display:none"><span class="f6 w-100 theblack">Visualização por</span>
-            <div class="flex flex-column"><span class="f6 theblack b ml1 bb relative has-icon-right icon-dropdown insert-criteria">Operadora</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Hora</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Dia</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Mês</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Operadora</span></div>
-          </div>
+        <div class="flex view-box-close pointer"><span class="f6 theblack">Visualização por </span>
+          <div class="flex flex-column" style="width:130px"><span class="f6 theblack b ml1 pr5 bb relative icon-dropdown insert-criteria">Operadora</span></div>
+        </div>
+        <div class="flex view-box-open shadow-2 pa2 absolute top-0 right-0 bg-white" style="display:none;width:270px;margin: -8px -26px 0px 0px"><span class="f6 theblack">Visualização por </span>
+          <div class="flex flex-column" style="width:130px"><span class="f6 theblack b ml1 pr5 bb relative icon-dropdown insert-criteria">Operadora</span><span class="f6 theblack b ml1 pr5 mt3 relative view-criteria pointer accent-hover">Hora</span><span class="f6 theblack b ml1 pr5 mt3 relative view-criteria pointer accent-hover">Dia</span><span class="f6 theblack b ml1 pr5 mt3 relative view-criteria pointer accent-hover">Mês</span><span class="f6 theblack b ml1 pr5 mt3 relative view-criteria pointer accent-hover">Operadora</span></div>
         </div>
       </div>
       <!-- número de mensagens enviadas-->
@@ -203,69 +204,36 @@
       <!--Detalhes-->
       <div class="mt5">
         <h3 class="blue-gray f5">Detalhes</h3>
-        <div class="flex mt4 theblack">
-          <div class="flex mr2 has-dropdown relative"><span class="f6">Consolidar por</span><span class="f6 theblack b ml1 pr5 bb relative has-icon-right icon-dropdown insert-criteria view-box-close pointer">Operadora</span>
-            <div class="flex view-box-open shadow-2 pv2 ph3 absolute top-0 left-0 bg-white z-3 w-100 content-box nt2 nl3" style="display:none"><span class="f6 w-100">Consolidar por</span>
-              <div class="flex flex-column"><span class="f6 theblack b ml1 bb relative has-icon-right icon-dropdown insert-criteria">Operadora</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Hora</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Dia</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Mês</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Operadora</span></div>
-            </div>
-          </div>
-          <div class="flex mr2 has-dropdown relative"><span class="f6">e por</span><span class="f6 theblack b ml1 pr5 bb relative has-icon-right icon-dropdown insert-criteria view-box-close pointer">Hora</span>
-            <div class="flex view-box-open shadow-2 pv2 ph3 absolute top-0 left-0 bg-white z-3 w-100 content-box nt2 nl3" style="display:none"><span class="f6 w-100">e por</span>
-              <div class="flex flex-column"><span class="f6 theblack b ml1 bb relative has-icon-right icon-dropdown insert-criteria">Hora</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Hora</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Dia</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Mês</span></div>
-            </div>
-          </div>
+        <div class="flex mt4 theblack"><span class="f6">Consolidar por</span>
+          <div class="flex flex-column mr2"><span class="f6 theblack b ml1 pr5 bb relative has-icon-right icon-dropdown insert-criteria">Operadora</span></div><span class="f6">e por </span>
+          <div class="flex flex-column"><span class="f6 theblack b ml1 pr5 bb relative has-icon-right icon-dropdown insert-criteria">Operadora</span></div>
         </div>
       </div>
       <!-- tabela com resultados-->
-      <table class="w-100 mt4 mb4 tl v-top" cellspacing="0">
-        <thead class="v-top">
-          <tr class="pv3 b--black bb ttu f7 theblack b tl tracked">
-            <th class="bb b--black-20 pv2 table-mes"><span>Mês</span></th>
-            <th class="bb b--black-20 pv2 table-cliente"><span>Cliente</span></th>
-            <th class="bb b--black-20 pv2 mw3 table-campanha"><span>Campanha</span></th>
-            <th class="bb b--black-20 pv2 table-subconta"><span>Subconta</span></th>
-            <th class="bb b--black-20 pv2 table-usuario"><span>Usuário</span></th>
-            <th class="bb b--black-20 pv2 table-operadora"><span>Operadora</span></th>
-            <th class="bb b--black-20 pv2 table-sucessos"><span>Sucessos</span></th>
-            <th class="bb b--black-20 pv2 table-agendados"><span>Agendados</span></th>
-            <th class="bb b--black-20 pv2 table-enviados"><span>Enviados</span></th>
-            <th class="bb b--black-20 pv2 table-erros"><span>Erros</span></th>
-            <th class="bb b--black-20 pv2 table-inicio"><span>Início do envio</span></th>
-          </tr>
-        </thead>
-        <tbody class="v-top">
-          <tr class="bb">
-            <td class="bb b--black-20 pv4 table-mes"><span>Fevereiro</span></td>
-            <td class="bb b--black-20 pv4 table-cliente"><span>Cliente</span></td>
-            <td class="bb b--black-20 pv4 mw5 table-campanha"><span>Campanha do dia dos namorados 2017</span></td>
-            <td class="bb b--black-20 pv4 table-subconta"><span>marketing</span></td>
-            <td class="bb b--black-20 pv4 table-usuario"><span>matiazzo</span></td>
-            <td class="bb b--black-20 pv4 table-operadora"><span>Brasil telecom</span></td>
-            <td class="bb b--black-20 pv4 table-sucessos"><span>90mi</span></td>
-            <td class="bb b--black-20 pv4 table-agendados"><span>100mi</span></td>
-            <td class="bb b--black-20 pv4 table-enviados"><span>300mi</span></td>
-            <td class="bb b--black-20 pv4 table-erros"><span>10mi</span></td>
-            <td class="bb b--black-20 pv4 table-inicio"><span>12/12/16, às 17:56</span></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="flex flex-column mt4 mb4">
+        <!-- linha com labels da coluna-->
+        <div class="flex bb b--black ttu items-center"><span class="theblack b f7 w4 mr2 br pa2 b--blue-gray bw1">mês</span><span class="theblack b f7 w5 mr2">campanha</span><span class="theblack b f7 w4 mr2">subconta</span><span class="theblack b f7 w3 mr2">sucessos</span><span class="theblack b f7 w4 mr2">agendadados</span><span class="theblack b f7 w3 mr2">enviados</span><span class="theblack b f7 w3 mr2">erros</span><span class="theblack b f7 w4 mr2">início do envio</span></div>
+        <!-- linha padrão de resultados-->
+        <div class="flex bb items-center"><span class="theblack b f6 w4 mr2 br pv3 ph2 b--blue-gray bw1">Dezembro</span><span class="theblack f6 w5 mr2 o-60">Cobrança mês Dezembro</span><span class="theblack f6 w4 mr2 o-60">Marketing</span><span class="theblack f6 w3 mr2 o-60">80%</span><span class="theblack f6 w4 mr2 o-60">9.5mi</span><span class="theblack f6 w3 mr2 o-60">5.5mi</span><span class="theblack f6 w3 mr2 o-60">2mi</span><span class="theblack f6 w4 mr2 o-60">12/12/16, às 17:56</span></div>
+        <div class="flex bb items-center"><span class="theblack b f6 w4 mr2 br pv3 ph2 b--blue-gray bw1">Dezembro</span><span class="theblack f6 w5 mr2 o-60">Cobrança mês Dezembro</span><span class="theblack f6 w4 mr2 o-60">Marketing</span><span class="theblack f6 w3 mr2 o-60">80%</span><span class="theblack f6 w4 mr2 o-60">9.5mi</span><span class="theblack f6 w3 mr2 o-60">5.5mi</span><span class="theblack f6 w3 mr2 o-60">2mi</span><span class="theblack f6 w4 mr2 o-60">12/12/16, às 17:56</span></div>
+      </div>
     </section>
   </body>
   <!-- jQuery-->
   <script src="js/jquery-3.1.0.min.js"></script>
-  <!-- when clicked on the dropdown word, it opens the full box-->
+  <!-- when clicked on the dropdown phrase, it opens the full box-->
   <script>
     $(".view-box-close").bind('click', function() {
-    	$(this).next(".view-box-open").fadeIn(200);
+    	$(".view-box-open").fadeIn();
     });
   </script>
   <!-- when an option is selected on the dropdown, the full box fades and the option becomes blue-->
   <script>
-    $(".view-criteria").bind('click', function() {
+    $(".view-criteria").mouseup(function() {
     	var text = $(this).text();
-    	$(this).parents(".has-dropdown").find(".insert-criteria").text(text);
-    	$(this).parent().children(".view-criteria").css("color","#37474F")
+    	$(".view-criteria").css("color","#37474F")
     	$(this).css("color","#84ADFF")
+    	$(".insert-criteria").text(text);
     	$(".view-box-open").hide();
     });
   </script>
@@ -279,7 +247,6 @@
             target.fadeOut();
         }
     });
-    
   </script>
   <!-- Filters-->
   <script src="js/forms.js"></script>
