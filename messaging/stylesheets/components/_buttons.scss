@@ -19,19 +19,24 @@
 	text-transform: uppercase;
 	letter-spacing: 0.75px;
 	line-height: 1.4;
+	border: 1px solid $lighter-gray;
+	box-shadow: 0 2px 3px 0 $lighter-gray;
+	padding: 10px 12px;
+	background-color: white;
+	color: $accent;
 }
 
 .inner-cta {
 	color: $accent;
 	letter-spacing: 0.75px;
 	&.has-icon-left {
-		padding-left: 18px !important;
+		padding-left: 22px !important;
 		&::after {
 			left: 0 !important;
 		}
 	}
 	&.has-icon-right {
-		padding-right: 18px !important;
+		padding-right: 22px !important;
 		&::after {
 			right: 0 !important;
 		}
@@ -51,7 +56,6 @@
 .cta-accent {
 	color: $ice-white;
 	background-color: $accent;
-	padding: 10px 12px;
 }
 
 .cta-secondary {

@@ -25,7 +25,9 @@
 	position: relative;
 	// padding: 0 24px;
 	& > label {
-		opacity: 0;
+		font-weight: normal;
+		font-size: 0.875rem;
+		color: $theblack;
 	}
 }
 
