@@ -199,8 +199,8 @@ input {
 			@include vertical-center;
 			left: 0px;
 			border: 1px solid $main-gray;
-			height: 18px; 
-			width: 18px;
+			height: 14px; 
+			width: 14px;
 		}
 		&:after {
 			content: "";
@@ -208,8 +208,8 @@ input {
 			opacity: 0;
 			left: 3px;
 			@include vertical-center;
-			height: 14px; 
-			width: 14px;
+			height: 10px; 
+			width: 10px;
 			background-color: #84ADFF;
 			@include transition(150ms);
 		}
