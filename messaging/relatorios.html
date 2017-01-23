@@ -253,34 +253,6 @@
   </body>
   <!-- jQuery-->
   <script src="js/jquery-3.1.0.min.js"></script>
-  <!-- when clicked on the dropdown word, it opens the full box-->
-  <script>
-    $(".view-box-close").bind('click', function() {
-    	$(this).next(".view-box-open").fadeIn(200);
-    });
-  </script>
-  <!-- when an option is selected on the dropdown, the full box fades and the option becomes blue-->
-  <script>
-    $(".view-criteria").bind('click', function() {
-    	var text = $(this).text();
-    	$(this).parents(".has-dropdown").find(".insert-criteria").text(text);
-    	$(this).parent().children(".view-criteria").css("color","#37474F")
-    	$(this).css("color","#84ADFF")
-    	$(".view-box-open").hide();
-    });
-  </script>
-  <!-- The full dropdonw closes when you click anywhere but on it-->
-  <script>
-    $(document).mouseup(function (e) {
-        var target = $(".view-box-open");
-        if (!target.is(e.target) // if the target of the click isn't the target...
-            && target.has(e.target).length === 0) // ... nor a descendant of the target
-        {
-            target.fadeOut();
-        }
-    });
-    
-  </script>
   <!-- Filters-->
   <script src="js/forms.js"></script>
   <!-- For the calendar-->
