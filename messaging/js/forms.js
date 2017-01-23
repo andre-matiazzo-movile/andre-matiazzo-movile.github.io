@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+	// DOWNLOAD BUTTON
+		$(".download-button").bind('click', function() {
+			$(this).parent().find(".download-items").fadeIn(200);
+		});
+
 		// INLINE DROPDOWNs
 
 	// gives a min-width for every inline dropdown based on the longest content inside
