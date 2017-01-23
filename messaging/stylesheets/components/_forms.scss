@@ -4,7 +4,8 @@
 }
 
 .download-items {
-	margin-top: 2.3rem;
+	top: 100%;
+	border: 1px solid rgba(55,71,79,0.18);
 	opacity: 0;
 	pointer-events: none;
 	-webkit-transition:all ease 0.4s;
