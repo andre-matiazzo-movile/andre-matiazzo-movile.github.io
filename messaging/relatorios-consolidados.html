@@ -209,31 +209,31 @@
             <div class="relative"><span class="f6 theblack b ml1 pr5 bb relative has-icon-right icon-dropdown insert-criteria view-box-close pointer">Operadora</span>
               <div class="flex view-box-open shadow-2 pv2 ph3 absolute top-0 left-0 bg-white z-3 content-box nt2 nl3 o-0">
                 <div class="flex flex-column dropdown-item-box ml4">
-                  <div class="input multichoice mt2">
+                  <div class="input multichoice mt4">
                     <div class="checkbox">
                       <input class="dropdown-checkbox" id="operadora_checkbox" type="checkbox" name="operadora" value="Operadora" checked>
                       <label class="f6 accent-hover" for="operadora_checkbox">Operadora</label>
                     </div>
                   </div>
-                  <div class="input multichoice mt2">
+                  <div class="input multichoice mt4">
                     <div class="checkbox">
                       <input class="dropdown-checkbox" id="campanha_checkbox" type="checkbox" name="campanha" value="Campanha">
                       <label class="f6 accent-hover" for="campanha_checkbox">Campanha</label>
                     </div>
                   </div>
-                  <div class="input multichoice mt2">
+                  <div class="input multichoice mt4">
                     <div class="checkbox">
                       <input class="dropdown-checkbox" id="cliente_checkbox" type="checkbox" name="cliente" value="Cliente">
                       <label class="f6 accent-hover" for="cliente_checkbox">Cliente</label>
                     </div>
                   </div>
-                  <div class="input multichoice mt2">
+                  <div class="input multichoice mt4">
                     <div class="checkbox">
-                      <input class="dropdown-checkbox" id="subconta_checkbox" type="checkbox" name="subconta" value="subconta">
+                      <input class="dropdown-checkbox" id="subconta_checkbox" type="checkbox" name="subconta" value="Subconta">
                       <label class="f6 accent-hover" for="subconta_checkbox">Subconta</label>
                     </div>
                   </div>
-                  <div class="input multichoice mt2">
+                  <div class="input multichoice mt4">
                     <div class="checkbox">
                       <input class="dropdown-checkbox" id="usuario_checkbox" type="checkbox" name="usuario" value="Usuário">
                       <label class="f6 accent-hover" for="usuario_checkbox">Usuário</label>
@@ -289,8 +289,10 @@
   <script src="js/jquery-3.1.0.min.js"></script>
   <script>
     $('.dropdown-checkbox').click(function() {
-    	var length = $(this).parent().children(".dropdown-checkbox").length;
-    	//- $('.dropdown-checkbox:checked').css("pointer-events","none");
+    	var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
+    	if (length == 0) {
+    		$(this).prop('checked', true);
+    	}
     	var selected = $('.dropdown-checkbox:checked').map(function() {
     	    return this.value;
     	}).get().join(', ');

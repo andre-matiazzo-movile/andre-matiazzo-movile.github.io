@@ -13,7 +13,7 @@
 input {
 	border: 1px solid $lighter-gray;
 	padding: 12px 16px;
-	margin-top: 6px;
+	margin-top: 8px;
 	span {
 		font-size: 0.875rem; // 18px
 		line-height: 1.25;
@@ -254,7 +254,7 @@ input {
 		border: 1px solid #A2B7C1;
 		border-right: none;
 		padding: 12px 16px 12px 16px; //padding-bottom is a magic number, sorry
-		margin-top: 6px;
+		margin-top: 8px;
 	}
 	.input span {
 		overflow-x: inherit;
