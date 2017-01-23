@@ -271,23 +271,23 @@ html(lang='pt-br')
 								//- span.f6.w-100 Consolidar por
 								.flex.flex-column.dropdown-item-box.ml4
 									//- span.f6.w-100.nl2 Consolidar por
-									.input.multichoice.mt2
+									.input.multichoice.mt4
 										.checkbox
 											input.dropdown-checkbox#operadora_checkbox(type='checkbox', name='operadora', value='Operadora' checked)
 											label.f6.accent-hover(for='operadora_checkbox') Operadora
-									.input.multichoice.mt2
+									.input.multichoice.mt4
 										.checkbox
 											input.dropdown-checkbox#campanha_checkbox(type='checkbox', name='campanha', value='Campanha')
 											label.f6.accent-hover(for='campanha_checkbox') Campanha
-									.input.multichoice.mt2
+									.input.multichoice.mt4
 										.checkbox
 											input.dropdown-checkbox#cliente_checkbox(type='checkbox', name='cliente', value='Cliente')
 											label.f6.accent-hover(for='cliente_checkbox') Cliente
-									.input.multichoice.mt2
+									.input.multichoice.mt4
 										.checkbox
-											input.dropdown-checkbox#subconta_checkbox(type='checkbox', name='subconta', value='subconta')
+											input.dropdown-checkbox#subconta_checkbox(type='checkbox', name='subconta', value='Subconta')
 											label.f6.accent-hover(for='subconta_checkbox') Subconta
-									.input.multichoice.mt2
+									.input.multichoice.mt4
 										.checkbox
 											input.dropdown-checkbox#usuario_checkbox(type='checkbox', name='usuario', value='Usuário')
 											label.f6.accent-hover(for='usuario_checkbox') Usuário
@@ -358,8 +358,10 @@ html(lang='pt-br')
 
 	script.
 		$('.dropdown-checkbox').click(function() {
-			var length = $(this).parent().children(".dropdown-checkbox").length;
-			//- $('.dropdown-checkbox:checked').css("pointer-events","none");
+			var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
+			if (length == 0) {
+				$(this).prop('checked', true);
+			}
 			var selected = $('.dropdown-checkbox:checked').map(function() {
 			    return this.value;
 			}).get().join(', ');
