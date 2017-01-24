@@ -205,18 +205,42 @@ html(lang='pt-br')
 									span.db.bb.b--black-20.pv4.pr3 Bradesco - BDT
 								td.nowrap.table-user
 									span.db.bb.b--black-20.pv4.pr3 Marketing
-								td.nowrap.table-text
-									span.db.bb.b--black-20.pv4.pr3.mw5.truncated.nowrap(data-full-content='O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.', data-reduced-content='O reembolso 2017.0000058693.00, e...') O reembolso 2017.0000058693.00, e...
+								td.nowrap.table-text.relative
+									span.db.bb.b--black-20.pv4.pr3.mw5.truncated.truncate.nowrap.accent-hover.pointer O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.
+							tr.bb.relative.f6
+								td.nowrap.table-status
+									span.db.bb.b--black-20.pv4.pr3.green Sent
+								td.nowrap.table-phone
+									span.db.bb.b--black-20.pv4.pr3 +55 (99) 99999-9999
+								td.nowrap.table-la
+									span.db.bb.b--black-20.pv4.pr3 27171
+								td.nowrap.table-carrier
+									span.db.bb.b--black-20.pv4.pr3 Vivo
+								td.nowrap.table-campaign
+									span.db.bb.b--black-20.pv4.pr3 Compras de Natal 2014
+								td.nowrap.table-creation-date
+									span.db.bb.b--black-20.pv4.pr3 24/01/2017 10:28
+								td.nowrap.table-date
+									span.db.bb.b--black-20.pv4.pr3 24/01/2017 10:28
+								td.nowrap.table-customer
+									span.db.bb.b--black-20.pv4.pr3 Bradesco
+								td.nowrap.table-sub-account
+									span.db.bb.b--black-20.pv4.pr3 Bradesco - BDT
 								td.nowrap.table-user
 									span.db.bb.b--black-20.pv4.pr3 Marketing
-				table.w-10.h-100.mt4.mb4.tl.v-top.absolute.top-0.right-0.bg-white(cellspacing='0')
+								td.nowrap.table-text.relative
+									span.db.bb.b--black-20.pv4.pr3.mw5.truncated.truncate.nowrap.accent-hover.pointer O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.
+				table.w-10.h-100.mt4.mb4.tl.v-top.absolute.top-0.right-0.bg-white(cellspacing='0', cellpadding='0')
 					thead.v-top
 						tr.pv3.b--black.bb.ttu.f7.theblack.b.tl.tracked
 							th.bb.b--black-20.pv2.ph2.table-detalhes
 								a.accent(href='javascript:') Detalhes
 					tbody.v-top
 						tr.bb.relative.f6
-							td.bb.b--black-20.pv4.ph2.table-detalhes
+							td.bb.b--black-20.pv4.ph2.table-detalhes.left-shadow
+								a.accent.has-icon-left.icon-user(href='javascript:') Contato
+						tr.bb.relative.f6
+							td.bb.b--black-20.pv4.ph2.table-detalhes.left-shadow
 								a.accent.has-icon-left.icon-user(href='javascript:') Contato
 					
 	// jQuery
@@ -224,17 +248,10 @@ html(lang='pt-br')
 
 	script.
 		$(".truncated").click(function() {
-			var longtext = $(this).attr('data-full-content');
-			$(this).toggleClass("not-truncated");
-			$(this).toggleClass("truncated");
-			$(this).text(longtext);
-		});
-
-		$(".not-truncated").click(function() {
-			var shorttext = $(this).attr('data-reduced-content');
-			$(this).toggleClass("truncated");
-			$(this).toggleClass("not-truncated");
-			$(this).text(shorttext);
+			$(".truncated").toggleClass("truncate");
+			$(".truncated").toggleClass("not-truncate");
+			$(".truncated").toggleClass("mw5");
+			$(this).parents(".overflow-x-scroll").scrollLeft(1000);
 		});
 
 	script.
