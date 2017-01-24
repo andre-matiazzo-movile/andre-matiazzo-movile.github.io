@@ -30,6 +30,24 @@
 	}
 }
 
+.icon-search {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/search.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
+.bg-search {
+	background: url('../img/icons/search.png') no-repeat 1rem center;
+	background-size: 1rem;
+	padding-left: 3rem;
+}
+
 .icon-check--white {
 	&:after {
 		content: "";

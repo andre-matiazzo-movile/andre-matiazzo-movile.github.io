@@ -3,6 +3,30 @@
 	box-sizing: content-box;
 }
 
+.download-items {
+	top: 100%;
+	box-shadow: 0 2px 3px 0 rgba(55,71,79,0.18);
+	border: 1px solid rgba(55,71,79,0.18);
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition:all ease 0.4s;
+	   -moz-transition:all ease 0.4s;
+	    -ms-transition:all ease 0.4s;
+	     -o-transition:all ease 0.4s;
+	        transition:all ease 0.4s;
+	&:hover {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
+.download-button:hover {
+	& + .download-items {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
 .input-container {
 	border-top: 1px solid $lighter-gray;
 	margin-top: 24px;
