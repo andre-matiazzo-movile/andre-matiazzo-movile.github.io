@@ -1,0 +1,51 @@
+.left-shadow{
+	box-shadow: -4px 0px 4px 0px rgba( 0, 0, 0, 0.1 );
+	position: relative;
+}
+.tooltip { 
+	background: black;
+	color: white;
+	z-index: 99;
+	padding: 4px 8px;
+	position: absolute;
+	top:-4px;
+	display:none;
+}
+
+.truncate, .not-truncate {
+	position: relative;
+}
+
+.truncate:after, .not-truncate:after {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: auto;
+	padding: 6px;
+	font-size: 0.875rem;
+	background: black;
+	color: white;
+	opacity: 0;
+	-webkit-transition: all ease 0.4s;
+	   -moz-transition: all ease 0.4s;
+	    -ms-transition: all ease 0.4s;
+	     -o-transition: all ease 0.4s;
+	        transition: all ease 0.4s;
+}
+
+.truncate:after {
+	content:'Clique para ver o texto completo';
+}
+
+.not-truncate:after {
+	content:'Clique para ver o texto reduzido';
+}
+
+.truncate:hover:after, .not-truncate:hover:after {
+	opacity: 1;
+}
+
+
+
+

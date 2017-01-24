@@ -147,7 +147,7 @@ html(lang='pt-br')
 			.flex.justify-between.items-end.mt3.mb3.item-start.mt4.relative
 				.flex.flex-column.w-50
 					label.f6.theblack Buscar por destinatário
-					input.pv2.bg-search.relative(type='text')
+					input.pv2.bg-search.relative.cursor-text(type='text')
 				a.cta.pointer.download.download-button
 					span.has-icon-right.icon-dropdown__blue download
 				.flex.flex-column.download-items.absolute.top-0.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
@@ -156,58 +156,103 @@ html(lang='pt-br')
 					a(href='javascript:').b.f6.mt2.theblack.accent-hover Gerar gráfico
 
 			// tabela com resultados
-			table.w-100.mt4.mb4.tl.v-top(cellspacing='0')
-				thead.v-top
-					tr.pv3.b--black.bb.ttu.f7.theblack.b.tl.tracked
-						th.bb.b--black-20.pv2.table-mes
-							span Mês
-						th.bb.b--black-20.pv2.table-cliente
-							span Cliente
-						th.bb.b--black-20.pv2.mw3.table-campanha
-							span Campanha
-						th.bb.b--black-20.pv2.table-subconta
-							span Subconta
-						th.bb.b--black-20.pv2.table-usuario
-							span Usuário
-						th.bb.b--black-20.pv2.table-operadora
-							span Operadora
-						th.bb.b--black-20.pv2.table-sucessos
-							span Sucessos
-						th.bb.b--black-20.pv2.table-agendados
-							span Agendados
-						th.bb.b--black-20.pv2.table-enviados
-							span Enviados
-						th.bb.b--black-20.pv2.table-erros
-							span Erros
-						th.bb.b--black-20.pv2.table-inicio
-							span Início do envio
-				tbody.v-top
-					tr.bb
-						td.bb.b--black-20.pv4.table-mes
-							span Fevereiro
-						td.bb.b--black-20.pv4.table-cliente
-							span Cliente
-						td.bb.b--black-20.pv4.mw5.table-campanha
-							span Campanha do dia dos namorados 2017
-						td.bb.b--black-20.pv4.table-subconta
-							span marketing
-						td.bb.b--black-20.pv4.table-usuario
-							span matiazzo
-						td.bb.b--black-20.pv4.table-operadora
-							span Brasil telecom
-						td.bb.b--black-20.pv4.table-sucessos
-							span 90mi
-						td.bb.b--black-20.pv4.table-agendados
-							span 100mi
-						td.bb.b--black-20.pv4.table-enviados
-							span 300mi
-						td.bb.b--black-20.pv4.table-erros
-							span 10mi
-						td.bb.b--black-20.pv4.table-inicio
-							span 12/12/16, às 17:56
+			.flex.relative
+				div.w-90.overflow-x-scroll
+					table.mt4.mb4.tl.v-top(cellspacing='0', cellpadding='0')
+						thead.v-top
+							tr.ttu.f7.theblack.b.tl.tracked
+								th.nowrap.table-status
+									span.bb.b--black-20.pv2.pr3.db Status
+								th.nowrap.w-4.table-phone
+									span.bb.b--black-20.pv2.pr3.db Phone
+								th.nowrap.table-la
+									span.bb.b--black-20.pv2.pr3.db LA
+								th.nowrap.table-carrier
+									span.bb.b--black-20.pv2.pr3.db Carrier
+								th.nowrap.table-campaign
+									span.bb.b--black-20.pv2.pr3.db Campaign
+								th.nowrap.table-creation-date
+									span.bb.b--black-20.pv2.pr3.db Creation Date
+								th.nowrap.table-date
+									span.bb.b--black-20.pv2.pr3.db Date
+								th.nowrap.table-customer
+									span.bb.b--black-20.pv2.pr3.db Customer
+								th.nowrap.table-sub-account
+									span.bb.b--black-20.pv2.pr3.db Sub-account
+								th.nowrap.table-user
+									span.bb.b--black-20.pv2.pr3.db User
+								th.nowrap.table-text
+									span.bb.b--black-20.pv2.pr3.db Text
+						tbody.v-top
+							tr.bb.relative.f6
+								td.nowrap.table-status
+									span.db.bb.b--black-20.pv4.pr3.green Sent
+								td.nowrap.table-phone
+									span.db.bb.b--black-20.pv4.pr3 +55 (99) 99999-9999
+								td.nowrap.table-la
+									span.db.bb.b--black-20.pv4.pr3 27171
+								td.nowrap.table-carrier
+									span.db.bb.b--black-20.pv4.pr3 Vivo
+								td.nowrap.table-campaign
+									span.db.bb.b--black-20.pv4.pr3 Compras de Natal 2014
+								td.nowrap.table-creation-date
+									span.db.bb.b--black-20.pv4.pr3 24/01/2017 10:28
+								td.nowrap.table-date
+									span.db.bb.b--black-20.pv4.pr3 24/01/2017 10:28
+								td.nowrap.table-customer
+									span.db.bb.b--black-20.pv4.pr3 Bradesco
+								td.nowrap.table-sub-account
+									span.db.bb.b--black-20.pv4.pr3 Bradesco - BDT
+								td.nowrap.table-user
+									span.db.bb.b--black-20.pv4.pr3 Marketing
+								td.nowrap.table-text.relative
+									span.db.bb.b--black-20.pv4.pr3.mw5.truncated.truncate.nowrap.accent-hover.pointer O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.
+							tr.bb.relative.f6
+								td.nowrap.table-status
+									span.db.bb.b--black-20.pv4.pr3.green Sent
+								td.nowrap.table-phone
+									span.db.bb.b--black-20.pv4.pr3 +55 (99) 99999-9999
+								td.nowrap.table-la
+									span.db.bb.b--black-20.pv4.pr3 27171
+								td.nowrap.table-carrier
+									span.db.bb.b--black-20.pv4.pr3 Vivo
+								td.nowrap.table-campaign
+									span.db.bb.b--black-20.pv4.pr3 Compras de Natal 2014
+								td.nowrap.table-creation-date
+									span.db.bb.b--black-20.pv4.pr3 24/01/2017 10:28
+								td.nowrap.table-date
+									span.db.bb.b--black-20.pv4.pr3 24/01/2017 10:28
+								td.nowrap.table-customer
+									span.db.bb.b--black-20.pv4.pr3 Bradesco
+								td.nowrap.table-sub-account
+									span.db.bb.b--black-20.pv4.pr3 Bradesco - BDT
+								td.nowrap.table-user
+									span.db.bb.b--black-20.pv4.pr3 Marketing
+								td.nowrap.table-text.relative
+									span.db.bb.b--black-20.pv4.pr3.mw5.truncated.truncate.nowrap.accent-hover.pointer O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.
+				table.w-10.h-100.mt4.mb4.tl.v-top.absolute.top-0.right-0.bg-white(cellspacing='0', cellpadding='0')
+					thead.v-top
+						tr.pv3.b--black.bb.ttu.f7.theblack.b.tl.tracked
+							th.bb.b--black-20.pv2.ph2.table-detalhes
+								a.accent(href='javascript:') Detalhes
+					tbody.v-top
+						tr.bb.relative.f6
+							td.bb.b--black-20.pv4.ph2.table-detalhes.left-shadow
+								a.accent.has-icon-left.icon-user(href='javascript:') Contato
+						tr.bb.relative.f6
+							td.bb.b--black-20.pv4.ph2.table-detalhes.left-shadow
+								a.accent.has-icon-left.icon-user(href='javascript:') Contato
 					
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
+
+	script.
+		$(".truncated").click(function() {
+			$(".truncated").toggleClass("truncate");
+			$(".truncated").toggleClass("not-truncate");
+			$(".truncated").toggleClass("mw5");
+			$(this).parents(".overflow-x-scroll").scrollLeft(1000);
+		});
 
 	script.
 		$('.dropdown-checkbox').click(function() {
