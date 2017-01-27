@@ -18,6 +18,49 @@
 	}
 }
 
+.has-tooltip {
+	position: relative;
+	.tooltip-content {
+		position: absolute;
+		pointer-events: none;
+		padding: 8px;
+		opacity: 0;
+		width: auto;
+		top: -100%;
+		margin-top: -12px;
+		left: 0;
+		margin-left: -10px; 
+		background: $accent;
+		color: white;
+		text-align: center;
+		transition: all ease 0.4s;
+		-webkit-transform: translateY(5px);
+		   -moz-transform: translateY(5px);
+		    -ms-transform: translateY(5px);
+		     -o-transform: translateY(5px);
+		        transform: translateY(5px);
+		&::after {
+			background: $accent;
+			content: '';
+			width: 14px;
+			height: 14px;
+			position: absolute;
+			bottom: -3px;
+			left: 9px;
+			z-index: -1;
+			transform: rotate(45deg);
+      	}
+	}
+	&:hover > .tooltip-content {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-ms-transform: translateY(0px);
+		-o-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+}
+
 .icon-user {
 	&:after {
 		content: "";
@@ -38,6 +81,18 @@
 		position: absolute;
 		top: calc(50% - 5px);
 		background: url('../img/icons/check.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
+.icon-eye-blue {
+	&:after {
+		content: "";
+		width: 14px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/eye-blue.png') no-repeat 2px center;
 		background-size: 12px;
 	}
 }
@@ -167,6 +222,19 @@
 		position: absolute;
 		top: calc(50% - 5px);
 		background: url('../img/icons/download.png') no-repeat center center;
+		background-size: 12px;
+		cursor: pointer;
+	}
+}
+
+.icon-download-blue {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/download-blue.png') no-repeat center center;
 		background-size: 12px;
 		cursor: pointer;
 	}

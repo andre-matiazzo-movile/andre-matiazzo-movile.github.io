@@ -3,7 +3,8 @@
 	position: relative;
 }
 .tooltip { 
-	background: black;
+	background: $accent;
+	border-radius: 4px;
 	color: white;
 	z-index: 99;
 	padding: 4px 8px;
@@ -20,11 +21,12 @@
 	position: absolute;
 	z-index: 3;
 	top: 0;
-	left: 0;
+	right: 8px;
 	width: auto;
 	padding: 6px;
+	border-radius: 4px;
 	font-size: 0.875rem;
-	background: black;
+	background: $accent;
 	color: white;
 	opacity: 0;
 	-webkit-transition: all ease 0.4s;
