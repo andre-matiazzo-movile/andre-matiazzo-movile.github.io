@@ -60,6 +60,18 @@
 	}
 }
 
+.icon-check--gray {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 6px);
+		background: url('../img/icons/check-gray.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
 .icon-plus {
 	&:after {
 		content: "";
@@ -104,6 +116,30 @@
 		position: absolute;
 		top: calc(50% - 5px);
 		background: url('../img/icons/arrow-left.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
+.icon-arrow-left--blue {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 6px);
+		background: url('../img/icons/arrow-left-blue.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
+.icon-arrow-right--blue {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 6px);
+		background: url('../img/icons/arrow-right-blue.png') no-repeat 2px center;
 		background-size: 12px;
 	}
 }
@@ -183,6 +219,45 @@
 		position: absolute;
 		top: calc(50% - 5px);
 		background: url('../img/icons/caretdown-blue.png') no-repeat center center;
+		background-size: 12px;
+		cursor: pointer;
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		@include transition(300ms);
+	}
+	&.accordion::after {
+		-webkit-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+}
+
+.icon-notif__gray {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		right: 0;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/notif-gray.png') no-repeat center center;
+		background-size: 12px;
+		cursor: pointer;
+	}
+}
+
+.icon-notif__blue {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		right: 0;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/notif-blue.png') no-repeat center center;
 		background-size: 12px;
 		cursor: pointer;
 	}

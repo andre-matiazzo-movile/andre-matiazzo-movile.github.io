@@ -10,10 +10,10 @@
 	opacity: 0;
 	pointer-events: none;
 	-webkit-transition:all ease 0.4s;
-	   -moz-transition:all ease 0.4s;
-	    -ms-transition:all ease 0.4s;
-	     -o-transition:all ease 0.4s;
-	        transition:all ease 0.4s;
+	-moz-transition:all ease 0.4s;
+	-ms-transition:all ease 0.4s;
+	-o-transition:all ease 0.4s;
+	transition:all ease 0.4s;
 	&:hover {
 		opacity: 1;
 		pointer-events: auto;
@@ -96,6 +96,13 @@ input {
 	z-index: 2;
 	&.dropdown--active {
 		display: block;
+	}
+	&.notifications {
+		top: 70px;
+		right: 36px;
+		padding: 0;
+		border-top: 3px solid $accent;
+		width: 420px;
 	}
 }
 
@@ -338,8 +345,7 @@ input {
 }
 
 .filter__container {
-	margin: -8px -30px;
-	padding: 32px
+	padding: 18px;
 }
 
 .fake-textarea {

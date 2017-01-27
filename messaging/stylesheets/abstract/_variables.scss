@@ -1,10 +1,13 @@
 // COLORS
 $accent: #84ADFF;
-.accent-hover:hover {color: $accent}
+.accent{color: $accent}
+.accent-hover:hover{color: $accent}
 $accent-hover: #E0EAFF;
 $accent-pressed: #5a6f9a;
-$main-gray: #A2B7C1;
-$lighter-gray: rgba(55,71,79,0.18);
+.bg-accent {background-color: $accent}
+$main-gray: #7C99A7;
+.main-gray{color: $main-gray}
+$lighter-gray: #DCDEE0;
 .lighter-gray{color:$lighter-gray}
 .bg-lighter-gray{background-color:$lighter-gray}
 // $lightest-gray: rgba(55,71,79,0.06);
@@ -19,12 +22,18 @@ $blue-gray:#7C99A7;
 $theblack: #37474F;
 .theblack{color:$theblack}
 .bg-theblack{background-color:$theblack}
-$green: #00E676;
+$green: #00DD72;
 .green{color:$green}
 .bg-green{background-color:$green}
+$lighter-green: #E0FBEE;
+.lighter-green {color: $lighter-green}
+.bg-lighter-green {background-color: $lighter-green}
 $red: rgba(255,0,80,0.5);
 .red{color:$red}
+$lighter-red: #FFE0EA;
+.lighter-red {color: $lighter-red}
 .bg-red{background-color:$red}
+.bg-lighter-red {background-color: $lighter-red}
 $sidebar: #6B84B6;
 $sidebar-border: #576E95;
 $ice-white: #F3F9FF;

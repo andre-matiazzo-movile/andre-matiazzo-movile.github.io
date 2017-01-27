@@ -81,3 +81,5 @@
 .labels__container:empty + .main-label {
 	display: none;
 }
+
+details summary::-webkit-details-marker { display:none; }
