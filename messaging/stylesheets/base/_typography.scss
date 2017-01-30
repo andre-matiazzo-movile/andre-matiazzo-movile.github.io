@@ -4,7 +4,6 @@ $bold: 700;
 $black: 800;
 
 h1 {
-	color: $theblack;
 	font-size: 1.5rem;
 	margin: 0;
 }
@@ -31,7 +30,7 @@ p.help-text {
 	color: $main-gray;
 }
 
-.main-label {
-	@include text-label;
-	color: $theblack;
-}
+// .main-label {
+// 	@include text-label;
+// 	color: $theblack;
+// }

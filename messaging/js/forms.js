@@ -48,8 +48,8 @@ $(document).ready(function() {
 	$('.input').bind('click', function (activateDropdown) {
 		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 		$('.upper-bar-menu').removeClass('upper-bar-menu--active');
-		$(this).parent().find('.dropdown').addClass('dropdown--active').animate({opacity: 1}, 15);
-		$(this).find('input[type="search"]').focus();
+		$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
+		$(this).next('.dropdown').find('input[type="search"]').focus();
 	});
 
 		// Closes the dropdown by clicking out of it
@@ -65,7 +65,7 @@ $(document).ready(function() {
 		$('.upper-bar-menu').bind('click', function () {
 			$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 			$(this).toggleClass('upper-bar-menu--active');
-			$(this).parent().next('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
+			$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
 		})
 
 	//On New Contact, shows the "improve this contact" column

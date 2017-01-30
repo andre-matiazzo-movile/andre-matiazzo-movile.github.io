@@ -1,6 +1,7 @@
 // COLORS
 $accent: #84ADFF;
-.accent{color: $accent}
+.accent{color: #84ADFF}
+.bg-lighter-accent {background-color: #F0F5FF}
 .accent-hover:hover{color: $accent}
 $accent-hover: #E0EAFF;
 $accent-pressed: #5a6f9a;
@@ -35,7 +36,10 @@ $lighter-red: #FFE0EA;
 .bg-red{background-color:$red}
 .bg-lighter-red {background-color: $lighter-red}
 $sidebar: #6B84B6;
+.sidebar {color: $sidebar}
+.bg-sidebar {background-color: $sidebar}
 $sidebar-border: #576E95;
 $ice-white: #F3F9FF;
+// .ice-white {color: $ice-white;}
 $alert: rgba(255,0,80,0.5);
 $success: #BCFDD4;

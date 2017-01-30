@@ -1,18 +1,18 @@
-.upper-bar {
-	border-bottom: 1px solid $lighter-gray;
-}
+// .upper-bar {
+// 	border-bottom: 1px solid $lighter-gray;
+// }
 
 .upper-bar,
 .main-content {
-	float: left;
+	// float: left;
 	width: calc(100% - 200px);
-	padding-left: 30px;
-	margin-left: 200px;
+	// padding-left: 30px;
+	// margin-left: 200px;
 	& > h1 {
-		float: left;
-		padding-top: 24px;
-		color: $theblack;
-		line-height: 1.3;
+		// float: left;
+		// padding-top: 24px;
+		// color: $theblack;
+		// line-height: 1.3;
 	}
 	.upper-bar-menu {
 		&.upper-bar-menu--active {
