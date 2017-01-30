@@ -1,60 +1,31 @@
 doctype html
 html(lang='pt-br')
 	head
-		meta(charset='UTF-8')
-		meta(http-equiv='x-ua-compatible', content='ie=edge')
-		meta(name='viewport', content='width=device-width, initial-scale=1')
-		title Movile Messaging – Relatórios
-		meta(name='movile-messaging', content='Movile Messaging')
-		// For the calendar
-		link(href='calendar/jquery-ui/jquery-ui.min.css', rel='stylesheet')
-		link(href='calendar/jquery.comiseo.daterangepicker.css', rel='stylesheet')
-		// For the charts
-		link(href='charts/chartist.min.css', rel='stylesheet')
-		script(src='charts/chartist.min.js', charset='utf-8')
-		// Tachyons CSS
-		link(rel='stylesheet', href='stylesheets/tachyons.min.css')
-		// Main CSS
-		link(rel='stylesheet', href='stylesheets/main.css')
-		// Typekit
-		script(src='https://use.typekit.net/fja4naa.js')
-		script.
-			try{Typekit.load({ async: false });}catch(e){}
-		style.
-			.table-operadora, .table-subconta, .table-inicio{display:none;}
+		include pug/_head
 	body
 		aside
 			.logo
 				img.blue(src='img/logo-white.png', alt='Logo Movile Messaging')
-			nav
-				ul.primary-nav
-					li
-						a.active(href='') Dashboard
-					li
-						a(href='') Novo envio
-					li
-						a(href='') Relatórios
-					li
-						a(href='') Contatos
-					li
-						a(href='') Configurações
-					li
-						a(href='') Suporte
+			include pug/_nav
 		section.upper-bar
 			h1 Dashboard
 		section.main-content
 			div.mt4
 				h3.theblack.f4.mt1 Resultados
-			.flex.justify-between.items-center.mt3.mb3.item-start.relative
-					.flex.flex-column.items-left
-						span.f7.blue-gray Campanha
-						h3.blue-gray.f5.mt1 Carnaval 2014, por mês
-					a.cta.pointer.download.download-button
-						span.has-icon-right.icon-dropdown__blue download
-					.flex.flex-column.download-items.absolute.top-0.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
-						a(href='javascript:').b.f6.mt2.theblack.accent-hover Gerar gráfico
-			div.mb3
-				span.theblack.f7.ttu.b envios
+				.flex.mt4.mb4.theblack.lh-copy.justify-between.items-center
+					.flex.mr2.has-dropdown.relative
+						span.f6 Envios
+						span.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer de hoje
+						.flex.view-box-open.shadow-2.pv2.ph3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt2.nl3.o-0
+							span.f6 Envios
+							.flex.flex-column.dropdown-item-box
+								span.f6.theblack.b.ml1.bb.relative.has-icon-right.icon-dropdown.insert-criteria de hoje
+								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover de hoje
+								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover dos últimos 7 dias
+								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover.nowrap dos últimos 15 dias
+					a.cta.pointer
+						span.has-icon-left.icon-plus_blue nova mensagem
+
 			//- Display the table
 			.ct-chart.ct-double-octave
 			// legenda do gráfico
@@ -64,46 +35,14 @@ html(lang='pt-br')
 					span.f7.blue-gray.ml1.ttu.b.tracked Mensagens enviadas
 					span.bg-red.br-100.pa1.dib.ml4
 					span.f7.blue-gray.ml1.ttu.b.tracked Mensagens com erro
-				.flex.mr2.has-dropdown.relative.lh-copy
-						span.f6.theblack Visualização por
-						span.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer Operadora
-						.flex.view-box-open.shadow-2.pv2.ph3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt2.nl3.o-0
-							span.f6.w-100.theblack Visualização por
-							.flex.flex-column.dropdown-item-box
-								span.f6.theblack.b.ml1.bb.relative.has-icon-right.icon-dropdown.insert-criteria Operadora
-								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Hora
-								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Dia
-								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Mês
-								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Operadora
-
-			// número de mensagens enviadas
-			.flex.mt2
-				.flex.flex-column.mr5
-					span.blue-gray.f2.b 12.7mi
-					span.theblack.f6
-						| mensagens
-						br
-						| enviadas
-				.flex.flex-column.mr5
-					span.green.f2.b 4.2mi
-					span.theblack.f6
-						| enviadas com
-						br
-						| sucesso
-				.flex.flex-column.mr5
-					span.red.f2.b 1.5mi
-					span.theblack.f6
-						| mensagens
-						br
-						| com erro
 			//Detalhes
 			div.mt5
 				.flex.justify-between.relative
 					h3.blue-gray.f5 Lista de envios
-					a.cta.pointer.download.download-button
-						span.has-icon-right.icon-dropdown__blue download
-					.flex.flex-column.download-items.absolute.top-0.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
-						a(href='javascript:').b.f6.mt2.theblack.accent-hover Gerar tabela
+					//- a.cta.pointer.download.download-button
+					//- 	span.has-icon-right.icon-dropdown__blue download
+					//- .flex.flex-column.download-items.absolute.top-0.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
+					//- 	a(href='javascript:').b.f6.mt2.theblack.accent-hover Gerar tabela
 			// tabela com resultados
 			.flex.relative
 				div.w-90.overflow-x-scroll
@@ -158,19 +97,6 @@ html(lang='pt-br')
 					
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
-
-	script.
-		$('.dropdown-checkbox').click(function() {
-			var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
-			if (length == 0) {
-				$(this).prop('checked', true);
-			}
-			var selected = $('.dropdown-checkbox:checked').map(function() {
-			    return this.value;
-			}).get().join(', ');
-			$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
-		});
-
 	// Filters
 	script(src='js/forms.js')
 	// For the calendar

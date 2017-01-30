@@ -139,6 +139,18 @@
 	}
 }
 
+.icon-plus_blue {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/plus-blue.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
 .icon-continue {
 	&:after {
 		content: "";

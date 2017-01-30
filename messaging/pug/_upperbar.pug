@@ -1,0 +1,69 @@
+section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
+    h1.f2.fl.black Relatórios
+    .fr.lh-copy.relative
+        .relative.mr4.fl
+            a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray Notificações
+            .absolute.top--1.right--1
+                .relative
+                    span.notification-badge 2
+            // NOTIFICATIONS
+            .dropdown.notifications
+                // NOTIF HEADER
+                .fl.w-100.pa3.bb.lighter-gray
+                    button.mark-all-as-read.ttu.fr.lh-copy.pv0.pr0.tracked.b.f8.main-gray.bn.bg-white.has-icon.has-icon-left.icon-check--gray.outline-0 marcar todas como lidas
+                // NOTIFS BODY
+                .fl.w-100
+                    // NOTIF ITEM
+                    .notif__item.bb.lighter-gray.pa3.fl.w-100
+                        .notif__icon.w1.fl
+                            img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+                        .w-90.fl.pl3
+                            .notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+                                span.dib.bg-lightest-gray.pa1.can-be-read está sendo gerado
+                            h1.notif__title.f5.mt1.can-be-read.black Relatório consolidado
+                            p.notif_date.f6.mt0.can-be-read
+                                | Requerido às 
+                                span.notifhour 17h20
+                                | , em 
+                                span.notif_day 17/08/16
+                        .fl.w-100.pl4.notif__actions.mt3
+                            span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+                            // <button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+                    // NOTIF ITEM
+                    .notif__item.bb.lighter-gray.pa3.fl.w-100
+                        .notif__icon.w1.fl
+                            img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+                        .w-90.fl.pl3
+                            .notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+                                span.dib.bg-lightest-gray.pa1.green.bg-lighter-green.can-be-read está pronto
+                            h1.notif__title.f5.mt1.can-be-read.black Relatório consolidado
+                            p.notif_date.f6.mt0.can-be-read
+                                | Requerido às 
+                                span.notifhour 17h20
+                                | , em 
+                                span.notif_day 17/08/16
+                        .fl.w-100.pl4.notif__actions.mt3
+                            span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+                            button.accent.bn.bg-white.fr.f8.b.ttu.tracked download
+                    // NOTIF ITEM
+                    .notif__item.bb.lighter-gray.pa3.fl.w-100
+                        .notif__icon.w1.fl
+                            img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+                        .w-90.fl.pl3
+                            .notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+                                span.dib.bg-lightest-gray.pa1.red.bg-lighter-red.can-be-read não foi possível gerar
+                            h1.notif__title.f5.mt1.can-be-read.black Relatório consolidado
+                            p.notif_date.f6.mt0.can-be-read
+                                | Requerido às 
+                                span.notifhour 17h20
+                                | , em 
+                                span.notif_day 17/08/16
+                        .fl.w-100.pl4.notif__actions.mt3
+                            span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+                            a.accent.bn.bg-white.fr.f8.b.ttu.tracked(href='notifs.html')
+                                | ver detalhes
+                // NOTIF FOOTER
+                .fl.w-100.pa3
+                    a.ttu.fl.lh-copy.pv0.tracked.b.f8.accent.bn.bg-white.has-icon.has-icon-right.icon-arrow-right--blue(href='notifs.html')
+                        | ver todas as notificações
+        h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário

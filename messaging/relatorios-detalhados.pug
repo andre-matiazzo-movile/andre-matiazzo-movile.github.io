@@ -254,18 +254,6 @@ html(lang='pt-br')
 			$(this).parents(".overflow-x-scroll").scrollLeft(1000);
 		});
 
-	script.
-		$('.dropdown-checkbox').click(function() {
-			var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
-			if (length == 0) {
-				$(this).prop('checked', true);
-			}
-			var selected = $('.dropdown-checkbox:checked').map(function() {
-			    return this.value;
-			}).get().join(', ');
-			$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
-		});
-
 	// Filters
 	script(src='js/forms.js')
 	// For the calendar

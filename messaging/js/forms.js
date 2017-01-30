@@ -8,10 +8,9 @@ $(document).ready(function() {
 		// INLINE DROPDOWNs
 
 	// gives a min-width for every inline dropdown based on the longest content inside
-	var n = $(".dropdown-item-box").length;
 	$(document).find(".dropdown-item-box").each(function(){
 		var w = $(this).width();
-		var w2 = Math.round(w);
+		var w2 = Math.round(w+15);
 		$(this).parents(".has-dropdown").find(".view-box-close").css("min-width", w2+"px");
 		$(this).children(".insert-criteria").css("min-width", w2+"px");
 	});
@@ -38,6 +37,20 @@ $(document).ready(function() {
 		    {
 		        target.fadeOut();
 		    }
+		});
+
+
+		//checkbox dropdown
+		// at least 1 option must be selected
+		$('.dropdown-checkbox').click(function() {
+			var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
+			if (length == 0) {
+				$(this).prop('checked', true);
+			}
+			var selected = $('.dropdown-checkbox:checked').map(function() {
+			    return this.value;
+			}).get().join(', ');
+			$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
 		});
 
 
