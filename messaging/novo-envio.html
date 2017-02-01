@@ -78,11 +78,14 @@
             <div class="fl w-50 pr5 search-input transition">
               <div class="fl w-100 relative">
                 <label class="f6 black lh-copy">Busque por cadastrados ou digite novos números</label>
-                <div class="bg-white black relative ba b--black-20 ph3 pv3 mt2 input"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap"></span></div>
+                <div class="bg-white black relative ba b--black-20 ph3 pv3 mt2 input-envio lh-title">
+                  <p class="dib"></p>
+                </div>
                 <p class="main-gray tr lh-copy mt1">Separe novos números por vírgulas</p>
+                <div class="contatos"></div>
                 <div class="dropdown dropdown--multiple-lists content-box nl3 nr3">
                   <label class="black-50 f6 lh-copy black">Busque por cadastrados ou digite novos números</label>
-                  <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus="">
+                  <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search">
                   <div class="fl w-50 mt3 pb3"><span class="main-gray db f6">Grupos</span></div>
                   <div class="fl w-50 mt3 pb3"><span class="main-gray db f6">Contatos</span></div>
                   <div class="fl w-100 multiple-lists__container">
@@ -121,11 +124,8 @@
                   <input class="dn" type="reset" id="reset-file">
                 </form>
                 <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon has-icon-left icon-upload" data-before-chosen="Escolher arquivo" data-after-chosen="Mudar arquivo">Escolher arquivo</span></label>
-                <div class="fl tr cl mt2"><a class="f7 ttu tracked b accent how-to" href="javascript:">veja como fazer</a>
-                  <div class="has-tooltip nl3"><a class="dn f7 ttu theblack tracked b file-name has-icon-left icon-close-blue has-tooltip"></a>
-                    <div class="tooltip-content tooltip-far"><span>Cancelar</span></div>
-                  </div>
-                </div>
+                <div class="fr tr cl how-to mt1"><a class="f7 ttu tracked b accent" href="javascript:">veja como fazer</a></div>
+                <div class="fl cb dn file-name bg-medium-accent pa2 mr2 mb2 mt2"><a class="has-icon-left icon-close-blue"></a><span class="f7 accent b"></span></div>
               </div>
             </div>
           </div>
@@ -246,7 +246,6 @@
     });
   </script>
   <!-- Filters-->
-  <script src="js/forms.js"></script>
   <!-- Send New-->
   <script src="js/send-new.js"></script>
   <!-- For message preview-->

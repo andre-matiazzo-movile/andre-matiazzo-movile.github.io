@@ -255,6 +255,19 @@
 	}
 }
 
+.icon-refresh--gray {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/refresh-gray.png') no-repeat center center;
+		background-size: 12px;
+		cursor: pointer;
+	}
+}
+
 .icon-download,
 .icon-upload {
 	&:after {

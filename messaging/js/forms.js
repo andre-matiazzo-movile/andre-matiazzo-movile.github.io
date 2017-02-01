@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// DOWNLOAD BUTTON
-	$(".download-button").bind('click', function() {
+	$(".download-button").on('click', function() {
 		$(this).parent().find(".download-items").fadeIn(200);
 	});
 
@@ -18,12 +18,12 @@ $(document).ready(function() {
 	$(".view-box-open").removeClass("o-0");
 
 	// when clicked on the dropdown word, it opens the full box
-	$(".view-box-close").bind('click', function() {
+	$(".view-box-close").on('click', function() {
 		$(this).next(".view-box-open").fadeIn(200);
 	});
 
 	// when an option is selected on the inline dropdown, the full box fades and the option becomes blue
-	$(".view-criteria").bind('click', function() {
+	$(".view-criteria").on('click', function() {
 		var text = $(this).text();
 		$(this).parents(".has-dropdown").find(".insert-criteria").text(text);
 		$(this).parent().children(".view-criteria").css("color","#37474F")
@@ -45,44 +45,51 @@ $(document).ready(function() {
 	// BOX DROPDOWNS
 
 	// Closes a dropdown that is already opened if you click on another one
-	$('.input').bind('click', function (activateDropdown) {
+	$('.input').on('click', function () {
 		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 		$('.upper-bar-menu').removeClass('upper-bar-menu--active');
 		$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
-		$(this).next('.dropdown').find('input[type="search"]').focus();
+		$(this).siblings('.dropdown').find("input[type='search']").focus();
 	});
 
+	$('.input-envio').on('click', function () {
+		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
+		$('.upper-bar-menu').removeClass('upper-bar-menu--active');
+		$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
+		$(this).siblings('.dropdown').find("input[type='search']").focus();
+	});	
+
 		// Closes the dropdown by clicking out of it
-		$(document).bind('click', function(toggleDropdown) {
+		$(document).on('click', function(toggleDropdown) {
 			// If the click on the document is not a .dropdown, an .input or .upper-bar-menu--active, closes all dropdowns
-			if (!$(toggleDropdown.target).closest('.dropdown, .input, .upper-bar-menu--active').length) {
+			if (!$(toggleDropdown.target).closest('.dropdown, .input, .input-envio,  .upper-bar-menu--active').length) {
 				$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 				$('.upper-bar-menu').removeClass('upper-bar-menu--active');
 			}
 		});
 
 		//Closes opened menu dropdowns if you click on its trigger again
-		$('.upper-bar-menu').bind('click', function () {
+		$('.upper-bar-menu').on('click', function () {
 			$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 			$(this).toggleClass('upper-bar-menu--active');
 			$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
 		})
 
 	//On New Contact, shows the "improve this contact" column
-	$('.improve-contact__cta .cta').bind('click', function() {
+	$('.improve-contact__cta .cta').on('click', function() {
 		$(this).parent().hide()
 		$('.improve-contact .input-group').fadeIn();
 	});
 
 	//Get text from the selection within dropdowns and put it on the respective input
-	$('.dropdown li').not('.dropdown li.search__subheading, .outro-genero').bind('click', function() {
+	$('.dropdown li').not('.dropdown li.search__subheading, .outro-genero').on('click', function() {
 		var textFromDropdown = $(this).find('span').text();
 		$(this).parents('.dropdown').siblings('.input').find('span').text(textFromDropdown);
 		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 	});
 
 	//Specific for Gender dropdown on New Contact
-	$('.outro-genero a').bind('click', function() {
+	$('.outro-genero a').on('click', function() {
 		if ($('#contato-outro-genero').val().length > 0) {
 			var anotherGender = $('#contato-outro-genero').val();
 			$('.outro-genero').parents('.dropdown').siblings('.input').find('span').text(anotherGender);
