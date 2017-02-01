@@ -1,27 +1,7 @@
 doctype html
 html(lang='pt-br')
 	head
-		meta(charset='UTF-8')
-		meta(http-equiv='x-ua-compatible', content='ie=edge')
-		meta(name='viewport', content='width=device-width, initial-scale=1')
-		title Movile Messaging – Relatórios
-		meta(name='movile-messaging', content='Movile Messaging')
-		// For the calendar
-		link(href='calendar/jquery-ui/jquery-ui.min.css', rel='stylesheet')
-		link(href='calendar/jquery.comiseo.daterangepicker.css', rel='stylesheet')
-		// For the charts
-		link(href='charts/chartist.min.css', rel='stylesheet')
-		script(src='charts/chartist.min.js', charset='utf-8')
-		// Tachyons CSS
-		link(rel='stylesheet', href='stylesheets/tachyons.min.css')
-		// Main CSS
-		link(rel='stylesheet', href='stylesheets/main.css')
-		// Typekit
-		script(src='https://use.typekit.net/fja4naa.js')
-		script.
-			try{Typekit.load({ async: false });}catch(e){}
-		style.
-			.table-operadora, .table-subconta, .table-inicio{display:none;}
+		include pug/_head
 	body
 		aside
 			.logo
