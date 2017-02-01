@@ -5,24 +5,20 @@ $(document).ready(function() {
 		}
 	});
 
-	$("input[type='file']").on("change", function(){
-		var path = $("input[type='file']").val();
-		var filename = path.replace(/^.*\\/, "");
-		$(".how-to").toggle();
-		$(".file-name").text(filename);
-		$(".file-name").toggle();
-		var newLabel = $(".icon-upload").attr("data-after-chosen");
-		$(".icon-upload").text(newLabel);
+	$("input[type='file']").bind("change", function(){
+		$(".how-to").hide();
+		$(".file-name").show().text($("input[type='file']").val().replace(/^.*\\/, ""));
+		$(".icon-upload").text($(".icon-upload").attr("data-after-chosen"));
 		$(".search-input").css({
 			'opacity' : '0.3',
 			'pointer-events' : 'none'
 		});
 	})
 
-	$(".file-name").on('click', function(){
+	$(".file-name").bind('click', function(){
 		document.getElementById("form-choose-file").reset();
-		$(".file-name").toggle();
-		$(".how-to").toggle();
+		$(".file-name").hide();
+		$(".how-to").show();
 		var oldLabel = $(".icon-upload").attr("data-before-chosen");
 		$(".icon-upload").text(oldLabel);
 		$(".search-input").css({

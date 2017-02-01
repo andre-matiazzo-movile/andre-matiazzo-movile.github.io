@@ -1,10 +1,10 @@
 // COLORS
 $accent: #84ADFF;
-.accent{color: #84ADFF}
 .bg-lighter-accent {background-color: #F0F5FF}
 .bg-medium-accent {background-color: #E0EAFF}
 .bg-darker-accent {background-color: #566fa5}
-.accent-hover:hover{color: $accent}
+.accent-hover:hover {color: $accent}
+.accent {color: $accent}
 $accent-hover: #E0EAFF;
 $accent-pressed: #5a6f9a;
 .bg-accent {background-color: $accent}
@@ -46,3 +46,7 @@ $ice-white: #F3F9FF;
 $alert: rgba(255,0,80,0.5);
 $success: #00E676;
 .bg-success {background-color: $success};
+
+.transition {
+	@include transition (0.4s);
+}
