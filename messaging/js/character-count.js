@@ -16,7 +16,7 @@ function textLengthforAll(initial_id){
     $('.' + initial_id).html(text_max + ' caracteres restantes');
     $('#' + initial_id).keyup(function() {
     	// var text_max = $(this).attr('maxLength');
-        var text_length = $('#mensagem-texto').text().length;
+        var text_length = $('#mensagem-texto').val().length;
         var text_remaining = text_max - text_length;
         if (text_remaining < 0) {
         	$('.' + initial_id).css("color","rgba(255,0,80,0.5)");

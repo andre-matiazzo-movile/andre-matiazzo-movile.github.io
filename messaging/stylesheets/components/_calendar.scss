@@ -43,15 +43,15 @@
 }
 
 .comiseo-daterangepicker-triggerbutton.ui-button {
-	// float: right;
+	float: right;
 	position: relative;
-	padding: 12px 20px;
+	padding: 0 20px;
 	// margin: 12px 12px;
 	font-family: $base-font;
-	font-size: 1em;
+	font-size: .875rem;
 	font-weight: 800;
 	color: #84ADFF;
-	background-color: $lightest-gray;
+	background-color: #F0F5FF;
 	border: none;
 	border-radius: 0;
 	min-width: 1em;
@@ -90,6 +90,7 @@
 .ui-widget.ui-widget-content {
 	border-color: #DCDEE0;
 	border-color: $lighter-gray;
+	top: 160px !important;
 }
 
 .comiseo-daterangepicker-presets {
