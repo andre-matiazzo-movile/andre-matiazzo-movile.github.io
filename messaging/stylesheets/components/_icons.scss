@@ -26,7 +26,6 @@
 		padding: 8px;
 		opacity: 0;
 		width: auto;
-		top: -100%;
 		margin-top: -12px;
 		left: 0;
 		margin-left: -10px; 
@@ -58,6 +57,12 @@
 		-ms-transform: translateY(0px);
 		-o-transform: translateY(0px);
 		transform: translateY(0px);
+	}
+	.tooltip-close {
+		top: -100%;
+	}
+	.tooltip-far {
+		top: -150%;
 	}
 }
 
