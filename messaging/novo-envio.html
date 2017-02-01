@@ -75,7 +75,7 @@
           <h3 class="fl black f3 lh-solid">Escolha quem vai receber</h3>
           <div class="fl w-100 mt4 cl">
             <!-- FIRST HALF OF THE GRID-->
-            <div class="fl w-50 pr5">
+            <div class="fl w-50 pr5 search-input">
               <div class="fl w-100 relative">
                 <label class="f6 black lh-copy">Busque por cadastrados ou digite novos números</label>
                 <div class="bg-white black relative ba b--black-20 ph3 pv3 mt2 input"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap"></span></div>
@@ -113,12 +113,15 @@
               </div>
             </div>
             <!-- SECOND HALF OF THE GRID-->
-            <div class="fl w-50 pl5">
+            <div class="fl w-50 pl5 choose-file">
               <div class="fl">
                 <label class="fl f6 black lh-copy">Ou importe de um arquivo</label>
-                <input class="dn" type="file" id="import-file" accept=".txt, .csv">
-                <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon has-icon-left icon-upload">escolher arquivo</span></label>
-                <div class="fr tr cl mt2"><a class="f8 ttu tracked b accent" href="javascript:;">veja como fazer</a></div>
+                <form id="form-choose-file">
+                  <input class="dn" type="file" id="import-file" accept=".txt, .csv">
+                  <input class="dn" type="reset" id="reset-file">
+                </form>
+                <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon has-icon-left icon-upload" data-before-chosen="Escolher arquivo" data-after-chosen="Mudar arquivo">Escolher arquivo</span></label>
+                <div class="fl tr cl mt2"><a class="f7 ttu tracked b accent how-to" href="javascript:">veja como fazer</a><a class="dn f7 ttu theblack tracked b file-name has-icon-left icon-close-blue"></a></div>
               </div>
             </div>
           </div>
@@ -225,6 +228,7 @@
   </body>
   <!-- jQuery-->
   <script src="js/jquery-3.1.0.min.js"></script>
+  <script src="js/novoenvio.js"></script>
   <script>
     $('.dropdown-checkbox').click(function() {
     var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;

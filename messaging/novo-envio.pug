@@ -70,7 +70,7 @@ html(lang='pt-br')
 					h3.fl.black.f3.lh-solid Escolha quem vai receber
 					.fl.w-100.mt4.cl
 						// FIRST HALF OF THE GRID
-						.fl.w-50.pr5
+						.fl.w-50.pr5.search-input
 							div.fl.w-100.relative
 								label.f6.black.lh-copy Busque por cadastrados ou digite novos números
 								.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input
@@ -117,14 +117,18 @@ html(lang='pt-br')
 												li
 													span Juliana Gaspari
 						// SECOND HALF OF THE GRID
-						.fl.w-50.pl5
+						.fl.w-50.pl5.choose-file
 							div.fl
 								label.fl.f6.black.lh-copy Ou importe de um arquivo
-								input.dn(type='file', id='import-file', accept='.txt, .csv')
+								form#form-choose-file
+									input.dn(type='file', id='import-file', accept='.txt, .csv')
+									input.dn(type='reset', id='reset-file')
 								label.b.mt2.fl.cl.cta.cta-secondary.dib.w-auto.tr.main-gray(for="import-file")
-									span.has-icon.has-icon-left.icon-upload escolher arquivo
-								div.fr.tr.cl.mt2
-									a.f8.ttu.tracked.b.accent(href="javascript:;") veja como fazer
+									span.has-icon.has-icon-left.icon-upload(data-before-chosen="Escolher arquivo", data-after-chosen='Mudar arquivo') Escolher arquivo
+								div.fl.tr.cl.mt2
+									a.f7.ttu.tracked.b.accent.how-to(href="javascript:") veja como fazer
+									a.dn.f7.ttu.theblack.tracked.b.file-name.has-icon-left.icon-close-blue
+									//- p.main-gray.tr.lh-copy.mt1 Separe novos números por vírgulas
 			// MESSAGE
 			div.fl.w-100.bb.b--black-20
 				div.fl.w-100.pt4.pb5.mw8
@@ -226,6 +230,7 @@ html(lang='pt-br')
 
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
+	script(src='js/novoenvio.js')
 	script.
 		$('.dropdown-checkbox').click(function() {
 		var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
