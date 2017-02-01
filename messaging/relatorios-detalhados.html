@@ -152,47 +152,88 @@
       <div class="flex justify-between items-end mt3 mb3 item-start mt4 relative">
         <div class="flex flex-column w-50">
           <label class="f6 theblack">Buscar por destinatário</label>
-          <input class="pv2 bg-search relative" type="text">
+          <input class="pv2 bg-search relative cursor-text" type="text">
         </div><a class="cta pointer download download-button"><span class="has-icon-right icon-dropdown__blue">download</span></a>
         <div class="flex flex-column download-items absolute top-0 right-0 theblack ph3 pt1 pb3 bg-white z-3"><a class="b f6 mt2 theblack accent-hover" href="javascript:">Gerar relatórios</a><a class="b f6 mt2 theblack accent-hover" href="javascript:">Gerar tabela</a><a class="b f6 mt2 theblack accent-hover" href="javascript:">Gerar gráfico</a></div>
       </div>
       <!-- tabela com resultados-->
-      <table class="w-100 mt4 mb4 tl v-top" cellspacing="0">
-        <thead class="v-top">
-          <tr class="pv3 b--black bb ttu f7 theblack b tl tracked">
-            <th class="bb b--black-20 pv2 table-mes"><span>Mês</span></th>
-            <th class="bb b--black-20 pv2 table-cliente"><span>Cliente</span></th>
-            <th class="bb b--black-20 pv2 mw3 table-campanha"><span>Campanha</span></th>
-            <th class="bb b--black-20 pv2 table-subconta"><span>Subconta</span></th>
-            <th class="bb b--black-20 pv2 table-usuario"><span>Usuário</span></th>
-            <th class="bb b--black-20 pv2 table-operadora"><span>Operadora</span></th>
-            <th class="bb b--black-20 pv2 table-sucessos"><span>Sucessos</span></th>
-            <th class="bb b--black-20 pv2 table-agendados"><span>Agendados</span></th>
-            <th class="bb b--black-20 pv2 table-enviados"><span>Enviados</span></th>
-            <th class="bb b--black-20 pv2 table-erros"><span>Erros</span></th>
-            <th class="bb b--black-20 pv2 table-inicio"><span>Início do envio</span></th>
-          </tr>
-        </thead>
-        <tbody class="v-top">
-          <tr class="bb">
-            <td class="bb b--black-20 pv4 table-mes"><span>Fevereiro</span></td>
-            <td class="bb b--black-20 pv4 table-cliente"><span>Cliente</span></td>
-            <td class="bb b--black-20 pv4 mw5 table-campanha"><span>Campanha do dia dos namorados 2017</span></td>
-            <td class="bb b--black-20 pv4 table-subconta"><span>marketing</span></td>
-            <td class="bb b--black-20 pv4 table-usuario"><span>matiazzo</span></td>
-            <td class="bb b--black-20 pv4 table-operadora"><span>Brasil telecom</span></td>
-            <td class="bb b--black-20 pv4 table-sucessos"><span>90mi</span></td>
-            <td class="bb b--black-20 pv4 table-agendados"><span>100mi</span></td>
-            <td class="bb b--black-20 pv4 table-enviados"><span>300mi</span></td>
-            <td class="bb b--black-20 pv4 table-erros"><span>10mi</span></td>
-            <td class="bb b--black-20 pv4 table-inicio"><span>12/12/16, às 17:56</span></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="flex relative">
+        <div class="w-90 overflow-x-scroll">
+          <table class="mt4 mb4 tl v-top" cellspacing="0" cellpadding="0">
+            <thead class="v-top">
+              <tr class="ttu f7 theblack b tl tracked">
+                <th class="nowrap table-status"><span class="bb b--black-20 pv2 pr3 db">Status</span></th>
+                <th class="nowrap w-4 table-phone"><span class="bb b--black-20 pv2 pr3 db">Phone</span></th>
+                <th class="nowrap table-la"><span class="bb b--black-20 pv2 pr3 db">LA</span></th>
+                <th class="nowrap table-carrier"><span class="bb b--black-20 pv2 pr3 db">Carrier</span></th>
+                <th class="nowrap table-campaign"><span class="bb b--black-20 pv2 pr3 db">Campaign</span></th>
+                <th class="nowrap table-creation-date"><span class="bb b--black-20 pv2 pr3 db">Creation Date</span></th>
+                <th class="nowrap table-date"><span class="bb b--black-20 pv2 pr3 db">Date</span></th>
+                <th class="nowrap table-customer"><span class="bb b--black-20 pv2 pr3 db">Customer</span></th>
+                <th class="nowrap table-sub-account"><span class="bb b--black-20 pv2 pr3 db">Sub-account</span></th>
+                <th class="nowrap table-user"><span class="bb b--black-20 pv2 pr3 db">User</span></th>
+                <th class="nowrap table-text"><span class="bb b--black-20 pv2 pr3 db">Text</span></th>
+              </tr>
+            </thead>
+            <tbody class="v-top">
+              <tr class="bb relative f6">
+                <td class="nowrap table-status"><span class="db bb b--black-20 pv4 pr3 green">Sent</span></td>
+                <td class="nowrap table-phone"><span class="db bb b--black-20 pv4 pr3">+55 (99) 99999-9999</span></td>
+                <td class="nowrap table-la"><span class="db bb b--black-20 pv4 pr3">27171</span></td>
+                <td class="nowrap table-carrier"><span class="db bb b--black-20 pv4 pr3">Vivo</span></td>
+                <td class="nowrap table-campaign"><span class="db bb b--black-20 pv4 pr3">Compras de Natal 2014</span></td>
+                <td class="nowrap table-creation-date"><span class="db bb b--black-20 pv4 pr3">24/01/2017 10:28</span></td>
+                <td class="nowrap table-date"><span class="db bb b--black-20 pv4 pr3">24/01/2017 10:28</span></td>
+                <td class="nowrap table-customer"><span class="db bb b--black-20 pv4 pr3">Bradesco</span></td>
+                <td class="nowrap table-sub-account"><span class="db bb b--black-20 pv4 pr3">Bradesco - BDT</span></td>
+                <td class="nowrap table-user"><span class="db bb b--black-20 pv4 pr3">Marketing</span></td>
+                <td class="nowrap table-text relative"><span class="db bb b--black-20 pv4 pr3 mw5 truncated truncate nowrap accent-hover pointer">O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.</span></td>
+              </tr>
+              <tr class="bb relative f6">
+                <td class="nowrap table-status"><span class="db bb b--black-20 pv4 pr3 green">Sent</span></td>
+                <td class="nowrap table-phone"><span class="db bb b--black-20 pv4 pr3">+55 (99) 99999-9999</span></td>
+                <td class="nowrap table-la"><span class="db bb b--black-20 pv4 pr3">27171</span></td>
+                <td class="nowrap table-carrier"><span class="db bb b--black-20 pv4 pr3">Vivo</span></td>
+                <td class="nowrap table-campaign"><span class="db bb b--black-20 pv4 pr3">Compras de Natal 2014</span></td>
+                <td class="nowrap table-creation-date"><span class="db bb b--black-20 pv4 pr3">24/01/2017 10:28</span></td>
+                <td class="nowrap table-date"><span class="db bb b--black-20 pv4 pr3">24/01/2017 10:28</span></td>
+                <td class="nowrap table-customer"><span class="db bb b--black-20 pv4 pr3">Bradesco</span></td>
+                <td class="nowrap table-sub-account"><span class="db bb b--black-20 pv4 pr3">Bradesco - BDT</span></td>
+                <td class="nowrap table-user"><span class="db bb b--black-20 pv4 pr3">Marketing</span></td>
+                <td class="nowrap table-text relative"><span class="db bb b--black-20 pv4 pr3 mw5 truncated truncate nowrap accent-hover pointer">O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <table class="w-10 h-100 mt4 mb4 tl v-top absolute top-0 right-0 bg-white" cellspacing="0" cellpadding="0">
+          <thead class="v-top">
+            <tr class="pv3 b--black bb ttu f7 theblack b tl tracked">
+              <th class="bb b--black-20 pv2 ph2 table-detalhes"><a class="accent" href="javascript:">Detalhes</a></th>
+            </tr>
+          </thead>
+          <tbody class="v-top">
+            <tr class="bb relative f6">
+              <td class="bb b--black-20 pv4 ph2 table-detalhes left-shadow"><a class="accent has-icon-left icon-user" href="javascript:">Contato</a></td>
+            </tr>
+            <tr class="bb relative f6">
+              <td class="bb b--black-20 pv4 ph2 table-detalhes left-shadow"><a class="accent has-icon-left icon-user" href="javascript:">Contato</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </body>
   <!-- jQuery-->
   <script src="js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(".truncated").click(function() {
+    	$(".truncated").toggleClass("truncate");
+    	$(".truncated").toggleClass("not-truncate");
+    	$(".truncated").toggleClass("mw5");
+    	$(this).parents(".overflow-x-scroll").scrollLeft(1000);
+    });
+    
+  </script>
   <script>
     $('.dropdown-checkbox').click(function() {
     	var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
