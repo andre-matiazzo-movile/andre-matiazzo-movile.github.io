@@ -18,12 +18,15 @@
 	font-weight: $bold;
 	text-transform: uppercase;
 	letter-spacing: 0.75px;
-	line-height: 1;
+	line-height: 1.5;
 	border: 1px solid $lighter-gray;
 	box-shadow: 0 2px 3px 0 $lighter-gray;
 	padding: 1rem;
 	background-color: white;
 	color: $accent;
+	&.cta-secondary {
+		color: $main-gray;
+	}
 }
 
 .inner-cta {
@@ -57,17 +60,6 @@
 	color: $ice-white;
 	background-color: $accent;
 	border: none;
-}
-
-.cta-secondary {
-	padding-top: 10px;
-	color: $main-gray;
-	border-bottom: 2px solid;
-	margin-right: 24px;
-	&.inner-cta {
-		margin-right: 0;
-		border-bottom: none;
-	}
 }
 
 .label-with-bg {

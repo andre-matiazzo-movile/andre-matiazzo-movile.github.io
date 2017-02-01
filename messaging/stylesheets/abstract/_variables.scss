@@ -2,6 +2,8 @@
 $accent: #84ADFF;
 .accent{color: #84ADFF}
 .bg-lighter-accent {background-color: #F0F5FF}
+.bg-medium-accent {background-color: #E0EAFF}
+.bg-darker-accent {background-color: #566fa5}
 .accent-hover:hover{color: $accent}
 $accent-hover: #E0EAFF;
 $accent-pressed: #5a6f9a;
@@ -42,4 +44,5 @@ $sidebar-border: #576E95;
 $ice-white: #F3F9FF;
 // .ice-white {color: $ice-white;}
 $alert: rgba(255,0,80,0.5);
-$success: #BCFDD4;
+$success: #00E676;
+.bg-success {background-color: $success};

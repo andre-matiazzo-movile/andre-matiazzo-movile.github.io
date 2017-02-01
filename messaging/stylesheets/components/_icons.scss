@@ -84,6 +84,18 @@
 	}
 }
 
+.icon-plus--blue {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/plus-blue.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
 .icon-continue {
 	&:after {
 		content: "";
@@ -183,17 +195,23 @@
 	}
 }
 
-.icon-download {
+.icon-download,
+.icon-upload {
 	&:after {
 		content: "";
 		width: 12px;
 		height: 12px;
 		position: absolute;
 		top: calc(50% - 5px);
-		background: url('../img/icons/download.png') no-repeat center center;
+		background: url('../img/icons/download-blue.png') no-repeat center center;
 		background-size: 12px;
 		cursor: pointer;
 	}
+}
+
+.icon-upload::after {
+	background: url('../img/icons/upload-icon.png') no-repeat center center;
+	background-size: 12px;
 }
 
 .icon-dropdown {
@@ -258,6 +276,20 @@
 		position: absolute;
 		top: calc(50% - 5px);
 		background: url('../img/icons/notif-blue.png') no-repeat center center;
+		background-size: 12px;
+		cursor: pointer;
+	}
+}
+
+.icon-tooltip {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		right: 0;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/question-mark.png') no-repeat center center;
 		background-size: 12px;
 		cursor: pointer;
 	}

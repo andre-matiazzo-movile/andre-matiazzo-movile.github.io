@@ -19,57 +19,126 @@ html(lang='pt-br')
 		// Typekit
 		script(src='https://use.typekit.net/fja4naa.js')
 		script.
-			try{Typekit.load({ async: false });}catch(e){}
+			try {
+			Typekit.load({
+			async: false
+			});
+			} catch (e) {}
 		style.
-			.table-operadora, .table-subconta, .table-inicio{display:none;}
+			.table-operadora,
+			.table-subconta,
+			.table-inicio {
+			display: none;
+			}
 	body
-		aside
-			.logo
-				img.blue(src='img/logo-white.png', alt='Logo Movile Messaging')
-			nav
-				ul.primary-nav
-					li
-						a(href='') Dashboard
-					li
-						a(href='') Novo envio
-					li
-						a.active(href='') Relatórios
-					li
-						a(href='') Contatos
-					li
-						a(href='') Configurações
-					li
-						a(href='') Suporte
-		section.upper-bar
-			h1.pt4 Relatórios
-			.fr.pt4.pr4.lh-copy
-				.b.fl.has-icon.has-icon-left.icon-notif__gray.mr4 Notificações
-						.w-100				
-							.filters__item--user-or-la
-								.b.fl.has-icon.has-icon-left.icon-notif__gray.mr4 Notificações
-								.input.caret-down
-									span Todas as subcontas
-								.dropdown lsdfsdf
-				.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
-		section.main-content
-			//- #bottomModal.bottom-bar-modal
+		aside.fixed.fl.h-100.bg-sidebar
+			.bb.b--black-10
+				.pl4.mt4.pb3.w4
+					img.db.w-90(src='img/logo-white.png', alt='Logo Movile Messaging')
+			nav.pl4.mt4
+				ul.list.pl0.mt3
+					li.mt3
+						a.white.dim.f6(href='') Dashboard
+					li.mt3
+						a.white.dim.f6(href='') Novo envio
+					li.mt3
+						a.white.dim.f6.bb.bw1(href='') Relatórios
+					li.mt3
+						a.white.dim.f6(href='') Contatos
+					li.mt3
+						a.white.dim.f6(href='') Configurações
+					li.mt3
+						a.white.dim.f6(href='') Suporte
+		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
+			h1.f2.fl.black Relatórios
+			.fr.lh-copy.relative
+				.relative.mr4.fl
+					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray Notificações
+					.absolute.top--1.right--1
+						.relative
+							span.notification-badge 2
+					// NOTIFICATIONS
+					.dropdown.notifications
+						// NOTIF HEADER
+						.fl.w-100.pa3.bb.lighter-gray
+							button.mark-all-as-read.ttu.fr.lh-copy.pv0.pr0.tracked.b.f8.main-gray.bn.bg-white.has-icon.has-icon-left.icon-check--gray.outline-0 marcar todas como lidas
+						// NOTIFS BODY
+						.fl.w-100
+							// NOTIF ITEM
+							.notif__item.bb.lighter-gray.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.can-be-read está sendo gerado
+									h1.notif__title.f5.mt1.can-be-read.black Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									<button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+							// NOTIF ITEM
+							.notif__item.bb.lighter-gray.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.green.bg-lighter-green.can-be-read está pronto
+									h1.notif__title.f5.mt1.can-be-read.black Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									button.accent.bn.bg-white.fr.f8.b.ttu.tracked download
+							// NOTIF ITEM
+							.notif__item.bb.lighter-gray.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.red.bg-lighter-red.can-be-read não foi possível gerar
+									h1.notif__title.f5.mt1.can-be-read.black Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									a.accent.bn.bg-white.fr.f8.b.ttu.tracked(href='notifs.html')
+										| ver detalhes
+						// NOTIF FOOTER
+						.fl.w-100.pa3
+							a.ttu.fl.lh-copy.pv0.tracked.b.f8.accent.bn.bg-white.has-icon.has-icon-right.icon-arrow-right--blue(href='notifs.html')
+								| ver todas as notificações
+				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
+		// MAIN CONTENT
+		section.main-content.pa3.fr
+			// FILTERS
 			.actions-container
-				.bg-lightest-gray.theblack.filter__container
-					.flex.justify-between.items-center
-						h3.theblack.f4 Filtros
+				.fl.w-100.bg-lighter-accent.pa3
+					.fl.w-100
+						h3.fl.black.f3.lh-solid Filtros
 						// Calendar
-						input#datepicker.calendar-picker(name='e1')
-						// /Calendar
-					.flex.justify-between.mt3
-						.w-100.mr3
-							.filters__item--user-or-la
-								label.main-label Tipo de relatório
-								.input.caret-down
-									span Envios consolidados
-								.dropdown.dropdown--user-or-la
-									label.main-label Tipo de relatório
-									input(type='search', autofocus='')
-									ul
+						input#datepicker.fr.calendar-picker(name='e1')
+					// FILTERS ROW
+					.fl.w-100.mt4
+						.nl3.nr3
+							// FILTER ITEM
+							.relative.w-third.fl.ph3
+								label.black-50.f6 Tipo de relatório
+								.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
+								.dropdown.content-box
+									label.black-50.f6 Tipo de relatório
+									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
+									ul.pt0.pb1.pl3
 										li.search__subheading
 											span Buscas recentes
 										li
@@ -86,16 +155,15 @@ html(lang='pt-br')
 											span Henrique Perticarati
 										li
 											span Juliana Gaspari
-						.w-100.mr3
-							// USUARIO OU LA
-							.filters__item--user-or-la
-								label.main-label Subconta
-								.input.caret-down
-									span Todas as subcontas
-								.dropdown.dropdown--user-or-la
-									label.main-label Subconta
-									input(type='search', autofocus='')
-									ul
+							// FILTER ITEM
+							.relative.w-third.fl.ph3
+								label.black-50.f6 Subconta
+								.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
+								.dropdown.content-box
+									label.black-50.f6 Subconta
+									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
+									ul.pt0.pb1.pl3
 										li.search__subheading
 											span Buscas recentes
 										li
@@ -112,15 +180,15 @@ html(lang='pt-br')
 											span Henrique Perticarati
 										li
 											span Juliana Gaspari
-						.w-100
-							.filters__item--user-or-la
-								label.main-label Usuários
-								.input.caret-down
-									span Todos os usuários
-								.dropdown.dropdown--user-or-la
-									label.main-label Usuários
-									input(type='search', autofocus='')
-									ul
+							// FILTER ITEM
+							.relative.w-third.fl.ph3
+								label.black-50.f6 Usuários
+								.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
+								.dropdown.content-box
+									label.black-50.f6 Usuários
+									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
+									ul.pt0.pb1.pl3
 										li.search__subheading
 											span Buscas recentes
 										li
@@ -137,16 +205,18 @@ html(lang='pt-br')
 											span Henrique Perticarati
 										li
 											span Juliana Gaspari
-					.flex.justify-between.mt3
-						.w-100.mr3
-							.filters__item--user-or-la
-								label.main-label Campanha, Lote ou Número
-								.input.caret-down
-									span Carnaval 2014
-								.dropdown.dropdown--user-or-la
-									label.main-label Campanha, Lote ou Número
-									input(type='search', autofocus='')
-									ul
+					// FILTERS ROW
+					.fl.w-100.mt4
+						.nl3.nr3
+							// FILTER ITEM
+							.relative.w-third.fl.ph3
+								label.black-50.f6 Campanha, Lote ou Celular
+								.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
+								.dropdown.content-box
+									label.black-50.f6 Campanha, Lote ou Celular
+									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
+									ul.pt0.pb1.pl3
 										li.search__subheading
 											span Buscas recentes
 										li
@@ -163,16 +233,15 @@ html(lang='pt-br')
 											span Henrique Perticarati
 										li
 											span Juliana Gaspari
-						.w-100.mr3
-							// USUARIO OU LA
-							.filters__item--user-or-la
-								label.main-label Operadoras
-								.input.caret-down
-									span Todas as operadoras
-								.dropdown.dropdown--user-or-la
-									label.main-label Operadoras
-									input(type='search', autofocus='')
-									ul
+							// FILTER ITEM
+							.relative.w-third.fl.ph3
+								label.black-50.f6 Operadoras
+								.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
+								.dropdown.content-box
+									label.black-50.f6 Operadoras
+									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
+									ul.pt0.pb1.pl3
 										li.search__subheading
 											span Buscas recentes
 										li
@@ -189,15 +258,15 @@ html(lang='pt-br')
 											span Henrique Perticarati
 										li
 											span Juliana Gaspari
-						.w-100
-							.filters__item--user-or-la
-								label.main-label Status das mensagens
-								.input.caret-down
-									span Todos os status
-								.dropdown.dropdown--user-or-la
-									label.main-label Status das mensagens
-									input(type='search', autofocus='')
-									ul
+							// FILTER ITEM
+							.relative.w-third.fl.ph3
+								label.black-50.f6 Status das mensagens
+								.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
+								.dropdown.content-box
+									label.black-50.f6 Status das mensagens
+									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
+									ul.pt0.pb1.pl3
 										li.search__subheading
 											span Buscas recentes
 										li
@@ -214,33 +283,32 @@ html(lang='pt-br')
 											span Henrique Perticarati
 										li
 											span Juliana Gaspari
-					.flex.justify-end.mt3
-						a.cta.cta-accent
-							span.has-icon-left.icon-check--white aplicar
-			div.mt4
-				h3.theblack.f4.mt1 Resultados
-			.flex.justify-between.items-center.mt3.mb3.item-start.relative
+					a.dib.fr.mt4.mb3.cta.cta-accent
+						span.has-icon-left.icon-check--white aplicar
+			// RESULTADOS
+			.fl.w-100.ph3.pt3
+				h3.theblack.f5.mt1 Resultados
+				.flex.justify-between.items-center.mt3.mb3.item-start.relative
 					.flex.flex-column.items-left
 						span.f7.blue-gray Campanha
 						h3.blue-gray.f5.mt1 Carnaval 2014, por mês
 					a.cta.pointer.download.download-button
 						span.has-icon-right.icon-dropdown__blue download
 					.flex.flex-column.download-items.absolute.top-0.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
-						a(href='javascript:').b.f6.mt2.theblack.accent-hover Gerar relatórios
-						a(href='javascript:').b.f6.mt2.theblack.accent-hover Gerar tabela
-						a(href='javascript:').b.f6.mt2.theblack.accent-hover Gerar gráfico
-			div.mb3
-				span.theblack.f7.ttu.b envios
-			//- Display the table
-			.ct-chart.ct-double-octave
-			// legenda do gráfico
-			.flex.mt4.justify-between.items-start.relative.lh-copy
-				div
-					span.bg-green.br-100.pa1.dib
-					span.f7.blue-gray.ml1.ttu.b.tracked Mensagens enviadas
-					span.bg-red.br-100.pa1.dib.ml4
-					span.f7.blue-gray.ml1.ttu.b.tracked Mensagens com erro
-				.flex.mr2.has-dropdown.relative.lh-copy
+						a.b.f6.mt2.theblack.accent-hover(href='javascript:') Gerar relatórios
+						a.b.f6.mt2.theblack.accent-hover(href='javascript:') Gerar tabela
+						a.b.f6.mt2.theblack.accent-hover(href='javascript:') Gerar gráfico
+				.mb3
+					span.theblack.f7.ttu.b envios
+				.ct-chart.ct-double-octave
+				// legenda do gráfico
+				.flex.mt4.justify-between.items-start.relative.lh-copy
+					div
+						span.bg-green.br-100.pa1.dib
+						span.f7.blue-gray.ml1.ttu.b.tracked Mensagens enviadas
+						span.bg-red.br-100.pa1.dib.ml4
+						span.f7.blue-gray.ml1.ttu.b.tracked Mensagens com erro
+					.flex.mr2.has-dropdown.relative.lh-copy
 						span.f6.theblack Visualização por
 						span.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer Operadora
 						.flex.view-box-open.shadow-2.pv2.ph3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt2.nl3.o-0
@@ -251,58 +319,55 @@ html(lang='pt-br')
 								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Dia
 								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Mês
 								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Operadora
-
-			// número de mensagens enviadas
-			.flex.mt2
-				.flex.flex-column.mr5
-					span.blue-gray.f2.b 12.7mi
-					span.theblack.f6
-						| mensagens
-						br
-						| enviadas
-				.flex.flex-column.mr5
-					span.green.f2.b 4.2mi
-					span.theblack.f6
-						| enviadas com
-						br
-						| sucesso
-				.flex.flex-column.mr5
-					span.red.f2.b 1.5mi
-					span.theblack.f6
-						| mensagens
-						br
-						| com erro
-			//Detalhes
-			div.mt5
+				// número de mensagens enviadas
+				.flex.mt2
+					.flex.flex-column.mr5
+						span.blue-gray.f2.b 12.7mi
+						span.theblack.f6
+							| mensagens
+							br
+							| enviadas
+					.flex.flex-column.mr5
+						span.green.f2.b 4.2mi
+						span.theblack.f6
+							| enviadas com
+							br
+							| sucesso
+					.flex.flex-column.mr5
+						span.red.f2.b 1.5mi
+						span.theblack.f6
+							| mensagens
+							br
+							| com erro
+			// Detalhes
+			.mt5
 				h3.blue-gray.f5 Detalhes
 				.flex.mt4.theblack.lh-copy
 					.flex.mr2.has-dropdown.relative
 						span.f6 Consolidar por
-						div.relative.pa0.ma0
+						.relative.pa0.ma0
 							span.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer.db Operadora
 							.flex.view-box-open.shadow-2.pb2.pt0.ph2.absolute.top-0.left-0.bg-white.z-3.nt2.nl3.o-0
-								//- span.f6.w-100 Consolidar por
 								.flex.flex-column.dropdown-item-box.ml4
-									//- span.f6.w-100.nl2 Consolidar por
 									.input.multichoice.mt4
 										.checkbox
-											input.dropdown-checkbox#operadora_checkbox(type='checkbox', name='operadora', value='Operadora' checked)
+											input#operadora_checkbox.dropdown-checkbox(type='checkbox', name='operadora', value='Operadora', checked='')
 											label.f6.accent-hover(for='operadora_checkbox') Operadora
 									.input.multichoice.mt4
 										.checkbox
-											input.dropdown-checkbox#campanha_checkbox(type='checkbox', name='campanha', value='Campanha')
+											input#campanha_checkbox.dropdown-checkbox(type='checkbox', name='campanha', value='Campanha')
 											label.f6.accent-hover(for='campanha_checkbox') Campanha
 									.input.multichoice.mt4
 										.checkbox
-											input.dropdown-checkbox#cliente_checkbox(type='checkbox', name='cliente', value='Cliente')
+											input#cliente_checkbox.dropdown-checkbox(type='checkbox', name='cliente', value='Cliente')
 											label.f6.accent-hover(for='cliente_checkbox') Cliente
 									.input.multichoice.mt4
 										.checkbox
-											input.dropdown-checkbox#subconta_checkbox(type='checkbox', name='subconta', value='Subconta')
+											input#subconta_checkbox.dropdown-checkbox(type='checkbox', name='subconta', value='Subconta')
 											label.f6.accent-hover(for='subconta_checkbox') Subconta
 									.input.multichoice.mt4
 										.checkbox
-											input.dropdown-checkbox#usuario_checkbox(type='checkbox', name='usuario', value='Usuário')
+											input#usuario_checkbox.dropdown-checkbox(type='checkbox', name='usuario', value='Usuário')
 											label.f6.accent-hover(for='usuario_checkbox') Usuário
 					.flex.mr2.has-dropdown.relative
 						span.f6 e por
@@ -314,7 +379,6 @@ html(lang='pt-br')
 								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Hora
 								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Dia
 								span.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Mês
-
 			// tabela com resultados
 			table.w-100.mt4.mb4.tl.v-top(cellspacing='0')
 				thead.v-top
@@ -365,24 +429,23 @@ html(lang='pt-br')
 							span 10mi
 						td.bb.b--black-20.pv4.table-inicio
 							span 12/12/16, às 17:56
-					
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
-
 	script.
 		$('.dropdown-checkbox').click(function() {
-			var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
-			if (length == 0) {
-				$(this).prop('checked', true);
-			}
-			var selected = $('.dropdown-checkbox:checked').map(function() {
-			    return this.value;
-			}).get().join(', ');
-			$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
+		var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
+		if (length == 0) {
+		$(this).prop('checked', true);
+		}
+		var selected = $('.dropdown-checkbox:checked').map(function() {
+		return this.value;
+		}).get().join(', ');
+		$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
 		});
-
 	// Filters
 	script(src='js/forms.js')
+	// Notifications
+	script(src='js/notifs.js')
 	// For the calendar
 	script(src='calendar/jquery-ui/jquery-ui.min.js')
 	script(src='calendar/moment.js')
@@ -393,16 +456,28 @@ html(lang='pt-br')
 		$("#datepicker").daterangepicker({
 		presetRanges: [{
 		text: 'Últimos 7 dias',
-		dateStart: function() { return moment().add(-7, 'days') },
-		dateEnd: function() { return moment().add(0, 'days') }
+		dateStart: function() {
+		return moment().add(-7, 'days')
+		},
+		dateEnd: function() {
+		return moment().add(0, 'days')
+		}
 		}, {
 		text: 'Últimos 30 dias',
-		dateStart: function() { return moment().add(-30, 'days') },
-		dateEnd: function() { return moment().add(0, 'days') }
+		dateStart: function() {
+		return moment().add(-30, 'days')
+		},
+		dateEnd: function() {
+		return moment().add(0, 'days')
+		}
 		}, {
 		text: 'Últimos 90 dias',
-		dateStart: function() { return moment().add(-90, 'days') },
-		dateEnd: function() { return moment().add(0, 'days') }
+		dateStart: function() {
+		return moment().add(-90, 'days')
+		},
+		dateEnd: function() {
+		return moment().add(0, 'days')
+		}
 		}],
 		applyOnMenuSelect: false,
 		dateFormat: 'd M yy',
@@ -413,9 +488,9 @@ html(lang='pt-br')
 		cancelButtonText: 'cancelar',
 		verticalOffset: -50,
 		datepickerOptions: {
-		dayNamesMin: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
-		monthNames: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'  ],
-		monthNamesShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
+		dayNamesMin: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+		monthNames: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+		monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
 		numberOfMonths: 2,
 		minDate: null,
 		maxDate: 0
