@@ -56,9 +56,15 @@ $(document).ready(function() {
 	$('.dropdown li').not('.dropdown li.search__subheading, .outro-genero').on('click', function() {
 		// var textFromDropdown = $(this).find('span').text();
 		$('.contatos').append("<div class='dib cb file-name bg-medium-accent pa2 mr2 mb2 mt2'><a class='has-icon-left icon-close-blue remove-item mb4'></a><span class='f7 accent b'>"+$(this).find('span').text()+"</span>");
+		if ( ($(".remove-item").length) > 0) {
+			$("div.choose-file").css({
+				'opacity' : '0.3',
+				'pointer-events' : 'none'
+			});
+		}
 	});
 
-	$('.remove-item').on('click', function() {
+	$('.remove-item').bind('click', function() {
 		// $(this).parent().remove();
 		alert("ola");
 	});
@@ -70,9 +76,15 @@ $(document).ready(function() {
 
 // TO DO:
 // 3. Desativar busca ou importação dependendo do que a pessoa escolher. Mostrar mensagem abaixo do item inativo explicando porque ele ficou desse jeito
+
 // 4. Modais de "veja como fazer" e a tooltip do Flash SMS
+
 // 5. Dependendo do que a pessoa escolher ^ mudar o texto explicativo em "Escreva sua mensagem". Os campos podem vir do arquivo ou dos contatos/grupos selecionados
+
 // 6. Se pessoa escrever mensagem com acento, mudar o limite de caracteres para 70
+
 // 7. Se pessoa escrever mais que 160/70 caracteres, dar feedback de quantas mensagens serão cobradas
+
 // 8. Reconhecer onde está o caret no textarea e conseguir adicionar os campos customizados ali. Tentar fazer isso com seleção também. (talvez tenha que mudar para contenteditable)
+
 // 9. Prévia da mensagem fica fixa depois da altura
