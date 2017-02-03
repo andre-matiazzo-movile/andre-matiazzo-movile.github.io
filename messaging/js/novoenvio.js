@@ -78,17 +78,23 @@ $(document).ready(function() {
 	$(document).on('scroll', function(){
 		var h = $('.messages').parent().parent().offset().top - $(window).scrollTop();
 		if (h <= 0) {
-			getPreviewPosition();
+			if($(window).scrollTop() + $(window).height() == $(document).height()) {
+				bottomPreviewPosition();
+			} else {
+				getPreviewPosition();
+			}
 		} else {
 			clearPreviewPosition()
 		}
 	});
 
-	$(window).scroll(function() {
-	   if($(window).scrollTop() + $(window).height() == $(document).height()) {
-	   	bottomPreviewPosition();
-	   }
-	});
+	// $(document).on('scroll', function(){
+	//    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+	//    	bottomPreviewPosition();
+	//    } else {
+	//    	// getPreviewPosition()
+	//    }
+	// });
 
 });
 
@@ -117,7 +123,15 @@ function bottomPreviewPosition() {
 		'position' : 'fixed',
 		'top' : translate,
 	});
-	console.log(translate);
+}
+
+function bottomPreviewPosition() {
+	var translate = $("#schedule").offset().top - $(window).scrollTop();
+	var translate = translate + 40;
+	$(".messages").css({
+		'position' : 'fixed',
+		'top' : translate,
+	});
 }
 
 // DONE:
