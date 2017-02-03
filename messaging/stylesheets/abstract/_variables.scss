@@ -52,5 +52,5 @@ $success: #00E676;
 }
 
 .transition-slow {
-	@include transition (3s);
+	@include transition (1s);
 }
