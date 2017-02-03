@@ -118,7 +118,7 @@ html(lang='pt-br')
 												li
 													span Juliana Gaspari
 						// SECOND HALF OF THE GRID
-						.fl.w-50.pl5.choose-file
+						.fl.w-50.pl5.choose-file.transition
 							div.fl
 								label.fl.f6.black.lh-copy Ou importe de um arquivo
 								form#form-choose-file
@@ -135,7 +135,7 @@ html(lang='pt-br')
 			div.fl.w-100.bb.b--black-20
 				div.fl.w-100.pt4.pb5.mw8
 					h3.fl.black.f3.lh-solid Escreva sua mensagem
-					.fl.w-100.mt4.cl
+					.fl.w-100.mt4.cl.relative
 						// FIRST HALF OF THE GRID
 						.fl.w-50.pr5
 							p.main-gray.lh-copy Use campos personalizados para enviar mensagens personalizadas aos seus contatos (eles vieram do arquivo importado por você):
@@ -158,9 +158,9 @@ html(lang='pt-br')
 									label.pl3.f5.black.normal(for='flash-sms') Enviar como Flash SMS
 									span.has-icon.has-icon-right.icon-tooltip
 						// SECOND HALF OF THE GRID		
-						.fl.w-50.pl5.messages
+						.fl.w-50.pl5.messages.transition-slow.absolute.right-0
 							label.fl.f6.black.lh-copy Prévia do envio
-							div.phone-preview.relative.h-auto.fl.cl.mt2
+							div.phone-preview.relative.h-auto.fl.cl.mt2.bg-white
 								img.db.w-100(src="../img/phone.png")
 								div.speak-bubble-container
 									.speak-bubble

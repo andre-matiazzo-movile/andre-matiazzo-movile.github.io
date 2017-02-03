@@ -50,3 +50,7 @@ $success: #00E676;
 .transition {
 	@include transition (0.4s);
 }
+
+.transition-slow {
+	@include transition (0.8s);
+}

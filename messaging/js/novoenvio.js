@@ -56,6 +56,7 @@ $(document).ready(function() {
 	$('.dropdown li').not('.dropdown li.search__subheading, .outro-genero').on('click', function() {
 		// var textFromDropdown = $(this).find('span').text();
 		$('.contatos').append("<div class='dib cb file-name bg-medium-accent pa2 mr2 mb2 mt2'><a class='has-icon-left icon-close-blue remove-item mb4'></a><span class='f7 accent b'>"+$(this).find('span').text()+"</span>");
+		console.log("oie");
 		if ( ($(".remove-item").length) > 0) {
 			$("div.choose-file").css({
 				'opacity' : '0.3',
@@ -64,26 +65,72 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.remove-item').bind('click', function() {
-		// $(this).parent().remove();
-		alert("ola");
+	$('.contatos').on('click', '.remove-item', function() {
+		$(this).parent().remove();
+		if ( ($(".remove-item").length) == 0) {
+			$("div.choose-file").css({
+				'opacity' : '1',
+				'pointer-events' : 'auto'
+			});
+		}
+	});
+
+	$(document).on('scroll', function(){
+		var h = $('.messages').parent().parent().offset().top - $(window).scrollTop();
+		if (h <= 0) {
+			getPreviewPosition();
+		} else {
+			clearPreviewPosition()
+		}
+	});
+
+	$(window).scroll(function() {
+	   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+	   	bottomPreviewPosition();
+	   }
 	});
 
 });
 
+function getPreviewPosition() {
+	var left = $(".messages").offset().left;
+	$(".messages").css({
+		'position' : 'fixed',
+		'top' : '90px',
+		'left' : left
+	});
+}
+
+function clearPreviewPosition() {
+	$(".messages").css({
+		'position' : 'absolute',
+		'right' : '0',
+		'left' : 'initial',
+		'top' : 'initial'
+	});
+}
+
+function bottomPreviewPosition() {
+	var translate = $("#schedule").offset().top - $(window).scrollTop();
+	var translate = translate + 40;
+	$(".messages").css({
+		'position' : 'fixed',
+		'top' : translate,
+	});
+	console.log(translate);
+}
+
 // DONE:
 // 2. Ao escolher arquivo para importação, mostrar o nome do arquivo abaixo do botão
-
-// TO DO:
 // 3. Desativar busca ou importação dependendo do que a pessoa escolher. Mostrar mensagem abaixo do item inativo explicando porque ele ficou desse jeito
 
-// 4. Modais de "veja como fazer" e a tooltip do Flash SMS
-
-// 5. Dependendo do que a pessoa escolher ^ mudar o texto explicativo em "Escreva sua mensagem". Os campos podem vir do arquivo ou dos contatos/grupos selecionados
-
 // 6. Se pessoa escrever mensagem com acento, mudar o limite de caracteres para 70
-
 // 7. Se pessoa escrever mais que 160/70 caracteres, dar feedback de quantas mensagens serão cobradas
+
+// TO DO:
+
+// 4. Modais de "veja como fazer" e a tooltip do Flash SMS
+// 5. Dependendo do que a pessoa escolher ^ mudar o texto explicativo em "Escreva sua mensagem". Os campos podem vir do arquivo ou dos contatos/grupos selecionados
 
 // 8. Reconhecer onde está o caret no textarea e conseguir adicionar os campos customizados ali. Tentar fazer isso com seleção também. (talvez tenha que mudar para contenteditable)
 
