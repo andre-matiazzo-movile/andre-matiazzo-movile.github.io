@@ -22,201 +22,270 @@
     <style>.table-operadora, .table-subconta, .table-inicio{display:none;}</style>
   </head>
   <body>
-    <aside>
-      <div class="logo"><img class="blue" src="img/logo-white.png" alt="Logo Movile Messaging"></div>
-      <nav>
-        <ul class="primary-nav">
-          <li><a href="">Dashboard</a></li>
-          <li><a href="">Novo envio</a></li>
-          <li><a class="active" href="">Relatórios</a></li>
-          <li><a href="">Contatos</a></li>
-          <li><a href="">Configurações</a></li>
-          <li><a href="">Suporte</a></li>
+    <aside class="fixed fl h-100 bg-sidebar">
+      <div class="bb b--black-10">
+        <div class="pl4 mt4 pb3 w4"><img class="db w-90" src="img/logo-white.png" alt="Logo Movile Messaging"></div>
+      </div>
+      <nav class="pl4 mt4">
+        <ul class="list pl0 mt3">
+          <li class="mt3"><a class="white dim f6" href="">Dashboard</a></li>
+          <li class="mt3"><a class="white dim f6" href="novo-envio.html">Novo envio</a></li>
+          <li class="mt3"><a class="white dim f6 bb bw1" href="">Relatórios</a></li>
+          <li class="mt3"><a class="white dim f6" href="">Contatos</a></li>
+          <li class="mt3"><a class="white dim f6" href="">Configurações</a></li>
+          <li class="mt3"><a class="white dim f6" href="">Suporte</a></li>
         </ul>
       </nav>
     </aside>
-    <section class="upper-bar">
-      <h1>Relatórios</h1>
+    <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bb b--black-10">
+      <h1 class="f2 fl black">Relatórios</h1>
+      <div class="fr lh-copy relative">
+        <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray">Notificações</a>
+          <div class="absolute top--1 right--1">
+            <div class="relative"><span class="notification-badge">275</span></div>
+          </div>
+          <!-- NOTIFICATIONS-->
+          <div class="dropdown notifications">
+            <!-- NOTIF HEADER-->
+            <div class="fl w-100 pa3 bb lighter-gray">
+              <button class="mark-all-as-read ttu fr lh-copy pv0 pr0 tracked b f8 main-gray bn bg-white has-icon has-icon-left icon-check--gray outline-0">marcar todas como lidas</button>
+            </div>
+            <!-- NOTIFS BODY-->
+            <div class="fl w-100">
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb lighter-gray pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 can-be-read">está sendo gerado</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read black">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><button class="accent bn bg-white fr f8 b ttu tracked">download</button></div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb lighter-gray pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 green bg-lighter-green can-be-read">está pronto</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read black">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span>
+                  <button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+                </div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb lighter-gray pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 red bg-lighter-red can-be-read">não foi possível gerar</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read black">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><a class="accent bn bg-white fr f8 b ttu tracked" href="notifs.html">ver detalhes</a></div>
+              </div>
+            </div>
+            <!-- NOTIF FOOTER-->
+            <div class="fl w-100 pa3"><a class="ttu fl lh-copy pv0 tracked b f8 accent bn bg-white has-icon has-icon-right icon-arrow-right--blue" href="notifs.html">ver todas as notificações</a></div>
+          </div>
+        </div>
+        <h3 class="f5 b fl has-icon has-icon-right icon-dropdown">NomeDoUsuário</h3>
+      </div>
     </section>
-    <section class="main-content">
+    <!-- MAIN CONTENT-->
+    <section class="main-content ph3 pt3 pb5 fr">
+      <!-- FILTERS-->
       <div class="actions-container">
-        <div class="bg-lightest-gray theblack filter__container">
-          <div class="flex justify-between items-center">
-            <h3 class="theblack f4">Filtros</h3>
+        <div class="fl w-100 bg-lighter-accent pa3">
+          <div class="fl w-100">
+            <h3 class="fl black f3 lh-solid">Filtros</h3>
             <!-- Calendar-->
-            <input class="calendar-picker" id="datepicker" name="e1">
-            <!-- /Calendar-->
+            <input class="fr calendar-picker" id="datepicker" name="e1">
           </div>
-          <div class="flex justify-between mt3">
-            <div class="w-100 mr3">
-              <div class="filters__item--user-or-la">
-                <label class="main-label">Tipo de relatório</label>
-                <div class="input caret-down"><span>Envios Detalhados</span></div>
-                <div class="dropdown dropdown--user-or-la">
-                  <label class="main-label">Tipo de relatório</label>
-                  <input type="search" autofocus="">
-                  <ul>
-                    <li class="search__subheading"><span>Buscas recentes</span></li>
-                    <li><span>Bruno Farias</span></li>
+          <!-- FILTERS ROW-->
+          <div class="fl w-100 mt4">
+            <div class="nl3 nr3">
+              <!-- FILTER ITEM-->
+              <div class="relative w-third fl ph3">
+                <label class="black-50 f6">Tipo de relatório</label>
+                <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Envios consolidados</span></div>
+                <div class="dropdown content-box">
+                  <label class="black-50 f6">Tipo de relatório</label>
+                  <ul class="pt0 pb1 pl3">
+                    <li><span>Envios consolidades</span></li>
+                    <li><span>Envios detalhados</span></li>
                   </ul>
                 </div>
               </div>
-            </div>
-            <div class="w-100 mr3">
-              <!-- USUARIO OU LA-->
-              <div class="filters__item--user-or-la">
-                <label class="main-label">Subconta</label>
-                <div class="input caret-down"><span>Todas as subcontas</span></div>
-                <div class="dropdown dropdown--user-or-la">
-                  <label class="main-label">Subconta</label>
-                  <input type="search" autofocus="">
-                  <ul>
-                    <li class="search__subheading"><span>Buscas recentes</span></li>
+              <!-- FILTER ITEM-->
+              <div class="relative w-third fl ph3">
+                <label class="black-50 f6">Subconta</label>
+                <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Envios consolidados</span></div>
+                <div class="dropdown content-box">
+                  <label class="black-50 f6">Subconta</label>
+                  <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus=""><span class="main-gray db f6 pl3 pv3">Buscas recentes</span>
+                  <ul class="pt0 pb1 pl3">
                     <li><span>Bruno Farias</span></li>
+                    <li><span>Nayara Rodrigues</span></li>
+                    <li><span>Neto Andrade</span></li>
+                    <li><span>Hudson Souza</span></li>
+                    <li><span>Edson Koji</span></li>
+                    <li><span>Henrique Perticarati</span></li>
+                    <li><span>Juliana Gaspari</span></li>
                   </ul>
                 </div>
               </div>
-            </div>
-            <div class="w-100">
-              <div class="filters__item--user-or-la">
-                <label class="main-label">Usuários</label>
-                <div class="input caret-down"><span>Todos os usuários</span></div>
-                <div class="dropdown dropdown--user-or-la">
-                  <label class="main-label">Usuários</label>
-                  <input type="search" autofocus="">
-                  <ul>
-                    <li class="search__subheading"><span>Buscas recentes</span></li>
+              <!-- FILTER ITEM-->
+              <div class="relative w-third fl ph3">
+                <label class="black-50 f6">Usuários</label>
+                <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Envios consolidados</span></div>
+                <div class="dropdown content-box">
+                  <label class="black-50 f6">Usuários</label>
+                  <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus=""><span class="main-gray db f6 pl3 pv3">Buscas recentes</span>
+                  <ul class="pt0 pb1 pl3">
                     <li><span>Bruno Farias</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex justify-between mt3">
-            <div class="w-100 mr3">
-              <div class="filters__item--user-or-la">
-                <label class="main-label">Campanha, Lote ou Número</label>
-                <div class="input caret-down"><span>Carnaval 2014</span></div>
-                <div class="dropdown dropdown--user-or-la">
-                  <label class="main-label">Campanha, Lote ou Número</label>
-                  <input type="search" autofocus="">
-                  <ul>
-                    <li class="search__subheading"><span>Buscas recentes</span></li>
-                    <li><span>Bruno Farias</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="w-100 mr3">
-              <!-- USUARIO OU LA-->
-              <div class="filters__item--user-or-la">
-                <label class="main-label">Operadoras</label>
-                <div class="input caret-down"><span>Todas as operadoras</span></div>
-                <div class="dropdown dropdown--user-or-la">
-                  <label class="main-label">Operadoras</label>
-                  <input type="search" autofocus="">
-                  <ul>
-                    <li class="search__subheading"><span>Buscas recentes</span></li>
-                    <li><span>Bruno Farias</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="w-100">
-              <div class="filters__item--user-or-la">
-                <label class="main-label">Status das mensagens</label>
-                <div class="input caret-down"><span>Todos os status</span></div>
-                <div class="dropdown dropdown--user-or-la">
-                  <label class="main-label">Status das mensagens</label>
-                  <input type="search" autofocus="">
-                  <ul>
-                    <li class="search__subheading"><span>Buscas recentes</span></li>
-                    <li><span>Bruno Farias</span></li>
+                    <li><span>Nayara Rodrigues</span></li>
+                    <li><span>Neto Andrade</span></li>
+                    <li><span>Hudson Souza</span></li>
+                    <li><span>Edson Koji</span></li>
+                    <li><span>Henrique Perticarati</span></li>
+                    <li><span>Juliana Gaspari</span></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="flex justify-end mt3"><a class="cta cta-accent"><span class="has-icon-left icon-check--white">aplicar</span></a></div>
+          <!-- FILTERS ROW-->
+          <div class="fl w-100 mt4">
+            <div class="nl3 nr3">
+              <!-- FILTER ITEM-->
+              <div class="relative w-third fl ph3">
+                <label class="black-50 f6">Campanha, Lote ou Celular</label>
+                <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Envios consolidados</span></div>
+                <div class="dropdown content-box">
+                  <label class="black-50 f6">Campanha, Lote ou Celular</label>
+                  <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus=""><span class="main-gray db f6 pl3 pv3">Buscas recentes</span>
+                  <ul class="pt0 pb1 pl3">
+                    <li><span>Bruno Farias</span></li>
+                    <li><span>Nayara Rodrigues</span></li>
+                    <li><span>Neto Andrade</span></li>
+                    <li><span>Hudson Souza</span></li>
+                    <li><span>Edson Koji</span></li>
+                    <li><span>Henrique Perticarati</span></li>
+                    <li><span>Juliana Gaspari</span></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- FILTER ITEM-->
+              <div class="relative w-third fl ph3">
+                <label class="black-50 f6">Operadoras</label>
+                <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Envios consolidados</span></div>
+                <div class="dropdown content-box">
+                  <label class="black-50 f6">Operadoras</label>
+                  <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus=""><span class="main-gray db f6 pl3 pv3">Buscas recentes</span>
+                  <ul class="pt0 pb1 pl3">
+                    <li><span>Bruno Farias</span></li>
+                    <li><span>Nayara Rodrigues</span></li>
+                    <li><span>Neto Andrade</span></li>
+                    <li><span>Hudson Souza</span></li>
+                    <li><span>Edson Koji</span></li>
+                    <li><span>Henrique Perticarati</span></li>
+                    <li><span>Juliana Gaspari</span></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- FILTER ITEM-->
+              <div class="relative w-third fl ph3">
+                <label class="black-50 f6">Status das mensagens</label>
+                <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Envios consolidados</span></div>
+                <div class="dropdown content-box">
+                  <label class="black-50 f6">Status das mensagens</label>
+                  <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus=""><span class="main-gray db f6 pl3 pv3">Buscas recentes</span>
+                  <ul class="pt0 pb1 pl3">
+                    <li><span>Bruno Farias</span></li>
+                    <li><span>Nayara Rodrigues</span></li>
+                    <li><span>Neto Andrade</span></li>
+                    <li><span>Hudson Souza</span></li>
+                    <li><span>Edson Koji</span></li>
+                    <li><span>Henrique Perticarati</span></li>
+                    <li><span>Juliana Gaspari</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div><a class="dib fr mt4 mb3 cta cta-accent"><span class="has-icon-left icon-check--white">aplicar</span></a>
         </div>
       </div>
-      <div class="mt4">
-        <h3 class="theblack f4 mt1">Resultados</h3>
-      </div>
-      <div class="flex justify-between items-center mt3 mb3 item-start">
-        <div class="flex flex-column items-left"><span class="f7 blue-gray">Campanha</span>
-          <h3 class="blue-gray f5 mt1">Carnaval 2014, por mês</h3>
+      <!-- RESULTS-->
+      <div class="fl w-100 ph3 pt4">
+        <h3 class="theblack f4 fl w-100">Resultados</h3>
+        <div class="mt4 relative fl w-100">
+          <div class="fl"><span class="black f6">Campanha</span>
+            <h3 class="blue-gray f4 mt2">Carnaval 2014, por mês</h3>
+          </div><a class="cta pointer download download-button fr"><span class="has-icon-right icon-dropdown__blue">download</span></a>
         </div>
-      </div>
-      <!-- busca e download-->
-      <div class="flex justify-between items-end mt3 mb3 item-start mt4 relative">
-        <div class="flex flex-column w-50">
-          <label class="f6 theblack">Buscar por destinatário</label>
-          <input class="pv2 bg-search relative cursor-text" type="text">
-        </div><a class="cta pointer download download-button"><span class="has-icon-right icon-dropdown__blue">download</span></a>
-        <div class="flex flex-column download-items absolute top-0 right-0 theblack ph3 pt1 pb3 bg-white z-3"><a class="b f6 mt2 theblack accent-hover" href="javascript:">Gerar relatórios</a><a class="b f6 mt2 theblack accent-hover" href="javascript:">Gerar tabela</a><a class="b f6 mt2 theblack accent-hover" href="javascript:">Gerar gráfico</a></div>
       </div>
       <!-- tabela com resultados-->
-      <div class="flex relative">
+      <div class="fl w-100 relative ph3">
         <div class="w-90 overflow-x-scroll">
-          <table class="mt4 mb4 tl v-top" cellspacing="0" cellpadding="0">
+          <table class="w-100 mt4 mb4 tl v-top" cellspacing="0" cellpadding="0">
             <thead class="v-top">
-              <tr class="ttu f7 theblack b tl tracked">
-                <th class="nowrap table-status"><span class="bb b--black-20 pv2 pr3 db">Status</span></th>
-                <th class="nowrap w-4 table-phone"><span class="bb b--black-20 pv2 pr3 db">Phone</span></th>
-                <th class="nowrap table-la"><span class="bb b--black-20 pv2 pr3 db">LA</span></th>
-                <th class="nowrap table-carrier"><span class="bb b--black-20 pv2 pr3 db">Carrier</span></th>
-                <th class="nowrap table-campaign"><span class="bb b--black-20 pv2 pr3 db">Campaign</span></th>
-                <th class="nowrap table-creation-date"><span class="bb b--black-20 pv2 pr3 db">Creation Date</span></th>
-                <th class="nowrap table-date"><span class="bb b--black-20 pv2 pr3 db">Date</span></th>
-                <th class="nowrap table-customer"><span class="bb b--black-20 pv2 pr3 db">Customer</span></th>
-                <th class="nowrap table-sub-account"><span class="bb b--black-20 pv2 pr3 db">Sub-account</span></th>
-                <th class="nowrap table-user"><span class="bb b--black-20 pv2 pr3 db">User</span></th>
-                <th class="nowrap table-text"><span class="bb b--black-20 pv2 pr3 db">Text</span></th>
+              <tr class="ttu f8 theblack b tl tracked">
+                <th class="bb nowrap table-status"><span class="pv2 pr3 db">Status</span></th>
+                <th class="bb nowrap w-4 table-phone"><span class="pv2 pr3 db">Phone</span></th>
+                <th class="bb nowrap table-la"><span class="pv2 pr3 db">LA</span></th>
+                <th class="bb nowrap table-carrier"><span class="pv2 pr3 db">Carrier</span></th>
+                <th class="bb nowrap table-campaign"><span class="pv2 pr3 db">Campaign</span></th>
+                <th class="bb nowrap table-creation-date"><span class="pv2 pr3 db">Creation Date</span></th>
+                <th class="bb nowrap table-date"><span class="pv2 pr3 db">Date</span></th>
+                <th class="bb nowrap table-customer"><span class="pv2 pr3 db">Customer</span></th>
+                <th class="bb nowrap table-sub-account"><span class="pv2 pr3 db">Sub-account</span></th>
+                <th class="bb nowrap table-user"><span class="pv2 pr3 db">User</span></th>
+                <th class="bb nowrap table-text"><span class="pv2 pr3 db">Text</span></th>
               </tr>
             </thead>
             <tbody class="v-top">
               <tr class="bb relative f6">
-                <td class="nowrap table-status"><span class="db bb b--black-20 pv4 pr3 green">Sent</span></td>
-                <td class="nowrap table-phone"><span class="db bb b--black-20 pv4 pr3">+55 (99) 99999-9999</span></td>
-                <td class="nowrap table-la"><span class="db bb b--black-20 pv4 pr3">27171</span></td>
-                <td class="nowrap table-carrier"><span class="db bb b--black-20 pv4 pr3">Vivo</span></td>
-                <td class="nowrap table-campaign"><span class="db bb b--black-20 pv4 pr3">Compras de Natal 2014</span></td>
-                <td class="nowrap table-creation-date"><span class="db bb b--black-20 pv4 pr3">24/01/2017 10:28</span></td>
-                <td class="nowrap table-date"><span class="db bb b--black-20 pv4 pr3">24/01/2017 10:28</span></td>
-                <td class="nowrap table-customer"><span class="db bb b--black-20 pv4 pr3">Bradesco</span></td>
-                <td class="nowrap table-sub-account"><span class="db bb b--black-20 pv4 pr3">Bradesco - BDT</span></td>
-                <td class="nowrap table-user"><span class="db bb b--black-20 pv4 pr3">Marketing</span></td>
-                <td class="nowrap table-text relative"><span class="db bb b--black-20 pv4 pr3 mw5 truncated truncate nowrap accent-hover pointer">O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.</span></td>
+                <td class="nowrap f6 bb b--black-20 table-status"><span class="db pv4 pr3 green">Sent</span></td>
+                <td class="nowrap f6 bb b--black-20 table-phone"><span class="db pv4 pr3">+55 (99) 99999-9999</span></td>
+                <td class="nowrap f6 bb b--black-20 table-la"><span class="db pv4 pr3">27171</span></td>
+                <td class="nowrap f6 bb b--black-20 table-carrier"><span class="db pv4 pr3">Vivo</span></td>
+                <td class="nowrap f6 bb b--black-20 table-campaign"><span class="db pv4 pr3">Compras de Natal 2014</span></td>
+                <td class="nowrap f6 bb b--black-20 table-creation-date"><span class="db pv4 pr3">24/01/2017 10:28</span></td>
+                <td class="nowrap f6 bb b--black-20 table-date"><span class="db pv4 pr3">24/01/2017 10:28</span></td>
+                <td class="nowrap f6 bb b--black-20 table-customer"><span class="db pv4 pr3">Bradesco</span></td>
+                <td class="nowrap f6 bb b--black-20 table-sub-account"><span class="db pv4 pr3">Bradesco - BDT</span></td>
+                <td class="nowrap f6 bb b--black-20 table-user"><span class="db pv4 pr3">Marketing</span></td>
+                <td class="nowrap f6 bb b--black-20 table-text relative"><span class="db pv4 pr3 mw5 truncated truncate nowrap accent-hover pointer">O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.</span></td>
               </tr>
               <tr class="bb relative f6">
-                <td class="nowrap table-status"><span class="db bb b--black-20 pv4 pr3 green">Sent</span></td>
-                <td class="nowrap table-phone"><span class="db bb b--black-20 pv4 pr3">+55 (99) 99999-9999</span></td>
-                <td class="nowrap table-la"><span class="db bb b--black-20 pv4 pr3">27171</span></td>
-                <td class="nowrap table-carrier"><span class="db bb b--black-20 pv4 pr3">Vivo</span></td>
-                <td class="nowrap table-campaign"><span class="db bb b--black-20 pv4 pr3">Compras de Natal 2014</span></td>
-                <td class="nowrap table-creation-date"><span class="db bb b--black-20 pv4 pr3">24/01/2017 10:28</span></td>
-                <td class="nowrap table-date"><span class="db bb b--black-20 pv4 pr3">24/01/2017 10:28</span></td>
-                <td class="nowrap table-customer"><span class="db bb b--black-20 pv4 pr3">Bradesco</span></td>
-                <td class="nowrap table-sub-account"><span class="db bb b--black-20 pv4 pr3">Bradesco - BDT</span></td>
-                <td class="nowrap table-user"><span class="db bb b--black-20 pv4 pr3">Marketing</span></td>
-                <td class="nowrap table-text relative"><span class="db bb b--black-20 pv4 pr3 mw5 truncated truncate nowrap accent-hover pointer">O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.</span></td>
+                <td class="nowrap f6 bb b--black-20 table-status"><span class="db pv4 pr3 green">Sent</span></td>
+                <td class="nowrap f6 bb b--black-20 table-phone"><span class="db pv4 pr3">+55 (99) 99999-9999</span></td>
+                <td class="nowrap f6 bb b--black-20 table-la"><span class="db pv4 pr3">27171</span></td>
+                <td class="nowrap f6 bb b--black-20 table-carrier"><span class="db pv4 pr3">Vivo</span></td>
+                <td class="nowrap f6 bb b--black-20 table-campaign"><span class="db pv4 pr3">Compras de Natal 2014</span></td>
+                <td class="nowrap f6 bb b--black-20 table-creation-date"><span class="db pv4 pr3">24/01/2017 10:28</span></td>
+                <td class="nowrap f6 bb b--black-20 table-date"><span class="db pv4 pr3">24/01/2017 10:28</span></td>
+                <td class="nowrap f6 bb b--black-20 table-customer"><span class="db pv4 pr3">Bradesco</span></td>
+                <td class="nowrap f6 bb b--black-20 table-sub-account"><span class="db pv4 pr3">Bradesco - BDT</span></td>
+                <td class="nowrap f6 bb b--black-20 table-user"><span class="db pv4 pr3">Marketing</span></td>
+                <td class="nowrap f6 bb b--black-20 table-text relative"><span class="db pv4 pr3 mw5 truncated truncate nowrap accent-hover pointer">O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.</span></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <table class="w-10 h-100 mt4 mb4 tl v-top absolute top-0 right-0 bg-white" cellspacing="0" cellpadding="0">
+        <table class="w-10 h-100 mt4 mb4 tl v-top absolute top-0 right-1 bg-white" cellspacing="0" cellpadding="0">
           <thead class="v-top">
-            <tr class="pv3 b--black bb ttu f7 theblack b tl tracked">
-              <th class="bb b--black-20 pv2 ph2 table-detalhes"><a class="accent" href="javascript:">Detalhes</a></th>
+            <tr class="pv3 b--black bb ttu f8 theblack b tl tracked">
+              <th class="bb pv2 pl3 table-detalhes"><a class="black" href="javascript:">Detalhes</a></th>
             </tr>
           </thead>
           <tbody class="v-top">
             <tr class="bb relative f6">
-              <td class="bb b--black-20 pv4 ph2 table-detalhes left-shadow"><a class="accent has-icon-left icon-user" href="javascript:">Contato</a></td>
+              <td class="bb b--black-20 pv4 ph3 table-detalhes left-shadow"><a class="accent f8 ttu tracked b" href="javascript:"><span class="has-icon has-icon-left icon-user">Contato</span></a></td>
             </tr>
             <tr class="bb relative f6">
-              <td class="bb b--black-20 pv4 ph2 table-detalhes left-shadow"><a class="accent has-icon-left icon-user" href="javascript:">Contato</a></td>
+              <td class="bb b--black-20 pv4 ph3 table-detalhes left-shadow"><a class="accent f8 ttu tracked b" href="javascript:"><span class="has-icon has-icon-left icon-user">Contato</span></a></td>
             </tr>
           </tbody>
         </table>

@@ -1,9 +1,5 @@
 $(document).ready(function() {
 
-	// DOWNLOAD BUTTON
-	$(".download-button").bind('click', function() {
-		$(this).parent().find(".download-items").fadeIn(200);
-	});
 
 	// INLINE DROPDOWNs
 	// gives a min-width for every inline dropdown based on the longest content inside
@@ -19,7 +15,7 @@ $(document).ready(function() {
 
 	// when clicked on the dropdown word, it opens the full box
 	$(".view-box-close").bind('click', function() {
-		$(this).next(".view-box-open").fadeIn(200);
+		$(this).next(".view-box-open").fadeIn(15);
 	});
 
 	// when an option is selected on the inline dropdown, the full box fades and the option becomes blue
@@ -49,7 +45,7 @@ $(document).ready(function() {
 		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 		$('.upper-bar-menu').removeClass('upper-bar-menu--active');
 		$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
-		$(this).next('.dropdown').find('input[type="search"]').focus();
+		$(this).siblings('.dropdown').find("input[type='search']").focus();
 	});
 
 		// Closes the dropdown by clicking out of it

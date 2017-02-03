@@ -122,6 +122,9 @@ input {
 			border-bottom: 10px solid #84ADFF
 		}
 	}
+	span + ul li:first-child {
+		padding-top: 0;
+	}
 	& *::-webkit-scrollbar {
 		-webkit-appearance: none;
 		width: 3px;
@@ -144,9 +147,6 @@ input {
 		line-height: 1.375rem; //22px
 		font-weight: $black;
 		color: $main-gray;
-		&:first-child {
-			padding-top: 0;
-		}
 		span {
 			display: inline-block;
 			min-width: 48px;
@@ -237,6 +237,7 @@ input {
 
 .checkbox,
 .radio {
+	position: relative;
 	input {
 		display: none;
 		visibility: hidden;
@@ -272,7 +273,7 @@ input {
 			content: "";
 			position: absolute;
 			opacity: 0;
-			left: -0.8rem;
+			left: -0.8125rem; //13px
 			@include vertical-center;
 			height: 0.75rem; 
 			width: 0.75rem;
@@ -395,3 +396,14 @@ input {
 	height: 216px;
 	overflow-y: auto;
 }
+
+// .dropdown-item-box {
+// 	.checkbox,
+// 	.radio {
+// 		label {
+// 			&:before {
+// 				left: 0;
+// 			}
+// 		}
+// 	}
+// }
