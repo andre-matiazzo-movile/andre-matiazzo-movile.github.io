@@ -46,3 +46,11 @@ $ice-white: #F3F9FF;
 $alert: rgba(255,0,80,0.5);
 $success: #00E676;
 .bg-success {background-color: $success};
+
+.transition {
+	@include transition (0.4s);
+}
+
+.transition-slow {
+	@include transition (1s);
+}

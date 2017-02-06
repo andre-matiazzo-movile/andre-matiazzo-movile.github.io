@@ -74,6 +74,12 @@
 			color: $ice-white;
 			background: $accent;
 			border-radius: 3px;
+			max-height: 340px;
+			overflow-y: auto;
+			::-webkit-scrollbar {
+				-webkit-appearance: none;
+				width: 3px;
+			}
 		}
 	}
 
