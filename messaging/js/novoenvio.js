@@ -53,7 +53,7 @@ $('.input-envio').on('click', function () {
 		})
 
 	//Get text from the selection within dropdowns and put it on the respective input
-	$('.dropdown li').not('.dropdown li.search__subheading, .outro-genero').on('click', function() {
+	$('.dropdown li').not('.dropdown li.search__subheading, .outro-generom, .name-selected').on('click', function() {
 		// var textFromDropdown = $(this).find('span').text();
 		// $('.contatos').append("<div class='dib cb file-name bg-medium-accent pa2 mr2 mb2 mt2'><a class='has-icon-left icon-close-blue remove-item mb4'></a><span class='f7 accent b'>"+$(this).find('span').text()+"</span>");
 		$('.contatos').append("<li class='bg-medium-accent f7 b accent fl lh-title pa2 mr2 mb2'><span class='has-icon has-icon-left icon-close-blue remove-item'>"+$(this).find('span').text()+"</span></li>");
