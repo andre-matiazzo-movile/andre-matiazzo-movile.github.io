@@ -24,12 +24,12 @@ function textLengthforAll(initial_id){
         var text_max = parseInt($('#mensagem-texto').attr('data-length'));
         var text_length = $('#mensagem-texto').val().length;
         var text_remaining = text_max - text_length;
-        if (text_remaining <= 0) {
+        if (text_remaining < 0) {
             amount_msg = Math.ceil(text_length / text_max);
         	$('.' + initial_id).css("color","rgba(255,0,80,0.5)");
         	$('.' + initial_id).html('Limite atingido: serão cobradas '+amount_msg+' mensagens');
             $(this).css("border-color","rgba(255,0,80,0.5)");
-        } else if (text_remaining == 1){
+        } else if (text_remaining <= 1){
         	$('.' + initial_id).css("color","#a2b7c1");
         	$(this).css("border-color","#a2b7c1");
         	$('.' + initial_id).html(text_remaining + ' caracter restante');

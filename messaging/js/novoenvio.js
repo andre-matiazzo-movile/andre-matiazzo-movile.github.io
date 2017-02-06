@@ -10,10 +10,11 @@ $(document).ready(function() {
 		$(".file-name").css("display","block");
 		$(".file-name span").text($("input[type='file']").val().replace(/^.*\\/, ""));
 		$(".icon-upload").text($(".icon-upload").attr("data-after-chosen")).removeClass("icon-upload").addClass("icon-refresh--gray");
-		$(".search-input").css({
-			'opacity' : '0.3',
-			'pointer-events' : 'none'
-		});
+		// $(".search-input").css({
+		// 	'opacity' : '0.3',
+		// 	'pointer-events' : 'none'
+		// });
+		deactiveOption(".search-input");
 	})
 
 	$(".file-name a").bind('click', function(){
@@ -21,59 +22,73 @@ $(document).ready(function() {
 		$(".file-name").hide();
 		$(".how-to").show();
 		$(".icon-refresh--gray").text($(".icon-refresh--gray").attr("data-before-chosen")).removeClass("icon-refresh--gray").addClass("icon-upload");
-		$(".search-input").css({
-			'opacity' : '1',
-			'pointer-events' : 'auto'
-		});
+		activeOption(".search-input");
 	})
 	
 // Closes a dropdown that is already opened if you click on another one
 
-$('.input-envio').on('click', function () {
-	$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
-	$('.upper-bar-menu').removeClass('upper-bar-menu--active');
-	$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
-	$(this).siblings('.dropdown').find("input[type='search']").focus();
-});	
+	$('.input-envio').on('click', function () {
+		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
+		$('.upper-bar-menu').removeClass('upper-bar-menu--active');
+		$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
+		$(this).siblings('.dropdown').find("input[type='search']").focus();
+	});	
 
-		// Closes the dropdown by clicking out of it
-		$(document).on('click', function(toggleDropdown) {
-			// If the click on the document is not a .dropdown, an .input or .upper-bar-menu--active, closes all dropdowns
-			if (!$(toggleDropdown.target).closest('.dropdown, .input, .input-envio,  .upper-bar-menu--active').length) {
-				$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
-				$('.upper-bar-menu').removeClass('upper-bar-menu--active');
-			}
-		});
-
-		//Closes opened menu dropdowns if you click on its trigger again
-		$('.upper-bar-menu').on('click', function () {
+	// Closes the dropdown by clicking out of it
+	$(document).on('click', function(toggleDropdown) {
+		// If the click on the document is not a .dropdown, an .input or .upper-bar-menu--active, closes all dropdowns
+		if (!$(toggleDropdown.target).closest('.dropdown, .input, .input-envio,  .upper-bar-menu--active').length) {
 			$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
-			$(this).toggleClass('upper-bar-menu--active');
-			$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
-		})
+			$('.upper-bar-menu').removeClass('upper-bar-menu--active');
+		}
+	});
+
+	//Closes opened menu dropdowns if you click on its trigger again
+	$('.upper-bar-menu').on('click', function () {
+		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
+		$(this).toggleClass('upper-bar-menu--active');
+		$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
+	});
 
 	//Get text from the selection within dropdowns and put it on the respective input
-	$('.dropdown li').not('.dropdown li.search__subheading, .outro-generom, .name-selected').on('click', function() {
-		// var textFromDropdown = $(this).find('span').text();
-		// $('.contatos').append("<div class='dib cb file-name bg-medium-accent pa2 mr2 mb2 mt2'><a class='has-icon-left icon-close-blue remove-item mb4'></a><span class='f7 accent b'>"+$(this).find('span').text()+"</span>");
-		$('.contatos').append("<li class='bg-medium-accent f7 b accent fl lh-title pa2 mr2 mb2'><span class='has-icon has-icon-left icon-close-blue remove-item'>"+$(this).find('span').text()+"</span></li>");
-		console.log("oie");
-		if ( ($(".remove-item").length) > 0) {
-			$("div.choose-file").css({
-				'opacity' : '0.3',
-				'pointer-events' : 'none'
-			});
+	$('.dropdown li').on('click', function() {
+		if ($(this).hasClass("name-selected")) {
+			$(this).removeClass("name-selected has-icon-left icon-check accent");
+			$(".contatos").find( $('span:contains('+$(this).text()+')') ).parent().remove();
+			if ( ($(".remove-item").length) == 0) {
+				$('.clear-all').fadeOut();
+				activeOption("div.choose-file");
+			}
+		}
+		else {
+			$('.contatos').append("<li class='bg-medium-accent f7 b accent fl lh-title pa2 mr2 mb2'><span class='has-icon has-icon-left icon-close-blue remove-item'>"+$(this).find('span').text()+"</span></li>");
+			if ( ($(".remove-item").length) > 0) {
+				deactiveOption("div.choose-file");
+			}
+			$(this).addClass("name-selected has-icon-left icon-check accent");
+			$('.clear-all').fadeIn();
 		}
 	});
 
 	$('.contatos').on('click', '.remove-item', function() {
-		$(this).parent().fadeOut().remove();
+		$(".dropdown li").find( $('span:contains('+$(this).text()+')') ).parent().removeClass("name-selected has-icon-left icon-check accent");
+		$(this).parent().remove();
 		if ( ($(".remove-item").length) == 0) {
-			$("div.choose-file").css({
-				'opacity' : '1',
-				'pointer-events' : 'auto'
-			});
+			activeOption("div.choose-file");
+			$('.clear-all').fadeOut();
 		}
+		
+	});
+
+	$('.clear-all').on('click', function(){
+		$('.clear-all').fadeOut(400);
+		$('.contatos').slideUp(400);
+		setTimeout(function(){
+			$('.remove-item').parent().remove();
+			$('.contatos').show();
+		}, 400);
+		$('.name-selected').removeClass("name-selected has-icon-left icon-check accent");
+		activeOption("div.choose-file");
 	});
 
 	$(document).on('scroll', function(){
@@ -89,15 +104,21 @@ $('.input-envio').on('click', function () {
 		}
 	});
 
-	// $(document).on('scroll', function(){
-	//    if($(window).scrollTop() + $(window).height() == $(document).height()) {
-	//    	bottomPreviewPosition();
-	//    } else {
-	//    	// getPreviewPosition()
-	//    }
-	// });
-
 });
+
+function deactiveOption(el) {
+	$(el).css({
+		'opacity' : '0.3',
+		'pointer-events' : 'none'
+	});
+}
+
+function activeOption(el) {
+	$(el).css({
+		'opacity' : '1',
+		'pointer-events' : 'auto'
+	});
+}
 
 function getPreviewPosition() {
 	var left = $(".messages").offset().left;
