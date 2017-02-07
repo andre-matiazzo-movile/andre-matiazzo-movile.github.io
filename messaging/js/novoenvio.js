@@ -52,16 +52,21 @@ $(document).ready(function() {
 
 	//Get text from the selection within dropdowns and put it on the respective input
 	$('.dropdown li').on('click', function() {
+		var data_id = $(this).find("span").attr("data-id");
+		var data_origin = $(this).parents(".gruposecontatos").attr("data-origin");
+		// console.log(data_origin);
 		if ($(this).hasClass("name-selected")) {
 			$(this).removeClass("name-selected has-icon-left icon-check accent");
-			$(".contatos").find( $('span:contains('+$(this).text()+')') ).parent().remove();
+			$("span[data-id='"+data_id+"'][data-origin='"+data_origin+"']").parent().remove();
+			// $(".contatos").find("[data-id='"+data_id+"']" && "[data-origin='"+data_origin+"']").parent().remove();
 			if ( ($(".remove-item").length) == 0) {
 				$('.clear-all').fadeOut();
 				activeOption("div.choose-file");
 			}
 		}
 		else {
-			$('.contatos').append("<li class='bg-medium-accent f7 b accent fl lh-title pa2 mr2 mb2'><span class='has-icon has-icon-left icon-close-blue remove-item'>"+$(this).find('span').text()+"</span></li>");
+			$('.contatos').show();
+			$('.contatos').append("<li class='bg-medium-accent f7 b accent fl lh-title pa2 mr2 mb2'><span data-id="+data_id+" data-origin="+data_origin+" class='has-icon has-icon-left icon-close-blue remove-item'>"+$(this).find('span').text()+"</span></li>");
 			if ( ($(".remove-item").length) > 0) {
 				deactiveOption("div.choose-file");
 			}
@@ -71,7 +76,9 @@ $(document).ready(function() {
 	});
 
 	$('.contatos').on('click', '.remove-item', function() {
-		$(".dropdown li").find( $('span:contains('+$(this).text()+')') ).parent().removeClass("name-selected has-icon-left icon-check accent");
+		var data_id = $(this).attr("data-id");
+		var data_origin = $(this).attr("data-origin");
+		$(".dropdown ."+data_origin).find("span[data-id='"+data_id+"']").parent().removeClass("name-selected has-icon-left icon-check accent");
 		$(this).parent().remove();
 		if ( ($(".remove-item").length) == 0) {
 			activeOption("div.choose-file");
@@ -85,7 +92,6 @@ $(document).ready(function() {
 		$('.contatos').slideUp(400);
 		setTimeout(function(){
 			$('.remove-item').parent().remove();
-			$('.contatos').show();
 		}, 400);
 		$('.name-selected').removeClass("name-selected has-icon-left icon-check accent");
 		activeOption("div.choose-file");
@@ -106,18 +112,24 @@ $(document).ready(function() {
 
 });
 
+// FUNCTIONS
+
 function deactiveOption(el) {
-	$(el).css({
+	$(el+" > div").css({
 		'opacity' : '0.3',
 		'pointer-events' : 'none'
 	});
+	$(".how-to").slideUp();
+	$(el+" .warning").fadeIn();
 }
 
 function activeOption(el) {
-	$(el).css({
+	$(el+" > div").css({
 		'opacity' : '1',
 		'pointer-events' : 'auto'
 	});
+	$(".how-to").slideDown();
+	$(el+" .warning").fadeOut();
 }
 
 function getPreviewPosition() {
@@ -154,6 +166,43 @@ function bottomPreviewPosition() {
 		'position' : 'fixed',
 		'top' : translate,
 	});
+}
+
+function insertAtCaret(areaId, text) {
+	var txtarea = document.getElementById(areaId);
+	if (!txtarea) { return; }
+
+	var scrollPos = txtarea.scrollTop;
+	var strPos = 0;
+	var br = ((txtarea.selectionStart || txtarea.selectionStart == '0') ?
+		"ff" : (document.selection ? "ie" : false ) );
+	if (br == "ie") {
+		txtarea.focus();
+		var range = document.selection.createRange();
+		range.moveStart ('character', -txtarea.value.length);
+		strPos = range.text.length;
+	} else if (br == "ff") {
+		strPos = txtarea.selectionStart;
+	}
+
+	var front = (txtarea.value).substring(0, strPos);
+	var back = (txtarea.value).substring(strPos, txtarea.value.length);
+	txtarea.value = front + text + back;
+	strPos = strPos + text.length;
+	if (br == "ie") {
+		txtarea.focus();
+		var ieRange = document.selection.createRange();
+		ieRange.moveStart ('character', -txtarea.value.length);
+		ieRange.moveStart ('character', strPos);
+		ieRange.moveEnd ('character', 0);
+		ieRange.select();
+	} else if (br == "ff") {
+		txtarea.selectionStart = strPos;
+		txtarea.selectionEnd = strPos;
+		txtarea.focus();
+	}
+
+	txtarea.scrollTop = scrollPos;
 }
 
 // DONE:

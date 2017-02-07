@@ -71,13 +71,10 @@ html(lang='pt-br')
 					.fl.w-100.mt4.cl
 						// FIRST HALF OF THE GRID
 						.fl.w-50.pr5.search-input.transition
-							div.fl.w-100.relative
+							.fl.w-100.relative
 								label.f6.black.lh-copy Busque por cadastrados ou digite novos números
 								.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input-envio.lh-title
 									p.dib
-								p.main-gray.tr.lh-copy.mt1 Separe novos números por vírgulas
-								p.dn.f7.ttu.tracked.b.accent.pointer.clear-all.mb3 Limpar todos
-								ul.list.pl0.mt3.contatos
 								.dropdown.dropdown--multiple-lists.content-box.nl3.nr3
 									label.black-50.f6.lh-copy.black Busque por cadastrados ou digite novos números
 									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search')
@@ -86,38 +83,21 @@ html(lang='pt-br')
 									div.fl.w-50.mt3.pb3
 										span.main-gray.db.f6 Grupos
 									div.fl.w-100.multiple-lists__container.theblack
-										div.fl.w-50
+										div.fl.w-50.gruposecontatos.contatos-lista(data-origin='contatos-lista')
 											ul.pt0.pb1.pl0
 												li
-													span.b Bruno Farias
+													span.b(data-id='1') Bruno Farias
 												li
-													span.b Nayara Rodrigues
-												li
-													span.b Neto Andrade
-												li
-													span Hudson Souza
-												li
-													span Edson Koji
-												li
-													span Henrique Perticarati
-												li
-													span Juliana Gaspari
-										div.fl.w-50
+													span.b(data-id='2') Nayara Rodrigues
+										div.fl.w-50.gruposecontatos.grupos-lista(data-origin='grupos-lista')
 											ul.pt0.pb1.pl0
 												li
-													span.b Bruno Farias
+													span.b(data-id='1') Maiores de 30 anos
 												li
-													span.b Nayara Rodrigues
-												li
-													span.b Neto Andrade
-												li
-													span Hudson Souza
-												li
-													span Edson Koji
-												li
-													span Henrique Perticarati
-												li
-													span Juliana Gaspari
+													span.b(data-id='2') Mulheres casadas
+							p.warning.dn.main-gray.lh-copy.mt1 Ao importar de um arquivo, você não pode inserir contatos manualmente
+							a(href='javascript:').dn.fl.f7.ttu.tracked.b.accent.pointer.clear-all.mb3.mt3 Limpar todos
+							ul.fl.cb.list.pl0.contatos
 						// SECOND HALF OF THE GRID
 						.fl.w-50.pl5.choose-file.transition
 							div.fl
@@ -127,11 +107,13 @@ html(lang='pt-br')
 									input.dn(type='reset', id='reset-file')
 								label.b.mt2.fl.cl.cta.cta-secondary.dib.w-auto.tr.main-gray(for="import-file")
 									span.has-icon.has-icon-left.icon-upload(data-before-chosen="Escolher arquivo", data-after-chosen='Mudar arquivo') Escolher arquivo
-								.fr.tr.cl.how-to.mt1
+								.fr.tr.cl.how-to.mt1.measure-narrow
 									a.f7.ttu.tracked.b.accent(href="javascript:") veja como fazer
+									
 								.fl.cb.dn.file-name.bg-medium-accent.pa2.mr2.mb2.mt2
 									a.has-icon-left.icon-close-blue
 									span.f7.accent.b
+							p.measure-narrow.warning.dn.tl.cb.main-gray.lh-copy.mt1 Ao inserir contatos manualmente, você não pode selecionar um arquivo
 			// MESSAGE
 			div.fl.w-100.bb.b--black-20
 				div.fl.w-100.pt4.pb5.mw8
@@ -140,18 +122,19 @@ html(lang='pt-br')
 						// FIRST HALF OF THE GRID
 						.fl.w-50.pr5
 							p.main-gray.lh-copy Use campos personalizados para enviar mensagens personalizadas aos seus contatos (eles vieram do arquivo importado por você):
+							p.main-gray.lh-copy Obs: Caracteres especiais e acentos diminuem seu limite de caracteres por mensagem.
 							.mt3
 								ul.list.pl0
-									li.bg-medium-accent.f7.b.accent.fl.lh-title.pa2.mr2.mb2
-										span.has-icon.has-icon-left.icon-plus--blue Primeiro nome
-									li.bg-medium-accent.f7.b.accent.fl.lh-title.pa2.mr2.mb2
-										span.has-icon.has-icon-left.icon-plus--blue Sobrenome
-									li.bg-medium-accent.f7.b.accent.fl.lh-title.pa2.mr2.mb2
-										span.has-icon.has-icon-left.icon-plus--blue Mensagem
-									li.bg-medium-accent.f7.b.accent.fl.lh-title.pa2.mr2.mb2
-										span.has-icon.has-icon-left.icon-plus--blue CPF
-									li.bg-medium-accent.f7.b.accent.fl.lh-title.pa2.mr2.mb2
-										span.has-icon.has-icon-left.icon-plus--blue Apelido								
+									li.bg-medium-accent.f7.b.fl.lh-title.pa2.mr2.mb2
+										a(href="javascript:" onclick="insertAtCaret('mensagem-texto', '[Primeiro-nome]')").accent.has-icon.has-icon-left.icon-plus--blue Primeiro nome
+									li.bg-medium-accent.f7.b.fl.lh-title.pa2.mr2.mb2
+										a(href="javascript:" onclick="insertAtCaret('mensagem-texto', '[Sobrenome]]')").accent.has-icon.has-icon-left.icon-plus--blue Sobrenome
+									li.bg-medium-accent.f7.b.fl.lh-title.pa2.mr2.mb2
+										a(href="javascript:" onclick="insertAtCaret('mensagem-texto', 'Mensagem')").accent.has-icon.has-icon-left.icon-plus--blue Mensagem
+									li.bg-medium-accent.f7.b.fl.lh-title.pa2.mr2.mb2
+										a(href="javascript:" onclick="insertAtCaret('mensagem-texto', '000.000.000-00')").accent.has-icon.has-icon-left.icon-plus--blue CPF
+									li.bg-medium-accent.f7.b.fl.lh-title.pa2.mr2.mb2
+										a(href="javascript:" onclick="insertAtCaret('mensagem-texto', '[Apelido]')").accent.has-icon.has-icon-left.icon-plus--blue Apelido								
 							textarea#mensagem-texto.characterCount.f7.mt4.b--black-20.h5(data-length="160")
 							p.mensagem-texto.main-gray.tr.lh-copy.mt1
 								div.checkbox.relative.mt4.nl3
@@ -161,7 +144,7 @@ html(lang='pt-br')
 						// SECOND HALF OF THE GRID		
 						.fl.w-50.pl5.messages.transition-slow.absolute.right-0
 							label.fl.f6.black.lh-copy Prévia do envio
-							div.phone-preview.relative.h-auto.fl.cl.mt2.bg-white
+							div.phone-preview.relative.h-auto.br4.fl.cl.mt2.bg-white
 								img.db.w-100(src="../img/phone.png")
 								div.speak-bubble-container
 									.speak-bubble
