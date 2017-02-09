@@ -17,10 +17,32 @@
   <link href="../css/new2016.css" rel="stylesheet">
   <link href="../css/form.css" rel="stylesheet">
 
+
   <!-- for the Contact Form -->
   <script src="../js/jquery-3.0.0.min.js"></script>
   <script src="../js/jquery.validate.min.js" ></script>
 
+  <!-- Wallop slider -->
+  <link rel="stylesheet" href="../css/wallop.css">
+  <link rel="stylesheet" href="../css/wallop-slide.css">
+  <script src="../js/Wallop.min.js"></script>
+  <script>
+    var wallopEl = document.querySelector('.Wallop');
+    var slider = new Wallop(wallopEl);
+    autoplay(3000);
+    function autoplay(interval) {
+      var lastTime = 0;  
+      function frame(timestamp) {
+        var update = timestamp - lastTime >= interval;
+        if (update) {
+          wallop.next();
+          lastTime = timestamp;
+        }
+        requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    };
+  </script>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -237,7 +259,7 @@
           
         <a href="#more-anchor" class="cta">quero saber mais</a>
       </section>
-      <section id="depoimentos">
+<!--       <section id="depoimentos">
         <div class="container">
           <h3 class="section-title">Casos de sucesso</h3>
           <div class="row">
@@ -257,7 +279,38 @@
             </div>
           </div>
         </div>
+      </section> -->
+
+      <section id="depoimentos">
+
+        <div class="container Wallop">
+          <h3 class="section-title">Casos de sucesso</h3>
+
+          <button class="Wallop-buttonPrevious">Previous</button>
+          <button class="Wallop-buttonNext">Next</button>
+
+          <div class="row Wallop-list">
+
+            <div class="col-lg-12 Wallop-item Wallop-item--current">
+              <div class="depoimento">
+                <img src="../img/clientes/webmotors.png" alt="Webmotors">
+                <p>“Depois da implantação do projeto, identificamos que o tempo de resposta das propostas otimizaram em 40%.”</p>
+                <a href="https://www.youtube.com/watch?v=85wc89Kys5U" class="veja-mais" type="button" data-toggle="modal" data-target="#video01">veja mais no vídeo</a>
+              </div>
+
+            <div class="col-lg-12 Wallop-item">
+              <div class="depoimento">
+                <img src="../img/clientes/getninjas.jpg" alt="GetNinjas">
+                <p>“O Movile Messaging começou a enviar SMS e os profissionais passaram a fechar mais negócios.”</p>
+                <a href="https://www.youtube.com/watch?v=aqHW2OFQXwM" class="veja-mais" type="button" data-toggle="modal" data-target="#video02">veja mais no vídeo</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </section>
+
       <section id="final-cta">
         <div class="container">
           <div class="section-title">Esteja mais próximo de seus clientes e aumente o seu faturamento</div>
