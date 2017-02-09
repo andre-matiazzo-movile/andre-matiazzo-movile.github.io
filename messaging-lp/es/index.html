@@ -50,7 +50,7 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="javascript:;"><img src="../img/logo.png" alt="Movile Messaging Logo"></a>
-            <div class="help-tel">Dudas? <br class="medium-show"><a href="tel:4135448686">+55 41 3544-8686</a></div>
+            <!-- <div class="help-tel">Dudas? <br class="medium-show"><a href="tel:4135448686">+55 41 3544-8686</a></div> -->
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -88,75 +88,152 @@
           <img src="../img/clientes/voxage.png" alt="VoxAge">
           <img src="../img/clientes/sebrae.jpg" alt="Sebrae">
           <img src="../img/clientes/eaichef.png" alt="Eaíchef">
+          <img src="../img/clientes/banamex.jpg" alt="Banamex">
         </div>
       </section>
       <span id="features-anchor"></span>
       <section id="features">
         <div class="container">
-          <h3 class="section-title">La solución completa para su empresa</h3>
+          <img src="../img/icon-sms.png" alt="Ícone de balão">
+          <h3 class="section-title">La solución completa para su empresa </h3>
+          <p>Comunicarse con los clientes y empleados en cualquier lugar y en cualquier momento</p>
           <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="features__item">
-                <img src="../img/icon-sms.png" alt="Ícone de balão">
-                <h4>SMS</h4>
-                <p>Comuníquese con sus clientes y empleados en cualquier momento y en cualquier lugar</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="features__item">
-                <img src="../img/icon-voz.png" alt="Megafone">
-                <h4>Voice message</h4>
-                <p>Optimice su comunicación con llamadas automáticas para sus clientes.</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-md-offset-0 col-sm-offset-3">
-              <div class="features__item">
-                <img src="../img/icon-email.png" alt="Ícone de balão">
-                <h4>E-mail</h4>
-                <p>El originsal, pero mejor.</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6 col-lg-offset-2 col-md-offset-2">
-              <div class="features__item">
-                <img src="../img/icon-bot.png" alt="Ícone de robô">
-                <h4>Chat Bots</h4>
-                <p>Lo más innovador en atención al cliente.</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="features__item">
-                <img src="../img/icon-message.png" alt="Ícone de smartphone">
-                <h4>Smart message</h4>
-                <p>Interactúe con sus clientes en un solo click</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="#more-anchor" class="cta">Quiero saber más</a>
-      </section>
-      <section id="depoimentos">
-        <div class="container">
-          <h3 class="section-title">Casos de Éxitos</h3>
-          <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="depoimento">
-                <img src="../img/clientes/webmotors.png" alt="Webmotors">
-                <p>“Después de la ejecución del proyecto, se identificó que el tiempo de respuesta de las propuestas se optimizó en un 40%.
-"</p>
-                <a href="https://www.youtube.com/watch?v=85wc89Kys5U" class="veja-mais" type="button" data-toggle="modal" data-target="#video01">Vea más en el video</a>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="depoimento">
-                <img src="../img/clientes/getninjas.jpg" alt="GetNinjas">
-                <p>“Movile Messaging empezó enviar SMS y los profesionales comenzaron a cerrar más negócios.”</p>
-                <a href="https://www.youtube.com/watch?v=aqHW2OFQXwM" class="veja-mais" type="button" data-toggle="modal" data-target="#video02">Vea más en el video</a>
-              </div>
-            </div>
-          </div>
-        </div>
+
+              <div class="col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-12 sms-corporativo">
+
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="features__item">
+                    <a href="javascript:" class="cta sms-active btn-corporativo">SMS Corporativo</a>
+                    <a href="javascript:" class="cta sms-deactive btn-marketing">SMS Marketing</a>
+                    <script>
+                      $(".btn-marketing").click(function(){
+                        $(".sms-corporativo").fadeOut(500);
+                        setTimeout(function(){
+                          $(".sms-marketing").fadeIn(500);
+                        }, 500);
+                      });
+                    </script>
+                    <br><br>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-6">
+                    <div class="phone__underline">
+                      <div class="phone__container">
+                        <div class="phone__screen">
+                          <p class="balao__texto">
+                            <span id="changeText">Hola, su pedido 012345 está en el camino de la dirección de entrega camino</span>
+                          </p>
+                          <script type="text/javascript">
+                            var text = ["Estimado cliente, envia el retraso en su cuenta, activa el débito automático ahora", "Estimado cliente, gracias por este año y buenas fiestas!", "Hola, su pedido 012345 está en el camino de la dirección de entrega camino"];
+                            var counter = 0;
+                            var elem = document.getElementById("changeText");
+                            setInterval(change, 4000);
+                            function change() {
+                              $(".balao__texto").css("transform","scale(0)");
+                              $(".balao__texto").css("opacity","0");
+                              setTimeout(function(){
+                                $(".balao__texto").css("transform","scale(1)");
+                                $(".balao__texto").css("opacity","1");
+                                elem.innerHTML = text[counter];
+                                counter++;
+                                if(counter >= text.length) { counter = 0; }
+                              }, 500);
+                            }
+                          </script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-6 text-left">
+                    <div class="lista">
+                      <ul>
+                        <li>Felicitaciones</li>
+                        <li>Gracias</li>
+                        <li>Invitaciones</li>
+                        <li>Advertencias</li>
+                        <li>Recordatorios</li>
+                        <li>Facturación</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div> <!-- col-md-6 -->
+
+              <div class="col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-12 sms-marketing">
+
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="features__item">
+                      <a href="javascript:" class="cta sms-deactive btn-corporativo">SMS Corporativo</a>
+                      <a href="javascript:" class="cta sms-active btn-marketing">SMS Marketing</a>
+                      <script>
+                      $(".btn-corporativo").click(function(){
+                        $(".sms-marketing").fadeOut(500);
+                        setTimeout(function(){
+                          $(".sms-corporativo").fadeIn(500);
+                        }, 500);
+                      });
+                    </script>
+                      <br><br>
+                      <!-- <p>Alertas de Promoções e Descontos, Envio de Cupons de Descontos, Divulgação de eventos e lançamentos, Divulgação de produtos e Ações de relacionamento com clientes.</p> -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-6">
+                    <div class="phone__underline">
+                      <div class="phone__container">
+                        <div class="phone__screen">
+                          <p class="balao__texto">
+                            <span id="changeText2">Ganhe 30% de desconto neste Natal. Aproveite!</span>
+                          </p>
+                          <script type="text/javascript">
+                            var text2 = ["Contratar nuestros planes con 50% de descuento!", "Venga a ver la nueva colección de verano y aprovecha nuestras ofertas especiales!", "Más del 30% de descuento en esta Navidad. Disfruta!"];
+                            var counter2 = 0;
+                            var elem2 = document.getElementById("changeText2");
+                            setInterval(change2, 4000);
+                            function change2() {
+                              $(".balao__texto").css("transform","scale(0)");
+                              $(".balao__texto").css("opacity","0");
+                              setTimeout(function(){
+                                $(".balao__texto").css("transform","scale(1)");
+                                $(".balao__texto").css("opacity","1");
+                                elem2.innerHTML = text2[counter];
+                                counter2++;
+                                if(counter2 >= text2.length) { counter2 = 0; }
+                              }, 500);
+                            }
+                          </script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-6 text-left">
+                    <div class="lista">
+                      <ul>
+                        <li>Alertas de descuentos y promociones</li>
+                        <li>Envío de cupones de descuentos</li>
+                        <li>Divulgación de eventos y inauguraciones</li>
+                        <li>Divulgación de productos</li>
+                        <li>Acciones de relacionamiento con los clientes</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div> <!-- col-md-6 -->
+
+          </div> <!-- row -->
+
+        </div> <!-- container -->
+          
+        <a href="#more-anchor" class="cta">quiero saber más</a>
       </section>
       <section id="final-cta">
         <div class="container">
@@ -171,10 +248,11 @@
             <div class="col-lg-6 col-md-6 col-xs-12">
               <div class="contacto-form">
                 <h3 class="whois">Alguna duda?</h3>
-                <p>Consulte en nuestra página en <a href="dudas.html">dudas más frecuentes</a> po póngase en contacto:</p>
+                <!-- <p>Consulte en nuestra página en <a href="dudas.html">dudas más frecuentes</a> po póngase en contacto:</p> -->
+                <p>Entre en contacto:</p>
                 <form id="salesforce" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
                   <input type="hidden" name="oid" value="00Do0000000b0EK">
-                  <input type=hidden name="retURL" value="http://movilemessaging.com/success.html">
+                  <input type=hidden name="retURL" value="http://movilemessaging.com/es/success.html">
                   
                   <input type="hidden" name="lead_source" value="Google" />
                   <input type="hidden" name="00No0000008s9e6" value="selfservice" />
@@ -183,6 +261,16 @@
                   <label for="email">Correo Electrónico *</label>
                   <input  id="email" maxlength="80" name="email" size="20" type="text" required />
                   <label for="company">Empresa *</label><input  id="company" maxlength="40" name="company" size="20" type="text" required/>
+
+                  <label for="country">País *</label>
+                  <select  id="country" name="country">
+                    <option value=""></option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Mexico">Mexico</option>
+                  </select>
+
                   <label for="00No000000EL047">Documento</label>
                   <input  id="00No000000EL047" maxlength="20" name="00No000000EL047" size="20" type="text" />
                   <div class="phone_container">
@@ -250,7 +338,7 @@
                     </select>
                   </div>
 
-                  <label for="00No0000009N3V9">Descripción del proyecto</label>
+                  <label for="00No0000009N3V9">Descripción del proyecto *</label>
                   <textarea  id="00No0000009N3V9" name="00No0000009N3V9" rows="3" type="text" wrap="soft" required></textarea>
                   <input type="submit" name="submit" value="ENVIAR" class="cta cta--ui">
                 </form>
@@ -267,8 +355,8 @@
         </div>
       </section>
       <footer class="footer--alternate">
-        <div>Dudas? <a href="tel:4135448686">+55 41 3544-8686</a></div>
-        <div>© 2016 Movile Messaging</div>
+        <!-- <div>Dudas? <a href="tel:4135448686">+55 41 3544-8686</a></div> -->
+        <div>© 2017 Movile Messaging</div>
       </footer>
 
       <!-- Video 01 -->
@@ -311,70 +399,6 @@
           );
 
 
-        // validação do CNPJ
-        jQuery.validator.addMethod("cnpj", function(cnpj, element) {
-         
-          if (cnpj.length == 0) return true;
-
-           cnpj = jQuery.trim(cnpj);// retira espaços em branco
-           // DEIXA APENAS OS NÚMEROS
-           cnpj = cnpj.replace('/','');
-           cnpj = cnpj.replace('.','');
-           cnpj = cnpj.replace('.','');
-           cnpj = cnpj.replace('-','');
-           
-           var numeros, digitos, soma, i, resultado, pos, tamanho, digitos_iguais;
-           digitos_iguais = 1;
-           
-           if (cnpj.length < 14 && cnpj.length < 15){
-            return false;
-          }
-          for (i = 0; i < cnpj.length - 1; i++){
-            if (cnpj.charAt(i) != cnpj.charAt(i + 1)){
-             digitos_iguais = 0;
-             break;
-           }
-         }
-         
-         if (!digitos_iguais){
-          tamanho = cnpj.length - 2;
-          numeros = cnpj.substring(0,tamanho);
-          digitos = cnpj.substring(tamanho);
-          soma = 0;
-          pos = tamanho - 7;
-          
-          for (i = tamanho; i >= 1; i--){
-           soma += numeros.charAt(tamanho - i) * pos--;
-           if (pos < 2){
-            pos = 9;
-          }
-        }
-        resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-        if (resultado != digitos.charAt(0)){
-         return false;
-       }
-       tamanho = tamanho + 1;
-       numeros = cnpj.substring(0,tamanho);
-       soma = 0;
-       pos = tamanho - 7;
-       for (i = tamanho; i >= 1; i--){
-         soma += numeros.charAt(tamanho - i) * pos--;
-         if (pos < 2){
-          pos = 9;
-        }
-      }
-      resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-      if (resultado != digitos.charAt(1)){
-       return false;
-     }
-     return true;
-   }else{
-    return false;
-  }
-        }, "Informe um CNPJ válido."); // Mensagem padrão 
-
-
-
 
         $("#salesforce").validate({
           errorElement: 'p',
@@ -405,43 +429,41 @@
             '00No0000008s9bl': {
               required: true
             },
-            '00No000000EL047': {
-              cnpj: true
-            }
-
+            'country': {
+              required: true
+            },
           },
           submitHandler: function(form) {
             form.submit();
           },
           messages: {
             'first_name': {
-              required: "Por favor, informe seu nome.",
-              maxlength: "O nome deve ter no máximo 200 caracteres."
-            },
-            'last_name': {
-              required: "Por favor, informe o nome de sua empresa.",
-              maxlength: "O nome de sua empresa deve ter no máximo 200 caracteres."
+              required: "Por favor, informe su nombre.",
+              maxlength: "El nombre no debe superar los 200 caracteres."
             },
             'email': {
               required: "Por favor, informe o nome de sua empresa.",
-              maxlength: "O nome de sua empresa deve ter no máximo 200 caracteres."
+              email: "El email informado no es válido."
             },
             'company': {
-              required: "Por favor, informe o nome de sua empresa.",
-              maxlength: "O nome de sua empresa deve ter no máximo 200 caracteres."
+              required: "Por favor, informe el nombre de su empresa.",
+              maxlength: "El nombre de su empresa no debe superar los 200 caracteres."
             },
             'phone': {
-              required: "Por favor, informe o telefone de sua empresa.",
-              regex: "Por favor, informe somente números",
-              minlength: "Por favor, informe um telefone válido",
-              maxlength: "Por favor, informe um telefone válido"
+              required: "Por favor, informe un teléfone para contacto.",
+              regex: "Por favor, informe solo números",
+              minlength: "El teléfono informado no es válido.",
+              maxlength: "El teléfono informado no es válido."
             },
             '00No0000008s9bl': {
-              required: "Por favor, informe a quantidade de mensagens que deseja enviar."
+              required: "Por favor, informe la cantidad de mensajes que desea enviar."
             },
-            '00No000000EL047': {
-              documento: "Por favor, informe um CNPJ válido."
-            },            
+            '00No0000009N3V9': {
+              required: "Por favor, informe la descripción del proyecto."
+            },        
+            'country': {
+              required: "Por favor, informe  país."
+            },
           }
         });
       });
