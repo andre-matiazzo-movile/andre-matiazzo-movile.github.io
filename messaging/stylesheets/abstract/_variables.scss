@@ -48,7 +48,7 @@ $success: #00E676;
 .bg-success {background-color: $success};
 
 .transition {
-	@include transition (0.4s);
+	@include transition (0.2s);
 }
 
 .transition-slow {

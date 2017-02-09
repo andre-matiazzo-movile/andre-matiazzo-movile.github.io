@@ -32,8 +32,8 @@
           <li class="mt3"><a class="white dim f6" href="novo-envio.html">Novo envio</a></li>
           <li class="mt3"><a class="white dim f6" href="relatorios-consolidados.html">Relatórios</a></li>
           <li class="mt3"><a class="white dim f6" href="">Contatos</a></li>
-          <li class="mt3"><a class="white dim f6 bb bw1" href="">Permissões</a></li>
-          <li class="mt3"><a class="white dim f6" href="">Configurações</a></li>
+          <li class="mt3"><a class="white dim f6 bb bw1" href="permissoes.html">Permissões</a></li>
+          <li class="mt3"><a class="white dim f6" href="conta.html">Sua conta</a></li>
           <li class="mt3"><a class="white dim f6" href="">Suporte</a></li>
         </ul>
       </nav>
@@ -94,99 +94,299 @@
       </div>
     </section>
     <!-- MAIN CONTENT-->
-    <section class="main-content ph3 pt3 pb5 fr">
-      <!-- FILTERS-->
-      <div class="actions-container">
-        <div class="fl w-100 bg-lighter-accent pa3">
-          <div class="fl w-100">
-            <h3 class="fl theblack f3 lh-solid">Novas permissões</h3>
+    <section class="main-content ph4 pb5 fr">
+      <!-- NEW PERMISSIONS-->
+      <div class="fl w-100">
+        <form class="fl w-100 mt4">
+          <div class="fl">
+            <h3 class="theblack f3 lh-solid">Novas permissões</h3>
           </div>
-          <!-- NEW PERMISSIONS-->
+          <!-- ANALYSTS-->
           <div class="fl w-100 mt4">
-            <h4 class="f5 theblack">Co-gerente</h4>
-            <div class="nl3 nr3">
-              <div class="relative w-third fl ph3">
-                <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus="">
+            <h4 class="theblack f5 lh-title">Para analistas</h4>
+            <p class="mt2 main-gray lh-copy measure">Pessoas que fazem envios das mensagens e conseguem ver apenas informações de envios da sua área</p>
+            <!-- ROW-->
+            <div class="fl w-two-thirds cb mt4 nl3 nr3">
+              <div class="fl w-50 ph3 relative">
+                <input class="input--inline" type="email">
+                <label>Email</label>
+                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+              </div>
+              <div class="fl w-50 ph3 relative">
+                <input class="input--inline" type="text">
+                <label>Nome</label>
+                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
               </div>
             </div>
-          </div><a class="dib fr mt4 mb3 cta cta-accent"><span class="has-icon-left icon-check--white">aplicar</span></a>
-        </div>
+            <!-- ROW-->
+            <div class="fl w-two-thirds cb mt4 nl3 nr3">
+              <div class="fl w-50 ph3 relative">
+                <div class="input input--inline input--inline--dropdown has-icon has-icon-right icon-dropdown"><span>Área 51</span></div>
+                <label class="label--active">Área</label>
+                <div class="dropdown content-box">
+                  <ul class="pt0 pb1 pl0">
+                    <li><span>Área 51</span></li>
+                    <li><span>Nayara Rodrigues</span></li>
+                    <li><span>Neto Andrade</span></li>
+                    <li><span>Hudson Souza</span></li>
+                    <li><span>Edson Koji</span></li>
+                    <li><span>Henrique Perticarati</span></li>
+                    <li><span>Juliana Gaspari</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="fl w-50 ph3 relative">
+                <input class="input--inline" type="text">
+                <label>Nome</label>
+                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+              </div>
+            </div>
+            <!-- ROW-->
+            <div class="fl w-two-thirds cb mt4 nl3 nr3">
+              <div class="fl w-50 ph3 relative">
+                <input class="input--inline" type="email">
+                <label>Email</label>
+                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+              </div>
+              <div class="fl w-50 ph3 relative">
+                <input class="input--inline" type="text">
+                <label>Nome</label>
+                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+              </div>
+            </div>
+          </div>
+          <!-- MANAGERS-->
+          <div class="fl w-100 mt5">
+            <h4 class="theblack f5 lh-title">Para outros gerentes</h4>
+            <p class="mt2 main-gray lh-copy measure">Pessoas que terão acesso ao mesmo tipo de informação que você: convidar outros gerentes, convidar outros analistas e visualizar todas as informações da sua área</p>
+            <!-- ROW-->
+            <div class="fl w-two-thirds cb mt4 nl3 nr3">
+              <div class="fl w-50 ph3 relative">
+                <input class="input--inline" type="email">
+                <label>Email</label>
+                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+              </div>
+              <div class="fl w-50 ph3 relative">
+                <input class="input--inline" type="text">
+                <label>Nome</label>
+                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+              </div>
+            </div>
+          </div>
+          <!-- SEND INVITES-->
+          <div class="fl w-two-thirds nl3 nr3 ph3">
+            <button class="dib fr mt4 cta cta-accent"><span class="has-icon-right icon-continue">enviar convites</span></button>
+          </div>
+        </form>
       </div>
-      <!-- RESULTS-->
-      <div class="fl w-100 ph3 pt4">
-        <h3 class="theblack f4 fl w-100">Resultados</h3>
-        <div class="mt4 relative fl w-100">
-          <div class="fl"><span class="theblack f6">Campanha</span>
-            <h3 class="blue-gray f4 mt2">Carnaval 2014, por mês</h3>
-          </div><a class="cta pointer download download-button fr"><span class="has-icon-right icon-dropdown__blue">download</span></a>
-        </div>
-      </div>
-      <!-- tabela com resultados-->
-      <div class="fl w-100 relative ph3">
-        <div class="w-90 overflow-x-scroll">
-          <table class="w-100 mt4 mb4 tl v-top" cellspacing="0" cellpadding="0">
-            <thead class="v-top">
-              <tr class="ttu f8 theblack b tl tracked">
-                <th class="bb nowrap table-status"><span class="pv2 pr3 db">Status</span></th>
-                <th class="bb nowrap w-4 table-phone"><span class="pv2 pr3 db">Phone</span></th>
-                <th class="bb nowrap table-la"><span class="pv2 pr3 db">LA</span></th>
-                <th class="bb nowrap table-carrier"><span class="pv2 pr3 db">Carrier</span></th>
-                <th class="bb nowrap table-campaign"><span class="pv2 pr3 db">Campaign</span></th>
-                <th class="bb nowrap table-creation-date"><span class="pv2 pr3 db">Creation Date</span></th>
-                <th class="bb nowrap table-date"><span class="pv2 pr3 db">Date</span></th>
-                <th class="bb nowrap table-customer"><span class="pv2 pr3 db">Customer</span></th>
-                <th class="bb nowrap table-sub-account"><span class="pv2 pr3 db">Sub-account</span></th>
-                <th class="bb nowrap table-user"><span class="pv2 pr3 db">User</span></th>
-                <th class="bb nowrap table-text"><span class="pv2 pr3 db">Text</span></th>
-              </tr>
-            </thead>
-            <tbody class="v-top">
-              <tr class="bb relative f6">
-                <td class="nowrap f6 bb b--black-20 table-status"><span class="db pv4 pr3 green">Sent</span></td>
-                <td class="nowrap f6 bb b--black-20 table-phone"><span class="db pv4 pr3">+55 (99) 99999-9999</span></td>
-                <td class="nowrap f6 bb b--black-20 table-la"><span class="db pv4 pr3">27171</span></td>
-                <td class="nowrap f6 bb b--black-20 table-carrier"><span class="db pv4 pr3">Vivo</span></td>
-                <td class="nowrap f6 bb b--black-20 table-campaign"><span class="db pv4 pr3">Compras de Natal 2014</span></td>
-                <td class="nowrap f6 bb b--black-20 table-creation-date"><span class="db pv4 pr3">24/01/2017 10:28</span></td>
-                <td class="nowrap f6 bb b--black-20 table-date"><span class="db pv4 pr3">24/01/2017 10:28</span></td>
-                <td class="nowrap f6 bb b--black-20 table-customer"><span class="db pv4 pr3">Bradesco</span></td>
-                <td class="nowrap f6 bb b--black-20 table-sub-account"><span class="db pv4 pr3">Bradesco - BDT</span></td>
-                <td class="nowrap f6 bb b--black-20 table-user"><span class="db pv4 pr3">Marketing</span></td>
-                <td class="nowrap f6 bb b--black-20 table-text relative"><span class="db pv4 pr3 mw5 truncated truncate nowrap accent-hover pointer">O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.</span></td>
-              </tr>
-              <tr class="bb relative f6">
-                <td class="nowrap f6 bb b--black-20 table-status"><span class="db pv4 pr3 green">Sent</span></td>
-                <td class="nowrap f6 bb b--black-20 table-phone"><span class="db pv4 pr3">+55 (99) 99999-9999</span></td>
-                <td class="nowrap f6 bb b--black-20 table-la"><span class="db pv4 pr3">27171</span></td>
-                <td class="nowrap f6 bb b--black-20 table-carrier"><span class="db pv4 pr3">Vivo</span></td>
-                <td class="nowrap f6 bb b--black-20 table-campaign"><span class="db pv4 pr3">Compras de Natal 2014</span></td>
-                <td class="nowrap f6 bb b--black-20 table-creation-date"><span class="db pv4 pr3">24/01/2017 10:28</span></td>
-                <td class="nowrap f6 bb b--black-20 table-date"><span class="db pv4 pr3">24/01/2017 10:28</span></td>
-                <td class="nowrap f6 bb b--black-20 table-customer"><span class="db pv4 pr3">Bradesco</span></td>
-                <td class="nowrap f6 bb b--black-20 table-sub-account"><span class="db pv4 pr3">Bradesco - BDT</span></td>
-                <td class="nowrap f6 bb b--black-20 table-user"><span class="db pv4 pr3">Marketing</span></td>
-                <td class="nowrap f6 bb b--black-20 table-text relative"><span class="db pv4 pr3 mw5 truncated truncate nowrap accent-hover pointer">O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <table class="w-10 h-100 mt4 mb4 tl v-top absolute top-0 right-1 bg-white" cellspacing="0" cellpadding="0">
-          <thead class="v-top">
-            <tr class="pv3 b--black bb ttu f8 theblack b tl tracked">
-              <th class="bb pv2 pl3 table-detalhes"><a class="theblack" href="javascript:">Detalhes</a></th>
-            </tr>
-          </thead>
-          <tbody class="v-top">
-            <tr class="bb relative f6">
-              <td class="bb b--black-20 pv4 ph3 table-detalhes left-shadow"><a class="accent f8 ttu tracked b" href="javascript:"><span class="has-icon has-icon-left icon-user">Contato</span></a></td>
-            </tr>
-            <tr class="bb relative f6">
-              <td class="bb b--black-20 pv4 ph3 table-detalhes left-shadow"><a class="accent f8 ttu tracked b" href="javascript:"><span class="has-icon has-icon-left icon-user">Contato</span></a></td>
-            </tr>
-          </tbody>
-        </table>
+      <!-- SENT PERMISSIONS-->
+      <div class="fl w-100 mt6 sent-permissions">
+        <form class="fl w-100 pb4">
+          <div class="fl">
+            <h3 class="theblack f3 lh-solid">Permissões criadas</h3>
+          </div>
+          <!-- ANALYSTS-->
+          <div class="fl w-100 mt4">
+            <h4 class="theblack f5 lh-title">Para analistas</h4>
+            <p class="mt2 main-gray lh-copy measure">Pessoas que fazem envios das mensagens e conseguem ver apenas informações de envios da sua área</p>
+            <div class="fl w-100 mt3">
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs--infos transition">
+                <div class="fl w-two-thirds">
+                  <div class="fl w-50 ph0 relative inputs--cell">
+                    <p class="input--disabled">andre.matiazzo@movile.com</p>
+                    <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                    <label>Email</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <div class="fl w-50 ph0 relative inputs--cell">
+                    <p class="input--disabled">André Matiazzo</p>
+                    <input class="input--inline dn" type="text" value="André Matiazzo">
+                    <label>Nome</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr"><span class="bn bg-white f6 b black-20 dib mr3">Convite pendente</span>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib mr3 input--edit" type="button">editar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--send-again" type="button">reenviar</button>
+                  <button class="pa0 bn bg-white pointer main-gray ttu tracked f7 b mr3 input--cancel dn" type="button">cancelar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b input--confirm dn" type="button">salvar</button>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs--infos">
+                <div class="fl w-two-thirds">
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">andre.matiazzo@movile.com</p>
+                    <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                    <label>Email</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">André Matiazzo</p>
+                    <input class="input--inline dn" type="text" value="André Matiazzo">
+                    <label>Nome</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr"><span class="bn bg-white f6 b black-20 dib mr3">Convite pendente</span>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib mr3 input--edit" type="button">editar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--send-again" type="button">reenviar</button>
+                  <button class="pa0 bn bg-white pointer main-gray ttu tracked f7 b mr3 input--cancel dn" type="button">cancelar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b input--confirm dn" type="button">salvar</button>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs--infos">
+                <div class="fl w-two-thirds">
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">andre.matiazzo@movile.com</p>
+                    <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                    <label>Email</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">André Matiazzo</p>
+                    <input class="input--inline dn" type="text" value="André Matiazzo">
+                    <label>Nome</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr">
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--delete" type="button">remover</button>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs--infos">
+                <div class="fl w-two-thirds">
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">andre.matiazzo@movile.com</p>
+                    <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                    <label>Email</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">André Matiazzo</p>
+                    <input class="input--inline dn" type="text" value="André Matiazzo">
+                    <label>Nome</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr">
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--delete" type="button">remover</button>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs--infos">
+                <div class="fl w-two-thirds">
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">andre.matiazzo@movile.br</p>
+                    <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                    <label>Email</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">André Matiazzo</p>
+                    <input class="input--inline dn" type="text" value="André Matiazzo">
+                    <label>Nome</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr">
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--delete" type="button">remover</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MANAGERS-->
+          <div class="fl w-100 mt5">
+            <h4 class="theblack f5 lh-title">Para outros gerentes</h4>
+            <p class="mt2 main-gray lh-copy measure">Pessoas que terão acesso ao mesmo tipo de informação que você: convidar outros gerentes, convidar outros analistas e visualizar todas as informações da sua área</p>
+            <div class="fl w-100 mt3">
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs--infos">
+                <div class="fl w-two-thirds">
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">andre.matiazzo@movile.com</p>
+                    <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                    <label>Email</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">André Matiazzo</p>
+                    <input class="input--inline dn" type="text" value="André Matiazzo">
+                    <label>Nome</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr"><span class="bn bg-white f6 b black-20 dib mr3">Convite pendente</span>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib mr3 input--edit" type="button">editar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--send-again" type="button">reenviar</button>
+                  <button class="pa0 bn bg-white pointer main-gray ttu tracked f7 b mr3 input--cancel dn" type="button">cancelar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b input--confirm dn" type="button">salvar</button>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs--infos">
+                <div class="fl w-two-thirds">
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">andre.matiazzo@movile.com</p>
+                    <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                    <label>Email</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">André Matiazzo</p>
+                    <input class="input--inline dn" type="text" value="André Matiazzo">
+                    <label>Nome</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr"><span class="bn bg-white f6 b black-20 dib mr3">Convite pendente</span>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib mr3 input--edit" type="button">editar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--send-again" type="button">reenviar</button>
+                  <button class="pa0 bn bg-white pointer main-gray ttu tracked f7 b mr3 input--cancel dn" type="button">cancelar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b input--confirm dn" type="button">salvar</button>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs--infos">
+                <div class="fl w-two-thirds">
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">andre.matiazzo@movile.com</p>
+                    <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                    <label>Email</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <div class="fl w-50 ph0 relative">
+                    <p class="input--disabled">André Matiazzo</p>
+                    <input class="input--inline dn" type="text" value="André Matiazzo">
+                    <label>Nome</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr">
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--delete" type="button">remover</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
+    <!-- MODAL BOILERPLATE-->
+    <div class="dn modal bg-black-50 fixed vh-100 left-0 right-0 o-0 z-5">
+      <!-- ARE YOU SURE?-->
+      <div class="modal__body modal--delete bg-white w-auto mw6 center mt6 pt4 ph4 dn">
+        <div>
+          <h2 class="f4">Quer remover essa permissão?</h2>
+          <div class="mt4 pb4 tr">
+            <button class="pa0 bn bg-white pointer main-gray ttu tracked f7 b mr3 close-modal" type="button">cancelar</button>
+            <button class="pa0 bn bg-white pointer accent ttu tracked f7 b input--yes-delete" type="button">sim, remover</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <!-- jQuery-->
   <script src="js/jquery-3.1.0.min.js"></script>
@@ -214,44 +414,8 @@
   </script>
   <!-- Filters-->
   <script src="js/forms.js"></script>
-  <!-- For the calendar-->
-  <script src="calendar/jquery-ui/jquery-ui.min.js"></script>
-  <script src="calendar/moment.js"></script>
-  <script src="calendar/jquery.comiseo.daterangepicker.js"></script>
-  <script src="charts/custom-charts.js"></script>
-  <script>
-    $(function() {
-    $("#datepicker").daterangepicker({
-    presetRanges: [{
-    text: 'Últimos 7 dias',
-    dateStart: function() { return moment().add(-7, 'days') },
-    dateEnd: function() { return moment().add(0, 'days') }
-    }, {
-    text: 'Últimos 30 dias',
-    dateStart: function() { return moment().add(-30, 'days') },
-    dateEnd: function() { return moment().add(0, 'days') }
-    }, {
-    text: 'Últimos 90 dias',
-    dateStart: function() { return moment().add(-90, 'days') },
-    dateEnd: function() { return moment().add(0, 'days') }
-    }],
-    applyOnMenuSelect: false,
-    dateFormat: 'd M yy',
-    rangeSplitter: ' – ',
-    initialText: 'Escolha um período',
-    applyButtonText: 'confirmar',
-    clearButtonText: 'limpar',
-    cancelButtonText: 'cancelar',
-    verticalOffset: -50,
-    datepickerOptions: {
-    dayNamesMin: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
-    monthNames: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'  ],
-    monthNamesShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
-    numberOfMonths: 2,
-    minDate: null,
-    maxDate: 0
-    }
-    });
-    });
-  </script>
+  <!-- Notifications-->
+  <script src="js/notifs.js"></script>
+  <!-- Modal-->
+  <script src="js/modal.js"></script>
 </html>

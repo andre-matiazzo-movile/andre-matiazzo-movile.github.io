@@ -319,3 +319,17 @@
 		cursor: pointer;
 	}
 }
+
+.icon-edit--blue {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		right: 0;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/edit-icon-blue.png') no-repeat center center;
+		background-size: 12px;
+		cursor: pointer;
+	}
+}

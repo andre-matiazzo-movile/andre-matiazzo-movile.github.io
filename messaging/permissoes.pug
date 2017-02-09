@@ -38,9 +38,9 @@ html(lang='pt-br')
 					li.mt3
 						a.white.dim.f6(href='') Contatos
 					li.mt3
-						a.white.dim.f6.bb.bw1(href='') Permissões
+						a.white.dim.f6.bb.bw1(href='permissoes.html') Permissões
 					li.mt3
-						a.white.dim.f6(href='') Configurações
+						a.white.dim.f6(href='conta.html') Sua conta
 					li.mt3
 						a.white.dim.f6(href='') Suporte
 		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
@@ -113,120 +113,243 @@ html(lang='pt-br')
 								| ver todas as notificações
 				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
 		// MAIN CONTENT
-		section.main-content.ph3.pt3.pb5.fr
-			// FILTERS
-			.actions-container
-				.fl.w-100.bg-lighter-accent.pa3
-					.fl.w-100
-						h3.fl.theblack.f3.lh-solid Novas permissões
-					// NEW PERMISSIONS
-					.fl.w-100.mt4
-						h4.f5.theblack Co-gerente
-						.nl3.nr3
-							.relative.w-third.fl.ph3
-								input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
-					a.dib.fr.mt4.mb3.cta.cta-accent
-						span.has-icon-left.icon-check--white aplicar
-			// RESULTS
-			.fl.w-100.ph3.pt4
-				h3.theblack.f4.fl.w-100 Resultados
-				.mt4.relative.fl.w-100
+		section.main-content.ph4.pb5.fr
+			// NEW PERMISSIONS
+			div.fl.w-100
+				form.fl.w-100.mt4
 					div.fl
-						span.theblack.f6 Campanha
-						h3.blue-gray.f4.mt2 Carnaval 2014, por mês
-					a.cta.pointer.download.download-button.fr
-						span.has-icon-right.icon-dropdown__blue download
-
-			// tabela com resultados
-			.fl.w-100.relative.ph3
-				div.w-90.overflow-x-scroll
-					table.w-100.mt4.mb4.tl.v-top(cellspacing='0', cellpadding='0')
-						thead.v-top
-							tr.ttu.f8.theblack.b.tl.tracked
-								th.bb.nowrap.table-status
-									span.pv2.pr3.db Status
-								th.bb.nowrap.w-4.table-phone
-									span.pv2.pr3.db Phone
-								th.bb.nowrap.table-la
-									span.pv2.pr3.db LA
-								th.bb.nowrap.table-carrier
-									span.pv2.pr3.db Carrier
-								th.bb.nowrap.table-campaign
-									span.pv2.pr3.db Campaign
-								th.bb.nowrap.table-creation-date
-									span.pv2.pr3.db Creation Date
-								th.bb.nowrap.table-date
-									span.pv2.pr3.db Date
-								th.bb.nowrap.table-customer
-									span.pv2.pr3.db Customer
-								th.bb.nowrap.table-sub-account
-									span.pv2.pr3.db Sub-account
-								th.bb.nowrap.table-user
-									span.pv2.pr3.db User
-								th.bb.nowrap.table-text
-									span.pv2.pr3.db Text
-						tbody.v-top
-							tr.bb.relative.f6
-								td.nowrap.f6.bb.b--black-20.table-status
-									span.db.pv4.pr3.green Sent
-								td.nowrap.f6.bb.b--black-20.table-phone
-									span.db.pv4.pr3 +55 (99) 99999-9999
-								td.nowrap.f6.bb.b--black-20.table-la
-									span.db.pv4.pr3 27171
-								td.nowrap.f6.bb.b--black-20.table-carrier
-									span.db.pv4.pr3 Vivo
-								td.nowrap.f6.bb.b--black-20.table-campaign
-									span.db.pv4.pr3 Compras de Natal 2014
-								td.nowrap.f6.bb.b--black-20.table-creation-date
-									span.db.pv4.pr3 24/01/2017 10:28
-								td.nowrap.f6.bb.b--black-20.table-date
-									span.db.pv4.pr3 24/01/2017 10:28
-								td.nowrap.f6.bb.b--black-20.table-customer
-									span.db.pv4.pr3 Bradesco
-								td.nowrap.f6.bb.b--black-20.table-sub-account
-									span.db.pv4.pr3 Bradesco - BDT
-								td.nowrap.f6.bb.b--black-20.table-user
-									span.db.pv4.pr3 Marketing
-								td.nowrap.f6.bb.b--black-20.table-text.relative
-									span.db.pv4.pr3.mw5.truncated.truncate.nowrap.accent-hover.pointer O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.
-							tr.bb.relative.f6
-								td.nowrap.f6.bb.b--black-20.table-status
-									span.db.pv4.pr3.green Sent
-								td.nowrap.f6.bb.b--black-20.table-phone
-									span.db.pv4.pr3 +55 (99) 99999-9999
-								td.nowrap.f6.bb.b--black-20.table-la
-									span.db.pv4.pr3 27171
-								td.nowrap.f6.bb.b--black-20.table-carrier
-									span.db.pv4.pr3 Vivo
-								td.nowrap.f6.bb.b--black-20.table-campaign
-									span.db.pv4.pr3 Compras de Natal 2014
-								td.nowrap.f6.bb.b--black-20.table-creation-date
-									span.db.pv4.pr3 24/01/2017 10:28
-								td.nowrap.f6.bb.b--black-20.table-date
-									span.db.pv4.pr3 24/01/2017 10:28
-								td.nowrap.f6.bb.b--black-20.table-customer
-									span.db.pv4.pr3 Bradesco
-								td.nowrap.f6.bb.b--black-20.table-sub-account
-									span.db.pv4.pr3 Bradesco - BDT
-								td.nowrap.f6.bb.b--black-20.table-user
-									span.db.pv4.pr3 Marketing
-								td.nowrap.f6.bb.b--black-20.table-text.relative
-									span.db.pv4.pr3.mw5.truncated.truncate.nowrap.accent-hover.pointer O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.
-				table.w-10.h-100.mt4.mb4.tl.v-top.absolute.top-0.right-1.bg-white(cellspacing='0', cellpadding='0')
-					thead.v-top
-						tr.pv3.b--black.bb.ttu.f8.theblack.b.tl.tracked
-							th.bb.pv2.pl3.table-detalhes
-								a.theblack(href='javascript:') Detalhes
-					tbody.v-top
-						tr.bb.relative.f6
-							td.bb.b--black-20.pv4.ph3.table-detalhes.left-shadow
-								a.accent.f8.ttu.tracked.b(href='javascript:')
-									span.has-icon.has-icon-left.icon-user Contato
-						tr.bb.relative.f6
-							td.bb.b--black-20.pv4.ph3.table-detalhes.left-shadow
-								a.accent.f8.ttu.tracked.b(href='javascript:')
-									span.has-icon.has-icon-left.icon-user Contato
-					
+						h3.theblack.f3.lh-solid Novas permissões
+					// ANALYSTS
+					div.fl.w-100.mt4
+						h4.theblack.f5.lh-title Para analistas
+						p.mt2.main-gray.lh-copy.measure Pessoas que fazem envios das mensagens e conseguem ver apenas informações de envios da sua área
+						// ROW
+						div.fl.w-two-thirds.cb.mt4.nl3.nr3
+							.fl.w-50.ph3.relative
+								input.input--inline(type='email')
+								label Email
+								p.f7.mt2.tr.black-20.input__validation Validação
+							.fl.w-50.ph3.relative
+								input.input--inline(type='text')
+								label Nome
+								p.f7.mt2.tr.black-20.input__validation Validação
+						// ROW
+						div.fl.w-two-thirds.cb.mt4.nl3.nr3
+							.fl.w-50.ph3.relative
+								div.input.input--inline.input--inline--dropdown.has-icon.has-icon-right.icon-dropdown
+									span Área 51
+								label.label--active Área
+								.dropdown.content-box
+									ul.pt0.pb1.pl0
+										li
+											span Área 51
+										li
+											span Nayara Rodrigues
+										li
+											span Neto Andrade
+										li
+											span Hudson Souza
+										li
+											span Edson Koji
+										li
+											span Henrique Perticarati
+										li
+											span Juliana Gaspari
+							.fl.w-50.ph3.relative
+								input.input--inline(type='text')
+								label Nome
+								p.f7.mt2.tr.black-20.input__validation Validação
+						// ROW
+						div.fl.w-two-thirds.cb.mt4.nl3.nr3
+							.fl.w-50.ph3.relative
+								input.input--inline(type='email')
+								label Email
+								p.f7.mt2.tr.black-20.input__validation Validação
+							.fl.w-50.ph3.relative
+								input.input--inline(type='text')
+								label Nome
+								p.f7.mt2.tr.black-20.input__validation Validação
+						
+					// MANAGERS
+					div.fl.w-100.mt5
+						h4.theblack.f5.lh-title Para outros gerentes
+						p.mt2.main-gray.lh-copy.measure Pessoas que terão acesso ao mesmo tipo de informação que você: convidar outros gerentes, convidar outros analistas e visualizar todas as informações da sua área
+						// ROW
+						div.fl.w-two-thirds.cb.mt4.nl3.nr3
+							.fl.w-50.ph3.relative
+								input.input--inline(type='email')
+								label Email
+								p.f7.mt2.tr.black-20.input__validation Validação
+							.fl.w-50.ph3.relative
+								input.input--inline(type='text')
+								label Nome
+								p.f7.mt2.tr.black-20.input__validation Validação
+					// SEND INVITES
+					div.fl.w-two-thirds.nl3.nr3.ph3
+						button.dib.fr.mt4.cta.cta-accent
+							span.has-icon-right.icon-continue enviar convites
+			// SENT PERMISSIONS
+			div.fl.w-100.mt6.sent-permissions
+				form.fl.w-100.pb4
+					div.fl
+						h3.theblack.f3.lh-solid Permissões criadas
+					// ANALYSTS
+					div.fl.w-100.mt4
+						h4.theblack.f5.lh-title Para analistas
+						p.mt2.main-gray.lh-copy.measure Pessoas que fazem envios das mensagens e conseguem ver apenas informações de envios da sua área
+						div.fl.w-100.mt3
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs--infos.transition
+								.fl.w-two-thirds
+									.fl.w-50.ph0.relative.inputs--cell
+										p.input--disabled andre.matiazzo@movile.com
+										input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+										label Email
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+									.fl.w-50.ph0.relative.inputs--cell
+										p.input--disabled André Matiazzo
+										input.input--inline.dn(type='text' value='André Matiazzo')
+										label Nome
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									span.bn.bg-white.f6.b.black-20.dib.mr3 Convite pendente
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.mr3.input--edit(type='button') editar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--send-again(type='button') reenviar
+									button.pa0.bn.bg-white.pointer.main-gray.ttu.tracked.f7.b.mr3.input--cancel.dn(type='button') cancelar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.input--confirm.dn(type='button') salvar
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs--infos
+								.fl.w-two-thirds
+									.fl.w-50.ph0.relative
+										p.input--disabled andre.matiazzo@movile.com
+										input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+										label Email
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+									.fl.w-50.ph0.relative
+										p.input--disabled André Matiazzo
+										input.input--inline.dn(type='text' value='André Matiazzo')
+										label Nome
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									span.bn.bg-white.f6.b.black-20.dib.mr3 Convite pendente
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.mr3.input--edit(type='button') editar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--send-again(type='button') reenviar
+									button.pa0.bn.bg-white.pointer.main-gray.ttu.tracked.f7.b.mr3.input--cancel.dn(type='button') cancelar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.input--confirm.dn(type='button') salvar
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs--infos
+								.fl.w-two-thirds
+									.fl.w-50.ph0.relative
+										p.input--disabled andre.matiazzo@movile.com
+										input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+										label Email
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+									.fl.w-50.ph0.relative
+										p.input--disabled André Matiazzo
+										input.input--inline.dn(type='text' value='André Matiazzo')
+										label Nome
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--delete(type='button') remover
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs--infos
+								.fl.w-two-thirds
+									.fl.w-50.ph0.relative
+										p.input--disabled andre.matiazzo@movile.com
+										input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+										label Email
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+									.fl.w-50.ph0.relative
+										p.input--disabled André Matiazzo
+										input.input--inline.dn(type='text' value='André Matiazzo')
+										label Nome
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--delete(type='button') remover
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs--infos
+								.fl.w-two-thirds
+									.fl.w-50.ph0.relative
+										p.input--disabled andre.matiazzo@movile.br
+										input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+										label Email
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+									.fl.w-50.ph0.relative
+										p.input--disabled André Matiazzo
+										input.input--inline.dn(type='text' value='André Matiazzo')
+										label Nome
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--delete(type='button') remover
+					// MANAGERS
+					div.fl.w-100.mt5
+						h4.theblack.f5.lh-title Para outros gerentes
+						p.mt2.main-gray.lh-copy.measure Pessoas que terão acesso ao mesmo tipo de informação que você: convidar outros gerentes, convidar outros analistas e visualizar todas as informações da sua área
+						div.fl.w-100.mt3
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs--infos
+								.fl.w-two-thirds
+									.fl.w-50.ph0.relative
+										p.input--disabled andre.matiazzo@movile.com
+										input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+										label Email
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+									.fl.w-50.ph0.relative
+										p.input--disabled André Matiazzo
+										input.input--inline.dn(type='text' value='André Matiazzo')
+										label Nome
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									span.bn.bg-white.f6.b.black-20.dib.mr3 Convite pendente
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.mr3.input--edit(type='button') editar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--send-again(type='button') reenviar
+									button.pa0.bn.bg-white.pointer.main-gray.ttu.tracked.f7.b.mr3.input--cancel.dn(type='button') cancelar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.input--confirm.dn(type='button') salvar
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs--infos
+								.fl.w-two-thirds
+									.fl.w-50.ph0.relative
+										p.input--disabled andre.matiazzo@movile.com
+										input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+										label Email
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+									.fl.w-50.ph0.relative
+										p.input--disabled André Matiazzo
+										input.input--inline.dn(type='text' value='André Matiazzo')
+										label Nome
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									span.bn.bg-white.f6.b.black-20.dib.mr3 Convite pendente
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.mr3.input--edit(type='button') editar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--send-again(type='button') reenviar
+									button.pa0.bn.bg-white.pointer.main-gray.ttu.tracked.f7.b.mr3.input--cancel.dn(type='button') cancelar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.input--confirm.dn(type='button') salvar
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs--infos
+								.fl.w-two-thirds
+									.fl.w-50.ph0.relative
+										p.input--disabled andre.matiazzo@movile.com
+										input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+										label Email
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+									.fl.w-50.ph0.relative
+										p.input--disabled André Matiazzo
+										input.input--inline.dn(type='text' value='André Matiazzo')
+										label Nome
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--delete(type='button') remover
+		// MODAL BOILERPLATE
+		div.dn.modal.bg-black-50.fixed.vh-100.left-0.right-0.o-0.z-5
+			// ARE YOU SURE?
+			.modal__body.modal--delete.bg-white.w-auto.mw6.center.mt6.pt4.ph4.dn
+				//- button.close-modal.pa0.bn.bg-white.accent.ttu.tracked.b.f7.lh-copy.has-icon-left.icon-close-blue.db fechar
+				div
+					h2.f4 Quer remover essa permissão?
+					div.mt4.pb4.tr
+						button.pa0.bn.bg-white.pointer.main-gray.ttu.tracked.f7.b.mr3.close-modal(type='button') cancelar
+						button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.input--yes-delete(type='button') sim, remover
+						
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
 
@@ -252,42 +375,7 @@ html(lang='pt-br')
 
 	// Filters
 	script(src='js/forms.js')
-	// For the calendar
-	script(src='calendar/jquery-ui/jquery-ui.min.js')
-	script(src='calendar/moment.js')
-	script(src='calendar/jquery.comiseo.daterangepicker.js')
-	script(src='charts/custom-charts.js')
-	script.
-		$(function() {
-		$("#datepicker").daterangepicker({
-		presetRanges: [{
-		text: 'Últimos 7 dias',
-		dateStart: function() { return moment().add(-7, 'days') },
-		dateEnd: function() { return moment().add(0, 'days') }
-		}, {
-		text: 'Últimos 30 dias',
-		dateStart: function() { return moment().add(-30, 'days') },
-		dateEnd: function() { return moment().add(0, 'days') }
-		}, {
-		text: 'Últimos 90 dias',
-		dateStart: function() { return moment().add(-90, 'days') },
-		dateEnd: function() { return moment().add(0, 'days') }
-		}],
-		applyOnMenuSelect: false,
-		dateFormat: 'd M yy',
-		rangeSplitter: ' – ',
-		initialText: 'Escolha um período',
-		applyButtonText: 'confirmar',
-		clearButtonText: 'limpar',
-		cancelButtonText: 'cancelar',
-		verticalOffset: -50,
-		datepickerOptions: {
-		dayNamesMin: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
-		monthNames: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'  ],
-		monthNamesShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
-		numberOfMonths: 2,
-		minDate: null,
-		maxDate: 0
-		}
-		});
-		});
+	// Notifications
+	script(src='js/notifs.js')
+	// Modal
+	script(src='js/modal.js')

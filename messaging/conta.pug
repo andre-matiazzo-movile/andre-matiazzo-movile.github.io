@@ -1,0 +1,172 @@
+doctype html
+html(lang='pt-br')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Movile Messaging – Sua conta
+		meta(name='movile-messaging', content='Movile Messaging')
+		// For the calendar
+		link(href='calendar/jquery-ui/jquery-ui.min.css', rel='stylesheet')
+		link(href='calendar/jquery.comiseo.daterangepicker.css', rel='stylesheet')
+		// For the charts
+		link(href='charts/chartist.min.css', rel='stylesheet')
+		script(src='charts/chartist.min.js', charset='utf-8')
+		// Tachyons CSS
+		link(rel='stylesheet', href='stylesheets/tachyons.min.css')
+		// Main CSS
+		link(rel='stylesheet', href='stylesheets/main.css')
+		// Typekit
+		script(src='https://use.typekit.net/fja4naa.js')
+		script.
+			try{Typekit.load({ async: false });}catch(e){}
+		style.
+			.table-operadora, .table-subconta, .table-inicio{display:none;}
+	body
+		aside.fixed.fl.h-100.bg-sidebar
+			.bb.b--black-10
+				.pl4.mt4.pb3.w4
+					img.db.w-90(src='img/logo-white.png', alt='Logo Movile Messaging')
+			nav.pl4.mt4
+				ul.list.pl0.mt3
+					li.mt3
+						a.white.dim.f6(href='') Dashboard
+					li.mt3
+						a.white.dim.f6(href='novo-envio.html') Novo envio
+					li.mt3
+						a.white.dim.f6(href='relatorios-consolidados.html') Relatórios
+					li.mt3
+						a.white.dim.f6(href='') Contatos
+					li.mt3
+						a.white.dim.f6(href='permissoes.html') Permissões
+					li.mt3
+						a.white.dim.f6.bb.bw1(href='conta.html') Sua conta
+					li.mt3
+						a.white.dim.f6(href='') Suporte
+		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
+			h1.f2.fl.theblack Sua conta
+			.fr.lh-copy.relative
+				.relative.mr4.fl
+					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray Notificações
+					.absolute.top--1.right--1
+						.relative
+							span.notification-badge 275
+					// NOTIFICATIONS
+					.dropdown.notifications
+						// NOTIF HEADER
+						.fl.w-100.pa3.bb.lighter-gray
+							button.mark-all-as-read.ttu.fr.lh-copy.pv0.pr0.tracked.b.f8.main-gray.bn.bg-white.has-icon.has-icon-left.icon-check--gray.outline-0 marcar todas como lidas
+						// NOTIFS BODY
+						.fl.w-100
+							// NOTIF ITEM
+							.notif__item.bb.lighter-gray.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.can-be-read está sendo gerado
+									h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.theblack-20.can-be-read ID 4768987
+									<button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+							// NOTIF ITEM
+							.notif__item.bb.lighter-gray.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.green.bg-lighter-green.can-be-read está pronto
+									h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.theblack-20.can-be-read ID 4768987
+									button.accent.bn.bg-white.fr.f8.b.ttu.tracked download
+							// NOTIF ITEM
+							.notif__item.bb.lighter-gray.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.red.bg-lighter-red.can-be-read não foi possível gerar
+									h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.theblack-20.can-be-read ID 4768987
+									a.accent.bn.bg-white.fr.f8.b.ttu.tracked(href='notifs.html')
+										| ver detalhes
+						// NOTIF FOOTER
+						.fl.w-100.pa3
+							a.ttu.fl.lh-copy.pv0.tracked.b.f8.accent.bn.bg-white.has-icon.has-icon-right.icon-arrow-right--blue(href='notifs.html')
+								| ver todas as notificações
+				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
+		// MAIN CONTENT
+		section.main-content.ph4.pb5.fr
+			// YOUR INFO
+			div.fl.w-100
+				form.fl.w-100.mt4
+					div.fl
+						h3.theblack.f3.lh-solid Sobre você
+					div.fl.w-100.mt4
+						// ROW
+						div.fl.w-two-thirds.cb.mt3.nl3.nr3
+							.fl.w-50.ph3.relative
+								input.input--inline(type='text' value='André')
+								label Primeiro nome
+								p.f7.mt2.tr.black-20.input__validation Validação
+							.fl.w-50.ph3.relative
+								input.input--inline(type='text' value='Matiazzo')
+								label Sobrenome
+								p.f7.mt2.tr.black-20.input__validation Validação
+						// ROW
+						div.fl.w-two-thirds.cb.mt4.nl3.nr3
+							.fl.w-50.ph3.relative
+								input.input--inline(type='email' value='andre.matiazzo@movile.com')
+								label Email
+								p.f7.mt2.tr.black-20.input__validation Validação
+							.fl.w-50.ph3.relative
+								input.input--inline(type='tel' value='1999999999' id='telefone' max-length='15')
+								label Telefone
+								p.f7.mt2.tr.black-20.input__validation Validação
+			// CHANGE PASSWORD
+			div.fl.w-100.mt6.sent-permissions
+				form.fl.w-100.pb4
+					div.fl
+						h3.theblack.f3.lh-solid Alterar senha?
+						p.mt2.main-gray.lh-copy.measure-narrow Sua senha ter no mínimo 6 dígitos e ser composta por números e letras
+					div.fl.w-100.mt4
+						// ROW
+						div.fl.w-two-thirds.cb.mt3.nl3.nr3
+							.fl.w-50.ph3.relative
+								input.input--inline(type='text')
+								label Nova senha
+								p.f7.mt2.tr.black-20.input__validation Validação
+							.fl.w-50.ph3.relative
+								input.input--inline(type='text')
+								label Confirmar nova senha
+								p.f7.mt2.tr.black-20.input__validation Validação
+			// SEND INVITES
+			div.fl.w-two-thirds.nl3.nr3.ph3
+				button.dib.fr.mt4.cta.cta-accent
+					span.has-icon-right.icon-check--white salvar
+						
+	// jQuery
+	script(src='js/jquery-3.1.0.min.js')
+	// Filters
+	script(src='js/forms.js')
+	// Notifications
+	script(src='js/notifs.js')
+	// Phone mask
+	script(src='js/phone-mask.js')

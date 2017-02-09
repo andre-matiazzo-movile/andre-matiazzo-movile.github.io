@@ -52,9 +52,11 @@ $(document).ready(function() {
 		// Closes the dropdown by clicking out of it
 		$(document).bind('click', function(toggleDropdown) {
 			// If the click on the document is not a .dropdown, an .input or .upper-bar-menu--active, closes all dropdowns
-			if (!$(toggleDropdown.target).closest('.dropdown, .input, .upper-bar-menu--active').length) {
+			if (!$(toggleDropdown.target).closest('.dropdown, .input, .input--inline--dropdown, .upper-bar-menu--active').length) {
 				$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 				$('.upper-bar-menu').removeClass('upper-bar-menu--active');
+				$('.input--inline--dropdown').removeClass('input--inline--active');
+				$('.input--inline--dropdown').next().removeClass('accent');
 			}
 		});
 
@@ -76,6 +78,8 @@ $(document).ready(function() {
 		var textFromDropdown = $(this).find('span').text();
 		$(this).parents('.dropdown').siblings('.input').find('span').text(textFromDropdown);
 		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
+		$('.input--inline').next().removeClass('accent');
+		$('.input--inline').removeClass('input--inline--active');
 	});
 
 	//Specific for Gender dropdown on New Contact
@@ -88,29 +92,71 @@ $(document).ready(function() {
 	});
 
 
+	// Inline inputs on focus
+	$('.input--inline').on('focus click, click', function() {
+		$(this).addClass('input--inline--active');
+		$(this).next().addClass('label--active accent');
+	});
 
-// Filters' Modal on Mobile
-// Get the modal
-// var modal = document.getElementById('bottomModal');
-// // Get the button that opens the modal
-// var btn = document.getElementById("modalTrigger");
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
+	// Inline inputs off focus
+	$('.input--inline').on('blur', function() {
+		if (!$(this).val()) {
+			$(this).removeClass('input--inline--active');
+			$(this).next().removeClass('label--active accent');
+		} else {
+			$(this).next().removeClass('accent');
+			$(this).removeClass('input--inline--active');
+		}
+	});
 
-// // When the user clicks the button, open the modal
-// btn.onclick = function() {
-// 	modal.style.display = "block";
-// }
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-// 	modal.style.display = "none";
-// }
-// // When the user clicks anywhere outside of the modal, close it
-// document.onclick = function(event) {
-// 	if (event.target == modal) {
-// 		modal.style.display = "none";
-// 	}
+	//Edit created inputs
+	$('.input--edit, .input--cancel').on('click', function () {
+		$(this).parents('.inputs--infos').toggleClass('inputs--infos--active');
+	});
 
-// }
+	//Cancel edition on inputs
+	$('.input--cancel').on('click', function() {
+		$(this).parents('.inputs--infos').find('input').each(function () {
+			var originalInputText = $(this).siblings('p.input--disabled').text();
+			$(this).val(originalInputText);
+		});
+	});
+
+	//Save edition on inputs
+	$('.input--confirm').on('click', function() {
+		$(this).parents('.inputs--infos').find('input').each(function () {
+			$(this).siblings('p.input--disabled').text($(this).val());
+		});		
+		$(this).parents('.inputs--infos').toggleClass('inputs--infos--active');
+	});
+
+	//Asks for confirmation on input delete
+	$('.input--delete').on('click', function() {
+		$('body').css('overflow-y', 'hidden');
+		$('.modal').show();
+		$(this).parents('.inputs--infos').addClass("deletable");
+		setTimeout(function(){
+			$('.modal--delete').animate({opacity: 1}, 20);
+		}, 400);
+	});
+
+	$('.input--yes-delete').on('click', function(){
+		setTimeout(function(){
+			// console.log('salkdj');
+			$('.deletable').slideUp();
+			setTimeout(function(){
+				$('.deletable').remove();
+			}, 400);
+		}, 400);
+	});
+
+	// Checks if input elements are filled so labels start already active
+	$('.input--inline').each(function () {
+		if ($(this).val()) {
+			$(this).next('label').addClass('label--active');
+		}
+	});
+
+
 
 });
