@@ -43,7 +43,6 @@ input {
 	border: 1px solid rgba(0,0,0,.2);
 	font-size: .875rem;
 	padding: 1rem;
-	margin-top: 1rem;
 	font-weight: $bold;
 	line-height: 1.25;
 	&.input--inline {
@@ -55,6 +54,7 @@ input {
 		border-bottom: 1px solid rgba(0,0,0,.2);
 		padding: 0 0 0.5rem 0;
 		border-radius: 0;
+		margin-top: 1rem;
 		@include transition (0.2s);
 		&.input--inline--active {
 			border-color: $accent;
@@ -98,6 +98,7 @@ input {
 	padding: 0 0 0.5rem 0;
 	cursor: default;
 	color: $main-gray;
+	margin-top: 1rem;
 	& + .input--inline + label {
 		top: -0.5rem;
 		position: absolute;
