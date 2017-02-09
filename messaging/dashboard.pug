@@ -1,0 +1,130 @@
+doctype html
+html(lang='pt-br')
+	head
+		include pug/_head
+	body
+		aside
+			.logo
+				img.blue(src='img/logo-white.png', alt='Logo Movile Messaging')
+			include pug/_nav
+		section.upper-bar.flex.justify-between
+			h1 Dashboard
+		section.main-content
+			.mt4.flex.justify-between
+				h3.theblack.f4.mt1 Resultados
+				a.cta.pointer
+					span.has-icon-left.icon-plus_blue nova mensagem
+			include pug/_filters-dashboard
+
+			//- Display the table
+			.ct-chart.ct-double-octave
+			// legenda do gráfico
+			.flex.mt2.justify-between.items-start.relative.lh-copy
+				div
+					span.bg-green.br-100.pa1.dib
+					span.f7.blue-gray.ml1.ttu.b.tracked Mensagens enviadas
+					span.bg-red.br-100.pa1.dib.ml4
+					span.f7.blue-gray.ml1.ttu.b.tracked Mensagens com erro
+			//Detalhes
+			div.mt5
+				.flex.justify-between.relative
+					h3.blue-gray.f5 Lista de envios
+					//- a.cta.pointer.download.download-button
+					//- 	span.has-icon-right.icon-dropdown__blue download
+					//- .flex.flex-column.download-items.absolute.top-0.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
+					//- 	a(href='javascript:').b.f6.mt2.theblack.accent-hover Gerar tabela
+			// tabela com resultados
+			.flex.relative
+				div.w-90.overflow-x-scroll
+					table.mt4.mb4.tl.v-top.w-100(cellspacing='0', cellpadding='0')
+						thead.v-top.w-100
+							tr.ttu.f7.theblack.b.tl.tracked
+								th.nowrap.table-month
+									span.bb.b--black-20.pv2.pr3.db Month
+								th.nowrap.w-4.table-campaign
+									span.bb.b--black-20.pv2.pr3.db Campaign
+								th.nowrap.table-concluded
+									span.bb.b--black-20.pv2.pr3.db Concluded
+								th.nowrap.table-scheduled
+									span.bb.b--black-20.pv2.pr3.db Scheduled
+								th.nowrap.table-sent
+									span.bb.b--black-20.pv2.pr3.db Sent
+								th.nowrap.table-Errors
+									span.bb.b--black-20.pv2.pr3.db Errors
+								th.nowrap.table-sending-start
+									span.bb.b--black-20.pv2.pr3.db Sending start
+								th.nowrap.table-customer
+						tbody.v-top.w-100
+							tr.bb.relative.f6
+								td.nowrap.table-month
+									span.db.bb.b--black-20.pv4.pr3 December
+								td.nowrap.table-campaign
+									span.db.bb.b--black-20.pv4.pr3 Mother's day 2017
+								td.nowrap.table-concluded
+									span.db.bb.b--black-20.pv4.pr3 80%
+								td.nowrap.table-scheduled
+									span.db.bb.b--black-20.pv4.pr3 9.5 MM
+								td.nowrap.table-sent
+									span.db.bb.b--black-20.pv4.pr3 5.5 MM
+								td.nowrap.table-Errors
+									span.db.bb.b--black-20.pv4.pr3 2.0 MM
+								td.nowrap.table-sending-start
+									span.db.bb.b--black-20.pv4.pr3 24/01/2017 10:28
+				table.w-10.h-100.mt4.mb4.tl.v-top.absolute.top-0.right-0.bg-white(cellspacing='0', cellpadding='0')
+					thead.v-top.w-100
+						tr.pv3.b--black.bb.ttu.f7.theblack.b.tl.tracked
+							th.bb.b--black-20.pv2.ph2.table-detalhes
+								a.accent(href='javascript:') Ações
+					tbody.v-top
+						tr.bb.relative.f6
+							td.bb.b--black-20.pv4.ph2.table-detalhes
+								a.accent.has-icon-left.icon-download-blue.has-tooltip(href='javascript:', alt='Download')
+									.tooltip-content
+										span Download
+								a.accent.has-icon-left.icon-eye-blue.ml3.has-tooltip(href='javascript:', alt='Detalhes')
+									.tooltip-content
+										span Detalhes
+					
+	// jQuery
+	script(src='js/jquery-3.1.0.min.js')
+	// Filters
+	script(src='js/forms.js')
+	// For the calendar
+	script(src='calendar/jquery-ui/jquery-ui.min.js')
+	script(src='calendar/moment.js')
+	script(src='calendar/jquery.comiseo.daterangepicker.js')
+	script(src='charts/custom-charts.js')
+	script.
+		$(function() {
+		$("#datepicker").daterangepicker({
+		presetRanges: [{
+		text: 'Últimos 7 dias',
+		dateStart: function() { return moment().add(-7, 'days') },
+		dateEnd: function() { return moment().add(0, 'days') }
+		}, {
+		text: 'Últimos 30 dias',
+		dateStart: function() { return moment().add(-30, 'days') },
+		dateEnd: function() { return moment().add(0, 'days') }
+		}, {
+		text: 'Últimos 90 dias',
+		dateStart: function() { return moment().add(-90, 'days') },
+		dateEnd: function() { return moment().add(0, 'days') }
+		}],
+		applyOnMenuSelect: false,
+		dateFormat: 'd M yy',
+		rangeSplitter: ' – ',
+		initialText: 'Escolha um período',
+		applyButtonText: 'confirmar',
+		clearButtonText: 'limpar',
+		cancelButtonText: 'cancelar',
+		verticalOffset: -50,
+		datepickerOptions: {
+		dayNamesMin: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
+		monthNames: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'  ],
+		monthNamesShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
+		numberOfMonths: 2,
+		minDate: null,
+		maxDate: 0
+		}
+		});
+		});
