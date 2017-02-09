@@ -114,7 +114,9 @@
                   <input class="dn" type="reset" id="reset-file">
                 </form>
                 <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon has-icon-left icon-upload" data-before-chosen="Escolher arquivo" data-after-chosen="Mudar arquivo">Escolher arquivo</span></label>
-                <div class="fr tr cl how-to mt1 measure-narrow"><a class="f7 ttu tracked b accent" href="javascript:">veja como fazer</a></div>
+                <div class="fr tr cl how-to mt1 measure-narrow">
+                  <button class="pa0 bg-white bn f7 ttu tracked b accent modal-trigger trigger--how-to-do">veja como fazer							</button>
+                </div>
                 <div class="fl cb dn file-name bg-medium-accent pa2 mr2 mb2 mt2"><a class="has-icon-left icon-close-blue"></a><span class="f7 accent b"></span></div>
               </div>
               <p class="measure-narrow warning dn tl cb main-gray lh-copy mt1">Ao inserir contatos manualmente, você não pode selecionar um arquivo</p>
@@ -144,7 +146,7 @@
               <p class="mensagem-texto main-gray tr lh-copy mt1">
                 <div class="checkbox relative mt4 nl3">
                   <input type="checkbox" id="flash-sms">
-                  <label class="pl3 f5 black normal" for="flash-sms">Enviar como Flash SMS</label><span class="has-icon has-icon-right icon-tooltip"></span>
+                  <label class="pl3 f5 black normal" for="flash-sms">Enviar como Flash SMS</label><span class="has-icon has-icon-right icon-tooltip modal-trigger trigger--flash-sms"></span>
                 </div>
               </p>
             </div>
@@ -221,6 +223,43 @@
       <!-- SEND BUTTON-->
       <button class="bg-success ttu tracked div fixed left-0 right-0 bottom-0 w-100 bn tr f7 b white pa4 lh-solid dn" id="send-message"><span class="has-icon has-icon-right icon-check--white">enviar mensagem</span></button>
     </section>
+    <!-- MODAL BOILERPLATE-->
+    <div class="dn modal bg-black-50 fixed vh-100 left-0 right-0 o-0">
+      <!-- 1. HOW TO FORMAT FILES-->
+      <div class="modal__body modal--how-to-do bg-white w-auto mw6 center mt4 pt4 ph4 dn">
+        <button class="close-modal pa0 bn bg-white accent ttu tracked b f7 lh-copy has-icon-left icon-close-blue db">fechar</button>
+        <div>
+          <h2 class="mt4 f4">Arquivos aceitos</h2>
+          <p class="mt3 lh-copy">São aceitos arquivos de até 15mb nos seguintes formatos:</p>
+          <div class="mt2">
+            <h3 class="f4 dib mr3">.xls</h3>
+            <h3 class="f4 dib">.txt</h3>
+          </div>
+        </div>
+        <div>
+          <h2 class="mt4 f4">Formatando seu arquivo</h2>
+          <p class="mt3 lh-copy">1. Sua primeira coluna deverá conter, obrigatoriamente, os números dos destinatários</p>
+          <p class="mt3 lh-copy">2. Use as outras colunas para criar campos dinâmicos e envie mensagens personalizadas para cada um de seus destinatários.</p>
+          <div class="mt3"><img src="img/envio_how-to-do.png"></div>
+        </div>
+      </div>
+      <!-- 2. WHAT IS FLASH SMS-->
+      <div class="modal__body modal--flash-sms bg-white w-auto mw6 center mt4 pt4 ph4 dn">
+        <button class="close-modal pa0 bn bg-white accent ttu tracked b f7 lh-copy has-icon-left icon-close-blue db">fechar</button>
+        <div>
+          <h2 class="mt4 f4">Flash SMS</h2>
+          <p class="mt3 lh-copy">Um SMS que aparece na tela do celular e a bloqueia até que alguma ação seja tomada. Ele também traz a vantagem de não ocupar nenhum espaço na memória do celular do destinatário.</p>
+        </div>
+        <div>
+          <div class="mt4 mw5 center relative">
+            <div class="absolute center left-0 right-0 tc mt6 w5 ph4">
+              <p class="white f7 lh-copy">Ola, Priscilla. Acessando sua conta pelo nosso aplicativo, voce não precisa gastar seus dados de celular.</p>
+              <p class="accent f6 mt4">Baixar app</p>
+            </div><img src="img/phone-flash-sms.png">
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <!-- jQuery-->
   <script src="js/jquery-3.1.0.min.js"></script>
@@ -242,4 +281,6 @@
   <!-- For message preview-->
   <script src="js/character-count.js"></script>
   <script src="js/replicate-text.js"></script>
+  <!-- Modal-->
+  <script src="js/modal.js"></script>
 </html>
