@@ -5,12 +5,13 @@ $(document).ready(function(){
 		setTimeout(function(){
 			$('.modal').animate({opacity: 1});
 		}, 150);
+	//Hides other modals contents for safety
+		$('.modal__body').hide();
 	// Shows different types of content on modal
 		//How to format files
 		if ($(this).hasClass('trigger--how-to-do')) {
 			$('.modal--how-to-do').show();
 		} else if ($(this).hasClass('trigger--flash-sms')) {
-			$('.modal__body').hide();
 			$('.modal--flash-sms').show();
 		}
 	});
