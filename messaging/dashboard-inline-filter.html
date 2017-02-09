@@ -34,68 +34,35 @@
         </ul>
       </nav>
     </aside>
-    <section class="upper-bar flex justify-between">
+    <section class="upper-bar">
       <h1>Dashboard</h1>
     </section>
     <section class="main-content">
       <div class="mt4 flex justify-between">
         <h3 class="theblack f4 mt1">Resultados</h3><a class="cta pointer"><span class="has-icon-left icon-plus_blue">nova mensagem</span></a>
       </div>
-      <!-- FILTERS-->
-      <div class="actions-container">
-        <!-- FILTERS ROW-->
-        <div class="mt4 mb4 nl3 nr3 flex justify-between">
-          <!-- FILTER ITEM-->
-          <div class="relative w-third ph3">
-            <label class="black-50 f6">Status do envio</label>
-            <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Em processamento</span></div>
-            <div class="dropdown content-box">
-              <label class="black-50 f6">Status do envio</label>
-              <ul class="pt0 pb1 pl3">
-                <li><span>Em processamento</span></li>
-                <li><span>Agendados</span></li>
-                <li><span>Em aprovação</span></li>
-              </ul>
+      <div>
+        <div class="flex mt4 mb4 theblack lh-copy items-center"><span class="f6">Envios</span>
+          <div class="flex mr2 has-dropdown relative"><span class="f6 theblack b ml1 pr5 bb relative has-icon-right icon-dropdown insert-criteria view-box-close pointer">em processamento</span>
+            <div class="flex view-box-open shadow-2 pv2 ph3 absolute top-0 left-0 bg-white z-3 w-100 content-box nt2 nl3 o-0">
+              <div class="flex flex-column dropdown-item-box"><span class="f6 theblack b ml1 bb relative has-icon-right icon-dropdown insert-criteria">em processamento</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover nowrap">em processamento</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover nowrap">agendados</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover nowrap">em aprovação</span></div>
             </div>
           </div>
-          <!-- FILTER ITEM-->
-          <div class="relative w-third ph3">
-            <label class="black-50 f6">Período</label>
-            <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Hoje</span></div>
-            <div class="dropdown content-box">
-              <label class="black-50 f6">Período</label>
-              <ul class="pt0 pb1 pl3">
-                <li><span>Hoje</span></li>
-                <li><span>Últimos 7 dias</span></li>
-                <li><span>Últimos 15 dias</span></li>
-                <li><span>Últimos 30 dias</span></li>
-              </ul>
+          <div class="flex mr2 has-dropdown relative"><span class="f6 theblack b ml1 pr5 bb relative has-icon-right icon-dropdown insert-criteria view-box-close pointer">de hoje</span>
+            <div class="flex view-box-open shadow-2 pv2 ph3 absolute top-0 left-0 bg-white z-3 w-100 content-box nt2 nl3 o-0">
+              <div class="flex flex-column dropdown-item-box"><span class="f6 theblack b ml1 bb relative has-icon-right icon-dropdown insert-criteria">de hoje</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">de hoje</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">dos últimos 7 dias</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover nowrap">dos últimos 15 dias</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover nowrap">dos últimos 30 dias</span></div>
             </div>
-          </div>
-          <!-- FILTER ITEM-->
-          <div class="relative w-third ph3">
-            <label class="black-50 f6">Usuários</label>
-            <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Bruno Farias</span></div>
-            <div class="dropdown content-box">
-              <label class="black-50 f6">Usuários</label>
-              <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus="">
-              <ul class="pt0 pb1 pl3">
-                <li class="search__subheading"><span>Buscas recentes</span></li>
-                <li><span>Bruno Farias</span></li>
-                <li><span>Nayara Rodrigues</span></li>
-                <li><span>Neto Andrade</span></li>
-                <li><span>Hudson Souza</span></li>
-                <li><span>Edson Koji</span></li>
-                <li><span>Henrique Perticarati</span></li>
-                <li><span>Juliana Gaspari</span></li>
-              </ul>
+          </div><span class="f6">criados pelo usuário</span>
+          <div class="flex mr2 has-dropdown relative"><span class="f6 theblack b ml1 pr5 bb relative has-icon-right icon-dropdown insert-criteria view-box-close pointer">Bruno Farias</span>
+            <div class="flex view-box-open shadow-2 pv2 ph3 absolute top-0 left-0 bg-white z-3 w-100 content-box nt2 nl3 o-0">
+              <div class="flex flex-column dropdown-item-box"><span class="f6 theblack b ml1 bb relative has-icon-right icon-dropdown insert-criteria">Bruno Farias</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover nowrap">Andre Bonfatti</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover nowrap">Andre Matiazzo</span><span class="f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover nowrap">Hudson Souza</span></div>
             </div>
           </div>
         </div>
       </div>
       <div class="ct-chart ct-double-octave"></div>
       <!-- legenda do gráfico-->
-      <div class="flex mt2 justify-between items-start relative lh-copy">
+      <div class="flex mt4 justify-between items-start relative lh-copy">
         <div><span class="bg-green br-100 pa1 dib"></span><span class="f7 blue-gray ml1 ttu b tracked">Mensagens enviadas</span><span class="bg-red br-100 pa1 dib ml4"></span><span class="f7 blue-gray ml1 ttu b tracked">Mensagens com erro</span></div>
       </div>
       <!--Detalhes-->
