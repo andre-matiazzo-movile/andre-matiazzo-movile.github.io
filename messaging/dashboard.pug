@@ -1,10 +1,11 @@
 doctype html
 html(lang='pt-br')
 	head
+		head
 		meta(charset='UTF-8')
 		meta(http-equiv='x-ua-compatible', content='ie=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-		title Movile Messaging – Relatórios
+		title Movile Messaging – Permissões
 		meta(name='movile-messaging', content='Movile Messaging')
 		// For the calendar
 		link(href='calendar/jquery-ui/jquery-ui.min.css', rel='stylesheet')
@@ -30,11 +31,11 @@ html(lang='pt-br')
 			nav.pl4.mt4
 				ul.list.pl0.mt3
 					li.mt3
-						a.white.dim.f6(href='dashboard.html') Dashboard
+						a.white.dim.f6.bb.bw1(href='dashboard.html') Dashboard
 					li.mt3
 						a.white.dim.f6(href='novo-envio.html') Novo envio
 					li.mt3
-						a.white.dim.f6.bb.bw1(href='') Relatórios
+						a.white.dim.f6(href='') Relatórios
 					li.mt3
 						a.white.dim.f6(href='') Contatos
 					li.mt3
@@ -44,7 +45,7 @@ html(lang='pt-br')
 					li.mt3
 						a.white.dim.f6(href='') Suporte
 		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
-			h1.f2.fl.black Relatórios
+			h1.f2.fl.black Dashboard
 			.fr.lh-copy.relative
 				.relative.mr4.fl
 					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray Notificações
@@ -131,13 +132,23 @@ html(lang='pt-br')
 									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
 								.dropdown.content-box
 									label.black-50.f6 Tipo de relatório
-									//- input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
-									//- span.main-gray.db.f6.pl3.pv3 Buscas recentes
+									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
+									span.main-gray.db.f6.pl3.pv3 Buscas recentes
 									ul.pt0.pb1.pl3
 										li
-											span Envios consolidades
+											span Bruno Farias
 										li
-											span Envios detalhados
+											span Nayara Rodrigues
+										li
+											span Neto Andrade
+										li
+											span Hudson Souza
+										li
+											span Edson Koji
+										li
+											span Henrique Perticarati
+										li
+											span Juliana Gaspari
 							// FILTER ITEM
 							.relative.w-third.fl.ph3
 								label.black-50.f6 Subconta
@@ -265,127 +276,121 @@ html(lang='pt-br')
 						span.has-icon-left.icon-check--white aplicar
 			// RESULTS
 			.fl.w-100.ph3.pt4
-				h3.theblack.f4.fl.w-100 Resultados
+				h3.theblack.f3.fl.w-100 Resultados
 				.mt4.relative.fl.w-100
 					div.fl
 						span.black.f6 Campanha
 						h3.blue-gray.f4.mt2 Carnaval 2014, por mês
 					a.cta.pointer.download.download-button.fr
 						span.has-icon-right.icon-dropdown__blue download
+					.download-items.absolute.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
+						a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar relatórios
+						a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar tabela
+						a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar gráfico
 
+				.mt4.fl.w-100
+					span.theblack.f7.ttu.b envios
+				.ct-chart.ct-double-octave.fl.w-100
+				// GRAPHS SUBTITLES
+				.mt4.fl.w-100.relative.lh-copy
+					div.fl
+						span.bg-green.br-100.pa1.dib
+						span.f8.blue-gray.ml1.ttu.b.tracked Mensagens enviadas
+						span.bg-red.br-100.pa1.dib.ml4
+						span.f8.blue-gray.ml1.ttu.b.tracked Mensagens com erro
+					div.fr.has-dropdown.relative.lh-copy
+						span.fl.f6.theblack Visualização por
+						span.fl.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer Operadora
+						.view-box-open.shadow-2.pa3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt3.nl3.o-0
+							span.f6.theblack.nowrap.fl Visualização por
+							.dropdown-item-box.fl
+								span.fl.cb.f6.theblack.b.ml1.bb.relative.has-icon-right.icon-dropdown.insert-criteria Operadora
+								span.fl.cb.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Hora
+								span.fl.cb.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Dia
+								span.fl.cb.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Mês
+								span.fl.cb.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Operadora
+				// número de mensagens enviadas
+				.mt4.fl.w-100
+					.fl.mr4
+						h4.blue-gray.f2.b 12.7mi
+						span.theblack.f6.lh-title
+							| mensagens
+							br
+							| enviadas
+					.fl.mr4
+						h4.green.f2.b 4.2mi
+						span.theblack.f6.lh-title
+							| enviadas com
+							br
+							| sucesso
+					.fl
+						h4.red.f2.b 1.5mi
+						span.theblack.f6.lh-title
+							| mensagens
+							br
+							| com erro
+			//Detalhes
+			div.mt5
+				.flex.justify-between.relative
+					h3.blue-gray.f5 Lista de envios
+					//- a.cta.pointer.download.download-button
+					//- 	span.has-icon-right.icon-dropdown__blue download
+					//- .flex.flex-column.download-items.absolute.top-0.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
+					//- 	a(href='javascript:').b.f6.mt2.theblack.accent-hover Gerar tabela
 			// tabela com resultados
-			.fl.w-100.relative.ph3
+			.flex.relative
 				div.w-90.overflow-x-scroll
-					table.w-100.mt4.mb4.tl.v-top(cellspacing='0', cellpadding='0')
-						thead.v-top
-							tr.ttu.f8.theblack.b.tl.tracked
-								th.bb.nowrap.table-status
-									span.pv2.pr3.db Status
-								th.bb.nowrap.w-4.table-phone
-									span.pv2.pr3.db Phone
-								th.bb.nowrap.table-la
-									span.pv2.pr3.db LA
-								th.bb.nowrap.table-carrier
-									span.pv2.pr3.db Carrier
-								th.bb.nowrap.table-campaign
-									span.pv2.pr3.db Campaign
-								th.bb.nowrap.table-creation-date
-									span.pv2.pr3.db Creation Date
-								th.bb.nowrap.table-date
-									span.pv2.pr3.db Date
-								th.bb.nowrap.table-customer
-									span.pv2.pr3.db Customer
-								th.bb.nowrap.table-sub-account
-									span.pv2.pr3.db Sub-account
-								th.bb.nowrap.table-user
-									span.pv2.pr3.db User
-								th.bb.nowrap.table-text
-									span.pv2.pr3.db Text
-						tbody.v-top
+					table.mt4.mb4.tl.v-top.w-100(cellspacing='0', cellpadding='0')
+						thead.v-top.w-100
+							tr.ttu.f7.theblack.b.tl.tracked
+								th.nowrap.table-month
+									span.bb.b--black-20.pv2.pr3.db Month
+								th.nowrap.w-4.table-campaign
+									span.bb.b--black-20.pv2.pr3.db Campaign
+								th.nowrap.table-concluded
+									span.bb.b--black-20.pv2.pr3.db Concluded
+								th.nowrap.table-scheduled
+									span.bb.b--black-20.pv2.pr3.db Scheduled
+								th.nowrap.table-sent
+									span.bb.b--black-20.pv2.pr3.db Sent
+								th.nowrap.table-Errors
+									span.bb.b--black-20.pv2.pr3.db Errors
+								th.nowrap.table-sending-start
+									span.bb.b--black-20.pv2.pr3.db Sending start
+								th.nowrap.table-customer
+						tbody.v-top.w-100
 							tr.bb.relative.f6
-								td.nowrap.f6.bb.b--black-20.table-status
-									span.db.pv4.pr3.green Sent
-								td.nowrap.f6.bb.b--black-20.table-phone
-									span.db.pv4.pr3 +55 (99) 99999-9999
-								td.nowrap.f6.bb.b--black-20.table-la
-									span.db.pv4.pr3 27171
-								td.nowrap.f6.bb.b--black-20.table-carrier
-									span.db.pv4.pr3 Vivo
-								td.nowrap.f6.bb.b--black-20.table-campaign
-									span.db.pv4.pr3 Compras de Natal 2014
-								td.nowrap.f6.bb.b--black-20.table-creation-date
-									span.db.pv4.pr3 24/01/2017 10:28
-								td.nowrap.f6.bb.b--black-20.table-date
-									span.db.pv4.pr3 24/01/2017 10:28
-								td.nowrap.f6.bb.b--black-20.table-customer
-									span.db.pv4.pr3 Bradesco
-								td.nowrap.f6.bb.b--black-20.table-sub-account
-									span.db.pv4.pr3 Bradesco - BDT
-								td.nowrap.f6.bb.b--black-20.table-user
-									span.db.pv4.pr3 Marketing
-								td.nowrap.f6.bb.b--black-20.table-text.relative
-									span.db.pv4.pr3.mw5.truncated.truncate.nowrap.accent-hover.pointer O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.
-							tr.bb.relative.f6
-								td.nowrap.f6.bb.b--black-20.table-status
-									span.db.pv4.pr3.green Sent
-								td.nowrap.f6.bb.b--black-20.table-phone
-									span.db.pv4.pr3 +55 (99) 99999-9999
-								td.nowrap.f6.bb.b--black-20.table-la
-									span.db.pv4.pr3 27171
-								td.nowrap.f6.bb.b--black-20.table-carrier
-									span.db.pv4.pr3 Vivo
-								td.nowrap.f6.bb.b--black-20.table-campaign
-									span.db.pv4.pr3 Compras de Natal 2014
-								td.nowrap.f6.bb.b--black-20.table-creation-date
-									span.db.pv4.pr3 24/01/2017 10:28
-								td.nowrap.f6.bb.b--black-20.table-date
-									span.db.pv4.pr3 24/01/2017 10:28
-								td.nowrap.f6.bb.b--black-20.table-customer
-									span.db.pv4.pr3 Bradesco
-								td.nowrap.f6.bb.b--black-20.table-sub-account
-									span.db.pv4.pr3 Bradesco - BDT
-								td.nowrap.f6.bb.b--black-20.table-user
-									span.db.pv4.pr3 Marketing
-								td.nowrap.f6.bb.b--black-20.table-text.relative
-									span.db.pv4.pr3.mw5.truncated.truncate.nowrap.accent-hover.pointer O reembolso 2017.0000058693.00, evento 14/11/2016, recibo 31144 estara disponivel em conta em 48h. Duvidas, contate a Bradesco Saude.
-				table.w-10.h-100.mt4.mb4.tl.v-top.absolute.top-0.right-1.bg-white(cellspacing='0', cellpadding='0')
-					thead.v-top
-						tr.pv3.b--black.bb.ttu.f8.theblack.b.tl.tracked
-							th.bb.pv2.pl3.table-detalhes
-								a.black(href='javascript:') Detalhes
+								td.nowrap.table-month
+									span.db.bb.b--black-20.pv4.pr3 December
+								td.nowrap.table-campaign
+									span.db.bb.b--black-20.pv4.pr3 Mother's day 2017
+								td.nowrap.table-concluded
+									span.db.bb.b--black-20.pv4.pr3 80%
+								td.nowrap.table-scheduled
+									span.db.bb.b--black-20.pv4.pr3 9.5 MM
+								td.nowrap.table-sent
+									span.db.bb.b--black-20.pv4.pr3 5.5 MM
+								td.nowrap.table-Errors
+									span.db.bb.b--black-20.pv4.pr3 2.0 MM
+								td.nowrap.table-sending-start
+									span.db.bb.b--black-20.pv4.pr3 24/01/2017 10:28
+				table.w-10.h-100.mt4.mb4.tl.v-top.absolute.top-0.right-0.bg-white(cellspacing='0', cellpadding='0')
+					thead.v-top.w-100
+						tr.pv3.b--black.bb.ttu.f7.theblack.b.tl.tracked
+							th.bb.b--black-20.pv2.ph2.table-detalhes
+								a.accent(href='javascript:') Ações
 					tbody.v-top
 						tr.bb.relative.f6
-							td.bb.b--black-20.pv4.ph3.table-detalhes.left-shadow
-								a.accent.f8.ttu.tracked.b(href='javascript:')
-									span.has-icon.has-icon-left.icon-user Contato
-						tr.bb.relative.f6
-							td.bb.b--black-20.pv4.ph3.table-detalhes.left-shadow
-								a.accent.f8.ttu.tracked.b(href='javascript:')
-									span.has-icon.has-icon-left.icon-user Contato
+							td.bb.b--black-20.pv4.ph2.table-detalhes
+								a.accent.has-icon-left.icon-download-blue.has-tooltip(href='javascript:', alt='Download')
+									.tooltip-content
+										span Download
+								a.accent.has-icon-left.icon-eye-blue.ml3.has-tooltip(href='javascript:', alt='Detalhes')
+									.tooltip-content
+										span Detalhes
 					
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
-
-	script.
-		$(".truncated").click(function() {
-			$(".truncated").toggleClass("truncate");
-			$(".truncated").toggleClass("not-truncate");
-			$(".truncated").toggleClass("mw5");
-			$(this).parents(".overflow-x-scroll").scrollLeft(1000);
-		});
-
-	script.
-		$('.dropdown-checkbox').click(function() {
-			var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
-			if (length == 0) {
-				$(this).prop('checked', true);
-			}
-			var selected = $('.dropdown-checkbox:checked').map(function() {
-			    return this.value;
-			}).get().join(', ');
-			$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
-		});
-
 	// Filters
 	script(src='js/forms.js')
 	// For the calendar
