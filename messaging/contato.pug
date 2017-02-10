@@ -24,12 +24,6 @@ html(lang='pt-br')
 			async: false
 			});
 			} catch (e) {}
-		style.
-			.table-operadora,
-			.table-subconta,
-			.table-inicio {
-			display: none;
-			}
 	body
 		aside.fixed.fl.h-100.bg-sidebar
 			.bb.b--black-10
@@ -42,9 +36,9 @@ html(lang='pt-br')
 					li.mt3
 						a.white.dim.f6(href='novo-envio.html') Novo envio
 					li.mt3
-						a.white.dim.f6.bb.bw1(href='') Relatórios
+						a.white.dim.f6(href='') Relatórios
 					li.mt3
-						a.white.dim.f6(href='') Contatos
+						a.white.dim.f6.bb.bw1(href='') Contatos
 					li.mt3
 						a.white.dim.f6(href='permissoes.html') Permissões
 					li.mt3
@@ -52,7 +46,7 @@ html(lang='pt-br')
 					li.mt3
 						a.white.dim.f6(href='') Suporte
 		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
-			h1.f2.fl.black Relatórios
+			h1.f2.fl.black.lh-solid Contatos
 			.fr.lh-copy.relative
 				.relative.mr4.fl
 					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray Notificações
@@ -124,353 +118,61 @@ html(lang='pt-br')
 		section.main-content.ph3.pt3.pb5.fr
 			// FILTERS
 			.actions-container
-				.fl.w-100.bg-lighter-accent.pa3
-					.fl.w-100
-						h3.fl.black.f3.lh-solid Filtros
-						// Calendar
-						input#datepicker.fr.calendar-picker(name='e1')
-					// FILTERS ROW
+				.fl.w-100.pa3
+					.flex.w-100.items-end.justify-between.relative
+						.w-50.pr3
+							span.theblack.f5 Buscar
+							input.mt2.pa3.w-100.bg-search(type='text')
+						button.dib.fr.cta.cta-accent.download-button
+							span.has-icon-right.icon-dropdown__white adicionar
+						.download-items.absolute.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
+							a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar relatórios
+							a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar tabela
+							a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar gráfico
+					.mt4.theblack
+						.has-dropdown.relative.dib
+							span.f6.nowrap.fl Mostrar
+							span.fl.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer todos os contatos
+							.view-box-open.shadow-2.pa3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt3.nl3.o-0
+								span.fl.f6.nowrap.pr1 Mostrar
+								.dropdown-item-box.fl
+									span.fl.cb.f6.theblack.b.bb.relative.has-icon-right.icon-dropdown.insert-criteria todos os contatos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover todos os contatos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover contatos na black list
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover contatos fora da black list
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover grupos
+						.has-dropdown.relative.dib.ml4
+							span.f6.nowrap.fl Ordenar por
+							span.fl.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer mais novos
+							.view-box-open.shadow-2.pa3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt3.nl3.o-0
+								span.fl.f6.nowrap.pr1 Ordenar por
+								.dropdown-item-box.fl
+									span.fl.cb.f6.theblack.b.bb.relative.has-icon-right.icon-dropdown.insert-criteria mais novos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover mais novos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover mais antigos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover últimos atualizados
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover A - Z
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover Z - A
+				.fl.w-100.pa3
 					.fl.w-100.mt4
 						.nl3.nr3
 							// FILTER ITEM
-							.relative.w-third.fl.ph3
-								label.black-50.f6 Tipo de relatório
-								.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
-									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
-								.dropdown.content-box
-									label.black-50.f6 Tipo de relatório
-									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
-									span.main-gray.db.f6.pl3.pv3 Buscas recentes
-									ul.pt0.pb1.pl3
-										li
-											span Bruno Farias
-										li
-											span Nayara Rodrigues
-										li
-											span Neto Andrade
-										li
-											span Hudson Souza
-										li
-											span Edson Koji
-										li
-											span Henrique Perticarati
-										li
-											span Juliana Gaspari
+							.w-25.fl.ph3
+								.fl.w-100.br2.pa3.theblack.shadow-0
+									span.f4.accent.b Ursula Reichenbach 
 							// FILTER ITEM
-							.relative.w-third.fl.ph3
-								label.black-50.f6 Subconta
-								.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+							.w-25.fl.ph3
+								.fl.w-100.br2.pa3.theblack.shadow-0
 									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
-								.dropdown.content-box
-									label.black-50.f6 Subconta
-									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
-									span.main-gray.db.f6.pl3.pv3 Buscas recentes
-									ul.pt0.pb1.pl3
-										li
-											span Bruno Farias
-										li
-											span Nayara Rodrigues
-										li
-											span Neto Andrade
-										li
-											span Hudson Souza
-										li
-											span Edson Koji
-										li
-											span Henrique Perticarati
-										li
-											span Juliana Gaspari
 							// FILTER ITEM
-							.relative.w-third.fl.ph3
-								label.black-50.f6 Usuários
-								.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+							.w-25.fl.ph3
+								.fl.w-100.br2.pa3.theblack.shadow-0
 									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
-								.dropdown.content-box
-									label.black-50.f6 Usuários
-									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
-									span.main-gray.db.f6.pl3.pv3 Buscas recentes
-									ul.pt0.pb1.pl3
-										li
-											span Bruno Farias
-										li
-											span Nayara Rodrigues
-										li
-											span Neto Andrade
-										li
-											span Hudson Souza
-										li
-											span Edson Koji
-										li
-											span Henrique Perticarati
-										li
-											span Juliana Gaspari
-					// FILTERS ROW
-					.fl.w-100.mt4
-						.nl3.nr3
 							// FILTER ITEM
-							.relative.w-third.fl.ph3
-								label.black-50.f6 Campanha, Lote ou Celular
-								.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+							.w-25.fl.ph3
+								.fl.w-100.br2.pa3.theblack.shadow-0
 									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
-								.dropdown.content-box
-									label.black-50.f6 Campanha, Lote ou Celular
-									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
-									span.main-gray.db.f6.pl3.pv3 Buscas recentes
-									ul.pt0.pb1.pl3
-										li
-											span Bruno Farias
-										li
-											span Nayara Rodrigues
-										li
-											span Neto Andrade
-										li
-											span Hudson Souza
-										li
-											span Edson Koji
-										li
-											span Henrique Perticarati
-										li
-											span Juliana Gaspari
-							// FILTER ITEM
-							.relative.w-third.fl.ph3
-								label.black-50.f6 Operadoras
-								.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
-									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
-								.dropdown.content-box
-									label.black-50.f6 Operadoras
-									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
-									span.main-gray.db.f6.pl3.pv3 Buscas recentes
-									ul.pt0.pb1.pl3
-										li
-											span Bruno Farias
-										li
-											span Nayara Rodrigues
-										li
-											span Neto Andrade
-										li
-											span Hudson Souza
-										li
-											span Edson Koji
-										li
-											span Henrique Perticarati
-										li
-											span Juliana Gaspari
-							// FILTER ITEM
-							.relative.w-third.fl.ph3
-								label.black-50.f6 Status das mensagens
-								.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
-									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
-								.dropdown.content-box
-									label.black-50.f6 Status das mensagens
-									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
-									span.main-gray.db.f6.pl3.pv3 Buscas recentes
-									ul.pt0.pb1.pl3
-										li
-											span Bruno Farias
-										li
-											span Nayara Rodrigues
-										li
-											span Neto Andrade
-										li
-											span Hudson Souza
-										li
-											span Edson Koji
-										li
-											span Henrique Perticarati
-										li
-											span Juliana Gaspari
-					a.dib.fr.mt4.mb3.cta.cta-accent
-						span.has-icon-left.icon-check--white aplicar
-			// RESULTS
-			.fl.w-100.ph3.pt4
-				h3.theblack.f3.fl.w-100 Resultados
-				.mt4.relative.fl.w-100
-					div.fl
-						span.black.f6 Campanha
-						h3.blue-gray.f4.mt2 Carnaval 2014, por mês
-					a.cta.pointer.download.download-button.fr
-						span.has-icon-right.icon-dropdown__blue download
-					.download-items.absolute.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
-						a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar relatórios
-						a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar tabela
-						a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar gráfico
-
-				.mt4.fl.w-100
-					span.theblack.f7.ttu.b envios
-				.ct-chart.ct-double-octave.fl.w-100
-				// GRAPHS SUBTITLES
-				.mt4.fl.w-100.relative.lh-copy
-					div.fl
-						span.bg-green.br-100.pa1.dib
-						span.f8.blue-gray.ml1.ttu.b.tracked Mensagens enviadas
-						span.bg-red.br-100.pa1.dib.ml4
-						span.f8.blue-gray.ml1.ttu.b.tracked Mensagens com erro
-					div.fr.has-dropdown.relative.lh-copy
-						span.fl.f6.theblack Visualização por
-						span.fl.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer Operadora
-						.view-box-open.shadow-2.pa3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt3.nl3.o-0
-							span.f6.theblack.nowrap.fl Visualização por
-							.dropdown-item-box.fl
-								span.fl.cb.f6.theblack.b.ml1.bb.relative.has-icon-right.icon-dropdown.insert-criteria Operadora
-								span.fl.cb.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Hora
-								span.fl.cb.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Dia
-								span.fl.cb.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Mês
-								span.fl.cb.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Operadora
-				// número de mensagens enviadas
-				.mt4.fl.w-100
-					.fl.mr4
-						h4.blue-gray.f2.b 12.7mi
-						span.theblack.f6.lh-title
-							| mensagens
-							br
-							| enviadas
-					.fl.mr4
-						h4.green.f2.b 4.2mi
-						span.theblack.f6.lh-title
-							| enviadas com
-							br
-							| sucesso
-					.fl
-						h4.red.f2.b 1.5mi
-						span.theblack.f6.lh-title
-							| mensagens
-							br
-							| com erro
-			// DETAILS
-			.fl.w-100.ph3.pt4.mt5
-				h3.theblack.f4 Detalhes
-				.mt4.theblack.lh-copy
-					mr2.has-dropdown.relative.dib.mr2
-						span.f6.fl.pr1 Consolidados por
-						.relative.pa0.ma0.dib
-							span.f6.theblack.b.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer.fl Operadora
-							.view-box-open.shadow-2.pt0.ph2.absolute.top-0.left-1.bg-white.z-3.nt3.nl5.o-0
-								.dropdown-item-box.pl4.pr3.pv3.fl
-									.input.relative.fl.cb
-										.checkbox
-											input#operadora_checkbox.dropdown-checkbox(type='checkbox', name='operadora', value='Operadora', checked='')
-											label.f6.b.accent-hover.pl3.nl2.fl.relative(for='operadora_checkbox') Operadora
-									.input.relative.mt3.fl.cb
-										.checkbox
-											input#campanha_checkbox.dropdown-checkbox(type='checkbox', name='campanha', value='Campanha')
-											label.f6.b.accent-hover.pl3.nl2.fl.relative(for='campanha_checkbox') Campanha
-									.input.relative.mt3.fl.cb
-										.checkbox
-											input#cliente_checkbox.dropdown-checkbox(type='checkbox', name='cliente', value='Cliente')
-											label.f6.b.accent-hover.pl3.nl2.fl.relative(for='cliente_checkbox') Cliente
-									.input.relative.mt3.fl.cb
-										.checkbox
-											input#subconta_checkbox.dropdown-checkbox(type='checkbox', name='subconta', value='Subconta')
-											label.f6.b.accent-hover.pl3.nl2.fl.relative(for='subconta_checkbox') Subconta
-									.input.relative.mt3.fl.cb
-										.checkbox
-											input#usuario_checkbox.dropdown-checkbox(type='checkbox', name='usuario', value='Usuário')
-											label.f6.b.accent-hover.pl3.nl2.fl.relative(for='usuario_checkbox') Usuário
-					.has-dropdown.relative.dib
-						span.f6.nowrap.fl e por
-						span.fl.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer Hora
-						.view-box-open.shadow-2.pa3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt3.nl3.o-0
-							span.fl.f6.nowrap.pr1 e por
-							.dropdown-item-box.fl
-								span.fl.cb.f6.theblack.b.bb.relative.has-icon-right.icon-dropdown.insert-criteria Hora
-								span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover Dia
-								span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover Mês
-			// TABLE
-			table.fl.w-100.mt4.tl.v-top.ph3(cellspacing='0')
-				thead.v-top
-					tr.pv3.ttu.f8.black.b.tl.tracked
-						th.bb.pv2.table-mes
-							span Mês
-						th.bb.pv2.table-cliente
-							span Cliente
-						th.bb.pv2.mw3.table-campanha
-							span Campanha
-						th.bb.pv2.table-subconta
-							span Subconta
-						th.bb.pv2.table-usuario
-							span Usuário
-						th.bb.pv2.table-operadora
-							span Operadora
-						th.bb.pv2.table-sucessos
-							span Sucessos
-						th.bb.pv2.table-agendados
-							span Agendados
-						th.bb.pv2.table-enviados
-							span Enviados
-						th.bb.pv2.table-erros
-							span Erros
-						th.bb.pv2.table-inicio
-							span Início do envio
-				tbody.v-top
-					tr.bb
-						td.f6.bb.b--black-20.pv4.table-mes
-							span Fevereiro
-						td.f6.bb.b--black-20.pv4.table-cliente
-							span Cliente
-						td.f6.bb.b--black-20.pv4.mw5.table-campanha
-							span Campanha do dia dos namorados 2017
-						td.f6.bb.b--black-20.pv4.table-subconta
-							span marketing
-						td.f6.bb.b--black-20.pv4.table-usuario
-							span matiazzo
-						td.f6.bb.b--black-20.pv4.table-operadora
-							span Brasil telecom
-						td.f6.bb.b--black-20.pv4.table-sucessos
-							span 90mi
-						td.f6.bb.b--black-20.pv4.table-agendados
-							span 100mi
-						td.f6.bb.b--black-20.pv4.table-enviados
-							span 300mi
-						td.f6.bb.b--black-20.pv4.table-erros
-							span 10mi
-						td.f6.bb.b--black-20.pv4.table-inicio
-							span 12/12/16, às 17:56
-					tr.bb
-						td.f6.bb.b--black-20.pv4.table-mes
-							span Fevereiro
-						td.f6.bb.b--black-20.pv4.table-cliente
-							span Cliente
-						td.f6.bb.b--black-20.pv4.mw5.table-campanha
-							span Campanha do dia dos namorados 2017
-						td.f6.bb.b--black-20.pv4.table-subconta
-							span marketing
-						td.f6.bb.b--black-20.pv4.table-usuario
-							span matiazzo
-						td.f6.bb.b--black-20.pv4.table-operadora
-							span Brasil telecom
-						td.f6.bb.b--black-20.pv4.table-sucessos
-							span 90mi
-						td.f6.bb.b--black-20.pv4.table-agendados
-							span 100mi
-						td.f6.bb.b--black-20.pv4.table-enviados
-							span 300mi
-						td.f6.bb.b--black-20.pv4.table-erros
-							span 10mi
-						td.f6.bb.b--black-20.pv4.table-inicio
-							span 12/12/16, às 17:56
-					tr.bb
-						td.f6.bb.b--black-20.pv4.table-mes
-							span Fevereiro
-						td.f6.bb.b--black-20.pv4.table-cliente
-							span Cliente
-						td.f6.bb.b--black-20.pv4.mw5.table-campanha
-							span Campanha do dia dos namorados 2017
-						td.f6.bb.b--black-20.pv4.table-subconta
-							span marketing
-						td.f6.bb.b--black-20.pv4.table-usuario
-							span matiazzo
-						td.f6.bb.b--black-20.pv4.table-operadora
-							span Brasil telecom
-						td.f6.bb.b--black-20.pv4.table-sucessos
-							span 90mi
-						td.f6.bb.b--black-20.pv4.table-agendados
-							span 100mi
-						td.f6.bb.b--black-20.pv4.table-enviados
-							span 300mi
-						td.f6.bb.b--black-20.pv4.table-erros
-							span 10mi
-						td.f6.bb.b--black-20.pv4.table-inicio
-							span 12/12/16, às 17:56
+			
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
 	script.
