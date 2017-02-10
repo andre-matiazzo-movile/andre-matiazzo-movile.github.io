@@ -8,6 +8,7 @@ $(document).ready(function() {
 	$(document).find(".dropdown-item-box").each(function(){
 		var w = $(this).width();
 		var w2 = Math.round(w);
+		var w2 = w2 + 18;
 		$(this).parents(".has-dropdown").find(".view-box-close").css("min-width", w2+"px");
 		$(this).children(".insert-criteria").css("min-width", w2+"px");
 	});

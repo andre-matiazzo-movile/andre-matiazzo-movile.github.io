@@ -113,34 +113,56 @@ html(lang='pt-br')
 						.fl.w-100.pa3
 							a.ttu.fl.lh-copy.pv0.tracked.b.f8.accent.bn.bg-white.has-icon.has-icon-right.icon-arrow-right--blue(href='notifs.html')
 								| ver todas as notificações
-				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
+				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown Nome Do Usuário
 		// MAIN CONTENT
 		section.main-content.ph3.pt3.pb5.fr
 			// FILTERS
 			.actions-container
 				.fl.w-100.pa3
 					.flex.w-100.items-end.justify-between.relative
-						.w-50.pr3
-							span.theblack.f5 Buscar
-							input.mt2.pa3.w-100.bg-search(type='text')
+						.w-50.pr3.relative
+							label.black-50.f6 Buscar
+							.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.bg-search
+								span.f6.b.ml4.lh-solid.dib.overflow-hidden.lh-title.nowrap Busque um nome ou contato
+							.dropdown.dropdown--multiple-lists.content-box.nl3.nr3
+									label.black-50.f6.lh-copy.black Buscar
+									input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title.bg-search(type='search')
+									div.fl.w-50.mt3.pb3
+										span.main-gray.db.f6 Contatos
+									div.fl.w-50.mt3.pb3
+										span.main-gray.db.f6 Grupos
+									div.fl.w-100.multiple-lists__container.theblack
+										div.fl.w-50.gruposecontatos.contatos-lista(data-origin='contatos-lista')
+											ul.pt0.pb1.pl0
+												li
+													span.b(data-id='1') Bruno Farias
+												li
+													span.b(data-id='2') Nayara Rodrigues
+										div.fl.w-50.gruposecontatos.grupos-lista(data-origin='grupos-lista')
+											ul.pt0.pb1.pl0
+												li
+													span.b(data-id='1') Maiores de 30 anos
+												li
+													span.b(data-id='2') Mulheres casadas
+							//- input.mt2.pa3.w-100.bg-search(type='text')
 						button.dib.fr.cta.cta-accent.download-button
 							span.has-icon-right.icon-dropdown__white adicionar
 						.download-items.absolute.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
-							a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar relatórios
-							a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar tabela
-							a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar gráfico
-					.mt4.theblack
+							a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Grupo
+							a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Contato
+							a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Contato na Blacklist
+					.mt5.theblack
 						.has-dropdown.relative.dib
 							span.f6.nowrap.fl Mostrar
 							span.fl.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer todos os contatos
 							.view-box-open.shadow-2.pa3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt3.nl3.o-0
-								span.fl.f6.nowrap.pr1 Mostrar
+								span.fl.f6.nowrap.pr1.nowrap Mostrar
 								.dropdown-item-box.fl
 									span.fl.cb.f6.theblack.b.bb.relative.has-icon-right.icon-dropdown.insert-criteria todos os contatos
-									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover todos os contatos
-									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover contatos na black list
-									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover contatos fora da black list
-									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover grupos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap todos os contatos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap contatos na black list
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap contatos fora da black list
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap grupos
 						.has-dropdown.relative.dib.ml4
 							span.f6.nowrap.fl Ordenar por
 							span.fl.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer mais novos
@@ -148,30 +170,50 @@ html(lang='pt-br')
 								span.fl.f6.nowrap.pr1 Ordenar por
 								.dropdown-item-box.fl
 									span.fl.cb.f6.theblack.b.bb.relative.has-icon-right.icon-dropdown.insert-criteria mais novos
-									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover mais novos
-									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover mais antigos
-									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover últimos atualizados
-									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover A - Z
-									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover Z - A
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap mais novos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap mais antigos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap últimos atualizados
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap A - Z
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap Z - A
 				.fl.w-100.pa3
-					.fl.w-100.mt4
-						.nl3.nr3
+					.fl.w-100
+						.nl3.nr3.flex.items-stretch
 							// FILTER ITEM
-							.w-25.fl.ph3
-								.fl.w-100.br2.pa3.theblack.shadow-0
-									span.f4.accent.b Ursula Reichenbach 
+							.w-25.ph3
+								a(href='javascript:')
+									.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+										.flex.flex-column.mt3.h-100
+											p.f4.accent.b.lh-title Ursula Reichenbach
+											.mv4
+												p.f5.main-gray (11) 98823-8510
+												p.f5.main-gray Campinas - SP
+												p.f5.main-gray Movile Internet Móvel S.A.
+												p.f5.main-gray ursula.reichenbach@movile.com
+											p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+										.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS
 							// FILTER ITEM
-							.w-25.fl.ph3
-								.fl.w-100.br2.pa3.theblack.shadow-0
-									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
+							.w-25.ph3
+								a(href='javascript:')
+									.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+										.flex.flex-column.mt3.h-100
+											p.f4.accent.b.lh-title Ursula Reichenbach
+											.mv4
+												p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+										.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS
 							// FILTER ITEM
-							.w-25.fl.ph3
-								.fl.w-100.br2.pa3.theblack.shadow-0
-									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
-							// FILTER ITEM
-							.w-25.fl.ph3
-								.fl.w-100.br2.pa3.theblack.shadow-0
-									span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Envios consolidados
+							.w-25.ph3
+								a(href='javascript:')
+									.w-100.h-100.br2.ba.b--black-10.blacklist.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+										.flex.flex-column.mt3.h-100
+											p.f4.accent.b.lh-title Ursula Reichenbach
+											.mv4
+												p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+										.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS
 			
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')

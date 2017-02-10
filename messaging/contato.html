@@ -95,7 +95,7 @@
             <div class="fl w-100 pa3"><a class="ttu fl lh-copy pv0 tracked b f8 accent bn bg-white has-icon has-icon-right icon-arrow-right--blue" href="notifs.html">ver todas as notificações</a></div>
           </div>
         </div>
-        <h3 class="f5 b fl has-icon has-icon-right icon-dropdown">NomeDoUsuário</h3>
+        <h3 class="f5 b fl has-icon has-icon-right icon-dropdown">Nome Do Usuário</h3>
       </div>
     </section>
     <!-- MAIN CONTENT-->
@@ -104,44 +104,88 @@
       <div class="actions-container">
         <div class="fl w-100 pa3">
           <div class="flex w-100 items-end justify-between relative">
-            <div class="w-50 pr3"><span class="theblack f5">Buscar</span>
-              <input class="mt2 pa3 w-100 bg-search" type="text">
+            <div class="w-50 pr3 relative">
+              <label class="black-50 f6">Buscar</label>
+              <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input bg-search"><span class="f6 b ml4 lh-solid dib overflow-hidden lh-title nowrap">Busque um nome ou contato</span></div>
+              <div class="dropdown dropdown--multiple-lists content-box nl3 nr3">
+                <label class="black-50 f6 lh-copy black">Buscar</label>
+                <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title bg-search" type="search">
+                <div class="fl w-50 mt3 pb3"><span class="main-gray db f6">Contatos</span></div>
+                <div class="fl w-50 mt3 pb3"><span class="main-gray db f6">Grupos</span></div>
+                <div class="fl w-100 multiple-lists__container theblack">
+                  <div class="fl w-50 gruposecontatos contatos-lista" data-origin="contatos-lista">
+                    <ul class="pt0 pb1 pl0">
+                      <li><span class="b" data-id="1">Bruno Farias</span></li>
+                      <li><span class="b" data-id="2">Nayara Rodrigues</span></li>
+                    </ul>
+                  </div>
+                  <div class="fl w-50 gruposecontatos grupos-lista" data-origin="grupos-lista">
+                    <ul class="pt0 pb1 pl0">
+                      <li><span class="b" data-id="1">Maiores de 30 anos</span></li>
+                      <li><span class="b" data-id="2">Mulheres casadas</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
             <button class="dib fr cta cta-accent download-button"><span class="has-icon-right icon-dropdown__white">adicionar</span></button>
-            <div class="download-items absolute right-0 theblack ph3 pt1 pb3 bg-white z-3"><a class="db b f6 mt3 theblack accent-hover" href="javascript:">Gerar relatórios</a><a class="db b f6 mt3 theblack accent-hover" href="javascript:">Gerar tabela</a><a class="db b f6 mt3 theblack accent-hover" href="javascript:">Gerar gráfico</a></div>
+            <div class="download-items absolute right-0 theblack ph3 pt1 pb3 bg-white z-3"><a class="db b f6 mt3 theblack accent-hover" href="javascript:">Grupo</a><a class="db b f6 mt3 theblack accent-hover" href="javascript:">Contato</a><a class="db b f6 mt3 theblack accent-hover" href="javascript:">Contato na Blacklist</a></div>
           </div>
-          <div class="mt4 theblack">
+          <div class="mt5 theblack">
             <div class="has-dropdown relative dib"><span class="f6 nowrap fl">Mostrar</span><span class="fl f6 theblack b ml1 pr5 bb relative has-icon-right icon-dropdown insert-criteria view-box-close pointer">todos os contatos</span>
-              <div class="view-box-open shadow-2 pa3 absolute top-0 left-0 bg-white z-3 w-100 content-box nt3 nl3 o-0"><span class="fl f6 nowrap pr1">Mostrar</span>
-                <div class="dropdown-item-box fl"><span class="fl cb f6 theblack b bb relative has-icon-right icon-dropdown insert-criteria">todos os contatos</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover">todos os contatos</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover">contatos na black list</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover">contatos fora da black list</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover">grupos</span></div>
+              <div class="view-box-open shadow-2 pa3 absolute top-0 left-0 bg-white z-3 w-100 content-box nt3 nl3 o-0"><span class="fl f6 nowrap pr1 nowrap">Mostrar</span>
+                <div class="dropdown-item-box fl"><span class="fl cb f6 theblack b bb relative has-icon-right icon-dropdown insert-criteria">todos os contatos</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover nowrap">todos os contatos</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover nowrap">contatos na black list</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover nowrap">contatos fora da black list</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover nowrap">grupos</span></div>
               </div>
             </div>
             <div class="has-dropdown relative dib ml4"><span class="f6 nowrap fl">Ordenar por</span><span class="fl f6 theblack b ml1 pr5 bb relative has-icon-right icon-dropdown insert-criteria view-box-close pointer">mais novos</span>
               <div class="view-box-open shadow-2 pa3 absolute top-0 left-0 bg-white z-3 w-100 content-box nt3 nl3 o-0"><span class="fl f6 nowrap pr1">Ordenar por</span>
-                <div class="dropdown-item-box fl"><span class="fl cb f6 theblack b bb relative has-icon-right icon-dropdown insert-criteria">mais novos</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover">mais novos</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover">mais antigos</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover">últimos atualizados</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover">A - Z</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover">Z - A</span></div>
+                <div class="dropdown-item-box fl"><span class="fl cb f6 theblack b bb relative has-icon-right icon-dropdown insert-criteria">mais novos</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover nowrap">mais novos</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover nowrap">mais antigos</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover nowrap">últimos atualizados</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover nowrap">A - Z</span><span class="fl cb f6 theblack b mt3 relative view-criteria pointer accent-hover nowrap">Z - A</span></div>
               </div>
             </div>
           </div>
         </div>
         <div class="fl w-100 pa3">
-          <div class="fl w-100 mt4">
-            <div class="nl3 nr3">
+          <div class="fl w-100">
+            <div class="nl3 nr3 flex items-stretch">
               <!-- FILTER ITEM-->
-              <div class="w-25 fl ph3">
-                <div class="fl w-100 br2 pa3 theblack shadow-0"><span class="f4 accent b">Ursula Reichenbach </span></div>
-              </div>
+              <div class="w-25 ph3"><a href="javascript:">
+                  <div class="w-100 h-100 br2 ba b--black-10 ph3 theblack shadow-0 lh-copy flex flex-column hover-card">
+                    <div class="flex flex-column mt3 h-100">
+                      <p class="f4 accent b lh-title">Ursula Reichenbach</p>
+                      <div class="mv4">
+                        <p class="f5 main-gray">(11) 98823-8510</p>
+                        <p class="f5 main-gray">Campinas - SP</p>
+                        <p class="f5 main-gray">Movile Internet Móvel S.A.</p>
+                        <p class="f5 main-gray">ursula.reichenbach@movile.com</p>
+                      </div>
+                      <p class="f5 main-gray b mta mb3">Recebeu 9999 mensagens</p>
+                    </div>
+                    <div class="flex nl3 nr3 bt b--black-10 items-center pa3 justify-end"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS</span></div>
+                  </div></a></div>
               <!-- FILTER ITEM-->
-              <div class="w-25 fl ph3">
-                <div class="fl w-100 br2 pa3 theblack shadow-0"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Envios consolidados</span></div>
-              </div>
+              <div class="w-25 ph3"><a href="javascript:">
+                  <div class="w-100 h-100 br2 ba b--black-10 ph3 theblack shadow-0 lh-copy flex flex-column hover-card">
+                    <div class="flex flex-column mt3 h-100">
+                      <p class="f4 accent b lh-title">Ursula Reichenbach</p>
+                      <div class="mv4">
+                        <p class="f5 main-gray">(11) 98823-8510</p>
+                      </div>
+                      <p class="f5 main-gray b mta mb3">Recebeu 9999 mensagens</p>
+                    </div>
+                    <div class="flex nl3 nr3 bt b--black-10 items-center pa3 justify-end"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS</span></div>
+                  </div></a></div>
               <!-- FILTER ITEM-->
-              <div class="w-25 fl ph3">
-                <div class="fl w-100 br2 pa3 theblack shadow-0"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Envios consolidados</span></div>
-              </div>
-              <!-- FILTER ITEM-->
-              <div class="w-25 fl ph3">
-                <div class="fl w-100 br2 pa3 theblack shadow-0"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Envios consolidados</span></div>
-              </div>
+              <div class="w-25 ph3"><a href="javascript:">
+                  <div class="w-100 h-100 br2 ba b--black-10 blacklist ph3 theblack shadow-0 lh-copy flex flex-column hover-card">
+                    <div class="flex flex-column mt3 h-100">
+                      <p class="f4 accent b lh-title">Ursula Reichenbach</p>
+                      <div class="mv4">
+                        <p class="f5 main-gray">(11) 98823-8510</p>
+                      </div>
+                      <p class="f5 main-gray b mta mb3">Recebeu 9999 mensagens</p>
+                    </div>
+                    <div class="flex nl3 nr3 bt b--black-10 items-center pa3 justify-end"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS</span></div>
+                  </div></a></div>
             </div>
           </div>
         </div>

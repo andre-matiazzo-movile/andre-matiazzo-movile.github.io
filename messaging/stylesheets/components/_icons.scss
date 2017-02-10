@@ -1,283 +1,233 @@
 // Use them on <span> inside links or buttons
 
 .has-icon-left {
-	cursor: pointer;
 	position: relative;
 	padding-left: 18px !important;
 	&:after {		
-		left: 0px !important;
+		left: 0px;
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		cursor: pointer;
 	}
 }
 
 .has-icon-right {
-	cursor: pointer;
 	position: relative;
 	padding-right: 18px !important;
-	&:after {
-		right: 0px !important;
+	&:after {		
+		right: 0px;
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		cursor: pointer;
+	}
+}
+
+.has-tooltip {
+	position: relative;
+	.tooltip-content {
+		position: absolute;
+		pointer-events: none;
+		padding: 8px;
+		opacity: 0;
+		width: auto;
+		bottom: 24px;
+		left: 0;
+		margin-left: -10px; 
+		background: $accent;
+		color: white;
+		text-align: center;
+		transition: all ease 0.4s;
+		-webkit-transform: translateY(5px);
+		   -moz-transform: translateY(5px);
+		    -ms-transform: translateY(5px);
+		     -o-transform: translateY(5px);
+		        transform: translateY(5px);
+		&::after {
+			background: $accent;
+			content: '';
+			width: 14px;
+			height: 14px;
+			position: absolute;
+			bottom: -3px;
+			left: 9px;
+			z-index: -1;
+			transform: rotate(45deg);
+      	}
+	}
+	&:hover > .tooltip-content {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-ms-transform: translateY(0px);
+		-o-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+	.tooltip-close {
+		top: -100%;
+	}
+	.tooltip-far {
+		top: -150%;
 	}
 }
 
 .icon-user {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/user.png') no-repeat 2px center;
-		background-size: contain;
+		background-image: url('../img/icons/user.png');
 	}
 }
 
 .icon-check {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/check.png') no-repeat 2px center;
-		background-size: 12px;
+		background-image: url('../img/icons/check.png');
 	}
-}
-
-.icon-search {
-	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/search.png') no-repeat 2px center;
-		background-size: 12px;
-	}
-}
-
-.bg-search {
-	background: url('../img/icons/search.png') no-repeat 1rem center;
-	background-size: 1rem;
-	padding-left: 3rem;
 }
 
 .icon-check--white {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/check-white.png') no-repeat 2px center;
-		background-size: 12px;
+		background-image: url('../img/icons/check-white.png');
 	}
 }
 
 .icon-check--gray {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 6px);
-		background: url('../img/icons/check-gray.png') no-repeat 2px center;
-		background-size: 12px;
+		background-image: url('../img/icons/check-gray.png');
 	}
+}
+
+.icon-eye-blue {
+	&:after {
+		background-image: url('../img/icons/eye-blue.png');
+	}
+}
+
+.icon-search {
+	&:after {
+		background-image: url('../img/icons/search.png');
+	}
+}
+
+.bg-search {
+	background-image: url('../img/icons/search.png') ;
+	background-repeat: no-repeat;
+	background-position: 1rem center;
+	background-size: 1rem;
+	padding-left: 3rem;
 }
 
 .icon-plus {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/plus-gray.png') no-repeat 2px center;
-		background-size: 12px;
+		background-image: url('../img/icons/plus-gray.png');
 	}
 }
 
 .icon-plus--blue {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/plus-blue.png') no-repeat 2px center;
-		background-size: 12px;
+		background-image: url('../img/icons/plus-blue.png');
 	}
 }
 
 .icon-continue {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/arrow-right-white.png') no-repeat 2px center;
-		background-size: 12px;
+		background-image: url('../img/icons/arrow-right-white.png');
 	}
 }
 
 .icon-sidemodal {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/sidemodal.png') no-repeat 2px center;
-		background-size: 12px;
+		background-image: url('../img/icons/sidemodal.png');
 	}
 }
 
 .icon-arrow-left {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/arrow-left.png') no-repeat 2px center;
-		background-size: 12px;
+		background-image: url('../img/icons/arrow-left.png');
 	}
 }
 
 .icon-arrow-left--blue {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 6px);
-		background: url('../img/icons/arrow-left-blue.png') no-repeat 2px center;
-		background-size: 12px;
+		background-image: url('../img/icons/arrow-left-blue.png');
 	}
 }
 
 .icon-arrow-right--blue {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 6px);
-		background: url('../img/icons/arrow-right-blue.png') no-repeat 2px center;
-		background-size: 12px;
+		background-image: url('../img/icons/arrow-right-blue.png');
 	}
 }
 
 .icon-close-blue {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/close-blue.png') no-repeat center center;
-		background-size: 12px;
-		cursor: pointer;
+		background-image: url('../img/icons/close-blue.png');
 	}
 }
 
 .icon-refresh {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/refresh.png') no-repeat center center;
-		background-size: 12px;
-		cursor: pointer;
+		background-image: url('../img/icons/refresh.png');
 	}
 }
 
 .icon-refresh--white {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/refresh-white.png') no-repeat center center;
-		background-size: 12px;
-		cursor: pointer;
+		background-image: url('../img/icons/refresh-white.png');
 	}
 }
 
 .icon-refresh--gray {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/refresh-gray.png') no-repeat center center;
-		background-size: 12px;
-		cursor: pointer;
+		background-image: url('../img/icons/refresh-gray.png');
 	}
 }
 
 .icon-download,
 .icon-upload {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/download-blue.png') no-repeat center center;
-		background-size: 12px;
-		cursor: pointer;
+		background-image: url('../img/icons/download-blue.png');
 	}
 }
 
 .icon-upload::after {
-	background: url('../img/icons/upload-icon.png') no-repeat center center;
-	background-size: 12px;
+	background-image: url('../img/icons/upload-icon.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.icon-download-blue {
+	&:after {
+		background-image: url('../img/icons/download-blue.png');
+	}
 }
 
 .icon-dropdown {
 	&:after {
-		content: "";
-		width: 10px;
-		height: 10px;
-		right: 0;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/caretdown-gray.png') no-repeat center center;
-		background-size: 12px;
-		cursor: pointer;
+		background-image: url('../img/icons/caretdown-gray.png');
 	}
 }
 
 .icon-dropdown__white {
 	&:after {
-		content: "";
-		width: 10px;
-		height: 10px;
-		right: 0;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/caretdown.png') no-repeat center center;
-		background-size: 12px;
-		cursor: pointer;
+		background-image: url('../img/icons/caretdown.png');
 	}
 }
 
 .icon-dropdown__blue {
 	&:after {
-		content: "";
-		width: 10px;
-		height: 10px;
-		right: 0;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/caretdown-blue.png') no-repeat center center;
-		background-size: 12px;
-		cursor: pointer;
+		background-image: url('../img/icons/caretdown-blue.png');
 		-webkit-transform: rotate(0deg);
 		-ms-transform: rotate(0deg);
 		-o-transform: rotate(0deg);
@@ -294,56 +244,24 @@
 
 .icon-notif__gray {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		right: 0;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/notif-gray.png') no-repeat center center;
-		background-size: 12px;
-		cursor: pointer;
+		background-image: url('../img/icons/notif-gray.png');
 	}
 }
 
 .icon-notif__blue {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		right: 0;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/notif-blue.png') no-repeat center center;
-		background-size: 12px;
-		cursor: pointer;
+		background-image: url('../img/icons/notif-blue.png');
 	}
 }
 
 .icon-tooltip {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		right: 0;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/question-mark.png') no-repeat center center;
-		background-size: 12px;
-		cursor: pointer;
+		background-image: url('../img/icons/question-mark.png');
 	}
 }
 
 .icon-edit--blue {
 	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		right: 0;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/edit-icon-blue.png') no-repeat center center;
-		background-size: 12px;
-		cursor: pointer;
+		background-image: url('../img/icons/edit-icon-blue.png');
 	}
 }
