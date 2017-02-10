@@ -5,11 +5,8 @@ html(lang='pt-br')
 		meta(charset='UTF-8')
 		meta(http-equiv='x-ua-compatible', content='ie=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-		title Movile Messaging – Permissões
+		title Movile Messaging – Dashboard
 		meta(name='movile-messaging', content='Movile Messaging')
-		// For the calendar
-		link(href='calendar/jquery-ui/jquery-ui.min.css', rel='stylesheet')
-		link(href='calendar/jquery.comiseo.daterangepicker.css', rel='stylesheet')
 		// For the charts
 		link(href='charts/chartist.min.css', rel='stylesheet')
 		script(src='charts/chartist.min.js', charset='utf-8')
@@ -27,7 +24,8 @@ html(lang='pt-br')
 		aside.fixed.fl.h-100.bg-sidebar
 			.bb.b--black-10
 				.pl4.mt4.pb3.w4
-					img.db.w-90(src='img/logo-white.png', alt='Logo Movile Messaging')
+					a(href="dashboard.html").db.w-90
+						img.db(src='img/logo-white.png', alt='Logo Movile Messaging')
 			nav.pl4.mt4
 				ul.list.pl0.mt3
 					li.mt3
@@ -35,7 +33,7 @@ html(lang='pt-br')
 					li.mt3
 						a.white.dim.f6(href='novo-envio.html') Novo envio
 					li.mt3
-						a.white.dim.f6(href='') Relatórios
+						a.white.dim.f6(href='relatorios-consolidados.html') Relatórios
 					li.mt3
 						a.white.dim.f6(href='') Contatos
 					li.mt3
@@ -45,7 +43,7 @@ html(lang='pt-br')
 					li.mt3
 						a.white.dim.f6(href='') Suporte
 		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
-			h1.f2.fl.black Dashboard
+			h1.f2.fl.black.lh-solid Dashboard
 			.fr.lh-copy.relative
 				.relative.mr4.fl
 					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray Notificações
@@ -120,7 +118,7 @@ html(lang='pt-br')
 				.fl.w-100.pa3
 					.fl.w-100
 						h3.fl.black.f3.lh-solid Resultados
-						a.fr.cta
+						a.fr.cta(href="novo-envio.html")
 							span.has-icon-left.icon-plus--blue novo envio
 					// FILTERS ROW
 					.fl.w-100.mt4
@@ -199,17 +197,10 @@ html(lang='pt-br')
 											span Juliana Gaspari					
 			// RESULTS
 			.fl.w-100.ph3.pt4
-				h3.theblack.f3.fl.w-100 Resultados
 				.mt4.relative.fl.w-100
 					div.fl
 						span.black.f6 Campanha
 						h3.blue-gray.f4.mt2 Carnaval 2014, por mês
-					a.cta.pointer.download.download-button.fr
-						span.has-icon-right.icon-dropdown__blue download
-					.download-items.absolute.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
-						a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar relatórios
-						a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar tabela
-						a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Gerar gráfico
 
 				.mt4.fl.w-100
 					span.theblack.f7.ttu.b envios
@@ -252,59 +243,54 @@ html(lang='pt-br')
 							| mensagens
 							br
 							| com erro
-			//Detalhes
+			//DETAILS
 			.fl.w-100.ph3.pt4.mt5
-				.flex.justify-between.relative
-					h3.blue-gray.f5 Lista de envios
-					//- a.cta.pointer.download.download-button
-					//- 	span.has-icon-right.icon-dropdown__blue download
-					//- .flex.flex-column.download-items.absolute.top-0.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
-					//- 	a(href='javascript:').b.f6.mt2.theblack.accent-hover Gerar tabela
+					h3.theblack.f4.fl.w-100 Lista de envios
 			// tabela com resultados
-			.flex.relative
+			.fl.w-100.relative.ph3
 				div.w-90.overflow-x-scroll
 					table.mt4.mb4.tl.v-top.w-100(cellspacing='0', cellpadding='0')
-						thead.v-top.w-100
-							tr.ttu.f7.theblack.b.tl.tracked
-								th.nowrap.table-month
-									span.bb.b--black-20.pv2.pr3.db Month
-								th.nowrap.w-4.table-campaign
-									span.bb.b--black-20.pv2.pr3.db Campaign
-								th.nowrap.table-concluded
-									span.bb.b--black-20.pv2.pr3.db Concluded
-								th.nowrap.table-scheduled
-									span.bb.b--black-20.pv2.pr3.db Scheduled
-								th.nowrap.table-sent
-									span.bb.b--black-20.pv2.pr3.db Sent
-								th.nowrap.table-Errors
-									span.bb.b--black-20.pv2.pr3.db Errors
-								th.nowrap.table-sending-start
-									span.bb.b--black-20.pv2.pr3.db Sending start
+						thead.v-top
+							tr.ttu.f8.theblack.b.tl.tracked
+								th.bb.nowrap.table-month
+									span.pv2.pr3.db Month
+								th.bb.nowrap.w-4.table-campaign
+									span.pv2.pr3.db Campaign
+								th.bb.nowrap.w-4.table-concluded
+									span.pv2.pr3.db Concluded
+								th.bb.nowrap.w-4.table-scheduled
+									span.pv2.pr3.db Scheduled
+								th.bb.nowrap.w-4.table-sent
+									span.pv2.pr3.db Sent
+								th.bb.nowrap.w-4.table-Errors
+									span.pv2.pr3.db Errors
+								th.bb.nowrap.w-4.table-sending-start
+									span.pv2.pr3.db Sending start
 								th.nowrap.table-customer
-						tbody.v-top.w-100
+						tbody.v-top
 							tr.bb.relative.f6
-								td.nowrap.table-month
-									span.db.bb.b--black-20.pv4.pr3 December
-								td.nowrap.table-campaign
-									span.db.bb.b--black-20.pv4.pr3 Mother's day 2017
-								td.nowrap.table-concluded
-									span.db.bb.b--black-20.pv4.pr3 80%
-								td.nowrap.table-scheduled
-									span.db.bb.b--black-20.pv4.pr3 9.5 MM
-								td.nowrap.table-sent
-									span.db.bb.b--black-20.pv4.pr3 5.5 MM
-								td.nowrap.table-Errors
-									span.db.bb.b--black-20.pv4.pr3 2.0 MM
-								td.nowrap.table-sending-start
-									span.db.bb.b--black-20.pv4.pr3 24/01/2017 10:28
-				table.w-10.h-100.mt4.mb4.tl.v-top.absolute.top-0.right-0.bg-white(cellspacing='0', cellpadding='0')
-					thead.v-top.w-100
-						tr.pv3.b--black.bb.ttu.f7.theblack.b.tl.tracked
-							th.bb.b--black-20.pv2.ph2.table-detalhes
+								td.nowrap.f6.bb.b--black-20.table-month
+									span.db.pv4.pr3 December
+								td.nowrap.f6.bb.b--black-20.table-campaign
+									span.db.pv4.pr3 Mother's day 2017
+								td.nowrap.f6.bb.b--black-20.table-concluded
+									span.db.pv4.pr3 80%
+								td.nowrap.f6.bb.b--black-20.table-scheduled
+									span.db.pv4.pr3 9.5 MM
+								td.nowrap.f6.bb.b--black-20.table-sent
+									span.db.pv4.pr3 5.5 MM
+								td.nowrap.f6.bb.b--black-20.table-Errors
+									span.db.pv4.pr3 2.0 MM
+								td.nowrap.f6.bb.b--black-20.table-sending-start
+									span.db.pv4.pr3 24/01/2017 10:28
+				table.w-10.h-100.mt4.mb4.tl.v-top.absolute.top-0.right-1.bg-white(cellspacing='0', cellpadding='0')
+					thead.v-top
+						tr.pv3.b--black.bb.ttu.f8.theblack.b.tl.tracked
+							th.bb.pv2.pl3.table-detalhes
 								a.accent(href='javascript:') Ações
 					tbody.v-top
 						tr.bb.relative.f6
-							td.bb.b--black-20.pv4.ph2.table-detalhes
+							td.bb.b--black-20.pv4.ph3.table-detalhes.left-shadow
 								a.accent.has-icon-left.icon-download-blue.has-tooltip(href='javascript:', alt='Download')
 									.tooltip-content
 										span Download

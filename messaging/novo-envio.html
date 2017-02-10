@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Movile Messaging – Novo envio</title>
     <meta name="movile-messaging" content="Movile Messaging">
-    <!-- For the calendar-->
-    <link href="calendar/jquery-ui/jquery-ui.min.css" rel="stylesheet">
-    <link href="calendar/jquery.comiseo.daterangepicker.css" rel="stylesheet">
     <!-- For the charts-->
     <link href="charts/chartist.min.css" rel="stylesheet">
     <script src="charts/chartist.min.js" charset="utf-8"></script>
@@ -36,7 +33,7 @@
   <body>
     <aside class="fl h-100 bg-sidebar">
       <div class="bb b--black-10">
-        <div class="pl4 mt4 pb3 w4"><img class="db w-90" src="img/logo-white.png" alt="Logo Movile Messaging"></div>
+        <div class="pl4 mt4 pb3 w4"><a class="db w-90" href="dashboard.html"><img class="db" src="img/logo-white.png" alt="Logo Movile Messaging"></a></div>
       </div>
       <!--
       <nav class="pl4 mt4">
@@ -64,7 +61,7 @@
       -->
     </aside>
     <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bg-darker-accent bb b--black-10">
-      <h1 class="f2 fl white">Novo envio</h1>
+      <h1 class="f2 fl white lh-solid">Novo envio</h1>
       <div class="fr lh-copy relative"><a class="white ttu tracked f7 b fl" href="javascript:;">salvar e sair</a></div>
     </section>
     <!-- MAIN CONTENT-->
@@ -102,7 +99,7 @@
                   </div>
                 </div>
               </div>
-              <p class="warning dn main-gray lh-copy mt1">Ao importar de um arquivo, você não pode inserir contatos manualmente</p><a class="dn fl f7 ttu tracked b accent pointer clear-all mb3 mt3" href="javascript:">Limpar todos</a>
+              <p class="fl warning dn main-gray lh-copy mt2">Ao importar de um arquivo, você não pode inserir contatos manualmente</p><a class="dn fl f7 ttu tracked b accent pointer clear-all mb3 mt4" href="javascript:">Limpar todos</a>
               <ul class="fl cb list pl0 contatos"></ul>
             </div>
             <!-- SECOND HALF OF THE GRID-->
@@ -115,11 +112,11 @@
                 </form>
                 <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon has-icon-left icon-upload" data-before-chosen="Escolher arquivo" data-after-chosen="Mudar arquivo">Escolher arquivo</span></label>
                 <div class="fr tr cl how-to mt1 measure-narrow">
-                  <button class="pa0 bg-white bn f7 ttu tracked b accent modal-trigger trigger--how-to-do">veja como fazer							</button>
+                  <button class="pa0 bg-white bn f8 ttu tracked b accent modal-trigger trigger--how-to-do">veja como fazer							</button>
                 </div>
                 <div class="fl cb dn file-name bg-medium-accent pa2 mr2 mb2 mt2"><a class="has-icon-left icon-close-blue"></a><span class="f7 accent b"></span></div>
               </div>
-              <p class="measure-narrow warning dn tl cb main-gray lh-copy mt1">Ao inserir contatos manualmente, você não pode selecionar um arquivo</p>
+              <p class="measure-narrow warning dn tl cb main-gray lh-copy pt2">Ao inserir contatos manualmente, você não pode selecionar um arquivo</p>
             </div>
           </div>
         </div>

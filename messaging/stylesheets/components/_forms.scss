@@ -205,6 +205,14 @@ input {
 		background-color: $main-gray;
 		-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 	}
+	//Removes space on "Choose who's going to receive" in Novo Envio
+	.gruposecontatos li:first-child {
+		padding-top: 0;
+	}
+	// For active dropdowns that doesn't have an input inside of it, just a list
+	& label + ul {
+		margin-top: 0.25rem;
+	}
 }
 
 .dropdown ul {
@@ -215,21 +223,25 @@ input {
 	li {
 		padding: 8px 0;
 		font-size: 1.12rem; // 18px
-		line-height: 1.375rem; //22px
+		line-height: 1.25;
 		font-weight: $black;
 		// color: $main-gray;
 		span {
 			display: inline-block;
 			min-width: 48px;
 			font-size: 0.875rem; //14px
-			line-height: 1.375rem; //22px
+			line-height: 1.25;
 			// font-weight: $regular;
-			// color: $theblack;
+			color: $theblack;
 			margin-right: 12px;
 			cursor: pointer;
 			&:hover {
 				color: $accent;
 			}
+		}
+		// Adds color when contact or group is selected in Novo Envio
+		&.name-selected span{
+			color: $accent;
 		}
 		&.search__subheading span,
 		&.search__subheading span:hover {
@@ -266,6 +278,7 @@ input {
 	background-size: 10px;
 	background-position: right 20px center;
 	background-repeat: no-repeat;
+	cursor: pointer;
 }
 
 .search-active {
@@ -299,12 +312,12 @@ input {
 	}
 }
 
-.input.multichoice {
-	position: relative;
-	border-color: transparent;
-	padding: 0 0 0 30px;
-	margin-left: -30px;
-}
+// .input.multichoice {
+// 	position: relative;
+// 	border-color: transparent;
+// 	padding: 0 0 0 30px;
+// 	margin-left: -30px;
+// }
 
 .checkbox,
 .radio {
@@ -346,8 +359,8 @@ input {
 			opacity: 0;
 			left: -0.8125rem; //13px
 			@include vertical-center;
-			height: 01rem; 
-			width: 01rem;
+			height: 0.75rem; 
+			width: 0.75rem;
 			background-color: #84ADFF;
 			@include transition(150ms);
 		}
@@ -374,15 +387,15 @@ input {
 	}
 }
 
-.input-group {
-	float: left;
-	width: 100%;
-	margin-top: -24px;
-	& .main-label {
-		display: block;
-		margin-top: 24px;
-	}
-}
+// .input-group {
+// 	float: left;
+// 	width: 100%;
+// 	margin-top: -24px;
+// 	& .main-label {
+// 		display: block;
+// 		margin-top: 24px;
+// 	}
+// }
 
 .input-with-select {
 	position: relative;
@@ -481,18 +494,18 @@ input {
 // 	padding: 18px;
 // }
 
-.fake-textarea {
-	width: 100%;
-	border: 1px solid #A2B7C1;
-	color: $theblack;
-	font-size: 0.875rem;
-	font-weight: 500;
-	line-height: 1.375rem;
-	margin-top: 6px;
-	padding: 12px 16px;
-	height: 216px;
-	overflow-y: auto;
-}
+// .fake-textarea {
+// 	width: 100%;
+// 	border: 1px solid #A2B7C1;
+// 	color: $theblack;
+// 	font-size: 0.875rem;
+// 	font-weight: 500;
+// 	line-height: 1.375rem;
+// 	margin-top: 6px;
+// 	padding: 12px 16px;
+// 	height: 216px;
+// 	overflow-y: auto;
+// }
 
 // .dropdown-item-box {
 // 	.checkbox,

@@ -67,12 +67,6 @@ $(document).ready(function() {
 			$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
 		})
 
-	//On New Contact, shows the "improve this contact" column
-	$('.improve-contact__cta .cta').bind('click', function() {
-		$(this).parent().hide()
-		$('.improve-contact .input-group').fadeIn();
-	});
-
 	//Get text from the selection within dropdowns and put it on the respective input
 	$('.dropdown li').not('.dropdown li.search__subheading, .outro-genero').bind('click', function() {
 		var textFromDropdown = $(this).find('span').text();

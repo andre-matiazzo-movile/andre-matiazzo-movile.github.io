@@ -26,7 +26,8 @@ html(lang='pt-br')
 		aside.fixed.fl.h-100.bg-sidebar
 			.bb.b--black-10
 				.pl4.mt4.pb3.w4
-					img.db.w-90(src='img/logo-white.png', alt='Logo Movile Messaging')
+					a(href="dashboard.html").db.w-90
+						img.db(src='img/logo-white.png', alt='Logo Movile Messaging')
 			nav.pl4.mt4
 				ul.list.pl0.mt3
 					li.mt3
@@ -44,7 +45,7 @@ html(lang='pt-br')
 					li.mt3
 						a.white.dim.f6(href='') Suporte
 		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
-			h1.f2.fl.black Relatórios
+			h1.f2.fl.black.lh-solid Relatórios
 			.fr.lh-copy.relative
 				.relative.mr4.fl
 					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray Notificações
@@ -133,7 +134,7 @@ html(lang='pt-br')
 									label.black-50.f6 Tipo de relatório
 									//- input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
 									//- span.main-gray.db.f6.pl3.pv3 Buscas recentes
-									ul.pt0.pb1.pl3
+									ul.pb1.pl0
 										li
 											span Envios consolidades
 										li

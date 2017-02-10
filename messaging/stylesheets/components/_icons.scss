@@ -18,6 +18,54 @@
 	}
 }
 
+.has-tooltip {
+	position: relative;
+	.tooltip-content {
+		position: absolute;
+		pointer-events: none;
+		padding: 8px;
+		opacity: 0;
+		width: auto;
+		bottom: 24px;
+		left: 0;
+		margin-left: -10px; 
+		background: $accent;
+		color: white;
+		text-align: center;
+		transition: all ease 0.4s;
+		-webkit-transform: translateY(5px);
+		   -moz-transform: translateY(5px);
+		    -ms-transform: translateY(5px);
+		     -o-transform: translateY(5px);
+		        transform: translateY(5px);
+		&::after {
+			background: $accent;
+			content: '';
+			width: 14px;
+			height: 14px;
+			position: absolute;
+			bottom: -3px;
+			left: 9px;
+			z-index: -1;
+			transform: rotate(45deg);
+      	}
+	}
+	&:hover > .tooltip-content {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-ms-transform: translateY(0px);
+		-o-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+	.tooltip-close {
+		top: -100%;
+	}
+	.tooltip-far {
+		top: -150%;
+	}
+}
+
 .icon-user {
 	&:after {
 		content: "";
@@ -42,24 +90,6 @@
 	}
 }
 
-.icon-search {
-	&:after {
-		content: "";
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: calc(50% - 5px);
-		background: url('../img/icons/search.png') no-repeat 2px center;
-		background-size: 12px;
-	}
-}
-
-.bg-search {
-	background: url('../img/icons/search.png') no-repeat 1rem center;
-	background-size: 1rem;
-	padding-left: 3rem;
-}
-
 .icon-check--white {
 	&:after {
 		content: "";
@@ -82,6 +112,36 @@
 		background: url('../img/icons/check-gray.png') no-repeat 2px center;
 		background-size: 12px;
 	}
+}
+
+.icon-eye-blue {
+	&:after {
+		content: "";
+		width: 14px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/eye-blue.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
+.icon-search {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/search.png') no-repeat 2px center;
+		background-size: 12px;
+	}
+}
+
+.bg-search {
+	background: url('../img/icons/search.png') no-repeat 1rem center;
+	background-size: 1rem;
+	padding-left: 3rem;
 }
 
 .icon-plus {
@@ -237,6 +297,19 @@
 .icon-upload::after {
 	background: url('../img/icons/upload-icon.png') no-repeat center center;
 	background-size: 12px;
+}
+
+.icon-download-blue {
+	&:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: calc(50% - 5px);
+		background: url('../img/icons/download-blue.png') no-repeat center center;
+		background-size: 12px;
+		cursor: pointer;
+	}
 }
 
 .icon-dropdown {

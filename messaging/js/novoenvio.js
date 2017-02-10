@@ -9,12 +9,17 @@ $(document).ready(function() {
 		$(".how-to").hide();
 		$(".file-name").css("display","block");
 		$(".file-name span").text($("input[type='file']").val().replace(/^.*\\/, ""));
-		$(".icon-upload").text($(".icon-upload").attr("data-after-chosen")).removeClass("icon-upload").addClass("icon-refresh--gray");
+		// $(".icon-upload").text($(".icon-upload").attr("data-after-chosen")).removeClass("icon-upload").addClass("icon-refresh--gray");
+		if (!$(this).val()) {
+			$('.file-name').hide();
+			activeOption(".search-input");
+		} else {
 		// $(".search-input").css({
 		// 	'opacity' : '0.3',
 		// 	'pointer-events' : 'none'
 		// });
 		deactiveOption(".search-input");
+		}
 	})
 
 	$(".file-name a").bind('click', function(){
@@ -44,11 +49,11 @@ $(document).ready(function() {
 	});
 
 	//Closes opened menu dropdowns if you click on its trigger again
-	$('.upper-bar-menu').on('click', function () {
-		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
-		$(this).toggleClass('upper-bar-menu--active');
-		$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
-	});
+	// $('.upper-bar-menu').on('click', function () {
+	// 	$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
+	// 	$(this).toggleClass('upper-bar-menu--active');
+	// 	$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
+	// });
 
 	//Get text from the selection within dropdowns and put it on the respective input
 	$('.dropdown li').on('click', function() {

@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Movile Messaging – Permissões</title>
     <meta name="movile-messaging" content="Movile Messaging">
-    <!-- For the calendar-->
-    <link href="calendar/jquery-ui/jquery-ui.min.css" rel="stylesheet">
-    <link href="calendar/jquery.comiseo.daterangepicker.css" rel="stylesheet">
     <!-- For the charts-->
     <link href="charts/chartist.min.css" rel="stylesheet">
     <script src="charts/chartist.min.js" charset="utf-8"></script>
@@ -24,7 +21,7 @@
   <body>
     <aside class="fixed fl h-100 bg-sidebar">
       <div class="bb b--black-10">
-        <div class="pl4 mt4 pb3 w4"><img class="db w-90" src="img/logo-white.png" alt="Logo Movile Messaging"></div>
+        <div class="pl4 mt4 pb3 w4"><a class="db w-90" href="dashboard.html"><img class="db" src="img/logo-white.png" alt="Logo Movile Messaging"></a></div>
       </div>
       <nav class="pl4 mt4">
         <ul class="list pl0 mt3">
@@ -39,7 +36,7 @@
       </nav>
     </aside>
     <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bb b--black-10">
-      <h1 class="f2 fl theblack">Permissões</h1>
+      <h1 class="f2 fl theblack lh-solid">Permissões</h1>
       <div class="fr lh-copy relative">
         <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray">Notificações</a>
           <div class="absolute top--1 right--1">
@@ -390,15 +387,6 @@
   </body>
   <!-- jQuery-->
   <script src="js/jquery-3.1.0.min.js"></script>
-  <script>
-    $(".truncated").click(function() {
-    	$(".truncated").toggleClass("truncate");
-    	$(".truncated").toggleClass("not-truncate");
-    	$(".truncated").toggleClass("mw5");
-    	$(this).parents(".overflow-x-scroll").scrollLeft(1000);
-    });
-    
-  </script>
   <script>
     $('.dropdown-checkbox').click(function() {
     	var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;

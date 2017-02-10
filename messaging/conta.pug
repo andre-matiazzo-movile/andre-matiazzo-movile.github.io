@@ -6,9 +6,6 @@ html(lang='pt-br')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		title Movile Messaging – Sua conta
 		meta(name='movile-messaging', content='Movile Messaging')
-		// For the calendar
-		link(href='calendar/jquery-ui/jquery-ui.min.css', rel='stylesheet')
-		link(href='calendar/jquery.comiseo.daterangepicker.css', rel='stylesheet')
 		// For the charts
 		link(href='charts/chartist.min.css', rel='stylesheet')
 		script(src='charts/chartist.min.js', charset='utf-8')
@@ -26,7 +23,8 @@ html(lang='pt-br')
 		aside.fixed.fl.h-100.bg-sidebar
 			.bb.b--black-10
 				.pl4.mt4.pb3.w4
-					img.db.w-90(src='img/logo-white.png', alt='Logo Movile Messaging')
+					a(href="dashboard.html").db.w-90
+						img.db(src='img/logo-white.png', alt='Logo Movile Messaging')
 			nav.pl4.mt4
 				ul.list.pl0.mt3
 					li.mt3
@@ -44,7 +42,7 @@ html(lang='pt-br')
 					li.mt3
 						a.white.dim.f6(href='') Suporte
 		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
-			h1.f2.fl.theblack Sua conta
+			h1.f2.fl.theblack.lh-solid Sua conta
 			.fr.lh-copy.relative
 				.relative.mr4.fl
 					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray Notificações
