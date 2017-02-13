@@ -62,16 +62,14 @@ $success: #00E676;
 
 
 .hover-card {
-	transition: all ease 0.4s;
 	div {
 		transition: all ease 0.4s;
 	}
 	&:hover {
 		transition: all ease 0.4s;
-		border: 2px solid $accent;
+		border: 1px solid $accent;
 		& div {
 			border-color: $accent;
-			transition: all ease 0.4s;
 		}
 	}
 }
