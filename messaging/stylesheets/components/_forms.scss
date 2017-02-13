@@ -28,15 +28,14 @@
 }
 
 // .input-container {
-// 	border-top: 1px solid $lighter-gray;
+// 	border-top: 1px solid rgba(0,0,0,0.2);
 // 	margin-top: 24px;
 // 	padding-top: 24px;
 // }
 
 .input,
-.input--disabled,
 input {
-	// border: 1px solid $lighter-gray;
+	// border: 1px solid rgba(0,0,0,0.2);
 	// padding: 12px 16px;
 	// margin-top: 8px;
 	color: $theblack;
@@ -93,7 +92,7 @@ input {
 
 .input--disabled {
 	border: none;
-	// border-bottom: 1px solid rgba(0,0,0,0.2);
+	border-bottom: 1px solid transparent;
 	background-color: transparent;
 	padding: 0 0 0.5rem 0;
 	cursor: default;
@@ -222,7 +221,7 @@ input {
 	overflow-x: scroll;
 	li {
 		padding: 8px 0;
-		font-size: 1.12rem; // 18px
+		font-size: 1rem; 
 		line-height: 1.25;
 		font-weight: $black;
 		// color: $main-gray;
@@ -247,6 +246,50 @@ input {
 		&.search__subheading span:hover {
 			color: $main-gray;
 			cursor: default;
+		}
+	}
+}
+
+//Editing inline inputs 
+.inputs-infos--active {
+	margin-bottom: 2rem;
+	.input--disabled {
+		display: none;
+	}
+	.input--inline {
+		display: block;
+	}
+	.input__validation {
+		display: block;
+		position: absolute;
+	}
+	&.inputs-infos__line {
+		border-bottom-color: $accent;
+		label {
+			color: $accent;
+		}
+		.input--cancel, .input--confirm {
+			display: inline-block;
+		}
+		span, .input--edit, .input--send-again {
+			display: none;
+		}
+		.input--inline {
+			border-bottom: none;
+		}
+	}
+	&.inputs-infos__group {
+		border-bottom: none;
+		.input--disabled {
+			border-bottom: 1px solid transparent;
+		}
+		.name-input {
+			input.input--inline {
+				border-bottom-color: $accent;
+			}
+			label {
+				color: $accent;
+			}
 		}
 	}
 }
@@ -461,32 +504,6 @@ input {
 	.filter__actions {
 		padding: 12px 0 0;
 		border-top: none;
-	}
-}
-
-//Editing inline inputs 
-.inputs--infos--active {
-	border-bottom-color: $accent;
-	margin-bottom: 2rem;
-	.input--disabled {
-		display: none;
-	}
-	.input--inline {
-		display: block;
-		border-bottom: none;
-	}
-	label {
-		color: $accent;
-	}
-	span, .input--edit, .input--send-again {
-		display: none;
-	}
-	.input--cancel, .input--confirm {
-		display: inline-block;
-	}
-	.input__validation {
-		display: block;
-		position: absolute;
 	}
 }
 

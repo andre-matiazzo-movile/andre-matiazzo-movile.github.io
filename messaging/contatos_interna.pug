@@ -4,7 +4,7 @@ html(lang='pt-br')
 		meta(charset='UTF-8')
 		meta(http-equiv='x-ua-compatible', content='ie=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-		title Movile Messaging – Sua conta
+		title Movile Messaging – Contatos
 		meta(name='movile-messaging', content='Movile Messaging')
 		// For the charts
 		link(href='charts/chartist.min.css', rel='stylesheet')
@@ -38,11 +38,11 @@ html(lang='pt-br')
 					li.mt3
 						a.white.dim.f6(href='permissoes.html') Permissões
 					li.mt3
-						a.white.dim.f6.bb.bw1(href='conta.html') Sua conta
+						a.white.dim.f6(href='conta.html') Sua conta
 					li.mt3
 						a.white.dim.f6(href='') Suporte
 		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
-			h1.f2.fl.theblack.lh-solid Sua conta
+			h1.f2.fl.theblack.lh-solid Contatos
 			.fr.lh-copy.relative
 				.relative.mr4.fl
 					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray Notificações
@@ -112,59 +112,74 @@ html(lang='pt-br')
 				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
 		// MAIN CONTENT
 		section.main-content.ph4.pb5.fr
-			// YOUR INFO
+			a.pa0.bn.bg-white.dib.mt4.fl(onclick='goBack()')
+				span.ttu.b.tracked.f7.accent.has-icon.has-icon-left.icon-arrow-left--blue voltar
+			// INFOS - TITLE AND ACTION BUTTONS
 			div.fl.w-100
-				form.fl.w-100.mt4
-					div.fl
-						h3.theblack.f3.lh-solid Sobre você
-					div.fl.w-100.mt4
-						// ROW
-						div.fl.w-two-thirds.cb.mt3.nl3.nr3
-							.fl.w-50.ph3.relative
-								input.input--inline(type='text' value='André')
-								label Primeiro nome
-								p.f7.mt2.tr.black-20.input__validation Validação
-							.fl.w-50.ph3.relative
-								input.input--inline(type='text' value='Matiazzo')
-								label Sobrenome
-								p.f7.mt2.tr.black-20.input__validation Validação
-						// ROW
-						div.fl.w-two-thirds.cb.mt4.nl3.nr3
-							.fl.w-50.ph3.relative
-								input.input--inline(type='email' value='andre.matiazzo@movile.com')
-								label Email
-								p.f7.mt2.tr.black-20.input__validation Validação
-							.fl.w-50.ph3.relative
-								input.input--inline(type='tel' value='1999999999' id='telefone' max-length='15')
-								label Telefone
-								p.f7.mt2.tr.black-20.input__validation Validação
-			// CHANGE PASSWORD
-			div.fl.w-100.mt6.sent-permissions
-				form.fl.w-100.pb4
-					div.fl
-						h3.theblack.f3.lh-solid Alterar senha?
-						p.mt2.main-gray.lh-copy.measure-narrow Sua senha ter no mínimo 6 dígitos e ser composta por números e letras
-					div.fl.w-100.mt4
-						// ROW
-						div.fl.w-two-thirds.cb.mt3.nl3.nr3
-							.fl.w-50.ph3.relative
-								input.input--inline(type='text')
-								label Nova senha
-								p.f7.mt2.tr.black-20.input__validation Validação
-							.fl.w-50.ph3.relative
-								input.input--inline(type='text')
-								label Confirmar nova senha
-								p.f7.mt2.tr.black-20.input__validation Validação
-			// SEND INVITES
-			div.fl.w-two-thirds.nl3.nr3.ph3
-				button.dib.fr.mt4.cta.cta-accent
-					span.has-icon-right.icon-check--white salvar
+				form.fl.w-100.mt4.inputs-infos.inputs-infos__group
+					div.fl.w-100
+						div.fl
+							h3.theblack.f4.lh-solid Informações gerais
+							p.main-gray.lh-copy.mt2 Criado em 17/06/2016
+						div.fr
+							button.accent.ttu.b.tracked.mr3.has-icon-left.icon-blacklist.f7(type='button') inserir na blacklist
+							button.cta(type='button')
+								span.has-icon-left.icon-edit--blue.input--edit editar
+					// INFOS - CONTENT
+					div.fl.w-100.mt2
+						// NAME
+						div.fl.w-100.cb.mt4.mb3.name-input
+							.fl.w-33.ph0.relative.inputs--cell
+								p.input--disabled.f3.b.lh-title André Matiazzo
+								input.input--inline.dn.f3(type='text' value='André Matiazzo')
+								label Nome*
+								p.f7.mt2.tr.black-20.input__validation.dn Validação
+						//COLUMNS – OTHER INFOS
+						div.fl.w-100.mt4
+							// FIRST COLUMN
+							div.fl.w-33
+								// CITY AND STATE
+								.fl.w-100.ph0.relative.inputs--cell.input-with-select
+									p.input.input--disabled Cidade e estado
+									input.input--inline.dn(type='text' value='Cidade e estado')
+									label Cidade e estado
+									p.f7.mt2.tr.black-20.input__validation.dn Validação
+								// NAME
+								.fl.w-100.ph0.relative.inputs--cell.mt5
+									p.input.input--disabled André Matiazzo
+									input.input--inline.dn(type='text' value='André Matiazzo')
+									label Nome*
+									p.f7.mt2.tr.black-20.input__validation.dn Validação
+
+			
+		// MODAL BOILERPLATE
+		div.dn.modal.bg-black-50.fixed.vh-100.left-0.right-0.o-0.z-5
+			// ARE YOU SURE?
+			.modal__body.modal--delete.bg-white.w-auto.mw6.center.mt6.pt4.ph4.dn
+				//- button.close-modal.pa0.bn.bg-white.accent.ttu.tracked.b.f7.lh-copy.has-icon-left.icon-close-blue.db fechar
+				div
+					h2.f4 Quer remover essa permissão?
+					div.mt4.pb4.tr
+						button.pa0.bn.bg-white.pointer.main-gray.ttu.tracked.f7.b.mr3.close-modal(type='button') cancelar
+						button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.input--yes-delete(type='button') sim, remover
 						
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
+	script.
+		$('.dropdown-checkbox').click(function() {
+			var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
+			if (length == 0) {
+				$(this).prop('checked', true);
+			}
+			var selected = $('.dropdown-checkbox:checked').map(function() {
+			    return this.value;
+			}).get().join(', ');
+			$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
+		});
+
 	// Filters
 	script(src='js/forms.js')
 	// Notifications
 	script(src='js/notifs.js')
-	// Phone mask
-	script(src='js/phone-mask.js')
+	// Modal
+	script(src='js/modal.js')

@@ -13,7 +13,7 @@
 
 @mixin box-with-shadow {
 	border: 1px solid #DCDEE0;
-	border: 1px solid $lighter-gray;
+	border: 1px solid rgba(0,0,0,0.2);
 	-moz-box-shadow: 0px 2px 3px 0px rgba(54,70,79,0.30);
 	-webkit-box-shadow: 0px 2px 3px 0px rgba(54,70,79,0.30);
 	box-shadow: 0px 2px 3px 0px rgba(54,70,79,0.30);

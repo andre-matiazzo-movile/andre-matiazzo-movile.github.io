@@ -105,12 +105,12 @@ $(document).ready(function() {
 
 	//Edit created inputs
 	$('.input--edit, .input--cancel').on('click', function () {
-		$(this).parents('.inputs--infos').toggleClass('inputs--infos--active');
-	});
+		$(this).parents('.inputs-infos').toggleClass('inputs-infos--active');
+ 	});
 
 	//Cancel edition on inputs
 	$('.input--cancel').on('click', function() {
-		$(this).parents('.inputs--infos').find('input').each(function () {
+		$(this).parents('.inputs-infos').find('input').each(function () {
 			var originalInputText = $(this).siblings('p.input--disabled').text();
 			$(this).val(originalInputText);
 		});
@@ -118,25 +118,25 @@ $(document).ready(function() {
 
 	//Save edition on inputs
 	$('.input--confirm').on('click', function() {
-		$(this).parents('.inputs--infos').find('input').each(function () {
+		$(this).parents('.inputs-infos').find('input').each(function () {
 			$(this).siblings('p.input--disabled').text($(this).val());
 		});		
-		$(this).parents('.inputs--infos').toggleClass('inputs--infos--active');
+		$(this).parents('.inputs-infos').toggleClass('inputs-infos--active');
 	});
 
 	//Asks for confirmation on input delete
 	$('.input--delete').on('click', function() {
 		$('body').css('overflow-y', 'hidden');
 		$('.modal').show();
-		$(this).parents('.inputs--infos').addClass("deletable");
+		$(this).parents('.inputs-infos').addClass("deletable");
 		setTimeout(function(){
 			$('.modal--delete').animate({opacity: 1}, 20);
 		}, 400);
 	});
 
+	// Confirm deletions
 	$('.input--yes-delete').on('click', function(){
 		setTimeout(function(){
-			// console.log('salkdj');
 			$('.deletable').slideUp();
 			setTimeout(function(){
 				$('.deletable').remove();

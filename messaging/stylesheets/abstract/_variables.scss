@@ -10,9 +10,9 @@ $accent-pressed: #5a6f9a;
 .bg-accent {background-color: $accent}
 $main-gray: #7C99A7;
 .main-gray{color: $main-gray}
-$lighter-gray: #DCDEE0;
-.lighter-gray{color:$lighter-gray}
-.bg-lighter-gray{background-color:$lighter-gray}
+// rgba(0,0,0,0.2): #DCDEE0;
+// .black-20{color:rgba(0,0,0,0.2)}
+// .bg-black-20{background-color:rgba(0,0,0,0.2)}
 // $lightest-gray: rgba(55,71,79,0.06);
 // not using alpha color because the calendar picker stays over the filter__container background and 2 alphas overlapping are creating a new color 12% black;
 $lightest-gray: #F3F4F5;
