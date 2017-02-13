@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('#schedule .radio').bind('click', function () {
+	$('#schedule .radio').on('click', function () {
 		if ($('#schedule input').is(':checked')) {
 		$('#send-message').fadeToggle();
 	}

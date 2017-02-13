@@ -350,20 +350,10 @@ html(lang='pt-br')
 						
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
-	script.
-		$('.dropdown-checkbox').click(function() {
-			var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
-			if (length == 0) {
-				$(this).prop('checked', true);
-			}
-			var selected = $('.dropdown-checkbox:checked').map(function() {
-			    return this.value;
-			}).get().join(', ');
-			$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
-		});
-
-	// Filters
-	script(src='js/forms.js')
+	// Inputs
+	script(src='js/editOpenInputs.js')
+	script(src='js/editDisabledInputs.js')
+	script(src='js/inlineDropdown.js')
 	// Notifications
 	script(src='js/notifs.js')
 	// Modal

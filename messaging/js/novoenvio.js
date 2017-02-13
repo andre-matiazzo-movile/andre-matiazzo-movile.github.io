@@ -1,11 +1,11 @@
 $(document).ready(function() {
-	$('#schedule .radio').bind('click', function () {
+	$('#schedule .radio').on('click', function () {
 		if ($('#schedule input').is(':checked')) {
 			$('#send-message').fadeToggle();
 		}
 	});
 
-	$("input[type='file']").bind("change", function(){
+	$("input[type='file']").on("change", function(){
 		$(".how-to").hide();
 		$(".file-name").css("display","block");
 		$(".file-name span").text($("input[type='file']").val().replace(/^.*\\/, ""));
@@ -22,7 +22,7 @@ $(document).ready(function() {
 		}
 	})
 
-	$(".file-name a").bind('click', function(){
+	$(".file-name a").on('click', function(){
 		document.getElementById("form-choose-file").reset();
 		$(".file-name").hide();
 		$(".how-to").show();
