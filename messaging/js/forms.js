@@ -1,7 +1,6 @@
 
 $(document).ready(function() {
 
-
 	// INLINE DROPDOWNs
 	// gives a min-width for every inline dropdown based on the longest content inside
 	var n = $(".dropdown-item-box").length;
@@ -130,7 +129,7 @@ $(document).ready(function() {
 		$('.modal').show();
 		$(this).parents('.inputs-infos').addClass("deletable");
 		setTimeout(function(){
-			$('.modal--delete').animate({opacity: 1}, 20);
+			$('.modal--delete').css("opacity","1");
 		}, 400);
 	});
 
