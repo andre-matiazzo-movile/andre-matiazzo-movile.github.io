@@ -43,7 +43,7 @@ input {
 	font-size: .875rem;
 	padding: 1rem;
 	font-weight: $bold;
-	line-height: 1.25;
+	line-height: 1;
 	&.input--inline {
 		position: relative;
 		z-index: 1;
@@ -54,6 +54,7 @@ input {
 		padding: 0 0 0.5rem 0;
 		border-radius: 0;
 		margin-top: 1rem;
+		line-height: 1.25;
 		@include transition (0.2s);
 		&.input--inline--active {
 			border-color: $accent;
@@ -68,26 +69,13 @@ input {
 				-ms-transform: translateY(-1.5rem);
 				-o-transform: translateY(-1.5rem);
 				transform: translateY(-1.5rem);
-				z-index: 3;
+				// z-index: 3;
 			}
 			& + .dropdown {
 				top: -2rem;
-				padding-top: 2.5rem;
 			}
 		}
 	}
-	span {
-		// font-size: 0.875rem;
-		// line-height: 1.25;
-		// font-weight: $bold;
-		// display: inline-block;
-		// overflow-x: hidden;
-		// white-space: nowrap;
-		// max-width: calc(100% - 26px);
-	}
-	// &:hover {
-	// 	cursor: pointer;
-	// }
 }
 
 .input--disabled {
@@ -98,6 +86,7 @@ input {
 	cursor: default;
 	color: $main-gray;
 	margin-top: 1rem;
+	line-height: 1.25;
 	& + .input--inline + label {
 		top: -0.5rem;
 		position: absolute;
@@ -109,6 +98,66 @@ input {
 			-o-transform: translateY(0);
 			transform: translateY(0);
 			// color: $accent;
+		}
+	}
+}
+
+.input-with-select {
+	&.input {
+		border-bottom: none;
+		margin-top: 0;
+		padding-bottom: 0;
+	}
+	.input--state {
+		padding-right: .5rem;
+	}
+	.input--city {
+		padding-left: .5rem;
+	}
+	& > label {
+		position: absolute;
+		left: 1rem;
+		top: -.5rem;
+	}
+	.dropdown {
+		top: -2rem;
+	}
+
+}
+
+//Editing inline inputs 
+.inputs-infos--active {
+	.input--disabled {
+		display: none;
+	}
+	.input--inline {
+		display: block;
+	}
+	.input__validation {
+		display: block;
+		position: absolute;
+		bottom: -1.25rem;
+	}
+	&.inputs-infos__line {
+		margin-bottom: 2rem;
+		border-bottom-color: $accent;
+		label {
+			color: $accent;
+		}
+		.input--cancel, .input--confirm {
+			display: inline-block;
+		}
+		span, .input--edit, .input--send-again {
+			display: none;
+		}
+		.input--inline {
+			border-bottom: none;
+		}
+	}
+	&.inputs-infos__group {
+		border-bottom: none;
+		.input--disabled {
+			border-bottom: 1px solid transparent;
 		}
 	}
 }
@@ -246,50 +295,6 @@ input {
 		&.search__subheading span:hover {
 			color: $main-gray;
 			cursor: default;
-		}
-	}
-}
-
-//Editing inline inputs 
-.inputs-infos--active {
-	margin-bottom: 2rem;
-	.input--disabled {
-		display: none;
-	}
-	.input--inline {
-		display: block;
-	}
-	.input__validation {
-		display: block;
-		position: absolute;
-	}
-	&.inputs-infos__line {
-		border-bottom-color: $accent;
-		label {
-			color: $accent;
-		}
-		.input--cancel, .input--confirm {
-			display: inline-block;
-		}
-		span, .input--edit, .input--send-again {
-			display: none;
-		}
-		.input--inline {
-			border-bottom: none;
-		}
-	}
-	&.inputs-infos__group {
-		border-bottom: none;
-		.input--disabled {
-			border-bottom: 1px solid transparent;
-		}
-		.name-input {
-			input.input--inline {
-				border-bottom-color: $accent;
-			}
-			label {
-				color: $accent;
-			}
 		}
 	}
 }
@@ -440,46 +445,43 @@ input {
 // 	}
 // }
 
-.input-with-select {
-	position: relative;
-	.select {
-		float: left;
-		width: 30%;
-		border: 1px solid #A2B7C1;
-		border-right: none;
-		padding: 12px 16px 12px 16px; //padding-bottom is a magic number, sorry
-		margin-top: 8px;
-	}
-	.input span {
-		overflow-x: inherit;
-		&::after {
-			display: none;
-		}
-	}
-	input {
-		width: 70%;
-	}
-	.dropdown li {
-		font-size: 0.875rem; //14px
-		line-height: 1.375rem; //22px
-		font-weight: $regular;
-		color: $theblack;
-		cursor: pointer;
-		&:hover {
-			color: $accent;
-		}
-		span {
-			font-size: 1.12rem; // 18px
-			line-height: 1.375rem; //22px
-			font-weight: $black;
-			color: $main-gray;
-			cursor: default;
-			&:hover {
-				color: $main-gray;
-			}
-		}
-	}
-}
+// .input-with-select {
+// 	position: relative;
+// 	.select {
+// 		float: left;
+// 		width: 30%;
+// 		border: 1px solid #A2B7C1;
+// 		border-right: none;
+// 		padding: 12px 16px 12px 16px; //padding-bottom is a magic number, sorry
+// 		margin-top: 8px;
+// 	}
+// 	.input span {
+// 		overflow-x: inherit;
+// 		&::after {
+// 			display: none;
+// 		}
+// 	}
+// 	.dropdown li {
+// 		font-size: 0.875rem; //14px
+// 		line-height: 1.375rem; //22px
+// 		font-weight: $regular;
+// 		color: $theblack;
+// 		cursor: pointer;
+// 		&:hover {
+// 			color: $accent;
+// 		}
+// 		span {
+// 			font-size: 1.12rem; // 18px
+// 			line-height: 1.375rem; //22px
+// 			font-weight: $black;
+// 			color: $main-gray;
+// 			cursor: default;
+// 			&:hover {
+// 				color: $main-gray;
+// 			}
+// 		}
+// 	}
+// }
 
 .outro-genero {
 	span {

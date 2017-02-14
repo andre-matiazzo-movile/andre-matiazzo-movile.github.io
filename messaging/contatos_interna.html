@@ -91,9 +91,9 @@
       </div>
     </section>
     <!-- MAIN CONTENT-->
-    <section class="main-content ph4 pb5 fr"><a class="pa0 bn bg-white dib mt4 fl" onclick="goBack()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
+    <section class="main-content ph3 pb5 fr"><a class="pa0 bn bg-white dib mt4 fl" onclick="goBack()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
       <!-- INFOS - TITLE AND ACTION BUTTONS-->
-      <div class="fl w-100">
+      <div class="fl w-100 ph3">
         <form class="fl w-100 mt4 inputs-infos inputs-infos__group">
           <div class="fl w-100">
             <div class="fl">
@@ -108,51 +108,183 @@
           <!-- INFOS - CONTENT-->
           <div class="fl w-100 mt2">
             <!-- NAME-->
-            <div class="fl w-100 cb mt4 mb3 name-input">
-              <div class="fl w-33 ph0 relative inputs--cell">
+            <div class="fl w-100 cb mt4 name-input nl3 nh3">
+              <div class="fl w-50 ph3 relative inputs--cell">
                 <p class="input--disabled f3 b lh-title">André Matiazzo</p>
                 <input class="input--inline dn f3" type="text" value="André Matiazzo">
                 <label>Nome*</label>
                 <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
               </div>
             </div>
-            <!--COLUMNS – OTHER INFOS-->
-            <div class="fl w-100 mt4">
-              <!-- FIRST COLUMN-->
-              <div class="fl w-33">
-                <!-- CITY AND STATE-->
-                <div class="fl w-100 ph0 relative inputs--cell input-with-select">
-                  <p class="input input--disabled">Cidade e estado</p>
-                  <input class="input--inline dn" type="text" value="Cidade e estado">
-                  <label>Cidade e estado</label>
+            <!--OTHER INFOS-->
+            <div class="fl w-100 mt5">
+              <!-- ROW-->
+              <div class="fl w-100 cb nl3 nr3">
+                <!-- STATE AND CITY-->
+                <div class="fl w-25 ph3 relative inputs--cell input-with-select">
+                  <div class="fl w-100">
+                    <p class="fl w-20 input input--disabled input--state"><span class="dib fl w-100">SP</span></p>
+                    <p class="fl w-80 input input--disabled input--city">Campinas</p>
+                  </div>
+                  <div class="fl w-20 input--inline dn">
+                    <p class="fl w-100 input input--inline input--state"><span class="db has-icon-right icon-dropdown">SP</span></p>
+                    <div class="dropdown content-box">
+                      <label class="dib mt1 lh-copy">Estado</label>
+                      <ul class="pt0 pb1 pl0">
+                        <li><span>SP</span></li>
+                        <li><span>RJ</span></li>
+                        <li><span>SC</span></li>
+                        <li><span>PE</span></li>
+                        <li><span>AM</span></li>
+                        <li><span>MG</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="fl w-80 input--inline dn">
+                    <p class="fl w-100 input input--inline input--city"><span class="db has-icon-right icon-dropdown">Campinas</span></p>
+                    <div class="dropdown content-box">
+                      <label class="dib mt1 lh-copy">Cidade</label>
+                      <ul class="pt0 pb1 pl0">
+                        <li><span>São Paulo</span></li>
+                        <li><span>Campinas</span></li>
+                        <li><span>Ribeirão Preto</span></li>
+                        <li><span>São Carlos</span></li>
+                        <li><span>Sorocaba</span></li>
+                        <li><span>Mococa</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <label class="label--active">Estado e cidade</label>
                   <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
                 </div>
-                <!-- NAME-->
-                <div class="fl w-100 ph0 relative inputs--cell mt5">
-                  <p class="input input--disabled">André Matiazzo</p>
-                  <input class="input--inline dn" type="text" value="André Matiazzo">
-                  <label>Nome*</label>
+                <!-- PHONE-->
+                <div class="fl w-25 ph3 relative inputs--cell">
+                  <p class="input input--disabled">19996587867</p>
+                  <input class="input--inline dn" type="text" value="19996587867">
+                  <label>Celular*</label>
                   <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                </div>
+                <!-- EMAIL-->
+                <div class="fl w-25 ph3 relative inputs--cell">
+                  <p class="input input--disabled">andre.matiazzo@movile.com</p>
+                  <input class="input--inline dn" type="text" value="andre.matiazzo@movile.com">
+                  <label>Email</label>
+                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                </div>
+                <!-- COMPANY-->
+                <div class="fl w-25 ph3 relative inputs--cell">
+                  <p class="input input--disabled"></p>
+                  <input class="input--inline dn" type="text" value="">
+                  <label>Empresa</label>
+                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb nl3 nr3 mt5">
+                <!-- GENDER-->
+                <div class="fl w-25 ph3 relative inputs--cell">
+                  <p class="input input--disabled">Masculino</p>
+                  <input class="input--inline dn" type="text" value="Masculino">
+                  <label>Gênero</label>
+                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                </div>
+                <!-- BIRTHDAY-->
+                <div class="fl w-25 ph3 relative inputs--cell">
+                  <p class="input input--disabled">11/01/1991</p>
+                  <input class="input--inline dn" type="text" value="11/01/1991">
+                  <label>Aniversário</label>
+                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                </div>
+                <!-- CPF/CNPJ-->
+                <div class="fl w-25 ph3 relative inputs--cell">
+                  <p class="input input--disabled">355.098.099-45</p>
+                  <input class="input--inline dn" type="text" value="355.098.099-45">
+                  <label>CPF/CNPJ</label>
+                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                </div>
+                <!-- NICKNAME-->
+                <div class="fl w-25 ph3 relative inputs--cell">
+                  <p class="input input--disabled">Mat</p>
+                  <input class="input--inline dn" type="text" value="Mat">
+                  <label>Apelido</label>
+                  <p class="f7 mt2 tr black-20 input__validation dn">Validação	</p>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb nl3 nr3 mt5">
+                <!-- GROUPS-->
+                <div class="fl w-25 ph3 relative inputs--cell">
+                  <p class="input input--disabled">Masculino</p>
+                  <input class="input--inline dn" type="text" value="Masculino">
+                  <label>Grupos</label>
+                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                </div>
+                <!-- Comentários-->
+                <div class="fl w-25 ph3 relative inputs--cell">
+                  <p class="input input--disabled">Nenhum comentário</p>
+                  <textarea class="input--inline dn" type="text" value="11/01/1991"></textarea>
+                  <label>Comentários</label>
+                  <p class="f7 mt2 tr black-20 input__validation dn">Validação								</p>
                 </div>
               </div>
             </div>
           </div>
         </form>
       </div>
-    </section>
-    <!-- MODAL BOILERPLATE-->
-    <div class="dn modal bg-black-50 fixed vh-100 left-0 right-0 o-0 z-5">
-      <!-- ARE YOU SURE?-->
-      <div class="modal__body modal--delete bg-white w-auto mw6 center mt6 pt4 ph4 dn">
-        <div>
-          <h2 class="f4">Quer remover essa permissão?</h2>
-          <div class="mt4 pb4 tr">
-            <button class="pa0 bn bg-white pointer main-gray ttu tracked f7 b mr3 close-modal" type="button">cancelar</button>
-            <button class="pa0 bn bg-white pointer accent ttu tracked f7 b input--yes-delete" type="button">sim, remover</button>
+      <!-- HISTORY-->
+      <div class="fl w-100 mt6">
+        <div class="fl w-100 ph3">
+          <div class="fl">
+            <h3 class="theblack f4 lh-solid">Histórico de envio</h3>
           </div>
+          <button class="fr cta"><span class="has-icon-left icon-download">Download</span></button>
+        </div>
+        <!-- TABLE-->
+        <div class="fl w-100 relative ph3">
+          <div class="w-90 overflow-x-scroll">
+            <table class="mt4 mb4 tl v-top w-100" cellspacing="0" cellpadding="0">
+              <thead class="v-top">
+                <tr class="ttu f8 theblack b tl tracked">
+                  <th class="bb nowrap table-month"><span class="pv2 pr3 db">Month</span></th>
+                  <th class="bb nowrap w-4 table-campaign"><span class="pv2 pr3 db">Campaign</span></th>
+                  <th class="bb nowrap w-4 table-concluded"><span class="pv2 pr3 db">Concluded</span></th>
+                  <th class="bb nowrap w-4 table-scheduled"><span class="pv2 pr3 db">Scheduled</span></th>
+                  <th class="bb nowrap w-4 table-sent"><span class="pv2 pr3 db">Sent</span></th>
+                  <th class="bb nowrap w-4 table-Errors"><span class="pv2 pr3 db">Errors</span></th>
+                  <th class="bb nowrap w-4 table-sending-start"><span class="pv2 pr3 db">Sending start</span></th>
+                  <th class="nowrap table-customer"></th>
+                </tr>
+              </thead>
+              <tbody class="v-top">
+                <tr class="bb relative f6">
+                  <td class="nowrap f6 bb b--black-20 table-month"><span class="db pv4 pr3 lh-solid">December</span></td>
+                  <td class="nowrap f6 bb b--black-20 table-campaign"><span class="db pv4 pr3 lh-solid">Mother's day 2017</span></td>
+                  <td class="nowrap f6 bb b--black-20 table-concluded"><span class="db pv4 pr3 lh-solid">80%</span></td>
+                  <td class="nowrap f6 bb b--black-20 table-scheduled"><span class="db pv4 pr3 lh-solid">9.5 MM</span></td>
+                  <td class="nowrap f6 bb b--black-20 table-sent"><span class="db pv4 pr3 lh-solid">5.5 MM</span></td>
+                  <td class="nowrap f6 bb b--black-20 table-Errors"><span class="db pv4 pr3 lh-solid">2.0 MM</span></td>
+                  <td class="nowrap f6 bb b--black-20 table-sending-start"><span class="db pv4 pr3 lh-solid">24/01/2017 10:28</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <table class="w-10 h-100 mt4 mb4 tl v-top absolute top-0 right-1 bg-white" cellspacing="0" cellpadding="0">
+            <thead class="v-top">
+              <tr class="pv3 b--black bb ttu f8 theblack b tl tracked">
+                <th class="bb pv2 pl3 table-detalhes"><a class="accent" href="javascript:">Ações</a></th>
+              </tr>
+            </thead>
+            <tbody class="v-top">
+              <tr class="bb relative f6">
+                <td class="bb b--black-20 pv4 ph3 table-detalhes left-shadow lh-solid"><a class="accent has-icon-left icon-download-blue has-tooltip" href="javascript:" alt="Download">
+                    <div class="tooltip-content"><span>Download</span></div></a><a class="accent has-icon-left icon-eye-blue ml3 has-tooltip" href="javascript:" alt="Detalhes">
+                    <div class="tooltip-content"><span>Detalhes</span></div></a></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-    </div>
+    </section>
   </body>
   <!-- jQuery-->
   <script src="js/jquery-3.1.0.min.js"></script>

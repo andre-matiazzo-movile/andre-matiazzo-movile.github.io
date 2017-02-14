@@ -111,11 +111,11 @@ html(lang='pt-br')
 								| ver todas as notificações
 				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
 		// MAIN CONTENT
-		section.main-content.ph4.pb5.fr
+		section.main-content.ph3.pb5.fr
 			a.pa0.bn.bg-white.dib.mt4.fl(onclick='goBack()')
 				span.ttu.b.tracked.f7.accent.has-icon.has-icon-left.icon-arrow-left--blue voltar
 			// INFOS - TITLE AND ACTION BUTTONS
-			div.fl.w-100
+			div.fl.w-100.ph3
 				form.fl.w-100.mt4.inputs-infos.inputs-infos__group
 					div.fl.w-100
 						div.fl
@@ -128,41 +128,178 @@ html(lang='pt-br')
 					// INFOS - CONTENT
 					div.fl.w-100.mt2
 						// NAME
-						div.fl.w-100.cb.mt4.mb3.name-input
-							.fl.w-33.ph0.relative.inputs--cell
+						div.fl.w-100.cb.mt4.name-input.nl3.nh3
+							.fl.w-50.ph3.relative.inputs--cell
 								p.input--disabled.f3.b.lh-title André Matiazzo
 								input.input--inline.dn.f3(type='text' value='André Matiazzo')
 								label Nome*
 								p.f7.mt2.tr.black-20.input__validation.dn Validação
-						//COLUMNS – OTHER INFOS
-						div.fl.w-100.mt4
-							// FIRST COLUMN
-							div.fl.w-33
-								// CITY AND STATE
-								.fl.w-100.ph0.relative.inputs--cell.input-with-select
-									p.input.input--disabled Cidade e estado
-									input.input--inline.dn(type='text' value='Cidade e estado')
-									label Cidade e estado
+						//OTHER INFOS
+						div.fl.w-100.mt5
+							// ROW
+							div.fl.w-100.cb.nl3.nr3
+								// STATE AND CITY
+								.fl.w-25.ph3.relative.inputs--cell.input-with-select
+									div.fl.w-100
+										p.fl.w-20.input.input--disabled.input--state
+											span.dib.fl.w-100 SP
+										p.fl.w-80.input.input--disabled.input--city Campinas
+									div.fl.w-20.input--inline.dn
+										p.fl.w-100.input.input--inline.input--state
+											span.db.has-icon-right.icon-dropdown SP
+										.dropdown.content-box
+											label.dib.mt1.lh-copy Estado
+											ul.pt0.pb1.pl0
+												li
+													span SP
+												li
+													span RJ
+												li
+													span SC
+												li
+													span PE
+												li
+													span AM
+												li
+													span MG
+									div.fl.w-80.input--inline.dn
+										p.fl.w-100.input.input--inline.input--city
+											span.db.has-icon-right.icon-dropdown Campinas
+										.dropdown.content-box
+											label.dib.mt1.lh-copy Cidade
+											ul.pt0.pb1.pl0
+												li
+													span São Paulo
+												li
+													span Campinas
+												li
+													span Ribeirão Preto
+												li
+													span São Carlos
+												li
+													span Sorocaba
+												li
+													span Mococa
+									label.label--active Estado e cidade
 									p.f7.mt2.tr.black-20.input__validation.dn Validação
-								// NAME
-								.fl.w-100.ph0.relative.inputs--cell.mt5
-									p.input.input--disabled André Matiazzo
-									input.input--inline.dn(type='text' value='André Matiazzo')
-									label Nome*
+								// PHONE
+								.fl.w-25.ph3.relative.inputs--cell
+									p.input.input--disabled 19996587867
+									input.input--inline.dn(type='text' value='19996587867')
+									label Celular*
 									p.f7.mt2.tr.black-20.input__validation.dn Validação
+								// EMAIL
+								.fl.w-25.ph3.relative.inputs--cell
+									p.input.input--disabled andre.matiazzo@movile.com
+									input.input--inline.dn(type='text' value='andre.matiazzo@movile.com')
+									label Email
+									p.f7.mt2.tr.black-20.input__validation.dn Validação
+								// COMPANY
+								.fl.w-25.ph3.relative.inputs--cell
+									p.input.input--disabled
+									input.input--inline.dn(type='text' value='')
+									label Empresa
+									p.f7.mt2.tr.black-20.input__validation.dn Validação
+							// ROW
+							div.fl.w-100.cb.nl3.nr3.mt5
+								// GENDER
+								.fl.w-25.ph3.relative.inputs--cell
+									p.input.input--disabled Masculino
+									input.input--inline.dn(type='text' value='Masculino')
+									label Gênero
+									p.f7.mt2.tr.black-20.input__validation.dn Validação
+								// BIRTHDAY
+								.fl.w-25.ph3.relative.inputs--cell
+									p.input.input--disabled 11/01/1991
+									input.input--inline.dn(type='text' value='11/01/1991')
+									label Aniversário
+									p.f7.mt2.tr.black-20.input__validation.dn Validação
+								// CPF/CNPJ
+								.fl.w-25.ph3.relative.inputs--cell
+									p.input.input--disabled 355.098.099-45
+									input.input--inline.dn(type='text' value='355.098.099-45')
+									label CPF/CNPJ
+									p.f7.mt2.tr.black-20.input__validation.dn Validação
+								// NICKNAME
+								.fl.w-25.ph3.relative.inputs--cell
+									p.input.input--disabled Mat
+									input.input--inline.dn(type='text' value='Mat')
+									label Apelido
+									p.f7.mt2.tr.black-20.input__validation.dn Validação	
+							// ROW
+							div.fl.w-100.cb.nl3.nr3.mt5
+								// GROUPS
+								.fl.w-25.ph3.relative.inputs--cell
+									p.input.input--disabled Masculino
+									input.input--inline.dn(type='text' value='Masculino')
+									label Grupos
+									p.f7.mt2.tr.black-20.input__validation.dn Validação
+								// Comentários
+								.fl.w-25.ph3.relative.inputs--cell
+									p.input.input--disabled Nenhum comentário
+									textarea.input--inline.dn(type='text' value='11/01/1991')
+									label Comentários
+									p.f7.mt2.tr.black-20.input__validation.dn Validação								
 
-			
-		// MODAL BOILERPLATE
-		div.dn.modal.bg-black-50.fixed.vh-100.left-0.right-0.o-0.z-5
-			// ARE YOU SURE?
-			.modal__body.modal--delete.bg-white.w-auto.mw6.center.mt6.pt4.ph4.dn
-				//- button.close-modal.pa0.bn.bg-white.accent.ttu.tracked.b.f7.lh-copy.has-icon-left.icon-close-blue.db fechar
-				div
-					h2.f4 Quer remover essa permissão?
-					div.mt4.pb4.tr
-						button.pa0.bn.bg-white.pointer.main-gray.ttu.tracked.f7.b.mr3.close-modal(type='button') cancelar
-						button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.input--yes-delete(type='button') sim, remover
-						
+			// HISTORY
+			div.fl.w-100.mt6
+				div.fl.w-100.ph3
+					div.fl
+						h3.theblack.f4.lh-solid Histórico de envio
+					button.fr.cta
+						span.has-icon-left.icon-download Download
+				// TABLE
+				.fl.w-100.relative.ph3
+					div.w-90.overflow-x-scroll
+						table.mt4.mb4.tl.v-top.w-100(cellspacing='0', cellpadding='0')
+							thead.v-top
+								tr.ttu.f8.theblack.b.tl.tracked
+									th.bb.nowrap.table-month
+										span.pv2.pr3.db Month
+									th.bb.nowrap.w-4.table-campaign
+										span.pv2.pr3.db Campaign
+									th.bb.nowrap.w-4.table-concluded
+										span.pv2.pr3.db Concluded
+									th.bb.nowrap.w-4.table-scheduled
+										span.pv2.pr3.db Scheduled
+									th.bb.nowrap.w-4.table-sent
+										span.pv2.pr3.db Sent
+									th.bb.nowrap.w-4.table-Errors
+										span.pv2.pr3.db Errors
+									th.bb.nowrap.w-4.table-sending-start
+										span.pv2.pr3.db Sending start
+									th.nowrap.table-customer
+							tbody.v-top
+								tr.bb.relative.f6
+									td.nowrap.f6.bb.b--black-20.table-month
+										span.db.pv4.pr3.lh-solid December
+									td.nowrap.f6.bb.b--black-20.table-campaign
+										span.db.pv4.pr3.lh-solid Mother's day 2017
+									td.nowrap.f6.bb.b--black-20.table-concluded
+										span.db.pv4.pr3.lh-solid 80%
+									td.nowrap.f6.bb.b--black-20.table-scheduled
+										span.db.pv4.pr3.lh-solid 9.5 MM
+									td.nowrap.f6.bb.b--black-20.table-sent
+										span.db.pv4.pr3.lh-solid 5.5 MM
+									td.nowrap.f6.bb.b--black-20.table-Errors
+										span.db.pv4.pr3.lh-solid 2.0 MM
+									td.nowrap.f6.bb.b--black-20.table-sending-start
+										span.db.pv4.pr3.lh-solid 24/01/2017 10:28
+					table.w-10.h-100.mt4.mb4.tl.v-top.absolute.top-0.right-1.bg-white(cellspacing='0', cellpadding='0')
+						thead.v-top
+							tr.pv3.b--black.bb.ttu.f8.theblack.b.tl.tracked
+								th.bb.pv2.pl3.table-detalhes
+									a.accent(href='javascript:') Ações
+						tbody.v-top
+							tr.bb.relative.f6
+								td.bb.b--black-20.pv4.ph3.table-detalhes.left-shadow.lh-solid
+									a.accent.has-icon-left.icon-download-blue.has-tooltip(href='javascript:', alt='Download')
+										.tooltip-content
+											span Download
+									a.accent.has-icon-left.icon-eye-blue.ml3.has-tooltip(href='javascript:', alt='Detalhes')
+										.tooltip-content
+											span Detalhes
+							
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
 	script.
