@@ -70,6 +70,7 @@ $(document).ready(function() {
 	$('.dropdown li').not('.dropdown li.search__subheading, .outro-genero').bind('click', function() {
 		var textFromDropdown = $(this).find('span').text();
 		$(this).parents('.dropdown').siblings('.input').find('span').text(textFromDropdown);
+		$(this).parents('.dropdown').siblings('.input').val(textFromDropdown);
 		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 		$('.input--inline').next().removeClass('accent');
 		$('.input--inline').removeClass('input--inline--active');
@@ -105,7 +106,14 @@ $(document).ready(function() {
 	//Edit created inputs
 	$('.input--edit, .input--cancel').on('click', function () {
 		$(this).parents('.inputs-infos').toggleClass('inputs-infos--active');
- 	});
+		if ($(this).hasClass('cta')) {
+			// $(this).removeClass('input--edit').addClass('input--confirm')
+			// $(this).find('span').removeClass('icon-edit--blue').addClass('icon-check').text('salvar');
+			$(this).hide();
+			$(this).siblings('.cta.input--confirm').show();
+			$(this).siblings('.icon-blacklist').hide();
+		}
+	});
 
 	//Cancel edition on inputs
 	$('.input--cancel').on('click', function() {
@@ -117,10 +125,15 @@ $(document).ready(function() {
 
 	//Save edition on inputs
 	$('.input--confirm').on('click', function() {
-		$(this).parents('.inputs-infos').find('input').each(function () {
+		$(this).parents('.inputs-infos').find('input, textarea').each(function () {
 			$(this).siblings('p.input--disabled').text($(this).val());
 		});		
 		$(this).parents('.inputs-infos').toggleClass('inputs-infos--active');
+		if ($(this).hasClass('cta')) {
+			$(this).hide();
+			$(this).siblings('.input--edit, .icon-blacklist').show();
+		}
+
 	});
 
 	//Asks for confirmation on input delete

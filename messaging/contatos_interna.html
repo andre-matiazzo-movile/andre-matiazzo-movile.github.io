@@ -102,7 +102,8 @@
             </div>
             <div class="fr">
               <button class="accent ttu b tracked mr3 has-icon-left icon-blacklist f7" type="button">inserir na blacklist</button>
-              <button class="cta" type="button"><span class="has-icon-left icon-edit--blue input--edit">editar</span></button>
+              <button class="cta input--edit" type="button"><span class="has-icon-left icon-edit--blue">editar</span></button>
+              <button class="cta input--confirm dn" type="button"><span class="has-icon-left icon-check">salvar</span></button>
             </div>
           </div>
           <!-- INFOS - CONTENT-->
@@ -122,12 +123,9 @@
               <div class="fl w-100 cb nl3 nr3">
                 <!-- STATE AND CITY-->
                 <div class="fl w-25 ph3 relative inputs--cell input-with-select">
-                  <div class="fl w-100">
-                    <p class="fl w-20 input input--disabled input--state"><span class="dib fl w-100">SP</span></p>
-                    <p class="fl w-80 input input--disabled input--city">Campinas</p>
-                  </div>
-                  <div class="fl w-20 input--inline dn">
-                    <p class="fl w-100 input input--inline input--state"><span class="db has-icon-right icon-dropdown">SP</span></p>
+                  <div class="fl w-20 input--inline">
+                    <p class="fl w-100 input input--disabled input--state"><span class="dib fl w-100">SP</span></p>
+                    <input class="fl w-100 input input--inline input--state has-icon-right icon-dropdown dn" type="text" value="SP">
                     <div class="dropdown content-box">
                       <label class="dib mt1 lh-copy">Estado</label>
                       <ul class="pt0 pb1 pl0">
@@ -140,8 +138,9 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="fl w-80 input--inline dn">
-                    <p class="fl w-100 input input--inline input--city"><span class="db has-icon-right icon-dropdown">Campinas</span></p>
+                  <div class="fl w-80 input--inline">
+                    <p class="fl w-100 input input--disabled input--city">Campinas</p>
+                    <input class="fl w-100 input input--inline input--city has-icon-right icon-dropdown dn" type="text" value="Campinas">
                     <div class="dropdown content-box">
                       <label class="dib mt1 lh-copy">Cidade</label>
                       <ul class="pt0 pb1 pl0">
@@ -182,10 +181,19 @@
               <!-- ROW-->
               <div class="fl w-100 cb nl3 nr3 mt5">
                 <!-- GENDER-->
-                <div class="fl w-25 ph3 relative inputs--cell">
-                  <p class="input input--disabled">Masculino</p>
-                  <input class="input--inline dn" type="text" value="Masculino">
-                  <label>Gênero</label>
+                <div class="fl w-25 ph3 relative inputs--cell input-with-select">
+                  <div class="fl w-100 input--inline">
+                    <p class="fl w-100 input input--disabled input--state"><span class="dib fl w-100">Masculino</span></p>
+                    <input class="fl w-100 input input--inline input--state has-icon-right icon-dropdown dn" type="text" value="Masculino">
+                    <div class="dropdown content-box">
+                      <label class="dib mt1 lh-copy">Gênero</label>
+                      <ul class="pt0 pb1 pl0">
+                        <li><span>Feminino</span></li>
+                        <li><span>Masculino</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <label class="label--active">Estado e cidade</label>
                   <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
                 </div>
                 <!-- BIRTHDAY-->
@@ -220,9 +228,9 @@
                   <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
                 </div>
                 <!-- Comentários-->
-                <div class="fl w-25 ph3 relative inputs--cell">
+                <div class="fl w-50 ph3 relative inputs--cell">
                   <p class="input input--disabled">Nenhum comentário</p>
-                  <textarea class="input--inline dn" type="text" value="11/01/1991"></textarea>
+                  <textarea class="input--inline dn f6 lh-copy ba b--black-20 b pa2 mt3 h4" type="text" value="11/01/1991"></textarea>
                   <label>Comentários</label>
                   <p class="f7 mt2 tr black-20 input__validation dn">Validação								</p>
                 </div>
