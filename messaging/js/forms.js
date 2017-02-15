@@ -55,7 +55,8 @@ $(document).ready(function() {
 				$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 				$('.upper-bar-menu').removeClass('upper-bar-menu--active');
 				$('.input--inline--dropdown').removeClass('input--inline--active');
-				$('.input--inline--dropdown').next().removeClass('accent');
+				$('.input--inline--dropdown').siblings('label').removeClass('accent');
+				$('.input--inline').removeClass('input--inline--active');
 			}
 		});
 
@@ -67,7 +68,7 @@ $(document).ready(function() {
 		})
 
 	//Get text from the selection within dropdowns and put it on the respective input
-	$('.dropdown li').not('.dropdown li.search__subheading, .outro-genero').bind('click', function() {
+	$('.dropdown li').not('.dropdown li.search__subheading, .input-inside-list').bind('click', function() {
 		var textFromDropdown = $(this).find('span').text();
 		$(this).parents('.dropdown').siblings('.input').find('span').text(textFromDropdown);
 		$(this).parents('.dropdown').siblings('.input').val(textFromDropdown);
@@ -76,13 +77,26 @@ $(document).ready(function() {
 		$('.input--inline').removeClass('input--inline--active');
 	});
 
-	//Specific for Gender dropdown on New Contact
-	$('.outro-genero a').bind('click', function() {
-		if ($('#contato-outro-genero').val().length > 0) {
-			var anotherGender = $('#contato-outro-genero').val();
-			$('.outro-genero').parents('.dropdown').siblings('.input').find('span').text(anotherGender);
+	//Specific for inputs inside dropdowns
+	$('.input-inside-list button').on('click', function() {
+		if ($(this).parents('.input-inside-list').find('input').val().length > 0) {
+			var inputValue = $(this).parents('.input-inside-list').find('input').val();
+			$('.input-inside-list').parents('.dropdown').siblings('.input').find('span').text(inputValue);
 			$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
+			$('.input--inline').removeClass('input--inline--active');
 		}
+	});
+
+	// Dropdown with checkbox inside it
+	$('.dropdown-checkbox').click(function() {
+		var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
+		if (length == 0) {
+			$(this).prop('checked', true);
+		}
+		var selected = $('.dropdown-checkbox:checked').map(function() {
+			return this.value;
+		}).get().join(', ');
+		$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
 	});
 
 
@@ -125,9 +139,18 @@ $(document).ready(function() {
 
 	//Save edition on inputs
 	$('.input--confirm').on('click', function() {
-		$(this).parents('.inputs-infos').find('input, textarea').each(function () {
+		// Get texts from inputs
+		$(this).parents('.inputs-infos').find('input').each(function () {
+			$(this).siblings('p.input--disabled').text($(this).val());
+		});
+		// Get texts from textarea
+		$(this).parents('.inputs-infos').find('textarea').each(function () {
 			$(this).siblings('p.input--disabled').text($(this).val());
 		});		
+		// Get texts from dropdowns
+		$(this).parents('.inputs-infos').find('.input--inline--dropdown').each(function () {
+			$(this).find('p.input--disabled').text($(this).find('.input--inline').text());
+		});	
 		$(this).parents('.inputs-infos').toggleClass('inputs-infos--active');
 		if ($(this).hasClass('cta')) {
 			$(this).hide();

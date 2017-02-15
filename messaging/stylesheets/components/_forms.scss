@@ -413,6 +413,40 @@ input {
 			@include transition(150ms);
 		}
 	}
+	.dropdown-checkbox {
+		& + label {
+			&:before {
+				display: none;
+			}
+			&:after {
+				background-color: transparent;
+			}
+		}
+		&:checked {
+			& + label {
+				padding-left: 1rem;
+				&:before {
+					left: 0;
+					display: none;
+				}
+				&:after {
+					left: 0px;
+					content: "";
+					width: 12px;
+					height: 12px;
+					position: absolute;
+					top: 50%;
+					transform: rotate(0deg) translateY(-50%);
+					background-image: url('../img/icons/check.png');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-color: transparent;
+					cursor: pointer;
+				}
+			}
+		}
+	}
 }
 
 .radio label {

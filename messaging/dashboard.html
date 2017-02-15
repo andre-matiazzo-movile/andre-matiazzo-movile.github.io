@@ -94,68 +94,52 @@
     <!-- MAIN CONTENT-->
     <section class="main-content ph3 pt3 pb5 fr">
       <!-- FILTERS-->
-      <div class="actions-container">
-        <div class="fl w-100 pa3">
-          <div class="fl w-100">
-            <h3 class="fl black f3 lh-solid">Resultados</h3><a class="fr cta" href="novo-envio.html"><span class="has-icon-left icon-plus--blue">novo envio</span></a>
+      <div class="actions-container ph3">
+        <!-- FILTERS ROW-->
+        <div class="mt4 mb4 nl3 nr3 flex justify-between">
+          <!-- FILTER ITEM-->
+          <div class="relative w-third ph3">
+            <label class="black-50 f6">Status do envio</label>
+            <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Em processamento</span></div>
+            <div class="dropdown content-box">
+              <label class="black-50 f6">Status do envio</label>
+              <ul class="pt0 pb1 pl0">
+                <li><span>Em processamento</span></li>
+                <li><span>Agendados</span></li>
+                <li><span>Em aprovação</span></li>
+              </ul>
+            </div>
           </div>
-          <!-- FILTERS ROW-->
-          <div class="fl w-100 mt4">
-            <div class="nl3 nr3">
-              <!-- FILTER ITEM-->
-              <div class="relative w-third fl ph3">
-                <label class="black-50 f6">Tipo de relatório</label>
-                <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Envios consolidados</span></div>
-                <div class="dropdown content-box">
-                  <label class="black-50 f6">Tipo de relatório</label>
-                  <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus=""><span class="main-gray db f6 pl3 pv3">Buscas recentes</span>
-                  <ul class="pt0 pb1 pl3">
-                    <li><span>Bruno Farias</span></li>
-                    <li><span>Nayara Rodrigues</span></li>
-                    <li><span>Neto Andrade</span></li>
-                    <li><span>Hudson Souza</span></li>
-                    <li><span>Edson Koji</span></li>
-                    <li><span>Henrique Perticarati</span></li>
-                    <li><span>Juliana Gaspari</span></li>
-                  </ul>
-                </div>
-              </div>
-              <!-- FILTER ITEM-->
-              <div class="relative w-third fl ph3">
-                <label class="black-50 f6">Subconta</label>
-                <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Envios consolidados</span></div>
-                <div class="dropdown content-box">
-                  <label class="black-50 f6">Subconta</label>
-                  <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus=""><span class="main-gray db f6 pl3 pv3">Buscas recentes</span>
-                  <ul class="pt0 pb1 pl3">
-                    <li><span>Bruno Farias</span></li>
-                    <li><span>Nayara Rodrigues</span></li>
-                    <li><span>Neto Andrade</span></li>
-                    <li><span>Hudson Souza</span></li>
-                    <li><span>Edson Koji</span></li>
-                    <li><span>Henrique Perticarati</span></li>
-                    <li><span>Juliana Gaspari</span></li>
-                  </ul>
-                </div>
-              </div>
-              <!-- FILTER ITEM-->
-              <div class="relative w-third fl ph3">
-                <label class="black-50 f6">Usuários</label>
-                <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Envios consolidados</span></div>
-                <div class="dropdown content-box">
-                  <label class="black-50 f6">Usuários</label>
-                  <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus=""><span class="main-gray db f6 pl3 pv3">Buscas recentes</span>
-                  <ul class="pt0 pb1 pl3">
-                    <li><span>Bruno Farias</span></li>
-                    <li><span>Nayara Rodrigues</span></li>
-                    <li><span>Neto Andrade</span></li>
-                    <li><span>Hudson Souza</span></li>
-                    <li><span>Edson Koji</span></li>
-                    <li><span>Henrique Perticarati</span></li>
-                    <li><span>Juliana Gaspari					</span></li>
-                  </ul>
-                </div>
-              </div>
+          <!-- FILTER ITEM-->
+          <div class="relative w-third ph3">
+            <label class="black-50 f6">Período</label>
+            <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Hoje</span></div>
+            <div class="dropdown content-box">
+              <label class="black-50 f6">Período</label>
+              <ul class="pt0 pb1 pl0">
+                <li><span>Hoje</span></li>
+                <li><span>Últimos 7 dias</span></li>
+                <li><span>Últimos 15 dias</span></li>
+                <li><span>Últimos 30 dias</span></li>
+              </ul>
+            </div>
+          </div>
+          <!-- FILTER ITEM-->
+          <div class="relative w-third ph3">
+            <label class="black-50 f6">Usuários</label>
+            <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Bruno Farias</span></div>
+            <div class="dropdown content-box">
+              <label class="black-50 f6">Usuários</label>
+              <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus=""><span class="main-gray db f6 pl3 pv3">Buscas recentes</span>
+              <ul class="pt0 pb1 pl3">
+                <li><span>Bruno Farias</span></li>
+                <li><span>Nayara Rodrigues</span></li>
+                <li><span>Neto Andrade</span></li>
+                <li><span>Hudson Souza</span></li>
+                <li><span>Edson Koji</span></li>
+                <li><span>Henrique Perticarati</span></li>
+                <li><span>Juliana Gaspari				</span></li>
+              </ul>
             </div>
           </div>
         </div>

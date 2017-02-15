@@ -131,7 +131,7 @@ html(lang='pt-br')
 					div.fl.w-100.mt2
 						// NAME
 						div.fl.w-100.cb.mt4.name-input.nl3.nh3
-							.fl.w-50.ph3.relative.inputs--cell
+							.fl.w-33.ph3.relative.inputs--cell
 								p.input--disabled.f3.b.lh-title André Matiazzo
 								input.input--inline.dn.f3(type='text' value='André Matiazzo')
 								label Nome*
@@ -140,14 +140,24 @@ html(lang='pt-br')
 						div.fl.w-100.mt5
 							// ROW
 							div.fl.w-100.cb.nl3.nr3
+								// PHONE
+								.fl.w-33.ph3.relative.inputs--cell
+									p.input.input--disabled 19996587867
+									input.input--inline.dn(type='text' value='19996587867')
+									label Celular*
+									p.f7.mt2.tr.black-20.input__validation.dn Validação
 								// STATE AND CITY
-								.fl.w-25.ph3.relative.inputs--cell.input-with-select
-									div.fl.w-20.input--inline
-										p.fl.w-100.input.input--disabled.input--state
+								.fl.w-33.ph3.relative.inputs--cell.input-with-select
+									// STATE
+									div.fl.w-20.mw3.input--inline--dropdown
+										// Read-only informations
+										p.fl.w-100.b.input--disabled.input--state
 											span.dib.fl.w-100 SP
-										input.fl.w-100.input.input--inline.input--state.has-icon-right.icon-dropdown.dn(type='text' value='SP')
+										// Editable information
+										div.fl.w-100.input.input--inline.pointer.input--state.dn 
+											span.db.has-icon-right.icon-dropdown SP
 										.dropdown.content-box
-											label.dib.mt1.lh-copy Estado
+											label.dib.mt1.lh-copy.black-50 Estado
 											ul.pt0.pb1.pl0
 												li
 													span SP
@@ -161,11 +171,15 @@ html(lang='pt-br')
 													span AM
 												li
 													span MG
-									div.fl.w-80.input--inline
-										p.fl.w-100.input.input--disabled.input--city Campinas
-										input.fl.w-100.input.input--inline.input--city.has-icon-right.icon-dropdown.dn(type='text' value='Campinas')
+									// CITY
+									div.fl.w-80.input--inline--dropdown
+										// Read-only informations
+										p.fl.w-100.b.input--disabled.input--city Campinas
+										// Editable information
+										div.fl.w-100.input.input--inline.pointer.input--city.dn
+											span.db.has-icon-right.icon-dropdown Campinas
 										.dropdown.content-box
-											label.dib.mt1.lh-copy Cidade
+											label.dib.mt1.lh-copy.black-50 Cidade
 											ul.pt0.pb1.pl0
 												li
 													span São Paulo
@@ -179,73 +193,105 @@ html(lang='pt-br')
 													span Sorocaba
 												li
 													span Mococa
-									label.label--active Estado e cidade
-									p.f7.mt2.tr.black-20.input__validation.dn Validação
-								// PHONE
-								.fl.w-25.ph3.relative.inputs--cell
-									p.input.input--disabled 19996587867
-									input.input--inline.dn(type='text' value='19996587867')
-									label Celular*
+									label.label--active Estado e Cidade
 									p.f7.mt2.tr.black-20.input__validation.dn Validação
 								// EMAIL
-								.fl.w-25.ph3.relative.inputs--cell
+								.fl.w-33.ph3.relative.inputs--cell
 									p.input.input--disabled andre.matiazzo@movile.com
 									input.input--inline.dn(type='text' value='andre.matiazzo@movile.com')
 									label Email
 									p.f7.mt2.tr.black-20.input__validation.dn Validação
+							// ROW
+							div.fl.w-100.cb.nl3.nr3.mt5
 								// COMPANY
-								.fl.w-25.ph3.relative.inputs--cell
+								.fl.w-33.ph3.relative.inputs--cell
 									p.input.input--disabled
 									input.input--inline.dn(type='text' value='')
 									label Empresa
 									p.f7.mt2.tr.black-20.input__validation.dn Validação
-							// ROW
-							div.fl.w-100.cb.nl3.nr3.mt5
 								// GENDER
-								.fl.w-25.ph3.relative.inputs--cell.input-with-select
-									div.fl.w-100.input--inline
-										p.fl.w-100.input.input--disabled.input--state
-											span.dib.fl.w-100 Masculino
-										input.fl.w-100.input.input--inline.input--state.has-icon-right.icon-dropdown.dn(type='text' value='Masculino')
+								.fl.w-33.ph3.relative.inputs--cell.input-with-select
+									div.fl.w-100.input--inline--dropdown
+										// Read-only informations
+										p.fl.w-100.b.input--disabled.pointer Masculino
+										// Editable information
+										div.fl.w-100.input.input--inline.pointer.dn
+											span.db.has-icon-right.icon-dropdown Masculino
 										.dropdown.content-box
-											label.dib.mt1.lh-copy Gênero
+											label.dib.mt1.lh-copy.black-50 Gênero
 											ul.pt0.pb1.pl0
 												li
 													span Feminino
 												li
 													span Masculino
-									label.label--active Estado e cidade
+												li.input-inside-list
+													label.black-50.normal Outro
+													input.input--inline
+													div.tr
+														button.mt2.ttu.b.f8.tracked.accent(type='button') confirmar
+									label.label--active Gênero
 									p.f7.mt2.tr.black-20.input__validation.dn Validação
 								// BIRTHDAY
-								.fl.w-25.ph3.relative.inputs--cell
+								.fl.w-33.ph3.relative.inputs--cell
 									p.input.input--disabled 11/01/1991
 									input.input--inline.dn(type='text' value='11/01/1991')
 									label Aniversário
 									p.f7.mt2.tr.black-20.input__validation.dn Validação
+							// ROW
+							div.fl.w-100.cb.nl3.nr3.mt5
 								// CPF/CNPJ
-								.fl.w-25.ph3.relative.inputs--cell
+								.fl.w-33.ph3.relative.inputs--cell
 									p.input.input--disabled 355.098.099-45
 									input.input--inline.dn(type='text' value='355.098.099-45')
 									label CPF/CNPJ
 									p.f7.mt2.tr.black-20.input__validation.dn Validação
 								// NICKNAME
-								.fl.w-25.ph3.relative.inputs--cell
+								.fl.w-33.ph3.relative.inputs--cell
 									p.input.input--disabled Mat
 									input.input--inline.dn(type='text' value='Mat')
 									label Apelido
 									p.f7.mt2.tr.black-20.input__validation.dn Validação	
+								// GROUPS
+								.fl.w-33.ph3.relative.inputs--cell.input-with-select.has-dropdown
+									div.fl.w-100.input--inline--dropdown
+										// Read-only informations
+										p.fl.w-100.b.input--disabled.pointer Masculino
+										// Editable information
+										div.fl.w-100.input.input--inline.pointer.insert-criteria.view-box-close.dn
+											span.db.has-icon-right.icon-dropdown Masculino
+										//- span.f6.theblack.b.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer.fl Operadora
+										.view-box-open.bg-white.z-3.o-0
+											.dropdown-item-box.dropdown
+												div.pb3
+													label.dib.mt1.lh-copy.black-50 Grupos
+													input.mt2
+													.relative.pv2
+														div.checkbox
+															input#group01.dropdown-checkbox(type='checkbox', name='operadora', value='Operadora', checked='')
+															label.f6.b.accent-hover.relative(for='group01') Operadora
+													.relative.pv2
+														div.checkbox
+															input#group02.dropdown-checkbox(type='checkbox', name='campanha', value='Campanha')
+															label.f6.b.accent-hover.relative(for='group02') Campanha
+													.relative.pv2
+														div.checkbox
+															input#group03.dropdown-checkbox(type='checkbox', name='cliente', value='Cliente')
+															label.f6.b.accent-hover.relative(for='group03') Cliente
+													.relative.pv2
+														div.checkbox
+															input#group04.dropdown-checkbox(type='checkbox', name='subconta', value='Subconta')
+															label.f6.b.accent-hover.relative(for='group04') Subconta
+													.relative.pv2
+														div.checkbox
+															input#usuario_checkbox.dropdown-checkbox(type='checkbox', name='usuario', value='Usuário')
+															label.f6.b.accent-hover.relative(for='usuario_checkbox') Usuário
+									label.label--active Grupos
 							// ROW
 							div.fl.w-100.cb.nl3.nr3.mt5
-								// GROUPS
-								.fl.w-25.ph3.relative.inputs--cell
-									p.input.input--disabled Masculino
-									input.input--inline.dn(type='text' value='Masculino')
-									label Grupos
-									p.f7.mt2.tr.black-20.input__validation.dn Validação
-								// Comentários
-								.fl.w-50.ph3.relative.inputs--cell
-									p.input.input--disabled Nenhum comentário
-									textarea.input--inline.dn.f6.lh-copy.ba.b--black-20.b.pa2.mt3.h4(type='text' value='11/01/1991')
+								// COMMENTS
+								.fl.w-33.ph3.relative.inputs--cell
+									p.input.input--disabled Lembrar que essa pessoa é um diretor de uma das nossas maiores investidas. Não mande muitas coisas com frequência.
+									textarea.input--inline.dn.f6.lh-copy.ba.b--black-20.b.pa2.mt3.h4 Lembrar que essa pessoa é um diretor de uma das nossas maiores investidas. Não mande muitas coisas com frequência.
 									label Comentários
 									p.f7.mt2.tr.black-20.input__validation.dn Validação								
 
@@ -301,27 +347,10 @@ html(lang='pt-br')
 						tbody.v-top
 							tr.bb.relative.f6
 								td.bb.b--black-20.pv4.ph3.table-detalhes.left-shadow.lh-solid
-									a.accent.has-icon-left.icon-download-blue.has-tooltip(href='javascript:', alt='Download')
-										.tooltip-content
-											span Download
-									a.accent.has-icon-left.icon-eye-blue.ml3.has-tooltip(href='javascript:', alt='Detalhes')
-										.tooltip-content
-											span Detalhes
+									a.accent.ttu.tracked.b.f8(href='javascript:', alt='Download') visualizar
 							
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
-	script.
-		$('.dropdown-checkbox').click(function() {
-			var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
-			if (length == 0) {
-				$(this).prop('checked', true);
-			}
-			var selected = $('.dropdown-checkbox:checked').map(function() {
-			    return this.value;
-			}).get().join(', ');
-			$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
-		});
-
 	// Filters
 	script(src='js/forms.js')
 	// Notifications
