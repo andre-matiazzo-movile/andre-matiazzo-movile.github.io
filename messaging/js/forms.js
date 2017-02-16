@@ -8,8 +8,8 @@ $(document).ready(function() {
 		var w = $(this).width();
 		var w2 = Math.round(w);
 		var w2 = w2 + 18;
-		$(this).parents(".has-dropdown").find(".view-box-close").css("min-width", w2+"px");
-		$(this).children(".insert-criteria").css("min-width", w2+"px");
+		$(this).parents(".has-dropdown").find(".view-box-close").not('.view-box-close.input--inline').css("min-width", w2+"px");
+		$(this).children(".insert-criteria").not('.insert-criteria.input--inline').css("min-width", w2+"px");
 	});
 	$(".view-box-open").hide();
 	$(".view-box-open").removeClass("o-0");
@@ -91,13 +91,21 @@ $(document).ready(function() {
 	// Dropdown with checkbox inside it
 	$('.dropdown-checkbox').on('click', function() {
 		var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
+		var parent = $(this).parents(".dropdown-item-box");
+		var empty_text = $(this).parents(".dropdown-item-box").attr("data-empty-text");
 		if (length == 0) {
-			$(this).prop('checked', true);
+			if (parent.is(".dropdown--allows-empty")) {
+				console.log(this);
+				$(this).parents(".has-dropdown").find(".insert-criteria span").text(empty_text);
+			} else {
+				$(this).prop('checked', true);
+			}
+		} else {
+			var selected = $('.dropdown-checkbox:checked').map(function() {
+				return this.value;
+			}).get().join(', ');
+			$(this).parents(".has-dropdown").find(".insert-criteria span").text(selected);
 		}
-		var selected = $('.dropdown-checkbox:checked').map(function() {
-			return this.value;
-		}).get().join(', ');
-		$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
 	});
 
 

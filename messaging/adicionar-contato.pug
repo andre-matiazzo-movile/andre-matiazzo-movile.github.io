@@ -111,13 +111,15 @@ html(lang='pt-br')
 								| ver todas as notificações
 				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
 		// MAIN CONTENT
-		section.main-content.ph3.fr
-			a.pa0.bn.bg-white.dib.mt4.fl(href='javascript:history.back()')
+		section.main-content.ph4.pb5.fr
+			a.pa0.bn.bg-white.dib.mt4.nl3.fl(href='javascript:history.back()')
 				span.ttu.b.tracked.f7.accent.has-icon.has-icon-left.icon-arrow-left--blue voltar
-			// RECIPIENTS
-			div.fl.w-100.ph3
+			//SECTION TITLE
+			div.fl.w-100
 				div.fl.w-100.pt4.mw8
 					h3.fl.black.f3.lh-solid Adicionar contato
+					p.fl.cb.main-gray.mt4.pb2 * Campos obrigatórios
+					// INFOS CONTAINER
 					.fl.w-two-thirds.mt4.cl
 						// ROW
 						.nr3.nl3
@@ -125,12 +127,12 @@ html(lang='pt-br')
 								// NAME
 								.fl.w-50.ph3.relative
 									input.input--inline(type='text')
-									label Nome
+									label Nome*
 									p.f7.mt2.tr.black-20.input__validation Validação
 								// PHONE
 								.fl.w-50.ph3.relative
 									input.input--inline(type='text')
-									label Celular
+									label Celular*
 									p.f7.mt2.tr.black-20.input__validation Validação
 						// ROW
 						.nr3.nl3
@@ -238,16 +240,17 @@ html(lang='pt-br')
 									div.fl.w-100.input--inline--dropdown
 										// Editable information
 										div.fl.w-100.input.input--inline.pointer.insert-criteria.view-box-close
-											span.db.has-icon-right.icon-dropdown Pertence a algum?
+											span.db.has-icon-right.icon-dropdown.group-span Pertence a algum?
 										//- span.f6.theblack.b.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer.fl Operadora
 										.view-box-open.bg-white.z-3.o-0
-											.dropdown-item-box.dropdown
+											.dropdown-item-box.dropdown.dropdown--allows-empty(data-empty-text='Pertence a algum?')
 												div.pb3
 													label.dib.mt1.lh-copy.black-50 Grupos
 													input.mt2
+													div.mt2
 													.relative.pv2
 														div.checkbox
-															input#group00.dropdown-checkbox.dn(type='checkbox', name='operadora', value='Grupo 01', checked)
+															//- input#group00.dropdown-checkbox.dn(type='checkbox', name='operadora', value='Grupo 01', checked)
 															input#group01.dropdown-checkbox(type='checkbox', name='operadora', value='Grupo 01')
 															label.f6.b.accent-hover.relative(for='group01') Grupo 01
 													.relative.pv2
@@ -264,17 +267,21 @@ html(lang='pt-br')
 															label.f6.b.accent-hover.relative(for='group04') Grupo 04
 													.relative.pv2
 														div.checkbox
-															input#group05.dropdown-checkbox(type='checkbox', name='usuario', value='Grupo 05')
-															label.f6.b.accent-hover.relative(for='group05') Grupo 05
+																input#group05.dropdown-checkbox(type='checkbox', name='usuario', value='Grupo 05')
+																label.f6.b.accent-hover.relative(for='group05') Grupo 05
 									label.label--active Grupos
 						// ROW
 						.nr3.nl3
 							.fl.w-100.mt5
 								// COMMENTS
 								.fl.w-50.ph3.relative.inputs--cell
-									textarea.input--inline.f6.lh-copy.ba.b--black-20.b.pa2.mt3.h4 
+									textarea.input.input--inline.f6.lh-copy.ba.b--black-20.b.mt3.h4 
 									label.label--active Comentários
-										p.f7.mt2.tr.black-20.input__validation.dn Validação								
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+					// CONFIRM
+					div.fl.w-two-thirds
+						button.dib.fr.mt4.cta.cta-accent
+							span.has-icon-left.icon-check--white adicionar contato		
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
 	// Filters

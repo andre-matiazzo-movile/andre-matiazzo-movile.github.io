@@ -91,11 +91,13 @@
       </div>
     </section>
     <!-- MAIN CONTENT-->
-    <section class="main-content ph3 fr"><a class="pa0 bn bg-white dib mt4 fl" href="javascript:history.back()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
-      <!-- RECIPIENTS-->
-      <div class="fl w-100 ph3">
+    <section class="main-content ph4 pb5 fr"><a class="pa0 bn bg-white dib mt4 nl3 fl" href="javascript:history.back()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
+      <!--SECTION TITLE-->
+      <div class="fl w-100">
         <div class="fl w-100 pt4 mw8">
           <h3 class="fl black f3 lh-solid">Adicionar contato</h3>
+          <p class="fl cb main-gray mt4 pb2">* Campos obrigatórios</p>
+          <!-- INFOS CONTAINER-->
           <div class="fl w-two-thirds mt4 cl">
             <!-- ROW-->
             <div class="nr3 nl3">
@@ -103,13 +105,13 @@
                 <!-- NAME-->
                 <div class="fl w-50 ph3 relative">
                   <input class="input--inline" type="text">
-                  <label>Nome</label>
+                  <label>Nome*</label>
                   <p class="f7 mt2 tr black-20 input__validation">Validação</p>
                 </div>
                 <!-- PHONE-->
                 <div class="fl w-50 ph3 relative">
                   <input class="input--inline" type="text">
-                  <label>Celular</label>
+                  <label>Celular*</label>
                   <p class="f7 mt2 tr black-20 input__validation">Validação</p>
                 </div>
               </div>
@@ -226,15 +228,15 @@
                 <div class="fl w-50 ph3 relative inputs--cell input-with-select has-dropdown">
                   <div class="fl w-100 input--inline--dropdown">
                     <!-- Editable information-->
-                    <div class="fl w-100 input input--inline pointer insert-criteria view-box-close"><span class="db has-icon-right icon-dropdown">Pertence a algum?</span></div>
+                    <div class="fl w-100 input input--inline pointer insert-criteria view-box-close"><span class="db has-icon-right icon-dropdown group-span">Pertence a algum?</span></div>
                     <div class="view-box-open bg-white z-3 o-0">
-                      <div class="dropdown-item-box dropdown">
+                      <div class="dropdown-item-box dropdown dropdown--allows-empty" data-empty-text="Pertence a algum?">
                         <div class="pb3">
                           <label class="dib mt1 lh-copy black-50">Grupos</label>
                           <input class="mt2">
+                          <div class="mt2"></div>
                           <div class="relative pv2">
                             <div class="checkbox">
-                              <input class="dropdown-checkbox dn" id="group00" type="checkbox" name="operadora" value="Grupo 01" checked>
                               <input class="dropdown-checkbox" id="group01" type="checkbox" name="operadora" value="Grupo 01">
                               <label class="f6 b accent-hover relative" for="group01">Grupo 01</label>
                             </div>
@@ -276,13 +278,17 @@
               <div class="fl w-100 mt5">
                 <!-- COMMENTS-->
                 <div class="fl w-50 ph3 relative inputs--cell">
-                  <textarea class="input--inline f6 lh-copy ba b--black-20 b pa2 mt3 h4"> </textarea>
+                  <textarea class="input input--inline f6 lh-copy ba b--black-20 b mt3 h4"> </textarea>
                   <label class="label--active">Comentários
-                    <p class="f7 mt2 tr black-20 input__validation dn">Validação								</p>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
                   </label>
                 </div>
               </div>
             </div>
+          </div>
+          <!-- CONFIRM-->
+          <div class="fl w-two-thirds">
+            <button class="dib fr mt4 cta cta-accent"><span class="has-icon-left icon-check--white">adicionar contato		</span></button>
           </div>
         </div>
       </div>

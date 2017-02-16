@@ -111,61 +111,71 @@ html(lang='pt-br')
 								| ver todas as notificações
 				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
 		// MAIN CONTENT
-		section.main-content.ph3.fr
-			a.pa0.bn.bg-white.dib.mt4.fl(href='javascript:history.back()')
+		section.main-content.ph4.fr
+			a.pa0.bn.bg-white.dib.mt4.nl3.fl(href='javascript:history.back()')
 				span.ttu.b.tracked.f7.accent.has-icon.has-icon-left.icon-arrow-left--blue voltar
-			// RECIPIENTS
-			div.fl.w-100.ph3
+			// INFOS
+			div.fl.w-100
 				div.fl.w-100.pt4.mw8(style='min-height:400px;')
 					h3.fl.black.f3.lh-solid Adicionar grupo
+					p.fl.cb.main-gray.mt4.pb2 * Campos obrigatórios
 					.fl.w-100.mt4.cl
 						// ROW
-						.nr5.nl5
-							.fl.w-100
-								.fl.w-50.ph5.relative
-									input.input--inline(type='email' autofocus)
-									label Nome do grupo
-									p.f7.mt2.tr.black-20.input__validation Validação
+						.fl.w-100
+							.fl.w-50.pr5
+								.nl3.nr3
+									.fl.w-100.relative.ph3
+										input.input--inline(type='email' autofocus)
+										label Nome do grupo*
+										p.f7.mt2.tr.black-20.input__validation Validação
 						// ROW
-						.nr5.nl5
-							// SEARCH AND IMPORT CONTAINER
-							.fl.w-100.mt4
-								// SEARCH
-								.fl.w-50.search-input.transition.ph5
-									.fl.w-100.relative
-										label.f6.black.lh-copy Busque por cadastrados ou digite novos números
-										.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input-envio.bg-search
-											p.dib
-										.dropdown.dropdown--multiple-lists.content-box.nl3.nr3
-											label.black-50.f6.lh-copy.black Busque por cadastrados ou digite novos números
-											input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title.bg-search(type='search')
-											div.fl.w-50.mt3.ml4.pb3.pl3
-												span.main-gray.db.f6 Últimos adicionados
-											div.fl.w-100.multiple-lists__container.theblack
-												div.fl.w-100.gruposecontatos.contatos-lista(data-origin='contatos-lista')
-													ul.pt0.pb1.pl3.ml4
-														li
-															span.b(data-id='1') Bruno Farias
-														li
-															span.b(data-id='2') Nayara Rodrigues
-									p.fl.warning.dn.main-gray.lh-copy.mt2 Ao importar de um arquivo, você não pode inserir contatos manualmente
-									a(href='javascript:').dn.fl.f7.ttu.tracked.b.accent.pointer.clear-all.mb3.mt4 Limpar todos
-									ul.fl.cb.list.pl0.contatos
-								.fl.w-50.ph5.choose-file.transition
-									div.fl
-										label.fl.f6.black.lh-copy Ou importe de um arquivo
-										form#form-choose-file
-											input.dn(type='file', id='import-file', accept='.txt, .csv')
-											input.dn(type='reset', id='reset-file')
-										label.b.mt2.fl.cl.cta.cta-secondary.dib.w-auto.tr.main-gray(for="import-file")
-											span.has-icon.has-icon-left.icon-upload--gray(data-before-chosen="Escolher arquivo", data-after-chosen='Mudar arquivo') Escolher arquivo
-										.fr.tr.cl.how-to.mt1.measure-narrow
-											button.pa0.bg-white.bn.f8.ttu.tracked.b.accent.modal-trigger.trigger--how-to-do veja como fazer							
-										.fl.cb.dn.file-name.bg-medium-accent.pa2.mr2.mb2.mt2
-											a.has-icon-left.icon-close-blue
-											span.f7.accent.b
-									p.measure-narrow.warning.dn.tl.cb.main-gray.lh-copy.pt2 Ao inserir contatos manualmente, você não pode selecionar um arquivo
-							
+						// SEARCH AND IMPORT CONTAINER
+						.fl.w-100.mt5
+							// SEARCH
+							.fl.w-50.search-input.transition.pr5
+								.fl.w-100.relative
+									label.f6.black.lh-copy Busque por Contatos cadastrados
+									.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input-envio.bg-search
+										p.dib
+									.dropdown.dropdown--multiple-lists.content-box.nl3.nr3
+										label.black-50.f6.lh-copy.black Busque por Contatos cadastrados
+										input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title.bg-search(type='search')
+										div.fl.w-50.mt3.ml4.pb3.pl3
+											span.main-gray.db.f6 Últimos adicionados
+										div.fl.w-100.multiple-lists__container.theblack
+											div.fl.w-100.gruposecontatos.contatos-lista(data-origin='contatos-lista')
+												ul.pt0.pb1.pl3.ml4
+													li
+														span.b(data-id='1') Bruno Farias
+													li
+														span.b(data-id='2') Nayara Rodrigues
+								p.fl.warning.dn.main-gray.lh-copy.mt2 Ao importar de um arquivo, você não pode inserir contatos manualmente
+								a(href='javascript:').dn.fl.f7.ttu.tracked.b.accent.pointer.clear-all.mb3.mt4 Limpar todos
+								ul.fl.cb.list.pl0.contatos
+							.fl.w-50.pl5.choose-file.transition
+								div.fl
+									label.fl.f6.black.lh-copy Ou importe de um arquivo
+									form#form-choose-file
+										input.dn(type='file', id='import-file', accept='.txt, .csv')
+										input.dn(type='reset', id='reset-file')
+									label.b.mt2.fl.cl.cta.cta-secondary.dib.w-auto.tr.main-gray(for="import-file")
+										span.has-icon.has-icon-left.icon-upload--gray(data-before-chosen="Escolher arquivo", data-after-chosen='Mudar arquivo') Escolher arquivo
+									.fr.tr.cl.how-to.mt1.measure-narrow
+										button.pa0.bg-white.bn.f8.ttu.tracked.b.accent.modal-trigger.trigger--how-to-do veja como fazer							
+									.fl.cb.dn.file-name.bg-medium-accent.pa2.mr2.mb2.mt2
+										a.has-icon-left.icon-close-blue
+										span.f7.accent.b
+								p.measure-narrow.warning.dn.tl.cb.main-gray.lh-copy.pt2 Ao inserir contatos manualmente, você não pode selecionar um arquivo
+					// DESCRIPTION
+					.fl.w-100.mt5
+						.fl.w-50.relative.inputs--cell.pr5
+							textarea.input.input--inline.f6.lh-copy.ba.b--black-20.b.mt3.h4 
+							label.label--active Descrição
+								p.f7.mt2.tr.black-20.input__validation.dn Validação
+					// CONFIRM
+					div.fl.w-50.pr5.mt4
+						button.dib.fr.cta.cta-accent
+							span.has-icon-left.icon-check--white adicionar grupo		
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
 	// Filters

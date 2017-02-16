@@ -91,67 +91,81 @@
       </div>
     </section>
     <!-- MAIN CONTENT-->
-    <section class="main-content ph3 fr"><a class="pa0 bn bg-white dib mt4 fl" href="javascript:history.back()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
-      <!-- RECIPIENTS-->
-      <div class="fl w-100 ph3">
+    <section class="main-content ph4 fr"><a class="pa0 bn bg-white dib mt4 nl3 fl" href="javascript:history.back()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
+      <!-- INFOS-->
+      <div class="fl w-100">
         <div class="fl w-100 pt4 mw8" style="min-height:400px">
           <h3 class="fl black f3 lh-solid">Adicionar grupo</h3>
+          <p class="fl cb main-gray mt4 pb2">* Campos obrigatórios</p>
           <div class="fl w-100 mt4 cl">
             <!-- ROW-->
-            <div class="nr5 nl5">
-              <div class="fl w-100">
-                <div class="fl w-50 ph5 relative">
-                  <input class="input--inline" type="email" autofocus>
-                  <label>Nome do grupo</label>
-                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+            <div class="fl w-100">
+              <div class="fl w-50 pr5">
+                <div class="nl3 nr3">
+                  <div class="fl w-100 relative ph3">
+                    <input class="input--inline" type="email" autofocus>
+                    <label>Nome do grupo*</label>
+                    <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                  </div>
                 </div>
               </div>
             </div>
             <!-- ROW-->
-            <div class="nr5 nl5">
-              <!-- SEARCH AND IMPORT CONTAINER-->
-              <div class="fl w-100 mt4">
-                <!-- SEARCH-->
-                <div class="fl w-50 search-input transition ph5">
-                  <div class="fl w-100 relative">
-                    <label class="f6 black lh-copy">Busque por cadastrados ou digite novos números</label>
-                    <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input-envio bg-search">
-                      <p class="dib"></p>
-                    </div>
-                    <div class="dropdown dropdown--multiple-lists content-box nl3 nr3">
-                      <label class="black-50 f6 lh-copy black">Busque por cadastrados ou digite novos números</label>
-                      <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title bg-search" type="search">
-                      <div class="fl w-50 mt3 ml4 pb3 pl3"><span class="main-gray db f6">Últimos adicionados</span></div>
-                      <div class="fl w-100 multiple-lists__container theblack">
-                        <div class="fl w-100 gruposecontatos contatos-lista" data-origin="contatos-lista">
-                          <ul class="pt0 pb1 pl3 ml4">
-                            <li><span class="b" data-id="1">Bruno Farias</span></li>
-                            <li><span class="b" data-id="2">Nayara Rodrigues</span></li>
-                          </ul>
-                        </div>
+            <!-- SEARCH AND IMPORT CONTAINER-->
+            <div class="fl w-100 mt5">
+              <!-- SEARCH-->
+              <div class="fl w-50 search-input transition pr5">
+                <div class="fl w-100 relative">
+                  <label class="f6 black lh-copy">Busque por Contatos cadastrados</label>
+                  <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input-envio bg-search">
+                    <p class="dib"></p>
+                  </div>
+                  <div class="dropdown dropdown--multiple-lists content-box nl3 nr3">
+                    <label class="black-50 f6 lh-copy black">Busque por Contatos cadastrados</label>
+                    <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title bg-search" type="search">
+                    <div class="fl w-50 mt3 ml4 pb3 pl3"><span class="main-gray db f6">Últimos adicionados</span></div>
+                    <div class="fl w-100 multiple-lists__container theblack">
+                      <div class="fl w-100 gruposecontatos contatos-lista" data-origin="contatos-lista">
+                        <ul class="pt0 pb1 pl3 ml4">
+                          <li><span class="b" data-id="1">Bruno Farias</span></li>
+                          <li><span class="b" data-id="2">Nayara Rodrigues</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
-                  <p class="fl warning dn main-gray lh-copy mt2">Ao importar de um arquivo, você não pode inserir contatos manualmente</p><a class="dn fl f7 ttu tracked b accent pointer clear-all mb3 mt4" href="javascript:">Limpar todos</a>
-                  <ul class="fl cb list pl0 contatos"></ul>
                 </div>
-                <div class="fl w-50 ph5 choose-file transition">
-                  <div class="fl">
-                    <label class="fl f6 black lh-copy">Ou importe de um arquivo</label>
-                    <form id="form-choose-file">
-                      <input class="dn" type="file" id="import-file" accept=".txt, .csv">
-                      <input class="dn" type="reset" id="reset-file">
-                    </form>
-                    <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon has-icon-left icon-upload--gray" data-before-chosen="Escolher arquivo" data-after-chosen="Mudar arquivo">Escolher arquivo</span></label>
-                    <div class="fr tr cl how-to mt1 measure-narrow">
-                      <button class="pa0 bg-white bn f8 ttu tracked b accent modal-trigger trigger--how-to-do">veja como fazer							</button>
-                    </div>
-                    <div class="fl cb dn file-name bg-medium-accent pa2 mr2 mb2 mt2"><a class="has-icon-left icon-close-blue"></a><span class="f7 accent b"></span></div>
+                <p class="fl warning dn main-gray lh-copy mt2">Ao importar de um arquivo, você não pode inserir contatos manualmente</p><a class="dn fl f7 ttu tracked b accent pointer clear-all mb3 mt4" href="javascript:">Limpar todos</a>
+                <ul class="fl cb list pl0 contatos"></ul>
+              </div>
+              <div class="fl w-50 pl5 choose-file transition">
+                <div class="fl">
+                  <label class="fl f6 black lh-copy">Ou importe de um arquivo</label>
+                  <form id="form-choose-file">
+                    <input class="dn" type="file" id="import-file" accept=".txt, .csv">
+                    <input class="dn" type="reset" id="reset-file">
+                  </form>
+                  <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon has-icon-left icon-upload--gray" data-before-chosen="Escolher arquivo" data-after-chosen="Mudar arquivo">Escolher arquivo</span></label>
+                  <div class="fr tr cl how-to mt1 measure-narrow">
+                    <button class="pa0 bg-white bn f8 ttu tracked b accent modal-trigger trigger--how-to-do">veja como fazer							</button>
                   </div>
-                  <p class="measure-narrow warning dn tl cb main-gray lh-copy pt2">Ao inserir contatos manualmente, você não pode selecionar um arquivo</p>
+                  <div class="fl cb dn file-name bg-medium-accent pa2 mr2 mb2 mt2"><a class="has-icon-left icon-close-blue"></a><span class="f7 accent b"></span></div>
                 </div>
+                <p class="measure-narrow warning dn tl cb main-gray lh-copy pt2">Ao inserir contatos manualmente, você não pode selecionar um arquivo</p>
               </div>
             </div>
+          </div>
+          <!-- DESCRIPTION-->
+          <div class="fl w-100 mt5">
+            <div class="fl w-50 relative inputs--cell pr5">
+              <textarea class="input input--inline f6 lh-copy ba b--black-20 b mt3 h4"> </textarea>
+              <label class="label--active">Descrição
+                <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+              </label>
+            </div>
+          </div>
+          <!-- CONFIRM-->
+          <div class="fl w-50 pr5 mt4">
+            <button class="dib fr cta cta-accent"><span class="has-icon-left icon-check--white">adicionar grupo		</span></button>
           </div>
         </div>
       </div>

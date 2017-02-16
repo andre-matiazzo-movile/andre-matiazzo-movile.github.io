@@ -4,7 +4,7 @@
 }
 
 .download-items {
-	top: 70%;
+	top: 90%;
 	box-shadow: 0 2px 3px 0 rgba(55,71,79,0.18);
 	border: 1px solid rgba(55,71,79,0.18);
 	opacity: 0;
@@ -67,6 +67,12 @@ input {
 			}
 		}
 	}
+}
+
+textarea.input,
+textarea.input.input--inline {
+	padding: .5rem;
+	border: 1px solid rgba(0,0,0,.2);
 }
 
 .input--disabled {
@@ -147,6 +153,10 @@ input {
 		}
 		.input--inline {
 			border-bottom: none;
+		}
+		.input__validation {
+			right: initial;
+			left: 0;
 		}
 	}
 	&.inputs-infos__group {
