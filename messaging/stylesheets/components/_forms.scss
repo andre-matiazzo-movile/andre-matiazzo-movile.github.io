@@ -93,6 +93,12 @@ input {
 	}
 }
 
+.input__validation {
+	position: absolute;
+	bottom: -1.25rem;
+	right: 1rem;
+}
+
 .input-with-select {
 	&.input {
 		border-bottom: none;
@@ -126,8 +132,6 @@ input {
 	}
 	.input__validation {
 		display: block;
-		position: absolute;
-		bottom: -1.25rem;
 	}
 	&.inputs-infos__line {
 		margin-bottom: 2rem;
@@ -190,45 +194,45 @@ input {
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
-	background: #fff;
-	opacity: 0;
-	@include box-with-shadow;
-	@include transition(150ms);
-	z-index: 2;
-	&.dropdown--active {
-		display: block;
-	}
-	&.notifications {
-		top: 36px;
-		right: 0;
-		left: initial;
-		padding: 0;
-		border-top: 3px solid $accent;
-		width: 420px;
-		&::after {
-			content: '';
-			position: absolute;
-			top: -10px;
-			right: 16px;
-			width: 0;
-			height: 0;
-			border-left: 10px solid transparent;
-			border-right: 10px solid transparent;
-			border-bottom: 10px solid #84ADFF
-		}
-	}
-	span + ul li:first-child {
-		padding-top: 0;
-	}
-	& *::-webkit-scrollbar {
-		-webkit-appearance: none;
-		width: 3px;
-	}
-	& *::-webkit-scrollbar-thumb {
-		border-radius: 1px;
-		background-color: $main-gray;
-		-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-	}
+    background: #fff;
+    opacity: 0;
+    @include box-with-shadow;
+    @include transition(150ms);
+    z-index: 2;
+    &.dropdown--active {
+    	display: block;
+    }
+    &.notifications {
+    	top: 36px;
+    	right: 0;
+    	left: initial;
+    	padding: 0;
+    	border-top: 3px solid $accent;
+    	width: 420px;
+    	&::after {
+    		content: '';
+    		position: absolute;
+    		top: -10px;
+    		right: 16px;
+    		width: 0;
+    		height: 0;
+    		border-left: 10px solid transparent;
+    		border-right: 10px solid transparent;
+    		border-bottom: 10px solid #84ADFF
+    	}
+    }
+    span + ul li:first-child {
+    	padding-top: 0;
+    }
+    & *::-webkit-scrollbar {
+    	-webkit-appearance: none;
+    	width: 3px;
+    }
+    & *::-webkit-scrollbar-thumb {
+    	border-radius: 1px;
+    	background-color: $main-gray;
+    	-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
 	//Removes space on "Choose who's going to receive" in Novo Envio
 	.gruposecontatos li:first-child {
 		padding-top: 0;

@@ -96,21 +96,190 @@
       <div class="fl w-100 ph3">
         <div class="fl w-100 pt4 mw8">
           <h3 class="fl black f3 lh-solid">Adicionar contato</h3>
-          <div class="fl w-100 mt4 cl">
+          <div class="fl w-two-thirds mt4 cl">
             <!-- ROW-->
             <div class="nr3 nl3">
               <div class="fl w-100">
                 <!-- NAME-->
-                <div class="fl w-third ph3 relative">
+                <div class="fl w-50 ph3 relative">
                   <input class="input--inline" type="text">
                   <label>Nome</label>
                   <p class="f7 mt2 tr black-20 input__validation">Validação</p>
                 </div>
                 <!-- PHONE-->
-                <div class="fl w-third ph3 relative">
+                <div class="fl w-50 ph3 relative">
                   <input class="input--inline" type="text">
                   <label>Celular</label>
                   <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+              </div>
+            </div>
+            <!-- ROW-->
+            <div class="nr3 nl3">
+              <div class="fl w-100 mt5">
+                <!-- NAME-->
+                <div class="fl w-50 ph3 relative inputs--cell input-with-select">
+                  <!-- STATE-->
+                  <div class="fl w-20 input--inline--dropdown">
+                    <!-- Editable information-->
+                    <div class="fl w-100 input input--inline pointer input--state"><span class="db has-icon-right icon-dropdown">UF</span></div>
+                    <div class="dropdown content-box">
+                      <label class="dib mt1 lh-copy black-50">Estado</label>
+                      <ul class="pt0 pb1 pl0">
+                        <li><span>SP</span></li>
+                        <li><span>RJ</span></li>
+                        <li><span>SC</span></li>
+                        <li><span>PE</span></li>
+                        <li><span>AM</span></li>
+                        <li><span>MG</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- CITY-->
+                  <div class="fl w-80 input--inline--dropdown">
+                    <!-- Editable information-->
+                    <div class="fl w-100 input input--inline pointer input--city"><span class="db has-icon-right icon-dropdown">Escolha a cidade</span></div>
+                    <div class="dropdown content-box">
+                      <label class="dib mt1 lh-copy black-50">Cidade</label>
+                      <ul class="pt0 pb1 pl0">
+                        <li><span>São Paulo</span></li>
+                        <li><span>Campinas</span></li>
+                        <li><span>Ribeirão Preto</span></li>
+                        <li><span>São Carlos</span></li>
+                        <li><span>Sorocaba</span></li>
+                        <li><span>Mococa</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <label class="label--active">Estado e Cidade</label>
+                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                </div>
+                <!-- EMAIL-->
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="email">
+                  <label>Email</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+              </div>
+            </div>
+            <!-- ROW-->
+            <div class="nr3 nl3">
+              <div class="fl w-100 mt5">
+                <!-- COMPANY-->
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>Empresa</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+                <!-- GENDER-->
+                <div class="fl w-50 ph3 relative inputs--cell input-with-select">
+                  <div class="fl w-100 input--inline--dropdown">
+                    <!-- Editable information-->
+                    <div class="fl w-100 input input--inline pointer"><span class="db has-icon-right icon-dropdown">Escolha</span></div>
+                    <div class="dropdown content-box">
+                      <label class="dib mt1 lh-copy black-50">Gênero</label>
+                      <ul class="pt0 pb1 pl0">
+                        <li><span>Feminino</span></li>
+                        <li><span>Masculino</span></li>
+                        <li class="input-inside-list">
+                          <label class="black-50 normal">Outro</label>
+                          <input class="input--inline">
+                          <div class="tr">
+                            <button class="mt2 ttu b f8 tracked accent" type="button">confirmar</button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <label class="label--active">Gênero</label>
+                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                </div>
+              </div>
+            </div>
+            <!-- ROW-->
+            <div class="nr3 nl3">
+              <div class="fl w-100 mt5">
+                <!-- BIRTHDAY-->
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>Aniversário</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+                <!-- CPF/CNPJ-->
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>CPF/CNPJ</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação													</p>
+                </div>
+              </div>
+            </div>
+            <!-- ROW-->
+            <div class="nr3 nl3">
+              <div class="fl w-100 mt5">
+                <!-- NICKNAME-->
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>Apelido</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+                <!-- GROUPS-->
+                <div class="fl w-50 ph3 relative inputs--cell input-with-select has-dropdown">
+                  <div class="fl w-100 input--inline--dropdown">
+                    <!-- Editable information-->
+                    <div class="fl w-100 input input--inline pointer insert-criteria view-box-close"><span class="db has-icon-right icon-dropdown">Pertence a algum?</span></div>
+                    <div class="view-box-open bg-white z-3 o-0">
+                      <div class="dropdown-item-box dropdown">
+                        <div class="pb3">
+                          <label class="dib mt1 lh-copy black-50">Grupos</label>
+                          <input class="mt2">
+                          <div class="relative pv2">
+                            <div class="checkbox">
+                              <input class="dropdown-checkbox dn" id="group00" type="checkbox" name="operadora" value="Grupo 01" checked>
+                              <input class="dropdown-checkbox" id="group01" type="checkbox" name="operadora" value="Grupo 01">
+                              <label class="f6 b accent-hover relative" for="group01">Grupo 01</label>
+                            </div>
+                          </div>
+                          <div class="relative pv2">
+                            <div class="checkbox">
+                              <input class="dropdown-checkbox" id="group02" type="checkbox" name="campanha" value="Grupo 02">
+                              <label class="f6 b accent-hover relative" for="group02">Grupo 02</label>
+                            </div>
+                          </div>
+                          <div class="relative pv2">
+                            <div class="checkbox">
+                              <input class="dropdown-checkbox" id="group03" type="checkbox" name="cliente" value="Grupo 03">
+                              <label class="f6 b accent-hover relative" for="group03">Grupo 03</label>
+                            </div>
+                          </div>
+                          <div class="relative pv2">
+                            <div class="checkbox">
+                              <input class="dropdown-checkbox" id="group04" type="checkbox" name="subconta" value="Grupo 04">
+                              <label class="f6 b accent-hover relative" for="group04">Grupo 04</label>
+                            </div>
+                          </div>
+                          <div class="relative pv2">
+                            <div class="checkbox">
+                              <input class="dropdown-checkbox" id="group05" type="checkbox" name="usuario" value="Grupo 05">
+                              <label class="f6 b accent-hover relative" for="group05">Grupo 05</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <label class="label--active">Grupos</label>
+                </div>
+              </div>
+            </div>
+            <!-- ROW-->
+            <div class="nr3 nl3">
+              <div class="fl w-100 mt5">
+                <!-- COMMENTS-->
+                <div class="fl w-50 ph3 relative inputs--cell">
+                  <textarea class="input--inline f6 lh-copy ba b--black-20 b pa2 mt3 h4"> </textarea>
+                  <label class="label--active">Comentários
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação								</p>
+                  </label>
                 </div>
               </div>
             </div>

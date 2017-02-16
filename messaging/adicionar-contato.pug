@@ -118,21 +118,163 @@ html(lang='pt-br')
 			div.fl.w-100.ph3
 				div.fl.w-100.pt4.mw8
 					h3.fl.black.f3.lh-solid Adicionar contato
-					.fl.w-100.mt4.cl
+					.fl.w-two-thirds.mt4.cl
 						// ROW
 						.nr3.nl3
 							.fl.w-100
 								// NAME
-								.fl.w-third.ph3.relative
+								.fl.w-50.ph3.relative
 									input.input--inline(type='text')
 									label Nome
 									p.f7.mt2.tr.black-20.input__validation Validação
 								// PHONE
-								.fl.w-third.ph3.relative
+								.fl.w-50.ph3.relative
 									input.input--inline(type='text')
 									label Celular
 									p.f7.mt2.tr.black-20.input__validation Validação
-							
+						// ROW
+						.nr3.nl3
+							.fl.w-100.mt5
+								// NAME
+								.fl.w-50.ph3.relative.inputs--cell.input-with-select
+										// STATE
+										div.fl.w-20.input--inline--dropdown
+											// Editable information
+											div.fl.w-100.input.input--inline.pointer.input--state
+												span.db.has-icon-right.icon-dropdown UF
+											.dropdown.content-box
+												label.dib.mt1.lh-copy.black-50 Estado
+												ul.pt0.pb1.pl0
+													li
+														span SP
+													li
+														span RJ
+													li
+														span SC
+													li
+														span PE
+													li
+														span AM
+													li
+														span MG
+										// CITY
+										div.fl.w-80.input--inline--dropdown
+											// Editable information
+											div.fl.w-100.input.input--inline.pointer.input--city
+												span.db.has-icon-right.icon-dropdown Escolha a cidade
+											.dropdown.content-box
+												label.dib.mt1.lh-copy.black-50 Cidade
+												ul.pt0.pb1.pl0
+													li
+														span São Paulo
+													li
+														span Campinas
+													li
+														span Ribeirão Preto
+													li
+														span São Carlos
+													li
+														span Sorocaba
+													li
+														span Mococa
+										label.label--active Estado e Cidade
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+								// EMAIL
+								.fl.w-50.ph3.relative
+									input.input--inline(type='email')
+									label Email
+									p.f7.mt2.tr.black-20.input__validation Validação
+						// ROW
+						.nr3.nl3
+							.fl.w-100.mt5
+								// COMPANY
+								.fl.w-50.ph3.relative
+									input.input--inline(type='text')
+									label Empresa
+									p.f7.mt2.tr.black-20.input__validation Validação
+								// GENDER
+								.fl.w-50.ph3.relative.inputs--cell.input-with-select
+										div.fl.w-100.input--inline--dropdown
+											// Editable information
+											div.fl.w-100.input.input--inline.pointer
+												span.db.has-icon-right.icon-dropdown Escolha
+											.dropdown.content-box
+												label.dib.mt1.lh-copy.black-50 Gênero
+												ul.pt0.pb1.pl0
+													li
+														span Feminino
+													li
+														span Masculino
+													li.input-inside-list
+														label.black-50.normal Outro
+														input.input--inline
+														div.tr
+															button.mt2.ttu.b.f8.tracked.accent(type='button') confirmar
+										label.label--active Gênero
+										p.f7.mt2.tr.black-20.input__validation.dn Validação
+						// ROW
+						.nr3.nl3
+							.fl.w-100.mt5
+								// BIRTHDAY
+								.fl.w-50.ph3.relative
+									input.input--inline(type='text')
+									label Aniversário
+									p.f7.mt2.tr.black-20.input__validation Validação
+								// CPF/CNPJ
+								.fl.w-50.ph3.relative
+									input.input--inline(type='text')
+									label CPF/CNPJ
+									p.f7.mt2.tr.black-20.input__validation Validação													
+						// ROW
+						.nr3.nl3
+							.fl.w-100.mt5
+								// NICKNAME
+								.fl.w-50.ph3.relative
+									input.input--inline(type='text')
+									label Apelido
+									p.f7.mt2.tr.black-20.input__validation Validação
+								// GROUPS
+								.fl.w-50.ph3.relative.inputs--cell.input-with-select.has-dropdown
+									div.fl.w-100.input--inline--dropdown
+										// Editable information
+										div.fl.w-100.input.input--inline.pointer.insert-criteria.view-box-close
+											span.db.has-icon-right.icon-dropdown Pertence a algum?
+										//- span.f6.theblack.b.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer.fl Operadora
+										.view-box-open.bg-white.z-3.o-0
+											.dropdown-item-box.dropdown
+												div.pb3
+													label.dib.mt1.lh-copy.black-50 Grupos
+													input.mt2
+													.relative.pv2
+														div.checkbox
+															input#group00.dropdown-checkbox.dn(type='checkbox', name='operadora', value='Grupo 01', checked)
+															input#group01.dropdown-checkbox(type='checkbox', name='operadora', value='Grupo 01')
+															label.f6.b.accent-hover.relative(for='group01') Grupo 01
+													.relative.pv2
+														div.checkbox
+															input#group02.dropdown-checkbox(type='checkbox', name='campanha', value='Grupo 02')
+															label.f6.b.accent-hover.relative(for='group02') Grupo 02
+													.relative.pv2
+														div.checkbox
+															input#group03.dropdown-checkbox(type='checkbox', name='cliente', value='Grupo 03')
+															label.f6.b.accent-hover.relative(for='group03') Grupo 03
+													.relative.pv2
+														div.checkbox
+															input#group04.dropdown-checkbox(type='checkbox', name='subconta', value='Grupo 04')
+															label.f6.b.accent-hover.relative(for='group04') Grupo 04
+													.relative.pv2
+														div.checkbox
+															input#group05.dropdown-checkbox(type='checkbox', name='usuario', value='Grupo 05')
+															label.f6.b.accent-hover.relative(for='group05') Grupo 05
+									label.label--active Grupos
+						// ROW
+						.nr3.nl3
+							.fl.w-100.mt5
+								// COMMENTS
+								.fl.w-50.ph3.relative.inputs--cell
+									textarea.input--inline.f6.lh-copy.ba.b--black-20.b.pa2.mt3.h4 
+									label.label--active Comentários
+										p.f7.mt2.tr.black-20.input__validation.dn Validação								
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
 	// Filters

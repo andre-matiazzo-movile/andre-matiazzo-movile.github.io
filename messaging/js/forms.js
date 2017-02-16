@@ -89,7 +89,7 @@ $(document).ready(function() {
 	});
 
 	// Dropdown with checkbox inside it
-	$('.dropdown-checkbox').click(function() {
+	$('.dropdown-checkbox').on('click', function() {
 		var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
 		if (length == 0) {
 			$(this).prop('checked', true);
