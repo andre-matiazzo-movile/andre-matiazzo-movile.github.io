@@ -28,7 +28,7 @@
           <li class="mt3"><a class="white dim f6" href="dashboard.html">Dashboard</a></li>
           <li class="mt3"><a class="white dim f6" href="novo-envio.html">Novo envio</a></li>
           <li class="mt3"><a class="white dim f6" href="relatorios-consolidados.html">Relatórios</a></li>
-          <li class="mt3"><a class="white dim f6" href="">Contatos</a></li>
+          <li class="mt3"><a class="white dim f6 bb bw1" href="contatos.html">Contatos</a></li>
           <li class="mt3"><a class="white dim f6" href="permissoes.html">Permissões</a></li>
           <li class="mt3"><a class="white dim f6" href="conta.html">Sua conta</a></li>
           <li class="mt3"><a class="white dim f6" href="">Suporte</a></li>
@@ -38,7 +38,7 @@
     <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bb b--black-10">
       <h1 class="f2 fl theblack lh-solid">Contatos</h1>
       <div class="fr lh-copy relative">
-        <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray">Notificações</a>
+        <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray pointer">Notificações</a>
           <div class="absolute top--1 right--1">
             <div class="relative"><span class="notification-badge">275</span></div>
           </div>
@@ -91,7 +91,7 @@
       </div>
     </section>
     <!-- MAIN CONTENT-->
-    <section class="main-content ph3 pb5 fr"><a class="pa0 bn bg-white dib mt4 fl" onclick="goBack()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
+    <section class="main-content ph3 pb5 fr"><a class="pa0 bn bg-white dib mt4 fl" href="javascript:history.back()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
       <!-- INFOS - TITLE AND ACTION BUTTONS-->
       <div class="fl w-100 ph3">
         <form class="fl w-100 mt4 inputs-infos inputs-infos__group">
@@ -104,194 +104,199 @@
               <button class="accent ttu b tracked mr3 has-icon-left icon-blacklist f7" type="button">inserir na blacklist</button>
               <button class="cta input--edit" type="button"><span class="has-icon-left icon-edit--blue">editar</span></button>
               <button class="cta input--confirm dn" type="button"><span class="has-icon-left icon-check">salvar</span></button>
+              <p class="white bg-green ttu b tracked pa3 f7 input--saved transition lh-copy ba b--transparent dn"><span class="has-icon-left icon-check--white">salvo</span></p>
             </div>
           </div>
           <!-- INFOS - CONTENT-->
-          <div class="fl w-100 mt2">
-            <!-- NAME-->
-            <div class="fl w-100 cb mt4 name-input nl3 nh3">
-              <div class="fl w-33 ph3 relative inputs--cell">
-                <p class="input--disabled f3 b lh-title">André Matiazzo</p>
-                <input class="input--inline dn f3" type="text" value="André Matiazzo">
-                <label>Nome*</label>
-                <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
-              </div>
-            </div>
-            <!--OTHER INFOS-->
-            <div class="fl w-100 mt5">
-              <!-- ROW-->
-              <div class="fl w-100 cb nl3 nr3">
-                <!-- PHONE-->
-                <div class="fl w-33 ph3 relative inputs--cell">
-                  <p class="input input--disabled">19996587867</p>
-                  <input class="input--inline dn" type="text" value="19996587867">
-                  <label>Celular*</label>
-                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
-                </div>
-                <!-- STATE AND CITY-->
-                <div class="fl w-33 ph3 relative inputs--cell input-with-select">
-                  <!-- STATE-->
-                  <div class="fl w-20 mw3 input--inline--dropdown">
-                    <!-- Read-only informations-->
-                    <p class="fl w-100 b input--disabled input--state"><span class="dib fl w-100">SP</span></p>
-                    <!-- Editable information-->
-                    <div class="fl w-100 input input--inline pointer input--state dn"> <span class="db has-icon-right icon-dropdown">SP</span></div>
-                    <div class="dropdown content-box">
-                      <label class="dib mt1 lh-copy black-50">Estado</label>
-                      <ul class="pt0 pb1 pl0">
-                        <li><span>SP</span></li>
-                        <li><span>RJ</span></li>
-                        <li><span>SC</span></li>
-                        <li><span>PE</span></li>
-                        <li><span>AM</span></li>
-                        <li><span>MG</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!-- CITY-->
-                  <div class="fl w-80 input--inline--dropdown">
-                    <!-- Read-only informations-->
-                    <p class="fl w-100 b input--disabled input--city">Campinas</p>
-                    <!-- Editable information-->
-                    <div class="fl w-100 input input--inline pointer input--city dn"><span class="db has-icon-right icon-dropdown">Campinas</span></div>
-                    <div class="dropdown content-box">
-                      <label class="dib mt1 lh-copy black-50">Cidade</label>
-                      <ul class="pt0 pb1 pl0">
-                        <li><span>São Paulo</span></li>
-                        <li><span>Campinas</span></li>
-                        <li><span>Ribeirão Preto</span></li>
-                        <li><span>São Carlos</span></li>
-                        <li><span>Sorocaba</span></li>
-                        <li><span>Mococa</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <label class="label--active">Estado e Cidade</label>
-                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
-                </div>
-                <!-- EMAIL-->
-                <div class="fl w-33 ph3 relative inputs--cell">
-                  <p class="input input--disabled">andre.matiazzo@movile.com</p>
-                  <input class="input--inline dn" type="text" value="andre.matiazzo@movile.com">
-                  <label>Email</label>
+          <div class="nl3 nr3">
+            <div class="fl w-100 mt2">
+              <!-- NAME-->
+              <div class="fl w-100 cb mt4 name-input">
+                <div class="fl w-third ph3 relative inputs--cell">
+                  <p class="input--disabled f3 b lh-title">André Matiazzo</p>
+                  <input class="input--inline dn f3" type="text" value="André Matiazzo">
+                  <label>Nome*</label>
                   <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
                 </div>
               </div>
-              <!-- ROW-->
-              <div class="fl w-100 cb nl3 nr3 mt5">
-                <!-- COMPANY-->
-                <div class="fl w-33 ph3 relative inputs--cell">
-                  <p class="input input--disabled"></p>
-                  <input class="input--inline dn" type="text" value="">
-                  <label>Empresa</label>
-                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
-                </div>
-                <!-- GENDER-->
-                <div class="fl w-33 ph3 relative inputs--cell input-with-select">
-                  <div class="fl w-100 input--inline--dropdown">
-                    <!-- Read-only informations-->
-                    <p class="fl w-100 b input--disabled pointer">Masculino</p>
-                    <!-- Editable information-->
-                    <div class="fl w-100 input input--inline pointer dn"><span class="db has-icon-right icon-dropdown">Masculino</span></div>
-                    <div class="dropdown content-box">
-                      <label class="dib mt1 lh-copy black-50">Gênero</label>
-                      <ul class="pt0 pb1 pl0">
-                        <li><span>Feminino</span></li>
-                        <li><span>Masculino</span></li>
-                        <li class="input-inside-list">
-                          <label class="black-50 normal">Outro</label>
-                          <input class="input--inline">
-                          <div class="tr">
-                            <button class="mt2 ttu b f8 tracked accent" type="button">confirmar</button>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
+              <!--OTHER INFOS-->
+              <div class="fl w-100 mt5">
+                <!-- ROW-->
+                <div class="fl w-100 cb">
+                  <!-- PHONE-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <p class="input input--disabled">19996587867</p>
+                    <input class="input--inline dn" type="text" value="19996587867">
+                    <label>Celular*</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
                   </div>
-                  <label class="label--active">Gênero</label>
-                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  <!-- STATE AND CITY-->
+                  <div class="fl w-third ph3 relative inputs--cell input-with-select">
+                    <!-- STATE-->
+                    <div class="fl w-20 input--inline--dropdown">
+                      <!-- Read-only informations-->
+                      <p class="fl w-100 b input--disabled input--state"><span class="dib fl w-100">UF</span></p>
+                      <!-- Editable information-->
+                      <div class="fl w-100 input input--inline pointer input--state dn"> <span class="db has-icon-right icon-dropdown">UF</span></div>
+                      <div class="dropdown content-box">
+                        <label class="dib mt1 lh-copy black-50">Estado</label>
+                        <ul class="pt0 pb1 pl0">
+                          <li><span>SP</span></li>
+                          <li><span>RJ</span></li>
+                          <li><span>SC</span></li>
+                          <li><span>PE</span></li>
+                          <li><span>AM</span></li>
+                          <li><span>MG</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- CITY-->
+                    <div class="fl w-80 input--inline--dropdown">
+                      <!-- Read-only informations-->
+                      <p class="fl w-100 b input--disabled input--city">Cidade não definida</p>
+                      <!-- Editable information-->
+                      <div class="fl w-100 input input--inline pointer input--city dn"><span class="db has-icon-right icon-dropdown">Cidade não definida</span></div>
+                      <div class="dropdown content-box">
+                        <label class="dib mt1 lh-copy black-50">Cidade</label>
+                        <ul class="pt0 pb1 pl0">
+                          <li><span>São Paulo</span></li>
+                          <li><span>Campinas</span></li>
+                          <li><span>Ribeirão Preto</span></li>
+                          <li><span>São Carlos</span></li>
+                          <li><span>Sorocaba</span></li>
+                          <li><span>Mococa</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <label class="label--active">Estado e Cidade</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <!-- EMAIL-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <p class="input input--disabled">andre.matiazzo@movile.com</p>
+                    <input class="input--inline dn" type="text" value="andre.matiazzo@movile.com">
+                    <label>Email</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
                 </div>
-                <!-- BIRTHDAY-->
-                <div class="fl w-33 ph3 relative inputs--cell">
-                  <p class="input input--disabled">11/01/1991</p>
-                  <input class="input--inline dn" type="text" value="11/01/1991">
-                  <label>Aniversário</label>
-                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
-                </div>
-              </div>
-              <!-- ROW-->
-              <div class="fl w-100 cb nl3 nr3 mt5">
-                <!-- CPF/CNPJ-->
-                <div class="fl w-33 ph3 relative inputs--cell">
-                  <p class="input input--disabled">355.098.099-45</p>
-                  <input class="input--inline dn" type="text" value="355.098.099-45">
-                  <label>CPF/CNPJ</label>
-                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
-                </div>
-                <!-- NICKNAME-->
-                <div class="fl w-33 ph3 relative inputs--cell">
-                  <p class="input input--disabled">Mat</p>
-                  <input class="input--inline dn" type="text" value="Mat">
-                  <label>Apelido</label>
-                  <p class="f7 mt2 tr black-20 input__validation dn">Validação	</p>
-                </div>
-                <!-- GROUPS-->
-                <div class="fl w-33 ph3 relative inputs--cell input-with-select has-dropdown">
-                  <div class="fl w-100 input--inline--dropdown">
+                <!-- ROW-->
+                <div class="fl w-100 cb mt5">
+                  <!-- COMPANY-->
+                  <div class="fl w-third ph3 relative inputs--cell">
                     <!-- Read-only informations-->
-                    <p class="fl w-100 b input--disabled pointer">Masculino</p>
-                    <!-- Editable information-->
-                    <div class="fl w-100 input input--inline pointer insert-criteria view-box-close dn"><span class="db has-icon-right icon-dropdown">Masculino</span></div>
-                    <div class="view-box-open bg-white z-3 o-0">
-                      <div class="dropdown-item-box dropdown">
-                        <div class="pb3">
-                          <label class="dib mt1 lh-copy black-50">Grupos</label>
-                          <input class="mt2">
-                          <div class="relative pv2">
-                            <div class="checkbox">
-                              <input class="dropdown-checkbox" id="group01" type="checkbox" name="operadora" value="Operadora" checked="">
-                              <label class="f6 b accent-hover relative" for="group01">Operadora</label>
+                    <p class="input input--disabled">Não informada</p>
+                    <input class="input--inline dn" type="text" value="Não informada">
+                    <label>Empresa</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <!-- GENDER-->
+                  <div class="fl w-third ph3 relative inputs--cell input-with-select">
+                    <div class="fl w-100 input--inline--dropdown">
+                      <!-- Read-only informations-->
+                      <p class="fl w-100 b input--disabled pointer">Masculino</p>
+                      <!-- Editable information-->
+                      <div class="fl w-100 input input--inline pointer dn"><span class="db has-icon-right icon-dropdown">Masculino</span></div>
+                      <div class="dropdown content-box">
+                        <label class="dib mt1 lh-copy black-50">Gênero</label>
+                        <ul class="pt0 pb1 pl0">
+                          <li><span>Feminino</span></li>
+                          <li><span>Masculino</span></li>
+                          <li class="input-inside-list">
+                            <label class="black-50 normal">Outro</label>
+                            <input class="input--inline">
+                            <div class="tr">
+                              <button class="mt2 ttu b f8 tracked accent" type="button">confirmar</button>
                             </div>
-                          </div>
-                          <div class="relative pv2">
-                            <div class="checkbox">
-                              <input class="dropdown-checkbox" id="group02" type="checkbox" name="campanha" value="Campanha">
-                              <label class="f6 b accent-hover relative" for="group02">Campanha</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <label class="label--active">Gênero</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <!-- BIRTHDAY-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <p class="input input--disabled">11/01/1991</p>
+                    <input class="input--inline dn" type="text" value="11/01/1991">
+                    <label>Aniversário</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                </div>
+                <!-- ROW-->
+                <div class="fl w-100 cb mt5">
+                  <!-- CPF/CNPJ-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <p class="input input--disabled">355.098.099-45</p>
+                    <input class="input--inline dn" type="text" value="355.098.099-45">
+                    <label>CPF/CNPJ</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <!-- NICKNAME-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <p class="input input--disabled">Mat</p>
+                    <input class="input--inline dn" type="text" value="Mat">
+                    <label>Apelido</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação	</p>
+                  </div>
+                  <!-- GROUPS-->
+                  <div class="fl w-third ph3 relative inputs--cell input-with-select has-dropdown">
+                    <div class="fl w-100 input--inline--dropdown">
+                      <!-- Read-only informations-->
+                      <p class="fl w-100 b input--disabled pointer">Nenhum</p>
+                      <!-- Editable information-->
+                      <div class="fl w-100 input input--inline pointer insert-criteria view-box-close dn"><span class="db has-icon-right icon-dropdown">Nenhum</span></div>
+                      <div class="view-box-open bg-white z-3 o-0">
+                        <div class="dropdown-item-box dropdown">
+                          <div class="pb3">
+                            <label class="dib mt1 lh-copy black-50">Grupos</label>
+                            <input class="mt2">
+                            <div class="relative pv2">
+                              <div class="checkbox">
+                                <input class="dropdown-checkbox dn" id="group00" type="checkbox" name="operadora" value="Grupo 01" checked>
+                                <input class="dropdown-checkbox" id="group01" type="checkbox" name="operadora" value="Grupo 01">
+                                <label class="f6 b accent-hover relative" for="group01">Grupo 01</label>
+                              </div>
                             </div>
-                          </div>
-                          <div class="relative pv2">
-                            <div class="checkbox">
-                              <input class="dropdown-checkbox" id="group03" type="checkbox" name="cliente" value="Cliente">
-                              <label class="f6 b accent-hover relative" for="group03">Cliente</label>
+                            <div class="relative pv2">
+                              <div class="checkbox">
+                                <input class="dropdown-checkbox" id="group02" type="checkbox" name="campanha" value="Grupo 02">
+                                <label class="f6 b accent-hover relative" for="group02">Grupo 02</label>
+                              </div>
                             </div>
-                          </div>
-                          <div class="relative pv2">
-                            <div class="checkbox">
-                              <input class="dropdown-checkbox" id="group04" type="checkbox" name="subconta" value="Subconta">
-                              <label class="f6 b accent-hover relative" for="group04">Subconta</label>
+                            <div class="relative pv2">
+                              <div class="checkbox">
+                                <input class="dropdown-checkbox" id="group03" type="checkbox" name="cliente" value="Grupo 03">
+                                <label class="f6 b accent-hover relative" for="group03">Grupo 03</label>
+                              </div>
                             </div>
-                          </div>
-                          <div class="relative pv2">
-                            <div class="checkbox">
-                              <input class="dropdown-checkbox" id="usuario_checkbox" type="checkbox" name="usuario" value="Usuário">
-                              <label class="f6 b accent-hover relative" for="usuario_checkbox">Usuário</label>
+                            <div class="relative pv2">
+                              <div class="checkbox">
+                                <input class="dropdown-checkbox" id="group04" type="checkbox" name="subconta" value="Grupo 04">
+                                <label class="f6 b accent-hover relative" for="group04">Grupo 04</label>
+                              </div>
+                            </div>
+                            <div class="relative pv2">
+                              <div class="checkbox">
+                                <input class="dropdown-checkbox" id="group05" type="checkbox" name="usuario" value="Grupo 05">
+                                <label class="f6 b accent-hover relative" for="group05">Grupo 05</label>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <label class="label--active">Grupos</label>
                   </div>
-                  <label class="label--active">Grupos</label>
                 </div>
-              </div>
-              <!-- ROW-->
-              <div class="fl w-100 cb nl3 nr3 mt5">
-                <!-- COMMENTS-->
-                <div class="fl w-33 ph3 relative inputs--cell">
-                  <p class="input input--disabled">Lembrar que essa pessoa é um diretor de uma das nossas maiores investidas. Não mande muitas coisas com frequência.</p>
-                  <textarea class="input--inline dn f6 lh-copy ba b--black-20 b pa2 mt3 h4">Lembrar que essa pessoa é um diretor de uma das nossas maiores investidas. Não mande muitas coisas com frequência.</textarea>
-                  <label>Comentários</label>
-                  <p class="f7 mt2 tr black-20 input__validation dn">Validação								</p>
+                <!-- ROW-->
+                <div class="fl w-100 cb mt5">
+                  <!-- COMMENTS-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <p class="input input--disabled">Lembrar que essa pessoa é um diretor de uma das nossas maiores investidas. Não mande muitas coisas com frequência.</p>
+                    <textarea class="input--inline dn f6 lh-copy ba b--black-20 b pa2 mt3 h4">Lembrar que essa pessoa é um diretor de uma das nossas maiores investidas. Não mande muitas coisas com frequência.</textarea>
+                    <label>Comentários</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
                 </div>
               </div>
             </div>

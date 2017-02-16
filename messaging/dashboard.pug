@@ -35,7 +35,7 @@ html(lang='pt-br')
 					li.mt3
 						a.white.dim.f6(href='relatorios-consolidados.html') Relatórios
 					li.mt3
-						a.white.dim.f6(href='') Contatos
+						a.white.dim.f6(href='contatos.html') Contatos
 					li.mt3
 						a.white.dim.f6(href='permissoes.html') Permissões
 					li.mt3
@@ -46,7 +46,7 @@ html(lang='pt-br')
 			h1.f2.fl.black.lh-solid Dashboard
 			.fr.lh-copy.relative
 				.relative.mr4.fl
-					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray Notificações
+					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray.pointer Notificações
 					.absolute.top--1.right--1
 						.relative
 							span.notification-badge 275
@@ -115,62 +115,63 @@ html(lang='pt-br')
 		section.main-content.ph3.pt3.pb5.fr
 			// FILTERS
 			.actions-container.ph3
-				// FILTERS ROW
-				.mt4.mb4.nl3.nr3.flex.justify-between
-					// FILTER ITEM
-					.relative.w-third.ph3
-						label.black-50.f6 Status do envio
-						.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
-							span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Em processamento
-						.dropdown.content-box
+				div.nl3.nr3
+					// FILTERS ROW
+					.fl.w-100.mt3
+						// FILTER ITEM
+						.fl.relative.w-third.ph3
 							label.black-50.f6 Status do envio
-							ul.pt0.pb1.pl0
-								li
-									span Em processamento
-								li
-									span Agendados
-								li
-									span Em aprovação
-					// FILTER ITEM
-					.relative.w-third.ph3
-						label.black-50.f6 Período
-						.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
-							span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Hoje
-						.dropdown.content-box
+							.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+								span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Em processamento
+							.dropdown.content-box
+								label.black-50.f6 Status do envio
+								ul.pt0.pb1.pl0
+									li
+										span Em processamento
+									li
+										span Agendados
+									li
+										span Em aprovação
+						// FILTER ITEM
+						.fl.relative.w-third.ph3
 							label.black-50.f6 Período
-							ul.pt0.pb1.pl0
-								li
-									span Hoje
-								li
-									span Últimos 7 dias
-								li
-									span Últimos 15 dias
-								li
-									span Últimos 30 dias
-					// FILTER ITEM
-					.relative.w-third.ph3
-						label.black-50.f6 Usuários
-						.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
-							span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Bruno Farias
-						.dropdown.content-box
+							.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+								span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Hoje
+							.dropdown.content-box
+								label.black-50.f6 Período
+								ul.pt0.pb1.pl0
+									li
+										span Hoje
+									li
+										span Últimos 7 dias
+									li
+										span Últimos 15 dias
+									li
+										span Últimos 30 dias
+						// FILTER ITEM
+						.fl.relative.w-third.ph3
 							label.black-50.f6 Usuários
-							input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
-							span.main-gray.db.f6.pl3.pv3 Buscas recentes
-							ul.pt0.pb1.pl3
-								li
-									span Bruno Farias
-								li
-									span Nayara Rodrigues
-								li
-									span Neto Andrade
-								li
-									span Hudson Souza
-								li
-									span Edson Koji
-								li
-									span Henrique Perticarati
-								li
-									span Juliana Gaspari				
+							.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+								span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Bruno Farias
+							.dropdown.content-box
+								label.black-50.f6 Usuários
+								input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
+								span.main-gray.db.f6.pl3.pv3 Buscas recentes
+								ul.pt0.pb1.pl3
+									li
+										span Bruno Farias
+									li
+										span Nayara Rodrigues
+									li
+										span Neto Andrade
+									li
+										span Hudson Souza
+									li
+										span Edson Koji
+									li
+										span Henrique Perticarati
+									li
+										span Juliana Gaspari				
 			// RESULTS
 			.fl.w-100.ph3.pt4
 				.mt4.relative.fl.w-100

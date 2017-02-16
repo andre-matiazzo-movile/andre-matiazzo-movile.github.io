@@ -1,5 +1,6 @@
 // COLORS
 $accent: #84ADFF;
+$lighter-accent: #F0F5FF;
 .bg-lighter-accent {background-color: #F0F5FF}
 .bg-medium-accent {background-color: #E0EAFF}
 .bg-darker-accent {background-color: #566fa5}
@@ -53,4 +54,45 @@ $success: #00E676;
 
 .transition-slow {
 	@include transition (1s);
+}
+
+.shadow-0 { box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1); }
+
+.mta {margin-top: auto;}
+
+
+.hover-card {
+	div {
+		transition: all ease 0.4s;
+	}
+	&:hover {
+		transition: all ease 0.4s;
+		border: 1px solid $accent;
+		& div {
+			border-color: $accent;
+		}
+	}
+}
+
+.blacklist {
+	border: 1px solid $theblack;
+	position: relative;
+	&:after {
+		content: 'BLACKLIST';
+		position: absolute;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		font-size: 10px;
+		font-weight: bold;
+		letter-spacing: 0.1rem;
+		color: $theblack;
+		background: #fff;
+		top: -10px;
+		left: 10px;
+		transition: all ease 0.4s;
+	}
+	&:hover:after{
+		transition: all ease 0.4s;
+		color: $accent;
+	}
 }

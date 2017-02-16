@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Movile Messaging – Sua conta</title>
+    <title>Movile Messaging – Contatos</title>
     <meta name="movile-messaging" content="Movile Messaging">
     <!-- For the charts-->
     <link href="charts/chartist.min.css" rel="stylesheet">
@@ -28,15 +28,15 @@
           <li class="mt3"><a class="white dim f6" href="dashboard.html">Dashboard</a></li>
           <li class="mt3"><a class="white dim f6" href="novo-envio.html">Novo envio</a></li>
           <li class="mt3"><a class="white dim f6" href="relatorios-consolidados.html">Relatórios</a></li>
-          <li class="mt3"><a class="white dim f6" href="contatos.html">Contatos</a></li>
+          <li class="mt3"><a class="white dim f6 bb bw1" href="contatos.html">Contatos</a></li>
           <li class="mt3"><a class="white dim f6" href="permissoes.html">Permissões</a></li>
-          <li class="mt3"><a class="white dim f6 bb bw1" href="conta.html">Sua conta</a></li>
+          <li class="mt3"><a class="white dim f6" href="conta.html">Sua conta</a></li>
           <li class="mt3"><a class="white dim f6" href="">Suporte</a></li>
         </ul>
       </nav>
     </aside>
     <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bb b--black-10">
-      <h1 class="f2 fl theblack lh-solid">Sua conta</h1>
+      <h1 class="f2 fl theblack lh-solid">Contatos</h1>
       <div class="fr lh-copy relative">
         <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray pointer">Notificações</a>
           <div class="absolute top--1 right--1">
@@ -91,70 +91,31 @@
       </div>
     </section>
     <!-- MAIN CONTENT-->
-    <section class="main-content ph4 pb5 fr">
-      <!-- YOUR INFO-->
-      <div class="fl w-100">
-        <form class="fl w-100 mt4">
-          <div class="fl">
-            <h3 class="theblack f3 lh-solid">Sobre você</h3>
-          </div>
-          <div class="fl w-100 mt4">
+    <section class="main-content ph3 fr"><a class="pa0 bn bg-white dib mt4 fl" href="javascript:history.back()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
+      <!-- RECIPIENTS-->
+      <div class="fl w-100 ph3">
+        <div class="fl w-100 pt4 mw8">
+          <h3 class="fl black f3 lh-solid">Adicionar contato</h3>
+          <div class="fl w-100 mt4 cl">
             <!-- ROW-->
-            <div class="fl w-two-thirds cb mt3 nl3 nr3">
-              <div class="fl w-50 ph3 relative">
-                <input class="input--inline" type="text" value="André">
-                <label>Primeiro nome</label>
-                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
-              </div>
-              <div class="fl w-50 ph3 relative">
-                <input class="input--inline" type="text" value="Matiazzo">
-                <label>Sobrenome</label>
-                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
-              </div>
-            </div>
-            <!-- ROW-->
-            <div class="fl w-two-thirds cb mt4 nl3 nr3">
-              <div class="fl w-50 ph3 relative">
-                <input class="input--inline" type="email" value="andre.matiazzo@movile.com">
-                <label>Email</label>
-                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
-              </div>
-              <div class="fl w-50 ph3 relative">
-                <input class="input--inline" type="tel" value="1999999999" id="telefone" max-length="15">
-                <label>Telefone</label>
-                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+            <div class="nr3 nl3">
+              <div class="fl w-100">
+                <!-- NAME-->
+                <div class="fl w-third ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>Nome</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+                <!-- PHONE-->
+                <div class="fl w-third ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>Celular</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
               </div>
             </div>
           </div>
-        </form>
-      </div>
-      <!-- CHANGE PASSWORD-->
-      <div class="fl w-100 mt6 sent-permissions">
-        <form class="fl w-100 pb4">
-          <div class="fl">
-            <h3 class="theblack f3 lh-solid">Alterar senha?</h3>
-            <p class="mt2 main-gray lh-copy measure-narrow">Sua senha ter no mínimo 6 dígitos e ser composta por números e letras</p>
-          </div>
-          <div class="fl w-100 mt4">
-            <!-- ROW-->
-            <div class="fl w-two-thirds cb mt3 nl3 nr3">
-              <div class="fl w-50 ph3 relative">
-                <input class="input--inline" type="text">
-                <label>Nova senha</label>
-                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
-              </div>
-              <div class="fl w-50 ph3 relative">
-                <input class="input--inline" type="text">
-                <label>Confirmar nova senha</label>
-                <p class="f7 mt2 tr black-20 input__validation">Validação</p>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-      <!-- SEND INVITES-->
-      <div class="fl w-two-thirds nl3 nr3 ph3">
-        <button class="dib fr mt4 cta cta-accent"><span class="has-icon-right icon-check--white">salvar</span></button>
+        </div>
       </div>
     </section>
   </body>
@@ -164,6 +125,8 @@
   <script src="js/forms.js"></script>
   <!-- Notifications-->
   <script src="js/notifs.js"></script>
-  <!-- Phone mask-->
-  <script src="js/phone-mask.js"></script>
+  <!-- Send New-->
+  <script src="js/novoenvio.js"></script>
+  <!-- Modal-->
+  <script src="js/modal.js"></script>
 </html>

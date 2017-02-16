@@ -33,20 +33,20 @@ $(document).ready(function() {
 // Closes a dropdown that is already opened if you click on another one
 
 	$('.input-envio').on('click', function () {
-		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
-		$('.upper-bar-menu').removeClass('upper-bar-menu--active');
-		$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
+		// $('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
+		// $('.upper-bar-menu').removeClass('upper-bar-menu--active');
+		// $(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
 		$(this).siblings('.dropdown').find("input[type='search']").focus();
 	});	
 
 	// Closes the dropdown by clicking out of it
-	$(document).on('click', function(toggleDropdown) {
-		// If the click on the document is not a .dropdown, an .input or .upper-bar-menu--active, closes all dropdowns
-		if (!$(toggleDropdown.target).closest('.dropdown, .input, .input-envio,  .upper-bar-menu--active').length) {
-			$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
-			$('.upper-bar-menu').removeClass('upper-bar-menu--active');
-		}
-	});
+	// $(document).on('click', function(toggleDropdown) {
+	// 	// If the click on the document is not a .dropdown, an .input or .upper-bar-menu--active, closes all dropdowns
+	// 	if (!$(toggleDropdown.target).closest('.dropdown, .input, .input-envio,  .upper-bar-menu--active').length) {
+	// 		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
+	// 		$('.upper-bar-menu').removeClass('upper-bar-menu--active');
+	// 	}
+	// });
 
 	//Closes opened menu dropdowns if you click on its trigger again
 	// $('.upper-bar-menu').on('click', function () {
@@ -56,7 +56,7 @@ $(document).ready(function() {
 	// });
 
 	//Get text from the selection within dropdowns and put it on the respective input
-	$('.dropdown li').on('click', function() {
+	$('.dropdown--multiple-lists li').on('click', function() {
 		var data_id = $(this).find("span").attr("data-id");
 		var data_origin = $(this).parents(".gruposecontatos").attr("data-origin");
 		// console.log(data_origin);

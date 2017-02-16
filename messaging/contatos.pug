@@ -1,0 +1,233 @@
+doctype html
+html(lang='pt-br')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Movile Messaging – Relatórios
+		meta(name='movile-messaging', content='Movile Messaging')
+		// For the calendar
+		link(href='calendar/jquery-ui/jquery-ui.min.css', rel='stylesheet')
+		link(href='calendar/jquery.comiseo.daterangepicker.css', rel='stylesheet')
+		// For the charts
+		link(href='charts/chartist.min.css', rel='stylesheet')
+		script(src='charts/chartist.min.js', charset='utf-8')
+		// Tachyons CSS
+		link(rel='stylesheet', href='stylesheets/tachyons.min.css')
+		// Main CSS
+		link(rel='stylesheet', href='stylesheets/main.css')
+		// Typekit
+		script(src='https://use.typekit.net/fja4naa.js')
+		script.
+			try {
+			Typekit.load({
+			async: false
+			});
+			} catch (e) {}
+	body
+		aside.fixed.fl.h-100.bg-sidebar
+			.bb.b--black-10
+				.pl4.mt4.pb3.w4
+					img.db.w-90(src='img/logo-white.png', alt='Logo Movile Messaging')
+			nav.pl4.mt4
+				ul.list.pl0.mt3
+					li.mt3
+						a.white.dim.f6(href='dashboard.html') Dashboard
+					li.mt3
+						a.white.dim.f6(href='novo-envio.html') Novo envio
+					li.mt3
+						a.white.dim.f6(href='relatorios-consolidados.html') Relatórios
+					li.mt3
+						a.white.dim.f6.bb.bw1(href='contatos.html') Contatos
+					li.mt3
+						a.white.dim.f6(href='permissoes.html') Permissões
+					li.mt3
+						a.white.dim.f6(href='conta.html') Sua conta
+					li.mt3
+						a.white.dim.f6(href='') Suporte
+		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
+			h1.f2.fl.black.lh-solid Contatos
+			.fr.lh-copy.relative
+				.relative.mr4.fl
+					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray.pointer Notificações
+					.absolute.top--1.right--1
+						.relative
+							span.notification-badge 275
+					// NOTIFICATIONS
+					.dropdown.notifications
+						// NOTIF HEADER
+						.fl.w-100.pa3.bb.lighter-gray
+							button.mark-all-as-read.ttu.fr.lh-copy.pv0.pr0.tracked.b.f8.main-gray.bn.bg-white.has-icon.has-icon-left.icon-check--gray.outline-0 marcar todas como lidas
+						// NOTIFS BODY
+						.fl.w-100
+							// NOTIF ITEM
+							.notif__item.bb.lighter-gray.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.can-be-read está sendo gerado
+									h1.notif__title.f5.mt1.can-be-read.black Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									<button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+							// NOTIF ITEM
+							.notif__item.bb.lighter-gray.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.green.bg-lighter-green.can-be-read está pronto
+									h1.notif__title.f5.mt1.can-be-read.black Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									button.accent.bn.bg-white.fr.f8.b.ttu.tracked download
+							// NOTIF ITEM
+							.notif__item.bb.lighter-gray.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.red.bg-lighter-red.can-be-read não foi possível gerar
+									h1.notif__title.f5.mt1.can-be-read.black Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									a.accent.bn.bg-white.fr.f8.b.ttu.tracked(href='notifs.html')
+										| ver detalhes
+						// NOTIF FOOTER
+						.fl.w-100.pa3
+							a.ttu.fl.lh-copy.pv0.tracked.b.f8.accent.bn.bg-white.has-icon.has-icon-right.icon-arrow-right--blue(href='notifs.html')
+								| ver todas as notificações
+				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown Nome Do Usuário
+		// MAIN CONTENT
+		section.main-content.ph3.pt3.pb5.fr
+			// FILTERS
+			.actions-container
+				.fl.w-100.pa3
+					.fl.w-100.relative
+						.w-50.pr3.relative.fl
+							.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.input.bg-search
+								span.f6.b.ml4.lh-solid.dib.overflow-hidden.lh-title.nowrap Busque por um Grupo ou Contato
+							.dropdown.dropdown--multiple-lists.content-box.nl3
+									//- label.black-50.f6.lh-copy.black Buscar
+									input.f6.b.ba.b--black-20.ph3.pv3.lh-title.bg-search(type='search')
+									div.fl.w-50.mt3.pb3
+										span.main-gray.db.f6 Contatos
+									div.fl.w-50.mt3.pb3
+										span.main-gray.db.f6 Grupos
+									div.fl.w-100.multiple-lists__container.theblack
+										div.fl.w-50.gruposecontatos.contatos-lista(data-origin='contatos-lista')
+											ul.pt0.pb1.pl0
+												li
+													span.b(data-id='1') Bruno Farias
+												li
+													span.b(data-id='2') Nayara Rodrigues
+										div.fl.w-50.gruposecontatos.grupos-lista(data-origin='grupos-lista')
+											ul.pt0.pb1.pl0
+												li
+													span.b(data-id='1') Maiores de 30 anos
+												li
+													span.b(data-id='2') Mulheres casadas
+							//- input.mt2.pa3.w-100.bg-search(type='text')
+						button.dib.fr.cta.cta-accent.download-button
+							span.has-icon-right.icon-dropdown__white adicionar
+						.download-items.absolute.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
+							a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Grupo
+							a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Contato
+							a.db.b.f6.mt3.theblack.accent-hover(href='javascript:') Contato na Blacklist
+					.fl.w-100.mt5.theblack
+						.has-dropdown.relative.dib
+							span.f6.nowrap.fl Mostrar
+							span.fl.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer todos os contatos
+							.view-box-open.shadow-2.pa3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt3.nl3.o-0
+								span.fl.f6.nowrap.pr1.nowrap Mostrar
+								.dropdown-item-box.fl
+									span.fl.cb.f6.theblack.b.bb.relative.has-icon-right.icon-dropdown.insert-criteria todos os contatos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap todos os contatos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap contatos na black list
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap contatos fora da black list
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap grupos
+						.has-dropdown.relative.dib.ml4
+							span.f6.nowrap.fl Ordenar por
+							span.fl.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer mais novos
+							.view-box-open.shadow-2.pa3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt3.nl3.o-0
+								span.fl.f6.nowrap.pr1 Ordenar por
+								.dropdown-item-box.fl
+									span.fl.cb.f6.theblack.b.bb.relative.has-icon-right.icon-dropdown.insert-criteria mais novos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap mais novos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap mais antigos
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap últimos atualizados
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap A - Z
+									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap Z - A
+				.fl.w-100.pa3
+					.fl.w-100
+						.nl3.nr3.flex.items-stretch
+							// CARD
+							.w-25.ph3
+								a(href='contatos_interna.html')
+									.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+										.flex.flex-column.mt3.h-100
+											p.f4.accent.b.lh-title Ursula Reichenbach
+											.mv4
+												p.f5.main-gray (11) 98823-8510
+												p.f5.main-gray Campinas - SP
+												p.f5.main-gray Movile Internet Móvel S.A.
+												p.f5.main-gray ursula.reichenbach@movile.com
+											p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+										.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS
+							// CARD
+							.w-25.ph3
+								a(href='contatos_interna.html')
+									.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+										.flex.flex-column.mt3.h-100
+											p.f4.accent.b.lh-title Ursula Reichenbach
+											.mv4
+												p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+										.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS
+							// CARD
+							.w-25.ph3
+								a(href='contatos_interna.html')
+									.w-100.h-100.br2.ba.b--black-10.blacklist.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+										.flex.flex-column.mt3.h-100
+											p.f4.accent.b.lh-title Ursula Reichenbach
+											.mv4
+												p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+										.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS
+			
+	// jQuery
+	script(src='js/jquery-3.1.0.min.js')
+	script.
+		$('.dropdown-checkbox').click(function() {
+		var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
+		if (length == 0) {
+		$(this).prop('checked', true);
+		}
+		var selected = $('.dropdown-checkbox:checked').map(function() {
+		return this.value;
+		}).get().join(', ');
+		$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
+		});
+	// Filters
+	script(src='js/forms.js')
+	// Notifications
+	script(src='js/notifs.js')

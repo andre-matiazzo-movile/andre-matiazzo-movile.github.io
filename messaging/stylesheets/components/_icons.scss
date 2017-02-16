@@ -112,6 +112,12 @@
 	}
 }
 
+.icon-check--green {
+	&:after {
+		background-image: url('../img/icons/check-green.png');
+	}
+}
+
 .icon-eye-blue {
 	&:after {
 		background-image: url('../img/icons/eye-blue.png');
@@ -198,17 +204,20 @@
 	}
 }
 
-.icon-download,
-.icon-upload {
+.icon-download {
 	&:after {
 		background-image: url('../img/icons/download-blue.png');
 	}
 }
 
-.icon-upload::after {
-	background-image: url('../img/icons/upload-icon.png');
-	background-repeat: no-repeat;
-	background-position: center center;
+.icon-upload {
+	&:after {
+		background-image: url('../img/icons/upload-icon.png');
+	}
+}
+
+.icon-upload--gray::after {
+	background-image: url('../img/icons/upload-icon--gray.png');
 }
 
 .icon-download-blue {

@@ -7,6 +7,7 @@ $(document).ready(function() {
 	$(document).find(".dropdown-item-box").each(function(){
 		var w = $(this).width();
 		var w2 = Math.round(w);
+		var w2 = w2 + 18;
 		$(this).parents(".has-dropdown").find(".view-box-close").css("min-width", w2+"px");
 		$(this).children(".insert-criteria").css("min-width", w2+"px");
 	});
@@ -41,7 +42,7 @@ $(document).ready(function() {
 	// BOX DROPDOWNS
 
 	// Closes a dropdown that is already opened if you click on another one
-	$('.input').bind('click', function (activateDropdown) {
+	$('.input, .input-envio').bind('click', function (activateDropdown) {
 		$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 		$('.upper-bar-menu').removeClass('upper-bar-menu--active');
 		$(this).parent().find('.dropdown').toggleClass('dropdown--active').animate({opacity: 1}, 15);
@@ -51,7 +52,7 @@ $(document).ready(function() {
 		// Closes the dropdown by clicking out of it
 		$(document).bind('click', function(toggleDropdown) {
 			// If the click on the document is not a .dropdown, an .input or .upper-bar-menu--active, closes all dropdowns
-			if (!$(toggleDropdown.target).closest('.dropdown, .input, .input--inline--dropdown, .upper-bar-menu--active').length) {
+			if (!$(toggleDropdown.target).closest('.dropdown, .input, .input--inline--dropdown, .input-envio, .upper-bar-menu--active').length) {
 				$('.dropdown').removeClass('dropdown--active').animate({opacity: 0}, 15);
 				$('.upper-bar-menu').removeClass('upper-bar-menu--active');
 				$('.input--inline--dropdown').removeClass('input--inline--active');
@@ -68,7 +69,7 @@ $(document).ready(function() {
 		})
 
 	//Get text from the selection within dropdowns and put it on the respective input
-	$('.dropdown li').not('.dropdown li.search__subheading, .input-inside-list').bind('click', function() {
+	$('.dropdown li').not('.dropdown li.search__subheading, .input-inside-list, .dropdown--multiple-lists li').bind('click', function() {
 		var textFromDropdown = $(this).find('span').text();
 		$(this).parents('.dropdown').siblings('.input').find('span').text(textFromDropdown);
 		$(this).parents('.dropdown').siblings('.input').val(textFromDropdown);
@@ -151,10 +152,15 @@ $(document).ready(function() {
 		$(this).parents('.inputs-infos').find('.input--inline--dropdown').each(function () {
 			$(this).find('p.input--disabled').text($(this).find('.input--inline').text());
 		});	
+		// Confirm saving and return to original buttons
 		$(this).parents('.inputs-infos').toggleClass('inputs-infos--active');
 		if ($(this).hasClass('cta')) {
+			$(this).siblings('.input--saved').show()
 			$(this).hide();
-			$(this).siblings('.input--edit, .icon-blacklist').show();
+			setTimeout(function(){
+				$('.input--confirm').siblings('.input--edit, .icon-blacklist').show();
+				$('.input--confirm').siblings('.input--saved').hide();
+			}, 4000);
 		}
 
 	});

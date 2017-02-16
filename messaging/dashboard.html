@@ -29,7 +29,7 @@
           <li class="mt3"><a class="white dim f6 bb bw1" href="dashboard.html">Dashboard</a></li>
           <li class="mt3"><a class="white dim f6" href="novo-envio.html">Novo envio</a></li>
           <li class="mt3"><a class="white dim f6" href="relatorios-consolidados.html">Relatórios</a></li>
-          <li class="mt3"><a class="white dim f6" href="">Contatos</a></li>
+          <li class="mt3"><a class="white dim f6" href="contatos.html">Contatos</a></li>
           <li class="mt3"><a class="white dim f6" href="permissoes.html">Permissões</a></li>
           <li class="mt3"><a class="white dim f6" href="conta.html">Sua conta</a></li>
           <li class="mt3"><a class="white dim f6" href="">Suporte</a></li>
@@ -39,7 +39,7 @@
     <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bb b--black-10">
       <h1 class="f2 fl black lh-solid">Dashboard</h1>
       <div class="fr lh-copy relative">
-        <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray">Notificações</a>
+        <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray pointer">Notificações</a>
           <div class="absolute top--1 right--1">
             <div class="relative"><span class="notification-badge">275</span></div>
           </div>
@@ -95,51 +95,53 @@
     <section class="main-content ph3 pt3 pb5 fr">
       <!-- FILTERS-->
       <div class="actions-container ph3">
-        <!-- FILTERS ROW-->
-        <div class="mt4 mb4 nl3 nr3 flex justify-between">
-          <!-- FILTER ITEM-->
-          <div class="relative w-third ph3">
-            <label class="black-50 f6">Status do envio</label>
-            <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Em processamento</span></div>
-            <div class="dropdown content-box">
+        <div class="nl3 nr3">
+          <!-- FILTERS ROW-->
+          <div class="fl w-100 mt3">
+            <!-- FILTER ITEM-->
+            <div class="fl relative w-third ph3">
               <label class="black-50 f6">Status do envio</label>
-              <ul class="pt0 pb1 pl0">
-                <li><span>Em processamento</span></li>
-                <li><span>Agendados</span></li>
-                <li><span>Em aprovação</span></li>
-              </ul>
+              <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Em processamento</span></div>
+              <div class="dropdown content-box">
+                <label class="black-50 f6">Status do envio</label>
+                <ul class="pt0 pb1 pl0">
+                  <li><span>Em processamento</span></li>
+                  <li><span>Agendados</span></li>
+                  <li><span>Em aprovação</span></li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <!-- FILTER ITEM-->
-          <div class="relative w-third ph3">
-            <label class="black-50 f6">Período</label>
-            <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Hoje</span></div>
-            <div class="dropdown content-box">
+            <!-- FILTER ITEM-->
+            <div class="fl relative w-third ph3">
               <label class="black-50 f6">Período</label>
-              <ul class="pt0 pb1 pl0">
-                <li><span>Hoje</span></li>
-                <li><span>Últimos 7 dias</span></li>
-                <li><span>Últimos 15 dias</span></li>
-                <li><span>Últimos 30 dias</span></li>
-              </ul>
+              <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Hoje</span></div>
+              <div class="dropdown content-box">
+                <label class="black-50 f6">Período</label>
+                <ul class="pt0 pb1 pl0">
+                  <li><span>Hoje</span></li>
+                  <li><span>Últimos 7 dias</span></li>
+                  <li><span>Últimos 15 dias</span></li>
+                  <li><span>Últimos 30 dias</span></li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <!-- FILTER ITEM-->
-          <div class="relative w-third ph3">
-            <label class="black-50 f6">Usuários</label>
-            <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Bruno Farias</span></div>
-            <div class="dropdown content-box">
+            <!-- FILTER ITEM-->
+            <div class="fl relative w-third ph3">
               <label class="black-50 f6">Usuários</label>
-              <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus=""><span class="main-gray db f6 pl3 pv3">Buscas recentes</span>
-              <ul class="pt0 pb1 pl3">
-                <li><span>Bruno Farias</span></li>
-                <li><span>Nayara Rodrigues</span></li>
-                <li><span>Neto Andrade</span></li>
-                <li><span>Hudson Souza</span></li>
-                <li><span>Edson Koji</span></li>
-                <li><span>Henrique Perticarati</span></li>
-                <li><span>Juliana Gaspari				</span></li>
-              </ul>
+              <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Bruno Farias</span></div>
+              <div class="dropdown content-box">
+                <label class="black-50 f6">Usuários</label>
+                <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus=""><span class="main-gray db f6 pl3 pv3">Buscas recentes</span>
+                <ul class="pt0 pb1 pl3">
+                  <li><span>Bruno Farias</span></li>
+                  <li><span>Nayara Rodrigues</span></li>
+                  <li><span>Neto Andrade</span></li>
+                  <li><span>Hudson Souza</span></li>
+                  <li><span>Edson Koji</span></li>
+                  <li><span>Henrique Perticarati</span></li>
+                  <li><span>Juliana Gaspari				</span></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
