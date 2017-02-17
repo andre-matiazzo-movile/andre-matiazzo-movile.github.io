@@ -116,33 +116,11 @@ html(lang='pt-br')
 				span.ttu.b.tracked.f7.accent.has-icon.has-icon-left.icon-arrow-left--blue voltar
 			//SECTION TITLE
 			div.fl.w-100
-				// ADD MULTIPLE CONTACTS
-				div.fl.w-third.pt4
-					h3.fl.black.f3.lh-solid Adicionar contatos
-					.fl.w-100.mt4.cl
-					// ROW
-					// SEARCH AND IMPORT CONTAINER
-					.fl.w-100
-						.fl.w-50.choose-file.transition
-							div.fl
-								label.fl.f6.black.lh-copy Importe de um arquivo
-								form#form-choose-file
-									input.dn(type='file', id='import-file', accept='.txt, .csv')
-									input.dn(type='reset', id='reset-file')
-								label.b.mt2.fl.cl.cta.cta-secondary.dib.w-auto.tr.main-gray(for="import-file")
-									span.has-icon.has-icon-left.icon-upload--gray(data-before-chosen="Escolher arquivo", data-after-chosen='Mudar arquivo') Escolher arquivo
-								.fr.tr.cl.how-to.mt1.measure-narrow
-									button.pa0.bg-white.bn.f8.ttu.tracked.b.accent.modal-trigger.trigger--how-to-do veja como fazer							
-								.fl.cb.dn.file-name.bg-medium-accent.pa2.mr2.mb2.mt2
-									a.has-icon-left.icon-close-blue
-									span.f7.accent.b
-							p.measure-narrow.warning.dn.tl.cb.main-gray.lh-copy.pt2 Ao inserir contatos manualmente, você não pode selecionar um arquivo
-				// ADD ONE CONTACT
-				div.fl.w-50.pt4.pl6
-					h3.fl.black.f3.lh-solid Adicionar um único contato
+				div.fl.w-100.pt4.mw8
+					h3.fl.black.f3.lh-solid Adicionar contato
 					p.fl.cb.main-gray.mt4.pb2 * Campos obrigatórios
 					// INFOS CONTAINER
-					.fl.w-100.mt4.cl
+					.fl.w-two-thirds.mt4.cl
 						// ROW
 						.nr3.nl3
 							.fl.w-100
@@ -310,7 +288,7 @@ html(lang='pt-br')
 					// CONFIRM
 					div.fl.w-two-thirds
 						button.dib.fr.mt4.cta.cta-accent
-							span.has-icon-left.icon-check--white adicionar contato
+							span.has-icon-left.icon-check--white adicionar contato		
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
 	// Filters

@@ -101,7 +101,7 @@
               <p class="main-gray lh-copy mt2">Criado em 17/06/2016</p>
             </div>
             <div class="fr">
-              <button class="accent ttu b tracked mr3 has-icon-left icon-blacklist f7" type="button">inserir na blacklist</button>
+              <button class="accent ttu b tracked mr3 f7 input--blacklist" type="button"><span class="has-icon-left icon-blacklist lh-solid">inserir na blacklist</span></button>
               <button class="cta input--edit" type="button"><span class="has-icon-left icon-edit--blue">editar</span></button>
               <button class="cta input--confirm dn" type="button"><span class="has-icon-left icon-check">salvar</span></button>
               <p class="white bg-green ttu b tracked pa3 f7 input--saved transition lh-copy ba b--transparent dn"><span class="has-icon-left icon-check--white">salvo</span></p>
@@ -113,7 +113,7 @@
               <!-- NAME-->
               <div class="fl w-100 cb mt4 name-input">
                 <div class="fl w-third ph3 relative inputs--cell">
-                  <p class="input--disabled f3 b lh-title">André Matiazzo</p>
+                  <p class="input--disabled f3 b lh-title relative contact-name dib">André Matiazzo</p>
                   <input class="input--inline dn f3" type="text" value="André Matiazzo">
                   <label>Nome*</label>
                   <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
@@ -135,12 +135,13 @@
                     <!-- STATE-->
                     <div class="fl w-20 input--inline--dropdown">
                       <!-- Read-only informations-->
-                      <p class="fl w-100 b input--disabled input--state"><span class="dib fl w-100">UF</span></p>
+                      <p class="fl w-100 b input--disabled input--state"><span class="dib fl w-100">--</span></p>
                       <!-- Editable information-->
-                      <div class="fl w-100 input input--inline pointer input--state dn"> <span class="db has-icon-right icon-dropdown">UF</span></div>
+                      <div class="fl w-100 input input--inline pointer input--state dn"> <span class="db has-icon-right icon-dropdown">--</span></div>
                       <div class="dropdown content-box">
                         <label class="dib mt1 lh-copy black-50">Estado</label>
                         <ul class="pt0 pb1 pl0">
+                          <li><span>--</span></li>
                           <li><span>SP</span></li>
                           <li><span>RJ</span></li>
                           <li><span>SC</span></li>
@@ -153,12 +154,14 @@
                     <!-- CITY-->
                     <div class="fl w-80 input--inline--dropdown">
                       <!-- Read-only informations-->
-                      <p class="fl w-100 b input--disabled input--city">Cidade não definida</p>
+                      <p class="fl w-100 b input--disabled input--city">Não informada</p>
                       <!-- Editable information-->
-                      <div class="fl w-100 input input--inline pointer input--city dn"><span class="db has-icon-right icon-dropdown">Cidade não definida</span></div>
+                      <div class="fl w-100 input input--inline pointer input--city dn"><span class="db has-icon-right icon-dropdown">Não informada</span></div>
                       <div class="dropdown content-box">
                         <label class="dib mt1 lh-copy black-50">Cidade</label>
-                        <ul class="pt0 pb1 pl0">
+                        <input class="mt2">
+                        <ul class="pt0 pb1 pl0 mt2">
+                          <li><span>Não informada</span></li>
                           <li><span>São Paulo</span></li>
                           <li><span>Campinas</span></li>
                           <li><span>Ribeirão Preto</span></li>
@@ -348,7 +351,7 @@
             </thead>
             <tbody class="v-top">
               <tr class="bb relative f6">
-                <td class="bb b--black-20 pv4 ph3 table-detalhes left-shadow lh-solid"><a class="accent ttu tracked b f8" href="javascript:" alt="Download">visualizar</a></td>
+                <td class="bb b--black-20 pv4 ph3 table-detalhes left-shadow lh-solid"><a class="accent ttu tracked b f8 has-icon-left icon-eye-blue" href="javascript:" alt="Download">visualizar</a></td>
               </tr>
             </tbody>
           </table>

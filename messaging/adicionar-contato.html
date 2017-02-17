@@ -94,11 +94,36 @@
     <section class="main-content ph4 pb5 fr"><a class="pa0 bn bg-white dib mt4 nl3 fl" href="javascript:history.back()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
       <!--SECTION TITLE-->
       <div class="fl w-100">
-        <div class="fl w-100 pt4 mw8">
-          <h3 class="fl black f3 lh-solid">Adicionar contato</h3>
+        <!-- ADD MULTIPLE CONTACTS-->
+        <div class="fl w-third pt4">
+          <h3 class="fl black f3 lh-solid">Adicionar contatos</h3>
+          <div class="fl w-100 mt4 cl"></div>
+          <!-- ROW-->
+          <!-- SEARCH AND IMPORT CONTAINER-->
+          <div class="fl w-100">
+            <div class="fl w-50 choose-file transition">
+              <div class="fl">
+                <label class="fl f6 black lh-copy">Importe de um arquivo</label>
+                <form id="form-choose-file">
+                  <input class="dn" type="file" id="import-file" accept=".txt, .csv">
+                  <input class="dn" type="reset" id="reset-file">
+                </form>
+                <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon has-icon-left icon-upload--gray" data-before-chosen="Escolher arquivo" data-after-chosen="Mudar arquivo">Escolher arquivo</span></label>
+                <div class="fr tr cl how-to mt1 measure-narrow">
+                  <button class="pa0 bg-white bn f8 ttu tracked b accent modal-trigger trigger--how-to-do">veja como fazer							</button>
+                </div>
+                <div class="fl cb dn file-name bg-medium-accent pa2 mr2 mb2 mt2"><a class="has-icon-left icon-close-blue"></a><span class="f7 accent b"></span></div>
+              </div>
+              <p class="measure-narrow warning dn tl cb main-gray lh-copy pt2">Ao inserir contatos manualmente, você não pode selecionar um arquivo</p>
+            </div>
+          </div>
+        </div>
+        <!-- ADD ONE CONTACT-->
+        <div class="fl w-50 pt4 pl6">
+          <h3 class="fl black f3 lh-solid">Adicionar um único contato</h3>
           <p class="fl cb main-gray mt4 pb2">* Campos obrigatórios</p>
           <!-- INFOS CONTAINER-->
-          <div class="fl w-two-thirds mt4 cl">
+          <div class="fl w-100 mt4 cl">
             <!-- ROW-->
             <div class="nr3 nl3">
               <div class="fl w-100">
@@ -124,10 +149,11 @@
                   <!-- STATE-->
                   <div class="fl w-20 input--inline--dropdown">
                     <!-- Editable information-->
-                    <div class="fl w-100 input input--inline pointer input--state"><span class="db has-icon-right icon-dropdown">UF</span></div>
+                    <div class="fl w-100 input input--inline pointer input--state"><span class="db has-icon-right icon-dropdown">--</span></div>
                     <div class="dropdown content-box">
                       <label class="dib mt1 lh-copy black-50">Estado</label>
                       <ul class="pt0 pb1 pl0">
+                        <li><span>--</span></li>
                         <li><span>SP</span></li>
                         <li><span>RJ</span></li>
                         <li><span>SC</span></li>
@@ -143,7 +169,9 @@
                     <div class="fl w-100 input input--inline pointer input--city"><span class="db has-icon-right icon-dropdown">Escolha a cidade</span></div>
                     <div class="dropdown content-box">
                       <label class="dib mt1 lh-copy black-50">Cidade</label>
-                      <ul class="pt0 pb1 pl0">
+                      <input class="mt2">
+                      <ul class="pt0 pb1 pl0 mt2">
+                        <li><span>Não informada</span></li>
                         <li><span>São Paulo</span></li>
                         <li><span>Campinas</span></li>
                         <li><span>Ribeirão Preto</span></li>
@@ -184,12 +212,13 @@
                         <li><span>Feminino</span></li>
                         <li><span>Masculino</span></li>
                         <li class="input-inside-list">
-                          <label class="black-50 normal">Outro</label>
+                          <label class="black normal">Outro</label>
                           <input class="input--inline">
                           <div class="tr">
                             <button class="mt2 ttu b f8 tracked accent" type="button">confirmar</button>
                           </div>
                         </li>
+                        <li><span>Não informado</span></li>
                       </ul>
                     </div>
                   </div>
@@ -288,7 +317,7 @@
           </div>
           <!-- CONFIRM-->
           <div class="fl w-two-thirds">
-            <button class="dib fr mt4 cta cta-accent"><span class="has-icon-left icon-check--white">adicionar contato		</span></button>
+            <button class="dib fr mt4 cta cta-accent"><span class="has-icon-left icon-check--white">adicionar contato</span></button>
           </div>
         </div>
       </div>

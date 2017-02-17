@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movile Messaging – Contatos</title>
+    <meta name="movile-messaging" content="Movile Messaging">
+    <!-- For the charts-->
+    <link href="charts/chartist.min.css" rel="stylesheet">
+    <script src="charts/chartist.min.js" charset="utf-8"></script>
+    <!-- Tachyons CSS-->
+    <link rel="stylesheet" href="stylesheets/tachyons.min.css">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- Typekit-->
+    <script src="https://use.typekit.net/fja4naa.js"></script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+    <style>.table-operadora, .table-subconta, .table-inicio{display:none;}</style>
+  </head>
+  <body>
+    <aside class="fixed fl h-100 bg-sidebar">
+      <div class="bb b--black-10">
+        <div class="pl4 mt4 pb3 w4"><a class="db w-90" href="dashboard.html"><img class="db" src="img/logo-white.png" alt="Logo Movile Messaging"></a></div>
+      </div>
+      <nav class="pl4 mt4">
+        <ul class="list pl0 mt3">
+          <li class="mt3"><a class="white dim f6" href="dashboard.html">Dashboard</a></li>
+          <li class="mt3"><a class="white dim f6" href="novo-envio.html">Novo envio</a></li>
+          <li class="mt3"><a class="white dim f6" href="relatorios-consolidados.html">Relatórios</a></li>
+          <li class="mt3"><a class="white dim f6 bb bw1" href="contatos.html">Contatos</a></li>
+          <li class="mt3"><a class="white dim f6" href="permissoes.html">Permissões</a></li>
+          <li class="mt3"><a class="white dim f6" href="conta.html">Sua conta</a></li>
+          <li class="mt3"><a class="white dim f6" href="">Suporte</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bb b--black-10">
+      <h1 class="f2 fl theblack lh-solid">Contatos</h1>
+      <div class="fr lh-copy relative">
+        <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray pointer">Notificações</a>
+          <div class="absolute top--1 right--1">
+            <div class="relative"><span class="notification-badge">275</span></div>
+          </div>
+          <!-- NOTIFICATIONS-->
+          <div class="dropdown notifications">
+            <!-- NOTIF HEADER-->
+            <div class="fl w-100 pa3 bb black-20">
+              <button class="mark-all-as-read ttu fr lh-copy pv0 pr0 tracked b f8 main-gray bn bg-white has-icon has-icon-left icon-check--gray outline-0">marcar todas como lidas</button>
+            </div>
+            <!-- NOTIFS BODY-->
+            <div class="fl w-100">
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 can-be-read">está sendo gerado</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><button class="accent bn bg-white fr f8 b ttu tracked">download</button></div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 green bg-lighter-green can-be-read">está pronto</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span>
+                  <button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+                </div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 red bg-lighter-red can-be-read">não foi possível gerar</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><a class="accent bn bg-white fr f8 b ttu tracked" href="notifs.html">ver detalhes</a></div>
+              </div>
+            </div>
+            <!-- NOTIF FOOTER-->
+            <div class="fl w-100 pa3"><a class="ttu fl lh-copy pv0 tracked b f8 accent bn bg-white has-icon has-icon-right icon-arrow-right--blue" href="notifs.html">ver todas as notificações</a></div>
+          </div>
+        </div>
+        <h3 class="f5 b fl has-icon has-icon-right icon-dropdown">NomeDoUsuário</h3>
+      </div>
+    </section>
+    <!-- MAIN CONTENT-->
+    <section class="main-content ph4 fr"><a class="pa0 bn bg-white dib mt4 nl3 fl" href="javascript:history.back()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
+      <!-- INFOS-->
+      <div class="fl w-100">
+        <div class="fl w-100 pt4 mw8" style="min-height:400px">
+          <h3 class="fl black f3 lh-solid">Adicionar contatos na Blacklist</h3>
+          <div class="fl w-100 mt4 cl">
+            <!-- ROW-->
+            <!-- SEARCH AND IMPORT CONTAINER-->
+            <div class="fl w-100">
+              <!-- SEARCH-->
+              <div class="fl w-50 search-input transition pr5">
+                <div class="fl w-100 relative">
+                  <label class="f6 black lh-copy">Busque por Contatos ou digite novos números</label>
+                  <div class="fl w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input-envio bg-search">
+                    <p class="dib"></p>
+                  </div>
+                  <div class="dropdown dropdown--multiple-lists content-box nl3 nr3">
+                    <label class="black-50 f6 lh-copy black">Busque por Contatos ou digite novos números</label>
+                    <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title bg-search" type="search">
+                    <div class="fl w-50 mt3 ml4 pb3 pl3"><span class="main-gray db f6">Últimos adicionados</span></div>
+                    <div class="fl w-100 multiple-lists__container theblack">
+                      <div class="fl w-100 gruposecontatos contatos-lista" data-origin="contatos-lista">
+                        <ul class="pt0 pb1 pl3 ml4">
+                          <li><span class="b" data-id="1">Bruno Farias</span></li>
+                          <li><span class="b" data-id="2">Nayara Rodrigues</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="fl warning dn main-gray lh-copy mt2">Ao importar de um arquivo, você não pode inserir contatos manualmente</p><a class="dn fl f7 ttu tracked b accent pointer clear-all mb3 mt4" href="javascript:">Limpar todos</a>
+                <ul class="fl cb list pl0 contatos"></ul>
+              </div>
+              <div class="fl w-50 pl5 choose-file transition">
+                <div class="fl">
+                  <label class="fl f6 black lh-copy">Ou importe de um arquivo</label>
+                  <form id="form-choose-file">
+                    <input class="dn" type="file" id="import-file" accept=".txt, .csv">
+                    <input class="dn" type="reset" id="reset-file">
+                  </form>
+                  <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon has-icon-left icon-upload--gray" data-before-chosen="Escolher arquivo" data-after-chosen="Mudar arquivo">Escolher arquivo</span></label>
+                  <div class="fr tr cl how-to mt1 measure-narrow">
+                    <button class="pa0 bg-white bn f8 ttu tracked b accent modal-trigger trigger--how-to-do">veja como fazer							</button>
+                  </div>
+                  <div class="fl cb dn file-name bg-medium-accent pa2 mr2 mb2 mt2"><a class="has-icon-left icon-close-blue"></a><span class="f7 accent b"></span></div>
+                </div>
+                <p class="measure-narrow warning dn tl cb main-gray lh-copy pt2">Ao inserir contatos manualmente, você não pode selecionar um arquivo</p>
+              </div>
+            </div>
+          </div>
+          <!-- DESCRIPTION-->
+          <div class="fl w-100 mt5">
+            <div class="fl w-50 relative inputs--cell pr5">
+              <textarea class="input input--inline f6 lh-copy ba b--black-20 b mt3 h4"></textarea>
+              <label class="label--active">Descrição
+                <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+              </label>
+            </div>
+          </div>
+          <!-- CONFIRM-->
+          <div class="fl w-50 pr5 mt4">
+            <button class="dib fr cta cta-accent"><span class="has-icon-left icon-check--white">adicionar na blacklist	</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <!-- jQuery-->
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <!-- Filters-->
+  <script src="js/forms.js"></script>
+  <!-- Notifications-->
+  <script src="js/notifs.js"></script>
+  <!-- Send New-->
+  <script src="js/novoenvio.js"></script>
+  <!-- Modal-->
+  <script src="js/modal.js"></script>
+</html>

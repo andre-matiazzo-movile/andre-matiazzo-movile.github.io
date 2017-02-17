@@ -122,7 +122,8 @@ html(lang='pt-br')
 							h3.theblack.f4.lh-solid Informações gerais
 							p.main-gray.lh-copy.mt2 Criado em 17/06/2016
 						div.fr
-							button.accent.ttu.b.tracked.mr3.has-icon-left.icon-blacklist.f7(type='button') inserir na blacklist
+							button.accent.ttu.b.tracked.mr3.f7.input--blacklist(type='button')
+								span.has-icon-left.icon-blacklist.lh-solid inserir na blacklist
 							button.cta.input--edit(type='button')
 								span.has-icon-left.icon-edit--blue editar
 							button.cta.input--confirm.dn(type='button')
@@ -135,7 +136,7 @@ html(lang='pt-br')
 							// NAME
 							div.fl.w-100.cb.mt4.name-input
 								.fl.w-third.ph3.relative.inputs--cell
-									p.input--disabled.f3.b.lh-title André Matiazzo
+									p.input--disabled.f3.b.lh-title.relative.contact-name.dib André Matiazzo
 									input.input--inline.dn.f3(type='text' value='André Matiazzo')
 									label Nome*
 									p.f7.mt2.tr.black-20.input__validation.dn Validação
@@ -155,13 +156,15 @@ html(lang='pt-br')
 										div.fl.w-20.input--inline--dropdown
 											// Read-only informations
 											p.fl.w-100.b.input--disabled.input--state
-												span.dib.fl.w-100 UF
+												span.dib.fl.w-100 --
 											// Editable information
 											div.fl.w-100.input.input--inline.pointer.input--state.dn 
-												span.db.has-icon-right.icon-dropdown UF
+												span.db.has-icon-right.icon-dropdown --
 											.dropdown.content-box
 												label.dib.mt1.lh-copy.black-50 Estado
 												ul.pt0.pb1.pl0
+													li
+														span --
 													li
 														span SP
 													li
@@ -177,13 +180,16 @@ html(lang='pt-br')
 										// CITY
 										div.fl.w-80.input--inline--dropdown
 											// Read-only informations
-											p.fl.w-100.b.input--disabled.input--city Cidade não definida
+											p.fl.w-100.b.input--disabled.input--city Não informada
 											// Editable information
 											div.fl.w-100.input.input--inline.pointer.input--city.dn
-												span.db.has-icon-right.icon-dropdown Cidade não definida
+												span.db.has-icon-right.icon-dropdown Não informada
 											.dropdown.content-box
 												label.dib.mt1.lh-copy.black-50 Cidade
-												ul.pt0.pb1.pl0
+												input.mt2
+												ul.pt0.pb1.pl0.mt2
+													li
+														span Não informada
 													li
 														span São Paulo
 													li
@@ -351,7 +357,7 @@ html(lang='pt-br')
 						tbody.v-top
 							tr.bb.relative.f6
 								td.bb.b--black-20.pv4.ph3.table-detalhes.left-shadow.lh-solid
-									a.accent.ttu.tracked.b.f8(href='javascript:', alt='Download') visualizar
+									a.accent.ttu.tracked.b.f8.has-icon-left.icon-eye-blue(href='javascript:', alt='Download') visualizar
 							
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')

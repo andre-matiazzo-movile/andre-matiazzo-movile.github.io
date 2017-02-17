@@ -119,10 +119,11 @@ $(document).ready(function() {
 	$('.input--inline').on('blur', function() {
 		if (!$(this).val()) {
 			$(this).removeClass('input--inline--active');
-			$(this).next().removeClass('label--active accent');
+			$(this).next().removeClass('accent');
+			$(this).not('textarea').next().removeClass('label--active');
 		} else {
 			$(this).next().removeClass('accent');
-			$(this).removeClass('input--inline--active');
+			// $(this).removeClass('input--inline--active');
 		}
 	});
 
@@ -134,7 +135,7 @@ $(document).ready(function() {
 			// $(this).find('span').removeClass('icon-edit--blue').addClass('icon-check').text('salvar');
 			$(this).hide();
 			$(this).siblings('.cta.input--confirm').show();
-			$(this).siblings('.icon-blacklist').hide();
+			$(this).siblings('.input--blacklist').hide();
 		}
 	});
 
@@ -166,11 +167,22 @@ $(document).ready(function() {
 			$(this).siblings('.input--saved').show()
 			$(this).hide();
 			setTimeout(function(){
-				$('.input--confirm').siblings('.input--edit, .icon-blacklist').show();
+				$('.input--confirm').siblings('.input--edit, .input--blacklist').show();
 				$('.input--confirm').siblings('.input--saved').hide();
 			}, 4000);
 		}
 
+	});
+
+	//Add existing contact to Blacklist
+	$('.icon-blacklist').on('click', function () {
+		$(this).parent().css('outline', 'none');
+		$('.contact-name').toggleClass('contact--blacklist');
+		if ($('.contact-name').hasClass('contact--blacklist')) {
+			$(this).text('remover da blacklist');
+		} else {
+			$(this).text('inserir na blacklist');
+		}
 	});
 
 	//Asks for confirmation on input delete

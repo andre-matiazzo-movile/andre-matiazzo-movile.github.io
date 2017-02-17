@@ -74,7 +74,7 @@ $success: #00E676;
 	}
 }
 
-.blacklist {
+.card--blacklist {
 	border: 1px solid $theblack;
 	position: relative;
 	&:after {
@@ -94,5 +94,73 @@ $success: #00E676;
 	&:hover:after{
 		transition: all ease 0.4s;
 		color: $accent;
+	}
+}
+
+.contact-name {
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 0;
+		height: 2px;
+		margin-top: 1.25rem;
+		background: black;
+		@include transition (1s);
+	}
+	&:after {
+		position: absolute;
+		opacity: 0;
+		top: 0.25rem;
+		left: 105%;
+		content: "blacklist";
+		letter-spacing: .1em;
+		line-height: 1.25;
+		font-size: .75rem;
+		text-transform: uppercase;
+		padding: .5rem 1rem;
+		color: #fff;
+		background-color: $theblack;
+		@include transition (0.5s);
+	}
+}
+
+.contact--blacklist {
+	&:before {
+		width: 100%;
+		@include transition (0.5s);
+		// transform-origin: center left;
+		// animation: strikethrough--in 1s 0s cubic-bezier(.55, 0, .1, 1) 1;
+		// transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+		// -webkit-animation-fill-mode: forwards;
+	}
+	&:after {
+		// animation: blacklist-label--in 1s 1s cubic-bezier(.55, 0, .1, 1) 1;
+		// transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+		// -webkit-animation-fill-mode: forwards;
+		opacity: 1;
+		@include transition (1s);
+	}
+}
+
+// @keyframes strikethrough--in {
+// 	from {
+// 		width: 0;
+// 		opacity: 0;
+// 		transform: scaleX(0);
+// 	}
+// 	to {
+// 		width: 100%;
+// 		opacity: 1;
+// 		transform: scaleX(1);
+// 	}
+// }
+
+@keyframes blacklist-label--in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
