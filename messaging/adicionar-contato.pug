@@ -117,29 +117,48 @@ html(lang='pt-br')
 			//SECTION TITLE
 			div.fl.w-100
 				// ADD MULTIPLE CONTACTS
-				div.fl.w-third.pt4
+				div.fl.w-100.mt4.pb5.bb.b--black-50
 					h3.fl.black.f3.lh-solid Adicionar contatos
 					.fl.w-100.mt4.cl
 					// ROW
 					// SEARCH AND IMPORT CONTAINER
-					.fl.w-100
-						.fl.w-50.choose-file.transition
-							div.fl
-								label.fl.f6.black.lh-copy Importe de um arquivo
-								form#form-choose-file
-									input.dn(type='file', id='import-file', accept='.txt, .csv')
-									input.dn(type='reset', id='reset-file')
-								label.b.mt2.fl.cl.cta.cta-secondary.dib.w-auto.tr.main-gray(for="import-file")
-									span.has-icon.has-icon-left.icon-upload--gray(data-before-chosen="Escolher arquivo", data-after-chosen='Mudar arquivo') Escolher arquivo
-								.fr.tr.cl.how-to.mt1.measure-narrow
-									button.pa0.bg-white.bn.f8.ttu.tracked.b.accent.modal-trigger.trigger--how-to-do veja como fazer							
-								.fl.cb.dn.file-name.bg-medium-accent.pa2.mr2.mb2.mt2
-									a.has-icon-left.icon-close-blue
-									span.f7.accent.b
-							p.measure-narrow.warning.dn.tl.cb.main-gray.lh-copy.pt2 Ao inserir contatos manualmente, você não pode selecionar um arquivo
+					.fl.w-100.mw8
+						.nl3.nr3
+							.fl.w-third.ph3.choose-file.transition
+								div.fl
+									//- label.fl.f6.black.lh-copy Importe de um arquivo
+									form#form-choose-file
+										input.dn(type='file', id='import-file', accept='.txt, .csv')
+										input.dn(type='reset', id='reset-file')
+									label.b.mt2.fl.cl.cta.cta-secondary.dib.w-auto.tr.main-gray(for="import-file")
+										span.has-icon.has-icon-left.icon-upload--gray(data-before-chosen="Escolher arquivo", data-after-chosen='Mudar arquivo') Escolher arquivo
+									.fr.tr.cl.how-to.mt1.measure-narrow
+										//- button.pa0.bg-white.bn.f8.ttu.tracked.b.accent.modal-trigger.trigger--how-to-do veja como fazer	
+									.fl.cb.dn.file-name.bg-medium-accent.pa2.mr2.mb2.mt2
+										a.has-icon-left.icon-close-blue
+										span.f7.accent.b
+								//- p.measure-narrow.warning.dn.tl.cb.main-gray.lh-copy.pt2 Ao inserir contatos manualmente, você não pode selecionar um arquivo
+							.fl.w-third.ph3
+								div
+									h3.theblack.f5.lh-title Arquivos aceitos
+									p.mt2.lh-copy.measure-narrow São aceitos arquivos de até 15mb nos seguintes formatos:
+									div.mt1
+										h3.f4.dib.mr3 .csv
+										h3.f4.dib .txt
+							.fl.w-third.ph3
+								div
+									h3.theblack.f5.lh-title Formatando seu arquivo
+									p.mt3.lh-copy.measure-narrow 1. Sua primeira coluna deverá conter, obrigatoriamente, os números dos destinatários
+									p.mt3.lh-copy.measure-narrow 2. Use as outras colunas para criar campos dinâmicos e envie mensagens personalizadas para cada um de seus destinatários.
+									div.mt3
+										img(src="img/envio_how-to-do.png")
+						// CONFIRM
+						div.fl.w-100
+							button.dib.fr.mt5.cta.cta-accent
+								span.has-icon-left.icon-check--white adicionar contatos									
 				// ADD ONE CONTACT
-				div.fl.w-50.pt4.pl6
-					h3.fl.black.f3.lh-solid Adicionar um único contato
+				div.fl.w-100.mt4.mw8
+					h3.fl.black.f3.lh-solid Ou adicionar um único contato
 					p.fl.cb.main-gray.mt4.pb2 * Campos obrigatórios
 					// INFOS CONTAINER
 					.fl.w-100.mt4.cl
@@ -147,20 +166,17 @@ html(lang='pt-br')
 						.nr3.nl3
 							.fl.w-100
 								// NAME
-								.fl.w-50.ph3.relative
+								.fl.w-third.ph3.relative
 									input.input--inline(type='text')
 									label Nome*
 									p.f7.mt2.tr.black-20.input__validation Validação
 								// PHONE
-								.fl.w-50.ph3.relative
+								.fl.w-third.ph3.relative
 									input.input--inline(type='text')
 									label Celular*
 									p.f7.mt2.tr.black-20.input__validation Validação
-						// ROW
-						.nr3.nl3
-							.fl.w-100.mt5
-								// NAME
-								.fl.w-50.ph3.relative.inputs--cell.input-with-select
+								// STATE AND CITY
+								.fl.w-third.ph3.relative.inputs--cell.input-with-select
 										// STATE
 										div.fl.w-20.input--inline--dropdown
 											// Editable information
@@ -208,21 +224,21 @@ html(lang='pt-br')
 														span Mococa
 										label.label--active Estado e Cidade
 										p.f7.mt2.tr.black-20.input__validation.dn Validação
-								// EMAIL
-								.fl.w-50.ph3.relative
-									input.input--inline(type='email')
-									label Email
-									p.f7.mt2.tr.black-20.input__validation Validação
 						// ROW
 						.nr3.nl3
 							.fl.w-100.mt5
+								// EMAIL
+								.fl.w-third.ph3.relative
+									input.input--inline(type='email')
+									label Email
+									p.f7.mt2.tr.black-20.input__validation Validação
 								// COMPANY
-								.fl.w-50.ph3.relative
+								.fl.w-third.ph3.relative
 									input.input--inline(type='text')
 									label Empresa
 									p.f7.mt2.tr.black-20.input__validation Validação
 								// GENDER
-								.fl.w-50.ph3.relative.inputs--cell.input-with-select
+								.fl.w-third.ph3.relative.inputs--cell.input-with-select
 										div.fl.w-100.input--inline--dropdown
 											// Editable information
 											div.fl.w-100.input.input--inline.pointer
@@ -247,25 +263,25 @@ html(lang='pt-br')
 						.nr3.nl3
 							.fl.w-100.mt5
 								// BIRTHDAY
-								.fl.w-50.ph3.relative
+								.fl.w-third.ph3.relative
 									input.input--inline(type='text')
 									label Aniversário
 									p.f7.mt2.tr.black-20.input__validation Validação
 								// CPF/CNPJ
-								.fl.w-50.ph3.relative
+								.fl.w-third.ph3.relative
 									input.input--inline(type='text')
 									label CPF/CNPJ
-									p.f7.mt2.tr.black-20.input__validation Validação													
+									p.f7.mt2.tr.black-20.input__validation Validação
+								// NICKNAME
+								.fl.w-third.ph3.relative
+									input.input--inline(type='text')
+									label Apelido
+									p.f7.mt2.tr.black-20.input__validation Validação	
 						// ROW
 						.nr3.nl3
 							.fl.w-100.mt5
-								// NICKNAME
-								.fl.w-50.ph3.relative
-									input.input--inline(type='text')
-									label Apelido
-									p.f7.mt2.tr.black-20.input__validation Validação
 								// GROUPS
-								.fl.w-50.ph3.relative.inputs--cell.input-with-select.has-dropdown
+								.fl.w-third.ph3.relative.inputs--cell.input-with-select.has-dropdown
 									div.fl.w-100.input--inline--dropdown
 										// Editable information
 										div.fl.w-100.input.input--inline.pointer.insert-criteria.view-box-close
@@ -299,18 +315,15 @@ html(lang='pt-br')
 																input#group05.dropdown-checkbox(type='checkbox', name='usuario', value='Grupo 05')
 																label.f6.b.accent-hover.relative(for='group05') Grupo 05
 									label.label--active Grupos
-						// ROW
-						.nr3.nl3
-							.fl.w-100.mt5
 								// COMMENTS
-								.fl.w-50.ph3.relative.inputs--cell
+								.fl.w-third.ph3.relative.inputs--cell
 									textarea.input.input--inline.f6.lh-copy.ba.b--black-20.b.mt3.h4 
 									label.label--active Comentários
 										p.f7.mt2.tr.black-20.input__validation.dn Validação
 					// CONFIRM
-					div.fl.w-two-thirds
-						button.dib.fr.mt4.cta.cta-accent
-							span.has-icon-left.icon-check--white adicionar contato
+					div.fl.w-100
+						button.dib.fr.mt5.cta.cta-accent
+							span.has-icon-left.icon-check--white adicionar contato		
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
 	// Filters

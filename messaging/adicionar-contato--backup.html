@@ -94,73 +94,33 @@
     <section class="main-content ph4 pb5 fr"><a class="pa0 bn bg-white dib mt4 nl3 fl" href="javascript:history.back()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
       <!--SECTION TITLE-->
       <div class="fl w-100">
-        <!-- ADD MULTIPLE CONTACTS-->
-        <div class="fl w-100 mt4 pb5 bb b--black-50">
-          <h3 class="fl black f3 lh-solid">Adicionar contatos</h3>
-          <div class="fl w-100 mt4 cl"></div>
-          <!-- ROW-->
-          <!-- SEARCH AND IMPORT CONTAINER-->
-          <div class="fl w-100 mw8">
-            <div class="nl3 nr3">
-              <div class="fl w-third ph3 choose-file transition">
-                <div class="fl">
-                  <form id="form-choose-file">
-                    <input class="dn" type="file" id="import-file" accept=".txt, .csv">
-                    <input class="dn" type="reset" id="reset-file">
-                  </form>
-                  <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon has-icon-left icon-upload--gray" data-before-chosen="Escolher arquivo" data-after-chosen="Mudar arquivo">Escolher arquivo</span></label>
-                  <div class="fr tr cl how-to mt1 measure-narrow"></div>
-                  <div class="fl cb dn file-name bg-medium-accent pa2 mr2 mb2 mt2"><a class="has-icon-left icon-close-blue"></a><span class="f7 accent b"></span></div>
-                </div>
-              </div>
-              <div class="fl w-third ph3">
-                <div>
-                  <h3 class="theblack f5 lh-title">Arquivos aceitos</h3>
-                  <p class="mt2 lh-copy measure-narrow">São aceitos arquivos de até 15mb nos seguintes formatos:</p>
-                  <div class="mt1">
-                    <h3 class="f4 dib mr3">.csv</h3>
-                    <h3 class="f4 dib">.txt</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="fl w-third ph3">
-                <div>
-                  <h3 class="theblack f5 lh-title">Formatando seu arquivo</h3>
-                  <p class="mt3 lh-copy measure-narrow">1. Sua primeira coluna deverá conter, obrigatoriamente, os números dos destinatários</p>
-                  <p class="mt3 lh-copy measure-narrow">2. Use as outras colunas para criar campos dinâmicos e envie mensagens personalizadas para cada um de seus destinatários.</p>
-                  <div class="mt3"><img src="img/envio_how-to-do.png"></div>
-                </div>
-              </div>
-            </div>
-            <!-- CONFIRM-->
-            <div class="fl w-100">
-              <button class="dib fr mt5 cta cta-accent"><span class="has-icon-left icon-check--white">adicionar contatos									</span></button>
-            </div>
-          </div>
-        </div>
-        <!-- ADD ONE CONTACT-->
-        <div class="fl w-100 mt4 mw8">
-          <h3 class="fl black f3 lh-solid">Ou adicionar um único contato</h3>
+        <div class="fl w-100 pt4 mw8">
+          <h3 class="fl black f3 lh-solid">Adicionar contato</h3>
           <p class="fl cb main-gray mt4 pb2">* Campos obrigatórios</p>
           <!-- INFOS CONTAINER-->
-          <div class="fl w-100 mt4 cl">
+          <div class="fl w-two-thirds mt4 cl">
             <!-- ROW-->
             <div class="nr3 nl3">
               <div class="fl w-100">
                 <!-- NAME-->
-                <div class="fl w-third ph3 relative">
+                <div class="fl w-50 ph3 relative">
                   <input class="input--inline" type="text">
                   <label>Nome*</label>
                   <p class="f7 mt2 tr black-20 input__validation">Validação</p>
                 </div>
                 <!-- PHONE-->
-                <div class="fl w-third ph3 relative">
+                <div class="fl w-50 ph3 relative">
                   <input class="input--inline" type="text">
                   <label>Celular*</label>
                   <p class="f7 mt2 tr black-20 input__validation">Validação</p>
                 </div>
-                <!-- STATE AND CITY-->
-                <div class="fl w-third ph3 relative inputs--cell input-with-select">
+              </div>
+            </div>
+            <!-- ROW-->
+            <div class="nr3 nl3">
+              <div class="fl w-100 mt5">
+                <!-- NAME-->
+                <div class="fl w-50 ph3 relative inputs--cell input-with-select">
                   <!-- STATE-->
                   <div class="fl w-20 input--inline--dropdown">
                     <!-- Editable information-->
@@ -199,25 +159,25 @@
                   <label class="label--active">Estado e Cidade</label>
                   <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
                 </div>
+                <!-- EMAIL-->
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="email">
+                  <label>Email</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
               </div>
             </div>
             <!-- ROW-->
             <div class="nr3 nl3">
               <div class="fl w-100 mt5">
-                <!-- EMAIL-->
-                <div class="fl w-third ph3 relative">
-                  <input class="input--inline" type="email">
-                  <label>Email</label>
-                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
-                </div>
                 <!-- COMPANY-->
-                <div class="fl w-third ph3 relative">
+                <div class="fl w-50 ph3 relative">
                   <input class="input--inline" type="text">
                   <label>Empresa</label>
                   <p class="f7 mt2 tr black-20 input__validation">Validação</p>
                 </div>
                 <!-- GENDER-->
-                <div class="fl w-third ph3 relative inputs--cell input-with-select">
+                <div class="fl w-50 ph3 relative inputs--cell input-with-select">
                   <div class="fl w-100 input--inline--dropdown">
                     <!-- Editable information-->
                     <div class="fl w-100 input input--inline pointer"><span class="db has-icon-right icon-dropdown">Escolha</span></div>
@@ -246,30 +206,30 @@
             <div class="nr3 nl3">
               <div class="fl w-100 mt5">
                 <!-- BIRTHDAY-->
-                <div class="fl w-third ph3 relative">
+                <div class="fl w-50 ph3 relative">
                   <input class="input--inline" type="text">
                   <label>Aniversário</label>
                   <p class="f7 mt2 tr black-20 input__validation">Validação</p>
                 </div>
                 <!-- CPF/CNPJ-->
-                <div class="fl w-third ph3 relative">
+                <div class="fl w-50 ph3 relative">
                   <input class="input--inline" type="text">
                   <label>CPF/CNPJ</label>
-                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
-                </div>
-                <!-- NICKNAME-->
-                <div class="fl w-third ph3 relative">
-                  <input class="input--inline" type="text">
-                  <label>Apelido</label>
-                  <p class="f7 mt2 tr black-20 input__validation">Validação	</p>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação													</p>
                 </div>
               </div>
             </div>
             <!-- ROW-->
             <div class="nr3 nl3">
               <div class="fl w-100 mt5">
+                <!-- NICKNAME-->
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>Apelido</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
                 <!-- GROUPS-->
-                <div class="fl w-third ph3 relative inputs--cell input-with-select has-dropdown">
+                <div class="fl w-50 ph3 relative inputs--cell input-with-select has-dropdown">
                   <div class="fl w-100 input--inline--dropdown">
                     <!-- Editable information-->
                     <div class="fl w-100 input input--inline pointer insert-criteria view-box-close"><span class="db has-icon-right icon-dropdown group-span">Pertence a algum?</span></div>
@@ -315,8 +275,13 @@
                   </div>
                   <label class="label--active">Grupos</label>
                 </div>
+              </div>
+            </div>
+            <!-- ROW-->
+            <div class="nr3 nl3">
+              <div class="fl w-100 mt5">
                 <!-- COMMENTS-->
-                <div class="fl w-third ph3 relative inputs--cell">
+                <div class="fl w-50 ph3 relative inputs--cell">
                   <textarea class="input input--inline f6 lh-copy ba b--black-20 b mt3 h4"> </textarea>
                   <label class="label--active">Comentários
                     <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
@@ -326,8 +291,8 @@
             </div>
           </div>
           <!-- CONFIRM-->
-          <div class="fl w-100">
-            <button class="dib fr mt5 cta cta-accent"><span class="has-icon-left icon-check--white">adicionar contato		</span></button>
+          <div class="fl w-two-thirds">
+            <button class="dib fr mt4 cta cta-accent"><span class="has-icon-left icon-check--white">adicionar contato		</span></button>
           </div>
         </div>
       </div>
