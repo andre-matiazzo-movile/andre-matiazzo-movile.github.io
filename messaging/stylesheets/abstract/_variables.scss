@@ -45,8 +45,9 @@ $sidebar-border: #576E95;
 $ice-white: #F3F9FF;
 // .ice-white {color: $ice-white;}
 $alert: rgba(255,0,80,0.5);
-$success: #00E676;
+$success: #61FFB2;
 .bg-success {background-color: $success};
+.black {color: #37474F};
 
 .transition {
 	@include transition (0.2s);

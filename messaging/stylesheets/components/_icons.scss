@@ -180,6 +180,12 @@
 	}
 }
 
+.icon-close-black {
+	&:after {
+		background-image: url('../img/icons/close-black.png');
+	}
+}
+
 .icon-close-blue {
 	&:after {
 		background-image: url('../img/icons/close-blue.png');
