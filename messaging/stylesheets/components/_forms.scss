@@ -165,6 +165,9 @@ textarea.input.input--inline {
 		.input--disabled {
 			border-bottom: 1px solid transparent;
 		}
+		.input--cancel, .input--confirm {
+			display: inline-block;
+		}
 	}
 }
 
