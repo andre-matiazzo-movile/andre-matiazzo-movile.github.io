@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movile Messaging – Notificações</title>
+    <meta name="movile-messaging" content="Movile Messaging">
+    <!-- Tachyons CSS-->
+    <link rel="stylesheet" href="stylesheets/tachyons.min.css">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- Typekit-->
+    <script src="https://use.typekit.net/fja4naa.js"></script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+  </head>
+  <body>
+    <aside class="fixed fl h-100 bg-sidebar">
+      <div class="bb b--black-10">
+        <div class="pl4 mt4 pb3 w4"><a class="db w-90" href="dashboard.html"><img class="db" src="img/logo-white.png" alt="Logo Movile Messaging"></a></div>
+      </div>
+      <nav class="pl4 mt4">
+        <ul class="list pl0 mt3">
+          <li class="mt3"><a class="white dim f6" href="dashboard.html">Dashboard</a></li>
+          <li class="mt3"><a class="white dim f6" href="novo-envio.html">Novo envio</a></li>
+          <li class="mt3"><a class="white dim f6" href="relatorios-consolidados.html">Relatórios</a></li>
+          <li class="mt3"><a class="white dim f6" href="contatos.html">Contatos</a></li>
+          <li class="mt3"><a class="white dim f6" href="permissoes.html">Permissões</a></li>
+          <li class="mt3"><a class="white dim f6" href="conta.html">Sua conta</a></li>
+          <li class="mt3"><a class="white dim f6" href="">Suporte</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bb b--black-10">
+      <h1 class="f2 fl theblack lh-solid">Notificações</h1>
+      <div class="fr lh-copy relative">
+        <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray pointer">Notificações</a>
+          <div class="absolute top--1 right--1">
+            <div class="relative"><span class="notification-badge">275</span></div>
+          </div>
+          <!-- NOTIFICATIONS-->
+          <div class="dropdown notifications">
+            <!-- NOTIF HEADER-->
+            <div class="fl w-100 pa3 bb black-20">
+              <button class="mark-all-as-read ttu fr lh-copy pv0 pr0 tracked b f8 main-gray bn bg-white has-icon has-icon-left icon-check--gray outline-0">marcar todas como lidas</button>
+            </div>
+            <!-- NOTIFS BODY-->
+            <div class="fl w-100">
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 can-be-read">está sendo gerado</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><button class="accent bn bg-white fr f8 b ttu tracked">download</button></div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 green bg-lighter-green can-be-read">está pronto</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span>
+                  <button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+                </div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 red bg-lighter-red can-be-read">não foi possível gerar</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><a class="accent bn bg-white fr f8 b ttu tracked" href="notifs.html">ver detalhes</a></div>
+              </div>
+            </div>
+            <!-- NOTIF FOOTER-->
+            <div class="fl w-100 pa3"><a class="ttu fl lh-copy pv0 tracked b f8 accent bn bg-white has-icon has-icon-right icon-arrow-right--blue" href="notifs.html">ver todas as notificações</a></div>
+          </div>
+        </div>
+        <h3 class="f5 b fl has-icon has-icon-right icon-dropdown">NomeDoUsuário</h3>
+      </div>
+    </section>
+    <!-- MAIN CONTENT-->
+    <section class="main-content ph4 pb5 fr"><a class="pa0 bn bg-white dib mt4 fl" onclick="goBack()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
+      <div class="notifications__container mt3 mw7 fl w-100 cb">
+        <div class="fl w-100">
+          <!-- NOTIF ITEM-->
+          <div class="notif__item bb black-20 pv3 fl w-100">
+            <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+            <div class="w-90 fl pl3">
+              <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 can-be-read">está sendo gerado</span></div>
+              <h1 class="notif__title theblack lh-copy f5 mt1 can-be-read">Relatório consolidado</h1>
+              <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+            </div>
+            <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span>
+              <!-- <button class="accent bn bg-white fr f8 b ttu tracked">download</button>-->
+            </div>
+            <!-- REPORT DETAILS-->
+            <div class="fl w-100 pl4 mt3">
+              <div class="w-100"><a class="details__trigger pa0 dib outline-0 lh-solid f8 accent ttu tracked b"><span class="has-icon has-icon-right icon-dropdown__blue">detalhes</span></a>
+                <div class="details__list fl w-100 mt2 dn">
+                  <ul class="fl w-50 list pl0 f6 lh-title">
+                    <li class="main-gray mt2"><span class="b">Período: </span>01 Jan – 31 Mar de 2016</li>
+                    <li class="main-gray mt2"><span class="b">Tipo de relatório: </span>Envios consolidados</li>
+                    <li class="main-gray mt2"><span class="b">Subconta: </span>Todas subcontas</li>
+                    <li class="main-gray mt2"><span class="b">Usuários: </span>Todos usuários</li>
+                  </ul>
+                  <ul class="fl w-50 list pl0 f6 lh-title">
+                    <li class="main-gray mt2"><span class="b">Campanha, lote ou número: </span>Carnaval 2014</li>
+                    <li class="main-gray mt2"><span class="b">Operadoras: </span>Todas operadoras</li>
+                    <li class="main-gray mt2"><span class="b">Subconta: </span>Todas subcontas</li>
+                    <li class="main-gray mt2"><span class="b">Status das mensagens: </span>Todos status</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- NOTIF ITEM-->
+          <div class="notif__item bb black-20 pv3 fl w-100 relative">
+            <div class="notif__actions--details absolute right-0 top-0"><a class="cta dib mt3"><span>download</span></a></div>
+            <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+            <div class="w-90 fl pl3">
+              <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 green bg-lighter-green can-be-read">está pronto</span></div>
+              <h1 class="notif__title theblack lh-copy f5 mt1 can-be-read">Relatório consolidado</h1>
+              <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+            </div>
+            <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span>
+              <!-- <button class="accent bn bg-white fr f8 b ttu tracked">download</button>-->
+            </div>
+          </div>
+          <!-- NOTIF ITEM-->
+          <div class="notif__item bb black-20 pv3 fl w-100">
+            <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+            <div class="w-90 fl pl3">
+              <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 red bg-lighter-red can-be-read">não foi possível gerar</span></div>
+              <h1 class="notif__title theblack lh-copy f5 mt1 can-be-read">Relatório consolidado</h1>
+              <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+            </div>
+            <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span>
+              <!--
+              <a href="notifs.html" class="accent bn bg-white fr f8 b ttu tracked">ver detalhes
+              </a href="notifs.html">
+              -->
+            </div>
+          </div>
+          <!-- NOTIF ITEM-->
+          <div class="notif__item bb black-20 pv3 fl w-100">
+            <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+            <div class="w-90 fl pl3">
+              <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 can-be-read">está sendo gerado</span></div>
+              <h1 class="notif__title theblack lh-copy f5 mt1 can-be-read">Relatório consolidado</h1>
+              <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+            </div>
+            <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span>
+              <!-- <button class="accent bn bg-white fr f8 b ttu tracked">download</button>-->
+            </div>
+            <!-- REPORT DETAILS-->
+            <div class="fl w-100 pl4 mt3">
+              <div class="w-100"><a class="details__trigger pa0 dib outline-0 lh-solid f8 accent ttu tracked b"><span class="has-icon has-icon-right icon-dropdown__blue">detalhes</span></a>
+                <div class="details__list fl w-100 mt2 dn">
+                  <ul class="fl w-50 list pl0 f6 lh-title">
+                    <li class="main-gray mt2"><span class="b">Período: </span>01 Jan – 31 Mar de 2016</li>
+                    <li class="main-gray mt2"><span class="b">Tipo de relatório: </span>Envios consolidados</li>
+                    <li class="main-gray mt2"><span class="b">Subconta: </span>Todas subcontas</li>
+                    <li class="main-gray mt2"><span class="b">Usuários: </span>Todos usuários</li>
+                  </ul>
+                  <ul class="fl w-50 list pl0 f6 lh-title">
+                    <li class="main-gray mt2"><span class="b">Campanha, lote ou número: </span>Carnaval 2014</li>
+                    <li class="main-gray mt2"><span class="b">Operadoras: </span>Todas operadoras</li>
+                    <li class="main-gray mt2"><span class="b">Subconta: </span>Todas subcontas</li>
+                    <li class="main-gray mt2"><span class="b">Status das mensagens: </span>Todos status</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <!-- jQuery-->
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <script src="js/forms.js"></script>
+  <!-- Notifications-->
+  <script src="js/notifs.js"></script>
+  <script>
+    function goBack() {
+    window.history.back();
+    }
+  </script>
+</html>

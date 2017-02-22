@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movile Messaging – Contatos</title>
+    <meta name="movile-messaging" content="Movile Messaging">
+    <!-- For the charts-->
+    <link href="charts/chartist.min.css" rel="stylesheet">
+    <script src="charts/chartist.min.js" charset="utf-8"></script>
+    <!-- Tachyons CSS-->
+    <link rel="stylesheet" href="stylesheets/tachyons.min.css">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- Typekit-->
+    <script src="https://use.typekit.net/fja4naa.js"></script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+    <style>.table-operadora, .table-subconta, .table-inicio{display:none;}</style>
+  </head>
+  <body>
+    <aside class="fixed fl h-100 bg-sidebar">
+      <div class="bb b--black-10">
+        <div class="pl4 mt4 pb3 w4"><a class="db w-90" href="dashboard.html"><img class="db" src="img/logo-white.png" alt="Logo Movile Messaging"></a></div>
+      </div>
+      <nav class="pl4 mt4">
+        <ul class="list pl0 mt3">
+          <li class="mt3"><a class="white dim f6" href="dashboard.html">Dashboard</a></li>
+          <li class="mt3"><a class="white dim f6" href="novo-envio.html">Novo envio</a></li>
+          <li class="mt3"><a class="white dim f6" href="relatorios-consolidados.html">Relatórios</a></li>
+          <li class="mt3"><a class="white dim f6 bb bw1" href="contatos.html">Contatos</a></li>
+          <li class="mt3"><a class="white dim f6" href="permissoes.html">Permissões</a></li>
+          <li class="mt3"><a class="white dim f6" href="conta.html">Sua conta</a></li>
+          <li class="mt3"><a class="white dim f6" href="">Suporte</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bb b--black-10">
+      <h1 class="f2 fl theblack lh-solid">Contatos</h1>
+      <div class="fr lh-copy relative">
+        <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray pointer">Notificações</a>
+          <div class="absolute top--1 right--1">
+            <div class="relative"><span class="notification-badge">275</span></div>
+          </div>
+          <!-- NOTIFICATIONS-->
+          <div class="dropdown notifications">
+            <!-- NOTIF HEADER-->
+            <div class="fl w-100 pa3 bb black-20">
+              <button class="mark-all-as-read ttu fr lh-copy pv0 pr0 tracked b f8 main-gray bn bg-white has-icon has-icon-left icon-check--gray outline-0">marcar todas como lidas</button>
+            </div>
+            <!-- NOTIFS BODY-->
+            <div class="fl w-100">
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 can-be-read">está sendo gerado</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><button class="accent bn bg-white fr f8 b ttu tracked">download</button></div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 green bg-lighter-green can-be-read">está pronto</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span>
+                  <button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+                </div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 red bg-lighter-red can-be-read">não foi possível gerar</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><a class="accent bn bg-white fr f8 b ttu tracked" href="notifs.html">ver detalhes</a></div>
+              </div>
+            </div>
+            <!-- NOTIF FOOTER-->
+            <div class="fl w-100 pa3"><a class="ttu fl lh-copy pv0 tracked b f8 accent bn bg-white has-icon has-icon-right icon-arrow-right--blue" href="notifs.html">ver todas as notificações</a></div>
+          </div>
+        </div>
+        <h3 class="f5 b fl has-icon has-icon-right icon-dropdown">NomeDoUsuário</h3>
+      </div>
+    </section>
+    <!-- MAIN CONTENT-->
+    <section class="main-content ph4 pb5 fr"><a class="pa0 bn bg-white dib mt4 nl3 fl" href="javascript:history.back()"><span class="ttu b tracked f7 accent has-icon has-icon-left icon-arrow-left--blue">voltar</span></a>
+      <!-- INFOS - TITLE AND ACTION BUTTONS-->
+      <div class="fl w-100">
+        <form class="fl w-100 mt4 inputs-infos inputs-infos__group">
+          <div class="fl w-100">
+            <div class="fl">
+              <h3 class="theblack f4 lh-solid">Informações gerais</h3>
+              <p class="main-gray lh-copy mt2">Criado em 17/06/2016</p>
+            </div>
+            <div class="fr">
+              <button class="accent ttu b tracked mr3 f7 input--blacklist" type="button"><span class="has-icon-left icon-blacklist lh-solid">inserir na blacklist</span></button>
+              <button class="cta input--edit" type="button"><span class="has-icon-left icon-edit--blue">editar</span></button>
+              <button class="cta input--confirm dn" type="button"><span class="has-icon-left icon-check">salvar</span></button>
+              <p class="white bg-green ttu b tracked pa3 f7 input--saved transition lh-copy ba b--transparent dn"><span class="has-icon-left icon-check--white">salvo</span></p>
+            </div>
+          </div>
+          <!-- INFOS - CONTENT-->
+          <div class="nl3 nr3">
+            <div class="fl w-100 mt2 mw8">
+              <!-- NAME-->
+              <div class="fl w-100 cb mt4 name-input">
+                <div class="fl w-third ph3 relative inputs--cell">
+                  <p class="input--disabled f3 b lh-title relative contact-name dib">André Matiazzo</p>
+                  <input class="input--inline dn f3" type="text" value="André Matiazzo">
+                  <label>Nome*</label>
+                  <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                </div>
+              </div>
+              <!--OTHER INFOS-->
+              <div class="fl w-100 mt5">
+                <!-- ROW-->
+                <div class="fl w-100 cb">
+                  <!-- PHONE-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <p class="input input--disabled">19996587867</p>
+                    <input class="input--inline dn" type="text" value="19996587867">
+                    <label>Celular*</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <!-- STATE AND CITY-->
+                  <div class="fl w-third ph3 relative inputs--cell input-with-select">
+                    <!-- STATE-->
+                    <div class="fl w-20 input--inline--dropdown">
+                      <!-- Read-only informations-->
+                      <p class="fl w-100 b input--disabled input--state"><span class="dib fl w-100">--</span></p>
+                      <!-- Editable information-->
+                      <div class="fl w-100 input input--inline pointer input--state dn"> <span class="db has-icon-right icon-dropdown">--</span></div>
+                      <div class="dropdown content-box">
+                        <label class="dib mt1 lh-copy black-50">Estado</label>
+                        <ul class="pt0 pb1 pl0">
+                          <li><span>--</span></li>
+                          <li><span>SP</span></li>
+                          <li><span>RJ</span></li>
+                          <li><span>SC</span></li>
+                          <li><span>PE</span></li>
+                          <li><span>AM</span></li>
+                          <li><span>MG</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- CITY-->
+                    <div class="fl w-80 input--inline--dropdown">
+                      <!-- Read-only informations-->
+                      <p class="fl w-100 b input--disabled input--city">Não informada</p>
+                      <!-- Editable information-->
+                      <div class="fl w-100 input input--inline pointer input--city dn"><span class="db has-icon-right icon-dropdown">Não informada</span></div>
+                      <div class="dropdown content-box">
+                        <label class="dib mt1 lh-copy black-50">Cidade</label>
+                        <input class="mt2">
+                        <ul class="pt0 pb1 pl0 mt2">
+                          <li><span>Não informada</span></li>
+                          <li><span>São Paulo</span></li>
+                          <li><span>Campinas</span></li>
+                          <li><span>Ribeirão Preto</span></li>
+                          <li><span>São Carlos</span></li>
+                          <li><span>Sorocaba</span></li>
+                          <li><span>Mococa</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <label class="label--active">Estado e Cidade</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <!-- EMAIL-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <p class="input input--disabled">andre.matiazzo@movile.com</p>
+                    <input class="input--inline dn" type="text" value="andre.matiazzo@movile.com">
+                    <label>Email</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                </div>
+                <!-- ROW-->
+                <div class="fl w-100 cb mt5">
+                  <!-- COMPANY-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <!-- Read-only informations-->
+                    <p class="input input--disabled">Não informada</p>
+                    <input class="input--inline dn" type="text" value="Não informada">
+                    <label>Empresa</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <!-- GENDER-->
+                  <div class="fl w-third ph3 relative inputs--cell input-with-select">
+                    <div class="fl w-100 input--inline--dropdown">
+                      <!-- Read-only informations-->
+                      <p class="fl w-100 b input--disabled pointer">Masculino</p>
+                      <!-- Editable information-->
+                      <div class="fl w-100 input input--inline pointer dn"><span class="db has-icon-right icon-dropdown">Masculino</span></div>
+                      <div class="dropdown content-box">
+                        <label class="dib mt1 lh-copy black-50">Gênero</label>
+                        <ul class="pt0 pb1 pl0">
+                          <li><span>Feminino</span></li>
+                          <li><span>Masculino</span></li>
+                          <li class="input-inside-list">
+                            <label class="black-50 normal">Outro</label>
+                            <input class="input--inline">
+                            <div class="tr">
+                              <button class="mt2 ttu b f8 tracked accent" type="button">confirmar</button>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <label class="label--active">Gênero</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <!-- BIRTHDAY-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <p class="input input--disabled">11/01/1991</p>
+                    <input class="input--inline dn" type="text" value="11/01/1991">
+                    <label>Aniversário</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                </div>
+                <!-- ROW-->
+                <div class="fl w-100 cb mt5">
+                  <!-- CPF/CNPJ-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <p class="input input--disabled">355.098.099-45</p>
+                    <input class="input--inline dn" type="text" value="355.098.099-45">
+                    <label>CPF/CNPJ</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                  <!-- NICKNAME-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <p class="input input--disabled">Mat</p>
+                    <input class="input--inline dn" type="text" value="Mat">
+                    <label>Apelido</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação	</p>
+                  </div>
+                  <!-- GROUPS-->
+                  <div class="fl w-third ph3 relative inputs--cell input-with-select has-dropdown">
+                    <div class="fl w-100 input--inline--dropdown">
+                      <!-- Read-only informations-->
+                      <p class="fl w-100 b input--disabled pointer">Nenhum</p>
+                      <!-- Editable information-->
+                      <div class="fl w-100 input input--inline pointer insert-criteria view-box-close dn"><span class="db has-icon-right icon-dropdown">Nenhum</span></div>
+                      <div class="view-box-open bg-white z-3 o-0">
+                        <div class="dropdown-item-box dropdown dropdown--allows-empty">
+                          <div class="pb3">
+                            <label class="dib mt1 lh-copy black-50">Grupos</label>
+                            <input class="mt2">
+                            <div class="relative pv2">
+                              <div class="checkbox">
+                                <input class="dropdown-checkbox dn" id="group00" type="checkbox" name="operadora" value="Grupo 01" checked>
+                                <input class="dropdown-checkbox" id="group01" type="checkbox" name="operadora" value="Grupo 01">
+                                <label class="f6 b accent-hover relative" for="group01">Grupo 01</label>
+                              </div>
+                            </div>
+                            <div class="relative pv2">
+                              <div class="checkbox">
+                                <input class="dropdown-checkbox" id="group02" type="checkbox" name="campanha" value="Grupo 02">
+                                <label class="f6 b accent-hover relative" for="group02">Grupo 02</label>
+                              </div>
+                            </div>
+                            <div class="relative pv2">
+                              <div class="checkbox">
+                                <input class="dropdown-checkbox" id="group03" type="checkbox" name="cliente" value="Grupo 03">
+                                <label class="f6 b accent-hover relative" for="group03">Grupo 03</label>
+                              </div>
+                            </div>
+                            <div class="relative pv2">
+                              <div class="checkbox">
+                                <input class="dropdown-checkbox" id="group04" type="checkbox" name="subconta" value="Grupo 04">
+                                <label class="f6 b accent-hover relative" for="group04">Grupo 04</label>
+                              </div>
+                            </div>
+                            <div class="relative pv2">
+                              <div class="checkbox">
+                                <input class="dropdown-checkbox" id="group05" type="checkbox" name="usuario" value="Grupo 05">
+                                <label class="f6 b accent-hover relative" for="group05">Grupo 05</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <label class="label--active">Grupos</label>
+                  </div>
+                </div>
+                <!-- ROW-->
+                <div class="fl w-100 cb mt5">
+                  <!-- COMMENTS-->
+                  <div class="fl w-third ph3 relative inputs--cell">
+                    <p class="input input--disabled">Lembrar que essa pessoa é um diretor de uma das nossas maiores investidas. Não mande muitas coisas com frequência.</p>
+                    <textarea class="input input--inline dn f6 lh-copy ba b--black-20 b pa2 mt3 h4">Lembrar que essa pessoa é um diretor de uma das nossas maiores investidas. Não mande muitas coisas com frequência.</textarea>
+                    <label>Comentários</label>
+                    <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- HISTORY-->
+      <div class="fl w-100 mt6">
+        <div class="fl w-100">
+          <div class="fl">
+            <h3 class="theblack f4 lh-solid">Histórico de envio</h3>
+          </div>
+          <button class="fr cta"><span class="has-icon-left icon-download">Download</span></button>
+        </div>
+        <!-- TABLE-->
+        <div class="fl w-100 relative">
+          <div class="w-90 overflow-x-scroll">
+            <table class="mt4 mb4 tl v-top w-100" cellspacing="0" cellpadding="0">
+              <thead class="v-top">
+                <tr class="ttu f8 theblack b tl tracked">
+                  <th class="bb nowrap table-month"><span class="pv2 pr3 db">Month</span></th>
+                  <th class="bb nowrap w-4 table-campaign"><span class="pv2 pr3 db">Campaign</span></th>
+                  <th class="bb nowrap w-4 table-concluded"><span class="pv2 pr3 db">Concluded</span></th>
+                  <th class="bb nowrap w-4 table-scheduled"><span class="pv2 pr3 db">Scheduled</span></th>
+                  <th class="bb nowrap w-4 table-sent"><span class="pv2 pr3 db">Sent</span></th>
+                  <th class="bb nowrap w-4 table-Errors"><span class="pv2 pr3 db">Errors</span></th>
+                  <th class="bb nowrap w-4 table-sending-start"><span class="pv2 pr3 db">Sending start</span></th>
+                  <th class="nowrap table-customer"></th>
+                </tr>
+              </thead>
+              <tbody class="v-top">
+                <tr class="bb relative f6">
+                  <td class="nowrap f6 bb b--black-20 table-month"><span class="db pv4 pr3 lh-solid">December</span></td>
+                  <td class="nowrap f6 bb b--black-20 table-campaign"><span class="db pv4 pr3 lh-solid">Mother's day 2017</span></td>
+                  <td class="nowrap f6 bb b--black-20 table-concluded"><span class="db pv4 pr3 lh-solid">80%</span></td>
+                  <td class="nowrap f6 bb b--black-20 table-scheduled"><span class="db pv4 pr3 lh-solid">9.5 MM</span></td>
+                  <td class="nowrap f6 bb b--black-20 table-sent"><span class="db pv4 pr3 lh-solid">5.5 MM</span></td>
+                  <td class="nowrap f6 bb b--black-20 table-Errors"><span class="db pv4 pr3 lh-solid">2.0 MM</span></td>
+                  <td class="nowrap f6 bb b--black-20 table-sending-start"><span class="db pv4 pr3 lh-solid">24/01/2017 10:28</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <table class="w-10 h-100 mt4 mb4 tl v-top absolute top-0 right-0 bg-white" cellspacing="0" cellpadding="0">
+            <thead class="v-top">
+              <tr class="pv3 b--black bb ttu f8 theblack b tl tracked">
+                <th class="bb pv2 pl3 table-detalhes"><a class="accent" href="javascript:">Ações</a></th>
+              </tr>
+            </thead>
+            <tbody class="v-top">
+              <tr class="bb relative f6">
+                <td class="bb b--black-20 pv4 ph3 table-detalhes left-shadow lh-solid"><a class="accent ttu tracked b f8 has-icon-left icon-eye-blue" href="javascript:" alt="Download">visualizar</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </body>
+  <!-- jQuery-->
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <!-- Filters-->
+  <script src="js/forms.js"></script>
+  <!-- Notifications-->
+  <script src="js/notifs.js"></script>
+  <!-- Modal-->
+  <script src="js/modal.js"></script>
+</html>

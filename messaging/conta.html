@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movile Messaging – Sua conta</title>
+    <meta name="movile-messaging" content="Movile Messaging">
+    <!-- For the charts-->
+    <link href="charts/chartist.min.css" rel="stylesheet">
+    <script src="charts/chartist.min.js" charset="utf-8"></script>
+    <!-- Tachyons CSS-->
+    <link rel="stylesheet" href="stylesheets/tachyons.min.css">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- Typekit-->
+    <script src="https://use.typekit.net/fja4naa.js"></script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+    <style>.table-operadora, .table-subconta, .table-inicio{display:none;}</style>
+  </head>
+  <body>
+    <aside class="fixed fl h-100 bg-sidebar">
+      <div class="bb b--black-10">
+        <div class="pl4 mt4 pb3 w4"><a class="db w-90" href="dashboard.html"><img class="db" src="img/logo-white.png" alt="Logo Movile Messaging"></a></div>
+      </div>
+      <nav class="pl4 mt4">
+        <ul class="list pl0 mt3">
+          <li class="mt3"><a class="white dim f6" href="dashboard.html">Dashboard</a></li>
+          <li class="mt3"><a class="white dim f6" href="novo-envio.html">Novo envio</a></li>
+          <li class="mt3"><a class="white dim f6" href="relatorios-consolidados.html">Relatórios</a></li>
+          <li class="mt3"><a class="white dim f6" href="contatos.html">Contatos</a></li>
+          <li class="mt3"><a class="white dim f6" href="permissoes.html">Permissões</a></li>
+          <li class="mt3"><a class="white dim f6 bb bw1" href="conta.html">Sua conta</a></li>
+          <li class="mt3"><a class="white dim f6" href="">Suporte</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bb b--black-10">
+      <h1 class="f2 fl theblack lh-solid">Sua conta</h1>
+      <div class="fr lh-copy relative">
+        <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray pointer">Notificações</a>
+          <div class="absolute top--1 right--1">
+            <div class="relative"><span class="notification-badge">275</span></div>
+          </div>
+          <!-- NOTIFICATIONS-->
+          <div class="dropdown notifications">
+            <!-- NOTIF HEADER-->
+            <div class="fl w-100 pa3 bb black-20">
+              <button class="mark-all-as-read ttu fr lh-copy pv0 pr0 tracked b f8 main-gray bn bg-white has-icon has-icon-left icon-check--gray outline-0">marcar todas como lidas</button>
+            </div>
+            <!-- NOTIFS BODY-->
+            <div class="fl w-100">
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 can-be-read">está sendo gerado</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><button class="accent bn bg-white fr f8 b ttu tracked">download</button></div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 green bg-lighter-green can-be-read">está pronto</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span>
+                  <button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+                </div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 red bg-lighter-red can-be-read">não foi possível gerar</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><a class="accent bn bg-white fr f8 b ttu tracked" href="notifs.html">ver detalhes</a></div>
+              </div>
+            </div>
+            <!-- NOTIF FOOTER-->
+            <div class="fl w-100 pa3"><a class="ttu fl lh-copy pv0 tracked b f8 accent bn bg-white has-icon has-icon-right icon-arrow-right--blue" href="notifs.html">ver todas as notificações</a></div>
+          </div>
+        </div>
+        <h3 class="f5 b fl has-icon has-icon-right icon-dropdown">NomeDoUsuário</h3>
+      </div>
+    </section>
+    <!-- MAIN CONTENT-->
+    <section class="main-content ph4 pb5 fr">
+      <!-- YOUR INFO-->
+      <div class="fl w-100 mw8">
+        <form class="fl w-100 mt4">
+          <div class="fl">
+            <h3 class="theblack f3 lh-solid">Sobre você</h3>
+          </div>
+          <div class="fl w-100 mt4">
+            <!-- ROW-->
+            <div class="nl3 nr3">
+              <div class="fl w-two-thirds cb mt3">
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text" value="André">
+                  <label>Primeiro nome</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text" value="Matiazzo">
+                  <label>Sobrenome</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+              </div>
+            </div>
+            <!-- ROW-->
+            <div class="nl3 nr3">
+              <div class="fl w-two-thirds cb mt5">
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="email" value="andre.matiazzo@movile.com">
+                  <label>Email</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="tel" value="1999999999" id="telefone" max-length="15">
+                  <label>Telefone</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- CHANGE PASSWORD-->
+      <div class="fl w-100 mt6 mw8 sent-permissions">
+        <form class="fl w-100 pb4">
+          <div class="fl">
+            <h3 class="theblack f3 lh-solid">Alterar senha?</h3>
+            <p class="mt2 main-gray lh-copy measure-narrow">Sua senha ter no mínimo 6 dígitos e ser composta por números e letras</p>
+          </div>
+          <div class="fl w-100 mt4">
+            <!-- ROW-->
+            <div class="nl3 nr3">
+              <div class="fl w-two-thirds cb mt3">
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>Nova senha</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>Confirmar nova senha</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- SEND INVITES-->
+      <div class="fl w-100 mw8">
+        <div class="fl w-two-thirds ph3">
+          <button class="dib fr mt4 cta cta-accent"><span class="has-icon-left icon-check--white">salvar</span></button>
+        </div>
+      </div>
+    </section>
+  </body>
+  <!-- jQuery-->
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <!-- Filters-->
+  <script src="js/forms.js"></script>
+  <!-- Notifications-->
+  <script src="js/notifs.js"></script>
+  <!-- Phone mask-->
+  <script src="js/phone-mask.js"></script>
+</html>

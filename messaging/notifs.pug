@@ -1,0 +1,255 @@
+doctype html
+html(lang='pt-br')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='x-ua-compatible', content='ie=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Movile Messaging – Notificações
+        meta(name='movile-messaging', content='Movile Messaging')
+        // Tachyons CSS
+        link(rel='stylesheet', href='stylesheets/tachyons.min.css')
+        // Main CSS
+        link(rel='stylesheet', href='stylesheets/main.css')
+        // Typekit
+        script(src='https://use.typekit.net/fja4naa.js')
+        script.
+            try{Typekit.load({ async: false });}catch(e){}
+    body
+        aside.fixed.fl.h-100.bg-sidebar
+            .bb.b--black-10
+                .pl4.mt4.pb3.w4
+                    a(href="dashboard.html").db.w-90
+                        img.db(src='img/logo-white.png', alt='Logo Movile Messaging')
+            nav.pl4.mt4
+                ul.list.pl0.mt3
+                    li.mt3
+                        a.white.dim.f6(href='dashboard.html') Dashboard
+                    li.mt3
+                        a.white.dim.f6(href='novo-envio.html') Novo envio
+                    li.mt3
+                        a.white.dim.f6(href='relatorios-consolidados.html') Relatórios
+                    li.mt3
+                        a.white.dim.f6(href='contatos.html') Contatos
+                    li.mt3
+                        a.white.dim.f6(href='permissoes.html') Permissões
+                    li.mt3
+                        a.white.dim.f6(href='conta.html') Sua conta
+                    li.mt3
+                        a.white.dim.f6(href='') Suporte
+        section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
+            h1.f2.fl.theblack.lh-solid Notificações
+            .fr.lh-copy.relative
+                .relative.mr4.fl
+                    a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray.pointer Notificações
+                    .absolute.top--1.right--1
+                        .relative
+                            span.notification-badge 275
+                    // NOTIFICATIONS
+                    .dropdown.notifications
+                        // NOTIF HEADER
+                        .fl.w-100.pa3.bb.black-20
+                            button.mark-all-as-read.ttu.fr.lh-copy.pv0.pr0.tracked.b.f8.main-gray.bn.bg-white.has-icon.has-icon-left.icon-check--gray.outline-0 marcar todas como lidas
+                        // NOTIFS BODY
+                        .fl.w-100
+                            // NOTIF ITEM
+                            .notif__item.bb.black-20.pa3.fl.w-100
+                                .notif__icon.w1.fl
+                                    img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+                                .w-90.fl.pl3
+                                    .notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+                                        span.dib.bg-lightest-gray.pa1.can-be-read está sendo gerado
+                                    h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+                                    p.notif__date.f6.mt0.can-be-read
+                                        | Requerido às 
+                                        span.notif__hour 17h20
+                                        | , em 
+                                        span.notif__day 17/08/16
+                                .fl.w-100.pl4.notif__actions.mt3
+                                    span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+                                    <button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+                            // NOTIF ITEM
+                            .notif__item.bb.black-20.pa3.fl.w-100
+                                .notif__icon.w1.fl
+                                    img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+                                .w-90.fl.pl3
+                                    .notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+                                        span.dib.bg-lightest-gray.pa1.green.bg-lighter-green.can-be-read está pronto
+                                    h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+                                    p.notif__date.f6.mt0.can-be-read
+                                        | Requerido às 
+                                        span.notif__hour 17h20
+                                        | , em 
+                                        span.notif__day 17/08/16
+                                .fl.w-100.pl4.notif__actions.mt3
+                                    span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+                                    button.accent.bn.bg-white.fr.f8.b.ttu.tracked download
+                            // NOTIF ITEM
+                            .notif__item.bb.black-20.pa3.fl.w-100
+                                .notif__icon.w1.fl
+                                    img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+                                .w-90.fl.pl3
+                                    .notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+                                        span.dib.bg-lightest-gray.pa1.red.bg-lighter-red.can-be-read não foi possível gerar
+                                    h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+                                    p.notif__date.f6.mt0.can-be-read
+                                        | Requerido às 
+                                        span.notif__hour 17h20
+                                        | , em 
+                                        span.notif__day 17/08/16
+                                .fl.w-100.pl4.notif__actions.mt3
+                                    span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+                                    a.accent.bn.bg-white.fr.f8.b.ttu.tracked(href='notifs.html')
+                                        | ver detalhes
+                        // NOTIF FOOTER
+                        .fl.w-100.pa3
+                            a.ttu.fl.lh-copy.pv0.tracked.b.f8.accent.bn.bg-white.has-icon.has-icon-right.icon-arrow-right--blue(href='notifs.html')
+                                | ver todas as notificações
+                h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
+        // MAIN CONTENT
+        section.main-content.ph4.pb5.fr
+            a.pa0.bn.bg-white.dib.mt4.fl(onclick='goBack()')
+                span.ttu.b.tracked.f7.accent.has-icon.has-icon-left.icon-arrow-left--blue voltar
+            .notifications__container.mt3.mw7.fl.w-100.cb
+                .fl.w-100
+                    // NOTIF ITEM
+                    .notif__item.bb.black-20.pv3.fl.w-100
+                        .notif__icon.w1.fl
+                            img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+                        .w-90.fl.pl3
+                            .notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+                                span.dib.bg-lightest-gray.pa1.can-be-read está sendo gerado
+                            h1.notif__title.theblack.lh-copy.f5.mt1.can-be-read Relatório consolidado
+                            p.notif__date.f6.mt0.can-be-read
+                                | Requerido às 
+                                span.notif__hour 17h20
+                                | , em 
+                                span.notif__day 17/08/16
+                        .fl.w-100.pl4.notif__actions.mt3
+                            span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+                            // <button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+                        // REPORT DETAILS
+                        .fl.w-100.pl4.mt3
+                            .w-100
+                                a.details__trigger.pa0.dib.outline-0.lh-solid.f8.accent.ttu.tracked.b
+                                    span.has-icon.has-icon-right.icon-dropdown__blue detalhes
+                                .details__list.fl.w-100.mt2.dn
+                                    ul.fl.w-50.list.pl0.f6.lh-title
+                                        li.main-gray.mt2
+                                            span.b Período: 
+                                            | 01 Jan – 31 Mar de 2016
+                                        li.main-gray.mt2
+                                            span.b Tipo de relatório: 
+                                            | Envios consolidados
+                                        li.main-gray.mt2
+                                            span.b Subconta: 
+                                            | Todas subcontas
+                                        li.main-gray.mt2
+                                            span.b Usuários: 
+                                            | Todos usuários
+                                    ul.fl.w-50.list.pl0.f6.lh-title
+                                        li.main-gray.mt2
+                                            span.b Campanha, lote ou número: 
+                                            | Carnaval 2014
+                                        li.main-gray.mt2
+                                            span.b Operadoras: 
+                                            | Todas operadoras
+                                        li.main-gray.mt2
+                                            span.b Subconta: 
+                                            | Todas subcontas
+                                        li.main-gray.mt2
+                                            span.b Status das mensagens: 
+                                            | Todos status
+                    // NOTIF ITEM
+                    .notif__item.bb.black-20.pv3.fl.w-100.relative
+                        .notif__actions--details.absolute.right-0.top-0
+                            a.cta.dib.mt3
+                                span download
+                        .notif__icon.w1.fl
+                            img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+                        .w-90.fl.pl3
+                            .notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+                                span.dib.bg-lightest-gray.pa1.green.bg-lighter-green.can-be-read está pronto
+                            h1.notif__title.theblack.lh-copy.f5.mt1.can-be-read Relatório consolidado
+                            p.notif__date.f6.mt0.can-be-read
+                                | Requerido às 
+                                span.notif__hour 17h20
+                                | , em 
+                                span.notif__day 17/08/16
+                        .fl.w-100.pl4.notif__actions.mt3
+                            span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+                            // <button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+                    // NOTIF ITEM
+                    .notif__item.bb.black-20.pv3.fl.w-100
+                        .notif__icon.w1.fl
+                            img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+                        .w-90.fl.pl3
+                            .notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+                                span.dib.bg-lightest-gray.pa1.red.bg-lighter-red.can-be-read não foi possível gerar
+                            h1.notif__title.theblack.lh-copy.f5.mt1.can-be-read Relatório consolidado
+                            p.notif__date.f6.mt0.can-be-read
+                                | Requerido às 
+                                span.notif__hour 17h20
+                                | , em 
+                                span.notif__day 17/08/16
+                        .fl.w-100.pl4.notif__actions.mt3
+                            span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+                            //
+                                <a href="notifs.html" class="accent bn bg-white fr f8 b ttu tracked">ver detalhes
+                                </a href="notifs.html">
+                    // NOTIF ITEM
+                    .notif__item.bb.black-20.pv3.fl.w-100
+                        .notif__icon.w1.fl
+                            img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+                        .w-90.fl.pl3
+                            .notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+                                span.dib.bg-lightest-gray.pa1.can-be-read está sendo gerado
+                            h1.notif__title.theblack.lh-copy.f5.mt1.can-be-read Relatório consolidado
+                            p.notif__date.f6.mt0.can-be-read
+                                | Requerido às 
+                                span.notif__hour 17h20
+                                | , em 
+                                span.notif__day 17/08/16
+                        .fl.w-100.pl4.notif__actions.mt3
+                            span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+                            // <button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+                        // REPORT DETAILS
+                        .fl.w-100.pl4.mt3
+                            .w-100
+                                a.details__trigger.pa0.dib.outline-0.lh-solid.f8.accent.ttu.tracked.b
+                                    span.has-icon.has-icon-right.icon-dropdown__blue detalhes
+                                .details__list.fl.w-100.mt2.dn
+                                    ul.fl.w-50.list.pl0.f6.lh-title
+                                        li.main-gray.mt2
+                                            span.b Período: 
+                                            | 01 Jan – 31 Mar de 2016
+                                        li.main-gray.mt2
+                                            span.b Tipo de relatório: 
+                                            | Envios consolidados
+                                        li.main-gray.mt2
+                                            span.b Subconta: 
+                                            | Todas subcontas
+                                        li.main-gray.mt2
+                                            span.b Usuários: 
+                                            | Todos usuários
+                                    ul.fl.w-50.list.pl0.f6.lh-title
+                                        li.main-gray.mt2
+                                            span.b Campanha, lote ou número: 
+                                            | Carnaval 2014
+                                        li.main-gray.mt2
+                                            span.b Operadoras: 
+                                            | Todas operadoras
+                                        li.main-gray.mt2
+                                            span.b Subconta: 
+                                            | Todas subcontas
+                                        li.main-gray.mt2
+                                            span.b Status das mensagens: 
+                                            | Todos status
+    // jQuery
+    script(src='js/jquery-3.1.0.min.js')
+    script(src='js/forms.js')
+    // Notifications
+    script(src='js/notifs.js')
+    script.
+        function goBack() {
+        window.history.back();
+        }

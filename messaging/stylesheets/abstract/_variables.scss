@@ -1,13 +1,19 @@
 // COLORS
 $accent: #84ADFF;
+$lighter-accent: #F0F5FF;
+.bg-lighter-accent {background-color: #F0F5FF}
+.bg-medium-accent {background-color: #E0EAFF}
+.bg-darker-accent {background-color: #566fa5}
 .accent-hover:hover {color: $accent}
 .accent {color: $accent}
 $accent-hover: #E0EAFF;
 $accent-pressed: #5a6f9a;
-$main-gray: #A2B7C1;
-$lighter-gray: rgba(55,71,79,0.18);
-.lighter-gray{color:$lighter-gray}
-.bg-lighter-gray{background-color:$lighter-gray}
+.bg-accent {background-color: $accent}
+$main-gray: #7C99A7;
+.main-gray{color: $main-gray}
+// rgba(0,0,0,0.2): #DCDEE0;
+// .black-20{color:rgba(0,0,0,0.2)}
+// .bg-black-20{background-color:rgba(0,0,0,0.2)}
 // $lightest-gray: rgba(55,71,79,0.06);
 // not using alpha color because the calendar picker stays over the filter__container background and 2 alphas overlapping are creating a new color 12% black;
 $lightest-gray: #F3F4F5;
@@ -20,14 +26,132 @@ $blue-gray:#7C99A7;
 $theblack: #37474F;
 .theblack{color:$theblack}
 .bg-theblack{background-color:$theblack}
-$green: #00E676;
+$green: #00DD72;
 .green{color:$green}
 .bg-green{background-color:$green}
+$lighter-green: #E0FBEE;
+.lighter-green {color: $lighter-green}
+.bg-lighter-green {background-color: $lighter-green}
 $red: rgba(255,0,80,0.5);
 .red{color:$red}
+$lighter-red: #FFE0EA;
+.lighter-red {color: $lighter-red}
 .bg-red{background-color:$red}
+.bg-lighter-red {background-color: $lighter-red}
 $sidebar: #6B84B6;
+.sidebar {color: $sidebar}
+.bg-sidebar {background-color: $sidebar}
 $sidebar-border: #576E95;
 $ice-white: #F3F9FF;
+// .ice-white {color: $ice-white;}
 $alert: rgba(255,0,80,0.5);
-$success: #BCFDD4;
+$success: #61FFB2;
+.bg-success {background-color: $success};
+.black {color: #37474F};
+
+.transition {
+	@include transition (0.2s);
+}
+
+.transition-slow {
+	@include transition (1s);
+}
+
+.shadow-0 { box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1); }
+
+.mta {margin-top: auto;}
+
+.hover-card {
+	@include transition (0.4s);
+	&.hover-card--link {
+		&:hover {
+			border-color: $accent;
+			@include transition (0.4s);
+		}
+	}
+}
+
+.card--blacklist {
+	border: 1px solid $theblack;
+	position: relative;
+	&:after {
+		content: 'BLACKLIST';
+		position: absolute;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		font-size: 10px;
+		font-weight: bold;
+		letter-spacing: 0.1rem;
+		color: $theblack;
+		background: #fff;
+		top: -10px;
+		left: 10px;
+		transition: all ease 0.4s;
+	}
+	&:hover:after{
+		transition: all ease 0.4s;
+		color: $accent;
+	}
+}
+
+.contact-name {
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 0;
+		height: 2px;
+		margin-top: 1.25rem;
+		background: black;
+		@include transition (1s);
+	}
+	&:after {
+		position: absolute;
+		opacity: 0;
+		top: 0.25rem;
+		left: 105%;
+		content: "blacklist";
+		letter-spacing: .1em;
+		line-height: 1.25;
+		font-size: .75rem;
+		text-transform: uppercase;
+		padding: .5rem 1rem;
+		color: #fff;
+		background-color: $theblack;
+		@include transition (0.5s);
+	}
+}
+
+.contact--blacklist {
+	&:before {
+		width: 100%;
+		@include transition (0.5s);
+		// transform-origin: center left;
+		// animation: strikethrough--in 1s 0s cubic-bezier(.55, 0, .1, 1) 1;
+		// transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+		// -webkit-animation-fill-mode: forwards;
+	}
+	&:after {
+		// animation: blacklist-label--in 1s 1s cubic-bezier(.55, 0, .1, 1) 1;
+		// transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+		// -webkit-animation-fill-mode: forwards;
+		opacity: 1;
+		@include transition (1s);
+	}
+}
+
+@keyframes blacklist-label--in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+// EXTRA-LARGE MEDIA QUERY
+@media screen and (min-width: 90em) {
+	.w-25-xl {width: 25%;}
+	.w-third-xl {width: 33.33333%;}
+}

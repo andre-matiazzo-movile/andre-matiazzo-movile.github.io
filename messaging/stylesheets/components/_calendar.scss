@@ -43,15 +43,15 @@
 }
 
 .comiseo-daterangepicker-triggerbutton.ui-button {
-	// float: right;
+	float: right;
 	position: relative;
-	padding: 12px 20px;
+	padding: 0 20px;
 	// margin: 12px 12px;
 	font-family: $base-font;
-	font-size: 1em;
+	font-size: .875rem;
 	font-weight: 800;
 	color: #84ADFF;
-	background-color: $lightest-gray;
+	background-color: #F0F5FF;
 	border: none;
 	border-radius: 0;
 	min-width: 1em;
@@ -89,7 +89,8 @@
 
 .ui-widget.ui-widget-content {
 	border-color: #DCDEE0;
-	border-color: $lighter-gray;
+	border-color: rgba(0,0,0,0.2);
+	top: 160px !important;
 }
 
 .comiseo-daterangepicker-presets {
@@ -105,7 +106,7 @@
 .comiseo-daterangepicker-left .comiseo-daterangepicker-presets,
 .comiseo-daterangepicker-right .comiseo-daterangepicker-presets {
 	padding: 0;
-	border-bottom: 1px solid $lighter-gray;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
 	padding-bottom: 18px;
 }
 
@@ -201,7 +202,7 @@
 }
 
 .comiseo-daterangepicker-main + .ui-helper-clearfix {
-	border-top: 1px solid $lighter-gray;
+	border-top: 1px solid rgba(0,0,0,0.2);
 }
 
 .comiseo-daterangepicker-left .comiseo-daterangepicker-buttonpanel > button,
@@ -233,7 +234,7 @@
 }
 
 td.ui-state-disabled span {
-	color: $lighter-gray;
+	color: rgba(0,0,0,0.2);
 }
 
 @media (max-width: 1100px) {

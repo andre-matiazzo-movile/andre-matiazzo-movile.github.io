@@ -1,0 +1,384 @@
+doctype html
+html(lang='pt-br')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Movile Messaging – Permissões
+		meta(name='movile-messaging', content='Movile Messaging')
+		// For the charts
+		link(href='charts/chartist.min.css', rel='stylesheet')
+		script(src='charts/chartist.min.js', charset='utf-8')
+		// Tachyons CSS
+		link(rel='stylesheet', href='stylesheets/tachyons.min.css')
+		// Main CSS
+		link(rel='stylesheet', href='stylesheets/main.css')
+		// Typekit
+		script(src='https://use.typekit.net/fja4naa.js')
+		script.
+			try{Typekit.load({ async: false });}catch(e){}
+		style.
+			.table-operadora, .table-subconta, .table-inicio{display:none;}
+	body
+		aside.fixed.fl.h-100.bg-sidebar
+			.bb.b--black-10
+				.pl4.mt4.pb3.w4
+					a(href="dashboard.html").db.w-90
+						img.db(src='img/logo-white.png', alt='Logo Movile Messaging')
+			nav.pl4.mt4
+				ul.list.pl0.mt3
+					li.mt3
+						a.white.dim.f6(href='dashboard.html') Dashboard
+					li.mt3
+						a.white.dim.f6(href='novo-envio.html') Novo envio
+					li.mt3
+						a.white.dim.f6(href='relatorios-consolidados.html') Relatórios
+					li.mt3
+						a.white.dim.f6(href='contatos.html') Contatos
+					li.mt3
+						a.white.dim.f6.bb.bw1(href='permissoes.html') Permissões
+					li.mt3
+						a.white.dim.f6(href='conta.html') Sua conta
+					li.mt3
+						a.white.dim.f6(href='') Suporte
+		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
+			h1.f2.fl.theblack.lh-solid Permissões
+			.fr.lh-copy.relative
+				.relative.mr4.fl
+					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray.pointer Notificações
+					.absolute.top--1.right--1
+						.relative
+							span.notification-badge 275
+					// NOTIFICATIONS
+					.dropdown.notifications
+						// NOTIF HEADER
+						.fl.w-100.pa3.bb.black-20
+							button.mark-all-as-read.ttu.fr.lh-copy.pv0.pr0.tracked.b.f8.main-gray.bn.bg-white.has-icon.has-icon-left.icon-check--gray.outline-0 marcar todas como lidas
+						// NOTIFS BODY
+						.fl.w-100
+							// NOTIF ITEM
+							.notif__item.bb.black-20.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.can-be-read está sendo gerado
+									h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									<button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+							// NOTIF ITEM
+							.notif__item.bb.black-20.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.green.bg-lighter-green.can-be-read está pronto
+									h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									button.accent.bn.bg-white.fr.f8.b.ttu.tracked download
+							// NOTIF ITEM
+							.notif__item.bb.black-20.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.red.bg-lighter-red.can-be-read não foi possível gerar
+									h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									a.accent.bn.bg-white.fr.f8.b.ttu.tracked(href='notifs.html')
+										| ver detalhes
+						// NOTIF FOOTER
+						.fl.w-100.pa3
+							a.ttu.fl.lh-copy.pv0.tracked.b.f8.accent.bn.bg-white.has-icon.has-icon-right.icon-arrow-right--blue(href='notifs.html')
+								| ver todas as notificações
+				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
+		// MAIN CONTENT
+		section.main-content.ph4.pb5.fr
+			// NEW PERMISSIONS
+			div.fl.w-100
+				form.fl.w-100.mt4
+					div.fl
+						h3.theblack.f3.lh-solid Novas permissões
+					// ANALYSTS
+					div.fl.w-100.mt4.cb.mw8
+						h4.theblack.f5.lh-title Para analistas
+						p.mt2.main-gray.lh-copy.measure Pessoas que fazem envios das mensagens e conseguem ver apenas informações de envios da sua área
+						// ROW
+						.nl3.nr3
+							div.fl.w-two-thirds.cb.mt4
+								.fl.w-50.ph3.relative
+									input.input--inline(type='email')
+									label Email
+									p.f7.mt2.tr.black-20.input__validation Validação
+								.fl.w-50.ph3.relative
+									input.input--inline(type='text')
+									label Nome
+									p.f7.mt2.tr.black-20.input__validation Validação
+						// ROW
+						.nl3.nr3
+							div.fl.w-two-thirds.cb.mt4
+								.fl.w-50.ph3.relative
+									div.input.input--inline.input--inline--dropdown.has-icon.has-icon-right.icon-dropdown
+										span Área 51
+									label.label--active Área
+									.dropdown.content-box
+										label.dib.mt1.lh-copy Área
+										ul.pt0.pb1.pl0
+											li
+												span Área 51
+											li
+												span Nayara Rodrigues
+											li
+												span Neto Andrade
+											li
+												span Hudson Souza
+											li
+												span Edson Koji
+											li
+												span Henrique Perticarati
+											li
+												span Juliana Gaspari
+								.fl.w-50.ph3.relative
+									input.input--inline(type='text')
+									label Nome
+									p.f7.mt2.tr.black-20.input__validation Validação
+						// ROW
+						.nl3.nr3
+							div.fl.w-two-thirds.cb.mt4
+								.fl.w-50.ph3.relative
+									input.input--inline(type='email')
+									label Email
+									p.f7.mt2.tr.black-20.input__validation Validação
+								.fl.w-50.ph3.relative
+									input.input--inline(type='text')
+									label Nome
+									p.f7.mt2.tr.black-20.input__validation Validação
+						
+					// MANAGERS
+					div.fl.w-100.mt5.mw8
+						h4.theblack.f5.lh-title Para outros gerentes
+						p.mt2.main-gray.lh-copy.measure Pessoas que terão acesso ao mesmo tipo de informação que você: convidar outros gerentes, convidar outros analistas e visualizar todas as informações da sua área
+						// ROW
+						.nl3.nr3
+							div.fl.w-two-thirds.cb.mt4
+								.fl.w-50.ph3.relative
+									input.input--inline(type='email')
+									label Email
+									p.f7.mt2.tr.black-20.input__validation Validação
+								.fl.w-50.ph3.relative
+									input.input--inline(type='text')
+									label Nome
+									p.f7.mt2.tr.black-20.input__validation Validação
+					// SEND INVITES
+					div.fl.w-100.mw8
+						div.fl.w-two-thirds.mt5.ph3
+							button.dib.fr.cta.cta-accent
+								span.has-icon-right.icon-continue enviar convites
+			// SENT PERMISSIONS
+			div.fl.w-100.mt6.sent-permissions
+				form.fl.w-100.pb4.mw8
+					div.fl
+						h3.theblack.f3.lh-solid Permissões criadas
+					// ANALYSTS
+					div.fl.w-100.mt4
+						h4.theblack.f5.lh-title Para analistas
+						p.mt2.main-gray.lh-copy.measure Pessoas que fazem envios das mensagens e conseguem ver apenas informações de envios da sua área
+						div.fl.w-100.mt3
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs-infos.inputs-infos__line.transition
+								.fl.w-two-thirds
+									.nl3.nr3
+										.fl.w-50.ph3.relative.inputs--cell
+											p.input.input--disabled andre.matiazzo@movile.com
+											input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+											label Email
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+										.fl.w-50.ph3.relative.inputs--cell
+											p.input.input--disabled André Matiazzo
+											input.input--inline.dn(type='text' value='André Matiazzo')
+											label Nome
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									span.bn.bg-white.f6.b.black-20.dib.mr3 Convite pendente
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.mr3.input--edit(type='button') editar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--send-again(type='button') reenviar
+									button.pa0.bn.bg-white.pointer.main-gray.ttu.tracked.f7.b.mr3.input--cancel.dn(type='button') cancelar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.input--confirm.dn(type='button') salvar
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs-infos.inputs-infos__line
+								.fl.w-two-thirds
+									.nl3.nr3
+										.fl.w-50.ph3.relative
+											p.input.input--disabled andre.matiazzo@movile.com
+											input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+											label Email
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+										.fl.w-50.ph3.relative
+											p.input.input--disabled André Matiazzo
+											input.input--inline.dn(type='text' value='André Matiazzo')
+											label Nome
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									span.bn.bg-white.f6.b.black-20.dib.mr3 Convite pendente
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.mr3.input--edit(type='button') editar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--send-again(type='button') reenviar
+									button.pa0.bn.bg-white.pointer.main-gray.ttu.tracked.f7.b.mr3.input--cancel.dn(type='button') cancelar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.input--confirm.dn(type='button') salvar
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs-infos.inputs-infos__line
+								.fl.w-two-thirds
+									.nl3.nr3
+										.fl.w-50.ph3.relative
+											p.input.input--disabled andre.matiazzo@movile.com
+											input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+											label Email
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+										.fl.w-50.ph3.relative
+											p.input.input--disabled André Matiazzo
+											input.input--inline.dn(type='text' value='André Matiazzo')
+											label Nome
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--delete(type='button') remover
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs-infos.inputs-infos__line
+								.fl.w-two-thirds
+									.nl3.nr3
+										.fl.w-50.ph3.relative
+											p.input.input--disabled andre.matiazzo@movile.com
+											input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+											label Email
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+										.fl.w-50.ph3.relative
+											p.input.input--disabled André Matiazzo
+											input.input--inline.dn(type='text' value='André Matiazzo')
+											label Nome
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--delete(type='button') remover
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs-infos.inputs-infos__line
+								.fl.w-two-thirds
+									.nl3.nr3
+										.fl.w-50.ph3.relative
+											p.input.input--disabled andre.matiazzo@movile.br
+											input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+											label Email
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+										.fl.w-50.ph3.relative
+											p.input.input--disabled André Matiazzo
+											input.input--inline.dn(type='text' value='André Matiazzo')
+											label Nome
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--delete(type='button') remover
+					// MANAGERS
+					div.fl.w-100.mt5
+						h4.theblack.f5.lh-title Para outros gerentes
+						p.mt2.main-gray.lh-copy.measure Pessoas que terão acesso ao mesmo tipo de informação que você: convidar outros gerentes, convidar outros analistas e visualizar todas as informações da sua área
+						div.fl.w-100.mt3
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs-infos.inputs-infos__line
+								.fl.w-two-thirds
+									.nl3.nr3
+										.fl.w-50.ph3.relative
+											p.input.input--disabled andre.matiazzo@movile.com
+											input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+											label Email
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+										.fl.w-50.ph3.relative
+											p.input.input--disabled André Matiazzo
+											input.input--inline.dn(type='text' value='André Matiazzo')
+											label Nome
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									span.bn.bg-white.f6.b.black-20.dib.mr3 Convite pendente
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.mr3.input--edit(type='button') editar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--send-again(type='button') reenviar
+									button.pa0.bn.bg-white.pointer.main-gray.ttu.tracked.f7.b.mr3.input--cancel.dn(type='button') cancelar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.input--confirm.dn(type='button') salvar
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs-infos.inputs-infos__line
+								.fl.w-two-thirds
+									.nl3.nr3
+										.fl.w-50.ph3.relative
+											p.input.input--disabled andre.matiazzo@movile.com
+											input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+											label Email
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+										.fl.w-50.ph3.relative
+											p.input.input--disabled André Matiazzo
+											input.input--inline.dn(type='text' value='André Matiazzo')
+											label Nome
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									span.bn.bg-white.f6.b.black-20.dib.mr3 Convite pendente
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.mr3.input--edit(type='button') editar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--send-again(type='button') reenviar
+									button.pa0.bn.bg-white.pointer.main-gray.ttu.tracked.f7.b.mr3.input--cancel.dn(type='button') cancelar
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.input--confirm.dn(type='button') salvar
+							// ROW
+							div.fl.w-100.cb.mt4.bb.b--black-20.inputs-infos.inputs-infos__line
+								.fl.w-two-thirds
+									.nl3.nr3
+										.fl.w-50.ph3.relative
+											p.input.input--disabled andre.matiazzo@movile.com
+											input.input--inline.dn(type='email' value='andre.matiazzo@movile.com')
+											label Email
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+										.fl.w-50.ph3.relative
+											p.input.input--disabled André Matiazzo
+											input.input--inline.dn(type='text' value='André Matiazzo')
+											label Nome
+											p.f7.mt2.tr.black-20.input__validation.dn Validação
+								.fl.w-third.relative.mt3.pl3.pb2.tr
+									button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.dib.input--delete(type='button') remover
+		// MODAL BOILERPLATE
+		div.dn.modal.bg-black-50.fixed.vh-100.left-0.right-0.o-0.z-5
+			// ARE YOU SURE?
+			.modal__body.modal--delete.bg-white.w-auto.mw6.center.mt6.pt4.ph4.dn
+				//- button.close-modal.pa0.bn.bg-white.accent.ttu.tracked.b.f7.lh-copy.has-icon-left.icon-close-blue.db fechar
+				div
+					h2.f4 Quer remover essa permissão?
+					div.mt4.pb4.tr
+						button.pa0.bn.bg-white.pointer.main-gray.ttu.tracked.f7.b.mr3.close-modal(type='button') cancelar
+						button.pa0.bn.bg-white.pointer.accent.ttu.tracked.f7.b.input--yes-delete(type='button') sim, remover
+						
+	// jQuery
+	script(src='js/jquery-3.1.0.min.js')
+	script.
+		$('.dropdown-checkbox').click(function() {
+			var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
+			if (length == 0) {
+				$(this).prop('checked', true);
+			}
+			var selected = $('.dropdown-checkbox:checked').map(function() {
+			    return this.value;
+			}).get().join(', ');
+			$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
+		});
+
+	// Filters
+	script(src='js/forms.js')
+	// Notifications
+	script(src='js/notifs.js')
+	// Modal
+	script(src='js/modal.js')

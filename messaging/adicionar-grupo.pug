@@ -1,0 +1,188 @@
+doctype html
+html(lang='pt-br')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Movile Messaging – Contatos
+		meta(name='movile-messaging', content='Movile Messaging')
+		// For the charts
+		link(href='charts/chartist.min.css', rel='stylesheet')
+		script(src='charts/chartist.min.js', charset='utf-8')
+		// Tachyons CSS
+		link(rel='stylesheet', href='stylesheets/tachyons.min.css')
+		// Main CSS
+		link(rel='stylesheet', href='stylesheets/main.css')
+		// Typekit
+		script(src='https://use.typekit.net/fja4naa.js')
+		script.
+			try{Typekit.load({ async: false });}catch(e){}
+		style.
+			.table-operadora, .table-subconta, .table-inicio{display:none;}
+	body
+		aside.fixed.fl.h-100.bg-sidebar
+			.bb.b--black-10
+				.pl4.mt4.pb3.w4
+					a(href="dashboard.html").db.w-90
+						img.db(src='img/logo-white.png', alt='Logo Movile Messaging')
+			nav.pl4.mt4
+				ul.list.pl0.mt3
+					li.mt3
+						a.white.dim.f6(href='dashboard.html') Dashboard
+					li.mt3
+						a.white.dim.f6(href='novo-envio.html') Novo envio
+					li.mt3
+						a.white.dim.f6(href='relatorios-consolidados.html') Relatórios
+					li.mt3
+						a.white.dim.f6.bb.bw1(href='contatos.html') Contatos
+					li.mt3
+						a.white.dim.f6(href='permissoes.html') Permissões
+					li.mt3
+						a.white.dim.f6(href='conta.html') Sua conta
+					li.mt3
+						a.white.dim.f6(href='') Suporte
+		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
+			h1.f2.fl.theblack.lh-solid Contatos
+			.fr.lh-copy.relative
+				.relative.mr4.fl
+					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray.pointer Notificações
+					.absolute.top--1.right--1
+						.relative
+							span.notification-badge 275
+					// NOTIFICATIONS
+					.dropdown.notifications
+						// NOTIF HEADER
+						.fl.w-100.pa3.bb.black-20
+							button.mark-all-as-read.ttu.fr.lh-copy.pv0.pr0.tracked.b.f8.main-gray.bn.bg-white.has-icon.has-icon-left.icon-check--gray.outline-0 marcar todas como lidas
+						// NOTIFS BODY
+						.fl.w-100
+							// NOTIF ITEM
+							.notif__item.bb.black-20.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.can-be-read está sendo gerado
+									h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									<button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+							// NOTIF ITEM
+							.notif__item.bb.black-20.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.green.bg-lighter-green.can-be-read está pronto
+									h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									button.accent.bn.bg-white.fr.f8.b.ttu.tracked download
+							// NOTIF ITEM
+							.notif__item.bb.black-20.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.red.bg-lighter-red.can-be-read não foi possível gerar
+									h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									a.accent.bn.bg-white.fr.f8.b.ttu.tracked(href='notifs.html')
+										| ver detalhes
+						// NOTIF FOOTER
+						.fl.w-100.pa3
+							a.ttu.fl.lh-copy.pv0.tracked.b.f8.accent.bn.bg-white.has-icon.has-icon-right.icon-arrow-right--blue(href='notifs.html')
+								| ver todas as notificações
+				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
+		// MAIN CONTENT
+		section.main-content.ph4.fr
+			a.pa0.bn.bg-white.dib.mt4.nl3.fl(href='javascript:history.back()')
+				span.ttu.b.tracked.f7.accent.has-icon.has-icon-left.icon-arrow-left--blue voltar
+			// INFOS
+			div.fl.w-100
+				div.fl.w-100.pt4.mw8(style='min-height:400px;')
+					h3.fl.black.f3.lh-solid Adicionar grupo
+					p.fl.cb.main-gray.mt4.pb2 * Campos obrigatórios
+					.fl.w-100.mt4.cl
+						// ROW
+						.fl.w-100
+							.fl.w-50.pr5
+								.nl3.nr3
+									.fl.w-100.relative.ph3
+										input.input--inline(type='email' autofocus)
+										label Nome do grupo*
+										p.f7.mt2.tr.black-20.input__validation Validação
+						// ROW
+						// SEARCH AND IMPORT CONTAINER
+						.fl.w-100.mt5
+							// SEARCH
+							.fl.w-50.search-input.transition.pr5
+								.fl.w-100.relative
+									label.f6.black.lh-copy Busque por Contatos cadastrados
+									.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input-envio.bg-search
+										p.dib
+									.dropdown.dropdown--multiple-lists.content-box.nl3.nr3
+										label.black-50.f6.lh-copy.black Busque por Contatos cadastrados
+										input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title.bg-search(type='search')
+										div.fl.w-50.mt3.ml4.pb3.pl3
+											span.main-gray.db.f6 Últimos adicionados
+										div.fl.w-100.multiple-lists__container.theblack
+											div.fl.w-100.gruposecontatos.contatos-lista(data-origin='contatos-lista')
+												ul.pt0.pb1.pl3.ml4
+													li
+														span.b(data-id='1') Bruno Farias
+													li
+														span.b(data-id='2') Nayara Rodrigues
+								p.fl.warning.dn.main-gray.lh-copy.mt2 Ao importar de um arquivo, você não pode inserir contatos manualmente
+								a(href='javascript:').dn.fl.f7.ttu.tracked.b.accent.pointer.clear-all.mb3.mt4 Limpar todos
+								ul.fl.cb.list.pl0.contatos
+							.fl.w-50.pl5.choose-file.transition
+								div.fl
+									label.fl.f6.black.lh-copy Ou importe de um arquivo
+									form#form-choose-file
+										input.dn(type='file', id='import-file', accept='.txt, .csv')
+										input.dn(type='reset', id='reset-file')
+									label.b.mt2.fl.cl.cta.cta-secondary.dib.w-auto.tr.main-gray(for="import-file")
+										span.has-icon.has-icon-left.icon-upload--gray(data-before-chosen="Escolher arquivo", data-after-chosen='Mudar arquivo') Escolher arquivo
+									.fr.tr.cl.how-to.mt1.measure-narrow
+										button.pa0.bg-white.bn.f8.ttu.tracked.b.accent.modal-trigger.trigger--how-to-do veja como fazer							
+									.fl.cb.dn.file-name.bg-medium-accent.pa2.mr2.mb2.mt2
+										a.has-icon-left.icon-close-blue
+										span.f7.accent.b
+								p.measure-narrow.warning.dn.tl.cb.main-gray.lh-copy.pt2 Ao inserir contatos manualmente, você não pode selecionar um arquivo
+					// DESCRIPTION
+					.fl.w-100.mt5
+						.fl.w-50.relative.inputs--cell.pr5
+							textarea.input.input--inline.f6.lh-copy.ba.b--black-20.b.mt3.h4 
+							label.label--active Descrição
+								p.f7.mt2.tr.black-20.input__validation.dn Validação
+					// CONFIRM
+					div.fl.w-50.pr5.mt4
+						button.dib.fr.cta.cta-accent
+							span.has-icon-left.icon-check--white adicionar grupo		
+	// jQuery
+	script(src='js/jquery-3.1.0.min.js')
+	// Filters
+	script(src='js/forms.js')
+	// Notifications
+	script(src='js/notifs.js')
+	// Send New
+	script(src='js/novoenvio.js')
+	// Modal
+	script(src='js/modal.js')

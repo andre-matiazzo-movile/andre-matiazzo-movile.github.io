@@ -4,16 +4,16 @@
 }
 
 .download-items {
-	top: 100%;
+	top: 90%;
 	box-shadow: 0 2px 3px 0 rgba(55,71,79,0.18);
 	border: 1px solid rgba(55,71,79,0.18);
 	opacity: 0;
 	pointer-events: none;
 	-webkit-transition:all ease 0.4s;
-	   -moz-transition:all ease 0.4s;
-	    -ms-transition:all ease 0.4s;
-	     -o-transition:all ease 0.4s;
-	        transition:all ease 0.4s;
+	-moz-transition:all ease 0.4s;
+	-ms-transition:all ease 0.4s;
+	-o-transition:all ease 0.4s;
+	transition:all ease 0.4s;
 	&:hover {
 		opacity: 1;
 		pointer-events: auto;
@@ -27,28 +27,147 @@
 	}
 }
 
-.input-container {
-	border-top: 1px solid $lighter-gray;
-	margin-top: 24px;
-	padding-top: 24px;
-}
-
 .input,
 input {
-	border: 1px solid $lighter-gray;
-	padding: 12px 16px;
-	margin-top: 8px;
-	span {
-		font-size: 0.875rem; // 18px
-		line-height: 1.25;
-		font-weight: $bold;
-		display: inline-block;
-		overflow-x: hidden;
-		white-space: nowrap;
-		max-width: calc(100% - 26px);
+	color: $theblack;
+	border: 1px solid rgba(0,0,0,.2);
+	font-size: .875rem;
+	padding: 1rem;
+	font-weight: $bold;
+	line-height: 1;
+	&.input--inline {
+		position: relative;
+		z-index: 1;
+		outline: none;
+		border: none;
+		background-color: transparent;
+		border-bottom: 1px solid rgba(0,0,0,.2);
+		padding: 0 0 0.5rem 0;
+		border-radius: 0;
+		margin-top: 1rem;
+		line-height: 1.5;
+		@include transition (0.2s);
+		&.input--inline--active {
+			border-color: $accent;
+		}
+		& + label {
+			position: absolute;
+			top: 1rem;
+			@include transition (0.2s);
+			z-index: 0;
+			&.label--active {
+				-webkit-transform: translateY(-1.5rem);
+				-ms-transform: translateY(-1.5rem);
+				-o-transform: translateY(-1.5rem);
+				transform: translateY(-1.5rem);
+				// z-index: 3;
+			}
+			& + .dropdown {
+				top: -2rem;
+			}
+		}
 	}
-	&:hover {
-		cursor: pointer;
+}
+
+textarea.input,
+textarea.input.input--inline {
+	padding: .5rem 1rem;
+	border: 1px solid rgba(0,0,0,.2);
+}
+
+.input--disabled {
+	border: none;
+	border-bottom: 1px solid transparent;
+	background-color: transparent;
+	padding: 0 0 0.5rem 0;
+	cursor: default;
+	color: $main-gray;
+	margin-top: 1rem;
+	line-height: 1.5;
+	& + .input--inline + label {
+		top: -0.5rem;
+		left: 1rem;
+		position: absolute;
+		@include transition (0.2s);
+		z-index: 0;
+		&.label--active {
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			-o-transform: translateY(0);
+			transform: translateY(0);
+			// color: $accent;
+		}
+	}
+}
+
+.input__validation {
+	position: absolute;
+	bottom: -1.25rem;
+	right: 1rem;
+}
+
+.input-with-select {
+	&.input {
+		border-bottom: none;
+		margin-top: 0;
+		padding-bottom: 0;
+	}
+	.input--state {
+		padding-right: .5rem;
+	}
+	.input--city {
+		padding-left: .5rem;
+	}
+	& > label {
+		position: absolute;
+		left: 1rem;
+		top: -.5rem;
+	}
+	.dropdown {
+		top: -2rem;
+	}
+
+}
+
+//Editing inline inputs 
+.inputs-infos--active {
+	.input--disabled {
+		display: none;
+	}
+	.input--inline {
+		display: block;
+	}
+	.input__validation {
+		display: block;
+	}
+	&.inputs-infos__line {
+		margin-bottom: 2rem;
+		border-bottom-color: $accent;
+		label {
+			color: $accent;
+		}
+		.input--cancel, .input--confirm {
+			display: inline-block;
+		}
+		span, .input--edit, .input--send-again {
+			display: none;
+		}
+		.input--inline {
+			border-bottom: none;
+		}
+		.input__validation {
+			right: initial;
+			left: 1rem;
+		}
+	}
+	&.inputs-infos__group {
+		border-bottom: none;
+		.input--disabled {
+			border-bottom: 1px solid transparent;
+		}
+		.input--cancel, .input--confirm {
+			display: inline-block;
+		}
 	}
 }
 
@@ -83,55 +202,87 @@ input {
 .dropdown {
 	display: none;
 	position: absolute;
-	top: -13px;
-	width: 100%;
-	width: calc(100% + 26px);
-	padding: 12px 12px 0;
-	margin-left: -13px;
-	margin-right: -13px;
-	background: #fff;
-	opacity: 0;
-	@include box-with-shadow;
-	@include transition(150ms);
-	z-index: 2;
-	&.dropdown--active {
-		display: block;
+	top: -1.05rem;
+    left: -1px; //because of the box-shadow
+    right: -1px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: #fff;
+    opacity: 0;
+    @include box-with-shadow;
+    @include transition(150ms);
+    z-index: 2;
+    &.dropdown--active {
+    	display: block;
+    }
+    &.notifications {
+    	top: 36px;
+    	right: 0;
+    	left: initial;
+    	padding: 0;
+    	border-top: 3px solid $accent;
+    	width: 420px;
+    	&::after {
+    		content: '';
+    		position: absolute;
+    		top: -10px;
+    		right: 16px;
+    		width: 0;
+    		height: 0;
+    		border-left: 10px solid transparent;
+    		border-right: 10px solid transparent;
+    		border-bottom: 10px solid #84ADFF
+    	}
+    }
+    span + ul li:first-child {
+    	padding-top: 0;
+    }
+    & *::-webkit-scrollbar {
+    	-webkit-appearance: none;
+    	width: 3px;
+    }
+    & *::-webkit-scrollbar-thumb {
+    	border-radius: 1px;
+    	background-color: $main-gray;
+    	-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+	//Removes space on "Choose who's going to receive" in Novo Envio
+	.gruposecontatos li:first-child {
+		padding-top: 0;
+	}
+	// For active dropdowns that doesn't have an input inside of it, just a list
+	& label + ul {
+		margin-top: 0.25rem;
 	}
 }
 
 .dropdown ul {
 	list-style-type: none;
-	padding: 0 6px 6px 6px;
-	max-height: 216px;
+	max-height: 320px;
 	overflow-x: scroll;
-	border-top: 6px solid #fff;
-	&::-webkit-scrollbar {
-		-webkit-appearance: none;
-		width: 3px;
-	}
-	&::-webkit-scrollbar-thumb {
-		border-radius: 1px;
-		background-color: $main-gray;
-		-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-	}
 	li {
 		padding: 8px 0;
-		font-size: 1.12rem; // 18px
-		line-height: 1.375rem; //22px
+		font-size: 1rem; 
+		line-height: 1.25;
 		font-weight: $black;
-		color: $main-gray;
+		// color: $main-gray;
 		span {
 			display: inline-block;
 			min-width: 48px;
 			font-size: 0.875rem; //14px
-			line-height: 1.375rem; //22px
-			font-weight: $regular;
+			line-height: 1.25;
+			// font-weight: $regular;
 			color: $theblack;
 			margin-right: 12px;
 			cursor: pointer;
 			&:hover {
 				color: $accent;
 			}
+		}
+		// Adds color when contact or group is selected in Novo Envio
+		&.name-selected span{
+			color: $accent;
 		}
 		&.search__subheading span,
 		&.search__subheading span:hover {
@@ -141,20 +292,34 @@ input {
 	}
 }
 
+.dropdown--multiple-lists {
+	ul {
+		max-height: none;
+	}
+	.multiple-lists__container {
+		max-height: 216px;
+		overflow-y: scroll;
+	}
+}
+
 .input.search {
 	position: relative;
 	padding-left: 42px;
-	background: url('../img/icons/magnifier.png') no-repeat 14px center;
+	// background-image: url('../img/icons/magnifier.png') no-repeat 14px center;
+	background-repeat: no-repeat;
+	background-position: 14px center;
 	background-color: white;
 	background-size: 18px;
 }
 
 .input.caret-down {
 	position: relative;
-	background: url('../img/icons/caretdown.png') no-repeat;
-	background-color: white;
+	background-image: url('../img/icons/caretdown-gray.png');
+	// background-color: white;
 	background-size: 10px;
 	background-position: right 20px center;
+	background-repeat: no-repeat;
+	cursor: pointer;
 }
 
 .search-active {
@@ -188,21 +353,25 @@ input {
 	}
 }
 
-.input.multichoice {
-	position: relative;
-	border-color: transparent;
-	padding: 0 0 0 30px;
-	margin-left: -30px;
-}
+// .input.multichoice {
+// 	position: relative;
+// 	border-color: transparent;
+// 	padding: 0 0 0 30px;
+// 	margin-left: -30px;
+// }
 
 .checkbox,
 .radio {
+	position: relative;
 	input {
 		display: none;
 		visibility: hidden;
 		z-index: 2;
 		&:checked + label {
 			color: $accent;
+		}
+		&:checked + label:before {
+			border-color: $accent
 		}
 		&:checked + label:after {
 			opacity: 1;
@@ -211,7 +380,6 @@ input {
 	label {
 		border-color: transparent;
 		// font-size: 1.125em;
-		font-weight: 700;
 		cursor: pointer;
 		// @include vertical-center;
 		// white-space: nowrap;
@@ -221,21 +389,55 @@ input {
 			position: absolute;
 			opacity: 1;
 			@include vertical-center;
-			left: 0px;
-			border: 1px solid $main-gray;
-			height: 14px; 
-			width: 14px;
+			left: -1rem;
+			border: 1px solid #000;
+			height: 1rem; 
+			width: 1rem;
 		}
 		&:after {
 			content: "";
 			position: absolute;
 			opacity: 0;
-			left: 3px;
+			left: -0.8125rem; //13px
 			@include vertical-center;
-			height: 10px; 
-			width: 10px;
+			height: 0.75rem; 
+			width: 0.75rem;
 			background-color: #84ADFF;
 			@include transition(150ms);
+		}
+	}
+	.dropdown-checkbox {
+		& + label {
+			&:before {
+				display: none;
+			}
+			&:after {
+				background-color: transparent;
+			}
+		}
+		&:checked {
+			& + label {
+				padding-left: 1rem;
+				&:before {
+					left: 0;
+					display: none;
+				}
+				&:after {
+					left: 0px;
+					content: "";
+					width: 12px;
+					height: 12px;
+					position: absolute;
+					top: 50%;
+					transform: rotate(0deg) translateY(-50%);
+					background-image: url('../img/icons/check.png');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-color: transparent;
+					cursor: pointer;
+				}
+			}
 		}
 	}
 }
@@ -260,56 +462,53 @@ input {
 	}
 }
 
-.input-group {
-	float: left;
-	width: 100%;
-	margin-top: -24px;
-	& .main-label {
-		display: block;
-		margin-top: 24px;
-	}
-}
+// .input-group {
+// 	float: left;
+// 	width: 100%;
+// 	margin-top: -24px;
+// 	& .main-label {
+// 		display: block;
+// 		margin-top: 24px;
+// 	}
+// }
 
-.input-with-select {
-	position: relative;
-	.select {
-		float: left;
-		width: 30%;
-		border: 1px solid #A2B7C1;
-		border-right: none;
-		padding: 12px 16px 12px 16px; //padding-bottom is a magic number, sorry
-		margin-top: 8px;
-	}
-	.input span {
-		overflow-x: inherit;
-		&::after {
-			display: none;
-		}
-	}
-	input {
-		width: 70%;
-	}
-	.dropdown li {
-		font-size: 0.875rem; //14px
-		line-height: 1.375rem; //22px
-		font-weight: $regular;
-		color: $theblack;
-		cursor: pointer;
-		&:hover {
-			color: $accent;
-		}
-		span {
-			font-size: 1.12rem; // 18px
-			line-height: 1.375rem; //22px
-			font-weight: $black;
-			color: $main-gray;
-			cursor: default;
-			&:hover {
-				color: $main-gray;
-			}
-		}
-	}
-}
+// .input-with-select {
+// 	position: relative;
+// 	.select {
+// 		float: left;
+// 		width: 30%;
+// 		border: 1px solid #A2B7C1;
+// 		border-right: none;
+// 		padding: 12px 16px 12px 16px; //padding-bottom is a magic number, sorry
+// 		margin-top: 8px;
+// 	}
+// 	.input span {
+// 		overflow-x: inherit;
+// 		&::after {
+// 			display: none;
+// 		}
+// 	}
+// 	.dropdown li {
+// 		font-size: 0.875rem; //14px
+// 		line-height: 1.375rem; //22px
+// 		font-weight: $regular;
+// 		color: $theblack;
+// 		cursor: pointer;
+// 		&:hover {
+// 			color: $accent;
+// 		}
+// 		span {
+// 			font-size: 1.12rem; // 18px
+// 			line-height: 1.375rem; //22px
+// 			font-weight: $black;
+// 			color: $main-gray;
+// 			cursor: default;
+// 			&:hover {
+// 				color: $main-gray;
+// 			}
+// 		}
+// 	}
+// }
 
 .outro-genero {
 	span {
@@ -337,20 +536,30 @@ input {
 	}
 }
 
-.filter__container {
-	margin: -8px -30px;
-	padding: 32px
-}
+// .filter__container {
+// 	padding: 18px;
+// }
 
-.fake-textarea {
-	width: 100%;
-	border: 1px solid #A2B7C1;
-	color: $theblack;
-	font-size: 0.875rem;
-	font-weight: 500;
-	line-height: 1.375rem;
-	margin-top: 6px;
-	padding: 12px 16px;
-	height: 216px;
-	overflow-y: auto;
-}
+// .fake-textarea {
+// 	width: 100%;
+// 	border: 1px solid #A2B7C1;
+// 	color: $theblack;
+// 	font-size: 0.875rem;
+// 	font-weight: 500;
+// 	line-height: 1.375rem;
+// 	margin-top: 6px;
+// 	padding: 12px 16px;
+// 	height: 216px;
+// 	overflow-y: auto;
+// }
+
+// .dropdown-item-box {
+// 	.checkbox,
+// 	.radio {
+// 		label {
+// 			&:before {
+// 				left: 0;
+// 			}
+// 		}
+// 	}
+// }

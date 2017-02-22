@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movile Messaging – Permissões</title>
+    <meta name="movile-messaging" content="Movile Messaging">
+    <!-- For the charts-->
+    <link href="charts/chartist.min.css" rel="stylesheet">
+    <script src="charts/chartist.min.js" charset="utf-8"></script>
+    <!-- Tachyons CSS-->
+    <link rel="stylesheet" href="stylesheets/tachyons.min.css">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- Typekit-->
+    <script src="https://use.typekit.net/fja4naa.js"></script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+    <style>.table-operadora, .table-subconta, .table-inicio{display:none;}</style>
+  </head>
+  <body>
+    <aside class="fixed fl h-100 bg-sidebar">
+      <div class="bb b--black-10">
+        <div class="pl4 mt4 pb3 w4"><a class="db w-90" href="dashboard.html"><img class="db" src="img/logo-white.png" alt="Logo Movile Messaging"></a></div>
+      </div>
+      <nav class="pl4 mt4">
+        <ul class="list pl0 mt3">
+          <li class="mt3"><a class="white dim f6" href="dashboard.html">Dashboard</a></li>
+          <li class="mt3"><a class="white dim f6" href="novo-envio.html">Novo envio</a></li>
+          <li class="mt3"><a class="white dim f6" href="relatorios-consolidados.html">Relatórios</a></li>
+          <li class="mt3"><a class="white dim f6" href="contatos.html">Contatos</a></li>
+          <li class="mt3"><a class="white dim f6 bb bw1" href="permissoes.html">Permissões</a></li>
+          <li class="mt3"><a class="white dim f6" href="conta.html">Sua conta</a></li>
+          <li class="mt3"><a class="white dim f6" href="">Suporte</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bb b--black-10">
+      <h1 class="f2 fl theblack lh-solid">Permissões</h1>
+      <div class="fr lh-copy relative">
+        <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray pointer">Notificações</a>
+          <div class="absolute top--1 right--1">
+            <div class="relative"><span class="notification-badge">275</span></div>
+          </div>
+          <!-- NOTIFICATIONS-->
+          <div class="dropdown notifications">
+            <!-- NOTIF HEADER-->
+            <div class="fl w-100 pa3 bb black-20">
+              <button class="mark-all-as-read ttu fr lh-copy pv0 pr0 tracked b f8 main-gray bn bg-white has-icon has-icon-left icon-check--gray outline-0">marcar todas como lidas</button>
+            </div>
+            <!-- NOTIFS BODY-->
+            <div class="fl w-100">
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 can-be-read">está sendo gerado</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><button class="accent bn bg-white fr f8 b ttu tracked">download</button></div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 green bg-lighter-green can-be-read">está pronto</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span>
+                  <button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+                </div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 red bg-lighter-red can-be-read">não foi possível gerar</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read theblack">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><a class="accent bn bg-white fr f8 b ttu tracked" href="notifs.html">ver detalhes</a></div>
+              </div>
+            </div>
+            <!-- NOTIF FOOTER-->
+            <div class="fl w-100 pa3"><a class="ttu fl lh-copy pv0 tracked b f8 accent bn bg-white has-icon has-icon-right icon-arrow-right--blue" href="notifs.html">ver todas as notificações</a></div>
+          </div>
+        </div>
+        <h3 class="f5 b fl has-icon has-icon-right icon-dropdown">NomeDoUsuário</h3>
+      </div>
+    </section>
+    <!-- MAIN CONTENT-->
+    <section class="main-content ph4 pb5 fr">
+      <!-- NEW PERMISSIONS-->
+      <div class="fl w-100">
+        <form class="fl w-100 mt4">
+          <div class="fl">
+            <h3 class="theblack f3 lh-solid">Novas permissões</h3>
+          </div>
+          <!-- ANALYSTS-->
+          <div class="fl w-100 mt4 cb mw8">
+            <h4 class="theblack f5 lh-title">Para analistas</h4>
+            <p class="mt2 main-gray lh-copy measure">Pessoas que fazem envios das mensagens e conseguem ver apenas informações de envios da sua área</p>
+            <!-- ROW-->
+            <div class="nl3 nr3">
+              <div class="fl w-two-thirds cb mt4">
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="email">
+                  <label>Email</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>Nome</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+              </div>
+            </div>
+            <!-- ROW-->
+            <div class="nl3 nr3">
+              <div class="fl w-two-thirds cb mt4">
+                <div class="fl w-50 ph3 relative">
+                  <div class="input input--inline input--inline--dropdown has-icon has-icon-right icon-dropdown"><span>Área 51</span></div>
+                  <label class="label--active">Área</label>
+                  <div class="dropdown content-box">
+                    <label class="dib mt1 lh-copy">Área</label>
+                    <ul class="pt0 pb1 pl0">
+                      <li><span>Área 51</span></li>
+                      <li><span>Nayara Rodrigues</span></li>
+                      <li><span>Neto Andrade</span></li>
+                      <li><span>Hudson Souza</span></li>
+                      <li><span>Edson Koji</span></li>
+                      <li><span>Henrique Perticarati</span></li>
+                      <li><span>Juliana Gaspari</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>Nome</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+              </div>
+            </div>
+            <!-- ROW-->
+            <div class="nl3 nr3">
+              <div class="fl w-two-thirds cb mt4">
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="email">
+                  <label>Email</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>Nome</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MANAGERS-->
+          <div class="fl w-100 mt5 mw8">
+            <h4 class="theblack f5 lh-title">Para outros gerentes</h4>
+            <p class="mt2 main-gray lh-copy measure">Pessoas que terão acesso ao mesmo tipo de informação que você: convidar outros gerentes, convidar outros analistas e visualizar todas as informações da sua área</p>
+            <!-- ROW-->
+            <div class="nl3 nr3">
+              <div class="fl w-two-thirds cb mt4">
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="email">
+                  <label>Email</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+                <div class="fl w-50 ph3 relative">
+                  <input class="input--inline" type="text">
+                  <label>Nome</label>
+                  <p class="f7 mt2 tr black-20 input__validation">Validação</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SEND INVITES-->
+          <div class="fl w-100 mw8">
+            <div class="fl w-two-thirds mt5 ph3">
+              <button class="dib fr cta cta-accent"><span class="has-icon-right icon-continue">enviar convites</span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- SENT PERMISSIONS-->
+      <div class="fl w-100 mt6 sent-permissions">
+        <form class="fl w-100 pb4 mw8">
+          <div class="fl">
+            <h3 class="theblack f3 lh-solid">Permissões criadas</h3>
+          </div>
+          <!-- ANALYSTS-->
+          <div class="fl w-100 mt4">
+            <h4 class="theblack f5 lh-title">Para analistas</h4>
+            <p class="mt2 main-gray lh-copy measure">Pessoas que fazem envios das mensagens e conseguem ver apenas informações de envios da sua área</p>
+            <div class="fl w-100 mt3">
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs-infos inputs-infos__line transition">
+                <div class="fl w-two-thirds">
+                  <div class="nl3 nr3">
+                    <div class="fl w-50 ph3 relative inputs--cell">
+                      <p class="input input--disabled">andre.matiazzo@movile.com</p>
+                      <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                      <label>Email</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                    <div class="fl w-50 ph3 relative inputs--cell">
+                      <p class="input input--disabled">André Matiazzo</p>
+                      <input class="input--inline dn" type="text" value="André Matiazzo">
+                      <label>Nome</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr"><span class="bn bg-white f6 b black-20 dib mr3">Convite pendente</span>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib mr3 input--edit" type="button">editar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--send-again" type="button">reenviar</button>
+                  <button class="pa0 bn bg-white pointer main-gray ttu tracked f7 b mr3 input--cancel dn" type="button">cancelar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b input--confirm dn" type="button">salvar</button>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs-infos inputs-infos__line">
+                <div class="fl w-two-thirds">
+                  <div class="nl3 nr3">
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">andre.matiazzo@movile.com</p>
+                      <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                      <label>Email</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">André Matiazzo</p>
+                      <input class="input--inline dn" type="text" value="André Matiazzo">
+                      <label>Nome</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr"><span class="bn bg-white f6 b black-20 dib mr3">Convite pendente</span>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib mr3 input--edit" type="button">editar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--send-again" type="button">reenviar</button>
+                  <button class="pa0 bn bg-white pointer main-gray ttu tracked f7 b mr3 input--cancel dn" type="button">cancelar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b input--confirm dn" type="button">salvar</button>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs-infos inputs-infos__line">
+                <div class="fl w-two-thirds">
+                  <div class="nl3 nr3">
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">andre.matiazzo@movile.com</p>
+                      <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                      <label>Email</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">André Matiazzo</p>
+                      <input class="input--inline dn" type="text" value="André Matiazzo">
+                      <label>Nome</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr">
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--delete" type="button">remover</button>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs-infos inputs-infos__line">
+                <div class="fl w-two-thirds">
+                  <div class="nl3 nr3">
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">andre.matiazzo@movile.com</p>
+                      <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                      <label>Email</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">André Matiazzo</p>
+                      <input class="input--inline dn" type="text" value="André Matiazzo">
+                      <label>Nome</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr">
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--delete" type="button">remover</button>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs-infos inputs-infos__line">
+                <div class="fl w-two-thirds">
+                  <div class="nl3 nr3">
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">andre.matiazzo@movile.br</p>
+                      <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                      <label>Email</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">André Matiazzo</p>
+                      <input class="input--inline dn" type="text" value="André Matiazzo">
+                      <label>Nome</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr">
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--delete" type="button">remover</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MANAGERS-->
+          <div class="fl w-100 mt5">
+            <h4 class="theblack f5 lh-title">Para outros gerentes</h4>
+            <p class="mt2 main-gray lh-copy measure">Pessoas que terão acesso ao mesmo tipo de informação que você: convidar outros gerentes, convidar outros analistas e visualizar todas as informações da sua área</p>
+            <div class="fl w-100 mt3">
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs-infos inputs-infos__line">
+                <div class="fl w-two-thirds">
+                  <div class="nl3 nr3">
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">andre.matiazzo@movile.com</p>
+                      <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                      <label>Email</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">André Matiazzo</p>
+                      <input class="input--inline dn" type="text" value="André Matiazzo">
+                      <label>Nome</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr"><span class="bn bg-white f6 b black-20 dib mr3">Convite pendente</span>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib mr3 input--edit" type="button">editar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--send-again" type="button">reenviar</button>
+                  <button class="pa0 bn bg-white pointer main-gray ttu tracked f7 b mr3 input--cancel dn" type="button">cancelar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b input--confirm dn" type="button">salvar</button>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs-infos inputs-infos__line">
+                <div class="fl w-two-thirds">
+                  <div class="nl3 nr3">
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">andre.matiazzo@movile.com</p>
+                      <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                      <label>Email</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">André Matiazzo</p>
+                      <input class="input--inline dn" type="text" value="André Matiazzo">
+                      <label>Nome</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr"><span class="bn bg-white f6 b black-20 dib mr3">Convite pendente</span>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib mr3 input--edit" type="button">editar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--send-again" type="button">reenviar</button>
+                  <button class="pa0 bn bg-white pointer main-gray ttu tracked f7 b mr3 input--cancel dn" type="button">cancelar</button>
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b input--confirm dn" type="button">salvar</button>
+                </div>
+              </div>
+              <!-- ROW-->
+              <div class="fl w-100 cb mt4 bb b--black-20 inputs-infos inputs-infos__line">
+                <div class="fl w-two-thirds">
+                  <div class="nl3 nr3">
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">andre.matiazzo@movile.com</p>
+                      <input class="input--inline dn" type="email" value="andre.matiazzo@movile.com">
+                      <label>Email</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                    <div class="fl w-50 ph3 relative">
+                      <p class="input input--disabled">André Matiazzo</p>
+                      <input class="input--inline dn" type="text" value="André Matiazzo">
+                      <label>Nome</label>
+                      <p class="f7 mt2 tr black-20 input__validation dn">Validação</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fl w-third relative mt3 pl3 pb2 tr">
+                  <button class="pa0 bn bg-white pointer accent ttu tracked f7 b dib input--delete" type="button">remover</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- MODAL BOILERPLATE-->
+    <div class="dn modal bg-black-50 fixed vh-100 left-0 right-0 o-0 z-5">
+      <!-- ARE YOU SURE?-->
+      <div class="modal__body modal--delete bg-white w-auto mw6 center mt6 pt4 ph4 dn">
+        <div>
+          <h2 class="f4">Quer remover essa permissão?</h2>
+          <div class="mt4 pb4 tr">
+            <button class="pa0 bn bg-white pointer main-gray ttu tracked f7 b mr3 close-modal" type="button">cancelar</button>
+            <button class="pa0 bn bg-white pointer accent ttu tracked f7 b input--yes-delete" type="button">sim, remover</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- jQuery-->
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <script>
+    $('.dropdown-checkbox').click(function() {
+    	var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
+    	if (length == 0) {
+    		$(this).prop('checked', true);
+    	}
+    	var selected = $('.dropdown-checkbox:checked').map(function() {
+    	    return this.value;
+    	}).get().join(', ');
+    	$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
+    });
+    
+  </script>
+  <!-- Filters-->
+  <script src="js/forms.js"></script>
+  <!-- Notifications-->
+  <script src="js/notifs.js"></script>
+  <!-- Modal-->
+  <script src="js/modal.js"></script>
+</html>

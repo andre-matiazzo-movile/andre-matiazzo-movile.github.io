@@ -1,0 +1,345 @@
+doctype html
+html(lang='pt-br')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Movile Messaging – Contatos
+		meta(name='movile-messaging', content='Movile Messaging')
+		// For the charts
+		link(href='charts/chartist.min.css', rel='stylesheet')
+		script(src='charts/chartist.min.js', charset='utf-8')
+		// Tachyons CSS
+		link(rel='stylesheet', href='stylesheets/tachyons.min.css')
+		// Main CSS
+		link(rel='stylesheet', href='stylesheets/main.css')
+		// Typekit
+		script(src='https://use.typekit.net/fja4naa.js')
+		script.
+			try{Typekit.load({ async: false });}catch(e){}
+		style.
+			.table-operadora, .table-subconta, .table-inicio{display:none;}
+	body
+		aside.fixed.fl.h-100.bg-sidebar
+			.bb.b--black-10
+				.pl4.mt4.pb3.w4
+					a(href="dashboard.html").db.w-90
+						img.db(src='img/logo-white.png', alt='Logo Movile Messaging')
+			nav.pl4.mt4
+				ul.list.pl0.mt3
+					li.mt3
+						a.white.dim.f6(href='dashboard.html') Dashboard
+					li.mt3
+						a.white.dim.f6(href='novo-envio.html') Novo envio
+					li.mt3
+						a.white.dim.f6(href='relatorios-consolidados.html') Relatórios
+					li.mt3
+						a.white.dim.f6.bb.bw1(href='contatos.html') Contatos
+					li.mt3
+						a.white.dim.f6(href='permissoes.html') Permissões
+					li.mt3
+						a.white.dim.f6(href='conta.html') Sua conta
+					li.mt3
+						a.white.dim.f6(href='') Suporte
+		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
+			h1.f2.fl.theblack.lh-solid Contatos
+			.fr.lh-copy.relative
+				.relative.mr4.fl
+					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray.pointer Notificações
+					.absolute.top--1.right--1
+						.relative
+							span.notification-badge 275
+					// NOTIFICATIONS
+					.dropdown.notifications
+						// NOTIF HEADER
+						.fl.w-100.pa3.bb.black-20
+							button.mark-all-as-read.ttu.fr.lh-copy.pv0.pr0.tracked.b.f8.main-gray.bn.bg-white.has-icon.has-icon-left.icon-check--gray.outline-0 marcar todas como lidas
+						// NOTIFS BODY
+						.fl.w-100
+							// NOTIF ITEM
+							.notif__item.bb.black-20.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.can-be-read está sendo gerado
+									h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									<button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+							// NOTIF ITEM
+							.notif__item.bb.black-20.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.green.bg-lighter-green.can-be-read está pronto
+									h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									button.accent.bn.bg-white.fr.f8.b.ttu.tracked download
+							// NOTIF ITEM
+							.notif__item.bb.black-20.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.red.bg-lighter-red.can-be-read não foi possível gerar
+									h1.notif__title.f5.mt1.can-be-read.theblack Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									a.accent.bn.bg-white.fr.f8.b.ttu.tracked(href='notifs.html')
+										| ver detalhes
+						// NOTIF FOOTER
+						.fl.w-100.pa3
+							a.ttu.fl.lh-copy.pv0.tracked.b.f8.accent.bn.bg-white.has-icon.has-icon-right.icon-arrow-right--blue(href='notifs.html')
+								| ver todas as notificações
+				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
+		// MAIN CONTENT
+		section.main-content.ph3.pb5.fr
+			a.pa0.bn.bg-white.dib.mt4.fl(href='javascript:history.back()')
+				span.ttu.b.tracked.f7.accent.has-icon.has-icon-left.icon-arrow-left--blue voltar
+			// INFOS - TITLE AND ACTION BUTTONS
+			div.fl.w-100.ph3
+				form.fl.w-100.mt4.inputs-infos.inputs-infos__group
+					div.fl.w-100
+						div.fl
+							h3.theblack.f4.lh-solid Informações gerais
+							p.main-gray.lh-copy.mt2 Criado em 17/06/2016
+						div.fr
+							//- button.accent.ttu.b.tracked.mr3.has-icon-left.icon-blacklist.f7(type='button') inserir na blacklist
+							button.cta.input--edit(type='button')
+								span.has-icon-left.icon-edit--blue editar
+							button.cta.input--confirm.dn(type='button')
+								span.has-icon-left.icon-check salvar
+							p.white.bg-green.ttu.b.tracked.pa3.f7.input--saved.transition.lh-copy.ba.b--transparent.dn
+								span.has-icon-left.icon-check--white salvo
+					// INFOS - CONTENT
+					div.fl.w-100.mt2.mw8
+						// NAME
+						div.fl.w-100.cb.mt4.name-input.nl3.nh3
+							.fl.w-33.ph3.relative.inputs--cell
+								p.input--disabled.f3.b.lh-title André Matiazzo
+								input.input--inline.dn.f3(type='text' value='André Matiazzo')
+								label Nome*
+								p.f7.mt2.tr.black-20.input__validation.dn Validação
+						//OTHER INFOS
+						div.fl.w-100.mt5
+							// ROW
+							div.fl.w-100.cb.nl3.nr3
+								// COMMENTS
+								.fl.w-33.ph3.relative.inputs--cell
+									p.input.input--disabled.lh-copy Lembrar que essa pessoa é um diretor de uma das nossas maiores investidas. Não mande muitas coisas com frequência.
+									textarea.input--inline.dn.f6.lh-copy.ba.b--black-20.b.pa2.mt3.h4 Lembrar que essa pessoa é um diretor de uma das nossas maiores investidas. Não mande muitas coisas com frequência.
+									label Comentários
+									p.f7.mt2.tr.black-20.input__validation.dn Validação
+			// RESULTS
+			.mt4.fl.w-100.ph3.mt6
+				h3.fl.w-100.theblack.f4.lh-solid Resultados
+				div.fl.w-100.mt4
+					.fl.mr4
+						h4.blue-gray.f2.b 12.7mi
+						span.theblack.f6.lh-title
+							| mensagens
+							br
+							| enviadas
+					.fl.mr4
+						h4.green.f2.b 4.2mi
+						span.theblack.f6.lh-title
+							| enviadas com
+							br
+							| sucesso
+					.fl
+						h4.red.f2.b 1.5mi
+						span.theblack.f6.lh-title
+							| mensagens
+							br
+			// GROUPS' CONTACTS
+			div.fl.w-100.mt6.ph3
+				h3.theblack.f4.lh-solid Contatos no grupo
+				div.fl.w-100.mt4
+					// SEARCH
+					div.nr3.nl3
+						.w-third.ph3.relative.fl
+							//- label.black-50.f6 Adicione ou busque por um Contato
+							.fl.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.input.bg-search
+								span.f6.b.ml4.dib.overflow-hidden.lh-title.nowrap Adicione ou busque por um Contato
+							// ADD FROM FILE
+							form#form-choose-file
+										input.dn(type='file', id='import-file', accept='.txt, .csv')
+										input.dn(type='reset', id='reset-file')
+							label.b.fl.dib.accent.ttu.tracked.f7.cb.mt2.lh-copy.pointer(for="import-file")
+								span.has-icon-left.icon-plus--blue(data-before-chosen="Escolher arquivo", data-after-chosen='Mudar arquivo') ou adicione de um arquivo
+							.dropdown.content-box
+									//- label.black-50.f6 Adicione ou busque por um Contato
+									input.f6.b.ba.b--black-20.ph3.pv3.lh-title.bg-search(type='search')
+									div.fl.w-50.mt3.pb3
+										span.main-gray.db.f6 Contatos
+									div.fl.w-100.multiple-lists__container.theblack
+										div.fl.w-50.gruposecontatos.contatos-lista(data-origin='contatos-lista')
+											ul.pt0.pb1.pl0
+												li
+													span.b(data-id='1') Bruno Farias
+												li
+													span.b(data-id='2') Nayara Rodrigues				
+					// DOWNLOAD BUTTON
+					button.cta.pointer.download.download-button.fr
+							span.has-icon-left.icon-download download
+				// CARDS CONTAINER
+				div.fl.w-100
+					// ROW
+					div.nl3.nr3.flex.items-stretch.mt5.cb
+						// CARD
+						.w-third.ph3
+							a(href='contatos_interna.html')
+								.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+									.flex.flex-column.mt3.h-100
+										p.f4.accent.b.lh-title Ursula Reichenbach
+										.mv4
+											p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray Campinas - SP
+											p.f5.main-gray Movile Internet Móvel S.A.
+											p.f5.main-gray ursula.reichenbach@movile.com
+										p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+									.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+										span.f7.accent.ttu.b.tracked.has-icon-left.icon-plus--blue excluir do grupo
+						// CARD
+						.w-third.ph3
+							a(href='contatos_interna.html')
+								.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+									.flex.flex-column.mt3.h-100
+										p.f4.accent.b.lh-title Ursula Reichenbach
+										.mv4
+											p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray Campinas - SP
+											p.f5.main-gray Movile Internet Móvel S.A.
+											p.f5.main-gray ursula.reichenbach@movile.com
+										p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+									.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+										span.f7.accent.ttu.b.tracked.has-icon-left.icon-plus--blue excluir do grupo
+						// CARD
+						.w-third.ph3
+							a(href='contatos_interna.html')
+								.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+									.flex.flex-column.mt3.h-100
+										p.f4.accent.b.lh-title Ursula Reichenbach
+										.mv4
+											p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray Campinas - SP
+											p.f5.main-gray Movile Internet Móvel S.A.
+											p.f5.main-gray ursula.reichenbach@movile.com
+										p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+									.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+										span.f7.accent.ttu.b.tracked.has-icon-left.icon-plus--blue excluir do grupo
+					// ROW
+					div.nl3.nr3.flex.items-stretch.mt4.cb
+						// CARD
+						.w-third.ph3
+							a(href='contatos_interna.html')
+								.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+									.flex.flex-column.mt3.h-100
+										p.f4.accent.b.lh-title Ursula Reichenbach
+										.mv4
+											p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray Campinas - SP
+											p.f5.main-gray Movile Internet Móvel S.A.
+											p.f5.main-gray ursula.reichenbach@movile.com
+										p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+									.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+										span.f7.accent.ttu.b.tracked.has-icon-left.icon-plus--blue excluir do grupo
+						// CARD
+						.w-third.ph3
+							a(href='contatos_interna.html')
+								.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+									.flex.flex-column.mt3.h-100
+										p.f4.accent.b.lh-title Ursula Reichenbach
+										.mv4
+											p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray Campinas - SP
+											p.f5.main-gray Movile Internet Móvel S.A.
+											p.f5.main-gray ursula.reichenbach@movile.com
+										p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+									.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+										span.f7.accent.ttu.b.tracked.has-icon-left.icon-plus--blue excluir do grupo
+						// CARD
+						.w-third.ph3
+							a(href='contatos_interna.html')
+								.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+									.flex.flex-column.mt3.h-100
+										p.f4.accent.b.lh-title Ursula Reichenbach
+										.mv4
+											p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray Campinas - SP
+											p.f5.main-gray Movile Internet Móvel S.A.
+											p.f5.main-gray ursula.reichenbach@movile.com
+										p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+									.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+										span.f7.accent.ttu.b.tracked.has-icon-left.icon-plus--blue excluir do grupo
+					// ROW
+					div.nl3.nr3.flex.items-stretch.mt4.cb
+						// CARD
+						.w-third.ph3
+							a(href='contatos_interna.html')
+								.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+									.flex.flex-column.mt3.h-100
+										p.f4.accent.b.lh-title Ursula Reichenbach
+										.mv4
+											p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray Campinas - SP
+											p.f5.main-gray Movile Internet Móvel S.A.
+											p.f5.main-gray ursula.reichenbach@movile.com
+										p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+									.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+										span.f7.accent.ttu.b.tracked.has-icon-left.icon-plus--blue excluir do grupo
+						// CARD
+						.w-third.ph3
+							a(href='contatos_interna.html')
+								.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+									.flex.flex-column.mt3.h-100
+										p.f4.accent.b.lh-title Ursula Reichenbach
+										.mv4
+											p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray Campinas - SP
+											p.f5.main-gray Movile Internet Móvel S.A.
+											p.f5.main-gray ursula.reichenbach@movile.com
+										p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+									.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+										span.f7.accent.ttu.b.tracked.has-icon-left.icon-plus--blue excluir do grupo
+						// CARD
+						.w-third.ph3
+							a(href='contatos_interna.html')
+								.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
+									.flex.flex-column.mt3.h-100
+										p.f4.accent.b.lh-title Ursula Reichenbach
+										.mv4
+											p.f5.main-gray (11) 98823-8510
+											p.f5.main-gray Campinas - SP
+											p.f5.main-gray Movile Internet Móvel S.A.
+											p.f5.main-gray ursula.reichenbach@movile.com
+										p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+									.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+										span.f7.accent.ttu.b.tracked.has-icon-left.icon-plus--blue excluir do grupo																				
+							
+	// jQuery
+	script(src='js/jquery-3.1.0.min.js')
+	// Filters
+	script(src='js/forms.js')
+	// Notifications
+	script(src='js/notifs.js')
+	// Modal
+	script(src='js/modal.js')

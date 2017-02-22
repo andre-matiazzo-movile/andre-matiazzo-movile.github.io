@@ -61,7 +61,7 @@
 		width: 100%;
 		padding: 24px;
 		margin-left: 0;
-		border-bottom: 1px solid $lighter-gray;
+		border-bottom: 1px solid rgba(0,0,0,0.2);
 		&:after {
 			display: none;
 		}
@@ -163,7 +163,7 @@
 		-webkit-animation-duration: 0.2s;
 		animation-name: slideIn;
 		animation-duration: 0.2s;
-		border: 1px solid $lighter-gray;
+		border: 1px solid rgba(0,0,0,0.2);
 	}
 
 	/* Add Animation */
@@ -212,7 +212,7 @@
 		padding: 0 24px;
 		.actions__container a {
 			padding: 20px 0 20px 42px;
-			border-left: 1px solid $lighter-gray;
+			border-left: 1px solid rgba(0,0,0,0.2);
 			background-position: 18px center;
 		}
 	}

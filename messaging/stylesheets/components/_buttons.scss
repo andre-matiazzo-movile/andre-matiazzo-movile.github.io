@@ -18,12 +18,16 @@
 	font-weight: $bold;
 	text-transform: uppercase;
 	letter-spacing: 0.75px;
-	line-height: 1.4;
-	border: 1px solid $lighter-gray;
-	box-shadow: 0 2px 3px 0 $lighter-gray;
-	padding: 10px 12px;
+	line-height: 1.5;
+	border: 1px solid rgba(0,0,0,0.2);
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2);
+	padding: 1rem;
 	background-color: white;
 	color: $accent;
+	cursor: pointer;
+	&.cta-secondary {
+		color: $main-gray;
+	}
 }
 
 .inner-cta {
@@ -56,17 +60,7 @@
 .cta-accent {
 	color: $ice-white;
 	background-color: $accent;
-}
-
-.cta-secondary {
-	padding-top: 10px;
-	color: $main-gray;
-	border-bottom: 2px solid;
-	margin-right: 24px;
-	&.inner-cta {
-		margin-right: 0;
-		border-bottom: none;
-	}
+	border: none;
 }
 
 .label-with-bg {
@@ -81,3 +75,5 @@
 .labels__container:empty + .main-label {
 	display: none;
 }
+
+details summary::-webkit-details-marker { display:none; }

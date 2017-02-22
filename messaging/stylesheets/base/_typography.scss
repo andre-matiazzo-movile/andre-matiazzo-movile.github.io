@@ -4,7 +4,6 @@ $bold: 700;
 $black: 800;
 
 h1 {
-	color: $theblack;
 	font-size: 1.5rem;
 	margin: 0;
 }
@@ -16,22 +15,17 @@ h2 {
 }
 
 p {
-	margin-top: 6px;
 	font-size: 0.875rem; //14px
-	line-height: 1.375rem; //22px
+	// line-height: 1.375rem; //22px
 	font-weight: $regular;
 	color: $theblack;
-	a {
-		color: $accent;
-		border-bottom: 1px solid;
-	}
 }
 
 p.help-text {
 	color: $main-gray;
 }
 
-.main-label {
-	@include text-label;
-	color: $theblack;
-}
+// .main-label {
+// 	@include text-label;
+// 	color: $theblack;
+// }
