@@ -103,6 +103,7 @@
           <div class="fl w-100 mw8">
             <div class="nl3 nr3">
               <div class="fl w-third ph3 choose-file transition">
+                <!--CHOOSE FILE-->
                 <div class="fl">
                   <form id="form-choose-file">
                     <input class="dn" type="file" id="import-file" accept=".txt, .csv">
@@ -112,28 +113,61 @@
                   <div class="fr tr cl how-to mt1 measure-narrow"></div>
                   <div class="fl cb dn file-name bg-medium-accent pa2 mr2 mb2 mt2"><a class="has-icon-left icon-close-blue"></a><span class="f7 accent b"></span></div>
                 </div>
-              </div>
-              <div class="fl w-two-thirds ph3">
-                <div class="fl w-100">
-                  <h3 class="w-100 theblack f5 lh-title">Formatando seu arquivo</h3>
-                  <p class="lh-copy measure-narrow main-gray mt3 f6">São aceitos arquivos de até 15mb nos formatos <span class="b">.csv </span>e <span class="b">.txt</span></p>
-                </div>
+                <!-- FILE FORMATING-->
                 <div class="nl3 nr3">
-                  <div class="fl w-50 ph3 mt3">
-                    <div class="mt1">
-                      <h3 class="f4 main-gray">.csv</h3>
-                      <p class="mt2 lh-copy measure-narrow">A primeira coluna do seu arquivo deve conter os números de seus contatos e a segunda, o nome deles. A partir da terceira coluna, coloque escolha outros dados que quiser (veja as opções abaixo, na adição de contatos únicos).</p>
-                      <button class="mt3 bg-white bn f8 ttu tracked b accent">veja um exemplo</button>
+                  <div class="fl w-70 ph3">
+                    <p class="lh-copy measure-narrow main-gray mt3 f6">São aceitos arquivos de até 15mb e nos seguintes formatos:</p>
+                    <div class="mt3">
+                      <h3 class="f4 main-gray">.csv ou .xls</h3>
+                      <button class="mt2 bg-white bn f8 ttu tracked b accent">exemplo</button>
+                    </div>
+                    <div class="mt3">
+                      <h3 class="f4 main-gray">.txt</h3>
+                      <button class="mt2 bg-white bn f8 ttu tracked b accent">exemplo</button>
                     </div>
                   </div>
                 </div>
+              </div>
+              <!-- GROUPS		-->
+              <div class="fl w-third ph3">
                 <div class="nl3 nr3">
-                  <div class="fl w-50 ph3 mt3">
-                    <div class="mt1">
-                      <h3 class="f4 main-gray">.txt</h3>
-                      <p class="mt2 lh-copy measure-narrow">Sua primeira coluna Use as outras colunas para criar campos dinâmicos e envie mensagens personalizadas para cada um de seus destinatários.</p>
-                      <button class="mt3 bg-white bn f8 ttu tracked b accent">veja um exemplo</button>
+                  <div class="fl w-100 mt3 ph3 relative inputs--cell input-with-select has-dropdown">
+                    <div class="fl w-100 input--inline--dropdown">
+                      <!-- Editable information-->
+                      <div class="fl w-100 input input--inline pointer insert-criteria view-box-close"><span class="db has-icon-right icon-dropdown group-span">Pertencem a algum?</span></div>
+                      <div class="view-box-open bg-white z-3 o-0">
+                        <div class="dropdown-item-box dropdown dropdown--allows-empty" data-empty-text="Pertence a algum?">
+                          <div>
+                            <label class="dib mt1 lh-copy black-50">Grupos</label>
+                            <input class="mt2">
+                            <div class="mt2 dropdown__list pb4">
+                              <div class="relative pv2">
+                                <div class="checkbox">
+                                  <input class="dropdown-checkbox" id="group01" type="checkbox" name="operadora" value="Grupo 01">
+                                  <label class="f6 b accent-hover relative" for="group01">Grupo 01</label>
+                                </div>
+                              </div>
+                              <div class="relative pv2">
+                                <div class="checkbox">
+                                  <input class="dropdown-checkbox" id="group02" type="checkbox" name="campanha" value="Grupo 02">
+                                  <label class="f6 b accent-hover relative" for="group02">Grupo 02</label>
+                                </div>
+                              </div>
+                              <div class="relative pv2">
+                                <div class="checkbox">
+                                  <input class="dropdown-checkbox" id="group03" type="checkbox" name="cliente" value="Grupo 03">
+                                  <label class="f6 b accent-hover relative" for="group03">Grupo 03</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="absolute bottom-0 bt b--black-20 left-1 right-1 bg-white pv3 z-5">
+                            <button class="fr b accent ttu tracked f8 input--done">pronto</button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                    <label class="label--active">Grupos</label>
                   </div>
                 </div>
               </div>
@@ -286,7 +320,7 @@
                     <div class="fl w-100 input input--inline pointer insert-criteria view-box-close"><span class="db has-icon-right icon-dropdown group-span">Pertence a algum?</span></div>
                     <div class="view-box-open bg-white z-3 o-0">
                       <div class="dropdown-item-box dropdown dropdown--allows-empty" data-empty-text="Pertence a algum?">
-                        <div class="pb3">
+                        <div>
                           <label class="dib mt1 lh-copy black-50">Grupos</label>
                           <input class="mt2">
                           <div class="mt2"></div>
