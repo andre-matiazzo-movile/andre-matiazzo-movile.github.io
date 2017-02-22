@@ -61,16 +61,12 @@ $success: #61FFB2;
 
 .mta {margin-top: auto;}
 
-
 .hover-card {
-	div {
-		transition: all ease 0.4s;
-	}
-	&:hover {
-		transition: all ease 0.4s;
-		border: 1px solid $accent;
-		& div {
+	@include transition (0.4s);
+	&.hover-card--link {
+		&:hover {
 			border-color: $accent;
+			@include transition (0.4s);
 		}
 	}
 }
@@ -144,19 +140,6 @@ $success: #61FFB2;
 	}
 }
 
-// @keyframes strikethrough--in {
-// 	from {
-// 		width: 0;
-// 		opacity: 0;
-// 		transform: scaleX(0);
-// 	}
-// 	to {
-// 		width: 100%;
-// 		opacity: 1;
-// 		transform: scaleX(1);
-// 	}
-// }
-
 @keyframes blacklist-label--in {
 	from {
 		opacity: 0;
@@ -164,4 +147,11 @@ $success: #61FFB2;
 	to {
 		opacity: 1;
 	}
+}
+
+
+// EXTRA-LARGE MEDIA QUERY
+@media screen and (min-width: 90em) {
+	.w-25-xl {width: 25%;}
+	.w-third-xl {width: 33.33333%;}
 }

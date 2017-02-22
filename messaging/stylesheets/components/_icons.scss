@@ -40,6 +40,28 @@
 	}
 }
 
+.has-icon-center {
+	position: relative;
+	padding: 0 9px !important;
+	&:after {		
+		right: 0px;
+		content: "";
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		top: 50%;
+		transform: rotate(0deg) translateY(-50%);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		cursor: pointer;
+	}
+}
+
 .has-tooltip {
 	position: relative;
 	.tooltip-content {
@@ -56,10 +78,10 @@
 		text-align: center;
 		transition: all ease 0.4s;
 		-webkit-transform: translateY(5px);
-		   -moz-transform: translateY(5px);
-		    -ms-transform: translateY(5px);
-		     -o-transform: translateY(5px);
-		        transform: translateY(5px);
+		-moz-transform: translateY(5px);
+		-ms-transform: translateY(5px);
+		-o-transform: translateY(5px);
+		transform: translateY(5px);
 		&::after {
 			background: $accent;
 			content: '';
@@ -70,7 +92,7 @@
 			left: 9px;
 			z-index: -1;
 			transform: rotate(45deg);
-      	}
+		}
 	}
 	&:hover > .tooltip-content {
 		opacity: 1;
@@ -85,6 +107,25 @@
 	}
 	.tooltip-far {
 		top: -150%;
+	}
+	// Specific for CTAs with tooltips
+	&.cta {
+		.tooltip-content {
+			bottom: 60px;
+			left: initial;
+			margin-left: auto;
+			margin-right: auto;
+			right: 0;
+			font-size: .75rem;
+			letter-spacing: 0;
+			text-transform: none;
+			font-weight: $regular;
+			line-height: 1.25;
+			&::after {
+				left: initial;
+				right: 18px;
+			}
+		}
 	}
 }
 
