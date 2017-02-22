@@ -135,6 +135,7 @@ $(document).ready(function() {
 			// $(this).find('span').removeClass('icon-edit--blue').addClass('icon-check').text('salvar');
 			$(this).hide();
 			$(this).siblings('.cta.input--confirm').show();
+			$(this).siblings('.cta.input--confirm').show();
 			$(this).siblings('.input--blacklist').hide();
 		}
 	});
@@ -145,6 +146,7 @@ $(document).ready(function() {
 			var originalInputText = $(this).siblings('p.input--disabled').text();
 			$(this).val(originalInputText);
 		});
+		$(this).siblings('.input--edit, .input--blacklist').show();
 	});
 
 	//Save edition on inputs
@@ -169,7 +171,7 @@ $(document).ready(function() {
 			setTimeout(function(){
 				$('.input--confirm').siblings('.input--edit, .input--blacklist').show();
 				$('.input--confirm').siblings('.input--saved').hide();
-			}, 4000);
+			}, 2000);
 		}
 
 	});
@@ -189,7 +191,8 @@ $(document).ready(function() {
 	$('.input--delete').on('click', function() {
 		$('body').css('overflow-y', 'hidden');
 		$('.modal').show();
-		$(this).parents('.inputs-infos').addClass("deletable");
+		// For deleting inputs or cards
+		$(this).parents('.inputs-infos, .card-container').addClass("deletable");
 		setTimeout(function(){
 			$('.modal--delete').css("opacity","1");
 		}, 400);

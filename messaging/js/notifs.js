@@ -18,4 +18,14 @@ $(document).ready( function () {
 		$(this).next('.details__list').slideToggle();
 		$(this).find('span').toggleClass('accordion');
 	});
+
+	$('.feedback-banner').delay(1000).animate({opacity: 1}, 400);
+
+	//Closes feedback banners on click
+	$('.feedback-banner button').on('click', function () {
+		$(this).parents('.feedback-banner').animate({opacity: 0}, 400);
+		setTimeout(function(){
+			$(this).parents('.feedback-banner').hide();
+		}, 400);
+	});
 });
