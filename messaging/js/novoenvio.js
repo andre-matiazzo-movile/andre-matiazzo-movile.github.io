@@ -102,18 +102,18 @@ $(document).ready(function() {
 		activeOption("div.choose-file");
 	});
 
-	$(document).on('scroll', function(){
-		var h = $('.messages').parent().parent().offset().top - $(window).scrollTop();
-		if (h <= 0) {
-			if($(window).scrollTop() + $(window).height() == $(document).height()) {
-				bottomPreviewPosition();
-			} else {
-				getPreviewPosition();
-			}
-		} else {
-			clearPreviewPosition()
-		}
-	});
+	// $(document).on('scroll', function(){
+	// 	var h = $('.messages').parent().parent().offset().top - $(window).scrollTop();
+	// 	if (h <= 0) {
+	// 		if($(window).scrollTop() + $(window).height() == $(document).height()) {
+	// 			bottomPreviewPosition();
+	// 		} else {
+	// 			getPreviewPosition();
+	// 		}
+	// 	} else {
+	// 		clearPreviewPosition()
+	// 	}
+	// });
 
 });
 

@@ -71,7 +71,7 @@ input {
 
 textarea.input,
 textarea.input.input--inline {
-	padding: .5rem 1rem;
+	padding: .5rem;
 	border: 1px solid rgba(0,0,0,.2);
 }
 
@@ -205,9 +205,7 @@ textarea.input.input--inline {
 	top: -1.05rem;
     left: -1px; //because of the box-shadow
     right: -1px;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem 1rem 0;
     background: #fff;
     opacity: 0;
     @include box-with-shadow;
@@ -238,6 +236,9 @@ textarea.input.input--inline {
     span + ul li:first-child {
     	padding-top: 0;
     }
+    span + ul li:last-child {
+    	padding-bottom: 0;
+    }
     & *::-webkit-scrollbar {
     	-webkit-appearance: none;
     	width: 3px;
@@ -257,7 +258,8 @@ textarea.input.input--inline {
 	}
 }
 
-.dropdown ul {
+.dropdown ul,
+.dropdown__list {
 	list-style-type: none;
 	max-height: 320px;
 	overflow-x: scroll;

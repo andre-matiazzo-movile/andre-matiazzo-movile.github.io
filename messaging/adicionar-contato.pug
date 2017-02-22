@@ -125,6 +125,7 @@ html(lang='pt-br')
 					.fl.w-100.mw8
 						.nl3.nr3
 							.fl.w-third.ph3.choose-file.transition
+								//CHOOSE FILE
 								div.fl
 									//- label.fl.f6.black.lh-copy Importe de um arquivo
 									form#form-choose-file
@@ -137,26 +138,47 @@ html(lang='pt-br')
 									.fl.cb.dn.file-name.bg-medium-accent.pa2.mr2.mb2.mt2
 										a.has-icon-left.icon-close-blue
 										span.f7.accent.b
-								//- p.measure-narrow.warning.dn.tl.cb.main-gray.lh-copy.pt2 Ao inserir contatos manualmente, você não pode selecionar um arquivo
-							div.fl.w-two-thirds.ph3
-									div.fl.w-100
-										h3.w-100.theblack.f5.lh-title Formatando seu arquivo
-										p.lh-copy.measure-narrow.main-gray.mt3.f6 São aceitos arquivos de até 15mb nos formatos 
-											span.b .csv 
-											| e 
-											span.b .txt
-									.nl3.nr3
-										div.fl.w-50.ph3.mt3
-											div.mt1
-												h3.f4.main-gray .csv
-												p.mt2.lh-copy.measure-narrow A primeira coluna do seu arquivo deve conter os números de seus contatos e a segunda, o nome deles. A partir da terceira coluna, coloque escolha outros dados que quiser (veja as opções abaixo, na adição de contatos únicos).
-												button.mt3.bg-white.bn.f8.ttu.tracked.b.accent veja um exemplo
-									.nl3.nr3
-										div.fl.w-50.ph3.mt3
-											div.mt1
-												h3.f4.main-gray .txt
-												p.mt2.lh-copy.measure-narrow Sua primeira coluna Use as outras colunas para criar campos dinâmicos e envie mensagens personalizadas para cada um de seus destinatários.
-												button.mt3.bg-white.bn.f8.ttu.tracked.b.accent veja um exemplo
+								// FILE FORMATING
+								.nl3.nr3
+									div.fl.w-70.ph3
+										p.lh-copy.measure-narrow.main-gray.mt3.f6 São aceitos arquivos de até 15mb e nos seguintes formatos:
+										div.mt3
+											h3.f4.main-gray .csv ou .xls
+											button.mt2.bg-white.bn.f8.ttu.tracked.b.accent exemplo
+										div.mt3
+											h3.f4.main-gray .txt
+											button.mt2.bg-white.bn.f8.ttu.tracked.b.accent exemplo
+							// GROUPS		
+							div.fl.w-third.ph3
+								.nl3.nr3
+									.fl.w-100.mt3.ph3.relative.inputs--cell.input-with-select.has-dropdown
+										div.fl.w-100.input--inline--dropdown
+											// Editable information
+											div.fl.w-100.input.input--inline.pointer.insert-criteria.view-box-close
+												span.db.has-icon-right.icon-dropdown.group-span Pertencem a algum?
+											//- span.f6.theblack.b.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer.fl Operadora
+											.view-box-open.bg-white.z-3.o-0
+												.dropdown-item-box.dropdown.dropdown--allows-empty(data-empty-text='Pertence a algum?')
+													div
+														label.dib.mt1.lh-copy.black-50 Grupos
+														input.mt2
+														div.mt2.dropdown__list.pb4
+															.relative.pv2
+																div.checkbox
+																	//- input#group00.dropdown-checkbox.dn(type='checkbox', name='operadora', value='Grupo 01', checked)
+																	input#group01.dropdown-checkbox(type='checkbox', name='operadora', value='Grupo 01')
+																	label.f6.b.accent-hover.relative(for='group01') Grupo 01
+															.relative.pv2
+																div.checkbox
+																	input#group02.dropdown-checkbox(type='checkbox', name='campanha', value='Grupo 02')
+																	label.f6.b.accent-hover.relative(for='group02') Grupo 02
+															.relative.pv2
+																div.checkbox
+																	input#group03.dropdown-checkbox(type='checkbox', name='cliente', value='Grupo 03')
+																	label.f6.b.accent-hover.relative(for='group03') Grupo 03
+													div.absolute.bottom-0.bt.b--black-20.left-1.right-1.bg-white.pv3.z-5
+														button.fr.b.accent.ttu.tracked.f8.input--done pronto
+										label.label--active Grupos
 						.nl3.nr3
 							.fl.w-100.mt4
 								div.fl.w-third.ph3
@@ -313,7 +335,7 @@ html(lang='pt-br')
 										//- span.f6.theblack.b.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer.fl Operadora
 										.view-box-open.bg-white.z-3.o-0
 											.dropdown-item-box.dropdown.dropdown--allows-empty(data-empty-text='Pertence a algum?')
-												div.pb3
+												div
 													label.dib.mt1.lh-copy.black-50 Grupos
 													input.mt2
 													div.mt2
