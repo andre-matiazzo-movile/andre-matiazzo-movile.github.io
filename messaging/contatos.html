@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Movile Messaging – Relatórios</title>
+    <title>Movile Messaging – Contatos</title>
     <meta name="movile-messaging" content="Movile Messaging">
     <!-- For the calendar-->
     <link href="calendar/jquery-ui/jquery-ui.min.css" rel="stylesheet">
@@ -27,6 +27,14 @@
     </script>
   </head>
   <body>
+    <!-- FEEDBACK BANNER-->
+    <div class="feedback-banner fixed left-2 right-2 top-1 ml6 pl5 z-999 o-0">
+      <div class="bg-success ml2 shadow-0">
+        <h5 class="f5 black pa3">Contatos criados com sucesso!</h5>
+        <button class="absolute top-1 right-1 bg-transparent w1 h1"><img src="img/icons/close-black.png"></button>
+      </div>
+    </div>
+    <!-- SIDEBAR-->
     <aside class="fixed fl h-100 bg-sidebar">
       <div class="bb b--black-10">
         <div class="pl4 mt4 pb3 w4"><img class="db w-90" src="img/logo-white.png" alt="Logo Movile Messaging"></div>
@@ -144,11 +152,13 @@
         </div>
         <div class="fl w-100 pa3">
           <div class="fl w-100">
-            <div class="nl3 nr3 flex items-stretch">
+            <div class="nl3 nr3 flex flex-row flex-wrap">
               <!-- CARD-->
-              <div class="w-25 ph3"><a href="contatos_interna.html">
-                  <div class="w-100 h-100 br2 ba b--black-10 ph3 theblack shadow-0 lh-copy flex flex-column hover-card">
-                    <div class="flex flex-column mt3 h-100">
+              <!-- flex item-->
+              <div class="w-third w-25-xl ph3 mt4"><a href="contatos_interna.html">
+                  <!-- flex content-->
+                  <div class="w-100 h-100 br2 ba b--black-10 ph3 theblack shadow-0 lh-copy hover-card hover-card--link flex flex-column">
+                    <div class="mt3 h-100 card_top-content">
                       <p class="f4 accent b lh-title">Ursula Reichenbach</p>
                       <div class="mv4">
                         <p class="f5 main-gray">(11) 98823-8510</p>
@@ -158,31 +168,75 @@
                       </div>
                       <p class="f5 main-gray b mta mb3">Recebeu 9999 mensagens</p>
                     </div>
-                    <div class="flex nl3 nr3 bt b--black-10 items-center pa3 justify-end"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS</span></div>
+                    <div class="nl3 nr3 bt b--black-10 pa3 tr lh-solid"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS</span></div>
                   </div></a></div>
               <!-- CARD-->
-              <div class="w-25 ph3"><a href="contatos_interna.html">
-                  <div class="w-100 h-100 br2 ba b--black-10 ph3 theblack shadow-0 lh-copy flex flex-column hover-card">
-                    <div class="flex flex-column mt3 h-100">
+              <!-- flex item-->
+              <div class="w-third w-25-xl ph3 mt4"><a href="contatos_interna.html">
+                  <!-- flex content-->
+                  <div class="w-100 h-100 br2 ba b--black-10 ph3 theblack shadow-0 lh-copy hover-card hover-card--link flex flex-column">
+                    <div class="mt3 h-100 card_top-content">
                       <p class="f4 accent b lh-title">Ursula Reichenbach</p>
                       <div class="mv4">
                         <p class="f5 main-gray">(11) 98823-8510</p>
+                        <p class="f5 main-gray">Campinas - SP</p>
+                        <p class="f5 main-gray">Movile Internet Móvel S.A.</p>
+                        <p class="f5 main-gray">ursula.reichenbach@movile.com</p>
                       </div>
                       <p class="f5 main-gray b mta mb3">Recebeu 9999 mensagens</p>
                     </div>
-                    <div class="flex nl3 nr3 bt b--black-10 items-center pa3 justify-end"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS</span></div>
+                    <div class="nl3 nr3 bt b--black-10 pa3 tr lh-solid"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS</span></div>
                   </div></a></div>
               <!-- CARD-->
-              <div class="w-25 ph3"><a href="contatos_interna.html">
-                  <div class="w-100 h-100 br2 ba b--black-10 card--blacklist ph3 theblack shadow-0 lh-copy flex flex-column hover-card">
-                    <div class="flex flex-column mt3 h-100">
+              <!-- flex item-->
+              <div class="w-third w-25-xl ph3 mt4"><a href="contatos_interna.html">
+                  <!-- flex content-->
+                  <div class="w-100 h-100 br2 ba b--black-10 ph3 theblack shadow-0 lh-copy hover-card hover-card--link flex flex-column">
+                    <div class="mt3 h-100 card_top-content">
                       <p class="f4 accent b lh-title">Ursula Reichenbach</p>
                       <div class="mv4">
                         <p class="f5 main-gray">(11) 98823-8510</p>
+                        <p class="f5 main-gray">Campinas - SP</p>
+                        <p class="f5 main-gray">Movile Internet Móvel S.A.</p>
+                        <p class="f5 main-gray">ursula.reichenbach@movile.com</p>
                       </div>
                       <p class="f5 main-gray b mta mb3">Recebeu 9999 mensagens</p>
                     </div>
-                    <div class="flex nl3 nr3 bt b--black-10 items-center pa3 justify-end"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS</span></div>
+                    <div class="nl3 nr3 bt b--black-10 pa3 tr lh-solid"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS</span></div>
+                  </div></a></div>
+              <!-- CARD-->
+              <!-- flex item-->
+              <div class="w-third w-25-xl ph3 mt4"><a href="contatos_interna.html">
+                  <!-- flex content-->
+                  <div class="w-100 h-100 br2 ba b--black-10 ph3 theblack shadow-0 lh-copy hover-card hover-card--link flex flex-column">
+                    <div class="mt3 h-100 card_top-content">
+                      <p class="f4 accent b lh-title">Ursula Reichenbach</p>
+                      <div class="mv4">
+                        <p class="f5 main-gray">(11) 98823-8510</p>
+                        <p class="f5 main-gray">Campinas - SP</p>
+                        <p class="f5 main-gray">Movile Internet Móvel S.A.</p>
+                        <p class="f5 main-gray">ursula.reichenbach@movile.com</p>
+                      </div>
+                      <p class="f5 main-gray b mta mb3">Recebeu 9999 mensagens</p>
+                    </div>
+                    <div class="nl3 nr3 bt b--black-10 pa3 tr lh-solid"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS</span></div>
+                  </div></a></div>
+              <!-- CARD-->
+              <!-- flex item-->
+              <div class="w-third w-25-xl ph3 mt4"><a href="contatos_interna.html">
+                  <!-- flex content-->
+                  <div class="w-100 h-100 br2 ba b--black-10 ph3 theblack shadow-0 lh-copy hover-card hover-card--link flex flex-column">
+                    <div class="mt3 h-100 card_top-content">
+                      <p class="f4 accent b lh-title">Ursula Reichenbach</p>
+                      <div class="mv4">
+                        <p class="f5 main-gray">(11) 98823-8510</p>
+                        <p class="f5 main-gray">Campinas - SP</p>
+                        <p class="f5 main-gray">Movile Internet Móvel S.A.</p>
+                        <p class="f5 main-gray">ursula.reichenbach@movile.com</p>
+                      </div>
+                      <p class="f5 main-gray b mta mb3">Recebeu 9999 mensagens</p>
+                    </div>
+                    <div class="nl3 nr3 bt b--black-10 pa3 tr lh-solid"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS																																	</span></div>
                   </div></a></div>
             </div>
           </div>

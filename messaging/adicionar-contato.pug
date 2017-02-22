@@ -138,27 +138,51 @@ html(lang='pt-br')
 										a.has-icon-left.icon-close-blue
 										span.f7.accent.b
 								//- p.measure-narrow.warning.dn.tl.cb.main-gray.lh-copy.pt2 Ao inserir contatos manualmente, você não pode selecionar um arquivo
-							.fl.w-third.ph3
-								div
-									h3.theblack.f5.lh-title Arquivos aceitos
-									p.mt2.lh-copy.measure-narrow São aceitos arquivos de até 15mb nos seguintes formatos:
-									div.mt1
-										h3.f4.dib.mr3 .csv
-										h3.f4.dib .txt
-							.fl.w-third.ph3
-								div
-									h3.theblack.f5.lh-title Formatando seu arquivo
-									p.mt3.lh-copy.measure-narrow 1. Sua primeira coluna deverá conter, obrigatoriamente, os números dos destinatários
-									p.mt3.lh-copy.measure-narrow 2. Use as outras colunas para criar campos dinâmicos e envie mensagens personalizadas para cada um de seus destinatários.
-									div.mt3
-										img(src="img/envio_how-to-do.png")
+							div.fl.w-two-thirds.ph3
+									div.fl.w-100
+										h3.w-100.theblack.f5.lh-title Formatando seu arquivo
+										p.lh-copy.measure-narrow.main-gray.mt3.f6 São aceitos arquivos de até 15mb nos formatos 
+											span.b .csv 
+											| e 
+											span.b .txt
+									.nl3.nr3
+										div.fl.w-50.ph3.mt3
+											div.mt1
+												h3.f4.main-gray .csv
+												p.mt2.lh-copy.measure-narrow A primeira coluna do seu arquivo deve conter os números de seus contatos e a segunda, o nome deles. A partir da terceira coluna, coloque escolha outros dados que quiser (veja as opções abaixo, na adição de contatos únicos).
+												button.mt3.bg-white.bn.f8.ttu.tracked.b.accent veja um exemplo
+									.nl3.nr3
+										div.fl.w-50.ph3.mt3
+											div.mt1
+												h3.f4.main-gray .txt
+												p.mt2.lh-copy.measure-narrow Sua primeira coluna Use as outras colunas para criar campos dinâmicos e envie mensagens personalizadas para cada um de seus destinatários.
+												button.mt3.bg-white.bn.f8.ttu.tracked.b.accent veja um exemplo
+						.nl3.nr3
+							.fl.w-100.mt4
+								div.fl.w-third.ph3
+									//- p.lh-copy.measure-narrow São aceitos arquivos de até 15mb nos formatos 
+									//- 	span.b.main-gray .csv 
+									//- 	| e 
+									//- 	span.b.main-gray .txt
+								//- div.fl.w-two-thirds.ph3
+								//- 	h3.fl.w-100.theblack.f5.lh-title Formatando seu arquivo
+								//- 	.nl3.nr3
+								//- 		div.fl.w-50.ph3.mt3
+								//- 			div.mt1
+								//- 				h3.f5.main-gray .csv
+								//- 				p.mt2.lh-copy.measure-narrow A primeira coluna do seu arquivo deve conter os números de seus contatos e a segunda, o nome deles. A partir da terceira coluna, coloque escolha outros dados que quiser (veja as opções abaixo, na adição de contatos únicos).
+								//- 	.nl3.nr3
+								//- 		div.fl.w-50.ph3.mt3
+								//- 			div.mt1
+								//- 				h3.f5.main-gray .txt
+								//- 				p.mt2.lh-copy.measure-narrow Sua primeira coluna Use as outras colunas para criar campos dinâmicos e envie mensagens personalizadas para cada um de seus destinatários.
 						// CONFIRM
 						div.fl.w-100
-							button.dib.fr.mt5.cta.cta-accent
-								span.has-icon-left.icon-check--white adicionar contatos									
+							button.dib.fr.mt5.cta.cta-accent(onclick="location.href = 'contatos.html';")
+								span.has-icon-left.icon-check--white adicionar contatos				
 				// ADD ONE CONTACT
 				div.fl.w-100.mt4.mw8
-					h3.fl.black.f3.lh-solid Ou adicionar um único contato
+					h3.fl.black.f3.lh-solid Quer adicionar um único contato?
 					p.fl.cb.main-gray.mt4.pb2 * Campos obrigatórios
 					// INFOS CONTAINER
 					.fl.w-100.mt4.cl
@@ -322,8 +346,9 @@ html(lang='pt-br')
 										p.f7.mt2.tr.black-20.input__validation.dn Validação
 					// CONFIRM
 					div.fl.w-100
-						button.dib.fr.mt5.cta.cta-accent
-							span.has-icon-left.icon-check--white adicionar contato		
+						button.dib.fr.mt5.cta.cta-accent(onclick="location.href = 'contatos.html';")
+							span.has-icon-left.icon-check--white adicionar contato
+
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
 	// Filters

@@ -4,7 +4,7 @@ html(lang='pt-br')
 		meta(charset='UTF-8')
 		meta(http-equiv='x-ua-compatible', content='ie=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-		title Movile Messaging – Relatórios
+		title Movile Messaging – Contatos
 		meta(name='movile-messaging', content='Movile Messaging')
 		// For the calendar
 		link(href='calendar/jquery-ui/jquery-ui.min.css', rel='stylesheet')
@@ -25,6 +25,13 @@ html(lang='pt-br')
 			});
 			} catch (e) {}
 	body
+		// FEEDBACK BANNER
+		div.feedback-banner.fixed.left-2.right-2.top-1.ml6.pl5.z-999.o-0
+			div.bg-success.ml2.shadow-0
+				h5.f5.black.pa3 Contatos criados com sucesso!
+				button.absolute.top-1.right-1.bg-transparent.w1.h1
+					img(src="img/icons/close-black.png")
+		// SIDEBAR
 		aside.fixed.fl.h-100.bg-sidebar
 			.bb.b--black-10
 				.pl4.mt4.pb3.w4
@@ -176,12 +183,14 @@ html(lang='pt-br')
 									span.fl.cb.f6.theblack.b.mt3.relative.view-criteria.pointer.accent-hover.nowrap Z - A
 				.fl.w-100.pa3
 					.fl.w-100
-						.nl3.nr3.flex.items-stretch
+						.nl3.nr3.flex.flex-row.flex-wrap
 							// CARD
-							.w-25.ph3
+							// flex item
+							.w-third.w-25-xl.ph3.mt4
 								a(href='contatos_interna.html')
-									.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
-										.flex.flex-column.mt3.h-100
+									// flex content
+									.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.hover-card.hover-card--link.flex.flex-column
+										.mt3.h-100.card_top-content
 											p.f4.accent.b.lh-title Ursula Reichenbach
 											.mv4
 												p.f5.main-gray (11) 98823-8510
@@ -189,30 +198,72 @@ html(lang='pt-br')
 												p.f5.main-gray Movile Internet Móvel S.A.
 												p.f5.main-gray ursula.reichenbach@movile.com
 											p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
-										.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+										.nl3.nr3.bt.b--black-10.pa3.tr.lh-solid
 											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS
 							// CARD
-							.w-25.ph3
+							// flex item
+							.w-third.w-25-xl.ph3.mt4
 								a(href='contatos_interna.html')
-									.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
-										.flex.flex-column.mt3.h-100
+									// flex content
+									.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.hover-card.hover-card--link.flex.flex-column
+										.mt3.h-100.card_top-content
 											p.f4.accent.b.lh-title Ursula Reichenbach
 											.mv4
 												p.f5.main-gray (11) 98823-8510
+												p.f5.main-gray Campinas - SP
+												p.f5.main-gray Movile Internet Móvel S.A.
+												p.f5.main-gray ursula.reichenbach@movile.com
 											p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
-										.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+										.nl3.nr3.bt.b--black-10.pa3.tr.lh-solid
 											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS
 							// CARD
-							.w-25.ph3
+							// flex item
+							.w-third.w-25-xl.ph3.mt4
 								a(href='contatos_interna.html')
-									.w-100.h-100.br2.ba.b--black-10.card--blacklist.ph3.theblack.shadow-0.lh-copy.flex.flex-column.hover-card
-										.flex.flex-column.mt3.h-100
+									// flex content
+									.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.hover-card.hover-card--link.flex.flex-column
+										.mt3.h-100.card_top-content
 											p.f4.accent.b.lh-title Ursula Reichenbach
 											.mv4
 												p.f5.main-gray (11) 98823-8510
+												p.f5.main-gray Campinas - SP
+												p.f5.main-gray Movile Internet Móvel S.A.
+												p.f5.main-gray ursula.reichenbach@movile.com
 											p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
-										.flex.nl3.nr3.bt.b--black-10.items-center.pa3.justify-end
+										.nl3.nr3.bt.b--black-10.pa3.tr.lh-solid
 											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS
+							// CARD
+							// flex item
+							.w-third.w-25-xl.ph3.mt4
+								a(href='contatos_interna.html')
+									// flex content
+									.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.hover-card.hover-card--link.flex.flex-column
+										.mt3.h-100.card_top-content
+											p.f4.accent.b.lh-title Ursula Reichenbach
+											.mv4
+												p.f5.main-gray (11) 98823-8510
+												p.f5.main-gray Campinas - SP
+												p.f5.main-gray Movile Internet Móvel S.A.
+												p.f5.main-gray ursula.reichenbach@movile.com
+											p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+										.nl3.nr3.bt.b--black-10.pa3.tr.lh-solid
+											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS
+							// CARD
+							// flex item
+							.w-third.w-25-xl.ph3.mt4
+								a(href='contatos_interna.html')
+									// flex content
+									.w-100.h-100.br2.ba.b--black-10.ph3.theblack.shadow-0.lh-copy.hover-card.hover-card--link.flex.flex-column
+										.mt3.h-100.card_top-content
+											p.f4.accent.b.lh-title Ursula Reichenbach
+											.mv4
+												p.f5.main-gray (11) 98823-8510
+												p.f5.main-gray Campinas - SP
+												p.f5.main-gray Movile Internet Móvel S.A.
+												p.f5.main-gray ursula.reichenbach@movile.com
+											p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
+										.nl3.nr3.bt.b--black-10.pa3.tr.lh-solid
+											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS																																	
 			
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
