@@ -62,13 +62,13 @@
     </aside>
     <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bg-darker-accent bb b--black-10">
       <h1 class="f2 fl white lh-solid">Novo envio</h1>
-      <div class="fr lh-copy relative"><a class="white ttu tracked f7 b fl" href="javascript:;">salvar e sair</a></div>
+      <div class="fr lh-copy relative"><a class="white ttu tracked f7 b fl" href="dashboard.html">sair</a></div>
     </section>
     <!-- MAIN CONTENT-->
     <section class="main-content ph4 fr">
       <!-- RECIPIENTS-->
       <div class="fl w-100 bb b--black-20">
-        <div class="fl w-100 pt4 pb5 mw8" style="min-height:400px">
+        <div class="fl w-100 pt4 pb5 mw8" style="min-height:320px">
           <h3 class="fl black f3 lh-solid">Escolha quem vai receber</h3>
           <div class="fl w-100 mt4 cl">
             <!-- FIRST HALF OF THE GRID-->
@@ -115,7 +115,7 @@
                   <input class="dn" type="file" id="import-file" accept=".txt, .csv">
                   <input class="dn" type="reset" id="reset-file">
                 </form>
-                <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon has-icon-left icon-upload--gray" data-before-chosen="Escolher arquivo" data-after-chosen="Mudar arquivo">Escolher arquivo</span></label>
+                <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon-left icon-upload--gray" data-before-chosen="Escolher arquivo" data-after-chosen="Mudar arquivo">Escolher arquivo</span></label>
                 <div class="fr tr cl how-to mt1 measure-narrow">
                   <button class="pa0 bg-white bn f8 ttu tracked b accent modal-trigger trigger--how-to-do">veja como fazer							</button>
                 </div>
@@ -125,14 +125,14 @@
             </div>
           </div>
           <!-- RECIPIENTS PREVIEW-->
-          <div class="fl mt4 main-gray">
-            <h4 class="f1 b">237</h4><span class="f6 lh-title">números escolhidos</span>
+          <div class="fl mt4 accent b">
+            <h4 class="f1 lh-solid dtc v-btm">548.904</h4><span class="f6 lh-title dtc v-btm pl2">números<br>escolhidos</span>
           </div>
         </div>
       </div>
       <!-- MESSAGE-->
       <div class="fl w-100 bb b--black-20">
-        <div class="fl w-100 pt4 pb6 mw8">
+        <div class="fl w-100 pt4 pb5 mw8">
           <h3 class="fl black f3 lh-solid">Escreva sua mensagem</h3>
           <div class="fl w-100 mt4 cl relative">
             <!-- FIRST HALF OF THE GRID-->
@@ -140,23 +140,22 @@
               <p class="main-gray lh-copy">Use os dados de seus contatos para enviar mensagens personalizadas:</p>
               <div class="mt3">
                 <ul class="list pl0">
-                  <li class="bg-medium-accent f7 b fl lh-title pa2 mr2 mb2"><a class="accent has-icon has-icon-left icon-plus--blue" href="javascript:" onclick="insertAtCaret('mensagem-texto', '[Primeiro-nome]')">Primeiro nome</a></li>
-                  <li class="bg-medium-accent f7 b fl lh-title pa2 mr2 mb2"><a class="accent has-icon has-icon-left icon-plus--blue" href="javascript:" onclick="insertAtCaret('mensagem-texto', '[Sobrenome]')">Sobrenome</a></li>
-                  <li class="bg-medium-accent f7 b fl lh-title pa2 mr2 mb2"><a class="accent has-icon has-icon-left icon-plus--blue" href="javascript:" onclick="insertAtCaret('mensagem-texto', '[Mensagem]')">Mensagem</a></li>
-                  <li class="bg-medium-accent f7 b fl lh-title pa2 mr2 mb2"><a class="accent has-icon has-icon-left icon-plus--blue" href="javascript:" onclick="insertAtCaret('mensagem-texto', '[xxx.xxx.xxx-xx]')">CPF</a></li>
-                  <li class="bg-medium-accent f7 b fl lh-title pa2 mr2 mb2"><a class="accent has-icon has-icon-left icon-plus--blue" href="javascript:" onclick="insertAtCaret('mensagem-texto', '[Apelido]')">Apelido								</a></li>
+                  <li class="bg-medium-accent f7 b fl lh-title pa2 mr2 mb2"><a class="accent has-icon-left icon-plus--blue" href="javascript:" onclick="insertAtCaret('mensagem-texto', '[Primeiro-nome]')">Primeiro nome</a></li>
+                  <li class="bg-medium-accent f7 b fl lh-title pa2 mr2 mb2"><a class="accent has-icon-left icon-plus--blue" href="javascript:" onclick="insertAtCaret('mensagem-texto', '[Sobrenome]')">Sobrenome</a></li>
+                  <li class="bg-medium-accent f7 b fl lh-title pa2 mr2 mb2"><a class="accent has-icon-left icon-plus--blue" href="javascript:" onclick="insertAtCaret('mensagem-texto', '[Mensagem]')">Mensagem</a></li>
+                  <li class="bg-medium-accent f7 b fl lh-title pa2 mr2 mb2"><a class="accent has-icon-left icon-plus--blue" href="javascript:" onclick="insertAtCaret('mensagem-texto', '[xxx.xxx.xxx-xx]')">CPF</a></li>
+                  <li class="bg-medium-accent f7 b fl lh-title pa2 mr2 mb2"><a class="accent has-icon-left icon-plus--blue" href="javascript:" onclick="insertAtCaret('mensagem-texto', '[Apelido]')">Apelido								</a></li>
                 </ul>
               </div>
               <textarea class="characterCount f6 mt4 b--black-20 h5 lh-copy pa2" id="mensagem-texto" data-length="160" placeholder="Obs.: Caracteres especiais e acentos diminuem seu limite de caracteres"></textarea>
-              <p class="mensagem-texto main-gray tr lh-copy mt1">
-                <div class="checkbox relative mt4 nl3">
-                  <input type="checkbox" id="flash-sms">
-                  <label class="pl3 f5 black normal" for="flash-sms">Enviar como Flash SMS</label><span class="has-icon has-icon-right icon-tooltip modal-trigger trigger--flash-sms"></span>
-                </div>
-              </p>
+              <p class="mensagem-texto main-gray tr lh-copy mt1"></p>
               <!-- RECIPIENTS PREVIEW-->
-              <div class="mt5 main-gray">
-                <h4 class="f1 b">652</h4><span class="f6 lh-title">mensagens serão<br>enviadas</span>
+              <div class="mt4 accent b">
+                <h4 class="f1 lh-solid dtc v-btm">120.098.098</h4><span class="f6 lh-title dtc v-btm pl2">mensagens serão<br>enviadas</span>
+              </div>
+              <div class="checkbox relative mt5 nl3">
+                <input type="checkbox" id="flash-sms">
+                <label class="pl3 f5 black normal" for="flash-sms">Enviar como Flash SMS</label><span class="has-icon-right icon-tooltip modal-trigger trigger--flash-sms"></span>
               </div>
             </div>
             <!-- SECOND HALF OF THE GRID		-->
@@ -268,10 +267,10 @@
         </div>
       </div>
       <!-- SEND BUTTON-->
-      <button class="bg-success ttu tracked div fixed left-0 right-0 bottom-0 w-100 bn tr f7 b white pa4 lh-solid dn" id="send-message"><span class="has-icon has-icon-right icon-check--white">enviar mensagem</span></button>
+      <button class="bg-green ttu tracked div fixed left-0 right-0 bottom-0 w-100 bn tr f7 b white pa4 lh-solid dn" id="send-message"><span class="has-icon-right icon-check--white">enviar mensagem</span></button>
     </section>
     <!-- MODAL BOILERPLATE-->
-    <div class="dn modal bg-black-50 fixed vh-100 left-0 right-0 o-0">
+    <div class="modal bg-black-50 fixed vh-100 left-0 right-0">
       <!-- 1. HOW TO FORMAT FILES-->
       <div class="modal__body modal--how-to-do bg-white w-auto mw6 center mt4 pt4 ph4 dn">
         <button class="close-modal pa0 bn bg-white accent ttu tracked b f7 lh-copy has-icon-left icon-close-blue db">fechar</button>
@@ -304,6 +303,110 @@
               <p class="accent lh-copy mt4">Ok</p>
             </div><img class="dtc v-base" src="img/phone-flash-sms.jpg">
           </div>
+        </div>
+      </div>
+      <!-- 3. COMPARING HEADERS FROM IMPORTED CONTACTS-->
+      <div class="modal__body modal--import-contact bg-white w-auto mw6 center mt4 pa4 bt green bw2">
+        <h2 class="f4 lh-solid">Contatos importados com sucesso!</h2>
+        <p class="mt4 lh-copy pb4 bb b--black-20 main-gray">Agora nos diga, aqui embaixo, a que dados se referem os campos personalizados do seu arquivo. <span class="b">Lembre-se: nome e telefone são obrigatórios.</span></p>
+        <div class="flex mt4 nl3 nr3">
+          <div class="fl w-50 ph3">
+            <h4 class="black has-icon-right icon-arrow-right">Do seu arquivo</h4>
+            <div class="mt2 fl w-100">
+              <!-- CUSTOM FIELD-->
+              <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Nome</span></div>
+              <!-- CUSTOM FIELD-->
+              <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Apeldo</span></div>
+              <!-- CUSTOM FIELD-->
+              <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Sexo</span></div>
+              <!-- CUSTOM FIELD-->
+              <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Endereço</span></div>
+            </div>
+          </div>
+          <div class="fl w-50 ph3">
+            <h4 class="black">Para o Movile Messaging</h4>
+            <div class="mt2 fl w-100">
+              <!-- CUSTOM FIELD-->
+              <div class="fl w-100 relative">
+                <div class="input input--inline input--inline--dropdown has-icon-right icon-dropdown"><span class="pointer">É algum desses?</span></div>
+                <div class="dropdown content-box">
+                  <ul class="pt0 pb1 pl0">
+                    <li><span>Nome</span></li>
+                    <li><span>Celular</span></li>
+                    <li><span>Estado</span></li>
+                    <li><span>Cidade</span></li>
+                    <li><span>Email</span></li>
+                    <li><span>Empresa</span></li>
+                    <li><span>Gênero</span></li>
+                    <li><span>Aniversário</span></li>
+                    <li><span>CPF</span></li>
+                    <li><span>CNPJ</span></li>
+                    <li><span>Apelido</span></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- CUSTOM FIELD-->
+              <div class="fl w-100 relative">
+                <div class="input input--inline input--inline--dropdown has-icon-right icon-dropdown"><span class="pointer">É algum desses?</span></div>
+                <div class="dropdown content-box">
+                  <ul class="pt0 pb1 pl0">
+                    <li><span>Nome</span></li>
+                    <li><span>Celular</span></li>
+                    <li><span>Estado</span></li>
+                    <li><span>Cidade</span></li>
+                    <li><span>Email</span></li>
+                    <li><span>Empresa</span></li>
+                    <li><span>Gênero</span></li>
+                    <li><span>Aniversário</span></li>
+                    <li><span>CPF</span></li>
+                    <li><span>CNPJ</span></li>
+                    <li><span>Apelido</span></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- CUSTOM FIELD-->
+              <div class="fl w-100 relative">
+                <div class="input input--inline input--inline--dropdown has-icon-right icon-dropdown"><span class="pointer">É algum desses?</span></div>
+                <div class="dropdown content-box">
+                  <ul class="pt0 pb1 pl0">
+                    <li><span>Nome</span></li>
+                    <li><span>Celular</span></li>
+                    <li><span>Estado</span></li>
+                    <li><span>Cidade</span></li>
+                    <li><span>Email</span></li>
+                    <li><span>Empresa</span></li>
+                    <li><span>Gênero</span></li>
+                    <li><span>Aniversário</span></li>
+                    <li><span>CPF</span></li>
+                    <li><span>CNPJ</span></li>
+                    <li><span>Apelido</span></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- CUSTOM FIELD-->
+              <div class="fl w-100 relative">
+                <div class="input input--inline input--inline--dropdown has-icon-right icon-dropdown"><span class="pointer">É algum desses?</span></div>
+                <div class="dropdown content-box">
+                  <ul class="pt0 pb1 pl0">
+                    <li><span>Nome</span></li>
+                    <li><span>Celular</span></li>
+                    <li><span>Estado</span></li>
+                    <li><span>Cidade</span></li>
+                    <li><span>Email</span></li>
+                    <li><span>Empresa</span></li>
+                    <li><span>Gênero</span></li>
+                    <li><span>Aniversário</span></li>
+                    <li><span>CPF</span></li>
+                    <li><span>CNPJ</span></li>
+                    <li><span>Apelido																						</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 mt4 tr">
+          <button class="cta cta-accent"><span class="has-icon-left icon-check--white">pronto</span></button>
         </div>
       </div>
     </div>
