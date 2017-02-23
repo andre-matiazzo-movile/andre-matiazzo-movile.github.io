@@ -215,6 +215,12 @@
 	}
 }
 
+.icon-arrow-right {
+	&:after {
+		background-image: url('../img/icons/arrow-right.png');
+	}
+}
+
 .icon-arrow-right--blue {
 	&:after {
 		background-image: url('../img/icons/arrow-right-blue.png');
@@ -224,6 +230,12 @@
 .icon-close-black {
 	&:after {
 		background-image: url('../img/icons/close-black.png');
+	}
+}
+
+.icon-close-white {
+	&:after {
+		background-image: url('../img/icons/close-white.png');
 	}
 }
 

@@ -69,6 +69,10 @@ input {
 	}
 }
 
+.input--inline--dropdown {
+	cursor: pointer;
+}
+
 textarea.input,
 textarea.input.input--inline {
 	padding: .5rem;
