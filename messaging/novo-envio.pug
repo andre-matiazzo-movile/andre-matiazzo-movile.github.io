@@ -109,8 +109,9 @@ html(lang='pt-br')
 									input.dn(type='reset', id='reset-file')
 								label.b.mt2.fl.cl.cta.cta-secondary.dib.w-auto.tr.main-gray(for="import-file")
 									span.has-icon-left.icon-upload--gray(data-before-chosen="Escolher arquivo", data-after-chosen='Mudar arquivo') Escolher arquivo
-								.fr.tr.cl.how-to.mt1.measure-narrow
-									button.pa0.bg-white.bn.f8.ttu.tracked.b.accent.modal-trigger.trigger--how-to-do veja como fazer							
+								.fr.cl.how-to.mt2.mw5
+									p.fl.mw5.w-100.lh-copy.main-gray.f6 .csv, .xls ou .txt de até 15mb
+									button.mt2.pa0.bg-white.bn.f8.ttu.tracked.b.accent.modal-trigger.trigger--how-to-do exemplo			
 								.fl.cb.dn.file-name.bg-medium-accent.pa2.mr2.mb2.mt2
 									a.has-icon-left.icon-close-blue
 									span.f7.accent.b
@@ -269,185 +270,237 @@ html(lang='pt-br')
 												span Henrique Perticarati
 											li
 												span Juliana Gaspari
-			// SEND BUTTON
-			button#send-message.bg-green.ttu.tracked.div.fixed.left-0.right-0.bottom-0.w-100.bn.tr.f7.b.white.pa4.lh-solid.dn
-				span.has-icon-right.icon-check--white enviar mensagem
-		// MODAL BOILERPLATE
-		div.modal.bg-black-50.fixed.vh-100.left-0.right-0
-			// 1. HOW TO FORMAT FILES
-			.modal__body.modal--how-to-do.bg-white.w-auto.mw6.center.mt4.pt4.ph4.dn
-				button.close-modal.pa0.bn.bg-white.accent.ttu.tracked.b.f7.lh-copy.has-icon-left.icon-close-blue.db fechar
-				div
-					h2.mt4.f4 Arquivos aceitos
-					p.mt3.lh-copy São aceitos arquivos de até 15mb nos seguintes formatos:
-					div.mt2
-						h3.f4.dib.mr3 .csv
-						h3.f4.dib .txt
-				div
-					h2.mt4.f4 Formatando seu arquivo
-					p.mt3.lh-copy 1. Sua primeira coluna deverá conter, obrigatoriamente, os números dos destinatários
-					p.mt3.lh-copy 2. Use as outras colunas para criar campos dinâmicos e envie mensagens personalizadas para cada um de seus destinatários.
-					div.mt3
-						img(src="img/envio_how-to-do.png")
-			// 2. WHAT IS FLASH SMS
-			.modal__body.modal--flash-sms.bg-white.w-auto.mw6.center.mt4.pt4.ph4.dn
-				button.close-modal.pa0.bn.bg-white.accent.ttu.tracked.b.f7.lh-copy.has-icon-left.icon-close-blue.db fechar
-				div
-					h2.mt4.f4 Flash SMS
-					p.mt3.lh-copy Um SMS que aparece na tela do celular e a bloqueia até que alguma ação seja tomada. Ele também traz a vantagem de não ocupar nenhum espaço na memória do celular do destinatário.
-				div.mt4
-					div.center.w5.relative
-						div.absolute.left-0.right-0.w-75.center.mt6.tc
-							p.white.lh-copy.f7 Ola, Priscilla. Acessando sua conta pelo nosso aplicativo, voce não precisa gastar seus dados.
-							p.accent.lh-copy.mt4 Ok
-						img.dtc.v-base(src="img/phone-flash-sms.jpg")
-			// 3. COMPARING HEADERS FROM IMPORTED CONTACTS
-			.modal__body.modal--import-contact.bg-white.w-auto.mw6.center.mt4.pa4.bt.green.bw2
-				h2.f4.lh-solid.green Contatos importados com sucesso!
-				p.mt4.lh-copy.pb4.bb.b--black-20.main-gray Agora nos diga a que se referem os campos personalizados do seu arquivo. 
-					span.b Nome e telefone são obrigatórios.
-				div.flex.mt4.nl3.nr3
-					.fl.w-50.ph3
-						h4.main-gray.has-icon-right.icon-arrow-right Do seu arquivo:
-						div.mt2.fl.w-100
-							// CUSTOM FIELD
-							div.fl.w-100.mt3.pb2.bb.b--transparent.has-icon-right.icon-arrow-right
-								span.f6.b.lh-copy.main-gray Nome
-							// CUSTOM FIELD
-							div.fl.w-100.mt3.pb2.bb.b--transparent.has-icon-right.icon-arrow-right
-								span.f6.b.lh-copy.main-gray Apeldo
-							// CUSTOM FIELD
-							div.fl.w-100.mt3.pb2.bb.b--transparent.has-icon-right.icon-arrow-right
-								span.f6.b.lh-copy.main-gray Sexo
-							// CUSTOM FIELD
-							div.fl.w-100.mt3.pb2.bb.b--transparent.has-icon-right.icon-arrow-right
-								span.f6.b.lh-copy.main-gray Endereço
-					.fl.w-50.ph3
-						h4.black Para o Movile Messaging:
-						div.mt2.fl.w-100
-							// CUSTOM FIELD
-							.fl.w-100.relative
-								div.input.input--inline.input--inline--dropdown.has-icon-right.icon-dropdown
-									span.pointer Nenhum desses
-								.dropdown.content-box
-									ul.pt0.pb1.pl0
-										li
-											span Nenhum desses
-										li
-											span Nome
-										li
-											span Celular
-										li
-											span Estado
-										li
-											span Cidade
-										li
-											span Email
-										li
-											span Empresa
-										li
-											span Gênero
-										li
-											span Aniversário
-										li
-											span CPF
-										li
-											span CNPJ
-										li
-											span Apelido
-							// CUSTOM FIELD
-							.fl.w-100.relative
-								div.input.input--inline.input--inline--dropdown.has-icon-right.icon-dropdown
-									span.pointer Nenhum desses
-								.dropdown.content-box
-									ul.pt0.pb1.pl0
-										li
-											span Nenhum desses
-										li
-											span Nome
-										li
-											span Celular
-										li
-											span Estado
-										li
-											span Cidade
-										li
-											span Email
-										li
-											span Empresa
-										li
-											span Gênero
-										li
-											span Aniversário
-										li
-											span CPF
-										li
-											span CNPJ
-										li
-											span Apelido
-							// CUSTOM FIELD
-							.fl.w-100.relative
-								div.input.input--inline.input--inline--dropdown.has-icon-right.icon-dropdown
-									span.pointer Nenhum desses
-								.dropdown.content-box
-									ul.pt0.pb1.pl0
-										li
-											span Nenhum desses
-										li
-											span Nome
-										li
-											span Celular
-										li
-											span Estado
-										li
-											span Cidade
-										li
-											span Email
-										li
-											span Empresa
-										li
-											span Gênero
-										li
-											span Aniversário
-										li
-											span CPF
-										li
-											span CNPJ
-										li
-											span Apelido
-							// CUSTOM FIELD
-							.fl.w-100.relative
-								div.input.input--inline.input--inline--dropdown.has-icon-right.icon-dropdown
-									span.pointer Nenhum desses
-								.dropdown.content-box
-									ul.pt0.pb1.pl0
-										li
-											span Nenhum desses
-										li
-											span Nome
-										li
-											span Celular
-										li
-											span Estado
-										li
-											span Cidade
-										li
-											span Email
-										li
-											span Empresa
-										li
-											span Gênero
-										li
-											span Aniversário
-										li
-											span CPF
-										li
-											span CNPJ
-										li
-											span Apelido																					
-				.w-100.mt4.tr
-						button.cta.cta-accent
-							span.has-icon-left.icon-check--white pronto
+			// REVIEW
+			div.fl.w-100
+				div.fl.w-100.pt5.mw8.pb4.relative
+					h3.fl.black.f-subheadline.lh-solid Resumo
+					// FIRST HALF OF THE GRID
+					.fl.w-50.cl.pr5
+						.fl.mt4.pt2.w-100
+							span.f5.lh-title.black.b Números escolhidos
+							h4.f1.lh-solid.b.main-gray 548.904
+							//- span.f6.lh-title.accent.b.dib.mt1 números escolhidos
+						.fl.mt4.pt2.w-100
+							span.f5.lh-title.black.b Quantas mensagens
+							h4.f1.lh-solid.b.main-gray 120.098.098
+							//- span.f6.lh-title.accent.b.dib.mt1 mensagens
+						.fl.mt4.pt2.w-100
+							span.f5.lh-title.black.b Texto da mensagem
+							p.mt2.f6.lh-copy.main-gray.measure [Primeiro nome] acesse nosso site agora para resgatar seu cupom de desconto
+						.fl.mt4.pt2.w-100
+							span.f5.lh-title.black.b Campanha
+							p.mt2.f6.lh-copy.main-gray.measure Nenhuma
+						.fl.mt4.pt2.w-100
+							span.f5.lh-title.black.b Agendamento
+							p.mt2.f6.lh-copy.main-gray.measure 1ª parte: 14/02/17, das 17:00 às 18:00
+							p.mt2.f6.lh-copy.main-gray.measure 2ª parte: 14/02/17, às 20:00
+					// SECOND HALF OF THE GRID
+					.fl.w-50.pl5
+						.fl.mt4.pt2.w-100
+							span.f5.lh-title.red.b Erros para corrigir
+							p.mt2.f6.lh-copy.red.nl3
+								span.b.dtc 1. 
+								span.dtc.pl2.measure-narrow A linha 125 do seu arquivo .csv está com uma célula a mais
+							p.mt2.f6.lh-copy.red.nl3
+								span.b.dtc 2. 
+								span.dtc.pl2.measure-narrow A linha 115 do seu arquivo .csv está com uma célula a mais
+					// SEND BUTTON
+					button#send-message.shadow-0.bg-black-20.ttu.tracked.w-100.tr.f6.b.white.pa4.lh-solid.mt5
+						span.has-icon-right.icon-continue enviar mensagem
+			//- button#send-message.bg-green.ttu.tracked.div.fixed.left-0.right-0.bottom-0.w-100.bn.tr.f7.b.white.pa4.lh-solid.dn
+			//- 	span.has-icon-right.icon-check--white enviar mensagem
+			// MODAL BOILERPLATE	
+			div.modal.dn.o-0
+				// MODAL BG
+				div.modal-bg.bg-black-50.fixed.vh-100.left-0.right-0.top-0
+				// MODAL WRAPPER
+				div.modal-wrapper.fixed.mw6.center.w-auto.left-0.right-0
+					// 1. HOW TO FORMAT FILES
+					.modal__body.absolute.modal--how-to-do.bg-white.pt4.ph4.dn
+						button.close-modal.pa0.bn.bg-white.accent.ttu.tracked.b.f7.lh-copy.has-icon-left.icon-close-blue.db fechar
+						div
+							h2.mt4.f4 Arquivos aceitos
+							p.mt3.lh-copy São aceitos arquivos de até 15mb nos seguintes formatos:
+							div.mt2
+								h3.f4.dib.mr3 .csv
+								h3.f4.dib .txt
+						div
+							h2.mt4.f4 Formatando seu arquivo
+							p.mt3.lh-copy 1. Sua primeira coluna deverá conter, obrigatoriamente, os números dos destinatários
+							p.mt3.lh-copy 2. Use as outras colunas para criar campos dinâmicos e envie mensagens personalizadas para cada um de seus destinatários.
+							div.mt3
+								img(src="img/envio_how-to-do.png")
+					// 2. WHAT IS FLASH SMS
+					.modal__body.modal--flash-sms.bg-white.pt4.ph4.dn
+						button.close-modal.pa0.bn.bg-white.accent.ttu.tracked.b.f7.lh-copy.has-icon-left.icon-close-blue.db fechar
+						div
+							h2.mt4.f4 Flash SMS
+							p.mt3.lh-copy Um SMS que aparece na tela do celular e a bloqueia até que alguma ação seja tomada. Ele também traz a vantagem de não ocupar nenhum espaço na memória do celular do destinatário.
+						div.mt4
+							div.center.w5.relative
+								div.absolute.left-0.right-0.w-75.center.mt6.tc
+									p.white.lh-copy.f7 Ola, Priscilla. Acessando sua conta pelo nosso aplicativo, voce não precisa gastar seus dados.
+									p.accent.lh-copy.mt4 Ok
+								img.dtc.v-base(src="img/phone-flash-sms.jpg")
+					// 3. COMPARING HEADERS FROM IMPORTED CONTACTS
+					.modal__body.modal--import-contact.bg-white.pa4.bt.green.bw2.dn
+						h2.f4.lh-solid.green Contatos importados com sucesso!
+						p.mt4.lh-copy.pb4.bb.b--black-20 Agora nos diga a que se referem os campos personalizados do seu arquivo. 
+							span.b Nome e telefone são obrigatórios.
+						div.flex.mt4.nl3.nr3
+							.fl.w-50.ph3
+								h4.main-gray.has-icon-right.icon-arrow-right Do seu arquivo:
+								div.mt2.fl.w-100
+									// CUSTOM FIELD
+									div.fl.w-100.mt3.pb2.bb.b--transparent.has-icon-right.icon-arrow-right
+										span.f6.b.lh-copy.main-gray Nome
+									// CUSTOM FIELD
+									div.fl.w-100.mt3.pb2.bb.b--transparent.has-icon-right.icon-arrow-right
+										span.f6.b.lh-copy.main-gray Apeldo
+									// CUSTOM FIELD
+									div.fl.w-100.mt3.pb2.bb.b--transparent.has-icon-right.icon-arrow-right
+										span.f6.b.lh-copy.main-gray Sexo
+									// CUSTOM FIELD
+									div.fl.w-100.mt3.pb2.bb.b--transparent.has-icon-right.icon-arrow-right
+										span.f6.b.lh-copy.main-gray Endereço
+									// CUSTOM FIELD
+									div.fl.w-100.mt3.pb2.bb.b--transparent.has-icon-right.icon-arrow-right
+										span.f6.b.lh-copy.main-gray Nome
+									// CUSTOM FIELD
+									div.fl.w-100.mt3.pb2.bb.b--transparent.has-icon-right.icon-arrow-right
+										span.f6.b.lh-copy.main-gray Apeldo
+									// CUSTOM FIELD
+									div.fl.w-100.mt3.pb2.bb.b--transparent.has-icon-right.icon-arrow-right
+										span.f6.b.lh-copy.main-gray Sexo
+									// CUSTOM FIELD
+									div.fl.w-100.mt3.pb2.bb.b--transparent.has-icon-right.icon-arrow-right
+										span.f6.b.lh-copy.main-gray Endereço										
+							.fl.w-50.ph3
+								h4.black Para o Movile Messaging:
+								div.mt2.fl.w-100
+									// CUSTOM FIELD
+									.fl.w-100.relative
+										div.input.input--inline.input--inline--dropdown.has-icon-right.icon-dropdown
+											span.pointer Nenhum desses
+										.dropdown.content-box
+											ul.pt0.pb1.pl0
+												li
+													span Nenhum desses
+												li
+													span Nome
+												li
+													span Celular
+												li
+													span Estado
+												li
+													span Cidade
+												li
+													span Email
+												li
+													span Empresa
+												li
+													span Gênero
+												li
+													span Aniversário
+												li
+													span CPF
+												li
+													span CNPJ
+												li
+													span Apelido
+									// CUSTOM FIELD
+									.fl.w-100.relative
+										div.input.input--inline.input--inline--dropdown.has-icon-right.icon-dropdown
+											span.pointer Nenhum desses
+										.dropdown.content-box
+											ul.pt0.pb1.pl0
+												li
+													span Nenhum desses
+												li
+													span Nome
+												li
+													span Celular
+												li
+													span Estado
+												li
+													span Cidade
+												li
+													span Email
+												li
+													span Empresa
+												li
+													span Gênero
+												li
+													span Aniversário
+												li
+													span CPF
+												li
+													span CNPJ
+												li
+													span Apelido
+									// CUSTOM FIELD
+									.fl.w-100.relative
+										div.input.input--inline.input--inline--dropdown.has-icon-right.icon-dropdown
+											span.pointer Nenhum desses
+										.dropdown.content-box
+											ul.pt0.pb1.pl0
+												li
+													span Nenhum desses
+												li
+													span Nome
+												li
+													span Celular
+												li
+													span Estado
+												li
+													span Cidade
+												li
+													span Email
+												li
+													span Empresa
+												li
+													span Gênero
+												li
+													span Aniversário
+												li
+													span CPF
+												li
+													span CNPJ
+												li
+													span Apelido
+									// CUSTOM FIELD
+									.fl.w-100.relative
+										div.input.input--inline.input--inline--dropdown.has-icon-right.icon-dropdown
+											span.pointer Nenhum desses
+										.dropdown.content-box
+											ul.pt0.pb1.pl0
+												li
+													span Nenhum desses
+												li
+													span Nome
+												li
+													span Celular
+												li
+													span Estado
+												li
+													span Cidade
+												li
+													span Email
+												li
+													span Empresa
+												li
+													span Gênero
+												li
+													span Aniversário
+												li
+													span CPF
+												li
+													span CNPJ
+												li
+													span Apelido																					
+						.w-100.mt4.tr
+								button.cta.cta-accent
+									span.has-icon-left.icon-check--white pronto
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
 	script.

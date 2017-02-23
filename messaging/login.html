@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movile Messaging – Login</title>
+    <meta name="movile-messaging" content="Movile Messaging">
+    <!-- For the charts-->
+    <link href="charts/chartist.min.css" rel="stylesheet">
+    <script src="charts/chartist.min.js" charset="utf-8"></script>
+    <!-- Tachyons CSS-->
+    <link rel="stylesheet" href="stylesheets/tachyons.min.css">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- Typekit-->
+    <script src="https://use.typekit.net/fja4naa.js"></script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+    <style>.table-operadora, .table-subconta, .table-inicio{display:none;}</style>
+  </head>
+  <body class="bg-sidebar">
+    <aside class="fixed fl h-100 bg-sidebar"></aside>
+    <!-- MAIN CONTENT-->
+    <section class="main-content ph4 pb5 fr"><img class="db" src="img/logo-white.png" alt="Logo Movile Messaging"></section>
+  </body>
+  <!-- jQuery-->
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <script>
+    $('.dropdown-checkbox').click(function() {
+    	var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
+    	if (length == 0) {
+    		$(this).prop('checked', true);
+    	}
+    	var selected = $('.dropdown-checkbox:checked').map(function() {
+    	    return this.value;
+    	}).get().join(', ');
+    	$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
+    });
+  </script>
+</html>

@@ -27,12 +27,14 @@ $theblack: #37474F;
 .theblack{color:$theblack}
 .bg-theblack{background-color:$theblack}
 $green: #00DD72;
+// $green: #00e878;
+$green: #33e48e;
 .green{color:$green}
 .bg-green{background-color:$green}
 $lighter-green: #E0FBEE;
 .lighter-green {color: $lighter-green}
 .bg-lighter-green {background-color: $lighter-green}
-$red: rgba(255,0,80,0.5);
+$red: #ff80a8;
 .red{color:$red}
 $lighter-red: #FFE0EA;
 .lighter-red {color: $lighter-red}

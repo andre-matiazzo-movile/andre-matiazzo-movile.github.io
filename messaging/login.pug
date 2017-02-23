@@ -1,0 +1,41 @@
+doctype html
+html(lang='pt-br')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Movile Messaging – Login
+		meta(name='movile-messaging', content='Movile Messaging')
+		// For the charts
+		link(href='charts/chartist.min.css', rel='stylesheet')
+		script(src='charts/chartist.min.js', charset='utf-8')
+		// Tachyons CSS
+		link(rel='stylesheet', href='stylesheets/tachyons.min.css')
+		// Main CSS
+		link(rel='stylesheet', href='stylesheets/main.css')
+		// Typekit
+		script(src='https://use.typekit.net/fja4naa.js')
+		script.
+			try{Typekit.load({ async: false });}catch(e){}
+		style.
+			.table-operadora, .table-subconta, .table-inicio{display:none;}
+	body.bg-sidebar
+		aside.fixed.fl.h-100.bg-sidebar
+		// MAIN CONTENT
+		section.main-content.ph4.pb5.fr
+			img.db(src='img/logo-white.png', alt='Logo Movile Messaging')
+						
+	// jQuery
+	script(src='js/jquery-3.1.0.min.js')
+	script.
+		$('.dropdown-checkbox').click(function() {
+			var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
+			if (length == 0) {
+				$(this).prop('checked', true);
+			}
+			var selected = $('.dropdown-checkbox:checked').map(function() {
+			    return this.value;
+			}).get().join(', ');
+			$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
+		});
+

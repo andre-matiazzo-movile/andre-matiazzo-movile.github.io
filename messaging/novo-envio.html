@@ -116,8 +116,9 @@
                   <input class="dn" type="reset" id="reset-file">
                 </form>
                 <label class="b mt2 fl cl cta cta-secondary dib w-auto tr main-gray" for="import-file"><span class="has-icon-left icon-upload--gray" data-before-chosen="Escolher arquivo" data-after-chosen="Mudar arquivo">Escolher arquivo</span></label>
-                <div class="fr tr cl how-to mt1 measure-narrow">
-                  <button class="pa0 bg-white bn f8 ttu tracked b accent modal-trigger trigger--how-to-do">veja como fazer							</button>
+                <div class="fr cl how-to mt2 mw5">
+                  <p class="fl mw5 w-100 lh-copy main-gray f6">.csv, .xls ou .txt de até 15mb</p>
+                  <button class="mt2 pa0 bg-white bn f8 ttu tracked b accent modal-trigger trigger--how-to-do">exemplo			</button>
                 </div>
                 <div class="fl cb dn file-name bg-medium-accent pa2 mr2 mb2 mt2"><a class="has-icon-left icon-close-blue"></a><span class="f7 accent b"></span></div>
               </div>
@@ -266,154 +267,199 @@
           </div>
         </div>
       </div>
-      <!-- SEND BUTTON-->
-      <button class="bg-green ttu tracked div fixed left-0 right-0 bottom-0 w-100 bn tr f7 b white pa4 lh-solid dn" id="send-message"><span class="has-icon-right icon-check--white">enviar mensagem</span></button>
+      <!-- REVIEW-->
+      <div class="fl w-100">
+        <div class="fl w-100 pt5 mw8 pb4 relative">
+          <h3 class="fl black f-subheadline lh-solid">Resumo</h3>
+          <!-- FIRST HALF OF THE GRID-->
+          <div class="fl w-50 cl pr5">
+            <div class="fl mt4 pt2 w-100"><span class="f5 lh-title black b">Números escolhidos</span>
+              <h4 class="f1 lh-solid b main-gray">548.904</h4>
+            </div>
+            <div class="fl mt4 pt2 w-100"><span class="f5 lh-title black b">Quantas mensagens</span>
+              <h4 class="f1 lh-solid b main-gray">120.098.098</h4>
+            </div>
+            <div class="fl mt4 pt2 w-100"><span class="f5 lh-title black b">Texto da mensagem</span>
+              <p class="mt2 f6 lh-copy main-gray measure">[Primeiro nome] acesse nosso site agora para resgatar seu cupom de desconto</p>
+            </div>
+            <div class="fl mt4 pt2 w-100"><span class="f5 lh-title black b">Campanha</span>
+              <p class="mt2 f6 lh-copy main-gray measure">Nenhuma</p>
+            </div>
+            <div class="fl mt4 pt2 w-100"><span class="f5 lh-title black b">Agendamento</span>
+              <p class="mt2 f6 lh-copy main-gray measure">1ª parte: 14/02/17, das 17:00 às 18:00</p>
+              <p class="mt2 f6 lh-copy main-gray measure">2ª parte: 14/02/17, às 20:00</p>
+            </div>
+          </div>
+          <!-- SECOND HALF OF THE GRID-->
+          <div class="fl w-50 pl5">
+            <div class="fl mt4 pt2 w-100"><span class="f5 lh-title red b">Erros para corrigir</span>
+              <p class="mt2 f6 lh-copy red nl3"><span class="b dtc">1. </span><span class="dtc pl2 measure-narrow">A linha 125 do seu arquivo .csv está com uma célula a mais</span></p>
+              <p class="mt2 f6 lh-copy red nl3"><span class="b dtc">2. </span><span class="dtc pl2 measure-narrow">A linha 115 do seu arquivo .csv está com uma célula a mais</span></p>
+            </div>
+          </div>
+          <!-- SEND BUTTON-->
+          <button class="shadow-0 bg-black-20 ttu tracked w-100 tr f6 b white pa4 lh-solid mt5" id="send-message"><span class="has-icon-right icon-continue">enviar mensagem</span></button>
+        </div>
+      </div>
+      <!-- MODAL BOILERPLATE	-->
+      <div class="modal dn o-0">
+        <!-- MODAL BG-->
+        <div class="modal-bg bg-black-50 fixed vh-100 left-0 right-0 top-0"></div>
+        <!-- MODAL WRAPPER-->
+        <div class="modal-wrapper fixed mw6 center w-auto left-0 right-0">
+          <!-- 1. HOW TO FORMAT FILES-->
+          <div class="modal__body absolute modal--how-to-do bg-white pt4 ph4 dn">
+            <button class="close-modal pa0 bn bg-white accent ttu tracked b f7 lh-copy has-icon-left icon-close-blue db">fechar</button>
+            <div>
+              <h2 class="mt4 f4">Arquivos aceitos</h2>
+              <p class="mt3 lh-copy">São aceitos arquivos de até 15mb nos seguintes formatos:</p>
+              <div class="mt2">
+                <h3 class="f4 dib mr3">.csv</h3>
+                <h3 class="f4 dib">.txt</h3>
+              </div>
+            </div>
+            <div>
+              <h2 class="mt4 f4">Formatando seu arquivo</h2>
+              <p class="mt3 lh-copy">1. Sua primeira coluna deverá conter, obrigatoriamente, os números dos destinatários</p>
+              <p class="mt3 lh-copy">2. Use as outras colunas para criar campos dinâmicos e envie mensagens personalizadas para cada um de seus destinatários.</p>
+              <div class="mt3"><img src="img/envio_how-to-do.png"></div>
+            </div>
+          </div>
+          <!-- 2. WHAT IS FLASH SMS-->
+          <div class="modal__body modal--flash-sms bg-white pt4 ph4 dn">
+            <button class="close-modal pa0 bn bg-white accent ttu tracked b f7 lh-copy has-icon-left icon-close-blue db">fechar</button>
+            <div>
+              <h2 class="mt4 f4">Flash SMS</h2>
+              <p class="mt3 lh-copy">Um SMS que aparece na tela do celular e a bloqueia até que alguma ação seja tomada. Ele também traz a vantagem de não ocupar nenhum espaço na memória do celular do destinatário.</p>
+            </div>
+            <div class="mt4">
+              <div class="center w5 relative">
+                <div class="absolute left-0 right-0 w-75 center mt6 tc">
+                  <p class="white lh-copy f7">Ola, Priscilla. Acessando sua conta pelo nosso aplicativo, voce não precisa gastar seus dados.</p>
+                  <p class="accent lh-copy mt4">Ok</p>
+                </div><img class="dtc v-base" src="img/phone-flash-sms.jpg">
+              </div>
+            </div>
+          </div>
+          <!-- 3. COMPARING HEADERS FROM IMPORTED CONTACTS-->
+          <div class="modal__body modal--import-contact bg-white pa4 bt green bw2 dn">
+            <h2 class="f4 lh-solid green">Contatos importados com sucesso!</h2>
+            <p class="mt4 lh-copy pb4 bb b--black-20">Agora nos diga a que se referem os campos personalizados do seu arquivo. <span class="b">Nome e telefone são obrigatórios.</span></p>
+            <div class="flex mt4 nl3 nr3">
+              <div class="fl w-50 ph3">
+                <h4 class="main-gray has-icon-right icon-arrow-right">Do seu arquivo:</h4>
+                <div class="mt2 fl w-100">
+                  <!-- CUSTOM FIELD-->
+                  <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Nome</span></div>
+                  <!-- CUSTOM FIELD-->
+                  <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Apeldo</span></div>
+                  <!-- CUSTOM FIELD-->
+                  <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Sexo</span></div>
+                  <!-- CUSTOM FIELD-->
+                  <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Endereço</span></div>
+                  <!-- CUSTOM FIELD-->
+                  <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Nome</span></div>
+                  <!-- CUSTOM FIELD-->
+                  <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Apeldo</span></div>
+                  <!-- CUSTOM FIELD-->
+                  <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Sexo</span></div>
+                  <!-- CUSTOM FIELD-->
+                  <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Endereço										</span></div>
+                </div>
+              </div>
+              <div class="fl w-50 ph3">
+                <h4 class="black">Para o Movile Messaging:</h4>
+                <div class="mt2 fl w-100">
+                  <!-- CUSTOM FIELD-->
+                  <div class="fl w-100 relative">
+                    <div class="input input--inline input--inline--dropdown has-icon-right icon-dropdown"><span class="pointer">Nenhum desses</span></div>
+                    <div class="dropdown content-box">
+                      <ul class="pt0 pb1 pl0">
+                        <li><span>Nenhum desses</span></li>
+                        <li><span>Nome</span></li>
+                        <li><span>Celular</span></li>
+                        <li><span>Estado</span></li>
+                        <li><span>Cidade</span></li>
+                        <li><span>Email</span></li>
+                        <li><span>Empresa</span></li>
+                        <li><span>Gênero</span></li>
+                        <li><span>Aniversário</span></li>
+                        <li><span>CPF</span></li>
+                        <li><span>CNPJ</span></li>
+                        <li><span>Apelido</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- CUSTOM FIELD-->
+                  <div class="fl w-100 relative">
+                    <div class="input input--inline input--inline--dropdown has-icon-right icon-dropdown"><span class="pointer">Nenhum desses</span></div>
+                    <div class="dropdown content-box">
+                      <ul class="pt0 pb1 pl0">
+                        <li><span>Nenhum desses</span></li>
+                        <li><span>Nome</span></li>
+                        <li><span>Celular</span></li>
+                        <li><span>Estado</span></li>
+                        <li><span>Cidade</span></li>
+                        <li><span>Email</span></li>
+                        <li><span>Empresa</span></li>
+                        <li><span>Gênero</span></li>
+                        <li><span>Aniversário</span></li>
+                        <li><span>CPF</span></li>
+                        <li><span>CNPJ</span></li>
+                        <li><span>Apelido</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- CUSTOM FIELD-->
+                  <div class="fl w-100 relative">
+                    <div class="input input--inline input--inline--dropdown has-icon-right icon-dropdown"><span class="pointer">Nenhum desses</span></div>
+                    <div class="dropdown content-box">
+                      <ul class="pt0 pb1 pl0">
+                        <li><span>Nenhum desses</span></li>
+                        <li><span>Nome</span></li>
+                        <li><span>Celular</span></li>
+                        <li><span>Estado</span></li>
+                        <li><span>Cidade</span></li>
+                        <li><span>Email</span></li>
+                        <li><span>Empresa</span></li>
+                        <li><span>Gênero</span></li>
+                        <li><span>Aniversário</span></li>
+                        <li><span>CPF</span></li>
+                        <li><span>CNPJ</span></li>
+                        <li><span>Apelido</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- CUSTOM FIELD-->
+                  <div class="fl w-100 relative">
+                    <div class="input input--inline input--inline--dropdown has-icon-right icon-dropdown"><span class="pointer">Nenhum desses</span></div>
+                    <div class="dropdown content-box">
+                      <ul class="pt0 pb1 pl0">
+                        <li><span>Nenhum desses</span></li>
+                        <li><span>Nome</span></li>
+                        <li><span>Celular</span></li>
+                        <li><span>Estado</span></li>
+                        <li><span>Cidade</span></li>
+                        <li><span>Email</span></li>
+                        <li><span>Empresa</span></li>
+                        <li><span>Gênero</span></li>
+                        <li><span>Aniversário</span></li>
+                        <li><span>CPF</span></li>
+                        <li><span>CNPJ</span></li>
+                        <li><span>Apelido																					</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-100 mt4 tr">
+              <button class="cta cta-accent"><span class="has-icon-left icon-check--white">pronto</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <!-- MODAL BOILERPLATE-->
-    <div class="modal bg-black-50 fixed vh-100 left-0 right-0">
-      <!-- 1. HOW TO FORMAT FILES-->
-      <div class="modal__body modal--how-to-do bg-white w-auto mw6 center mt4 pt4 ph4 dn">
-        <button class="close-modal pa0 bn bg-white accent ttu tracked b f7 lh-copy has-icon-left icon-close-blue db">fechar</button>
-        <div>
-          <h2 class="mt4 f4">Arquivos aceitos</h2>
-          <p class="mt3 lh-copy">São aceitos arquivos de até 15mb nos seguintes formatos:</p>
-          <div class="mt2">
-            <h3 class="f4 dib mr3">.csv</h3>
-            <h3 class="f4 dib">.txt</h3>
-          </div>
-        </div>
-        <div>
-          <h2 class="mt4 f4">Formatando seu arquivo</h2>
-          <p class="mt3 lh-copy">1. Sua primeira coluna deverá conter, obrigatoriamente, os números dos destinatários</p>
-          <p class="mt3 lh-copy">2. Use as outras colunas para criar campos dinâmicos e envie mensagens personalizadas para cada um de seus destinatários.</p>
-          <div class="mt3"><img src="img/envio_how-to-do.png"></div>
-        </div>
-      </div>
-      <!-- 2. WHAT IS FLASH SMS-->
-      <div class="modal__body modal--flash-sms bg-white w-auto mw6 center mt4 pt4 ph4 dn">
-        <button class="close-modal pa0 bn bg-white accent ttu tracked b f7 lh-copy has-icon-left icon-close-blue db">fechar</button>
-        <div>
-          <h2 class="mt4 f4">Flash SMS</h2>
-          <p class="mt3 lh-copy">Um SMS que aparece na tela do celular e a bloqueia até que alguma ação seja tomada. Ele também traz a vantagem de não ocupar nenhum espaço na memória do celular do destinatário.</p>
-        </div>
-        <div class="mt4">
-          <div class="center w5 relative">
-            <div class="absolute left-0 right-0 w-75 center mt6 tc">
-              <p class="white lh-copy f7">Ola, Priscilla. Acessando sua conta pelo nosso aplicativo, voce não precisa gastar seus dados.</p>
-              <p class="accent lh-copy mt4">Ok</p>
-            </div><img class="dtc v-base" src="img/phone-flash-sms.jpg">
-          </div>
-        </div>
-      </div>
-      <!-- 3. COMPARING HEADERS FROM IMPORTED CONTACTS-->
-      <div class="modal__body modal--import-contact bg-white w-auto mw6 center mt4 pa4 bt green bw2">
-        <h2 class="f4 lh-solid green">Contatos importados com sucesso!</h2>
-        <p class="mt4 lh-copy pb4 bb b--black-20 main-gray">Agora nos diga a que se referem os campos personalizados do seu arquivo. <span class="b">Nome e telefone são obrigatórios.</span></p>
-        <div class="flex mt4 nl3 nr3">
-          <div class="fl w-50 ph3">
-            <h4 class="main-gray has-icon-right icon-arrow-right">Do seu arquivo:</h4>
-            <div class="mt2 fl w-100">
-              <!-- CUSTOM FIELD-->
-              <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Nome</span></div>
-              <!-- CUSTOM FIELD-->
-              <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Apeldo</span></div>
-              <!-- CUSTOM FIELD-->
-              <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Sexo</span></div>
-              <!-- CUSTOM FIELD-->
-              <div class="fl w-100 mt3 pb2 bb b--transparent has-icon-right icon-arrow-right"><span class="f6 b lh-copy main-gray">Endereço</span></div>
-            </div>
-          </div>
-          <div class="fl w-50 ph3">
-            <h4 class="black">Para o Movile Messaging:</h4>
-            <div class="mt2 fl w-100">
-              <!-- CUSTOM FIELD-->
-              <div class="fl w-100 relative">
-                <div class="input input--inline input--inline--dropdown has-icon-right icon-dropdown"><span class="pointer">Nenhum desses</span></div>
-                <div class="dropdown content-box">
-                  <ul class="pt0 pb1 pl0">
-                    <li><span>Nenhum desses</span></li>
-                    <li><span>Nome</span></li>
-                    <li><span>Celular</span></li>
-                    <li><span>Estado</span></li>
-                    <li><span>Cidade</span></li>
-                    <li><span>Email</span></li>
-                    <li><span>Empresa</span></li>
-                    <li><span>Gênero</span></li>
-                    <li><span>Aniversário</span></li>
-                    <li><span>CPF</span></li>
-                    <li><span>CNPJ</span></li>
-                    <li><span>Apelido</span></li>
-                  </ul>
-                </div>
-              </div>
-              <!-- CUSTOM FIELD-->
-              <div class="fl w-100 relative">
-                <div class="input input--inline input--inline--dropdown has-icon-right icon-dropdown"><span class="pointer">Nenhum desses</span></div>
-                <div class="dropdown content-box">
-                  <ul class="pt0 pb1 pl0">
-                    <li><span>Nenhum desses</span></li>
-                    <li><span>Nome</span></li>
-                    <li><span>Celular</span></li>
-                    <li><span>Estado</span></li>
-                    <li><span>Cidade</span></li>
-                    <li><span>Email</span></li>
-                    <li><span>Empresa</span></li>
-                    <li><span>Gênero</span></li>
-                    <li><span>Aniversário</span></li>
-                    <li><span>CPF</span></li>
-                    <li><span>CNPJ</span></li>
-                    <li><span>Apelido</span></li>
-                  </ul>
-                </div>
-              </div>
-              <!-- CUSTOM FIELD-->
-              <div class="fl w-100 relative">
-                <div class="input input--inline input--inline--dropdown has-icon-right icon-dropdown"><span class="pointer">Nenhum desses</span></div>
-                <div class="dropdown content-box">
-                  <ul class="pt0 pb1 pl0">
-                    <li><span>Nenhum desses</span></li>
-                    <li><span>Nome</span></li>
-                    <li><span>Celular</span></li>
-                    <li><span>Estado</span></li>
-                    <li><span>Cidade</span></li>
-                    <li><span>Email</span></li>
-                    <li><span>Empresa</span></li>
-                    <li><span>Gênero</span></li>
-                    <li><span>Aniversário</span></li>
-                    <li><span>CPF</span></li>
-                    <li><span>CNPJ</span></li>
-                    <li><span>Apelido</span></li>
-                  </ul>
-                </div>
-              </div>
-              <!-- CUSTOM FIELD-->
-              <div class="fl w-100 relative">
-                <div class="input input--inline input--inline--dropdown has-icon-right icon-dropdown"><span class="pointer">Nenhum desses</span></div>
-                <div class="dropdown content-box">
-                  <ul class="pt0 pb1 pl0">
-                    <li><span>Nenhum desses</span></li>
-                    <li><span>Nome</span></li>
-                    <li><span>Celular</span></li>
-                    <li><span>Estado</span></li>
-                    <li><span>Cidade</span></li>
-                    <li><span>Email</span></li>
-                    <li><span>Empresa</span></li>
-                    <li><span>Gênero</span></li>
-                    <li><span>Aniversário</span></li>
-                    <li><span>CPF</span></li>
-                    <li><span>CNPJ</span></li>
-                    <li><span>Apelido																					</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="w-100 mt4 tr">
-          <button class="cta cta-accent"><span class="has-icon-left icon-check--white">pronto</span></button>
-        </div>
-      </div>
-    </div>
   </body>
   <!-- jQuery-->
   <script src="js/jquery-3.1.0.min.js"></script>
