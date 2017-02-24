@@ -17,25 +17,34 @@ html(lang='pt-br')
 		script(src='https://use.typekit.net/fja4naa.js')
 		script.
 			try{Typekit.load({ async: false });}catch(e){}
-		style.
-			.table-operadora, .table-subconta, .table-inicio{display:none;}
-	body.bg-sidebar
-		aside.fixed.fl.h-100.bg-sidebar
+
+	body.bg-accent.min#login
 		// MAIN CONTENT
-		section.main-content.ph4.pb5.fr
-			img.db(src='img/logo-white.png', alt='Logo Movile Messaging')
+		div#particles-js.vh-100
+		section.main-content.ph4.pb5.fr(style="margin-left: 200px;")
+			div.absolute.w-100.mw8(style="top: 45%; transform: translateY(-50%)")
+				img.db.mw4(src='img/logo-white.png', alt='Logo Movile Messaging')
+				form.pv3.relative.mt3
+					.nl3.nr3
+						.w-third.relative.ph3
+							input.input.input--inline.white(type='email')
+							label.black-50 Email
+							//- p.f7.mt2.tr.black-20.input__validation Validação
+						.w-third.relative.ph3.mt4
+							input.input.input--inline.white(type='text')
+							label.black-50 Senha
+							//- p.f7.mt2.tr.black-20.input__validation Validação
+						div.ph3.w-third.mt4.pt3
+							a.ttu.white-70.tracked.b.f7.dib.pv3(href="javascript:;") esqueci a senha
+							button.cta.fr entrar
+						
 						
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
-	script.
-		$('.dropdown-checkbox').click(function() {
-			var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
-			if (length == 0) {
-				$(this).prop('checked', true);
-			}
-			var selected = $('.dropdown-checkbox:checked').map(function() {
-			    return this.value;
-			}).get().join(', ');
-			$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
-		});
+	// Filters
+	script(src='js/forms.js')
+	// Particles
+	script(src='js/particles/particles.min.js')
+	script(src='js/particles/app.js')
+	
 

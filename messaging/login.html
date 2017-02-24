@@ -15,26 +15,39 @@
     <link rel="stylesheet" href="stylesheets/main.css">
     <!-- Typekit-->
     <script src="https://use.typekit.net/fja4naa.js"></script>
-    <script>try{Typekit.load({ async: false });}catch(e){}</script>
-    <style>.table-operadora, .table-subconta, .table-inicio{display:none;}</style>
+    <script>
+      try{Typekit.load({ async: false });}catch(e){}
+      
+    </script>
   </head>
-  <body class="bg-sidebar">
-    <aside class="fixed fl h-100 bg-sidebar"></aside>
+  <body class="bg-accent min" id="login">
     <!-- MAIN CONTENT-->
-    <section class="main-content ph4 pb5 fr"><img class="db" src="img/logo-white.png" alt="Logo Movile Messaging"></section>
+    <div class="vh-100" id="particles-js"></div>
+    <section class="main-content ph4 pb5 fr" style="margin-left: 200px">
+      <div class="absolute w-100 mw8" style="top: 45%; transform: translateY(-50%)"><img class="db mw4" src="img/logo-white.png" alt="Logo Movile Messaging">
+        <form class="pv3 relative mt3">
+          <div class="nl3 nr3">
+            <div class="w-third relative ph3">
+              <input class="input input--inline white" type="email">
+              <label class="black-50">Email</label>
+            </div>
+            <div class="w-third relative ph3 mt4">
+              <input class="input input--inline white" type="text">
+              <label class="black-50">Senha</label>
+            </div>
+            <div class="ph3 w-third mt4 pt3"><a class="ttu white-70 tracked b f7 dib pv3" href="javascript:;">esqueci a senha</a>
+              <button class="cta fr">entrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
   </body>
   <!-- jQuery-->
   <script src="js/jquery-3.1.0.min.js"></script>
-  <script>
-    $('.dropdown-checkbox').click(function() {
-    	var length = $(this).parents(".dropdown-item-box").find(".dropdown-checkbox:checked").length;
-    	if (length == 0) {
-    		$(this).prop('checked', true);
-    	}
-    	var selected = $('.dropdown-checkbox:checked').map(function() {
-    	    return this.value;
-    	}).get().join(', ');
-    	$(this).parents(".has-dropdown").find(".insert-criteria").text(selected);
-    });
-  </script>
+  <!-- Filters-->
+  <script src="js/forms.js"></script>
+  <!-- Particles-->
+  <script src="js/particles/particles.min.js"></script>
+  <script src="js/particles/app.js"></script>
 </html>
