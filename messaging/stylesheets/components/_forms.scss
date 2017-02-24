@@ -468,6 +468,22 @@ textarea.input.input--inline {
 	}
 }
 
+#login {
+	.label--active {
+		color: #000 !important;
+	}
+	.input.input--inline {
+		border-color: rgba(0,0,0,0.5);
+		color: #000;
+	}
+	.input.input--inline.input--inline--active {
+		border-color: #000;
+	}
+	.cta {
+		border: none;
+	}
+}
+
 // .input-group {
 // 	float: left;
 // 	width: 100%;

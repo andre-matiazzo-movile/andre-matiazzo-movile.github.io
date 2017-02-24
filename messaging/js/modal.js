@@ -1,24 +1,28 @@
 $(document).ready(function(){
 	// Opens Modal
 	$('.modal-trigger, .input--delete').on('click', function() {
-		$('body').css('overflow-y', 'hidden');
-		$('.modal').show();
+		$('.modal').toggleClass('modal--active').show();
 		$('.modal').animate({opacity: 1}, 100);
 	//Hides other modals contents for safety
-		$('.modal__body').hide();
+	$('.modal__body').hide();
 	// Shows different types of content on modal
 		//How to format files
 		if ($(this).hasClass('trigger--how-to-do')) {
 			$('.modal--how-to-do').show();
 		// What is Flash SMS
-		} else if ($(this).hasClass('trigger--flash-sms')) {
-			$('.modal--flash-sms').show();
+	} else if ($(this).hasClass('trigger--flash-sms')) {
+		$('.modal--flash-sms').show();
 		// Confirm user deletion
-		} else {
-			$('.modal--delete').show();
-		}
+	} else {
+		$('.modal--delete').show();
+	}
+});
 
+	$('body').scroll(function () {
+		$('.modal--active').css('position', 'fixed');
 	});
+
+
 
 	// // Closes modal
 	// $('.close-modal, .modal').on('click', function(closesModal) {
@@ -44,9 +48,9 @@ $(document).ready(function(){
 	});
 
 	// Closes modal
-	$('.close-modal, .modal').on('click', function(closesModal) {
+	$('.close-modal, .modal-bg').on('click', function(closesModal) {
 		var target = $( closesModal.target );
-		if ( target.is('.close-modal, .modal') ) {
+		if ( target.is('.close-modal, .modal-bg') ) {
 			$('.deletable').removeClass('deletable');
 			closeModal();
 		}
