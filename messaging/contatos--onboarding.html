@@ -38,7 +38,7 @@
       <nav class="pl4 mt4">
         <ul class="list pl0 mt3">
           <li class="mt3"><a class="white dim f6" href="dashboard.html">Dashboard</a></li>
-          <li class="mt3"><a class="white dim f6 onboarding-02" href="novo-envio.html">Novo envio</a></li>
+          <li class="mt3"><a class="white dim f6" href="novo-envio.html">Novo envio</a></li>
           <li class="mt3"><a class="white dim f6" href="relatorios-consolidados.html">Relatórios</a></li>
           <li class="mt3"><a class="white dim f6 bb bw1" href="contatos.html">Contatos</a></li>
           <li class="mt3"><a class="white dim f6" href="permissoes.html">Permissões</a></li>
@@ -131,8 +131,8 @@
               </div>
             </div>
             <!-- ADD BUTTON-->
-            <button class="dib fr cta cta-accent download-button"><span class="has-icon-right icon-dropdown__white">adicionar</span></button>
-            <div class="download-items absolute right-0 theblack ph3 pt1 pb3 bg-white z-3"><a class="db b f6 mt3 theblack accent-hover" href="adicionar-grupo.html">Grupo</a><a class="db b f6 mt3 theblack accent-hover" href="adicionar-contato.html">Contato</a><a class="db b f6 mt3 theblack accent-hover" href="adicionar-contato-blacklist.html">Contato na Blacklist</a></div>
+            <button class="dib fr cta cta-accent download-button onboarding-02"><span class="has-icon-right icon-dropdown__white">adicionar</span></button>
+            <div class="download-items absolute right-0 theblack ph3 pt1 pb3 bg-white z-3"><a class="db b f6 mt3 theblack accent-hover" href="adicionar-grupo.html">Grupo</a><a class="db b f6 mt3 theblack accent-hover" href="adicionar-contato--onboarding.html">Contato</a><a class="db b f6 mt3 theblack accent-hover" href="adicionar-contato-blacklist.html">Contato na Blacklist</a></div>
           </div>
           <!-- FILTERS-->
           <div class="fl w-100 mt5 theblack">
@@ -234,7 +234,7 @@
                       </div>
                       <p class="f5 main-gray b mta mb3">Recebeu 9999 mensagens</p>
                     </div>
-                    <div class="nl3 nr3 bt b--black-10 pa3 tr lh-solid"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS</span></div>
+                    <div class="nl3 nr3 bt b--black-10 pa3 tr lh-solid"><span class="f7 accent b tracked has-icon-left icon-plus--blue">INFOS																						</span></div>
                   </div></a></div>
             </div>
           </div>
@@ -271,22 +271,22 @@
     });
     
     tour.addStep('step 01', {
-    title: 'Isso aí! ',
-    text: 'Você pode voltar para cá com mais calma depois e ir adicionando seus Contatos e Grupos. Agora, vamos fazer seu primeiro envio.',
+    title: 'Aqui estão seus Contatos',
+    text: 'Você pode mandar mensagens para cada um deles ou para vários de uma vez. Para se organizar ainda mais, também é possível criar Grupos a partir de Contatos.',
     attachTo: '.onboarding-01',
     advanceOn: '.onboarding-02',
     buttons: [
     	{
-    		text: 'vamos!',
+    		text: 'entendi',
           	action: tour.next
     	}
     ]
     });
     
     tour.addStep('step 02', {
-    title: '👈',
-    //- text: 'É só vir aqui',
-    attachTo: '.onboarding-02 right',
+    //- title: 'Ola',
+    text: 'Que tal começar adicionando seu primeiro Contato?',
+    attachTo: '.onboarding-02 left',
     advanceOn: '.onboarding-03',
     buttons: false
     });

@@ -1,0 +1,75 @@
+.shepherd-element.shepherd-theme-arrows.shepherd-element-attached-top.shepherd-element-attached-center.shepherd-has-title .shepherd-content:before,
+.shepherd-element.shepherd-theme-arrows.shepherd-element-attached-top.shepherd-element-attached-right.shepherd-target-attached-bottom.shepherd-has-title .shepherd-content:before,
+.shepherd-element.shepherd-theme-arrows.shepherd-element-attached-top.shepherd-element-attached-left.shepherd-target-attached-bottom.shepherd-has-title 
+.shepherd-content:before {
+	border-bottom-color: #fff;
+}
+
+.shepherd-element.shepherd-open {
+	z-index: 3;
+}
+
+.shepherd-element.shepherd-theme-arrows {
+	max-width: 24rem;
+}
+
+.shepherd-element.shepherd-theme-arrows .shepherd-content .shepherd-text {
+	padding: 0 1rem 1rem;
+}
+
+.shepherd-element.shepherd-theme-arrows .shepherd-content .shepherd-text p {
+	font-size: 0.875rem;
+	line-height: 1.5;
+}
+.shepherd-element.shepherd-theme-arrows.shepherd-has-title .shepherd-content header {
+	background: #fff;
+	border-radius: .25rem;
+	padding: 0 1rem 1rem;
+}
+
+.shepherd-element.shepherd-theme-arrows .shepherd-content {
+	padding-top: 1rem;
+	border-radius: .25rem;
+}
+
+.shepherd-element.shepherd-theme-arrows .shepherd-content header h3 {
+	font-weight: 700;
+	color: #84ADFF;
+	background: #fff;
+	font-size: 1.25rem;
+}
+
+.shepherd-element.shepherd-theme-arrows .shepherd-content footer {
+	padding: 0 1rem 1rem;
+}
+
+.shepherd-element.shepherd-theme-arrows .shepherd-content footer .shepherd-buttons,
+.shepherd-element.shepherd-theme-arrows .shepherd-content footer .shepherd-buttons li {
+	line-height: 1;
+}
+
+.shepherd-element.shepherd-theme-arrows .shepherd-content footer .shepherd-buttons li .shepherd-button {
+	color: #84ADFF;
+	background-color: #fff;
+	padding: 0;
+	font-weight: 700;
+	color: #84ADFF;
+	font-size: .75rem;
+}
+
+// .shepherd-element.shepherd-theme-arrows.shepherd-element-attached-left.shepherd-element-attached-middle .shepherd-content {
+// 	margin-left: 32px;
+// }
+
+// .shepherd-element.shepherd-theme-arrows.shepherd-element-attached-right.shepherd-element-attached-middle .shepherd-content {
+// 	margin-right: 32px;
+// }
+
+.shepherd-element.shepherd-theme-arrows .shepherd-content:before {
+	border-width: 8px;
+}
+
+.shepherd-element.shepherd-theme-arrows.shepherd-element-attached-right.shepherd-element-attached-middle .shepherd-content::before,
+.shepherd-element.shepherd-theme-arrows.shepherd-element-attached-left.shepherd-element-attached-middle .shepherd-content:before {
+	margin-top: -8px;
+}

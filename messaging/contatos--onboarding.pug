@@ -43,7 +43,7 @@ html(lang='pt-br')
 					li.mt3
 						a.white.dim.f6(href='dashboard.html') Dashboard
 					li.mt3
-						a.white.dim.f6.onboarding-02(href='novo-envio.html') Novo envio
+						a.white.dim.f6(href='novo-envio.html') Novo envio
 					li.mt3
 						a.white.dim.f6(href='relatorios-consolidados.html') Relatórios
 					li.mt3
@@ -154,11 +154,11 @@ html(lang='pt-br')
 													span.b(data-id='2') Mulheres casadas
 							//- input.mt2.pa3.w-100.bg-search(type='text')
 						// ADD BUTTON
-						button.dib.fr.cta.cta-accent.download-button
+						button.dib.fr.cta.cta-accent.download-button.onboarding-02
 							span.has-icon-right.icon-dropdown__white adicionar
 						.download-items.absolute.right-0.theblack.ph3.pt1.pb3.bg-white.z-3
 							a.db.b.f6.mt3.theblack.accent-hover(href='adicionar-grupo.html') Grupo
-							a.db.b.f6.mt3.theblack.accent-hover(href='adicionar-contato.html') Contato
+							a.db.b.f6.mt3.theblack.accent-hover(href='adicionar-contato--onboarding.html') Contato
 							a.db.b.f6.mt3.theblack.accent-hover(href='adicionar-contato-blacklist.html') Contato na Blacklist
 					// FILTERS
 					.fl.w-100.mt5.theblack
@@ -267,7 +267,8 @@ html(lang='pt-br')
 												p.f5.main-gray ursula.reichenbach@movile.com
 											p.f5.main-gray.b.mta.mb3 Recebeu 9999 mensagens
 										.nl3.nr3.bt.b--black-10.pa3.tr.lh-solid
-											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS
+											span.f7.accent.b.tracked.has-icon-left.icon-plus--blue INFOS																						
+			
 	// jQuery
 	script(src='js/jquery-3.1.0.min.js')
 	script.
@@ -296,22 +297,22 @@ html(lang='pt-br')
 		});
 
 		tour.addStep('step 01', {
-		title: 'Isso aí! ',
-		text: 'Você pode voltar para cá com mais calma depois e ir adicionando seus Contatos e Grupos. Agora, vamos fazer seu primeiro envio.',
+		title: 'Aqui estão seus Contatos',
+		text: 'Você pode mandar mensagens para cada um deles ou para vários de uma vez. Para se organizar ainda mais, também é possível criar Grupos a partir de Contatos.',
 		attachTo: '.onboarding-01',
 		advanceOn: '.onboarding-02',
 		buttons: [
 			{
-				text: 'vamos!',
+				text: 'entendi',
 		      	action: tour.next
 			}
 		]
 		});
 
 		tour.addStep('step 02', {
-		title: '👈',
-		//- text: 'É só vir aqui',
-		attachTo: '.onboarding-02 right',
+		//- title: 'Ola',
+		text: 'Que tal começar adicionando seu primeiro Contato?',
+		attachTo: '.onboarding-02 left',
 		advanceOn: '.onboarding-03',
 		buttons: false
 		});

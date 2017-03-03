@@ -14,6 +14,7 @@
 	-ms-transition:all ease 0.4s;
 	-o-transition:all ease 0.4s;
 	transition:all ease 0.4s;
+	z-index: 4;
 	&:hover {
 		opacity: 1;
 		pointer-events: auto;
