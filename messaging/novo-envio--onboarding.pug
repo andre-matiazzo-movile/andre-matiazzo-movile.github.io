@@ -11,6 +11,8 @@ html(lang='pt-br')
 		script(src='charts/chartist.min.js', charset='utf-8')
 		// Tachyons CSS
 		link(rel='stylesheet', href='stylesheets/tachyons.min.css')
+		//Onboarding
+		link(rel='stylesheet', href="onboarding/css/shepherd-theme-arrows.css")
 		// Main CSS
 		link(rel='stylesheet', href='stylesheets/main.css')
 		// Typekit
@@ -65,7 +67,7 @@ html(lang='pt-br')
 			// RECIPIENTS
 			div.fl.w-100.bb.b--black-20
 				div.fl.w-100.pt4.pb5.mw8(style='min-height:320px;')
-					h3.fl.black.f3.lh-solid Escolha quem vai receber
+					h3.fl.black.f3.lh-solid.onboarding-01 Escolha quem vai receber
 					.fl.w-100.mt4.cl
 						// FIRST HALF OF THE GRID
 						.fl.w-50.pr5.search-input.transition
@@ -126,7 +128,7 @@ html(lang='pt-br')
 			// MESSAGE
 			div.fl.w-100.bb.b--black-20
 				div.fl.w-100.pt4.pb5.mw8
-					h3.fl.black.f3.lh-solid Escreva sua mensagem
+					h3.fl.black.f3.lh-solid.onboarding-02 Escreva sua mensagem
 					.fl.w-100.mt4.cl.relative
 						// FIRST HALF OF THE GRID
 						.fl.w-50.pr5
@@ -168,7 +170,7 @@ html(lang='pt-br')
 			// CAMPAIGN
 			div.fl.w-100.bb.b--black-20
 				div.fl.w-100.pt4.mw8.pb6
-					h3.fl.black.f3.lh-solid Faz parte de alguma Campanha?
+					h3.fl.black.f3.lh-solid.onboarding-03 Faz parte de alguma Campanha?
 					p.fl.cl.mt3.main-gray.lh-copy.measure Elas são a melhor forma de organizar seus envios e comparar a performance entre eles no futuro
 					.fl.w-100.mt4.cl
 						// FIRST HALF OF THE GRID
@@ -523,5 +525,54 @@ html(lang='pt-br')
 	script(src='js/replicate-text.js')
 	// Modal
 	script(src='js/modal.js')
+	// Onboarding tooltips
+	script(src='onboarding/js/tether.js')
+	script(src='onboarding/js/shepherd.min.js')
+	script.
+		let tour = new Shepherd.Tour({
+			defaults: {
+			classes: 'shepherd-theme-arrows'
+			}
+		});
+
+		tour.addStep('step 01', {
+			//- title: 'Isso aí! ',
+			text: 'Escolha entre seus Contatos ou Grupos quem vai receber suas mensagens. Também é possível colocar novos números ou importar um arquivo.',
+			attachTo: '.onboarding-01 right',
+			advanceOn: '.onboarding-02',
+			buttons: [
+				{
+					text: 'próxima',
+			      	action: tour.next
+				}
+			]
+		});
+
+		tour.addStep('step 02', {
+			title: 'Aqui não tem segredo',
+			text: 'O legal é que pode escrever sua mensagem usando as informações dos seus Contatos, Grupos ou do arquivo que importou.',
+			attachTo: '.onboarding-02 right',
+			advanceOn: '.onboarding-03',
+			buttons: [
+				{
+					text: 'beleza',
+			      	action: tour.next
+				}
+			]
+		});
+
+		tour.addStep('step 03', {
+			title: 'Uma dica:',
+			text: 'Organizar os envios em Campanhas vai facilitar muito sua vida no futuro.',
+			attachTo: '.onboarding-03 right',
+			buttons: [
+				{
+					text: 'entendi',
+			      	action: tour.next
+				}
+			]
+		});
+
+		tour.start();
 
 
