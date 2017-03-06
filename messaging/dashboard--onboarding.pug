@@ -1,0 +1,359 @@
+doctype html
+html(lang='pt-br')
+	head
+		head
+		meta(charset='UTF-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Movile Messaging – Dashboard
+		meta(name='movile-messaging', content='Movile Messaging')
+		// For the charts
+		link(href='charts/chartist.min.css', rel='stylesheet')
+		script(src='charts/chartist.min.js', charset='utf-8')
+		// Tachyons CSS
+		link(rel='stylesheet', href='stylesheets/tachyons.min.css')
+		//Onboarding
+		link(rel='stylesheet', href="onboarding/css/shepherd-theme-arrows.css")
+		// Main CSS
+		link(rel='stylesheet', href='stylesheets/main.css')
+		// Typekit
+		script(src='https://use.typekit.net/fja4naa.js')
+		script.
+			try{Typekit.load({ async: false });}catch(e){}
+		style.
+			.table-operadora, .table-subconta, .table-inicio{display:none;}
+	body
+		aside.fixed.fl.h-100.bg-sidebar
+			.bb.b--black-10
+				.pl4.mt4.pb3.w4
+					a(href="dashboard.html").db.w-90
+						img.db(src='img/logo-white.png', alt='Logo Movile Messaging')
+			nav.pl4.mt4
+				ul.list.pl0.mt3
+					li.mt3
+						a.white.dim.f6.bb.bw1(href='dashboard.html') Dashboard
+					li.mt3
+						a.white.dim.f6(href='novo-envio.html') Novo envio
+					li.mt3
+						a.white.dim.f6(href='relatorios-consolidados.html') Relatórios
+					li.mt3
+						a.white.dim.f6(href='contatos.html') Contatos
+					li.mt3
+						a.white.dim.f6(href='permissoes.html') Permissões
+					li.mt3
+						a.white.dim.f6(href='conta.html') Sua conta
+					li.mt3
+						a.white.dim.f6(href='') Suporte
+		section.upper-bar.flex.justify-between.items-end.fr.ph4.pt4.pb3.bb.b--black-10
+			h1.f2.fl.black.lh-solid.onboarding-01 Dashboard
+			.fr.lh-copy.relative
+				.relative.mr4.fl
+					a.upper-bar-menu.f5.b.has-icon.has-icon-left.icon-notif__gray.pointer Notificações
+					.absolute.top--1.right--1
+						.relative
+							span.notification-badge 275
+					// NOTIFICATIONS
+					.dropdown.notifications
+						// NOTIF HEADER
+						.fl.w-100.pa3.bb.black-20
+							button.mark-all-as-read.ttu.fr.lh-copy.pv0.pr0.tracked.b.f8.main-gray.bn.bg-white.has-icon.has-icon-left.icon-check--gray.outline-0 marcar todas como lidas
+						// NOTIFS BODY
+						.fl.w-100
+							// NOTIF ITEM
+							.notif__item.bb.black-20.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.can-be-read está sendo gerado
+									h1.notif__title.f5.mt1.can-be-read.black Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									<button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+							// NOTIF ITEM
+							.notif__item.bb.black-20.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.green.bg-lighter-green.can-be-read está pronto
+									h1.notif__title.f5.mt1.can-be-read.black Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									button.accent.bn.bg-white.fr.f8.b.ttu.tracked download
+							// NOTIF ITEM
+							.notif__item.bb.black-20.pa3.fl.w-100
+								.notif__icon.w1.fl
+									img.db.w-100(src='img/icons/graph-gray.png', alt='Graph Icon')
+								.w-90.fl.pl3
+									.notif__status.b.db.ttu.tracked.main-gray.f8.lh-solid
+										span.dib.bg-lightest-gray.pa1.red.bg-lighter-red.can-be-read não foi possível gerar
+									h1.notif__title.f5.mt1.can-be-read.black Relatório consolidado
+									p.notif__date.f6.mt0.can-be-read
+										| Requerido às 
+										span.notif__hour 17h20
+										| , em 
+										span.notif__day 17/08/16
+								.fl.w-100.pl4.notif__actions.mt3
+									span.notif__report-id.fl.f8.b.ttu.tracked.black-20.can-be-read ID 4768987
+									a.accent.bn.bg-white.fr.f8.b.ttu.tracked(href='notifs.html')
+										| ver detalhes
+						// NOTIF FOOTER
+						.fl.w-100.pa3
+							a.ttu.fl.lh-copy.pv0.tracked.b.f8.accent.bn.bg-white.has-icon.has-icon-right.icon-arrow-right--blue(href='notifs.html')
+								| ver todas as notificações
+				h3.f5.b.fl.has-icon.has-icon-right.icon-dropdown NomeDoUsuário
+		// MAIN CONTENT
+		section.main-content.ph3.pt3.pb5.fr
+			// FILTERS
+			.actions-container.ph3
+				div.nl3.nr3
+					// FILTERS ROW
+					.fl.w-100.mt3
+						// FILTER ITEM
+						.fl.relative.w-third.ph3
+							label.black-50.f6.onboarding-02 Status do envio
+							.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+								span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Em processamento
+							.dropdown.content-box
+								label.black-50.f6 Status do envio
+								ul.pt0.pb1.pl0
+									li
+										span Em processamento
+									li
+										span Agendados
+									li
+										span Em aprovação
+						// FILTER ITEM
+						.fl.relative.w-third.ph3
+							label.black-50.f6 Período
+							.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+								span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Hoje
+							.dropdown.content-box
+								label.black-50.f6 Período
+								ul.pt0.pb1.pl0
+									li
+										span Hoje
+									li
+										span Últimos 7 dias
+									li
+										span Últimos 15 dias
+									li
+										span Últimos 30 dias
+						// FILTER ITEM
+						.fl.relative.w-third.ph3
+							label.black-50.f6 Usuários
+							.w-100.bg-white.black.relative.ba.b--black-20.ph3.pv3.mt2.input.caret-down
+								span.f6.b.lh-solid.dib.overflow-hidden.lh-title.nowrap Bruno Farias
+							.dropdown.content-box
+								label.black-50.f6 Usuários
+								input.f6.b.ba.b--black-20.ph3.pv3.mt2.lh-title(type='search', autofocus='')
+								span.main-gray.db.f6.pl3.pv3 Buscas recentes
+								ul.pt0.pb1.pl3
+									li
+										span Bruno Farias
+									li
+										span Nayara Rodrigues
+									li
+										span Neto Andrade
+									li
+										span Hudson Souza
+									li
+										span Edson Koji
+									li
+										span Henrique Perticarati
+									li
+										span Juliana Gaspari				
+			// RESULTS
+			.fl.w-100.ph3.pt4
+				.mt4.relative.fl.w-100
+					div.fl
+						span.black.f6 Campanha
+						h3.blue-gray.f4.mt2 Carnaval 2014, por mês
+
+				.mt4.fl.w-100
+					span.theblack.f7.ttu.b envios
+				.ct-chart.ct-double-octave.fl.w-100
+				// GRAPHS SUBTITLES
+				.mt4.fl.w-100.relative.lh-copy
+					div.fl
+						span.bg-green.br-100.pa1.dib
+						span.f8.blue-gray.ml1.ttu.b.tracked Mensagens enviadas
+						span.bg-red.br-100.pa1.dib.ml4
+						span.f8.blue-gray.ml1.ttu.b.tracked Mensagens com erro
+					div.fr.has-dropdown.relative.lh-copy
+						span.fl.f6.theblack Visualização por
+						span.fl.f6.theblack.b.ml1.pr5.bb.relative.has-icon-right.icon-dropdown.insert-criteria.view-box-close.pointer Operadora
+						.view-box-open.shadow-2.pa3.absolute.top-0.left-0.bg-white.z-3.w-100.content-box.nt3.nl3.o-0
+							span.f6.theblack.nowrap.fl Visualização por
+							.dropdown-item-box.fl
+								span.fl.cb.f6.theblack.b.ml1.bb.relative.has-icon-right.icon-dropdown.insert-criteria Operadora
+								span.fl.cb.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Hora
+								span.fl.cb.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Dia
+								span.fl.cb.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Mês
+								span.fl.cb.f6.theblack.b.ml1.mt3.relative.view-criteria.pointer.accent-hover Operadora
+				// número de mensagens enviadas
+				.mt4.fl.w-100
+					.fl.mr4
+						h4.blue-gray.f2.b 12.7mi
+						span.theblack.f6.lh-title
+							| mensagens
+							br
+							| enviadas
+					.fl.mr4
+						h4.green.f2.b 4.2mi
+						span.theblack.f6.lh-title
+							| enviadas com
+							br
+							| sucesso
+					.fl
+						h4.red.f2.b 1.5mi
+						span.theblack.f6.lh-title
+							| mensagens
+							br
+							| com erro
+			//DETAILS
+			.fl.w-100.ph3.pt4.mt5
+					h3.theblack.f4.fl.w-100 Lista de envios
+			// tabela com resultados
+			.fl.w-100.relative.ph3
+				div.w-90.overflow-x-scroll
+					table.mt4.mb4.tl.v-top.w-100(cellspacing='0', cellpadding='0')
+						thead.v-top
+							tr.ttu.f8.theblack.b.tl.tracked
+								th.bb.nowrap.table-month
+									span.pv2.pr3.db Month
+								th.bb.nowrap.w-4.table-campaign
+									span.pv2.pr3.db Campaign
+								th.bb.nowrap.w-4.table-concluded
+									span.pv2.pr3.db Concluded
+								th.bb.nowrap.w-4.table-scheduled
+									span.pv2.pr3.db Scheduled
+								th.bb.nowrap.w-4.table-sent
+									span.pv2.pr3.db Sent
+								th.bb.nowrap.w-4.table-Errors
+									span.pv2.pr3.db Errors
+								th.bb.nowrap.w-4.table-sending-start
+									span.pv2.pr3.db Sending start
+								th.nowrap.table-customer
+						tbody.v-top
+							tr.bb.relative.f6
+								td.nowrap.f6.bb.b--black-20.table-month
+									span.db.pv4.pr3.lh-solid December
+								td.nowrap.f6.bb.b--black-20.table-campaign
+									span.db.pv4.pr3.lh-solid Mother's day 2017
+								td.nowrap.f6.bb.b--black-20.table-concluded
+									span.db.pv4.pr3.lh-solid 80%
+								td.nowrap.f6.bb.b--black-20.table-scheduled
+									span.db.pv4.pr3.lh-solid 9.5 MM
+								td.nowrap.f6.bb.b--black-20.table-sent
+									span.db.pv4.pr3.lh-solid 5.5 MM
+								td.nowrap.f6.bb.b--black-20.table-Errors
+									span.db.pv4.pr3.lh-solid 2.0 MM
+								td.nowrap.f6.bb.b--black-20.table-sending-start
+									span.db.pv4.pr3.lh-solid 24/01/2017 10:28
+				table.w-10.h-100.mt4.mb4.tl.v-top.absolute.top-0.right-1.bg-white(cellspacing='0', cellpadding='0')
+					thead.v-top
+						tr.pv3.b--black.bb.ttu.f8.theblack.b.tl.tracked
+							th.bb.pv2.pl3.table-detalhes
+								a.accent(href='javascript:') Ações
+					tbody.v-top
+						tr.bb.relative.f6
+							td.bb.b--black-20.pv4.ph3.table-detalhes.left-shadow.lh-solid
+								a.accent.has-icon-left.icon-download-blue.has-tooltip(href='javascript:', alt='Download')
+									.tooltip-content
+										span Download
+								a.accent.has-icon-left.icon-eye-blue.ml3.has-tooltip(href='javascript:', alt='Detalhes')
+									.tooltip-content
+										span Detalhes
+					
+	// jQuery
+	script(src='js/jquery-3.1.0.min.js')
+	// Filters
+	script(src='js/forms.js')
+	// For the calendar
+	script(src='calendar/jquery-ui/jquery-ui.min.js')
+	script(src='calendar/moment.js')
+	script(src='calendar/jquery.comiseo.daterangepicker.js')
+	script(src='charts/custom-charts.js')
+	script.
+		$(function() {
+		$("#datepicker").daterangepicker({
+		presetRanges: [{
+		text: 'Últimos 7 dias',
+		dateStart: function() { return moment().add(-7, 'days') },
+		dateEnd: function() { return moment().add(0, 'days') }
+		}, {
+		text: 'Últimos 30 dias',
+		dateStart: function() { return moment().add(-30, 'days') },
+		dateEnd: function() { return moment().add(0, 'days') }
+		}, {
+		text: 'Últimos 90 dias',
+		dateStart: function() { return moment().add(-90, 'days') },
+		dateEnd: function() { return moment().add(0, 'days') }
+		}],
+		applyOnMenuSelect: false,
+		dateFormat: 'd M yy',
+		rangeSplitter: ' – ',
+		initialText: 'Escolha um período',
+		applyButtonText: 'confirmar',
+		clearButtonText: 'limpar',
+		cancelButtonText: 'cancelar',
+		verticalOffset: -50,
+		datepickerOptions: {
+		dayNamesMin: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
+		monthNames: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'  ],
+		monthNamesShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
+		numberOfMonths: 2,
+		minDate: null,
+		maxDate: 0
+		}
+		});
+		});
+	// Onboarding tooltips
+	script(src='onboarding/js/tether.js')
+	script(src='onboarding/js/shepherd.min.js')
+	script.
+		let tour = new Shepherd.Tour({
+			defaults: {
+			classes: 'shepherd-theme-arrows'
+			}
+		});
+
+		tour.addStep('step 01', {
+			title: 'Envios em tempo real',
+			text: 'No Dashboard você vê os últimos envios em tempo real, os agendados e os que precisam de aprovação antes de serem enviados.',
+			attachTo: '.onboarding-01',
+			advanceOn: '.onboarding-02',
+			buttons: [
+				{
+					text: 'ok',
+			      	action: tour.next
+				}
+			]
+		});
+
+		tour.addStep('step 02', {
+			//- title: 'Aqui não tem segredo',
+			text: 'Explore as diferentes visualizações por aqui',
+			attachTo: '.onboarding-02 right',
+			advanceOn: '.onboarding-03',
+			buttons: [
+				{
+					text: '👍',
+			      	action: tour.cancel
+				}
+			]
+		});
+
+		tour.start();

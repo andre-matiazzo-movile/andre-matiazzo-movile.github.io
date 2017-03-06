@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <head></head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movile Messaging – Dashboard</title>
+    <meta name="movile-messaging" content="Movile Messaging">
+    <!-- For the charts-->
+    <link href="charts/chartist.min.css" rel="stylesheet">
+    <script src="charts/chartist.min.js" charset="utf-8"></script>
+    <!-- Tachyons CSS-->
+    <link rel="stylesheet" href="stylesheets/tachyons.min.css">
+    <!--Onboarding-->
+    <link rel="stylesheet" href="onboarding/css/shepherd-theme-arrows.css">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- Typekit-->
+    <script src="https://use.typekit.net/fja4naa.js"></script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+    <style>.table-operadora, .table-subconta, .table-inicio{display:none;}</style>
+  </head>
+  <body>
+    <aside class="fixed fl h-100 bg-sidebar">
+      <div class="bb b--black-10">
+        <div class="pl4 mt4 pb3 w4"><a class="db w-90" href="dashboard.html"><img class="db" src="img/logo-white.png" alt="Logo Movile Messaging"></a></div>
+      </div>
+      <nav class="pl4 mt4">
+        <ul class="list pl0 mt3">
+          <li class="mt3"><a class="white dim f6 bb bw1" href="dashboard.html">Dashboard</a></li>
+          <li class="mt3"><a class="white dim f6" href="novo-envio.html">Novo envio</a></li>
+          <li class="mt3"><a class="white dim f6" href="relatorios-consolidados.html">Relatórios</a></li>
+          <li class="mt3"><a class="white dim f6" href="contatos.html">Contatos</a></li>
+          <li class="mt3"><a class="white dim f6" href="permissoes.html">Permissões</a></li>
+          <li class="mt3"><a class="white dim f6" href="conta.html">Sua conta</a></li>
+          <li class="mt3"><a class="white dim f6" href="">Suporte</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="upper-bar flex justify-between items-end fr ph4 pt4 pb3 bb b--black-10">
+      <h1 class="f2 fl black lh-solid onboarding-01">Dashboard</h1>
+      <div class="fr lh-copy relative">
+        <div class="relative mr4 fl"><a class="upper-bar-menu f5 b has-icon has-icon-left icon-notif__gray pointer">Notificações</a>
+          <div class="absolute top--1 right--1">
+            <div class="relative"><span class="notification-badge">275</span></div>
+          </div>
+          <!-- NOTIFICATIONS-->
+          <div class="dropdown notifications">
+            <!-- NOTIF HEADER-->
+            <div class="fl w-100 pa3 bb black-20">
+              <button class="mark-all-as-read ttu fr lh-copy pv0 pr0 tracked b f8 main-gray bn bg-white has-icon has-icon-left icon-check--gray outline-0">marcar todas como lidas</button>
+            </div>
+            <!-- NOTIFS BODY-->
+            <div class="fl w-100">
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 can-be-read">está sendo gerado</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read black">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><button class="accent bn bg-white fr f8 b ttu tracked">download</button></div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 green bg-lighter-green can-be-read">está pronto</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read black">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span>
+                  <button class="accent bn bg-white fr f8 b ttu tracked">download</button>
+                </div>
+              </div>
+              <!-- NOTIF ITEM-->
+              <div class="notif__item bb black-20 pa3 fl w-100">
+                <div class="notif__icon w1 fl"><img class="db w-100" src="img/icons/graph-gray.png" alt="Graph Icon"></div>
+                <div class="w-90 fl pl3">
+                  <div class="notif__status b db ttu tracked main-gray f8 lh-solid"><span class="dib bg-lightest-gray pa1 red bg-lighter-red can-be-read">não foi possível gerar</span></div>
+                  <h1 class="notif__title f5 mt1 can-be-read black">Relatório consolidado</h1>
+                  <p class="notif__date f6 mt0 can-be-read">Requerido às <span class="notif__hour">17h20</span>, em <span class="notif__day">17/08/16</span></p>
+                </div>
+                <div class="fl w-100 pl4 notif__actions mt3"><span class="notif__report-id fl f8 b ttu tracked black-20 can-be-read">ID 4768987</span><a class="accent bn bg-white fr f8 b ttu tracked" href="notifs.html">ver detalhes</a></div>
+              </div>
+            </div>
+            <!-- NOTIF FOOTER-->
+            <div class="fl w-100 pa3"><a class="ttu fl lh-copy pv0 tracked b f8 accent bn bg-white has-icon has-icon-right icon-arrow-right--blue" href="notifs.html">ver todas as notificações</a></div>
+          </div>
+        </div>
+        <h3 class="f5 b fl has-icon has-icon-right icon-dropdown">NomeDoUsuário</h3>
+      </div>
+    </section>
+    <!-- MAIN CONTENT-->
+    <section class="main-content ph3 pt3 pb5 fr">
+      <!-- FILTERS-->
+      <div class="actions-container ph3">
+        <div class="nl3 nr3">
+          <!-- FILTERS ROW-->
+          <div class="fl w-100 mt3">
+            <!-- FILTER ITEM-->
+            <div class="fl relative w-third ph3">
+              <label class="black-50 f6 onboarding-02">Status do envio</label>
+              <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Em processamento</span></div>
+              <div class="dropdown content-box">
+                <label class="black-50 f6">Status do envio</label>
+                <ul class="pt0 pb1 pl0">
+                  <li><span>Em processamento</span></li>
+                  <li><span>Agendados</span></li>
+                  <li><span>Em aprovação</span></li>
+                </ul>
+              </div>
+            </div>
+            <!-- FILTER ITEM-->
+            <div class="fl relative w-third ph3">
+              <label class="black-50 f6">Período</label>
+              <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Hoje</span></div>
+              <div class="dropdown content-box">
+                <label class="black-50 f6">Período</label>
+                <ul class="pt0 pb1 pl0">
+                  <li><span>Hoje</span></li>
+                  <li><span>Últimos 7 dias</span></li>
+                  <li><span>Últimos 15 dias</span></li>
+                  <li><span>Últimos 30 dias</span></li>
+                </ul>
+              </div>
+            </div>
+            <!-- FILTER ITEM-->
+            <div class="fl relative w-third ph3">
+              <label class="black-50 f6">Usuários</label>
+              <div class="w-100 bg-white black relative ba b--black-20 ph3 pv3 mt2 input caret-down"><span class="f6 b lh-solid dib overflow-hidden lh-title nowrap">Bruno Farias</span></div>
+              <div class="dropdown content-box">
+                <label class="black-50 f6">Usuários</label>
+                <input class="f6 b ba b--black-20 ph3 pv3 mt2 lh-title" type="search" autofocus=""><span class="main-gray db f6 pl3 pv3">Buscas recentes</span>
+                <ul class="pt0 pb1 pl3">
+                  <li><span>Bruno Farias</span></li>
+                  <li><span>Nayara Rodrigues</span></li>
+                  <li><span>Neto Andrade</span></li>
+                  <li><span>Hudson Souza</span></li>
+                  <li><span>Edson Koji</span></li>
+                  <li><span>Henrique Perticarati</span></li>
+                  <li><span>Juliana Gaspari				</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- RESULTS-->
+      <div class="fl w-100 ph3 pt4">
+        <div class="mt4 relative fl w-100">
+          <div class="fl"><span class="black f6">Campanha</span>
+            <h3 class="blue-gray f4 mt2">Carnaval 2014, por mês</h3>
+          </div>
+        </div>
+        <div class="mt4 fl w-100"><span class="theblack f7 ttu b">envios</span></div>
+        <div class="ct-chart ct-double-octave fl w-100"></div>
+        <!-- GRAPHS SUBTITLES-->
+        <div class="mt4 fl w-100 relative lh-copy">
+          <div class="fl"><span class="bg-green br-100 pa1 dib"></span><span class="f8 blue-gray ml1 ttu b tracked">Mensagens enviadas</span><span class="bg-red br-100 pa1 dib ml4"></span><span class="f8 blue-gray ml1 ttu b tracked">Mensagens com erro</span></div>
+          <div class="fr has-dropdown relative lh-copy"><span class="fl f6 theblack">Visualização por</span><span class="fl f6 theblack b ml1 pr5 bb relative has-icon-right icon-dropdown insert-criteria view-box-close pointer">Operadora</span>
+            <div class="view-box-open shadow-2 pa3 absolute top-0 left-0 bg-white z-3 w-100 content-box nt3 nl3 o-0"><span class="f6 theblack nowrap fl">Visualização por</span>
+              <div class="dropdown-item-box fl"><span class="fl cb f6 theblack b ml1 bb relative has-icon-right icon-dropdown insert-criteria">Operadora</span><span class="fl cb f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Hora</span><span class="fl cb f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Dia</span><span class="fl cb f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Mês</span><span class="fl cb f6 theblack b ml1 mt3 relative view-criteria pointer accent-hover">Operadora</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- número de mensagens enviadas-->
+        <div class="mt4 fl w-100">
+          <div class="fl mr4">
+            <h4 class="blue-gray f2 b">12.7mi</h4><span class="theblack f6 lh-title">mensagens<br>enviadas</span>
+          </div>
+          <div class="fl mr4">
+            <h4 class="green f2 b">4.2mi</h4><span class="theblack f6 lh-title">enviadas com<br>sucesso</span>
+          </div>
+          <div class="fl">
+            <h4 class="red f2 b">1.5mi</h4><span class="theblack f6 lh-title">mensagens<br>com erro</span>
+          </div>
+        </div>
+      </div>
+      <!--DETAILS-->
+      <div class="fl w-100 ph3 pt4 mt5">
+        <h3 class="theblack f4 fl w-100">Lista de envios</h3>
+      </div>
+      <!-- tabela com resultados-->
+      <div class="fl w-100 relative ph3">
+        <div class="w-90 overflow-x-scroll">
+          <table class="mt4 mb4 tl v-top w-100" cellspacing="0" cellpadding="0">
+            <thead class="v-top">
+              <tr class="ttu f8 theblack b tl tracked">
+                <th class="bb nowrap table-month"><span class="pv2 pr3 db">Month</span></th>
+                <th class="bb nowrap w-4 table-campaign"><span class="pv2 pr3 db">Campaign</span></th>
+                <th class="bb nowrap w-4 table-concluded"><span class="pv2 pr3 db">Concluded</span></th>
+                <th class="bb nowrap w-4 table-scheduled"><span class="pv2 pr3 db">Scheduled</span></th>
+                <th class="bb nowrap w-4 table-sent"><span class="pv2 pr3 db">Sent</span></th>
+                <th class="bb nowrap w-4 table-Errors"><span class="pv2 pr3 db">Errors</span></th>
+                <th class="bb nowrap w-4 table-sending-start"><span class="pv2 pr3 db">Sending start</span></th>
+                <th class="nowrap table-customer"></th>
+              </tr>
+            </thead>
+            <tbody class="v-top">
+              <tr class="bb relative f6">
+                <td class="nowrap f6 bb b--black-20 table-month"><span class="db pv4 pr3 lh-solid">December</span></td>
+                <td class="nowrap f6 bb b--black-20 table-campaign"><span class="db pv4 pr3 lh-solid">Mother's day 2017</span></td>
+                <td class="nowrap f6 bb b--black-20 table-concluded"><span class="db pv4 pr3 lh-solid">80%</span></td>
+                <td class="nowrap f6 bb b--black-20 table-scheduled"><span class="db pv4 pr3 lh-solid">9.5 MM</span></td>
+                <td class="nowrap f6 bb b--black-20 table-sent"><span class="db pv4 pr3 lh-solid">5.5 MM</span></td>
+                <td class="nowrap f6 bb b--black-20 table-Errors"><span class="db pv4 pr3 lh-solid">2.0 MM</span></td>
+                <td class="nowrap f6 bb b--black-20 table-sending-start"><span class="db pv4 pr3 lh-solid">24/01/2017 10:28</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <table class="w-10 h-100 mt4 mb4 tl v-top absolute top-0 right-1 bg-white" cellspacing="0" cellpadding="0">
+          <thead class="v-top">
+            <tr class="pv3 b--black bb ttu f8 theblack b tl tracked">
+              <th class="bb pv2 pl3 table-detalhes"><a class="accent" href="javascript:">Ações</a></th>
+            </tr>
+          </thead>
+          <tbody class="v-top">
+            <tr class="bb relative f6">
+              <td class="bb b--black-20 pv4 ph3 table-detalhes left-shadow lh-solid"><a class="accent has-icon-left icon-download-blue has-tooltip" href="javascript:" alt="Download">
+                  <div class="tooltip-content"><span>Download</span></div></a><a class="accent has-icon-left icon-eye-blue ml3 has-tooltip" href="javascript:" alt="Detalhes">
+                  <div class="tooltip-content"><span>Detalhes</span></div></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </body>
+  <!-- jQuery-->
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <!-- Filters-->
+  <script src="js/forms.js"></script>
+  <!-- For the calendar-->
+  <script src="calendar/jquery-ui/jquery-ui.min.js"></script>
+  <script src="calendar/moment.js"></script>
+  <script src="calendar/jquery.comiseo.daterangepicker.js"></script>
+  <script src="charts/custom-charts.js"></script>
+  <script>
+    $(function() {
+    $("#datepicker").daterangepicker({
+    presetRanges: [{
+    text: 'Últimos 7 dias',
+    dateStart: function() { return moment().add(-7, 'days') },
+    dateEnd: function() { return moment().add(0, 'days') }
+    }, {
+    text: 'Últimos 30 dias',
+    dateStart: function() { return moment().add(-30, 'days') },
+    dateEnd: function() { return moment().add(0, 'days') }
+    }, {
+    text: 'Últimos 90 dias',
+    dateStart: function() { return moment().add(-90, 'days') },
+    dateEnd: function() { return moment().add(0, 'days') }
+    }],
+    applyOnMenuSelect: false,
+    dateFormat: 'd M yy',
+    rangeSplitter: ' – ',
+    initialText: 'Escolha um período',
+    applyButtonText: 'confirmar',
+    clearButtonText: 'limpar',
+    cancelButtonText: 'cancelar',
+    verticalOffset: -50,
+    datepickerOptions: {
+    dayNamesMin: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
+    monthNames: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'  ],
+    monthNamesShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
+    numberOfMonths: 2,
+    minDate: null,
+    maxDate: 0
+    }
+    });
+    });
+  </script>
+  <!-- Onboarding tooltips-->
+  <script src="onboarding/js/tether.js"></script>
+  <script src="onboarding/js/shepherd.min.js"></script>
+  <script>
+    let tour = new Shepherd.Tour({
+    	defaults: {
+    	classes: 'shepherd-theme-arrows'
+    	}
+    });
+    
+    tour.addStep('step 01', {
+    	title: 'Envios em tempo real',
+    	text: 'No Dashboard você vê os últimos envios em tempo real, os agendados e os que precisam de aprovação antes de serem enviados.',
+    	attachTo: '.onboarding-01',
+    	advanceOn: '.onboarding-02',
+    	buttons: [
+    		{
+    			text: 'ok',
+    	      	action: tour.next
+    		}
+    	]
+    });
+    
+    tour.addStep('step 02', {
+    	//- title: 'Aqui não tem segredo',
+    	text: 'Explore as diferentes visualizações por aqui',
+    	attachTo: '.onboarding-02 right',
+    	advanceOn: '.onboarding-03',
+    	buttons: [
+    		{
+    			text: '👍',
+    	      	action: tour.cancel
+    		}
+    	]
+    });
+    
+    tour.start();
+  </script>
+</html>
