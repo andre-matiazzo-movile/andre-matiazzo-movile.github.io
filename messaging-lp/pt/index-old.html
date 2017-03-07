@@ -1,6 +1,6 @@
- <!DOCTYPE html>
- <html lang="pt-br">
- <head>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,12 +16,11 @@
   <!-- CSS -->
   <link href="../css/new2016.css" rel="stylesheet">
   <link href="../css/form.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/wallop.css">
-  <link rel="stylesheet" href="../css/wallop--slide.css">
 
   <!-- for the Contact Form -->
   <script src="../js/jquery-3.0.0.min.js"></script>
   <script src="../js/jquery.validate.min.js" ></script>
+
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -58,11 +57,11 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="flag">🇧🇷</span> PT <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="../en/">🇺🇸 EN</a></li>
-                  <li><a href="../es/">🇪🇸 ES</a></li>
-                </ul>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="flag">🇧🇷</span> PT <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="../en/">🇺🇸 EN</a></li>
+                    <li><a href="../es/">🇪🇸 ES</a></li>
+                  </ul>
               </li>
               <li><a href="#features-anchor">Produtos</a></li>
               <!--<li><a href="duvidas.html">Dúvidas</a></li>-->
@@ -97,175 +96,65 @@
       <span id="features-anchor"></span>
       <section id="features">
         <div class="container">
-          <img src="../img/icon-sms.png" alt="Ícone de balão">
           <h3 class="section-title">A solução completa para sua empresa</h3>
-          <p>Comunique-se com clientes e funcionários a qualquer hora e em qualquer lugar</p>
           <div class="row">
-
-            <div class="col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-12 sms-corporativo">
-
-              <div class="row">
-                <div class="col-lg-12 col-md-12">
-                  <div class="features__item">
-                    <a href="javascript:" class="cta sms-active btn-corporativo">SMS Corporativo</a>
-                    <a href="javascript:" class="cta sms-deactive btn-marketing">SMS Marketing</a>
-                    <script>
-                      $(".btn-marketing").click(function(){
-                        $(".sms-corporativo").fadeOut(500);
-                        setTimeout(function(){
-                          $(".sms-marketing").fadeIn(500);
-                        }, 500);
-                      });
-                    </script>
-                    <br><br>
-                  </div>
-                </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+              <div class="features__item">
+                <img src="../img/icon-sms.png" alt="Ícone de balão">
+                <h4>SMS</h4>
+                <p>Comunique-se com clientes e funcionários a qualquer hora e em qualquer lugar</p>
               </div>
-
-              <div class="row">
-                <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-6">
-                  <div class="phone__underline">
-                    <div class="phone__container">
-                      <div class="phone__screen">
-                        <p class="balao__texto">
-                          <span id="changeText">Olá, seu pedido nr. 012345 já está a caminho do endereço de entrega</span>
-                        </p>
-                        <script type="text/javascript">
-                          var text = ["Caro cliente, evite o atraso de sua conta, ative o Débito Automático agora", "Caro cliente, agradecemos pela parceria este ano e Boas Festas!", "Olá, seu pedido nr. 012345 já está a caminho do endereço de entrega"];
-                          var counter = 0;
-                          var elem = document.getElementById("changeText");
-                          setInterval(change, 4000);
-                          function change() {
-                            $(".balao__texto").css("transform","scale(0)");
-                            $(".balao__texto").css("opacity","0");
-                            setTimeout(function(){
-                              $(".balao__texto").css("transform","scale(1)");
-                              $(".balao__texto").css("opacity","1");
-                              elem.innerHTML = text[counter];
-                              counter++;
-                              if(counter >= text.length) { counter = 0; }
-                            }, 500);
-                          }
-                        </script>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-5 col-md-5 col-sm-6 text-left">
-                  <div class="lista">
-                    <ul>
-                      <li>Felicitações</li>
-                      <li>Agradecimentos</li>
-                      <li>Convites</li>
-                      <li>Avisos</li>
-                      <li>Lembretes</li>
-                      <li>Cobranças</li>
-                    </ul>
-                  </div>
-                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+              <div class="features__item">
+                <img src="../img/icon-voz.png" alt="Megafone">
+                <h4>Torpedo de voz</h4>
+                <p>Otimize sua comunicação com ligações automáticas em massa para seus clientes</p>
               </div>
-
-            </div> <!-- col-md-6 -->
-
-            <div class="col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-12 sms-marketing">
-
-              <div class="row">
-                <div class="col-lg-12 col-md-12">
-                  <div class="features__item">
-                    <a href="javascript:" class="cta sms-deactive btn-corporativo">SMS Corporativo</a>
-                    <a href="javascript:" class="cta sms-active btn-marketing">SMS Marketing</a>
-                    <script>
-                      $(".btn-corporativo").click(function(){
-                        $(".sms-marketing").fadeOut(500);
-                        setTimeout(function(){
-                          $(".sms-corporativo").fadeIn(500);
-                        }, 500);
-                      });
-                    </script>
-                    <br><br>
-                    <!-- <p>Alertas de Promoções e Descontos, Envio de Cupons de Descontos, Divulgação de eventos e lançamentos, Divulgação de produtos e Ações de relacionamento com clientes.</p> -->
-                  </div>
-                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-md-offset-0 col-sm-offset-3">
+              <div class="features__item">
+                <img src="../img/icon-email.png" alt="Ícone de balão">
+                <h4>Email</h4>
+                <p>O lendário, só que ainda melhor</p>
               </div>
-
-              <div class="row">
-                <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-6">
-                  <div class="phone__underline">
-                    <div class="phone__container">
-                      <div class="phone__screen">
-                        <p class="balao__texto">
-                          <span id="changeText2">Ganhe 30% de desconto neste Natal. Aproveite!</span>
-                        </p>
-                        <script type="text/javascript">
-                          var text2 = ["Contrate o plano de R$100 por R$50 somente este mês. Imperdível!", "Venha conhecer a nova coleção de Verão e aproveite nossas ofertas!", "Ganhe 30% de desconto neste Natal. Aproveite!"];
-                          var counter2 = 0;
-                          var elem2 = document.getElementById("changeText2");
-                          setInterval(change2, 4000);
-                          function change2() {
-                            $(".balao__texto").css("transform","scale(0)");
-                            $(".balao__texto").css("opacity","0");
-                            setTimeout(function(){
-                              $(".balao__texto").css("transform","scale(1)");
-                              $(".balao__texto").css("opacity","1");
-                              elem2.innerHTML = text2[counter];
-                              counter2++;
-                              if(counter2 >= text2.length) { counter2 = 0; }
-                            }, 500);
-                          }
-                        </script>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-5 col-md-5 col-sm-6 text-left">
-                  <div class="lista">
-                    <ul>
-                      <li>Alertas de Promoções e Descontos</li>
-                      <li>Envio de Cupons de Descontos</li>
-                      <li>Divulgação de eventos e lançamentos</li>
-                      <li>Divulgação de produtos</li>
-                      <li>Ações de relacionamento com clientes</li>
-                    </ul>
-                  </div>
-                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-lg-offset-2 col-md-offset-2">
+              <div class="features__item">
+                <img src="../img/icon-bot.png" alt="Ícone de robô">
+                <h4>Chat Bots</h4>
+                <p>O que há de mais inovador em atendimento ao cliente</p>
               </div>
-
-            </div> <!-- col-md-6 -->
-
-          </div> <!-- row -->
-
-        </div> <!-- container -->
-
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+              <div class="features__item">
+                <img src="../img/icon-message.png" alt="Ícone de smartphone">
+                <h4>Smart message</h4>
+                <p>Interaja com seus clientes em um só clique</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <a href="#more-anchor" class="cta">quero saber mais</a>
       </section>
-      <section id="depoimentos" class="Wallop Wallop--slide">
-        <h3 class="section-title">Casos de sucesso</h3>
-        <div class="container Wallop-list">
-          <div class="row Wallop-item">
-            <div class="col-lg-12" >
+      <section id="depoimentos">
+        <div class="container">
+          <h3 class="section-title">Casos de sucesso</h3>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
               <div class="depoimento">
                 <img src="../img/clientes/webmotors.png" alt="Webmotors">
                 <p>“Depois da implantação do projeto, identificamos que o tempo de resposta das propostas otimizaram em 40%.”</p>
                 <a href="https://www.youtube.com/watch?v=85wc89Kys5U" class="veja-mais" type="button" data-toggle="modal" data-target="#video01">veja mais no vídeo</a>
               </div>
             </div>
-          </div>
-
-          <div class="row Wallop-item">
-            <div class="col-lg-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
               <div class="depoimento">
                 <img src="../img/clientes/getninjas.jpg" alt="GetNinjas">
                 <p>“O Movile Messaging começou a enviar SMS e os profissionais passaram a fechar mais negócios.”</p>
                 <a href="https://www.youtube.com/watch?v=aqHW2OFQXwM" class="veja-mais" type="button" data-toggle="modal" data-target="#video02">veja mais no vídeo</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="row Wallop-item">
-            <div class="col-lg-12">
-              <div class="depoimento">
-                <img src="../img/clientes/colombo.png" alt="Colombo">
-                <p>"Iniciamos o projeto com a Movile com um teste para avaliar nossa base de clientes. Os resultados foram excelentes o que consolidou toda uma nova estratégia de relacionamento dentro da Empresa. A Movile sempre nos atende de forma diferenciada e está pronta para todos os desafios do Varejo, que não são simples!"</p>
               </div>
             </div>
           </div>
@@ -278,7 +167,7 @@
         </div>
       </section>
       <section id="more">
-        <span id="more-anchor"></span>
+      <span id="more-anchor"></span>
         <div class="container">
           <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12">
@@ -287,7 +176,7 @@
                 <p>Consulte nossa página de <a href="duvidas.html">dúvidas frequentes</a> ou entre em contato:</p>
                 <form id="salesforce" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
                   <input type="hidden" name="oid" value="00Do0000000b0EK">
-                  <input type=hidden name="retURL" value="http://movilemessaging.com/pt/success.html">
+                  <input type=hidden name="retURL" value="http://movilemessaging.com/success.html">
                   
                   <input type="hidden" name="lead_source" value="Google" />
                   <input type="hidden" name="00No0000008s9e6" value="selfservice" />
@@ -298,15 +187,6 @@
                   <label for="company">Empresa *</label><input  id="company" maxlength="40" name="company" size="20" type="text" required/>
                   <label for="00No000000EL047">CNPJ</label>
                   <input  id="00No000000EL047" maxlength="20" name="00No000000EL047" size="20" type="text" />
-
-                  <label for="country">País *</label>
-                  <select  id="country" name="country">
-                    <option value="Argentina">Argentina</option>
-                    <option value="Brazil" selected="selected">Brasil</option>
-                    <option value="Colombia">Colombia</option>
-                    <option value="Mexico">Mexico</option>
-                  </select>
-
                   <div class="phone_container">
                     <label for="phone">Telefone *</label>
                     <input  id="phone" maxlength="40" name="phone" size="20" type="text" required />
@@ -370,7 +250,7 @@
                     </select>
                   </div>
 
-                  <label for="00No0000009N3V9">Descrição do Projeto: *</label>
+                  <label for="00No0000009N3V9">Descrição do Projeto:</label>
                   <textarea  id="00No0000009N3V9" name="00No0000009N3V9" rows="3" type="text" wrap="soft" required></textarea>
                   <input type="submit" name="submit" value="enviar" class="cta cta--ui">
                 </form>
@@ -433,7 +313,7 @@
 
         // validação do CNPJ
         jQuery.validator.addMethod("cnpj", function(cnpj, element) {
-
+         
           if (cnpj.length == 0) return true;
 
            cnpj = jQuery.trim(cnpj);// retira espaços em branco
@@ -527,10 +407,7 @@
             },
             '00No000000EL047': {
               cnpj: true
-            },
-            'country': {
-              required: true
-            },
+            }
 
           },
           submitHandler: function(form) {
@@ -546,8 +423,8 @@
               maxlength: "O nome de sua empresa deve ter no máximo 200 caracteres."
             },
             'email': {
-              required: "Por favor, informe o seu email.",
-              email: "O email deve ser válido."
+              required: "Por favor, informe o nome de sua empresa.",
+              maxlength: "O nome de sua empresa deve ter no máximo 200 caracteres."
             },
             'company': {
               required: "Por favor, informe o nome de sua empresa.",
@@ -564,14 +441,7 @@
             },
             '00No000000EL047': {
               documento: "Por favor, informe um CNPJ válido."
-            },
-            '00No0000009N3V9': {
-              required: "Por favor, informe a descrição do projeto."
-            },
-            'country': {
-              required: "Por favor, informe o país."
-            },
-
+            },            
           }
         });
       });
@@ -583,53 +453,21 @@
     <script src="../js/scroll.js"></script>
     <script>
       $(function() {
-        $('a[href*="#"]:not([href="#"])').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html, body').animate({
-                scrollTop: target.offset().top
-              }, 1000);
-              return false;
-            }
-          }
-        });
-      });
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
     </script>
 
-    <script src="../js/Wallop.js"></script>
-    <script>
-    // New instance of Wallop
-    var wallopEl = document.querySelector('.Wallop');
-    var wallop = new Wallop(wallopEl);
-
-// To start Autoplay, just call the function below
-// and pass in the number of seconds as interval
-// if you want to start autoplay after a while
-// you can wrap this in a setTimeout(); function
-autoplay(5000);
-
-// This a a helper function to build a simple
-// auto-play functionality. 
-function autoplay(interval) {
-  var lastTime = 0;  
-  
-  function frame(timestamp) {
-    var update = timestamp - lastTime >= interval;
-
-    if (update) {
-      wallop.next();
-      lastTime = timestamp;
-    }
-
-    requestAnimationFrame(frame);
-  }
-
-  requestAnimationFrame(frame);
-};
-</script>
-
-
-</body>
-</html>
+    
+  </body>
+  </html>
