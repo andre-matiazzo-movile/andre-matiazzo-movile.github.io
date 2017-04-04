@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width">
-    <title><%= gettext "Password reset – Movile Messaging" %></title>
+    <title><%= gettext "Password changed – Movile Messaging" %></title>
     <style>
       .wrapper {
   width: 100%; }
@@ -1432,7 +1432,7 @@ body.outlook p {
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <h1><%= gettext "Forgot your password?" %></h1>
+                                  <h1><%= gettext "You've changed your password" %></h1>
                                 <!--   <table class="spacer">
                                     <tbody>
                                       <tr>
@@ -1440,41 +1440,7 @@ body.outlook p {
                                       </tr>
                                     </tbody>
                                   </table> -->
-                                  <p><%= gettext "Hey %{name},", name: @name %></p>
-                                  <p>
-                                    <span><%= gettext "We got a request to reset the password for "%></span><b><%= @email %></b>. <span><%= gettext "If it wasn't you, just ignore this message" %></span>.
-                                  </p>
-                                  <table class="spacer">
-                                    <tbody>
-                                      <tr>
-                                        <td height="16px" style="font-size:16px;line-height:16px;">&#xA0;</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                  <table class="spacer">
-                                    <tbody>
-                                      <tr>
-                                        <td height="16px" style="font-size:16px;line-height:16px;">&#xA0;</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                  <table class="button large">
-                                    <tr>
-                                      <td>
-                                        <table>
-                                          <tr>
-                                            <td>
-                                             <%= link (gettext "Reset password"), to: password_path(Garuda.Endpoint, :edit, @password_token), class: "float-center", align: "center", target: "_blank" %>
-                                             <%#  <a href="#" align="center" class="">Reset password</a> %>
-                                            </td>
-                                          </tr>
-                                        </table>
-                                      </td>
-                                      <td class="expander"></td>
-                                    </tr>
-                                  </table>
-<!--                                   <hr> -->
-                                  <p style="word-break: break-all;"><small><%= gettext "If the button doesn't work, you can reset your password by pasting the following link in your address bar: "%><%= link "https://messaging2.movile.com#{password_path(Garuda.Endpoint, :edit, @password_token)}", to: password_path(Garuda.Endpoint, :edit, @password_token), style: "color:#84ADFF;", target: "_blank" %></small></p>
+                                  <p><%= gettext "This is an email to tell you that you've recently changed your Movile Messaging account password. If you never initiated this change please contact "%><b>support.messaging@movile.com</b></p>
                                 </th>
                                 <th class="expander"></th>
                               </tr>
@@ -1513,7 +1479,7 @@ body.outlook p {
                             <table>
                               <tbody><tr>
                                 <th>
-                                   <small><span><%= gettext "If you still have any questions, contact our support team by the email" %></span><u> support.messaging@movile.com </u><span> <%= gettext "or by the phone" %></span> (11) 3230-4162.</small>
+                                  <small><span><%= gettext "If you still have any questions, contact our support team by the email" %></span><u> support.messaging@movile.com </u><span> <%= gettext "or by the phone" %></span> (11) 3230-4162.</small>
                                 </th>
                                 <th class="expander"></th>
                               </tr>
