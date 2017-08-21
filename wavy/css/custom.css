@@ -1,0 +1,59 @@
+    body {
+        font-family: 'Soleil', Arial, sans-serif;
+        color: #314047;
+    }
+    * {margin: 0;}
+    .black {color: #314047;}
+    .purple {color: #8272FF;}
+    .purple-hover:hover {color: #8272FF;}
+    .dark-purple {color: #6454E0;}
+    .bg-purple {background-color: #6454E0;}
+    .b--purple {border-color: #6454E0;}
+    .gray {color: #8994AC;}
+    .bg-light-gray {background-color: #F3F4F6;}
+    .blue {color: #25D8E9;}
+    .bg-blue {background-color: #25D8E9;}
+    .b--blue {border-color: #25D8E9;}
+    .f8 {font-size: 0.625rem;}
+    .shadow-0 {box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);}
+    /* FLEX GROW */
+    .fg-1 { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
+    .fg-2 { -webkit-box-flex: 2; -ms-flex-positive: 2; flex-grow: 2; }
+    .fg-3 { -webkit-box-flex: 3; -ms-flex-positive: 3; flex-grow: 3; }
+    .fg-4 { -webkit-box-flex: 4; -ms-flex-positive: 4; flex-grow: 4; }
+    .fg-i { -webkit-box-flex: inherit; -ms-flex-positive: inherit; flex-grow: inherit; }
+
+    .circle-wave {
+        background: url(../img/circle-wave.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 2rem;
+        position: absolute;
+        width: 400px;
+        max-width: 25%;
+        height: 250px;
+    }
+
+    .header-bg {
+        background: url(../img/header-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .header-bg__mask {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(49,64,71,0.8);
+        z-index: 0;
+    }
+
+    .client {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 0.5;
+    }
