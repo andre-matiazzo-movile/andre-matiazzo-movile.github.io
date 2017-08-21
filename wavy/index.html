@@ -50,63 +50,80 @@
 
 </head>
 <body>
-    <nav class="flex absolute top-0 left-0 right-0 z-2">
+    <nav class="flex absolute justify-between top-0 left-0 right-0 z-2">
         <!-- Brand -->
         <a aria-label="Home" href="/" class="pa3 ma2 inline-flex items-center" role="link">
-            <img src="img/logo-branco.svg" alt="Marca Wavy" class="h1">
+            <img src="img/logo-branco.svg" alt="Marca Wavy" class="w-40 w4-ns">
         </a>
         <!-- Menu -->
-        <div class="inline-flex fg-1">
+        <div class="relative z-2 dn-ns pa3 ma2" id="menu-show">
+            <span class="db bg-white" style="height: 0.125rem; width: 1.5rem;"></span>
+            <span class="db bg-white mt1" style="height: 0.125rem; width: 1.5rem;"></span>
+            <span class="db bg-white mt1" style="height: 0.125rem; width: 1.5rem;"></span>
+        </div>
+        <div class="dn inline-flex-ns fg-1 bg-white bg-transparent-ns" id="menu__container">
             <!-- Primary navigation -->
-            <div class="inline-flex fg-1">
-                <a href="javascript:;" class="inline-flex items-center pa3 ma2 f7 lh-solid link white">Plataforma</a>
-                <a href="javascript:;" class="inline-flex items-center pa3 ma2 f7 lh-solid link white">Documentação</a>
-                <a href="javascript:;" class="inline-flex items-center pa3 ma2 f7 lh-solid link white">Blog</a>
-                <a href="javascript:;" class="inline-flex items-center pa3 ma2 f7 lh-solid link white">Quem somos</a>
-                <a href="javascript:;" class="inline-flex items-center pa3 ma2 f7 lh-solid link white">FAQ</a>
+            <div class="inline-flex-ns fg-1">
+                <div class="relative mh3 inline-flex items-center" id="menu__trigger--platform">
+                    <a href="javascript:;" class="f6 lh-solid link black white-ns pa3 outline-0" style="cursor: default;">Plataforma</a>
+                    <div id="menu__platform" class="dn bg-white shadow-0 absolute left--1 top-2 mt4 pv3">
+                        <a href="javascript:;" class="inline-flex items-center pv2 ph3 mh3 f6 lh-copy link black dim">SMS</a>
+                        <a href="javascript:;" class="inline-flex items-center pv2 ph3 mh3 f6 lh-copy link black dim">Email</a>
+                        <a href="javascript:;" class="inline-flex items-center pv2 ph3 mh3 f6 lh-copy link black dim">Voz</a>
+                        <a href="javascript:;" class="inline-flex items-center pv2 ph3 mh3 f6 lh-copy link black dim">Chatbots</a>
+                        <a href="javascript:;" class="inline-flex items-center pv2 ph3 mh3 f6 lh-copy link black dim">Push</a>
+                        <a href="javascript:;" class="inline-flex items-center pv2 ph3 mh3 f6 lh-copy link black dim">Carrier lookup</a>
+                        <a href="javascript:;" class="inline-flex items-center pv2 ph3 mh3 f6 lh-copy link black dim">Enriquecimento de base</a>
+                        <a href="javascript:;" class="inline-flex items-center pv2 ph3 mh3 f6 lh-copy link black dim">Navegação patrocinada</a>
+                    </div>
+                </div>
+                <a href="javascript:;" class="inline-flex items-center pa3 mv3 mh3 f6 lh-solid link black white-ns">Documentação</a>
+                <a href="javascript:;" class="inline-flex items-center pa3 mv3 mh3 f6 lh-solid link black white-ns">Blog</a>
+                <a href="javascript:;" class="inline-flex items-center pa3 mv3 mh3 f6 lh-solid link black white-ns">Quem somos</a>
+                <a href="javascript:;" class="inline-flex items-center pa3 mv3 mh3 f6 lh-solid link black white-ns">FAQ</a>
             </div>
             <!-- Secondary navigation -->
             <div class="inline-flex justify-end fg-1">
                 <div class="items-center dn">
-                    <a href="javascript:;" class="bg-blue dib pa3 ma2 f8 ttu tracked link b white">Fale conosco</a>
+                    <a href="javascript:;" class="bg-blue dib pa3 ma3 f8 ttu tracked link b black">Fale conosco</a>
                 </div>
-                <a href="javascript:;" class="inline-flex items-center pa3 mv2 mh3 f7 lh-solid link white">Entrar</a>
+                <a href="javascript:;" class="inline-flex items-center pa3 mv3 mh3 f6 lh-solid link white">Entrar</a>
             </div>
         </div>
     </nav>
     <!-- Header -->
     <div class="header-bg">
         <div class="header-bg__mask"></div>
-        <section class="mw8 ph4 center flex items-center justify-between vh-100 relative z-1">
+        <section class="mw8 ph4 center flex items-center justify-between vh-100-ns pv6 pv0-ns relative z-1">
             <!-- Title and buttons -->
-            <div class="w-70 pr5">
+            <div class="w-100 w-70-ns pr5-ns">
                 <h1 class="f2 lh-title mv0 white">
                     A plataforma de comunicação multicanal para sua empresa.
                 </h1>
                 <p class="lh-copy white mt3 mb0 measure">
                     Fortaleça o relacionamento com seu cliente através dos mais diversos meios de comunicação.
                 </p>
-                <div class="flex mt4">
-                    <a href="javascript:;" class="inline-flex items-center shadow-0 ba b--blue lh-copy bg-blue dib pa3 f7 ttu tracked link b black">Fale conosco</a>
-                    <a href="javascript:;" class="ml4 inline-flex items-center shadow-0 ba b--black-05 lh-copy bg-white dib pa3 f7 ttu tracked link b black">Conheça as vantagens</a>
+                <div class="flex-ns mt3">
+                    <a href="javascript:;" class="inline-flex items-center shadow-0 ba b--blue lh-copy bg-blue dib pa3 f7 ttu tracked link b black mt3">Fale conosco</a>
+                    <a href="javascript:;" class="ml4-ns inline-flex items-center shadow-0 ba b--black-05 lh-copy bg-white dib pa3 f7 ttu tracked link b black mt3">Conheça as vantagens</a>
                 </div>
             </div>
         </section>
     </div>
 
     <!-- Products -->
-    <section class="mt5 mw8 ph4 center pt4 shadow-0 nt5 relative z-2 pb5 bg-white ba b--black-10">
+    <section class="mt5 mw8 ph4 center relative z-2">
         <h2 class="f2 w-100 mv0">Nossa plataforma</h2>
         <div class="nl3 nr3 nt4">
             <div class="flex flex-wrap">
                 <!-- SMS -->
-                <div class="w-25 flex items-start mt5 ph3">
+                <div class="w-100 w-25-ns flex items-start mt5 ph3">
                     <div class="w-10">
                         <img src="img/icons/sms.svg" class="db w-100" alt="">
                     </div>
                     <div class="w-90 pl3 flex flex-column h-100">
                         <h3 class="lh-title f4 mb0">SMS</h3>
-                        <p class="lh-copy gray mt2 mb0 f6">
+                        <p class="lh-copy gray mt2 mb0 f6-ns">
                             Mantenha seu cliente informado com mensagens de texto, a qualquer hora e em qualquer lugar.
                         </p>
                         <div style="margin-top: auto;">
@@ -115,13 +132,13 @@
                     </div>
                 </div>
                 <!-- Email -->
-                <div class="w-25 flex items-start mt5 ph3">
+                <div class="w-100 w-25-ns flex items-start mt5 ph3">
                     <div class="w-10">
                         <img src="img/icons/email.svg" class="db w-100" alt="">
                     </div>
                     <div class="w-90 pl3 flex flex-column h-100">
                         <h3 class="lh-title f4 mb0">Email</h3>
-                        <p class="lh-copy gray mt2 mb0 f6">
+                        <p class="lh-copy gray mt2 mb0 f6-ns">
                             Configure campanhas de email e ainda monitore as interações da sua base.
                         </p>
                         <div style="margin-top: auto;">
@@ -130,13 +147,13 @@
                     </div>
                 </div>
                 <!-- Voice -->
-                <div class="w-25 flex items-start mt5 ph3">
+                <div class="w-100 w-25-ns flex items-start mt5 ph3">
                     <div class="w-10">
                         <img src="img/icons/voice.svg" class="db w-100" alt="">
                     </div>
                     <div class="w-90 pl3 flex flex-column h-100">
                         <h3 class="lh-title f4 mb0">Voz</h3>
-                        <p class="lh-copy gray mt2 mb0 f6">
+                        <p class="lh-copy gray mt2 mb0 f6-ns">
                             Torne mais pessoal o contato com seus clientes através de ligações automatizadas.
                         </p>
                         <div style="margin-top: auto;">
@@ -145,13 +162,13 @@
                     </div>
                 </div>
                 <!-- Chatbots -->
-                <div class="w-25 flex items-start mt5 ph3">
+                <div class="w-100 w-25-ns flex items-start mt5 ph3">
                     <div class="w-10">
                         <img src="img/icons/chat.svg" class="db w-100" alt="">
                     </div>
                     <div class="w-90 pl3 flex flex-column h-100">
                         <h3 class="lh-title f4 mb0">Chatbots</h3>
-                        <p class="lh-copy gray mt2 mb0 f6">
+                        <p class="lh-copy gray mt2 mb0 f6-ns">
                             Sua marca monetizando e engajando usuários através de robôs no Facebook Messenger.
                         </p>
                         <div style="margin-top: auto;">
@@ -160,13 +177,13 @@
                     </div>
                 </div>
                 <!-- Push -->
-                <div class="w-25 flex items-start mt5 ph3">
+                <div class="w-100 w-25-ns flex items-start mt5 ph3">
                     <div class="w-10">
                         <img src="img/icons/push.svg" class="db w-100" alt="">
                     </div>
                     <div class="w-90 pl3 flex flex-column h-100">
                         <h3 class="lh-title f4 mb0">Push</h3>
-                        <p class="lh-copy gray mt2 mb0 f6">
+                        <p class="lh-copy gray mt2 mb0 f6-ns">
                             Crie réguas de comunicação com os usuários do seu app através de notificações por push.
                         </p>
                         <div style="margin-top: auto;">
@@ -175,13 +192,13 @@
                     </div>
                 </div>
                 <!-- Carrier lookup -->
-                <div class="w-25 flex items-start mt5 ph3">
+                <div class="w-100 w-25-ns flex items-start mt5 ph3">
                     <div class="w-10">
                         <img src="img/icons/lookup.svg" class="db w-100" alt="">
                     </div>
                     <div class="w-90 pl3 flex flex-column h-100">
                         <h3 class="lh-title f4 mb0">Carrier lookup</h3>
-                        <p class="lh-copy gray mt2 mb0 f6">
+                        <p class="lh-copy gray mt2 mb0 f6-ns">
                             Limpe sua base telefônica e aumente a taxa de entrega das suas mensagens.
                         </p>
                         <div style="margin-top: auto;">
@@ -190,13 +207,13 @@
                     </div>
                 </div>
                 <!-- Enriquecimento -->
-                <div class="w-25 flex items-start mt5 ph3">
+                <div class="w-100 w-25-ns flex items-start mt5 ph3">
                     <div class="w-10">
                         <img src="img/icons/enriquecimento.svg" class="db w-100" alt="">
                     </div>
                     <div class="w-90 pl3 flex flex-column h-100">
                         <h3 class="lh-title f4 mb0">Enriquecimento de base</h3>
-                        <p class="lh-copy gray mt2 mb0 f6">
+                        <p class="lh-copy gray mt2 mb0 f6-ns">
                             Torne suas ações mais assertivas com uma base de contatos segmentada para o seu negócio.
                         </p>
                         <div style="margin-top: auto;">
@@ -205,13 +222,13 @@
                     </div>
                 </div>
                 <!-- Navegação patrocinada -->
-                <div class="w-25 flex items-start mt5 ph3">
+                <div class="w-100 w-25-ns flex items-start mt5 ph3">
                     <div class="w-10">
                         <img src="img/icons/patrocinada.svg" class="db w-100" alt="">
                     </div>
                     <div class="w-90 pl3 flex flex-column h-100">
                         <h3 class="lh-title f4 mb0">Navegação patrocinada</h3>
-                        <p class="lh-copy gray mt2 mb0 f6">
+                        <p class="lh-copy gray mt2 mb0 f6-ns">
                             Isente seus clientes do consumo de internet e aumente as conversões em seu site ou app.
                         </p>
                         <div style="margin-top: auto;">
@@ -225,11 +242,17 @@
 
     <!-- Integration -->
     <section class="relative mt6">
-        <div class="bg-purple absolute top-0 left-0 right-0 pt6 pb7 z-0"></div>
+        <div class="bg-purple absolute top-0 left-0 right-0 pt7 pt6-ns pb7 z-0"></div>
         <article class="pt4 mw8 ph4 center relative z-1">
-            <h2 class="f2 w-100 mv0 white">É fácil integrar com a sua plataforma</h2>
-            <div class="flex">
-                <div class="w-75 mt4">
+            <h2 class="f2 w-100 mv0 white lh-title">É fácil integrar com a sua plataforma</h2>
+            <div class="flex flex-wrap">
+                <div class="w-100 w-25-ns pl4-ns order-2-ns">
+                    <p class="lh-copy white mt4 pt4-ns f6-ns">
+                        Respiramos tecnologia e estamos prontos para integrar com a sua empresa!
+                    </p>
+                    <a href="javascript:;" class="dib blue link ttu tracked f7 lh-solid bb b pb1 mt3">Leia a documentação →</a>
+                </div>
+                <div class="w-100 w-75-ns mt5 mt4-ns order-1-ns">
                     <div class="flex">
                         <a href="javascript:;" class="link b bb bw2 pb1 mr3 blue">SMS</a>
                         <a href="javascript:;" class="link b bb bw2 pb1 mr3 white b--transparent">Email</a>
@@ -244,12 +267,6 @@
                         <div style="height: 50vh;"></div>
                     </div>
                 </div>
-                <div class="w-25 pl4">
-                    <p class="lh-copy white mt4 pt4">
-                        Respiramos tecnologia e estamos prontos para integrar com a sua empresa!
-                    </p>
-                    <a href="javascript:;" class="dib blue link ttu tracked f7 lh-solid bb b pb1 mt3">Leia a documentação →</a>
-                </div>
             </div>
         </article>
     </section>
@@ -260,70 +277,70 @@
         <div class="nl3 nr3">
             <div class="flex flex-wrap">
                 <!-- Multicanalidade -->
-                <div class="w-25 mt4 ph3">
+                <div class="w-100 w-25-ns mt4 ph3">
                     <h3 class="lh-title f4 mb0">Multicanalidade</h3>
-                    <p class="lh-copy gray mt2 mb0 f6">
+                    <p class="lh-copy gray mt2 mb0 f6-ns">
                         Comunique-se com seu cliente através dos mais diversos meios de comunicação.
                     </p>
                 </div>
                 <!-- Entrega garantida e otimizada -->
-                <div class="w-25 mt4 ph3">
+                <div class="w-100 w-25-ns mt4 ph3">
                     <h3 class="lh-title f4 mb0">Entrega garantida e otimizada</h3>
-                    <p class="lh-copy gray mt2 mb0 f6">
+                    <p class="lh-copy gray mt2 mb0 f6-ns">
                         Priorização dos canais para garantir que a mensagem chegará ao seu cliente. Se um canal falhar, enviamos por outro.
                     </p>
                 </div>
                 <!-- Dashboards em tempo real -->
-                <div class="w-25 mt4 ph3">
+                <div class="w-100 w-25-ns mt4 ph3">
                     <h3 class="lh-title f4 mb0">Dashboards em tempo real</h3>
-                    <p class="lh-copy gray mt2 mb0 f6">
+                    <p class="lh-copy gray mt2 mb0 f6-ns">
                         Acompanhe em tempo real o desempenho das suas campanhas através dos nossos painéis.
                     </p>
                 </div>
                 <!-- Interface -->
-                <div class="w-25 mt4 ph3">
+                <div class="w-100 w-25-ns mt4 ph3">
                     <h3 class="lh-title f4 mb0">Interface</h3>
-                    <p class="lh-copy gray mt2 mb0 f6">
+                    <p class="lh-copy gray mt2 mb0 f6-ns">
                         Interface amigável e intuitiva para facilitar seu dia a dia no uso da plataforma.
                     </p>
                 </div>
             </div>
-            <div class="flex flex-wrap relative">
+            <div class="flex flex-wrap">
                 <!-- Campanhas -->
-                <div class="w-25 mt4 ph3">
+                <div class="w-100 w-25-ns mt4 ph3">
                     <h3 class="lh-title f4 mb0">Campanhas</h3>
-                    <p class="lh-copy gray mt2 mb0 f6">
+                    <p class="lh-copy gray mt2 mb0 f6-ns">
                         Gerencie e direcione suas campanhas para cada etapa da jornada do cliente.
                     </p>
                 </div>
                 <!-- Suporte-->
-                <div class="w-25 mt4 ph3">
+                <div class="w-100 w-25-ns mt4 ph3">
                     <h3 class="lh-title f4 mb0">Suporte</h3>
-                    <p class="lh-copy gray mt2 mb0 f6">
+                    <p class="lh-copy gray mt2 mb0 f6-ns">
                         Sempre prontos para te ajudar! Especialistas altamente qualificados para um atendimento 24x7. 
                     </p>
                 </div>
                 <!-- Integrações-->
-                <div class="w-25 mt4 ph3">
+                <div class="w-100 w-25-ns mt4 ph3">
                     <h3 class="lh-title f4 mb0">Integrações</h3>
-                    <p class="lh-copy gray mt2 mb0 f6">
+                    <p class="lh-copy gray mt2 mb0 f6-ns">
                         Pode ser facilmente integrado com a plataforma da sua empresa. 
                     </p>
                 </div>
-                <div class="absolute top-2 right-0 nr6 w-third">
-                    <img src="img/wavy-pattern.svg" alt="">
-                </div>
             </div>
-            <div class="flex flex-wrap">
+            <div class="flex flex-wrap relative">
                 <!-- Relatórios-->
-                <div class="w-25 mt4 ph3">
+                <div class="w-100 w-25-ns mt4 ph3">
                     <h3 class="lh-title f4 mb0">Relatórios</h3>
-                    <p class="lh-copy gray mt2 mb0 f6">
+                    <p class="lh-copy gray mt2 mb0 f6-ns">
                         Relatórios e dados que te ajudam na tomada de decisões. 
                     </p>
                 </div>
-                <div class="w-75 mt4 ph3 relative z-1">
+                <div class="w-100 w-75-ns nl3 nr3 mh0-ns mt4 ph3 relative z-1">
                     <img src="img/reports.jpg" alt="" class="shadow-0 ba b--black-10">
+                </div>
+                <div class="absolute top-0 right--1 right-0-ns mt6 nt5-ns nr6-ns w-50 w-third-ns">
+                    <img src="img/wavy-pattern.svg" alt="">
                 </div>
             </div>
         </div>
@@ -332,25 +349,27 @@
     <!-- Empresas -->
     <section class="mt6 mw8 ph4 center">
         <div class="nl3 nr3 nt4">
-            <div class="flex items-center justify-center">
-                <img src="img/clients/caixa.jpg" alt="" class="ph3 h2 mt4 client">
-                <img src="img/clients/itau.jpg" alt="" class="ph3 h2 mt4 client">
-                <img src="img/clients/google.jpg" alt="" class="ph3 h2 mt4 client">
-                <img src="img/clients/ifood.jpg" alt="" class="ph3 h2 mt4 client">
-                <img src="img/clients/voxage.jpg" alt="" class="ph3 h2 mt4 client">
-                <img src="img/clients/sebrae.jpg" alt="" class="ph3 h2 mt4 client">
-                <img src="img/clients/eaichef.jpg" alt="" class="ph3 h2 mt4 client">
-                <img src="img/clients/sbt.jpg" alt="" class="ph3 h2 mt4 client">
-                <img src="img/clients/avon.jpg" alt="" class="ph3 h2 mt4 client">
-                <img src="img/clients/corinthians.jpg" alt="" class="ph3 h2 mt4 client">
+            <div class="flex flex-wrap items-center justify-center client-container">
+                <img src="img/clients/caixa.jpg" alt="Logo Caixa" class="ph3 h2 mt4 client">
+                <img src="img/clients/itau.jpg" alt="Logo Itaú" class="ph3 h2 mt4 client">
+                <img src="img/clients/google.jpg" alt="Logo Google" class="ph3 h2 mt4 client">
+                <img src="img/clients/ifood.jpg" alt="Logo iFood" class="ph3 h2 mt4 client">
+                <img src="img/clients/voxage.jpg" alt="Logo Vox Age" class="ph3 h2 mt4 client">
+                <img src="img/clients/sebrae.jpg" alt="Logo Sebrae" class="ph3 h2 mt4 client">
+                <img src="img/clients/eaichef.jpg" alt="Logo Eaíchef" class="ph3 h2 mt4 client">
+                <img src="img/clients/sbt.jpg" alt="Logo SBT" class="ph3 h2 mt4 client">
+                <img src="img/clients/avon.jpg" alt="Logo Avon" class="ph3 h2 mt4 client">
+                <img src="img/clients/corinthians.jpg" alt="Logo Corinthians" class="ph3 h2 mt4 client">
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="mt6 mw8 ph4 center relative">
-        <img src="img/cta-pattern.svg" alt="" class="db w-60 left-0 right-0 center absolute z-0">
-        <div class="center w-third pv6 tc">
+    <section class="mt5 mt6-ns mw8 ph4 center relative">
+        <div class="h-100 h-auto-ns w-60-ns left-0 right-0 center-ns absolute z-0a">
+            <img src="img/cta-pattern.svg" alt="" class="db h-100 h-auto-ns w-100-ns center">
+        </div>
+        <div class="center w-third-ns pt5 pb4 pv6-ns tc">
             <div class="bg-white shadow-0 ba b--black-10 pa4 relative z-1">
                 <h3 class="lh-title f2 mv0">Comece hoje</h3>
                 <p class="lh-copy gray mt3">As melhores soluções para a comunicação da sua empresa estão aqui no Wavy.</p>
@@ -363,7 +382,7 @@
     <section class="mt5 mw8 ph4 center">
         <div class="nl3 nr3">
             <div class="flex flex-wrap">
-                <div class="w-50 ph3">
+                <div class="w-50-ns ph3">
                     <h4 class="f4">Quem somos</h4>
                     <p class="lh-copy gray mt3">
                         Somos uma das verticais do <a href="https://www.movile.com" class="purple" target="_blank">Grupo Movile</a> e nossa missão é ajudar empresas, de qualquer
@@ -382,7 +401,7 @@
     </section>
     
     <!-- Our offices -->
-    <section class="relative">
+<!--     <section class="relative">
         <div class="bg-light-gray absolute bottom-0 left-0 right-0 center pv6 z-0"></div>
         <article class="mt5 mw8 ph4 center">
             <h4 class="f4">Nossos escritórios</h4>
@@ -391,13 +410,13 @@
                 <iframe style="top:-46px;" class="relative bn shadow-0" src="https://www.google.com/maps/d/u/0/embed?mid=1pRAi5tSo46QgTaSFpHmXs2xpH4Y" width="100%" height="100%"></iframe>
             </div>
         </article>
-    </section>
+    </section> -->
 
-<!--     <section class="mt5 mw8 ph4 center">
+    <section class="mt5 mw8 ph4 center">
         <h4 class="f4">Nossos escritórios</h4>
         <div class="nl3 nr3 nt4">
             <div class="flex-ns flex-wrap">
-                <div class="w-third flex items-start mt5 ph3">
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
                     <div class="w1">
                         <img src="img/icons/pin.svg" class="db w-100" alt="">
                     </div>
@@ -412,7 +431,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="w-third flex items-start mt5 ph3">
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
                     <div class="w1">
                         <img src="img/icons/pin.svg" class="db w-100" alt="">
                     </div>
@@ -427,7 +446,7 @@
                         </ul>
                     </div>
                 </div>              
-                <div class="w-third flex items-start mt5 ph3">
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
                     <div class="w1">
                         <img src="img/icons/pin.svg" class="db w-100" alt="">
                     </div>
@@ -442,7 +461,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="w-third flex items-start mt5 ph3">
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
                     <div class="w1">
                         <img src="img/icons/pin.svg" class="db w-100" alt="">
                     </div>
@@ -457,7 +476,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="w-third flex items-start mt5 ph3">
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
                     <div class="w1">
                         <img src="img/icons/pin.svg" class="db w-100" alt="">
                     </div>
@@ -474,15 +493,15 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Footer -->
-    <footer class=" pt4 bg-light-gray">
-        <article class="mw8 ph4 center pb5">
+    <footer class="mt5 pt4 bg-light-gray">
+        <article class="mw8 ph4 center pb4">
             <div class="nl3 nr3">
                 <div class="flex flex-wrap">
-                    <div class="w-20 ph3">
-                        <ul class="list f7 pl0 flex flex-column h-100 justify-between">
+                    <div class="w-100 w-20-ns ph3">
+                        <ul class="list f7 pl0 flex flex-column-ns h-100 justify-between">
                             <li class="b pl0 relative">
                                 <img src="img/icons/language.svg" class="db w1 absolute left-0" alt="">
                                 <a href="javascript:;" class="pl4 f6 link purple b">Português</a>
@@ -490,7 +509,7 @@
                             <li class="pl0 black-30 f6">&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Wavy</li>
                         </ul>
                     </div>
-                    <div class="w-20 ph3">
+                    <div class="w-100 w-20-ns mt4 mt0-ns ph3">
                         <ul class="list f6 pl0">
                             <li class="b pl0">Plataforma</li>
                             <li class="pl0 mt3"><a href="javascript:;" class="link gray purple-hover">SMS</a></li>
@@ -503,7 +522,7 @@
                             <li class="pl0 mt3"><a href="javascript:;" class="link gray purple-hover">Navegação patrocinada</a></li>
                         </ul>
                     </div>
-                    <div class="w-20 ph3">
+                    <div class="w-100 w-20-ns mt4 mt0-ns ph3">
                         <ul class="list f6 pl0">
                             <li class="b pl0">Documentação</li>
                             <li class="pl0 mt3"><a href="javascript:;" class="link gray purple-hover">SMS</a></li>
@@ -511,7 +530,7 @@
                             <li class="pl0 mt3"><a href="javascript:;" class="link gray purple-hover">Voz</a></li>
                         </ul>
                     </div>
-                    <div class="w-20 ph3">
+                    <div class="w-100 w-20-ns mt4 mt0-ns ph3">
                         <ul class="list f6 pl0">
                             <li class="b pl0">Recursos</li>
                             <li class="pl0 mt3"><a href="javascript:;" class="link gray purple-hover">Blog</a></li>
@@ -522,7 +541,8 @@
                 </div>
             </div>
         </article>
-
     </footer>
+    <script type=text/javascript src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type=text/javascript src="js/custom.js"></script>
 </body>
 </html>
