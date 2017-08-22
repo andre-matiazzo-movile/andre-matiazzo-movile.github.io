@@ -6,6 +6,14 @@ $( document ).ready(function() {
   });
 
   $('#menu-open').on('click', function () {
-    $('#menu__container').fadeToggle(150);
+    $('#menu__container').fadeIn(150);
+    $(this).hide();
+    $('#menu-close').show();
+  });
+
+    $('#menu-close').on('click', function () {
+    $('#menu__container').fadeOut(150);
+    $(this).hide();
+    $('#menu-open').show();
   });
 });
