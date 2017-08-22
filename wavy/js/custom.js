@@ -5,7 +5,7 @@ $( document ).ready(function() {
     }
   });
 
-  $('#menu-show').on('click', function () {
+  $('#menu-open').on('click', function () {
     $('#menu__container').fadeToggle(150);
   });
 });
