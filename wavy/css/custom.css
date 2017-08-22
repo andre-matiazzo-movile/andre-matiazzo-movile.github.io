@@ -60,4 +60,8 @@
 
     @media screen and (min-width: 30rem) {        
         .client-container {flex-wrap: nowrap;}
+        .bg-transparent-ns {background-color: transparent;}
+        .white-ns {color: white;}
+        .shadow-0-ns {box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);}
+        .shadow-none-ns {box-shadow: none;}
     }

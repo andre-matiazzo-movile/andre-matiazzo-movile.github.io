@@ -1,6 +1,8 @@
 $( document ).ready(function() {
   $('#menu__trigger--platform').hover(function () {
-    $('#menu__platform').fadeToggle(150);
+    if ( ($(window).width()) > '479') {
+      $('#menu__platform').fadeToggle(150);
+    }
   });
 
   $('#menu-show').on('click', function () {
