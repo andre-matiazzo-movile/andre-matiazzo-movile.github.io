@@ -572,9 +572,34 @@
     <!-- Slider -->
     <script src="../../js/Wallop.min.js"></script>
     <script>
-      var wallopEl = document.querySelector('.Wallop');
-      var slider = new Wallop(wallopEl);
-      carousel: true;
-  </script>
+    // New instance of Wallop
+    var wallopEl = document.querySelector('.Wallop');
+    var wallop = new Wallop(wallopEl);
+
+// To start Autoplay, just call the function below
+// and pass in the number of seconds as interval
+// if you want to start autoplay after a while
+// you can wrap this in a setTimeout(); function
+autoplay(5000);
+
+// This a a helper function to build a simple
+// auto-play functionality. 
+function autoplay(interval) {
+  var lastTime = 0;  
+  
+  function frame(timestamp) {
+    var update = timestamp - lastTime >= interval;
+
+    if (update) {
+      wallop.next();
+      lastTime = timestamp;
+  }
+
+  requestAnimationFrame(frame);
+}
+
+requestAnimationFrame(frame);
+};
+</script>
 </body>
 </html>
