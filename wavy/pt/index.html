@@ -47,6 +47,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
     <link rel="stylesheet" href="../css/custom.css">
+    <!-- For the slider -->
+    <link rel="stylesheet" href="../css/wallop.css">
+    <link rel="stylesheet" href="../css/wallop--slide.css">
 
     <!-- Typekit -->
     <script src="https://use.typekit.net/fja4naa.js"></script>
@@ -154,7 +157,7 @@
     </div>
 
     <!-- Products -->
-    <section class="bg-light-gray pv5">
+    <section class="bg-light-gray pv5 pt5 pb6-ns">
         <article class="mw8 ph4 center relative">
             <h2 class="f2 w-100 mv0">Nossa plataforma</h2>
             <div class="nl3 nr3 nt4">
@@ -316,73 +319,110 @@
     </section>
 
     <!-- Vantagens -->
-    <section class="mt5 pb6 mw8 ph4 center" style="background: url(../../img/half-circle-wave.svg) no-repeat center center; background-size: 100% auto;">
+    <section class="mt6 mw8 ph4 center relative">
+        <div class="absolute mt5 mw7 center left-0 right-0 overflow-x-hidden">
+            <img src="../img/half-circle-wave.svg" alt="" class="db w-100">
+        </div>
         <h2 class="f2 mv0">Vantagens no Wavy</h2>
         <div class="nl3 nr3">
-            <div class="w-50-ns flex flex-wrap items-end-ns">
-                <div class="flex flex-wrap w-50-ns">
-                    <!-- 01 -->
-                    <div class="w-100 mt4 ph3">
-                        <div class="shadow-0 bg-white ba b--black-10 pa3">
-                            <h3 class="lh-title f5 mb0">Short Codes</h3>
-                            <p class="lh-copy gray mt2 mb0 f6-ns">
-                                Somos parceiros oficiais das operadoras e atuamos dentro das boas práticas do mercado.
-                            </p>
+            <div class="Wallop Wallop--slide">
+                <div class="Wallop-list">
+                    <div class="Wallop-item pb3">
+                        <div class="w-50-ns flex flex-wrap items-end-ns">
+                            <div class="flex flex-wrap w-50-ns">
+                                <!-- 01 -->
+                                <div class="w-100 mt4 ph3">
+                                    <div class="shadow-0 bg-white ba b--black-10 pa3">
+                                        <h3 class="lh-title f5 mb0">Multicanalidade</h3>
+                                        <p class="lh-copy gray mt2 mb0 f6-ns">
+                                            Comunique-se com seu cliente através de canais de comunicação integrados.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 02 -->
+                                <div class="w-100 mt4 ph3">
+                                    <div class="shadow-0 bg-white ba b--black-10 pa3">
+                                        <h3 class="lh-title f5 mb0">Entrega garantida e otimizada</h3>
+                                        <p class="lh-copy gray mt2 mb0 f6-ns">
+                                            Priorização dos canais para garantir que a mensagem chegará ao seu cliente. Se um canal falhar, enviamos por outro.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap w-50-ns">
+                                <!-- 03 -->
+                                <div class="w-100 mt4 ph3">
+                                    <div class="shadow-0 bg-white ba b--black-10 pa3">
+                                        <h3 class="lh-title f5 mb0">Dashboards em tempo real</h3>
+                                        <p class="lh-copy gray mt2 mb0 f6-ns">
+                                            Acompanhe em tempo real o desempenho das suas campanhas através dos nossos painéis.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 04 -->
+                                <div class="w-100 mt4 ph3">
+                                    <div class="shadow-0 bg-white ba b--black-10 pa3">
+                                        <h3 class="lh-title f5 mb0">Interface</h3>
+                                        <p class="lh-copy gray mt2 mb0 f6-ns">
+                                            Interface amigável e intuitiva para facilitar seu dia a dia no uso da plataforma.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- 02 -->
-                    <div class="w-100 mt4 ph3">
-                        <div class="shadow-0 bg-white ba b--black-10 pa3">
-                            <h3 class="lh-title f5 mb0">Conexão direta</h3>
-                            <p class="lh-copy gray mt2 mb0 f6-ns">
-                                Com conexão direta em todas as operadoras de telefonia do país, entregamos o SMS de forma segura.
-                            </p>
+                    <div class="Wallop-item pb3">
+                        <div class="w-50-ns flex flex-wrap items-start" style="margin-left: auto;">
+                            <div class="flex flex-wrap w-50-ns">
+                                <!-- 05 -->
+                                <div class="w-100 mt4 ph3">
+                                    <div class="shadow-0 bg-white ba b--black-10 pa3">
+                                        <h3 class="lh-title f5 mb0">Campanhas</h3>
+                                        <p class="lh-copy gray mt2 mb0 f6-ns">
+                                            Gerencie e direcione suas campanhas para cada etapa da jornada do cliente.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 06 -->
+                                <div class="w-100 mt4 ph3">
+                                    <div class="shadow-0 bg-white ba b--black-10 pa3">
+                                        <h3 class="lh-title f5 mb0">Suporte</h3>
+                                        <p class="lh-copy gray mt2 mb0 f6-ns">
+                                            Sempre prontos para te ajudar! Especialistas altamente qualificados para um atendimento 24x7.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap w-50-ns">
+                                <!-- 07 -->
+                                <div class="w-100 mt4 ph3">
+                                    <div class="shadow-0 bg-white ba b--black-10 pa3">
+                                        <h3 class="lh-title f5 mb0">Integração</h3>
+                                        <p class="lh-copy gray mt2 mb0 f6-ns">
+                                            Pode ser facilmente integrado com sua própria plataforma.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 08 -->
+                                <div class="w-100 mt4 ph3">
+                                    <div class="shadow-0 bg-white ba b--black-10 pa3">
+                                        <h3 class="lh-title f5 mb0">Relatórios</h3>
+                                        <p class="lh-copy gray mt2 mb0 f6-ns">
+                                            Relatórios e dados que te ajudam na tomada de decisões.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-wrap w-50-ns">
-                    <!-- 03 -->
-                    <div class="w-100 mt4 ph3">
-                        <div class="shadow-0 bg-white ba b--black-10 pa3">
-                            <h3 class="lh-title f5 mb0">Personalização de Mensagens</h3>
-                            <p class="lh-copy gray mt2 mb0 f6-ns">
-                                Personalize suas mensagens com dados dos clientes e deixe o contato mais pessoal
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-50-ns flex flex-wrap items-start" style="margin-left: auto;">
-                <div class="flex flex-wrap w-50-ns">
-                    <!-- 04 -->
-                    <div class="w-100 mt4 mt0-ns ph3">
-                        <div class="shadow-0 bg-white ba b--black-10 pa3">
-                            <h3 class="lh-title f5 mb0">Envios por contato, grupos ou lotes</h3>
-                            <p class="lh-copy gray mt2 mb0 f6-ns">
-                                Escolha entre uma comunicação one-to-one, segmentada ou em massa para seus clientes.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- 05 -->
-                    <div class="w-100 mt4 ph3">
-                        <div class="shadow-0 bg-white ba b--black-10 pa3">
-                            <h3 class="lh-title f5 mb0">Histórico de envios</h3>
-                            <p class="lh-copy gray mt2 mb0 f6-ns">
-                                Tenha acesso ao histórico de disparos de SMS da sua empresa.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-wrap w-50-ns">
-                    <!-- 06-->
-                    <div class="w-100 mt4 mt0-ns ph3">
-                        <div class="shadow-0 bg-white ba b--black-10 pa3">
-                            <h3 class="lh-title f5 mb0">Web ou Integração</h3>
-                            <p class="lh-copy gray mt2 mb0 f6-ns">
-                                Disponível na versão web ou pode ser facilmente integrável com sua própria plataforma.
-                            </p>
-                        </div>
-                    </div>
+                <div class="mt3">
+                    <button class="Wallop-buttonPrevious bg-white bn pa3">
+                        <img src="../img/icons/arrow.svg" alt="" class="db h1 rotate-180">
+                    </button>
+                    <button class="Wallop-buttonNext bg-white bn pa3">
+                        <img src="../img/icons/arrow.svg" alt="" class="db h1">
+                    </button>
                 </div>
             </div>
         </div>
@@ -592,31 +632,6 @@
         // New instance of Wallop
         var wallopEl = document.querySelector('.Wallop');
         var wallop = new Wallop(wallopEl);
-
-        // To start Autoplay, just call the function below
-        // and pass in the number of seconds as interval
-        // if you want to start autoplay after a while
-        // you can wrap this in a setTimeout(); function
-        autoplay(5000);
-
-        // This a a helper function to build a simple
-        // auto-play functionality. 
-        function autoplay(interval) {
-            var lastTime = 0;  
-
-            function frame(timestamp) {
-                var update = timestamp - lastTime >= interval;
-
-                if (update) {
-                  wallop.next();
-                  lastTime = timestamp;
-              }
-
-              requestAnimationFrame(frame);
-          }
-
-          requestAnimationFrame(frame);
-      };
-  </script>
+    </script>
 </body>
 </html>
