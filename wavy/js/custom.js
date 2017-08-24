@@ -35,5 +35,15 @@ $( document ).ready(function() {
     $(this).parent().find('p').slideToggle();
     $(this).removeClass('gray');
     $(this).addClass('black');
+    $('.sms_example').hide();
+    if ($(this).is('#sms_trigger--corp')) {
+      $('.sms_example--corp').fadeIn(150);
+    } else if ($(this).is('#sms_trigger--mkt')) {
+      $('.sms_example--mkt').fadeIn(150);
+    } else if ($(this).is('#sms_trigger--conc')) {
+      $('.sms_example--conc').fadeIn(150);
+    } else if ($(this).is('#sms_trigger--flash')) {
+      $('.sms_example--flash').fadeIn(150);
+    }
   });
 });

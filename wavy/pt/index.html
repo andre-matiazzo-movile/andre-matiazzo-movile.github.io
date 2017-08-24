@@ -306,12 +306,103 @@
                         <a href="javascript:;" class="link b bb bw2 pb1 mr3 white b--transparent">Voz</a>
                     </div>
                     <div class="shadow-0 bg-white ba b--black-10">
-                        <div class="flex ph3 bb b--black-10">
-                            <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 purple">SMS</a>
-                            <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 black-30">Email</a>
-                            <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 black-30">Voz</a>
+                        <!-- SMS API Menu -->
+                        <div id="API_SMS">
+                            <div class="flex ph3 bb b--black-10">
+                                <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 purple">cURL</a>
+                                <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 black-30">Ruby</a>
+                                <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 black-30">Python</a>
+                                <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 black-30">PHP</a>
+                                <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 black-30">Java</a>
+                            </div>
                         </div>
-                        <div style="height: 50vh;"></div>
+                        <div class="f7 lh-copy gray pa4">
+                            <!-- SMS_cURL -->
+                            <div id="SMS_cURL" class="dn">
+                                <code class="db">curl -X POST <span class="black">\</span></code>
+                                <code class="db">https://api-messaging.movile.com/v1/send-sms <span class="black">\</span></code>
+                                <code class="db">-H <span class="purple">'authenticationtoken: &lt;authenticationtoken&gt;'</span> <span class="black">\</span></code>
+                                <code class="db">-H <span class="purple">'username: &lt;username&gt;'</span> <span class="black">\</span></code>
+                                <code class="db">-H <span class="purple">'content-type': "application/json'</span> <span class="black">\</span></code>
+                                <code class="db"><span class="purple">-d '{"</span>destination<span class="purple">": "</span>5511984541027<span class="purple">"</span><span class="purple"> , "</span>messageText<span class="purple">": "</span>linha<span class="black">\n</span>quebrada<span class="purple">"}'</span></code>
+                                <p class="mv4 ph3 pv2 measure bg-black-05 ba b--black-10">Como resposta, você receberá um JSON informando o ID que foi gerado para essa mensagem. (Resposta ou resposta síncrona da Movile):</p>
+                                <code class="db">[</code>
+                                <code class="db pl3">{</code>
+                                <code class="db pl4"><span class="purple">"id":"9cb87d36-79af-11e5-89f3-1b0591cdf807"</span></code>
+                                <code class="db pl3">}</code>
+                                <code class="db">]</code>
+                            </div>
+                            <!-- SMS_Ruby -->
+                            <div id="SMS_Ruby" class="dn">
+                                <code class="db"><span class="gold">require</span> <span class="purple">'uri'</span></code>
+                                <code class="db"><span class="gold">require</span> <span class="purple">'net/http'</span></code>
+                                <code class="db">url <span class="dark-pink">=</span> <span class="dark-blue">URI</span>(<span class="purple">"https://api-messaging.movile.com/v1/send-sms"</span>)</code>
+                                <code class="db mt3">http <span class="dark-pink">=</span> <span class="dark-blue">Net</span><span class="dark-pink">::</span><span class="dark-blue">HTTP</span>.<span class="span green">new</span>(url.<span class="green">host</span>, url.<span class="green">port</span>)</code>
+                                <code class="db">http.<span class="green">use_ssl</span> <span class="dark-pink">= true</span></code>
+                                <code class="db mt3">request <span class="dark-pink">=</span> <span class="dark-blue">Net</span><span class="dark-pink">::</span><span class="dark-blue">HTTP</span><span class="dark-pink">::</span><span class="dark-blue">Post</span>.<span class="green">new</span>(url)</code>
+                                <code class="db">request[<span class="purple">"username"</span>] <span class="dark-pink">=</span> <span class="purple">'&lt;username&gt;'</span></code>
+                                <code class="db">request[<span class="purple">"authenticationtoken"</span>] <span class="dark-pink">=</span> <span class="purple">'&lt;authenticationtoken&gt;'</span></code>
+                                <code class="db">request[<span class="purple">"content-type"</span>] <span class="dark-pink">=</span> <span class="purple">'application/json'</span></code>
+                                <code class="db">request.<span class="green">body</span> <span class="dark-pink">=</span> <span class="purple">"{</span><span class="black">\"</span><span class="purple">destination</span><span class="black">\"</span><span class="purple">:</span> <span class="black">\"</span><span class="purple">5511984541027</span><span class="black">\"</span> <span class="purple">,</span>  <span class="black">\"</span><span class="purple">messageText</span><span class="black">\"</span><span class="purple">:</span> <span class="black">\"</span><span class="purple">linha</span><span class="black">\\n</span><span class="purple">quebrada</span><span class="black">\"</span><span class="purple">}"</span></code>
+                                <code class="db">response <span class="dark-pink">=</span> http.<span class="green">request</span>(request)</code>
+                                <code class="db"><span class="gold">puts</span> response.<span class="green">read_body</span></code>
+                                <p class="mv4 ph3 pv2 measure bg-black-05 ba b--black-10">Como resposta, você receberá um JSON informando o ID que foi gerado para essa mensagem. (Resposta ou resposta síncrona da Movile):</p>
+                                <code class="db">[</code>
+                                <code class="db pl3">{</code>
+                                <code class="db pl4"><span class="purple">"id"</span>:<span class="purple">"9cb87d36-79af-11e5-89f3-1b0591cdf807"</span></code>
+                                <code class="db pl3">}</code>
+                                <code class="db">]</code>
+                            </div>
+                            <!-- SMS Python -->
+                            <div id="SMS_Python" class="dn">
+                                <code class="db">import requests</code>
+                                <code class="db mt3">url = "https://api-messaging.movile.com/v1/send-sms"</code>
+                                <code class="db mt3">payload = "{\"destination\": \"5511984541027\" ,  \"messageText\": \"linha\\nquebrada\"}"</code>
+                                <code class="db">headers = {</code>
+                                <code class="db pl3">'username': "&lt;username&gt;",</code>
+                                <code class="db pl3">'authenticationtoken': "&lt;authenticationtoken&gt;",</code>
+                                <code class="db pl3">'content-type': "application/json"</code>
+                                <code class="db pl3">}</code>
+                                <code class="db mt3">response = requests.request("POST", url, data=payload, headers=headers)</code>
+                                <code class="db mt3">print(response.text)</code>
+                                <p class="mv4 ph3 pv2 measure bg-black-05 ba b--black-10">Como resposta, você receberá um JSON informando o ID que foi gerado para essa mensagem. (Resposta ou resposta síncrona da Movile):</p>
+                                <code class="db">[</code>
+                                <code class="db pl3">{</code>
+                                <code class="db pl4"><span class="purple">"id"</span>:<span class="purple">"9cb87d36-79af-11e5-89f3-1b0591cdf807"</span></code>
+                                <code class="db pl3">}</code>
+                                <code class="db">]</code>
+                            </div>
+                            <!-- SMS PHP -->
+                            <div id="SMS_PHP">
+                                <code class="db">Mod curl:</code>
+                                <code class="db">sudo apt-get/yum install php5-curl</code>
+                                <code class="db mt3">&lt;?php</code>
+                                <code class="db mt3">$curl = curl_init();</code>
+                                <code class="db mt3">curl_setopt_array($curl, array(</code>
+                                <code class="db pl3">CURLOPT_URL => "https://api-messaging.movile.com/v1/send-sms",</code>
+                                <code class="db pl3">CURLOPT_RETURNTRANSFER => true,</code>
+                                <code class="db pl3">CURLOPT_ENCODING => "",</code>
+                                <code class="db pl3">CURLOPT_MAXREDIRS => 10,</code>
+                                <code class="db pl3">CURLOPT_TIMEOUT => 30,</code>
+                                <code class="db pl3">CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,</code>
+                                <code class="db pl3">CURLOPT_CUSTOMREQUEST => "POST",</code>
+                                <code class="db pl3">CURLOPT_POSTFIELDS => "{\"destination\": \"5511984541027\" ,  \"messageText\": \"linha\\nquebrada\"}",</code>
+                                <code class="db pl3">CURLOPT_HTTPHEADER => array(</code>
+                                <code class="db pl4">"authenticationtoken: < authenticationtoken >",</code>
+                                <code class="db pl4">"username: < username >",</code>
+                                <code class="db pl4">"content-type: application/json"</code>
+                                <code class="db pl3">),</code>
+                                <code class="db">));</code>
+                                <code class="db mt3">$response = curl_exec($curl);</code>
+                                <code class="db">$err = curl_error($curl);</code>
+                                <code class="db mt3">curl_close($curl);</code>
+                                <code class="db mt3">if ($err) {</code>
+                                <code class="db pl3">echo "cURL Error #:" . $err;</code>
+                                <code class="db">} else {</code>
+                                <code class="db pl3">echo $response;</code>
+                                <code class="db">}</code>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -551,7 +642,7 @@
     <!-- Quem somos -->
     <section class="pv6">
         <article class="mw8 ph4 center relative" id="who">
-        <div class="dn db-ns absolute w-25 left--1 top-0 nt5">
+            <div class="dn db-ns absolute w-25 left-0 top-0 nt5">
                 <img src="../img/losango.svg" class="db w-100" alt="">
             </div>
             <div class="nl3 nr3">
@@ -570,7 +661,7 @@
                     </div>
                 </div>
             </div>
-            <div class="dn db-ns absolute w-50 w-25-ns bottom-0-ns right--1-ns nb5">
+            <div class="dn db-ns absolute w-50 w-25-ns bottom-0-ns right-0 nb5">
                 <img src="../img/losango.svg" class="db w-100" alt="">
             </div>
         </article>

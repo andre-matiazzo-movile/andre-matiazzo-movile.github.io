@@ -4,6 +4,7 @@
     }
     * {margin: 0;}
     .black {color: #314047;}
+    .bg-black {background-color: #314047;}
     .purple {color: #8272FF;}
     .purple-hover:hover {color: #8272FF;}
     .dark-purple {color: #6454E0;}
@@ -57,6 +58,20 @@
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
         opacity: 0.5;
+    }
+
+    .sms_example::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        width: 0;
+        height: 0;
+        border-top: 12px solid #25D8E9;
+        border-left: 12px solid transparent;
+    }
+
+    .sms_example--flash::before {
+        display: none;
     }
 
     @media screen and (min-width: 30rem) {        
