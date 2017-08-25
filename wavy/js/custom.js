@@ -56,7 +56,9 @@ $( document).ready(function() {
       var scrollAfter = $(window).scrollTop();
       setTimeout(function(){
         if (scrollAfter < scrollNow) {
-          $("nav").css("top", "0").addClass("bg-white bb b--black-10");
+          if (!$('nav').hasClass('bg-white')) {
+            $("nav").css("top", "0").addClass("bg-white bb b--black-10");
+          }
           $('.brand img').attr('src', 'https://andre-matiazzo-movile.github.io/wavy/img/logo.svg');
           $('#menu__container a').not('#menu__platform a').addClass('black-ns');
           $('.cta-menu').removeClass('dn-ns');
