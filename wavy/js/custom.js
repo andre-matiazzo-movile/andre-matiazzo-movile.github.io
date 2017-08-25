@@ -22,7 +22,7 @@ $( document).ready(function() {
 
   // Scroll anchor points
   var $root = $('html, body');
-  $('a[href$="#who"], a[href$="#vantagens"]').click(function () {
+  $('a[href$="#who"], a[href$="#vantagens"], a[href$="#tipos"]' ).click(function () {
     $root.animate({
       scrollTop:$($.attr(this,'href')).offset().top
     }, 500);
