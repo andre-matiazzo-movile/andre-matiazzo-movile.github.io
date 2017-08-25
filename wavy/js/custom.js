@@ -10,17 +10,19 @@ $( document).ready(function() {
     $('#menu__container').fadeIn(150);
     $(this).hide();
     $('#menu-close').show();
+    $('nav').addClass('bg-transparent');
   });
 
   $('#menu-close').on('click', function () {
     $('#menu__container').fadeOut(150);
     $(this).hide();
     $('#menu-open').show();
+    $('nav').removeClass('bg-transparent');
   });
 
   // Scroll anchor points
   var $root = $('html, body');
-  $('a[href$="#who"]').click(function () {
+  $('a[href$="#who"], a[href$="#vantagens"]').click(function () {
     $root.animate({
       scrollTop:$($.attr(this,'href')).offset().top
     }, 500);
@@ -60,7 +62,7 @@ $( document).ready(function() {
           $('.cta-menu').removeClass('dn-ns');
           $('#menu-open span').addClass('bg-black');
         } else if (scrollAfter > scrollNow) {
-          $("nav").css("top", "-78px");
+          $("nav").css("top", "-100%");
           $('.brand img').attr('src', '../../img/logo-branco.svg');
           $('#menu__container a').removeClass('black-ns');
           $('.cta-menu').addClass('dn-ns');
@@ -70,6 +72,7 @@ $( document).ready(function() {
           $("nav").removeClass("bg-white bb b--black-10");
           $('#menu__container a').removeClass('black-ns');
           $('#menu-open span').removeClass('bg-black');
+          $('.cta-menu').addClass('dn-ns');
         } else {
           return;
         }
