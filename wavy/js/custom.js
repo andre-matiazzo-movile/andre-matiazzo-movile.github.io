@@ -64,13 +64,13 @@ $( document).ready(function() {
         } else if (scrollAfter > scrollNow) {
           $("nav").css("top", "-100%");
           $('.brand img').attr('src', 'https://andre-matiazzo-movile.github.io/wavy/img/logo-branco.svg');
-          $('#menu__container a').removeClass('black-ns');
+          $('#menu__container a').not('#menu__platform a').removeClass('black-ns');
           $('.cta-menu').addClass('dn-ns');
           $('#menu-open span').removeClass('bg-black');
         } else if (scrollAfter == 0) {
           $('.brand img').attr('src', 'https://andre-matiazzo-movile.github.io/wavy/img/logo-branco.svg');
           $("nav").removeClass("bg-white bb b--black-10");
-          $('#menu__container a').removeClass('black-ns');
+          $('#menu__container a').not('#menu__platform a').removeClass('black-ns');
           $('#menu-open span').removeClass('bg-black');
           $('.cta-menu').addClass('dn-ns');
         } else {
