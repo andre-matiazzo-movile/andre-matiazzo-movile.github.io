@@ -87,7 +87,7 @@
         .bg-black-ns {background-color: #314047;}
         .shadow-0-ns {box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);}
         .shadow-none-ns {box-shadow: none;}
-        .header-bg > section {height: 85vh;}
+        .header-bg > section {min-height: 85vh;}
     }
 
     @media screen and (max-width: 60em) and (min-width: 30em) {
@@ -103,6 +103,6 @@
     @media screen and (min-width: 60em) {
         .client-container {flex-wrap: nowrap;}
         #menu__platform {top: 78px;}
-        .header-bg > section {height: 75vh;}
+        .header-bg > section {min-height: 100vh;}
     }
 
