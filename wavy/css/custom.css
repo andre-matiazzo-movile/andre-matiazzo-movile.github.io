@@ -74,10 +74,24 @@
         display: none;
     }
 
-    @media screen and (min-width: 30rem) {        
-        .client-container {flex-wrap: nowrap;}
+    @media screen and (min-width: 30em) {        
         .bg-transparent-ns {background-color: transparent;}
-        .white-ns {color: white;}
+        .white-ns {color: #fff;}
+        .black-ns {color: #314047;}
         .shadow-0-ns {box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);}
         .shadow-none-ns {box-shadow: none;}
+        #menu__platform {top: 78px;}
     }
+
+    @media screen and (max-width: 60em) and (min-width: 30em) {
+        .bg-white-m {background-color: #fff;}
+        .gray-m {color: #8994AC;}
+        .black-m {color: #314047;}
+        .purple-m {color: #8272FF;}
+        .shadow-none-m {box-shadow: none;}
+    }
+
+    @media screen and (min-width: 60em) {
+        .client-container {flex-wrap: nowrap;}
+    }
+
