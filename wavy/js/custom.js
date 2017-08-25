@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$( document).ready(function() {
   $('#menu__trigger--platform').hover(function () {
     if ( ($(window).width()) > '960') {
       $('#menu__platform').fadeToggle(150);
@@ -48,41 +48,32 @@ $( document ).ready(function() {
   });
 
   // Menu is fixed after scroll
-  // if (($(window).width()) > '960') {
-  //   $('nav').before($('nav').clone().addClass('animateMenu'));
-  //   $(window).on("scroll", function () {
-  //     $("body").toggleClass("down", ($(window).scrollTop() > 300));
-  //     $('.animateMenu').addClass('bg-white bb b--black-10');
-  //     $('.animateMenu .brand img').attr('src', '../../img/logo.svg');
-  //     $('.animateMenu #menu__container a').not('#menu__platform a').addClass('black-ns');
-  //     $('.animateMenu .cta-menu').removeClass('dn-ns');
-  //   });
-  // } else {
-  //   $('nav').removeClass('bg-white bb b--black-10');
-  //   $('.brand img').attr('src', '../../img/logo-branco.svg');
-  //   $('#menu__container a').removeClass('black-ns');
-  //   $('.cta-menu').addClass('dn-ns');
-  // }
-
-
-
-      $(window).scroll(function(){
-        var sticky = $('nav');
-        scroll = $(window).scrollTop();
-        sticky.css('top', '-78px');
-
-        if (($(window).width()) > '960' && scroll >= 150) {
-          sticky.addClass('fixed bg-white bb b--black-10');
-          sticky.animate({top: 0}, 500);
+  $(window).scroll(function(){
+    var scrollNow = $(window).scrollTop();
+    setTimeout(function(){
+      var scrollAfter = $(window).scrollTop();
+      setTimeout(function(){
+        if (scrollAfter < scrollNow) {
+          $("nav").css("top", "0").addClass("bg-white bb b--black-10");
           $('.brand img').attr('src', '../../img/logo.svg');
           $('#menu__container a').not('#menu__platform a').addClass('black-ns');
           $('.cta-menu').removeClass('dn-ns');
-        } else {
-          $(sticky).removeClass('fixed bg-white bb b--black-10');
-          // $(sticky).animate({top: '-156'}, 500);
+          $('#menu-open span').addClass('bg-black');
+        } else if (scrollAfter > scrollNow) {
+          $("nav").css("top", "-78px");
           $('.brand img').attr('src', '../../img/logo-branco.svg');
           $('#menu__container a').removeClass('black-ns');
           $('.cta-menu').addClass('dn-ns');
+          $('#menu-open span').removeClass('bg-black');
+        } else if (scrollAfter == 0) {
+          $('.brand img').attr('src', '../../img/logo-branco.svg');
+          $("nav").removeClass("bg-white bb b--black-10");
+          $('#menu__container a').removeClass('black-ns');
+          $('#menu-open span').removeClass('bg-black');
+        } else {
+          return;
         }
-      });
-    });
+      }, 50);
+    }, 50);
+  });
+});
