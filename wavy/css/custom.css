@@ -7,7 +7,7 @@
         /*transition: all ease 250ms;*/
     }
     nav, nav * {
-        transition: all ease 250ms;
+        transition: all ease-in-out 250ms;
     }
     .black {color: #314047;}
     .bg-black {background-color: #314047;}
