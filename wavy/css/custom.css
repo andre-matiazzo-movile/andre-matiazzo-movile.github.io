@@ -104,6 +104,7 @@
     @media screen and (min-width: 60em) {
         .client-container {flex-wrap: nowrap;}
         #menu__platform {top: 78px; width: 200px;}
+        #menu__lang {top: 78px;}
         .header-bg > section {min-height: 75vh;}
     }
 

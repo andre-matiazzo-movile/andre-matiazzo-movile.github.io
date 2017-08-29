@@ -1,4 +1,4 @@
-$( document).ready(function() {
+$(document).ready(function() {
   $('#menu__trigger--platform').hover(function () {
     if ( ($(window).width()) > '960') {
       $('#menu__platform').fadeToggle(150);
@@ -18,6 +18,11 @@ $( document).ready(function() {
     $(this).hide();
     $('#menu-open').show();
     $('nav').removeClass('bg-transparent');
+  });
+
+  //Language dropdown
+  $('#lang-trigger').hover(function () {
+    $('#menu__lang').fadeToggle(150);
   });
 
   // Scroll anchor points
@@ -56,7 +61,6 @@ $( document).ready(function() {
       var scrollAfter = $(window).scrollTop();
       setTimeout(function(){
         if (scrollAfter < scrollNow) {
-          console.log('foi');
           $("nav").css("top", "0").addClass("bg-white bb b--black-10");
           $('.brand img').attr('src', 'https://andre-matiazzo-movile.github.io/wavy/img/logo.svg');
           $('#menu__container a').not('#menu__platform a').addClass('black-ns');

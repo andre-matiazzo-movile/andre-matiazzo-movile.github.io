@@ -123,16 +123,24 @@
                     </div>
                     <div>
                         <a href="#who" class="db db-m inline-flex-ns items-center-ns pv2 pv2-m mt2 mt2-m mt3-ns mb0 mb0-m mb3-ns ph3 pa3-ns f6 lh-solid link black black-m white-ns">Quem somos</a>
-                        <a href="javascript:;" class="db db-m inline-flex-ns items-center-ns pv2 pv2-m mt2 mt2-m mt3-ns mb0 mb0-m mb3-ns ph3 pa3-ns f6 lh-solid link black black-m white-ns">FAQ</a>
+                        <a href="javascript:;" class="db db-m inline-flex-ns items-center-ns pv2 pv2-m mt2 mt2-m mt3-ns mb0 mb0-m mb3-ns ph3 pa3-ns f6 lh-solid link black black-m white-ns">Suporte</a>
                     </div>
                 </div>
             </div>
             <!-- Secondary navigation -->
-            <div class="db-m inline-flex-ns justify-end-ns fg-1">
+            <div class="db-m inline-flex-ns justify-end-ns fg-1 ph3-l">
                 <div class="items-center dn-ns db-m pt2 pb3 ph3 pa0-ns cta-menu">
                     <a href="./contato" class="bg-blue db dib-ns pa3 ma3-ns f7 ttu tracked link b black tc">Fale conosco</a>
                 </div>
-                <a href="./login" class="dn dn-m inline-flex-ns items-center pt2 pt2-m pb3 ph3 pa3-ns mv3-ns mh0-m mh3-ns f6 lh-solid link black black-m white-ns">Entrar</a>
+                <a href="./login" class="dn dn-m inline-flex-ns items-center pt2 pt2-m pb3 ph3 pa3-ns mv3-ns f6 lh-solid link black black-m white-ns">Entrar</a>
+                <div class="flex items-center relative" id="lang-trigger">
+                    <a href="javascript:;" class="dn dn-m inline-flex-ns items-center pt2 pt2-m pb3 ph3 pa3-ns mv3-ns f7 lh-solid link black black-m white-ns"><span><img src="../img/icons/pt.svg" alt="" class="dib w1 pr2"></span>PT</a>
+                    <div id="menu__lang" class="db db-m dn-ns bg-white shadow-none-m ba-l b--black-10 shadow-0-ns relative-m absolute-ns left-0-m mv2 mv0-m mt2-m mv0-ns">
+                        <a href="../pt" class="inline-flex-ns items-center pt2 pt2-m pb2-m ph3 pa3-ns f7 lh-solid link black"><span><img src="../img/icons/pt.svg" alt="" class="dib w1 pr1"></span>PT</a>
+                        <a href="../en" class="inline-flex-ns items-center pt2 pt2-m pb2-m ph3 pa3-ns f7 lh-solid link black"><span><img src="../img/icons/en.svg" alt="" class="dib w1 pr1"></span>EN</a>
+                        <a href="../es" class="inline-flex-ns items-center pt2 pt2-m pb2-m ph3 pa3-ns f7 lh-solid link black"><span><img src="../img/icons/es.svg" alt="" class="dib w1 pr1"></span>ES</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -300,25 +308,25 @@
                     <a href="http://doc-messaging.movile.com" class="dib blue link ttu tracked f7 lh-solid bb b pb1 mt3">Leia a documentação →</a>
                 </div>
                 <div class="w-100 w-75-ns mt5 mt4-ns order-1-ns">
-                    <div class="flex">
-                        <a href="javascript:;" class="link b bb bw2 pb1 mr3 blue">SMS</a>
-                        <a href="javascript:;" class="link b bb bw2 pb1 mr3 white b--transparent">Email</a>
-                        <a href="javascript:;" class="link b bb bw2 pb1 mr3 white b--transparent">Voz</a>
+                    <div class="flex api-triggers--js">
+                        <a href="javascript:;" class="link b bb bw2 pb1 mr3 white blue api-channel-trigger--js trigger--sms">SMS</a>
+                        <a href="javascript:;" class="link b bb bw2 pb1 mr3 white b--transparent api-channel-trigger--js trigger--email">Email</a>
+                        <a href="javascript:;" class="link b bb bw2 pb1 mr3 white b--transparent api-channel-trigger--js trigger--voice">Voz</a>
                     </div>
-                    <div class="shadow-0 bg-white ba b--black-10">
+                    <div class="shadow-0 bg-white ba b--black-10 API-channel-container" id="API_SMS">
                         <!-- SMS API Menu -->
-                        <div id="API_SMS">
+                        <div id="API_SMS--menu">
                             <div class="flex ph3 bb b--black-10">
-                                <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 purple">cURL</a>
-                                <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 black-30">Ruby</a>
-                                <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 black-30">Python</a>
-                                <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 black-30">PHP</a>
-                                <a href="javascript:;" class="link f6 b lh-solid pv3 mr3 black-30">Java</a>
+                                <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 purple cURL-trigger--js">cURL</a>
+                                <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black-30 Ruby-trigger--js">Ruby</a>
+                                <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black-30 Python-trigger--js">Python</a>
+                                <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black-30 PHP-trigger--js">PHP</a>
+                                <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black-30 Java-trigger--js">Java</a>
                             </div>
                         </div>
-                        <div class="f7 lh-copy gray pa4">
+                        <div class="f7 lh-copy gray pa4 channels-content--js">
                             <!-- SMS_cURL -->
-                            <div id="SMS_cURL" class="dn">
+                            <div class="triggered-cURL--js">
                                 <code class="db">curl -X POST <span class="black">\</span></code>
                                 <code class="db">https://api-messaging.movile.com/v1/send-sms <span class="black">\</span></code>
                                 <code class="db">-H <span class="purple">'authenticationtoken: &lt;authenticationtoken&gt;'</span> <span class="black">\</span></code>
@@ -333,7 +341,7 @@
                                 <code class="db">]</code>
                             </div>
                             <!-- SMS_Ruby -->
-                            <div id="SMS_Ruby" class="dn">
+                            <div class="dn triggered-Ruby--js">
                                 <code class="db"><span class="gold">require</span> <span class="purple">'uri'</span></code>
                                 <code class="db"><span class="gold">require</span> <span class="purple">'net/http'</span></code>
                                 <code class="db">url <span class="dark-pink">=</span> <span class="dark-blue">URI</span>(<span class="purple">"https://api-messaging.movile.com/v1/send-sms"</span>)</code>
@@ -354,7 +362,7 @@
                                 <code class="db">]</code>
                             </div>
                             <!-- SMS Python -->
-                            <div id="SMS_Python" class="dn">
+                            <div class="dn triggered-Python--js">
                                 <code class="db">import requests</code>
                                 <code class="db mt3">url = "https://api-messaging.movile.com/v1/send-sms"</code>
                                 <code class="db mt3">payload = "{\"destination\": \"5511984541027\" ,  \"messageText\": \"linha\\nquebrada\"}"</code>
@@ -373,7 +381,7 @@
                                 <code class="db">]</code>
                             </div>
                             <!-- SMS PHP -->
-                            <div id="SMS_PHP">
+                            <div class="dn triggered-PHP--js">
                                 <code class="db">Mod curl:</code>
                                 <code class="db">sudo apt-get/yum install php5-curl</code>
                                 <code class="db mt3">&lt;?php</code>
@@ -401,6 +409,83 @@
                                 <code class="db">} else {</code>
                                 <code class="db pl3">echo $response;</code>
                                 <code class="db">}</code>
+                            </div>
+                            <!-- SMS Java -->
+                            <div class="dn triggered-Java--js">
+                                <code class="db">import java.io.BufferedReader;</code>
+                                <code class="db">import java.io.IOException;</code>
+                                <code class="db">import java.io.InputStreamReader;</code>
+                                <code class="db">import java.io.OutputStreamWriter;</code>
+                                <code class="db">import java.net.HttpURLConnection;</code>
+                                <code class="db">import java.net.URL;</code>
+
+                                <code class="db mt3">public class SendSms {</code>
+
+                                <code class="db mt3 pl3">public static void main(String[] args) {</code>
+                                <code class="db pl4">String url = "https://api-messaging.movile.com/v1/send-sms";</code>
+
+                                <code class="db mt3 pl4">String userName = "<username>";</code>
+                                <code class="db pl4">String authenticationToken = "<authenticationtoken>";</code>
+
+                                <code class="db mt3 pl4">String body = "{\"destination\": \"5511900000000\" ,  \"messageText\": \"linha\\nquebrada\"}";</code>
+
+                                <code class="db mt3 pl4">String response = doPost(url, body, userName, authenticationToken);</code>
+                                <code class="db mt3 pl4">System.out.println(response);</code>
+                                <code class="db pl3">}</code>
+
+                                <code class="db mt3 pl3">public static String doPost(String strUrl, String request, String userName, String authenticationToken) {</code>
+                                <code class="db pl4">HttpURLConnection conn = null;</code>
+                                <code class="db pl4">OutputStreamWriter wr = null;</code>
+                                <code class="db pl4">BufferedReader br = null;</code>
+                                <code class="db pl4">try {</code>
+                                <code class="db pl5">URL url = new URL(strUrl);</code>
+
+                                <code class="db mt3 pl5">conn = (HttpURLConnection) url.openConnection();</code>
+                                <code class="db pl5">conn.setRequestMethod("POST");</code>
+                                <code class="db pl5">conn.setDoOutput(true);</code>
+                                <code class="db pl5">conn.setUseCaches(false);</code>
+                                <code class="db pl5">conn.setInstanceFollowRedirects(true);</code>
+                                <code class="db pl5">conn.setConnectTimeout(30000);</code>
+                                <code class="db pl5">conn.setReadTimeout(30000);</code>
+
+                                <code class="db mt3 pl5">conn.setRequestProperty("Content-Type", "application/json");</code>
+                                <code class="db pl5">conn.setRequestProperty("UserName", userName);</code>
+                                <code class="db pl5">conn.setRequestProperty("AuthenticationToken", authenticationToken);</code>
+
+                                <code class="db mt3 pl5">// write the request</code>
+                                <code class="db pl5">wr = new OutputStreamWriter(conn.getOutputStream());</code>
+                                <code class="db pl5">wr.write(request);</code>
+                                <code class="db pl5">wr.close();</code>
+
+                                <code class="db mt3 pl5">// read the response</code>
+                                <code class="db pl5">br = new BufferedReader(new InputStreamReader(conn.getInputStream()));</code>
+
+                                <code class="db mt3 pl5">StringBuilder resp = new StringBuilder();</code>
+                                <code class="db pl5">String line;</code>
+                                <code class="db pl5">while ((line = br.readLine()) != null) {</code>
+                                <code class="db pl6">resp.append(line).append("\n");</code>
+                                <code class="db pl5">}</code>
+                                <code class="db pl5">return resp.toString();</code>
+
+                                <code class="db mt3 pl4">} catch (IOException e) {</code>
+                                <code class="db pl5">e.printStackTrace();</code>
+                                <code class="db pl4">} finally {</code>
+                                <code class="db pl5">try {</code>
+                                <code class="db pl6">if (wr != null) {</code>
+                                <code class="db pl7">wr.close();</code>
+                                <code class="db pl6">}</code>
+                                <code class="db pl6">if (br != null) {</code>
+                                <code class="db pl7">br.close();</code>
+                                <code class="db pl6">}</code>
+                                <code class="db pl6">if (conn != null) {</code>
+                                <code class="db pl7">conn.disconnect();</code>
+                                <code class="db pl6">}</code>
+                                <code class="db pl5">} catch (IOException e) {</code>
+                                <code class="db pl6">e.printStackTrace();</code>
+                                <code class="db pl5">}</code>
+                                <code class="db pl4">}</code>
+                                <code class="db pl4">return null;</code>
+                                <code class="db pl3">}</code>
                             </div>
                         </div>
                     </div>
@@ -645,172 +730,173 @@
           <div class="absolute center left-0 nt5 nt6-ns o-30 top-2 w-100 w-50-ns z-0">
               <img src="../img/losango.svg" class="db w-100" alt="">
           </div>
-            <div class="nl3 nr3">
-                <div class="flex flex-wrap">
-                    <div class="w-50-ns center ph3">
-                        <h4 class="f4">Quem somos</h4>
-                        <p class="lh-copy mt3">
-                            Somos uma das verticais do <a href="https://www.movile.com" class="purple" target="_blank">Grupo Movile</a> e oferecemos uma <span class="b">plataforma de comunicação multicanal</span>, ajudando empresas, de qualquer segmento e porte, a se comunicarem de maneira fácil e eficaz com seus clientes. Como parceiro estratégico do seu negócio, desafiamo-nos a entender suas dores e continuar construindo soluções que atendam às suas demandas e que alavanquem seus resultados. Nossa grande motivação e satisfação é agregar valor, não somente ao seu trabalho, mas também ao dia a dia do seu consumidor.
-                        </p>
-                    </div>
+          <div class="nl3 nr3">
+            <div class="flex flex-wrap">
+                <div class="w-50-ns center ph3">
+                    <h4 class="f4">Quem somos</h4>
+                    <p class="lh-copy mt3">
+                        Somos uma das verticais do <a href="https://www.movile.com" class="purple" target="_blank">Grupo Movile</a> e oferecemos uma <span class="b">plataforma de comunicação multicanal</span>, ajudando empresas, de qualquer segmento e porte, a se comunicarem de maneira fácil e eficaz com seus clientes. Como parceiro estratégico do seu negócio, desafiamo-nos a entender suas dores e continuar construindo soluções que atendam às suas demandas e que alavanquem seus resultados. Nossa grande motivação e satisfação é agregar valor, não somente ao seu trabalho, mas também ao dia a dia do seu consumidor.
+                    </p>
                 </div>
             </div>
-        </article>
-    </section>
+        </div>
+    </article>
+</section>
 
-    <!-- Our offices -->
-    <section class="bg-light-gray mt5-ns">
-        <article class="pt5 mw8 ph4 center">
-            <h4 class="f4">Nossos escritórios</h4>
-            <div class="nl3 nr3 nt4">
-                <div class="flex-ns flex-wrap">
-                    <div class="w-100 w-third-ns flex items-start mt5 ph3">
-                        <div class="w1">
-                            <img src="../img/icons/pin.svg" class="db w-100" alt="">
-                        </div>
-                        <div class="w-90 pl3 flex flex-column h-100">
-                            <h3 class="lh-title f5 mb0">São Paulo, Brasil</h3>
-                            <ul class="pl0 list f6 mt2 lh-copy">
-                                <li><a href="mailto:messaging@movile.com" class="purple link">messaging@movile.com</a></li>
-                                <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+55 11 2163 0600</a></li>
-                                <li class="mt2 gray">R. Arquiteto Olavo Redig de Campos, 105, 26º Andar - Ed. EZ Tower Torre A</li>
-                                <li class="mt2 gray">CEP: 04.711-904</li>
-                                <li class="mt2 gray">Fax: +55.11.2163.0586</li>
-                            </ul>
-                        </div>
+<!-- Our offices -->
+<section class="bg-light-gray mt5-ns">
+    <article class="pt5 mw8 ph4 center">
+        <h4 class="f4">Nossos escritórios</h4>
+        <div class="nl3 nr3 nt4">
+            <div class="flex-ns flex-wrap">
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                    <div class="w1">
+                        <img src="../img/icons/pin.svg" class="db w-100" alt="">
                     </div>
-                    <div class="w-100 w-third-ns flex items-start mt5 ph3">
-                        <div class="w1">
-                            <img src="../img/icons/pin.svg" class="db w-100" alt="">
-                        </div>
-                        <div class="w-90 pl3 flex flex-column h-100">
-                            <h3 class="lh-title f5 mb0">​Brasília, Brasil</h3>
-                            <ul class="pl0 list f6 mt2 lh-copy">
-                                <li><a href="mailto:messaging@movile.com" class="purple link">messaging@movile.com</a></li>
-                                <!-- <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+55 11 2163 0600</a></li> -->
-                                <li class="mt2 gray">Brasilia Shopping, Quadra SCN Quadra 5, Asa Norte sala 725</li>
-                                <li class="mt2 gray">CEP: 70715-900</li>
-                                <!-- <li class="mt2 gray">Fax: +55.11.2163.0586</li> -->
-                            </ul>
-                        </div>
-                    </div>              
-                    <div class="w-100 w-third-ns flex items-start mt5 ph3">
-                        <div class="w1">
-                            <img src="../img/icons/pin.svg" class="db w-100" alt="">
-                        </div>
-                        <div class="w-90 pl3 flex flex-column h-100">
-                            <h3 class="lh-title f5 mb0">​​​Miami, EUA</h3>
-                            <ul class="pl0 list f6 mt2 lh-copy">
-                                <!-- <li><a href="mailto:messaging@movile.com" class="purple link">messaging@movile.com</a></li> -->
-                                <!-- <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+55 11 2163 0600</a></li> -->
-                                <li class="mt2 gray">201 S. Biscayne Blvd, #1200,  Miami, FL, 33131-4316</li>
-                                <!-- <li class="mt2 gray">CEP: 70715-900</li> -->
-                                <!-- <li class="mt2 gray">Fax: +55.11.2163.0586</li> -->
-                            </ul>
-                        </div>
+                    <div class="w-90 pl3 flex flex-column h-100">
+                        <h3 class="lh-title f5 mb0">São Paulo, Brasil</h3>
+                        <ul class="pl0 list f6 mt2 lh-copy">
+                            <li><a href="mailto:messaging@movile.com" class="purple link">messaging@movile.com</a></li>
+                            <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+55 11 2163 0600</a></li>
+                            <li class="mt2 gray">R. Arquiteto Olavo Redig de Campos, 105, 26º Andar - Ed. EZ Tower Torre A</li>
+                            <li class="mt2 gray">CEP: 04.711-904</li>
+                            <li class="mt2 gray">Fax: +55.11.2163.0586</li>
+                        </ul>
                     </div>
-                    <div class="w-100 w-third-ns flex items-start mt5 ph3">
-                        <div class="w1">
-                            <img src="../img/icons/pin.svg" class="db w-100" alt="">
-                        </div>
-                        <div class="w-90 pl3 flex flex-column h-100">
-                            <h3 class="lh-title f5 mb0">​​​Distrito Federal, México</h3>
-                            <ul class="pl0 list f6 mt2 lh-copy">
-                                <li><a href="mailto:messaging@movile.com" class="purple link">corporativo-mexico@movile.com</a></li>
-                                <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+52 55 2978 4083</a></li>
-                                <li class="mt2 gray">Arquímeses, number 130, Piso Mezzanine, Polanco IV sección, Delegación Miguel Hidalgo</li>
-                                <li class="mt2 gray">CP: 11550</li>
-                                <li class="mt2 gray">Fax: +52 55 2978 4083</li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                    <div class="w1">
+                        <img src="../img/icons/pin.svg" class="db w-100" alt="">
                     </div>
-                    <div class="w-100 w-third-ns flex items-start mt5 ph3">
-                        <div class="w1">
-                            <img src="../img/icons/pin.svg" class="db w-100" alt="">
-                        </div>
-                        <div class="w-90 pl3 flex flex-column h-100">
-                            <h3 class="lh-title f5 mb0">Bogotá, Colômbia</h3>
-                            <ul class="pl0 list f6 mt2 lh-copy">
-                                <li><a href="mailto:" class="purple link">tito.daza@movile.com</a></li>
-                                <li class="mt2"><a href="tel:" class="purple link">571 7457374</a></li>
-                                <li class="mt2 gray">Carrera 7 # 146-65, Piso 4 - Edifício Office Point</li>
-                                <li class="mt2 gray">CEP: 04.711-904</li>
-                                <li class="mt2 gray">Fax: 571 7457374</li>
-                            </ul>
-                        </div>
+                    <div class="w-90 pl3 flex flex-column h-100">
+                        <h3 class="lh-title f5 mb0">​Brasília, Brasil</h3>
+                        <ul class="pl0 list f6 mt2 lh-copy">
+                            <li><a href="mailto:messaging@movile.com" class="purple link">messaging@movile.com</a></li>
+                            <!-- <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+55 11 2163 0600</a></li> -->
+                            <li class="mt2 gray">Brasilia Shopping, Quadra SCN Quadra 5, Asa Norte sala 725</li>
+                            <li class="mt2 gray">CEP: 70715-900</li>
+                            <!-- <li class="mt2 gray">Fax: +55.11.2163.0586</li> -->
+                        </ul>
                     </div>
-                    <div class="w-100 w-third-ns flex items-start mt5 ph3">
-                        <div class="w1">
-                            <img src="../img/icons/pin.svg" class="db w-100" alt="">
-                        </div>
-                        <div class="w-90 pl3 flex flex-column h-100">
-                            <h3 class="lh-title f5 mb0">Buenos Aires, Argentina</h3>
-                            <ul class="pl0 list f6 mt2 lh-copy">
-                                <!-- <li><a href="mailto:" class="purple link">tito.daza@movile.com</a></li> -->
-                                <li class="mt2"><a href="tel:" class="purple link">+54 11 2152 2121</a></li>
-                                <li class="mt2 gray">Costa Rica 5546, Piso 5 - Oficina 501 a la 504</li>
-                                <li class="mt2 gray">Cp C1414BTD</li>
-                                <!-- <li class="mt2 gray">Fax: 571 7457374</li> -->
-                            </ul>
-                        </div>
+                </div>              
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                    <div class="w1">
+                        <img src="../img/icons/pin.svg" class="db w-100" alt="">
+                    </div>
+                    <div class="w-90 pl3 flex flex-column h-100">
+                        <h3 class="lh-title f5 mb0">​​​Miami, EUA</h3>
+                        <ul class="pl0 list f6 mt2 lh-copy">
+                            <!-- <li><a href="mailto:messaging@movile.com" class="purple link">messaging@movile.com</a></li> -->
+                            <!-- <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+55 11 2163 0600</a></li> -->
+                            <li class="mt2 gray">201 S. Biscayne Blvd, #1200,  Miami, FL, 33131-4316</li>
+                            <!-- <li class="mt2 gray">CEP: 70715-900</li> -->
+                            <!-- <li class="mt2 gray">Fax: +55.11.2163.0586</li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                    <div class="w1">
+                        <img src="../img/icons/pin.svg" class="db w-100" alt="">
+                    </div>
+                    <div class="w-90 pl3 flex flex-column h-100">
+                        <h3 class="lh-title f5 mb0">​​​Distrito Federal, México</h3>
+                        <ul class="pl0 list f6 mt2 lh-copy">
+                            <li><a href="mailto:messaging@movile.com" class="purple link">corporativo-mexico@movile.com</a></li>
+                            <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+52 55 2978 4083</a></li>
+                            <li class="mt2 gray">Arquímeses, number 130, Piso Mezzanine, Polanco IV sección, Delegación Miguel Hidalgo</li>
+                            <li class="mt2 gray">CP: 11550</li>
+                            <li class="mt2 gray">Fax: +52 55 2978 4083</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                    <div class="w1">
+                        <img src="../img/icons/pin.svg" class="db w-100" alt="">
+                    </div>
+                    <div class="w-90 pl3 flex flex-column h-100">
+                        <h3 class="lh-title f5 mb0">Bogotá, Colômbia</h3>
+                        <ul class="pl0 list f6 mt2 lh-copy">
+                            <li><a href="mailto:" class="purple link">tito.daza@movile.com</a></li>
+                            <li class="mt2"><a href="tel:" class="purple link">571 7457374</a></li>
+                            <li class="mt2 gray">Carrera 7 # 146-65, Piso 4 - Edifício Office Point</li>
+                            <li class="mt2 gray">CEP: 04.711-904</li>
+                            <li class="mt2 gray">Fax: 571 7457374</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                    <div class="w1">
+                        <img src="../img/icons/pin.svg" class="db w-100" alt="">
+                    </div>
+                    <div class="w-90 pl3 flex flex-column h-100">
+                        <h3 class="lh-title f5 mb0">Buenos Aires, Argentina</h3>
+                        <ul class="pl0 list f6 mt2 lh-copy">
+                            <!-- <li><a href="mailto:" class="purple link">tito.daza@movile.com</a></li> -->
+                            <li class="mt2"><a href="tel:" class="purple link">+54 11 2152 2121</a></li>
+                            <li class="mt2 gray">Costa Rica 5546, Piso 5 - Oficina 501 a la 504</li>
+                            <li class="mt2 gray">Cp C1414BTD</li>
+                            <!-- <li class="mt2 gray">Fax: 571 7457374</li> -->
+                        </ul>
                     </div>
                 </div>
             </div>
-        </article>
-    </section>
+        </div>
+    </article>
+</section>
 
-    <!-- Footer -->
-    <footer class="pt5 bg-light-gray">
-        <article class="mw8 ph4 center pt5 pb4 bt b--black-10">
-            <div class="nl3 nr3">
-                <div class="flex flex-wrap">
-                    <div class="w-100 w-20-ns ph3">
-                        <ul class="list f7 pl0 flex flex-column-ns h-100 justify-between">
-                            <li class="b pl0 relative">
-                                <img src="../img/icons/language.svg" class="db w1 absolute left-0" alt="">
-                                <a href="javascript:;" class="pl4 f6 link purple b">Português</a>
-                            </li>
-                            <li class="pl0 black-30 f6">&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Wavy</li>
-                        </ul>
-                    </div>
-                    <div class="w-100 w-20-ns mt4 mt0-ns ph3">
-                        <ul class="list f6 pl0">
-                            <li class="b pl0">Plataforma</li>
-                            <li class="pl0 mt3"><a href="./sms" class="link gray purple-hover">SMS</a></li>
-                            <li class="pl0 mt3"><a href="./email" class="link gray purple-hover">Email</a></li>
-                            <li class="pl0 mt3"><a href="./voz" class="link gray purple-hover">Voz</a></li>
-                            <li class="pl0 mt3"><a href="http://chatclub.me" class="link gray purple-hover">Chatbots</a></li>
-                            <li class="pl0 mt3"><a href="./rcs" class="link gray purple-hover">RCS</a></li>
-                            <li class="pl0 mt3"><a href="./pesquisa-de-numeros" class="link gray purple-hover">Pesquisa de números</a></li>
-                            <li class="pl0 mt3"><a href="./bases-segmentadas" class="link gray purple-hover">Bases segmentadas</a></li>
-                            <li class="pl0 mt3"><a href="./navegacao-patrocinada" class="link gray purple-hover">Navegação patrocinada</a></li>
-                        </ul>
-                    </div>
-                    <div class="w-100 w-20-ns mt4 mt0-ns ph3">
-                        <ul class="list f6 pl0">
-                            <li class="b pl0">Documentação</li>
-                            <li class="pl0 mt3"><a href="http://doc-messaging.movile.com" class="link gray purple-hover">SMS</a></li>
-                            <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/email" class="link gray purple-hover">Email</a></li>
-                            <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/voice" class="link gray purple-hover">Voz</a></li>
-                        </ul>
-                    </div>
-                    <div class="w-100 w-20-ns mt4 mt0-ns ph3">
-                        <ul class="list f6 pl0">
-                            <li class="b pl0">Recursos</li>
-                            <li class="pl0 mt3"><a href="./blog" class="link gray purple-hover">Blog</a></li>
-                            <li class="pl0 mt3"><a href="javascript:;" class="link gray purple-hover">FAQ</a></li>
-                            <li class="pl0 mt3"><a href="javascript:;" class="link gray purple-hover">Suporte</a></li>
-                        </ul>
-                    </div>
+<!-- Footer -->
+<footer class="pt5 bg-light-gray">
+    <article class="mw8 ph4 center pt5 pb4 bt b--black-10">
+        <div class="nl3 nr3">
+            <div class="flex flex-wrap">
+                <div class="w-100 w-20-ns ph3">
+                    <ul class="list f7 pl0 flex flex-column-ns h-100 justify-between">
+                        <li class="b pl0 relative">
+                            <img src="../img/icons/language.svg" class="db w1 absolute left-0" alt="">
+                            <a href="javascript:;" class="pl4 f6 link purple b">Português</a>
+                        </li>
+                        <li class="pl0 black-30 f6">&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Wavy</li>
+                    </ul>
+                </div>
+                <div class="w-100 w-20-ns mt4 mt0-ns ph3">
+                    <ul class="list f6 pl0">
+                        <li class="b pl0">Plataforma</li>
+                        <li class="pl0 mt3"><a href="./sms" class="link gray purple-hover">SMS</a></li>
+                        <li class="pl0 mt3"><a href="./email" class="link gray purple-hover">Email</a></li>
+                        <li class="pl0 mt3"><a href="./voz" class="link gray purple-hover">Voz</a></li>
+                        <li class="pl0 mt3"><a href="http://chatclub.me" class="link gray purple-hover">Chatbots</a></li>
+                        <li class="pl0 mt3"><a href="./rcs" class="link gray purple-hover">RCS</a></li>
+                        <li class="pl0 mt3"><a href="./pesquisa-de-numeros" class="link gray purple-hover">Pesquisa de números</a></li>
+                        <li class="pl0 mt3"><a href="./bases-segmentadas" class="link gray purple-hover">Bases segmentadas</a></li>
+                        <li class="pl0 mt3"><a href="./navegacao-patrocinada" class="link gray purple-hover">Navegação patrocinada</a></li>
+                    </ul>
+                </div>
+                <div class="w-100 w-20-ns mt4 mt0-ns ph3">
+                    <ul class="list f6 pl0">
+                        <li class="b pl0">Documentação</li>
+                        <li class="pl0 mt3"><a href="http://doc-messaging.movile.com" class="link gray purple-hover">SMS</a></li>
+                        <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/email" class="link gray purple-hover">Email</a></li>
+                        <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/voice" class="link gray purple-hover">Voz</a></li>
+                    </ul>
+                </div>
+                <div class="w-100 w-20-ns mt4 mt0-ns ph3">
+                    <ul class="list f6 pl0">
+                        <li class="b pl0">Recursos</li>
+                        <li class="pl0 mt3"><a href="./blog" class="link gray purple-hover">Blog</a></li>
+                        <li class="pl0 mt3"><a href="javascript:;" class="link gray purple-hover">Suporte</a></li>
+                        <li class="pl0 mt3"><a href="javascript:;" class="link gray purple-hover">Suporte</a></li>
+                    </ul>
                 </div>
             </div>
-        </article>
-    </footer>
-    <script type=text/javascript src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type=text/javascript src="../js/custom.js"></script>
-    <!-- Slider -->
-    <script type=text/javascript src="../js/Wallop.min.js"></script>
-    <script type=text/javascript>
+        </div>
+    </article>
+</footer>
+<script type=text/javascript src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type=text/javascript src="../js/custom.js"></script>
+<script type=text/javascript src="../js/has-api.js"></script>
+<!-- Slider -->
+<script type=text/javascript src="../js/Wallop.min.js"></script>
+<script type=text/javascript>
         // New instance of Wallop
         var wallopEl = document.querySelector('.Wallop');
         var wallop = new Wallop(wallopEl);
@@ -819,26 +905,26 @@
         // and pass in the number of seconds as interval
         // if you want to start autoplay after a while
         // you can wrap this in a setTimeout(); function
-        autoplay(10000);
+        // autoplay(10000);
 
         // This a a helper function to build a simple
         // auto-play functionality. 
-        function autoplay(interval) {
-            var lastTime = 0;  
+      //   function autoplay(interval) {
+      //       var lastTime = 0;  
 
-            function frame(timestamp) {
-                var update = timestamp - lastTime >= interval;
+      //       function frame(timestamp) {
+      //           var update = timestamp - lastTime >= interval;
 
-                if (update) {
-                  wallop.next();
-                  lastTime = timestamp;
-              }
+      //           if (update) {
+      //             wallop.next();
+      //             lastTime = timestamp;
+      //         }
 
-              requestAnimationFrame(frame);
-          }
+      //         requestAnimationFrame(frame);
+      //     }
 
-          requestAnimationFrame(frame);
-      };
+      //     requestAnimationFrame(frame);
+      // };
   </script>
 </body>
 </html>
