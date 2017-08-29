@@ -126,9 +126,6 @@
             </div>
             <!-- Secondary navigation -->
             <div class="db-m inline-flex-ns justify-end-ns fg-1 ph3-l">
-                <div class="items-center dn-ns db-m pt2 pb3 ph3 pa0-ns cta-menu">
-                    <a href="../contato" class="bg-blue db dib-ns pa3 ma3-ns f7 ttu tracked link b black tc">Fale conosco</a>
-                </div>
                 <a href="../../login" class="dn dn-m inline-flex-ns items-center pt2 pt2-m pb3 ph3 pa3-ns mv3-ns mh0-m mh3-ns f6 lh-solid link black black-m white-ns">Entrar</a>
                 <div class="flex items-center relative" id="lang-trigger">
                     <a href="javascript:;" class="dn dn-m inline-flex-ns items-center pt2 pt2-m pb3 ph3 pa3-ns mv3-ns f7 lh-solid link black black-m white-ns"><span><img src="../../img/icons/pt.svg" alt="" class="dib w1 pr2"></span>PT</a>
@@ -166,29 +163,92 @@
         <h2 class="f2 mv0">Preencha seus dados</h2>
         <div class="nl3 nr3">
             <p class="gray ph3 mt3 f6">* Campos obrigatórios</p>
-            <form action="" class="mt4 w-50">
-                <fieldset class="ph3 bn">
-                    <legend class="gray">Dados pessoais</legend>
+            <form action="" class="w-100 flex flex-wrap">
+                <fieldset class="ph3 bn mt4 w-50">
+                    <legend class="gray ttu tracked f7">Dados pessoais</legend>
                     <div class="mt3">
                         <label for="nome" class="db">Nome completo*</label>
-                        <input class="mt2 pa3 db w-100" id="nome" name="nome" type="text" placeholder="Ex. Marina Barbosa">
+                        <input class="mt2 pa3 db w-100 b--black-20 ba" id="nome" name="nome" type="text" placeholder="Ex. Marina Barbosa">
                     </div>
-                    <div class="mt3">
+                    <div class="mt4">
                         <label for="email" class="db">Email*</label>
-                        <input class="mt2 pa3 db w-100" id="email" name="email" type="text" placeholder="seunome@empresa.com">
+                        <input class="mt2 pa3 db w-100 b--black-20 ba" id="email" name="email" type="text" placeholder="seunome@empresa.com">
                     </div>
-                    <div class="mt3">
+                    <div class="mt4">
                         <label for="telefone" class="db">Telefone (com DDI e DDD)*</label>
-                        <input class="mt2 pa3 db w-100" id="telefone" name="telefone" type="tel" placeholder="+55 11 9 99999999">
+                        <input class="mt2 pa3 db w-100 b--black-20 ba" id="telefone" name="telefone" type="tel" placeholder="+55 11 9 99999999">
                     </div>
                 </fieldset>
-                Empresa*
-                CNPJ
-                Segmento*
-                País*
-                Em qual dos produtos você tem interesse?*
-                Como podemos te ajudar? Deixe sua mensagem:*
-
+                <fieldset class="ph3 bn mt4 w-50">
+                    <legend class="gray ttu tracked f7">Dados da empresa</legend>
+                    <div class="mt3">
+                        <label for="empresa" class="db">Nome da empresa*</label>
+                        <input class="mt2 pa3 db w-100 b--black-20 ba" id="empresa" name="empresa" type="text" placeholder="Sua empresa">
+                    </div>
+                    <div class="mt4">
+                        <label for="cnpj" class="db">CNPJ</label>
+                        <input class="mt2 pa3 db w-100 b--black-20 ba" id="cnpj" name="cnpj" type="number" placeholder="00.000.000/0001-00">
+                    </div>
+                    <div class="mt4 relative">
+                        <label for="telefone" class="db">Segmento*</label>
+                        <select class="w-100 mt2 br0 pa3 b--black-20" style="-webkit-appearance: none;-moz-appearance: none;appearance: none;">
+                            <option value="volvo">01</option>
+                            <option value="saab">02</option>
+                            <option value="mercedes">03</option>
+                            <option value="audi">04</option>
+                        </select>
+                    </div>
+                    <div class="mt4">
+                        <label for="pais" class="db">País*</label>
+                        <input class="mt2 pa3 db w-100 b--black-20 ba" id="pais" name="pais" type="text" placeholder="Qual seu país?">
+                    </div>
+                </fieldset>
+                <fieldset class="ph3 bn mt4 w-50">
+                    <legend class="gray ttu tracked f7">Interesses</legend>
+                    <div class="mt3">
+                        <label class="db w-100">Quais produtos te interessam?*</label>
+                        <div class="mt3 mr4">
+                            <input class="mt2 pa3" id="produto-sms" name="produto-sms" type="checkbox" value="SMS">
+                            <label for="produto-sms" class="pl2 b">SMS</label>
+                        </div>
+                        <div class="mt3 mr4">
+                            <input class="mt2 pa3" id="produto-email" name="produto-email" type="checkbox" value="SMS">
+                            <label for="produto-email" class="pl2 b">Email</label>
+                        </div>
+                        <div class="mt3 mr4">
+                            <input class="mt2 pa3" id="produto-voz" name="produto-voz" type="checkbox" value="SMS">
+                            <label for="produto-voz" class="pl2 b">Voz</label>
+                        </div>
+                        <div class="mt3 mr4">
+                            <input class="mt2 pa3" id="produto-chatbot" name="produto-chatbot" type="checkbox" value="SMS">
+                            <label for="produto-chatbot" class="pl2 b">Chatbot</label>
+                        </div>
+                        <div class="mt3 mr4">
+                            <input class="mt2 pa3" id="procuto-rcs" name="produto-rcs" type="checkbox" value="SMS">
+                            <label for="produto-rcs" class="pl2 b">RCS</label>
+                        </div>
+                        <div class="mt3 mr4">
+                            <input class="mt2 pa3" id="produto-pesquisa-de-numeros" name="produto-pesquisa-de-numeros" type="checkbox" value="SMS">
+                            <label for="produto-pesquisa-de-numeros" class="pl2 b">Pesquisa de números</label>
+                        </div>
+                        <div class="mt3 mr4">
+                            <input class="mt2 pa3" id="produto-bases-segmentadas" name="produto-bases-segmentadas" type="checkbox" value="SMS">
+                            <label for="produto-bases-segmentadas" class="pl2 b">Bases segmentadas</label>
+                        </div>
+                        <div class="mt3 mr4">
+                            <input class="mt2 pa3" id="produto-navegacao-patrocinada" name="produto-navegacao-patrocinada" type="checkbox" value="SMS">
+                            <label for="produto-navegacao-patrocinada" class="pl2 b">Navegação patrocinada</label>
+                        </div>                        
+                    </div>
+                </fieldset>
+                <fieldset class="ph3 bn mt4 w-50">
+                    <legend class="gray ttu tracked f7">Como podemos te ajudar?</legend>
+                    <div class="mt3">
+                        <label for="mensagem" class="db">Escreva sua mensagem*</label>
+                        <textarea class="ba b--black-20 mt2 w-100 f6 lh-copy pa3" name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                    </div>  
+                    <input type="submit" value="Enviar mensagem" class="inline-flex items-center shadow-0 ba b--blue lh-copy bg-blue dib pa3 f6 ttu tracked link b black mt5">
+                </fieldset>
             </form>
         </div>
     </section>

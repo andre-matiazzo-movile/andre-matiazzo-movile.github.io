@@ -1,4 +1,4 @@
-    body, input {
+    body, input, select, textarea {
         font-family: 'Soleil', Arial, sans-serif;
         color: #314047;
     }
