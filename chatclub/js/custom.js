@@ -83,7 +83,7 @@ $(document).ready(function() {
             $('.is-external').not('.menu__dropdown .is-external').not('footer .is-external').addClass('external--black');
           // Changes color of menu on top of document
         } else if (scrollAfter == 0) {
-          $('.brand img').attr('src', '../../../img/chatclub-wh.svg');
+          $('.brand img').attr('src', '../img/chatclub-wh.svg');
           $("nav").removeClass("bg-white bb b--black-10");
           $('.menu__container a').not('.menu__dropdown a').removeClass('black-ns');
           $('#menu-open span').removeClass('bg-black');
