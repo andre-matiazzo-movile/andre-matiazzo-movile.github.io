@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wavy</title>
+  <script>
+    var str = navigator.language || navigator.userLanguage;
+    var userLang = str.substring(0, 2);
+    if (userLang == "pt") {
+      window.location.href = "./pt/";
+    }
+    else if (userLang == "es") {
+      window.location.href = "./es/";
+    }
+    else {
+      window.location.href = "./en/";
+    }
+  </script>
+  <script src="https://use.typekit.net/ggk4dcn.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+<body>
+
+</body>
+</html>

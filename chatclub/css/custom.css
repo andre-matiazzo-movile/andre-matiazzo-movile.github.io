@@ -1,0 +1,215 @@
+    body, input, select, textarea {
+        font-family: 'Soleil', Arial, sans-serif;
+        color: #314047;
+    }
+    * {margin: 0;}
+    *:hover {transition: all ease-in-out 150ms}
+    nav, nav * {
+        transition: all ease-in-out 150ms;
+    }
+    .black {color: #314047;}
+    .bg-black {background-color: #314047;}
+    .purple {color: #8272FF;}
+    .bg-purple {background-color: #8272FF;}
+    .b--purple {border-color: #8272FF;}
+    .purple-hover:hover {color: #8272FF;}
+    .dark-purple {color: #6454E0;}
+    .bg-dark-purple {background-color: #6454E0;}
+    .gray {color: #8994AC;}
+    .bg-gray {background-color: #8994AC;}
+    .bg-light-gray {background-color: #F3F4F6;}
+
+    .blue {color: #7EE3F7;}
+    .bg-blue {background-color: #7EE3F7;}
+    .b--blue {border-color: #7EE3F7;}
+    .light-blue-hover:hover {color: #7EE3F7;}
+    .bg-light-blue-hover:hover { background-color: #7EE3F7; border-color: #7EE3F7;}
+
+    .blue-2 {color: #315FCE;}
+    .bg-blue-2 {background-color: #315FCE;}
+    .b--blue-2 {border-color: #315FCE;}
+    .blue-hover-2:hover {color: #315FCE;}
+    .bg-blue-hover-2:hover { background-color: #315FCE; border-color: #315FCE;}
+
+    .f8 {font-size: 0.625rem;}
+    .shadow-0 {box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);}
+    /* FLEX GROW */
+    .fg-1 { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
+    .fg-2 { -webkit-box-flex: 2; -ms-flex-positive: 2; flex-grow: 2; }
+    .fg-3 { -webkit-box-flex: 3; -ms-flex-positive: 3; flex-grow: 3; }
+    .fg-4 { -webkit-box-flex: 4; -ms-flex-positive: 4; flex-grow: 4; }
+    .fg-i { -webkit-box-flex: inherit; -ms-flex-positive: inherit; flex-grow: inherit; }
+
+    .circle-wave {
+        background: url(../img/circle-wave.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 2rem;
+        position: absolute;
+        width: 400px;
+        max-width: 25%;
+        height: 250px;
+    }
+
+    .header-bg {
+        background: url(../img/header-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .header-bg__mask {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(49,64,71,0.85);
+        z-index: 0;
+    }
+
+    .client {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 0.5;
+    }
+
+    .sms_example::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        width: 0;
+        height: 0;
+        border-top: 12px solid #25D8E9;
+        border-left: 12px solid transparent;
+    }
+
+    .sms_example--flash::before {
+        display: none;
+    }
+
+    @media screen and (max-width: 30em) {
+        .menu__container { height: 100vh; overflow-y: auto; }
+    }
+
+    @media screen and (min-width: 30em) {        
+        .bg-transparent-ns {background-color: transparent;}
+        .white-ns {color: #fff;}
+        .black-ns {color: #314047;}
+        .bg-black-ns {background-color: #314047;}
+        .shadow-0-ns {box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);}
+        .shadow-none-ns {box-shadow: none;}
+        .header-bg > section {min-height: 85vh;}
+    }
+
+    @media screen and (max-width: 60em) and (min-width: 30em) {
+        .bg-white-m {background-color: #fff;}
+        .gray-m {color: #8994AC;}
+        .black-m {color: #314047;}
+        .bg-black-m {background-color: #314047;}
+        .purple-m {color: #8272FF;}
+        .shadow-none-m {box-shadow: none;}
+        .shadow-0-m {box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);}
+    }
+
+    @media screen and (min-width: 60em) {
+        .client-container {flex-wrap: nowrap;}
+        .menu__dropdown {top: 78px;}
+        .menu--platform {width: 660px;}
+        .menu--contact {width: 170px;}
+        #menu__lang {top: 78px;}
+        .header-bg > section {min-height: 75vh;}
+    }
+
+    .grd-bg {
+        background: linear-gradient(to bottom, #315fce 0%,#7ee3f7 100%);
+    }
+
+    .grd-bg.has-diagonal::after {
+        position: absolute;
+        bottom: 0;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-image: url(../img/lens.png);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        z-index: 0;
+    }
+
+    .dvdr {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0px 60px 100vw;
+    }
+
+    .dvdr-lg {
+        border-color: transparent transparent #F3F4F6 transparent;
+    }
+
+    .dvdr-wh {
+        border-color: transparent transparent #FFFFFF transparent;
+    }
+
+    .dvdr-blue {
+        border-color: transparent transparent #315FCE transparent;
+
+    }
+
+    .has-caret {
+        position: relative;
+    }
+
+    .has-caret::after {
+        content: "";
+        position: absolute;
+        right: 2px;
+        top: 20px;
+        width: 8px;
+        height: 4px;
+        background: url(../img/icons/caret-down--wh.svg);
+        background-size: 8px 4px;
+    }
+
+    .has-caret.caret--black::after {
+        background: url(../img/icons/caret-down.svg);
+        background-size: 8px 4px;
+    }
+
+    .is-external {
+        position: relative;
+    }
+    
+    .is-external::after {
+        content: "";
+        position: absolute;
+        /*right: -4px;*/
+        top: 45%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 20px;
+        height: 10px;
+        background: url(../img/icons/external.svg);
+        background-size: 20px 10px;
+    }
+
+    .is-external.external--white::after {
+        background: url(../img/icons/external--wh.svg);
+        background-size: 20px 10px;
+    }
+
+    .is-external.external--black::after {
+        background: url(../img/icons/external--black.svg);
+        background-size: 20px 10px;
+    }
+
+
+
+    .upprtxt {
+        text-transform: uppercase;
+    }

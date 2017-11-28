@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Chatbots – ChatClub</title>
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--     <link rel="apple-touch-icon" sizes="57x57" href="../../fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../fav/favicon-16x16.png">
+    <link rel="manifest" href="../../fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#FDA88A">
+    <meta name="msapplication-TileImage" content="../../fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#FDA88A"> -->
+
+    <!-- Tags específicas para o Facebook -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta name="category" content="">
+    
+    <!-- Tags específicas para o Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:image" content="" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" href="../../css/custom.css">
+    <!-- For the slider -->
+    <link rel="stylesheet" href="../../css/wallop.css">
+    <link rel="stylesheet" href="../../css/wallop--slide.css">
+
+    <!-- Typekit
+    <script src="https://use.typekit.net/ggk4dcn.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script> -->
+
+</head>
+<body>
+    <nav class="flex items-center fixed justify-between top-0 left-0 right-0 z-2">
+        <!-- Brand -->
+        <a aria-label="Home" href="../" class="pa3 ma2 inline-flex items-center brand" role="link">
+            <img src="../../../img/chatclub-wh.svg" alt="ChatClub" class="w4">
+        </a>
+        <!-- Menu -->
+        <div class="relative z-2 db-m dn-ns pa3 ma2" id="menu-open">
+            <span class="db bg-white" style="height: 0.125rem; width: 1.25rem;"></span>
+            <span class="db bg-white mt1" style="height: 0.125rem; width: 1.25rem;"></span>
+            <span class="db bg-white mt1" style="height: 0.125rem; width: 1.25rem;"></span>
+        </div>
+        <div class="dn dn-ns relative z-5 dn-ns pa3" id="menu-close">
+            <span class="db bg-gray" style="height: 0.125rem; width: 1.25rem; transform: rotate(45deg) translateY(8px); transform-origin: center; margin-bottom: 10px;"></span>
+            <span class="db bg-gray" style="height: 0.125rem; width: 1.25rem; transform: rotate(-45deg) translateY(-8px); transform-origin: center;"></span>
+        </div>
+        <div class="dn dn-m inline-flex-ns absolute absolute-m relative-ns z-2 fg-1 bg-white bg-white-m top-0 left-0 right-0 bg-transparent-ns mt0-ns pt2 pt2-m pt0-ns ph3 ph3-m ph0-ns pb3 pb3-m pb0-ns shadow-0 shadow-0-m shadow-none-ns menu__container" id="menu__container">
+            <!-- Primary navigation -->
+            <div class="db-m inline-flex-ns fg-1">
+                <div class="relative db-m inline-flex-ns items-center-ns menu__trigger">
+                    <a href="../" class="f6 lh-solid link gray gray-m white-ns mt5 mt5-m mt0-ns pb1 pb1-m ph3 pt0-m pa3-ns outline-0 has-caret db db-m di-ns" style="cursor: default;">Plataforma</a>
+                    <div class="menu__dropdown menu--platform bg-white shadow-none-m ba-l b--black-10 shadow-0-ns relative-m absolute-ns left-0-m left--1-ns pv0-m ph0-m pa3-ns dn-l">
+                        <div class="flex-ns flex-wrap">
+                            <a href="../sms/" class="w-third-ns flex flex-m inline-flex-ns items-start mt2 mt2-m mt0-ns ph3 pv2 pa3-ns f5 f6-ns lh-copy link black dim">
+                                <img src="../../img/icons/sms.svg" alt="" class="w1 pr2 pt1">
+                                <div>
+                                    <h6 class="f6 normal">SMS</h6>
+                                    <p class="f6 f7-ns gray">Mensagens de texto em qualquer lugar.</p>
+                                </div>
+                            </a>
+                            <a href="../chatbot/" class="w-third-ns flex flex-m inline-flex-ns items-start mt2 mt2-m mt0-ns ph3 pv2 pa3-ns f5 f6-ns lh-copy link black dim">
+                                <img src="../../img/icons/chatbot.svg" alt="" class="w1 pr2 pt1">
+                                <div>
+                                    <h6 class="f6 normal">Chatbot</h6>
+                                    <p class="f6 f7-ns gray">Chatbot do Facebook Messenger.</p>
+                                </div>
+                            </a>
+                            <a href="../rcs/" class="w-third-ns flex flex-m inline-flex-ns items-start mt2 mt2-m mt0-ns ph3 pv2 pa3-ns f5 f6-ns lh-copy link black dim">
+                                <img src="../../img/icons/rcs.svg" alt="" class="w1 pr2 pt1">
+                                <div>
+                                    <h6 class="f6 normal">RCS</h6>
+                                    <p class="f6 f7-ns gray">Mensagens interativas do Android.</p>
+                                </div>
+                            </a>
+                            <a href="../email/" class="w-third-ns flex flex-m inline-flex-ns items-start mt2 mt2-m mt0-ns ph3 pv2 pa3-ns f5 f6-ns lh-copy link black dim">
+                                <img src="../../img/icons/email.svg" alt="" class="w1 pr2 pt1">
+                                <div>
+                                    <h6 class="f6 normal">Email</h6>
+                                    <p class="f6 f7-ns gray">Crie você mesmo ou utilize um de nossos templates.</p>
+                                </div>
+                            </a>
+                            <a href="../voz/" class="w-third-ns flex flex-m inline-flex-ns items-start mt2 mt2-m mt0-ns ph3 pv2 pa3-ns f5 f6-ns lh-copy link black dim">
+                                <img src="../../img/icons/voice.svg" alt="" class="w1 pr2 pt1">
+                                <div>
+                                    <h6 class="f6 normal">Voz</h6>
+                                    <p class="f6 f7-ns gray">Ligações personalizadas e automatizadas.</p>
+                                </div>
+                            </a>
+                            <a href="../adicionais/" class="w-third-ns flex flex-m inline-flex-ns items-start mt2 mt2-m mt0-ns ph3 pv2 pa3-ns f5 f6-ns lh-copy link black dim">
+                                <div class="ml3 pl2">
+                                    <h6 class="f6 normal">Serviços adicionais</h6>
+                                    <ul class="pl3 gray f7 lh-copy">
+                                        <li>Bases segmentadas</li>
+                                        <li>Pesquisa de números</li>
+                                        <li>Navegação patrocinada</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-m flex-wrap flex-wrap-m inline-flex-ns pv3 pv3-m pv0-ns nl3-m nr3-m">
+                    <div class="flex-m flex-wrap-m">
+                        <a href="../quem-somos/" class="db db-m inline-flex-ns items-center-ns pt2 pb0 pv2-m mt3-l mb0 mb0-m mb3-ns ph3 ph4-m pa3-ns f6 lh-solid link black black-m white-ns dim">Quem somos</a>
+                        <div class="relative db-m inline-flex-ns items-center-ns menu__trigger">
+                            <a href="javascript:;" class="dn dn-m inline-flex-ns items-center-ns pv2 pv2-m mt2 mt2-m mt3-ns mb0 mb0-m mb3-ns ph3 pa3-ns f6 lh-solid link black gray gray-m white-ns has-caret" style="cursor: default;">Desenvolvedores</a>
+                            <div class="menu__dropdown bg-white shadow-none-m ba-l b--black-10 shadow-0-ns relative-m absolute-ns left-0 ph3 ph4-m ph0-l pv2 dn-l">
+                                <a href="http://doc-messaging.movile.com/pt.html" class="db inline-flex-l items-center-l pv0-m ph0-m pa3-ns mb4 mt3 mt0-ns nb2-l f6 link lh-solid black is-external external dim">API SMS</a>
+                                <a href="http://doc-messaging.movile.com/email" class="db inline-flex-l items-center-l pv0-m ph0-m pa3-ns mt3 mt0-ns mb4 nb2-l f6 link lh-solid black is-external external dim">API Email</a>
+                                <a href="http://doc-messaging.movile.com/voice" class="db inline-flex-l items-center-l pv0-m ph0-m pa3-ns mt3 mt0-ns nb2-l f6 link lh-solid black is-external external dim">API Voz</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-m flex-wrap-m w-100 w-50-m w-auto-l">
+                        <div class="relative db-m inline-flex-ns items-center-ns menu__trigger">
+                            <a href="javascript:;" class="dn dn-m inline-flex-ns items-center-ns pv2 pv2-m mt3-l mb0 mb0-m mb3-ns ph3 pa3-ns f6 lh-solid link black gray gray-m white-ns has-caret" style="cursor: default;">Fale conosco</a>
+                            <div class="menu__dropdown menu--contact bg-white shadow-none-m ba-l b--black-10 shadow-0-ns relative-m absolute-ns left-0 ph3 ph4-m ph0-l pv3 pv2-ns dn-l">
+                                <a href="https://support-messaging.movile.com/hc/pt-br/restricted?return_to=https%3A%2F%2Fsupport-messaging.movile.com%2Fhc%2Fpt-br" class="db inline-flex-l items-center-l pv0-m ph0-m pa3-ns mb3 nb2-l f6 link lh-solid black is-external external dim">Suporte ao cliente</a>
+                                <a href="../contato" class="db inline-flex-l items-center-l pt2 pv0-m ph0-m pa3-ns mt3 mt0-ns nb2-l f6 link lh-solid black dim">Iniciar contato</a>
+                            </div>
+                        </div>
+                        <a href="https://blog.chatclub.me/" class="db db-m inline-flex-ns items-center-ns pv2 pv2-m mt3-l mb0 mb0-m mb3-ns ph3 ph4-m pa3-ns f6 lh-solid link black black-m white-ns dim is-external external--white">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Secondary navigation -->
+            <div class="db-m inline-flex-ns justify-end-ns fg-1 ph3-l">
+                <a href="https://messaging.movile.com/messaging/login" class="dn dn-m inline-flex-ns items-center pt2 pt2-m pb3 ph3 pa3-ns mv3-ns f6 lh-solid link black black-m white-ns">Entrar</a>
+                <div class="absolute absolute-m relative-ns top-1 top-1-m top-0-ns flex items-center" id="lang-trigger">
+                    <a href="javascript:;" class="dn dn-m inline-flex-ns items-center pt2 pt2-m pb3 ph3 pa3-ns mv3-ns f7 lh-solid link black black-m white-ns"><span><img src="../../img/icons/pt.svg" alt="" class="dib w1 pr2"></span>PT</a>
+                    <div id="menu__lang" class="db db-m dn-ns bg-white shadow-none-m ba-l b--black-10 shadow-0-ns relative-m absolute-ns left-0-m mv2 mv0-m mt2-m mv0-ns">
+                        <a href="../../pt" class="inline-flex-ns items-center pt2 pt2-m pb2-m ph3 pa3-ns f7 lh-solid link black"><span><img src="../../img/icons/pt.svg" alt="" class="dib w1 pr1"></span>PT</a>
+                        <a href="../../en" class="inline-flex-ns items-center pt2 pt2-m pb2-m ph3 pa3-ns f7 lh-solid link black"><span><img src="../../img/icons/en.svg" alt="" class="dib w1 pr1"></span>EN</a>
+                        <a href="../../es" class="inline-flex-ns items-center pt2 pt2-m pb2-m ph3 pa3-ns f7 lh-solid link black"><span><img src="../../img/icons/es.svg" alt="" class="dib w1 pr1"></span>ES</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="grd-bg">
+        <section class="mw8 ph4 center flex items-center justify-between pv6 pv0-ns relative z-1">
+            <!-- Title and buttons -->
+            <div class="w-100 w-70-ns pr5-ns pv6-ns">
+                <h1 class="f1 f-subheadline-ns lh-solid mv0 white mw6-ns">
+                    Chatbot
+                </h1>
+                <p class="lh-copy white mt3 mb0 measure">
+                    Plataforma de mensagens interativas personalizadas para você monetizar a sua página e alavancar o seu negócio.
+                </p>
+            </div>
+        </section>
+        <div class="dvdr dvdr-wh"></div>
+    </div>
+
+    <!-- Como Funciona -->
+    <section class="pt5-ns pb5 mw8 ph4 center">
+        <div class="nl3 nr3">
+            <div class="cf">            
+                <div class="w-60-l w-100-m w-100-s ph3 mt3 fl">
+                    <h2 class="f2 lh-title mb4 blue-2 mw6-l">Comunique-se através do Facebook Messenger</h2>
+                    <p class="lh-copy mt2 mb4 gray"><span class="b black">O que é:</span> Ferramenta para envio de mensagens interativas no Messenger do Facebook para você monetizar a sua página e alavancar o seu negócio.</p>
+                    <p class="lh-copy mt2 mb4 gray"><span class="b black">Como funciona:</span> Após o ChatClub fazer as configurações do seu chatbot, acompanhe métricas pelo nosso painel de controle.</p>
+                    <p class="lh-copy mt2 mb4 gray"><span class="b black">Bot Atendimento</span></p>
+                    <p class="lh-copy mt2 mb4 gray"><span class="b black">Ideal para:</span> Empresas que tenham como objetivo atender clientes e tirar dúvidas frequentes de forma interativa. O bot utiliza inteligência artificial para exibir a melhor resposta ao seu cliente.</p>
+                </div>
+                <div class="w-30-ns fr dn db-l">
+                    <img class="nt7-ns" src="../../img/chatbot-ex.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vantagens -->
+    <section class="relative">
+        <div class="bg-light-gray absolute top-0 left-0 right-0 pt7 pb7 pt6-ns z-0 h-100"></div>
+        <article class="pt4 mw8 pb5 ph4 center relative z-1">
+            <div class="flex flex-wrap">
+                <div class="w-100 w-25-l pl4-l order-2-l">
+                    <h3 class="lh-copy pt4-ns black b mb2">
+                     Vantagens do Chatbot via ChatClub
+                 </h3>
+                 <div class="w-100 flex items-start mt3">
+                    <div class="w-32">
+                        <img src="../../img/icons/check.svg" class="db w-100 mt1" alt="">
+                    </div>
+                    <div class="w-100 pl3 h-100">
+                        <h3 class="lh-copy f5 mb0 normal gray">Módulos diversificados em um só chatbot (múltipla função): chat em grupo, quiz, enquete, participação, contato, autógrafo, broadcast e FAQ</h3>
+                    </div>
+                </div>
+                <div class="w-100 flex items-start mt3">
+                    <div class="w-32">
+                        <img src="../../img/icons/check.svg" class="db w-100 mt1" alt="">
+                    </div>
+                    <div class="w-100 pl3 h-100">
+                        <h3 class="lh-copy f5 mb0 normal gray">Distribuição de conteúdo de forma mais efetiva, assertiva e divertida</h3>
+                    </div>
+                </div>
+                <div class="w-100 flex items-start mt3">
+                    <div class="w-32">
+                        <img src="../../img/icons/check.svg" class="db w-100 mt1" alt="">
+                    </div>
+                    <div class="w-100 pl3 h-100">
+                        <h3 class="lh-copy f5 mb0 normal gray">Consulte relatórios dos envios das mensagens via WEB</h3>
+                    </div>
+                </div>
+                <div class="mt3">
+                    <a href="../contato" class="inline-flex items-center ba b--blue-2 lh-copy bg-blue-2 dib pa3 f6 ttu tracked link white mt3">Iniciar Contato</a>
+                </div>
+            </div>
+            <div class="w-100 w-75-l w-100-m mt5 mt4-ns order-1-ns">
+                <div>
+                    <img class="mt5-l" src="../../img/ui/chatbot.png">
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+<!-- Cases -->
+<section class="pv6">
+    <article class="mw8 ph4 center relative">
+        <h2 class="f2 w-100 mv0 tc pb4">Cases de Sucesso</h2>
+        <div class="Wallop Wallop--slide w-100-ns">
+            <div class="Wallop-list">
+                <div class="Wallop-item">
+                    <img class="dn db-ns" src="../../img/cases/case-chatbot-aa.png">
+                    <img class="dn-ns" src="../../img/cases/case-chatbot-aa-m.png">
+                </div>
+            </div>
+            <div class="Wallop-list">
+                <div class="Wallop-item">
+                    <img class="dn db-ns" src="../../img/cases/case-chatbot-avon.png">
+                    <img class="dn-ns" src="../../img/cases/case-chatbot-avon-m.png">
+                </div>
+            </div>
+            <div class="Wallop-list">
+                <div class="Wallop-item">
+                    <img class="dn db-ns" src="../../img/cases/case-chatbot-luan.png">
+                    <img class="dn-ns" src="../../img/cases/case-chatbot-luan-m.png">
+                </div>
+            </div>
+            <div class="mt3 nl3 nr3 tc">
+                <button class="Wallop-buttonPrevious bg-white bn pa3">
+                    <img src="../../img/icons/arrow.svg" alt="" class="db h1 rotate-180">
+                </button>
+                <button class="Wallop-buttonNext bg-white bn pa3">
+                    <img src="../../img/icons/arrow.svg" alt="" class="db h1">
+                </button>
+            </div>
+        </div>
+    <!--Platform Nav-->
+    <section class="mt4">
+        <div class="tc center">  
+            <a href="../email" class="inline-flex items-center ba b--blue-2 lh-copy bg-white dib pa3 f5 ttu tracked link blue-2 mt3">← E-mail</a>
+            <a href="../rcs" class="inline-flex items-center ba b--blue-2 lh-copy bg-white dib pa3 f5 ttu tracked link blue-2 mt3">RCS →</a>
+        </div>  
+    </section>
+            
+        </article>
+    </section>
+
+<<<<<<< HEAD
+    <!-- Footer -->
+    <footer class="bg-light-gray">
+        <article class="mw8 ph4 center pt5 pb5">
+            <div class="nl3 nr3">
+                <div class="flex flex-wrap">
+                    <div class="w-100 w-25-ns ph3">
+                        <ul class="list f7 pl0 h-100">
+=======
+<!-- Footer -->
+<div class="dvdr dvdr-lg"></div>
+<footer class="bg-light-gray">
+    <article class="mw8 ph4 center pt5 pb5">
+        <div class="nl3 nr3">
+            <div class="flex flex-wrap">
+                <div class="w-100 w-25-ns ph3">
+                    <ul class="list f7 pl0 h-100">
+>>>>>>> 8c175382357451a2defc62f83d4da2e1092216a5
+                        <li class="pl0 black-30 f6 gray mb3">&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> ChatClub</li>
+                        <li class="pl0 black-30 f6 gray mb2">Powered By </li>
+                        <li class="list">
+                            <a href="https://movile.com/#/" target="_blank"><img src="../../img/movile-logo.png" class="w-20 w-60-m"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-100 w-25-ns mt4 mt0-ns ph3">
+                    <ul class="list f6 pl0">
+                        <li class="b pl0 link">A plataforma</li>
+                        <li class="pl0 mt3"><a href="./sms" class="link gray dim">SMS</a></li>
+                        <li class="pl0 mt3"><a href="./email" class="link gray dim">Email</a></li>
+                        <li class="pl0 mt3"><a href="./voz" class="link gray dim">Voz</a></li>
+                        <li class="pl0 mt3"><a href="./chatbot" class="link gray dim">Chatbot</a></li>
+                        <li class="pl0 mt3"><a href="./rcs" class="link gray dim">RCS</a></li>
+                        <li class="pl0 mt3"><a href="./adicionais" class="link gray dim">Serviços adicionais</a></li>
+                    </ul>
+                </div>
+                <div class="w-100 w-25-ns mt4 mt0-ns ph3">
+                    <ul class="list f6 pl0">
+                        <li class="b pl0">Recursos</li>
+                        <li class="pl0 mt3"><a href="./quemsomos" class="link gray dim">Quem somos</a></li>
+                        <li class="pl0 mt3"><a href="https://support-messaging.zendesk.com" class="link gray dim">FAQ</a></li>
+                        <li class="pl0 mt3"><a href="./contato" class="link gray dim">Iniciar contato</a></li>
+                        <li class="pl0 mt3"><a href="https://support-messaging.movile.com/" target="_blank" class="link gray dim">Suporte ao cliente<img src="../../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
+                        <li class="pl0 mt3"><a href="./blog" target="_blank" class="link gray dim">Blog<img src="../../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="w-100 w-25-ns mt4 mt0-ns ph3">
+                    <ul class="list f6 pl0">
+                        <li class="b pl0">Documentação</li>
+                        <li class="pl0 mt3 dim"><a href="http://doc-messaging.movile.com/pt.html" class="link gray">API SMS<img src="../../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
+                        <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/email" class="link gray dim">API Email<img src="../../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
+                        <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/voice" class="link gray dim">API Voz<img src="../../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </article>
+</footer>
+<script type=text/javascript src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type=text/javascript src="../../js/custom.js"></script>
+<script type=text/javascript src="../../js/internal-tabs.js"></script>
+<!-- Slider -->
+<script type=text/javascript src="../../js/Wallop.min.js"></script>
+<script type=text/javascript>
+        // New instance of Wallop
+        var wallopEl = document.querySelector('.Wallop');
+        var wallop = new Wallop(wallopEl);
+
+        // To start Autoplay, just call the function below
+        // and pass in the number of seconds as interval
+        // if you want to start autoplay after a while
+        // you can wrap this in a setTimeout(); function
+        autoplay(10000);
+
+        // This a a helper function to build a simple
+        // auto-play functionality. 
+        function autoplay(interval) {
+            var lastTime = 0;  
+
+            function frame(timestamp) {
+                var update = timestamp - lastTime >= interval;
+
+                if (update) {
+                  wallop.next();
+                  lastTime = timestamp;
+              }
+
+              requestAnimationFrame(frame);
+          }
+
+          requestAnimationFrame(frame);
+      };
+  </script>
+</body>
+</html>

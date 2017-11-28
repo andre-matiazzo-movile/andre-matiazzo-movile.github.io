@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>SMS – Wavy</title>
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--     <link rel="apple-touch-icon" sizes="57x57" href="../../fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../fav/favicon-16x16.png">
+    <link rel="manifest" href="../../fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#FDA88A">
+    <meta name="msapplication-TileImage" content="../../fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#FDA88A"> -->
+
+    <!-- Tags específicas para o Facebook -->
+    <meta property="og:locale" content="es">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta name="category" content="">
+    
+    <!-- Tags específicas para o Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:image" content="" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" href="../../css/custom.css">
+    <!-- For the slider -->
+    <link rel="stylesheet" href="../../css/wallop.css">
+    <link rel="stylesheet" href="../../css/wallop--slide.css">
+
+    <!-- Typekit -->
+    <script src="https://use.typekit.net/ggk4dcn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+<body>
+    <nav class="flex items-center fixed justify-between top-0 left-0 right-0 z-2">
+        <!-- Brand -->
+        <a aria-label="Home" href="../" class="pa3 ma2 inline-flex items-center brand" role="link">
+            <img src="../../img/logo-branco.svg" alt="Marca Wavy" class="w-40 w4-ns">
+        </a>
+        <!-- Menu -->
+        <div class="relative z-2 db-m dn-ns pa3 ma2" id="menu-open">
+            <span class="db bg-white" style="height: 0.125rem; width: 1.25rem;"></span>
+            <span class="db bg-white mt1" style="height: 0.125rem; width: 1.25rem;"></span>
+            <span class="db bg-white mt1" style="height: 0.125rem; width: 1.25rem;"></span>
+        </div>
+        <div class="dn dn-ns relative z-5 dn-ns pa3" id="menu-close">
+            <span class="db bg-gray" style="height: 0.125rem; width: 1.25rem; transform: rotate(45deg) translateY(8px); transform-origin: center; margin-bottom: 10px;"></span>
+            <span class="db bg-gray" style="height: 0.125rem; width: 1.25rem; transform: rotate(-45deg) translateY(-8px); transform-origin: center;"></span>
+        </div>
+        <div class="dn dn-m inline-flex-ns absolute absolute-m relative-ns z-2 fg-1 bg-white bg-white-m top-0 left-0 right-0 bg-transparent-ns mt0-ns pt2 pt2-m pt0-ns ph3 ph3-m ph0-ns pb3 pb3-m pb0-ns shadow-0 shadow-0-m shadow-none-ns" id="menu__container">
+            <!-- Primary navigation -->
+            <div class="db-m inline-flex-ns fg-1">
+                <div class="relative db-m inline-flex-ns items-center-ns" id="menu__trigger--platform">
+                    <a href="javascript:;" class="f6 lh-solid link gray gray-m white-ns mt5 mt5-m mt0-ns pb1 pb1-m ph3 pt0-m pa3-ns outline-0 db db-m di-ns" style="cursor: default;">Plataforma</a>
+                    <div id="menu__platform" class="flex flex-m flex-wrap flex-wrap-m dn-ns bg-white shadow-none-m ba-l b--black-10 shadow-0-ns relative-m absolute-ns left-0-m left--1-ns pv0-m pv3-ns">
+                        <div>
+                            <a href="../sms" class="flex flex-m inline-flex-ns items-start pv2 mt2 mt2-m mt0-ns ph3 mh0 mh0-m mh3-ns f5 f6-ns lh-copy link purple purple-m black-ns dim">
+                                <img src="../../img/icons/sms.svg" alt="" class="w1 pr2 pt1">
+                                SMS
+                            </a>
+                            <a href="../correo-electronico" class="flex flex-m inline-flex-ns items-start pv2 mt2 mt2-m mt0-ns ph3 mh0 mh0-m mh3-ns f5 f6-ns lh-copy link purple purple-m black-ns dim">
+                                <img src="../../img/icons/email.svg" alt="" class="w1 pr2 pt1">
+                                Correo electrónico
+                            </a>
+                            <a href="../voz" class="flex flex-m inline-flex-ns items-start pv2 mt2 mt2-m mt0-ns ph3 mh0 mh0-m mh3-ns f5 f6-ns lh-copy link purple purple-m black-ns dim">
+                                <img src="../../img/icons/voice.svg" alt="" class="w1 pr2 pt1">
+                                Voz
+                            </a>
+                            <a href="http://chatclub.me" class="flex flex-m inline-flex-ns items-start pv2 mt2 mt2-m mt0-ns ph3 mh0 mh0-m mh3-ns f5 f6-ns lh-copy link purple purple-m black-ns dim">
+                                <img src="../../img/icons/chat.svg" alt="" class="w1 pr2 pt1">
+                                Chatbots
+                            </a>
+                        </div>
+                        <div>
+                            <a href="../rcs" class="flex flex-m inline-flex-ns items-start pv2 mt2 mt2-m mt0-ns ph3 mh0 mh0-m mh3-ns f5 f6-ns lh-copy link purple purple-m black-ns dim">
+                                <img src="../../img/icons/push.svg" alt="" class="w1 pr2 pt1">
+                                RCS
+                            </a>
+                            <a href="../busqueda-de-numeros" class="flex flex-m inline-flex-ns items-start pv2 mt2 mt2-m mt0-ns ph3 mh0 mh0-m mh3-ns f5 f6-ns lh-copy link purple purple-m black-ns dim">
+                                <img src="../../img/icons/lookup.svg" alt="" class="w1 pr2 pt1">
+                                Búsqueda de números
+                            </a>
+                            <a href="../bases-segmentadas" class="flex flex-m inline-flex-ns items-start pv2 mt2 mt2-m mt0-ns ph3 mh0 mh0-m mh3-ns f5 f6-ns lh-copy link purple purple-m black-ns dim">
+                                <img src="../../img/icons/enriquecimento.svg" alt="" class="w1 pr2 pt1">
+                                Bases segmentadas
+                            </a>
+                            <a href="../navegacion-patrocinada" class="flex flex-m inline-flex-ns items-start pv2 mt2 mt2-m mt0-ns ph3 mh0 mh0-m mh3-ns f5 f6-ns lh-copy link purple purple-m black-ns dim">
+                                <img src="../../img/icons/patrocinada.svg" alt="" class="w1 pr2 pt1">
+                                Navegación patrocinada 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-m flex-wrap flex-wrap-m inline-flex-ns pv3 pv3-m pv0-ns">
+                    <div>
+                        <a href="http://doc-messaging.movile.com/es.html" class="db db-m inline-flex-ns items-center-ns pv2 pv2-m mt2 mt2-m mt3-ns mb0 mb0-m mb3-ns ph3 pa3-ns f6 lh-solid link black black-m white-ns dim">Documentación</a>
+                        <!--<a href="./blog" class="db db-m inline-flex-ns items-center-ns pv2 pv2-m mt2 mt2-m mt3-ns mb0 mb0-m mb3-ns ph3 pa3-ns f6 lh-solid link black black-m white-ns dim">Blog</a>-->
+                    </div>
+                    <div>
+                        <a href="#who" class="db db-m inline-flex-ns items-center-ns pv2 pv2-m mt2 mt2-m mt3-ns mb0 mb0-m mb3-ns ph3 pa3-ns f6 lh-solid link black black-m white-ns dim">Quienes somos</a>
+                        <a href="https://support-messaging.zendesk.com" class="db db-m inline-flex-ns items-center-ns pv2 pv2-m mt2 mt2-m mt3-ns mb0 mb0-m mb3-ns ph3 pa3-ns f6 lh-solid link black black-m white-ns dim">Soporte</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Secondary navigation -->
+            <div class="db-m inline-flex-ns justify-end-ns fg-1 ph3-l">
+                <div class="items-center dn-ns db-m pt2 pb3 ph3 pa0-ns cta-menu">
+                    <a href="../contacto" class="bg-blue db dib-ns pa3 ma3-ns f7 ttu tracked no-underline b black tc bg-light-blue-hover">Entre en contacto
+</a>
+                </div>
+                <a href="https://messaging.movile.com/messaging/login" class="dn dn-m inline-flex-ns items-center pt2 pt2-m pb3 ph3 pa3-ns mv3-ns mh0-m mh3-ns f6 lh-solid link black black-m white-ns">Entrar</a>
+                <div class="absolute absolute-m relative-ns top-1 top-1-m top-0-ns flex items-center" id="lang-trigger">
+                    <a href="javascript:;" class="dn dn-m inline-flex-ns items-center pt2 pt2-m pb3 ph3 pa3-ns mv3-ns f7 lh-solid link black black-m white-ns"><span><img src="../../img/icons/es.svg" alt="" class="dib w1 pr2"></span>ES</a>
+                    <div id="menu__lang" class="db db-m dn-ns bg-white shadow-none-m ba-l b--black-10 shadow-0-ns relative-m absolute-ns left-0-m mv2 mv0-m mt2-m mv0-ns">
+                        <a href="../../../pt/sms" class="inline-flex-ns items-center pt2 pt2-m pb2-m ph3 pa3-ns f7 lh-solid link black"><span><img src="../../img/icons/pt.svg" alt="" class="dib w1 pr1"></span>
+                            PT
+                        </a>
+                        <a href="../../../en/sms" class="inline-flex-ns items-center pt2 pt2-m pb2-m ph3 pa3-ns f7 lh-solid link black"><span><img src="../../img/icons/en.svg" alt="" class="dib w1 pr1"></span>
+                            EN
+                        </a>
+                        <a href="../../../es/sms" class="inline-flex-ns items-center pt2 pt2-m pb2-m ph3 pa3-ns f7 lh-solid link black"><span><img src="../../img/icons/es.svg" alt="" class="dib w1 pr1"></span>
+                            ES
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="header-bg">
+        <div class="header-bg__mask"></div>
+        <section class="mw8 ph4 center flex items-center justify-between pv6 pv0-ns relative z-1">
+            <!-- Title and buttons -->
+            <div class="w-100 w-70-ns pr5-ns pv6-ns">
+                <h1 class="f1 f-subheadline-ns lh-solid mv0 white mw6-ns">
+                    SMS
+                </h1>
+                <p class="lh-copy white mt3 mb0 measure">
+                    El canal que más genera alcance y mantiene a su cliente siempre informado, en cualquier momento y en cualquier lugar.
+                </p>
+                <div class="flex-ns mt3">
+                    <a href="../contacto" class="inline-flex items-center shadow-0 ba b--blue lh-copy bg-blue dib pa3 f7 ttu tracked no-underline b black mt3 bg-light-blue-hover">Entre en contacto</a>
+                    <a href="#tipos" class="ml4-ns inline-flex items-center shadow-0 ba b--black-05 lh-copy bg-white dib pa3 f7 ttu tracked link b black mt3">Conozca los tipos de SMS</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Por que -->
+    <section class="pv5">
+        <article class="mw8 ph4 center relative">
+            <h2 class="f2 w-100 mv0">¿Por qué SMS?</h2>
+            <div class="nl3 nr3 nt4">
+                <div class="flex flex-wrap">
+                    <!-- 01 -->
+                    <div class="w-100 w-25-ns flex items-start mt5 ph3">
+                        <div class="w-20">
+                            <img src="../../img/icons/no-internet.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-copy f5 mb0 normal">Sus clientes <span class="b">no necesitan internet</span> para recibir un SMS.</span></h3>
+                        </div>
+                    </div>
+                    <!-- 02 -->
+                    <div class="w-100 w-25-ns flex items-start mt5 ph3">
+                        <div class="w-20">
+                            <img src="../../img/icons/push.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-copy f5 mb0 normal">El es compatible con <span class="b">cualquier modelo de teléfono móvil</span>.</span></h3>
+                        </div>
+                    </div>
+                    <!-- 03 -->
+                    <div class="w-100 w-25-ns flex items-start mt5 ph3">
+                        <div class="w-20">
+                            <img src="../../img/icons/conversao.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-copy f5 mb0 normal">Apresenta <span class="b">altas tasas de conversión</span>.</h3>
+                        </div>
+                    </div>
+                    <!-- 04 -->
+                    <div class="w-100 w-25-ns flex items-start mt5 ph3">
+                        <div class="w-20">
+                            <img src="../../img/icons/leitura.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-copy f5 mb0 normal">El SMS presenta una tasa media del <span>97% de lectura</span>.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Vantagens -->
+    <section class="mt5 pb6 mw8 ph4 center" style="background: url(../../img/half-circle-wave.svg) no-repeat center center; background-size: 100% auto;">
+        <h2 class="f2 mv0">Ventajas con Wavy</h2>
+        <div class="nl3 nr3">
+            <div class="w-50-m w-50-ns flex flex-wrap items-end-ns">
+                <div class="flex flex-wrap w-50-ns">
+                    <!-- 01 -->
+                    <div class="w-100 mt4 ph3">
+                        <div class="shadow-0 bg-white ba b--black-10 pa3">
+                            <h3 class="lh-title f5 mb0">Códigos cortos</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Somos socios oficiales de las operadoras y actuamos dentro de las buenas prácticas del mercado.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 02 -->
+                    <div class="w-100 mt4 ph3">
+                        <div class="shadow-0 bg-white ba b--black-10 pa3">
+                            <h3 class="lh-title f5 mb0">Conexión directa</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Con conexión directa a todos los operadores de telefonía del país, entregamos el SMS de forma segura.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap w-50-ns">
+                    <!-- 03 -->
+                    <div class="w-100 mt4 ph3">
+                        <div class="shadow-0 bg-white ba b--black-10 pa3">
+                            <h3 class="lh-title f5 mb0">Personalización de mensajes</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Personalice sus mensajes con datos de los clientes y haga el contacto más personal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-50-m w-50-ns flex flex-wrap items-start" style="margin-left: auto;">
+                <div class="flex flex-wrap w-50-ns">
+                    <!-- 04 -->
+                    <div class="w-100 mt4 mt4-m mt0-ns ph3">
+                        <div class="shadow-0 bg-white ba b--black-10 pa3">
+                            <h3 class="lh-title f5 mb0">Envíos por contacto, grupos o lotes</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Elija entre una comunicación individual, segmentada o en masa para sus clientes.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 05 -->
+                    <div class="w-100 mt4 ph3">
+                        <div class="shadow-0 bg-white ba b--black-10 pa3">
+                            <h3 class="lh-title f5 mb0">Histórico de envíos</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Tenga acceso al histórico de mensajes SMS de su empresa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap w-50-ns">
+                    <!-- 06-->
+                    <div class="w-100 mt4 mt4-m mt0-ns ph3">
+                        <div class="shadow-0 bg-white ba b--black-10 pa3">
+                            <h3 class="lh-title f5 mb0">Web o Integración</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Disponible en la versión web o puede ser fácilmente integrado con su propia plataforma.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types -->
+    <section class="pt5-ns pb6 mw8 ph4 center" id="tipos">
+        <div class="nl3 nr3">
+            <div class="flex-ns">            
+                <div class="dn db-ns tc tr-ns w-50-ns ph3 overflow-hidden overflow-visible-ns bb b--black-10 bn-ns relative">
+                    <div class="dib w-75-m w-50-ns relative">
+                        <img src="../../img/phone.png" alt="" class="relative z-1">
+                        <div class="absolute left-1 right-1 top-2 bottom-2 z-0">
+                            <div class="sms_example sms_example--corp relative">
+                                <div class="bg-blue mt5 mh3 br2">
+                                    <p class="lh-copy f7 tl normal pa2">Realizamos otro intento de entrega del pedido 402388344, el 12/07/2017. Póngase en contacto para regular la situación.</p>
+                                </div>
+                            </div>
+                            <div class="sms_example sms_example--mkt relative dn">
+                                <div class="bg-blue mt5 mh3 br2">
+                                    <p class="lh-copy f7 tl normal pa2">Tiendas XXXX: Gana 20% de descuento en las compras con la tarjeta de la tienda hasta 31/01/2017. Para salir, envía PARE.</p>
+                                </div>
+                            </div>
+                            <div class="sms_example sms_example--conc relative dn">
+                                <div class="bg-blue mt5 mh3 br2">
+                                    <p class="lh-copy f7 tl normal pa2">Responde gratis: Con base en su última atención por teléfono, ¿cuánto recomendaría nuestra empresa a un amigo? De una nota de 0 a 10, siendo que 0 es totalmente insatisfecho y 10 está totalmente satisfecho.</p>
+                                </div>
+                            </div>
+                            <div class="sms_example sms_example--flash relative h-100 dn">
+                                <div class="bg-black top-0 right-0 bottom-0 left-0 h-100 w-100 absolute">
+                                    <div class="bg-white shadow-1 mt6 mh3">
+                                        <p class="lh-copy f7 tl normal pa2">Hola, active su cuenta con el token 76543</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-50-ns ph3">
+                    <h2 class="f2 lh-title mv0">Un producto, varias posibilidades</h2>
+                    <div class="mt4 accordion">
+                        <h3 class="pointer dim"  id="sms_trigger--corp">SMS Corporativo</h3>
+                        <p class="lh-copy gray f6 measure mt2">Mensajes de texto transaccionales e informativos. Mayor eficiencia en la comunicación de su negocio. Ideal para: encuestas de satisfacción, envío de tokens, recordatorios, avisos, invitaciones, felicitaciones e información de cualquier domínio.</p>
+                    </div>
+                    <div class="mt4 accordion">
+                        <h3 class="gray pointer dim" id="sms_trigger--mkt">SMS Marketing</h3>
+                        <p class="lh-copy gray f6 measure mt2 dn">Envío de promociones e incentivos de compras, mejorando las conversiones de sus acciones de marketing. Aumente sus resultados con: alertas de descuentos, envíos de cupones, divulgación de eventos, productos, promociones y otras acciones de marketing.</p>
+                    </div>
+                    <div class="mt4 accordion">
+                        <h3 class="gray pointer dim" id="sms_trigger--conc">SMS Concatenado</h3>
+                        <p class="lh-copy gray f6 measure mt2 dn">¿Los 160 caracteres del SMS convencional todavía es poco? ¡No hay problema! Envíe textos más largos en un solo mensaje.</p>
+                    </div>
+                    <div class="mt4 accordion">
+                        <h3 class="gray pointer dim" id="sms_trigger--flash">Flash SMS</h3>
+                        <p class="lh-copy gray f6 measure mt2 dn">¿Desea enviar una información sensible a sus clientes? Con Flash SMS su mensaje no se almacena en el teléfono móvil del usuario. Altamente recomendado para: envío de saldo bancario, alertas de seguridad y contraseñas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotes -->
+    <section class="mt3-ns mw8 ph4 center">
+        <div class="Wallop Wallop--slide w-75-ns">
+            <div class="Wallop-list">
+                <div class="Wallop-item">
+                    <img src="../../img/icons/quotes.svg" alt="" class="w2">
+                    <blockquote class="lh-copy mt3 f4">
+                        SMS es una gran manera de enviar información a nuestros socios y ha traído grandes resultados a la empresa. Antes de esa herramienta el proceso era manual, involucraba más personas y costaba un 40% más. Estamos satisfechos con el servicio y la plataforma Wavy.
+                    </blockquote>
+                    <p class="lh-copy gray mt3">Lorenz B., Gerente de Tecnología de la Información, Sotran</p>
+                </div>
+                <div class="Wallop-item">
+                    <img src="../../img/icons/quotes.svg" alt="" class="w2">
+                    <blockquote class="lh-copy mt3 f4">
+                        Iniciamos el proyecto con Wavy como una prueba para evaluar nuestra base de clientes. Los resultados fueron excelentes, lo que consolidó una nueva estrategia de relación dentro de la empresa. Siempre nos atienden de forma diferenciada y están listos para todos los desafíos minoristas, que no son simples!
+                    </blockquote>
+                    <p class="lh-copy gray mt3">Luís F., Marketing y CRM, Tiendas Colombo</p>
+                </div>
+                <div class="Wallop-item">
+                    <img src="../../img/icons/quotes.svg" alt="" class="w2">
+                    <blockquote class="lh-copy mt3 f4 measure-narrow">
+                        Después de la implantación del SMS, identificamos que el tiempo de respuesta de las propuestas se optimizó en un 40%.
+                    </blockquote>
+                    <p class="lh-copy gray mt3">Fernanda G., Gerente de Productos y UX, Webmotors</p>
+                </div>
+                <div class="Wallop-item">
+                    <img src="../../img/icons/quotes.svg" alt="" class="w2">
+                    <blockquote class="lh-copy mt3 f4 measure-narrow">
+                        Empezamos a enviar SMS a través de Wavy y los profesionales pasaron a cerrar más negocios.
+                    </blockquote>
+                    <p class="lh-copy gray mt3">Eduardo L., CEO, GetNinjas</p>
+                </div>
+            </div>
+            <div class="mt3 nl3 nr3">
+                <button class="Wallop-buttonPrevious bg-white bn pa3">
+                    <img src="../../img/icons/arrow.svg" alt="" class="db h1 rotate-180">
+                </button>
+                <button class="Wallop-buttonNext bg-white bn pa3">
+                    <img src="../../img/icons/arrow.svg" alt="" class="db h1">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration -->
+    <section class="relative mt6">
+        <div class="bg-dark-purple absolute top-0 left-0 right-0 pt7 pt6-ns pb7 z-0"></div>
+        <article class="pt4 mw8 ph4 center relative z-1">
+            <h2 class="f2 w-100 mv0 white lh-title">Es fácil integrar con su plataforma</h2>
+            <div class="flex flex-wrap">
+                <div class="w-100 w-25-ns pl4-ns order-2-ns">
+                    <p class="lh-copy white mt4 pt4-ns f6-ns">
+                        ¡Respiramos tecnología y estamos listos para integrarnos con su empresa!
+                    </p>
+                    <a href="javascript:;" class="dib blue link light-blue-hover ttu tracked f7 lh-solid bb b pb1 mt3">Lea la documentación →</a>
+                </div>
+                <div class="w-100 w-75-ns mt5 mt4-ns order-1-ns">
+                    <div class="shadow-0 bg-white ba b--black-10 API-channel-container" id="API_SMS">
+                        <!-- SMS API Menu -->
+                        <div id="API_SMS--menu">
+                            <div class="flex ph3 bb b--black-10">
+                                <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 purple cURL-trigger--js">cURL</a>
+                                <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black-30 Ruby-trigger--js">Ruby</a>
+                                <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black-30 Python-trigger--js">Python</a>
+                                <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black-30 PHP-trigger--js">PHP</a>
+                                <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black-30 Java-trigger--js">Java</a>
+                            </div>
+                        </div>
+                        <div class="f7 lh-copy gray pa4 overflow-y-scroll channels-content--js" style="max-height: 75vh;">
+                            <!-- SMS_cURL -->
+                            <div class="triggered-cURL--js">
+                                <code class="db">curl -X POST <span class="black">\</span></code>
+                                <code class="db">https://api-messaging.movile.com/v1/send-sms <span class="black">\</span></code>
+                                <code class="db">-H <span class="purple">'authenticationtoken: &lt;authenticationtoken&gt;'</span> <span class="black">\</span></code>
+                                <code class="db">-H <span class="purple">'username: &lt;username&gt;'</span> <span class="black">\</span></code>
+                                <code class="db">-H <span class="purple">'content-type': "application/json'</span> <span class="black">\</span></code>
+                                <code class="db"><span class="purple">-d '{"</span>destination<span class="purple">": "</span>5511984541027<span class="purple">"</span><span class="purple"> , "</span>messageText<span class="purple">": "</span>linha<span class="black">\n</span>quebrada<span class="purple">"}'</span></code>
+                                <p class="mv4 ph3 pv2 measure bg-black-05 ba b--black-10">Al hacer el envió usted recibirá un JSON informando el id que fue generado para este mensaje (Response o Respuesta sincrona de Movile):</p>
+                                <code class="db">[</code>
+                                <code class="db pl3">{</code>
+                                <code class="db pl4"><span class="purple">"id":"9cb87d36-79af-11e5-89f3-1b0591cdf807"</span></code>
+                                <code class="db pl3">}</code>
+                                <code class="db">]</code>
+                            </div>
+                            <!-- SMS_Ruby -->
+                            <div class="dn triggered-Ruby--js">
+                                <code class="db"><span class="gold">require</span> <span class="purple">'uri'</span></code>
+                                <code class="db"><span class="gold">require</span> <span class="purple">'net/http'</span></code>
+                                <code class="db">url <span class="dark-pink">=</span> <span class="dark-blue">URI</span>(<span class="purple">"https://api-messaging.movile.com/v1/send-sms"</span>)</code>
+                                <code class="db mt3">http <span class="dark-pink">=</span> <span class="dark-blue">Net</span><span class="dark-pink">::</span><span class="dark-blue">HTTP</span>.<span class="span green">new</span>(url.<span class="green">host</span>, url.<span class="green">port</span>)</code>
+                                <code class="db">http.<span class="green">use_ssl</span> <span class="dark-pink">= true</span></code>
+                                <code class="db mt3">request <span class="dark-pink">=</span> <span class="dark-blue">Net</span><span class="dark-pink">::</span><span class="dark-blue">HTTP</span><span class="dark-pink">::</span><span class="dark-blue">Post</span>.<span class="green">new</span>(url)</code>
+                                <code class="db">request[<span class="purple">"username"</span>] <span class="dark-pink">=</span> <span class="purple">'&lt;username&gt;'</span></code>
+                                <code class="db">request[<span class="purple">"authenticationtoken"</span>] <span class="dark-pink">=</span> <span class="purple">'&lt;authenticationtoken&gt;'</span></code>
+                                <code class="db">request[<span class="purple">"content-type"</span>] <span class="dark-pink">=</span> <span class="purple">'application/json'</span></code>
+                                <code class="db">request.<span class="green">body</span> <span class="dark-pink">=</span> <span class="purple">"{</span><span class="black">\"</span><span class="purple">destination</span><span class="black">\"</span><span class="purple">:</span> <span class="black">\"</span><span class="purple">5511984541027</span><span class="black">\"</span> <span class="purple">,</span>  <span class="black">\"</span><span class="purple">messageText</span><span class="black">\"</span><span class="purple">:</span> <span class="black">\"</span><span class="purple">linha</span><span class="black">\\n</span><span class="purple">quebrada</span><span class="black">\"</span><span class="purple">}"</span></code>
+                                <code class="db">response <span class="dark-pink">=</span> http.<span class="green">request</span>(request)</code>
+                                <code class="db"><span class="gold">puts</span> response.<span class="green">read_body</span></code>
+                                <p class="mv4 ph3 pv2 measure bg-black-05 ba b--black-10">Al hacer el envió usted recibirá un JSON informando el id que fue generado para este mensaje (Response o Respuesta sincrona de Movile):</p>
+                                <code class="db">[</code>
+                                <code class="db pl3">{</code>
+                                <code class="db pl4"><span class="purple">"id"</span>:<span class="purple">"9cb87d36-79af-11e5-89f3-1b0591cdf807"</span></code>
+                                <code class="db pl3">}</code>
+                                <code class="db">]</code>
+                            </div>
+                            <!-- SMS Python -->
+                            <div class="dn triggered-Python--js">
+                                <code class="db">import requests</code>
+                                <code class="db mt3">url = "https://api-messaging.movile.com/v1/send-sms"</code>
+                                <code class="db mt3">payload = "{\"destination\": \"5511984541027\" ,  \"messageText\": \"linha\\nquebrada\"}"</code>
+                                <code class="db">headers = {</code>
+                                <code class="db pl3">'username': "&lt;username&gt;",</code>
+                                <code class="db pl3">'authenticationtoken': "&lt;authenticationtoken&gt;",</code>
+                                <code class="db pl3">'content-type': "application/json"</code>
+                                <code class="db pl3">}</code>
+                                <code class="db mt3">response = requests.request("POST", url, data=payload, headers=headers)</code>
+                                <code class="db mt3">print(response.text)</code>
+                                <p class="mv4 ph3 pv2 measure bg-black-05 ba b--black-10">Al hacer el envió usted recibirá un JSON informando el id que fue generado para este mensaje (Response o Respuesta sincrona de Movile):</p>
+                                <code class="db">[</code>
+                                <code class="db pl3">{</code>
+                                <code class="db pl4"><span class="purple">"id"</span>:<span class="purple">"9cb87d36-79af-11e5-89f3-1b0591cdf807"</span></code>
+                                <code class="db pl3">}</code>
+                                <code class="db">]</code>
+                            </div>
+                            <!-- SMS PHP -->
+                            <div class="dn triggered-PHP--js">
+                                <code class="db">Mod curl:</code>
+                                <code class="db">sudo apt-get/yum install php5-curl</code>
+                                <code class="db mt3">&lt;?php</code>
+                                <code class="db mt3">$curl = curl_init();</code>
+                                <code class="db mt3">curl_setopt_array($curl, array(</code>
+                                <code class="db pl3">CURLOPT_URL => "https://api-messaging.movile.com/v1/send-sms",</code>
+                                <code class="db pl3">CURLOPT_RETURNTRANSFER => true,</code>
+                                <code class="db pl3">CURLOPT_ENCODING => "",</code>
+                                <code class="db pl3">CURLOPT_MAXREDIRS => 10,</code>
+                                <code class="db pl3">CURLOPT_TIMEOUT => 30,</code>
+                                <code class="db pl3">CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,</code>
+                                <code class="db pl3">CURLOPT_CUSTOMREQUEST => "POST",</code>
+                                <code class="db pl3">CURLOPT_POSTFIELDS => "{\"destination\": \"5511984541027\" ,  \"messageText\": \"linha\\nquebrada\"}",</code>
+                                <code class="db pl3">CURLOPT_HTTPHEADER => array(</code>
+                                <code class="db pl4">"authenticationtoken: < authenticationtoken >",</code>
+                                <code class="db pl4">"username: < username >",</code>
+                                <code class="db pl4">"content-type: application/json"</code>
+                                <code class="db pl3">),</code>
+                                <code class="db">));</code>
+                                <code class="db mt3">$response = curl_exec($curl);</code>
+                                <code class="db">$err = curl_error($curl);</code>
+                                <code class="db mt3">curl_close($curl);</code>
+                                <code class="db mt3">if ($err) {</code>
+                                <code class="db pl3">echo "cURL Error #:" . $err;</code>
+                                <code class="db">} else {</code>
+                                <code class="db pl3">echo $response;</code>
+                                <code class="db">}</code>
+                            </div>
+                            <!-- SMS Java -->
+                            <div class="dn triggered-Java--js">
+                                <code class="db">import java.io.BufferedReader;</code>
+                                <code class="db">import java.io.IOException;</code>
+                                <code class="db">import java.io.InputStreamReader;</code>
+                                <code class="db">import java.io.OutputStreamWriter;</code>
+                                <code class="db">import java.net.HttpURLConnection;</code>
+                                <code class="db">import java.net.URL;</code>
+
+                                <code class="db mt3">public class SendSms {</code>
+
+                                <code class="db mt3 pl3">public static void main(String[] args) {</code>
+                                <code class="db pl4">String url = "https://api-messaging.movile.com/v1/send-sms";</code>
+
+                                <code class="db mt3 pl4">String userName = "<username>";</code>
+                                <code class="db pl4">String authenticationToken = "<authenticationtoken>";</code>
+
+                                <code class="db mt3 pl4">String body = "{\"destination\": \"5511900000000\" ,  \"messageText\": \"linha\\nquebrada\"}";</code>
+
+                                <code class="db mt3 pl4">String response = doPost(url, body, userName, authenticationToken);</code>
+                                <code class="db mt3 pl4">System.out.println(response);</code>
+                                <code class="db pl3">}</code>
+
+                                <code class="db mt3 pl3">public static String doPost(String strUrl, String request, String userName, String authenticationToken) {</code>
+                                <code class="db pl4">HttpURLConnection conn = null;</code>
+                                <code class="db pl4">OutputStreamWriter wr = null;</code>
+                                <code class="db pl4">BufferedReader br = null;</code>
+                                <code class="db pl4">try {</code>
+                                <code class="db pl5">URL url = new URL(strUrl);</code>
+
+                                <code class="db mt3 pl5">conn = (HttpURLConnection) url.openConnection();</code>
+                                <code class="db pl5">conn.setRequestMethod("POST");</code>
+                                <code class="db pl5">conn.setDoOutput(true);</code>
+                                <code class="db pl5">conn.setUseCaches(false);</code>
+                                <code class="db pl5">conn.setInstanceFollowRedirects(true);</code>
+                                <code class="db pl5">conn.setConnectTimeout(30000);</code>
+                                <code class="db pl5">conn.setReadTimeout(30000);</code>
+
+                                <code class="db mt3 pl5">conn.setRequestProperty("Content-Type", "application/json");</code>
+                                <code class="db pl5">conn.setRequestProperty("UserName", userName);</code>
+                                <code class="db pl5">conn.setRequestProperty("AuthenticationToken", authenticationToken);</code>
+
+                                <code class="db mt3 pl5">// write the request</code>
+                                <code class="db pl5">wr = new OutputStreamWriter(conn.getOutputStream());</code>
+                                <code class="db pl5">wr.write(request);</code>
+                                <code class="db pl5">wr.close();</code>
+
+                                <code class="db mt3 pl5">// read the response</code>
+                                <code class="db pl5">br = new BufferedReader(new InputStreamReader(conn.getInputStream()));</code>
+
+                                <code class="db mt3 pl5">StringBuilder resp = new StringBuilder();</code>
+                                <code class="db pl5">String line;</code>
+                                <code class="db pl5">while ((line = br.readLine()) != null) {</code>
+                                <code class="db pl6">resp.append(line).append("\n");</code>
+                                <code class="db pl5">}</code>
+                                <code class="db pl5">return resp.toString();</code>
+
+                                <code class="db mt3 pl4">} catch (IOException e) {</code>
+                                <code class="db pl5">e.printStackTrace();</code>
+                                <code class="db pl4">} finally {</code>
+                                <code class="db pl5">try {</code>
+                                <code class="db pl6">if (wr != null) {</code>
+                                <code class="db pl7">wr.close();</code>
+                                <code class="db pl6">}</code>
+                                <code class="db pl6">if (br != null) {</code>
+                                <code class="db pl7">br.close();</code>
+                                <code class="db pl6">}</code>
+                                <code class="db pl6">if (conn != null) {</code>
+                                <code class="db pl7">conn.disconnect();</code>
+                                <code class="db pl6">}</code>
+                                <code class="db pl5">} catch (IOException e) {</code>
+                                <code class="db pl6">e.printStackTrace();</code>
+                                <code class="db pl5">}</code>
+                                <code class="db pl4">}</code>
+                                <code class="db pl4">return null;</code>
+                                <code class="db pl3">}</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dn shadow-0 bg-white ba b--black-10 API-channel-container" id="API_Email">
+                        <!-- Email API Menu -->
+                        <div id="API_Email--menu">
+                            <div class="flex ph3 bb b--black-10">
+                                <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 purple cURL-trigger--js">cURL</a>
+                            </div>
+                        </div>
+                        <div class="f7 lh-copy gray pa4 overflow-y-scroll channels-content--js" style="max-height: 75vh;">
+                            <!-- Email_cURL -->
+                            <div class="triggered-cURL--js">
+                                <code class="db">curl --request POST \</code>
+                                <code class="db pl3">--url https://api-messaging.movile.com/v1/email/send \</code>
+                                <code class="db pl3">--header 'authenticationtoken: &lt;authenticationtoken&gt;' \</code>
+                                <code class="db pl3">--header 'content-type: application/json' \</code>
+                                <code class="db pl3">--header 'username: &lt;username&gt;' \</code>
+                                <code class="db pl3">--data '{</code>
+                                <code class="db pl4">"fromEmail": "notification@movile.com",</code>
+                                <code class="db pl4">"fromName": "Notifications",</code>
+                                <code class="db pl4">"replyTo": "replyTo@movile.com",</code>
+                                <code class="db pl4">"subject": "Marketing e-mail",</code>
+                                <code class="db pl4">"campaignAlias": "MyCampaign",</code>
+                                <code class="db pl4">"recipients": [{</code>
+                                <code class="db pl5">"correlationId": "1234",</code>
+                                <code class="db pl5">"emailAddress": "recipient-1@movile.com",</code>
+                                <code class="db pl5">"emailName": "Recipient-1",</code>
+                                <code class="db pl5">"extraInfo": "Extra e-mail info1",</code>
+                                <code class="db pl5">"substitutionData": {</code>
+                                <code class="db pl6">"name": "Recipient-1"</code>
+                                <code class="db pl5"> }</code>
+                                <code class="db pl4">},</code>
+                                <code class="db pl4">{</code>
+                                <code class="db pl5">"correlationId": "567",</code>
+                                <code class="db pl5">"emailAddress": "recipient-2@movile.com",</code>
+                                <code class="db pl5">"emailName": "Recipient-2",</code>
+                                <code class="db pl5">"extraInfo": "Extra e-mail info2"</code>
+                                <code class="db pl4">}</code>
+                                <code class="db pl3">],</code>
+                                <code class="db pl3">"emailHtml": "&lt;html&gt; Hi, {{name}}, this is the email HTML body &lt;/html&gt;",</code>
+                                <code class="db pl3">"emailText": "Email text body",</code>
+                                <code class="db pl3">"substitutionData": {</code>
+                                <code class="db pl4">"name": "Recipient-1"</code>
+                                <code class="db pl3">},</code>
+                                <code class="db pl3">"attachments": [{</code>
+                                <code class="db pl4">"data": "Q29uZ3JhdHVsYX2FuIGJhc2U2NCBkZWNvZGUh",</code>
+                                <code class="db pl4">"name": "billing.pdf",</code>
+                                <code class="db pl4">"type": "application/pdf"</code>
+                                <code class="db pl3">}]</code>
+                                <code class="db pl2">}'</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dn shadow-0 bg-white ba b--black-10 API-channel-container" id="API_Voice">
+                        <!-- Voice API Menu -->
+                        <div id="API_Voice--menu">
+                            <div class="flex ph3 bb b--black-10">
+                                <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 purple cURL-trigger--js">cURL</a>
+                            </div>
+                        </div>
+                        <div class="f7 lh-copy gray pa4 overflow-y-scroll channels-content--js" style="max-height: 75vh;">
+                            <!-- Voice_cURL -->
+                            <div class="triggered-cURL--js">
+                                <code class="db">curl --request POST \</code>
+                                <code class="db pl3">--url https://api-messaging.movile.com/v1/email/send \</code>
+                                <code class="db pl3">--header 'authenticationtoken: &lt;authenticationtoken&gt;' \</code>
+                                <code class="db pl3">--header 'content-type: application/json' \</code>
+                                <code class="db pl3">--header 'username: &lt;username&gt;' \</code>
+                                <code class="db pl3">--data '{</code>
+                                <code class="db pl4">"fromEmail": "notification@movile.com",</code>
+                                <code class="db pl4">"fromName": "Notifications",</code>
+                                <code class="db pl4">"replyTo": "replyTo@movile.com",</code>
+                                <code class="db pl4">"subject": "Marketing e-mail",</code>
+                                <code class="db pl4">"campaignAlias": "MyCampaign",</code>
+                                <code class="db pl4">"recipients": [{</code>
+                                <code class="db pl5">"correlationId": "1234",</code>
+                                <code class="db pl5">"emailAddress": "recipient-1@movile.com",</code>
+                                <code class="db pl5">"emailName": "Recipient-1",</code>
+                                <code class="db pl5">"extraInfo": "Extra e-mail info1",</code>
+                                <code class="db pl5">"substitutionData": {</code>
+                                <code class="db pl6">"name": "Recipient-1"</code>
+                                <code class="db pl5"> }</code>
+                                <code class="db pl4">},</code>
+                                <code class="db pl4">{</code>
+                                <code class="db pl5">"correlationId": "567",</code>
+                                <code class="db pl5">"emailAddress": "recipient-2@movile.com",</code>
+                                <code class="db pl5">"emailName": "Recipient-2",</code>
+                                <code class="db pl5">"extraInfo": "Extra e-mail info2"</code>
+                                <code class="db pl4">}</code>
+                                <code class="db pl3">],</code>
+                                <code class="db pl3">"emailHtml": "&lt;html&gt; Hi, {{name}}, this is the email HTML body &lt;/html&gt;",</code>
+                                <code class="db pl3">"emailText": "Email text body",</code>
+                                <code class="db pl3">"substitutionData": {</code>
+                                <code class="db pl4">"name": "Recipient-1"</code>
+                                <code class="db pl3">},</code>
+                                <code class="db pl3">"attachments": [{</code>
+                                <code class="db pl4">"data": "Q29uZ3JhdHVsYX2FuIGJhc2U2NCBkZWNvZGUh",</code>
+                                <code class="db pl4">"name": "billing.pdf",</code>
+                                <code class="db pl4">"type": "application/pdf"</code>
+                                <code class="db pl3">}]</code>
+                                <code class="db pl2">}'</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Empresas -->
+    <section class="mw8 ph4 pv6 center">
+        <div class="nl3 nr3 nt4">
+            <div class="flex flex-wrap items-center justify-center client-container">
+                <img src="../../img/clients/caixa.jpg" alt="Logo Caixa" class="ph3 h2 mt4 client">
+                <img src="../../img/clients/itau.jpg" alt="Logo Itaú" class="ph3 h2 mt4 client">
+                <img src="../../img/clients/google.jpg" alt="Logo Google" class="ph3 h2 mt4 client">
+                <img src="../../img/clients/ifood.jpg" alt="Logo iFood" class="ph3 h2 mt4 client">
+                <img src="../../img/clients/voxage.jpg" alt="Logo Vox Age" class="ph3 h2 mt4 client">
+                <img src="../../img/clients/sebrae.jpg" alt="Logo Sebrae" class="ph3 h2 mt4 client">
+                <img src="../../img/clients/eaichef.jpg" alt="Logo Eaíchef" class="ph3 h2 mt4 client">
+                <img src="../../img/clients/sbt.jpg" alt="Logo SBT" class="ph3 h2 mt4 client">
+                <img src="../../img/clients/avon.jpg" alt="Logo Avon" class="ph3 h2 mt4 client">
+                <img src="../../img/clients/corinthians.jpg" alt="Logo Corinthians" class="ph3 h2 mt4 client">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mt4-ns mw8 ph4 pb6-ns center relative">
+        <div class="h-100 h-auto-ns w-75-m w-60-ns left-0 right-0 center-ns absolute z-0a">
+            <img src="../../img/cta-pattern.svg" alt="" class="db h-100 h-auto-ns w-100-ns center">
+        </div>
+        <div class="center w-50-m w-third-ns pt5-ns pb4 pv6-ns tc">
+            <div class="bg-white shadow-0 ba b--black-10 pa4 relative z-1">
+                <h3 class="lh-title f2 mv0">Comience hoy</h3>
+                <p class="lh-copy gray mt3">Las mejores soluciones para la comunicación de su empresa están aquí en Wavy.</p>
+                <a href="../contacto" class="mt4 inline-flex items-center shadow-0 ba b--blue lh-copy bg-blue dib pa3 f7 ttu tracked no-underline b black bg-light-blue-hover">Entre en contacto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other products -->
+    <section class="bg-light-gray pv5">
+        <article class="mw8 ph4 center relative">
+            <h2 class="f2 w-100 mv0">Nuestra plataforma</h2>
+            <div class="nl3 nr3 nt4">
+                <div class="flex flex-wrap">
+                    <!-- SMS -->
+                    <div class="w-100 w-25-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../../img/icons/sms.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">SMS</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Mantenga a su cliente informado con mensajes de texto, en cualquier momento y en cualquier lugar.
+                            </p>
+                            <div style="margin-top: auto;">
+                                <a href="javascript:;" class="dib purple link dim ttu tracked f7 lh-solid bb b pb1 mt3">Conozca &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="w-100 w-25-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../../img/icons/email.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">Correo electrónico</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Configure campañas de correo electrónico y supervise las interacciones de su base de clientes.
+                            </p>
+                            <div style="margin-top: auto;">
+                                <a href="../correo-electronico" class="dib purple link dim ttu tracked f7 lh-solid bb b pb1 mt3">Conozca &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Voice -->
+                    <div class="w-100 w-25-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../../img/icons/voice.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">Voz</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Haga más personal el contacto con sus clientes a través de conexiones automatizadas.
+                            </p>
+                            <div style="margin-top: auto;">
+                                <a href="../voz" class="dib purple link dim ttu tracked f7 lh-solid bb b pb1 mt3">Conozca &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Chatbots -->
+                    <div class="w-100 w-25-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../../img/icons/chat.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">Chatbots</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Su marca monetizando y comprometiendo a los usuarios a través de robots en Facebook Messenger.
+                            </p>
+                            <div style="margin-top: auto;">
+                                <a href="http://chatclub.me" class="dib purple link dim ttu tracked f7 lh-solid bb b pb1 mt3">Conozca &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RCS -->
+                    <div class="w-100 w-25-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../../img/icons/push.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">RCS</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Una nueva experiencia con mensajes de texto. Muchos más recursos para una mayor interactividad con su cliente. 
+                            </p>
+                            <div style="margin-top: auto;">
+                                <a href="../rcs" class="dib purple link dim ttu tracked f7 lh-solid bb b pb1 mt3">Conozca &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carrier lookup -->
+                    <div class="w-100 w-25-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../../img/icons/lookup.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">Búsqueda de números</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Limpie su base telefónica y aumente la velocidad de entrega de sus mensajes.
+                            </p>
+                            <div style="margin-top: auto;">
+                                <a href="../busqueda-de-numeros" class="dib purple link dim ttu tracked f7 lh-solid bb b pb1 mt3">Conozca &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Enriquecimento -->
+                    <div class="w-100 w-25-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../../img/icons/enriquecimento.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">Bases segmentadas</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Haga sus acciones más asertivas con una base de contactos segmentada para su negocio.
+                            </p>
+                            <div style="margin-top: auto;">
+                                <a href="../bases-segmentadas" class="dib purple link dim ttu tracked f7 lh-solid bb b pb1 mt3">Conozca &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navegação patrocinada -->
+                    <div class="w-100 w-25-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../../img/icons/patrocinada.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">Navegación patrocinada</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Ofrezca a sus clientes el consumo de internet gratuito y aumente las conversiones en su sitio o app.
+                            </p>
+                            <div style="margin-top: auto;">
+                                <a href="../navegacion-patrocinada" class="dib purple link dim ttu tracked f7 lh-solid bb b pb1 mt3">Conozca &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Quem somos -->
+    <section class="pv7" id="who">
+        <article class="mw8 ph4 center relative">
+          <div class="absolute center left-0 nt5 nt6-ns o-30 top-2 w-100 w-50-ns z-0">
+              <img src="../../img/losango.svg" class="db w-100" alt="">
+          </div>
+          <div class="nl3 nr3">
+            <div class="flex flex-wrap">
+                <div class="w-50-ns center ph3">
+                    <h4 class="f4">Quienes somos</h4>
+                    <p class="lh-copy mt3 relative">
+                        Somos una de las verticales del <a href="https://www.movile.com" class="purple" target="_blank">Grupo Movile</a> y ofrecemos una <span class="b">plataforma de comunicación multicanal</span>, ayudando a las empresas, de cualquier segmento y tamaño, a comunicarse de manera fácil y eficaz con sus clientes. Como socio estratégico de su negocio, nos desafiamos a entender sus dolores y continuar construyendo soluciones que atiendan a sus demandas y que apalancan sus resultados. Nuestra gran motivación y satisfacción es agregar valor, no sólo a su trabajo, sino también al día a día de su consumidor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<!-- Offices -->
+<section class="bg-light-gray mt5">
+    <article class="pt5 mw8 ph4 center">
+        <h4 class="f4">Nuestras oficinas</h4>
+        <div class="nl3 nr3 nt4">
+            <div class="flex-ns flex-wrap">
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                    <div class="w1">
+                        <img src="../../img/icons/pin.svg" class="db w-100" alt="">
+                    </div>
+                    <div class="w-90 pl3 flex flex-column h-100">
+                        <h3 class="lh-title f5 mb0">São Paulo, Brasil</h3>
+                        <ul class="pl0 list f6 mt2 lh-copy">
+                            <li><a href="mailto:messaging@movile.com" class="purple link">messaging@movile.com</a></li>
+                            <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+55 11 2163 0600</a></li>
+                            <li class="mt2 gray">R. Arquiteto Olavo Redig de Campos, 105, 26º Andar - Ed. EZ Tower Torre A</li>
+                            <li class="mt2 gray">CEP: 04.711-904</li>
+                            <li class="mt2 gray">Fax: +55.11.2163.0586</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                    <div class="w1">
+                        <img src="../../img/icons/pin.svg" class="db w-100" alt="">
+                    </div>
+                    <div class="w-90 pl3 flex flex-column h-100">
+                        <h3 class="lh-title f5 mb0">​Brasília, Brasil</h3>
+                        <ul class="pl0 list f6 mt2 lh-copy">
+                            <li><a href="mailto:messaging@movile.com" class="purple link">messaging@movile.com</a></li>
+                            <!-- <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+55 11 2163 0600</a></li> -->
+                            <li class="mt2 gray">Brasilia Shopping, Quadra SCN Quadra 5, Asa Norte sala 725</li>
+                            <li class="mt2 gray">CEP: 70715-900</li>
+                            <!-- <li class="mt2 gray">Fax: +55.11.2163.0586</li> -->
+                        </ul>
+                    </div>
+                </div>              
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                    <div class="w1">
+                        <img src="../../img/icons/pin.svg" class="db w-100" alt="">
+                    </div>
+                    <div class="w-90 pl3 flex flex-column h-100">
+                        <h3 class="lh-title f5 mb0">​​​Miami, EUA</h3>
+                        <ul class="pl0 list f6 mt2 lh-copy">
+                            <!-- <li><a href="mailto:messaging@movile.com" class="purple link">messaging@movile.com</a></li> -->
+                            <!-- <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+55 11 2163 0600</a></li> -->
+                            <li class="mt2 gray">201 S. Biscayne Blvd, #1200,  Miami, FL, 33131-4316</li>
+                            <!-- <li class="mt2 gray">CEP: 70715-900</li> -->
+                            <!-- <li class="mt2 gray">Fax: +55.11.2163.0586</li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                    <div class="w1">
+                        <img src="../../img/icons/pin.svg" class="db w-100" alt="">
+                    </div>
+                    <div class="w-90 pl3 flex flex-column h-100">
+                        <h3 class="lh-title f5 mb0">​​​Distrito Federal, México</h3>
+                        <ul class="pl0 list f6 mt2 lh-copy">
+                            <li><a href="mailto:messaging@movile.com" class="purple link">corporativo-mexico@movile.com</a></li>
+                            <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+52 55 2978 4083</a></li>
+                            <li class="mt2 gray">Arquímeses, number 130, Piso Mezzanine, Polanco IV sección, Delegación Miguel Hidalgo</li>
+                            <li class="mt2 gray">CP: 11550</li>
+                            <li class="mt2 gray">Fax: +52 55 2978 4083</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                    <div class="w1">
+                        <img src="../../img/icons/pin.svg" class="db w-100" alt="">
+                    </div>
+                    <div class="w-90 pl3 flex flex-column h-100">
+                        <h3 class="lh-title f5 mb0">Bogotá, Colômbia</h3>
+                        <ul class="pl0 list f6 mt2 lh-copy">
+                            <li><a href="mailto:" class="purple link">tito.daza@movile.com</a></li>
+                            <li class="mt2"><a href="tel:" class="purple link">571 7457374</a></li>
+                            <li class="mt2 gray">Carrera 7 # 146-65, Piso 4 - Edifício Office Point</li>
+                            <li class="mt2 gray">CEP: 04.711-904</li>
+                            <li class="mt2 gray">Fax: 571 7457374</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                    <div class="w1">
+                        <img src="../../img/icons/pin.svg" class="db w-100" alt="">
+                    </div>
+                    <div class="w-90 pl3 flex flex-column h-100">
+                        <h3 class="lh-title f5 mb0">Buenos Aires, Argentina</h3>
+                        <ul class="pl0 list f6 mt2 lh-copy">
+                            <!-- <li><a href="mailto:" class="purple link">tito.daza@movile.com</a></li> -->
+                            <li class="mt2"><a href="tel:" class="purple link">+54 11 2152 2121</a></li>
+                            <li class="mt2 gray">Costa Rica 5546, Piso 5 - Oficina 501 a la 504</li>
+                            <li class="mt2 gray">Cp C1414BTD</li>
+                            <!-- <li class="mt2 gray">Fax: 571 7457374</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<!-- Footer -->
+<footer class="pt5 bg-light-gray">
+    <article class="mw8 ph4 center pt5 pb4 bt b--black-10">
+        <div class="nl3 nr3">
+            <div class="flex flex-wrap">
+                <div class="w-100 w-20-ns ph3">
+                    <ul class="list f7 pl0 flex flex-column-ns h-100 justify-between">
+                        <li class="pl0 black-30 f6">&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Wavy</li>
+                    </ul>
+                </div>
+                <div class="w-100 w-20-ns mt4 mt0-ns ph3">
+                    <ul class="list f6 pl0">
+                        <li class="b pl0">Plataforma</li>
+                        <li class="pl0 mt3"><a href="javascript:;" class="link gray dim">SMS</a></li>
+                        <li class="pl0 mt3"><a href="../correo-electronico" class="link gray dim">Correo electrónico</a></li>
+                        <li class="pl0 mt3"><a href="../voz" class="link gray dim">Voz</a></li>
+                        <li class="pl0 mt3"><a href="http://chatclub.me" class="link gray dim">Chatbots</a></li>
+                        <li class="pl0 mt3"><a href="../rcs" class="link gray dim">RCS</a></li>
+                        <li class="pl0 mt3"><a href="../busqueda-de-numeros" class="link gray dim">Búsqueda de números</a></li>
+                        <li class="pl0 mt3"><a href="../bases-segmentadas" class="link gray dim">Bases segmentadas</a></li>
+                        <li class="pl0 mt3"><a href="../navegacion-patrocinada" class="link gray dim">Navegación patrocinada</a></li>
+                    </ul>
+                </div>
+                <div class="w-100 w-20-ns mt4 mt0-ns ph3">
+                    <ul class="list f6 pl0">
+                        <li class="b pl0">Documentación</li>
+                        <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/es.html" class="link gray dim">SMS</a></li>
+                        <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/email" class="link gray dim">Correo electrónico</a></li>
+                        <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/voice" class="link gray dim">Voz</a></li>
+                    </ul>
+                </div>
+                <div class="w-100 w-20-ns mt4 mt0-ns ph3">
+                    <ul class="list f6 pl0">
+                        <li class="b pl0">Recursos</li>
+                        <!--<li class="pl0 mt3"><a href="https://blog.chatclub.me/" class="link gray dim">Blog</a></li>-->
+                        <li class="pl0 mt3"><a href="https://support-messaging.zendesk.com" class="link gray dim">Soporte</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+</footer>
+<script type=text/javascript src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type=text/javascript src="../../js/custom.js"></script>
+<script type=text/javascript src="../../js/internal-tabs.js"></script>
+<!-- Slider -->
+<script type=text/javascript src="../../js/Wallop.min.js"></script>
+<script type=text/javascript>
+        // New instance of Wallop
+        var wallopEl = document.querySelector('.Wallop');
+        var wallop = new Wallop(wallopEl);
+
+        // To start Autoplay, just call the function below
+        // and pass in the number of seconds as interval
+        // if you want to start autoplay after a while
+        // you can wrap this in a setTimeout(); function
+        autoplay(10000);
+
+        // This a a helper function to build a simple
+        // auto-play functionality. 
+        function autoplay(interval) {
+            var lastTime = 0;  
+
+            function frame(timestamp) {
+                var update = timestamp - lastTime >= interval;
+
+                if (update) {
+                  wallop.next();
+                  lastTime = timestamp;
+              }
+
+              requestAnimationFrame(frame);
+          }
+
+          requestAnimationFrame(frame);
+      };
+  </script>
+</body>
+</html>

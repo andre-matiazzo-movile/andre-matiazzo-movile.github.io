@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>ChatClub</title>
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--<link rel="apple-touch-icon" sizes="57x57" href="../../fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../fav/favicon-16x16.png">
+    <link rel="manifest" href="../../fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#FDA88A">
+    <meta name="msapplication-TileImage" content="../../fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#FDA88A"> -->
+
+    <!-- Tags específicas para o Facebook -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta name="category" content="">
+    
+    <!-- Tags específicas para o Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:image" content="" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <!-- For the slider -->
+    <link rel="stylesheet" href="../css/wallop.css">
+    <link rel="stylesheet" href="../css/wallop--slide.css">
+
+    <!-- Typekit
+    <script src="https://use.typekit.net/ggk4dcn.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script> -->
+
+</head>
+<body>
+    <nav class="flex items-center fixed justify-between top-0 left-0 right-0 z-2">
+        <!-- Brand -->
+        <a aria-label="Home" href="javascript:;" class="pa3 ma2 inline-flex items-center brand" role="link">
+            <img src="../../img/chatclub-wh.svg" alt="ChatClub" class="w4">
+        </a>
+        <!-- Menu -->
+        <div class="relative z-2 db-m dn-ns pa3 ma2" id="menu-open">
+            <span class="db bg-white" style="height: 0.125rem; width: 1.25rem;"></span>
+            <span class="db bg-white mt1" style="height: 0.125rem; width: 1.25rem;"></span>
+            <span class="db bg-white mt1" style="height: 0.125rem; width: 1.25rem;"></span>
+        </div>
+        <div class="dn dn-ns relative z-5 dn-ns pa3" id="menu-close">
+            <span class="db bg-gray" style="height: 0.125rem; width: 1.25rem; transform: rotate(45deg) translateY(8px); transform-origin: center; margin-bottom: 10px;"></span>
+            <span class="db bg-gray" style="height: 0.125rem; width: 1.25rem; transform: rotate(-45deg) translateY(-8px); transform-origin: center;"></span>
+        </div>
+        <div class="dn dn-m inline-flex-ns absolute absolute-m relative-ns z-2 fg-1 bg-white bg-white-m top-0 left-0 right-0 bg-transparent-ns mt0-ns pt2 pt2-m pt0-ns ph3 ph3-m ph0-ns pb3 pb3-m pb0-ns shadow-0 shadow-0-m shadow-none-ns menu__container" id="menu__container">
+            <!-- Primary navigation -->
+            <div class="db-m inline-flex-ns fg-1">
+                <div class="relative db-m inline-flex-ns items-center-ns menu__trigger">
+                    <a href="javascript:;" class="f6 lh-solid link gray gray-m white-ns mt5 mt5-m mt0-ns pb1 pb1-m ph3 pt0-m pa3-ns outline-0 db db-m di-ns has-caret" style="cursor: default;">Plataforma</a>
+                    <div class="menu__dropdown menu--platform bg-white shadow-none-m ba-l b--black-10 shadow-0-ns relative-m absolute-ns left-0-m left--1-ns pv0-m ph0-m pa3-ns dn-l">
+                        <div class="flex-ns flex-wrap">
+                            <a href="./sms/" class="w-third-ns flex flex-m inline-flex-ns items-start mt2 mt2-m mt0-ns ph3 pv2 pa3-ns f5 f6-ns lh-copy link black dim">
+                                <img src="../img/icons/sms.svg" alt="" class="w1 pr2 pt1">
+                                <div>
+                                    <h6 class="f6 normal">SMS</h6>
+                                    <p class="f6 f7-ns gray">Mensagens de texto em qualquer lugar.</p>
+                                </div>
+                            </a>
+                            <a href="./chatbot/" class="w-third-ns flex flex-m inline-flex-ns items-start mt2 mt2-m mt0-ns ph3 pv2 pa3-ns f5 f6-ns lh-copy link black dim">
+                                <img src="../img/icons/chatbot.svg" alt="" class="w1 pr2 pt1">
+                                <div>
+                                    <h6 class="f6 normal">Chatbot</h6>
+                                    <p class="f6 f7-ns gray">Chatbot do Facebook Messenger.</p>
+                                </div>
+                            </a>
+                            <a href="./rcs/" class="w-third-ns flex flex-m inline-flex-ns items-start mt2 mt2-m mt0-ns ph3 pv2 pa3-ns f5 f6-ns lh-copy link black dim">
+                                <img src="../img/icons/rcs.svg" alt="" class="w1 pr2 pt1">
+                                <div>
+                                    <h6 class="f6 normal">RCS</h6>
+                                    <p class="f6 f7-ns gray">Mensagens interativas do Android.</p>
+                                </div>
+                            </a>
+                            <a href="./email/" class="w-third-ns flex flex-m inline-flex-ns items-start mt2 mt2-m mt0-ns ph3 pv2 pa3-ns f5 f6-ns lh-copy link black dim">
+                                <img src="../img/icons/email.svg" alt="" class="w1 pr2 pt1">
+                                <div>
+                                    <h6 class="f6 normal">Email</h6>
+                                    <p class="f6 f7-ns gray">Crie você mesmo ou utilize um de nossos templates.</p>
+                                </div>
+                            </a>
+                            <a href="./voz/" class="w-third-ns flex flex-m inline-flex-ns items-start mt2 mt2-m mt0-ns ph3 pv2 pa3-ns f5 f6-ns lh-copy link black dim">
+                                <img src="../img/icons/voice.svg" alt="" class="w1 pr2 pt1">
+                                <div>
+                                    <h6 class="f6 normal">Voz</h6>
+                                    <p class="f6 f7-ns gray">Ligações personalizadas e automatizadas.</p>
+                                </div>
+                            </a>
+                            <a href="./adicionais/" class="w-third-ns flex flex-m inline-flex-ns items-start mt2 mt2-m mt0-ns ph3 pv2 pa3-ns f5 f6-ns lh-copy link black dim">
+                                <div class="ml3 pl2">
+                                    <h6 class="f6 normal">Serviços adicionais</h6>
+                                    <ul class="pl3 gray f7 lh-copy">
+                                        <li>Bases segmentadas</li>
+                                        <li>Pesquisa de números</li>
+                                        <li>Navegação patrocinada</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-m flex-wrap flex-wrap-m inline-flex-ns pv3 pv3-m pv0-ns nl3-m nr3-m">
+                    <div class="flex-m flex-wrap-m">
+                        <a href="./quem-somos/" class="db db-m inline-flex-ns items-center-ns pt2 pb0 pv2-m mt3-l mb0 mb0-m mb3-ns ph3 ph4-m pa3-ns f6 lh-solid link black black-m white-ns dim">Quem somos</a>
+                        <div class="relative db-m inline-flex-ns items-center-ns menu__trigger">
+                            <a href="javascript:;" class="dn dn-m inline-flex-ns items-center-ns pv2 pv2-m mt2 mt2-m mt3-ns mb0 mb0-m mb3-ns ph3 pa3-ns f6 lh-solid link black gray gray-m white-ns has-caret" style="cursor: default;">Desenvolvedores</a>
+                            <div class="menu__dropdown bg-white shadow-none-m ba-l b--black-10 shadow-0-ns relative-m absolute-ns left-0 ph3 ph4-m ph0-l pv2 dn-l">
+                                <a href="http://doc-messaging.movile.com/pt.html" class="db inline-flex-l items-center-l pv0-m ph0-m pa3-ns mb4 mt3 mt0-ns nb2-l f6 link lh-solid black is-external external dim">API SMS</a>
+                                <a href="http://doc-messaging.movile.com/email" class="db inline-flex-l items-center-l pv0-m ph0-m pa3-ns mt3 mt0-ns mb4 nb2-l f6 link lh-solid black is-external external dim">API Email</a>
+                                <a href="http://doc-messaging.movile.com/voice" class="db inline-flex-l items-center-l pv0-m ph0-m pa3-ns mt3 mt0-ns nb2-l f6 link lh-solid black is-external external dim">API Voz</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-m flex-wrap-m w-100 w-50-m w-auto-l">
+                        <div class="relative db-m inline-flex-ns items-center-ns menu__trigger">
+                            <a href="javascript:;" class="dn dn-m inline-flex-ns items-center-ns pv2 pv2-m mt3-l mb0 mb0-m mb3-ns ph3 pa3-ns f6 lh-solid link black gray gray-m white-ns has-caret" style="cursor: default;">Fale conosco</a>
+                            <div class="menu__dropdown menu--contact bg-white shadow-none-m ba-l b--black-10 shadow-0-ns relative-m absolute-ns left-0 ph3 ph4-m ph0-l pv3 pv2-ns dn-l">
+                                <a href="https://support-messaging.movile.com/hc/pt-br/restricted?return_to=https%3A%2F%2Fsupport-messaging.movile.com%2Fhc%2Fpt-br" class="db inline-flex-l items-center-l pv0-m ph0-m pa3-ns mb3 nb2-l f6 link lh-solid black is-external external dim">Suporte ao cliente</a>
+                                <a href="./contato" class="db inline-flex-l items-center-l pt2 pv0-m ph0-m pa3-ns mt3 mt0-ns nb2-l f6 link lh-solid black dim">Iniciar contato</a>
+                            </div>
+                        </div>
+                        <a href="https://blog.chatclub.me/" class="db db-m inline-flex-ns items-center-ns pv2 pv2-m mt3-l mb0 mb0-m mb3-ns ph3 ph4-m pa3-ns f6 lh-solid link black black-m white-ns dim is-external external--white">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Secondary navigation -->
+            <div class="db-m inline-flex-ns justify-end-ns fg-1 ph3-l">
+                <a href="https://messaging.movile.com/messaging/login" class="dn dn-m inline-flex-ns items-center pt2 pt2-m pb3 ph3 pa3-ns mv3-ns f6 lh-solid link black black-m white-ns">Entrar</a>
+                <div class="absolute absolute-m relative-ns top-1 top-1-m top-0-ns flex items-center" id="lang-trigger">
+                    <a href="javascript:;" class="dn dn-m inline-flex-ns items-center pt2 pt2-m pb3 ph3 pa3-ns mv3-ns f7 lh-solid link black black-m white-ns"><span><img src="../img/icons/pt.svg" alt="" class="dib w1 pr2"></span>PT</a>
+                    <div id="menu__lang" class="db db-m dn-ns bg-white shadow-none-m ba-l b--black-10 shadow-0-ns relative-m absolute-ns left-0-m mv2 mv0-m mt2-m mv0-ns">
+                        <a href="../pt" class="inline-flex-ns items-center pt2 pt2-m pb2-m ph3 pa3-ns f7 lh-solid link black"><span><img src="../img/icons/pt.svg" alt="" class="dib w1 pr1"></span>PT</a>
+                        <a href="../en" class="inline-flex-ns items-center pt2 pt2-m pb2-m ph3 pa3-ns f7 lh-solid link black"><span><img src="../img/icons/en.svg" alt="" class="dib w1 pr1"></span>EN</a>
+                        <a href="../es" class="inline-flex-ns items-center pt2 pt2-m pb2-m ph3 pa3-ns f7 lh-solid link black"><span><img src="../img/icons/es.svg" alt="" class="dib w1 pr1"></span>ES</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <div class="header-bg">
+        <!--<div class="header-bg__mask"></div>-->
+        <section class="mw8 ph4 center flex items-center justify-between pv6 pv0-ns relative z-1">
+            <!-- Title and buttons -->
+            <div class="w-100 w-70-ns pr5-ns pa5 grd-bg">
+                <h1 class="f2 lh-title mv0 white">
+                    A plataforma completa para falar com seus clientes
+                </h1>
+                <p class="lh-copy white mt3 mb0 measure">
+                    Comunique-se de maneira eficiente utilizando diversos canais e acompanhe seus resultados de maneira prática.
+                </p>
+                <div class="flex-ns mt3">
+                    <a href="#vantagens" class="inline-flex items-center shadow-0 ba b--black-05 lh-copy bg-white dib pa3 f7 ttu tracked link b black mt3">Conheça as vantagens</a>
+                    <a href="./contato" class="ml4-ns inline-flex items-center shadow-0 ba b--black-05 lh-copy bg-white dib pa3 f7 ttu tracked link b black mt3">Iniciar contato</a>
+                </div>
+            </div>
+        </section>
+        <div class="dvdr dvdr-lg"></div>
+    </div>
+
+    <!-- Plataforma Multicanal -->
+    <section class="bg-light-gray pv5 pt5 pb6-ns">
+        <article class="mw8 ph4 center relative">
+            <h2 class="f2 w-100 mv0 blue-2">Plataforma multicanal</h2>
+            <h3 class="lh-title f4 mb0 pt2 pb4">Utilize um ou mais canais para se comunicar</h3>
+            <div class="nl3 nr3 nt4">
+                <div class="flex flex-wrap">
+                    <!-- SMS -->
+                    <div class="w-100 w-33-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../img/icons/sms.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-80 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">SMS</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Impacte seus clientes com mensagens de texto a qualquer hora e em qualquer lugar.
+                            </p>
+                            <div style="margin-top: auto;">
+                                <a href="./sms" class="dib blue-2 link dim ttu tracked f7 lh-solid bb b pb1 mt3">conheça &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ChatBot -->
+                    <div class="w-100 w-33-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../img/icons/chatbot.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-80 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">Chatbot</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Chatbot do Facebook Messenger para ajudá-lo a engajar pessoas e a monetizar mais.
+                            </p>
+                            <div style="margin-top: auto;">
+                                <a href="./chatbot" class="dib blue-2 link dim ttu tracked f7 lh-solid bb b pb1 mt3">conheça &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RCS -->
+                    <div class="w-100 w-33-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../img/icons/rcs.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-80 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">RCS</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                Mensagens interativas do Android para utilizar com seus clientes. Compartilhe imagens, mapas, agenda e mais. 
+                            </p>
+                            <div style="margin-top: auto;">
+                                <a href="./rcs" class="dib blue-2 link dim ttu tracked f7 lh-solid bb b pb1 mt3">conheça &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="w-100 w-33-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../img/icons/email.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-80 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">E-mail</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                                A maneira mais fácil de configurar campanhas de email e ainda monitorar as interações da sua base.
+                            </p>
+                            <div style="margin-top: auto;">
+                                <a href="./email" class="dib blue-2 link dim ttu tracked f7 lh-solid bb b pb1 mt3">conheça &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Voz -->
+                    <div class="w-100 w-33-ns flex items-start mt5 ph3">
+                        <div class="w-10">
+                            <img src="../img/icons/phone.svg" class="db w-100 mt1" alt="">
+                        </div>
+                        <div class="w-80 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f4 mb0">Voz</h3>
+                            <p class="lh-copy gray mt2 mb0 f6-ns">
+                               Torne mais pessoal o contato com seus clientes através de ligações personalizadas e automatizadas.
+                           </p>
+                           <div style="margin-top: auto;">
+                            <a href="./voz" class="dib blue-2 link dim ttu tracked f7 lh-solid bb b pb1 mt3">conheça &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviços Adicionais -->
+                <div class="w-100 w-33-ns flex items-start mt4 ml2 ph3 pb4 pt4 shadow-2  ">
+                    <div class="w-10">
+
+                    </div>
+                    <div class="w-80 flex flex-column h-100 pb2">
+                        <h3 class="lh-title f4 mb0">Serviços adicionais</h3>
+                        <p class="lh-copy gray mt2 mb0 f6-ns">
+                            Otimize seus resultados utilizando nossos serviços adicionais.
+                        </p>
+                        <div style="margin-top: auto;">
+                            <a href="./adicionais" class="dib blue-2 link dim ttu tracked f7 lh-solid bb b pb1 mt3">conheça &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<!-- Vantagens -->
+<section class="relative">
+    <div class="grd-bg has-diagonal absolute top-0 left-0 right-0 vh-50 h-auto-ns pt7 pb7 z-0"></div>
+    <!-- <img src="../img/lens.png" class="absolute bottom-0 w-100" style="bottom: -2.5rem;"> -->
+    <article class="pt4 mw8 ph4 center relative z-1">
+        <h2 class="f2 w-100 mv0 white lh-title pt4">Vantagens de ser cliente ChatClub</h2>
+        <p class="lh-copy white pt3-ns f6-ns w-70 pb4">
+            Além da integração simplificada com a sua plataforma e suporte 24x7, você terá à disposição uma ferramenta para controlar seus envios, campanhas e muito mais. 
+        </p>
+        <div class="flex flex-wrap">
+            <div class="w-100 w-25-ns pl4-ns order-2-ns">
+                <p class="lh-copy white mt4 pt4-ns f6-ns tab-description first-tab-description">
+                    Sabemos que é difícil fazer a gestão de vários fornecedores, por isso no ChatClub você tem todos os canais em um único lugar.
+                </p>
+                <p class="lh-copy white mt4 pt4-ns f6-ns tab-description third-tab-description dn">
+                    Acompanhe o desempenho das suas campanhas e tenha acesso a dados que te ajudam na tomada de decisões.
+                </p>
+                <p class="lh-copy white mt4 pt4-ns f6-ns tab-description second-tab-description dn">
+                    Você trabalha de maneira independente sem precisar de nenhum software adicional
+                </p>
+                <a href="http://doc-messaging.movile.com/pt.html" class="dib white link ttu tracked f7 lh-solid bb b pb1 mt3">Documentação →</a>
+            </div>
+            <div class="w-100 w-75-ns mt5 mt4-ns order-1-ns">
+                <div class="flex api-triggers--js">
+                    <a href="javascript:;" class="link b bb bw2 pb1 mr4 white b--blue api-channel-trigger--js trigger--sms">Comunicação completa</a>
+                    <a href="javascript:;" class="link b bb bw2 pb1 mr4 white b--transparent api-channel-trigger--js trigger--voice">Acompanhamento de resultados</a>
+                    <a href="javascript:;" class="link b bb bw2 pb1 white b--transparent api-channel-trigger--js trigger--email">Integrações simplificada</a>
+                </div>
+                <div class="shadow-0 bg-white ba b--black-10 API-channel-container" id="API_SMS">
+                    <!-- SMS API Menu -->
+                    <!-- <div id="API_SMS--menu">
+                        <div class="flex ph3 bb b--black-10">
+                            <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black cURL-trigger--js">Conecte-se da melhor forma</a>
+                        </div>
+                    </div> -->
+                    <div class="f7 lh-copy gray pa4 overflow-y-scroll channels-content--js" style="max-height: 75vh;">
+                        <!-- SMS_cURL -->
+                        <div class="triggered-cURL--js">
+                            <div class="flex nl3 nr3">
+                                <div class="w-third ph3">
+                                    <img src="../img/icons/sms-illustration.png" class="w2" alt="Ilustração de SMS">
+                                    <h4 class="f5 mt2 blue-2">SMS</h4>
+                                    <p class="gray lh-copy mt2 measure-narrow">
+                                        Ideal para textos curtos. Sua Mensagem chega em qualquer pessoa que tenha um celular (ou seja, praticamente todo mundo).
+                                    </p>
+                                </div>
+                                <div class="w-third ph3">
+                                    <img src="../img/icons/email-illustration.png" class="w2" alt="Ilustração de Email">
+                                    <h4 class="f5 mt2 blue-2">Email</h4>
+                                    <p class="gray lh-copy mt2 measure-narrow">
+                                        Sua mensagem com o visual da sua marca. Saiba quantas pessoas abriram os emails e como elas interagiram com sua Mensagem.                  
+                                    </p>
+                                </div>
+                                <div class="w-third ph3">
+                                    <img src="../img/icons/voice-illustration.png" class="w2" alt="Ilustração de Voz">
+                                    <h4 class="f5 mt2 blue-2">Voz</h4>
+                                    <p class="gray lh-copy mt2 measure-narrow">                                        
+                                        Dê mais personalidade para sua Mensagem transformando-a em áudio. Saiba quem atendeu e quanto tempo as ligações duraram.                  
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dn shadow-0 bg-white ba b--black-10 API-channel-container" id="API_Voice">
+                    <!-- Voice API Menu -->
+                    <!-- <div id="API_Voice--menu">
+                        <div class="flex ph3 bb b--black-10">
+                            <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black JSON-trigger--js">Relatórios em tempo real</a>
+                        </div>
+                    </div> -->
+                    <div class="f7 lh-copy gray overflow-y-scroll channels-content--js" style="max-height: 75vh;">
+                        <!-- Voice_JSON -->
+                        <div class="triggered-JSON--js">
+                            <img src="../img/reports.jpg" class="db" alt="Gráficos">
+                        </div>
+                    </div>
+                </div>
+                <div class="dn shadow-0 bg-white ba b--black-10 API-channel-container" id="API_Email">
+                    <!-- Email API Menu -->
+                    <div id="API_Email--menu">
+                        <div class="flex ph3 bb b--black-10">
+                            <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black cURL-trigger--js">SMS</a>
+                            <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black Ruby-trigger--js">E-mail</a>
+                            <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black Python-trigger--js">Voz</a>
+                        </div>
+                    </div>
+                    <div class="f7 lh-copy gray pa4 overflow-y-scroll channels-content--js" style="max-height: 75vh;">
+                        <!-- Email_cURL -->
+                        <div class="triggered-cURL--js">
+                            <div class="flex">
+                                <div class="w-40-ns">
+                                    <img src="../img/phone-sms.png" alt="Exemplo de SMS recebido">
+                                </div>
+                                <div class="pl4">
+                                    <h4 class="black f5 mb3">Praticidade para os desenvolvedores. Veja um exemplo:</h4>
+                                    <code class="db">curl -X POST <span class="black">\</span></code>
+                                    <code class="db">https://api-messaging.movile.com/v1/send-sms <span class="black">\</span></code>
+                                    <code class="db">-H <span class="blue-2">'authenticationtoken: &lt;authenticationtoken&gt;'</span> <span class="black">\</span></code>
+                                    <code class="db">-H <span class="blue-2">'username: &lt;username&gt;'</span> <span class="black">\</span></code>
+                                    <code class="db">-H <span class="blue-2">'content-type': "application/json'</span> <span class="black">\</span></code>
+                                    <code class="db"><span class="blue-2">-d '{"</span>destination<span class="blue-2">": "</span>5511984541027<span class="blue-2">"</span><span class="blue-2"> , "</span>messageText<span class="blue-2">": "</span>linha<span class="black">\n</span>quebrada<span class="blue-2">"}'</span></code>
+                                    <p class="mv4 ph3 pv2 measure bg-black-05 ba b--black-10">Como resposta, você receberá um JSON informando o ID que foi gerado para essa mensagem. (Resposta ou resposta síncrona da Movile):</p>
+                                    <code class="db">[</code>
+                                    <code class="db pl3">{</code>
+                                    <code class="db pl4"><span class="blue-2">"id":"9cb87d36-79af-11e5-89f3-1b0591cdf807"</span></code>
+                                    <code class="db pl3">}</code>
+                                    <code class="db">]</code>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="triggered-Ruby--js dn">
+                            <code class="db">curl --request POST<span class="black">\</span></code>
+                            <code class="db pl3">--header <span class="blue-2">'authenticationtoken: &lt;authenticationtoken&gt;'</span> <span class="black">\</span></code>
+                            <code class="db pl3">--header <span class="blue-2">'content-type: application/json'</span> <span class="black">\</span></code>
+                            <code class="db pl3">--header <span class="blue-2">'username:  &lt;username&gt;'</span> <span class="black">\</span></code>
+                            <code class="db pl3">--data <span class="blue-2">'{</span></code>
+                            <code class="db pl4 blue-2">"fromEmail": "notification@movile.com",</code>
+                            <code class="db pl4 blue-2">"fromName": "Notifications",</code>
+                            <code class="db pl4 blue-2">"replyTo": "replyTo@movile.com",</code>
+                            <code class="db pl4 blue-2">"subject": "Marketing e-mail",</code>
+                            <code class="db pl4 blue-2">"campaignAlias": "MyCampaign",</code>
+                            <code class="db pl4 blue-2">"recipients": [{</code>
+                            <code class="db pl5 blue-2">"correlationId": "1234",</code>
+                            <code class="db pl5 blue-2">"emailAddress": "recipient-1@movile.com",</code>
+                            <code class="db pl5 blue-2">"emailName": "Recipient-1",</code>
+                            <code class="db pl5 blue-2">"extraInfo": "Extra e-mail info1",</code>
+                            <code class="db pl5 blue-2">"substitutionData": {</code>
+                            <code class="db pl6 blue-2">"name": "Recipient-1"</code>
+                            <code class="db pl5 blue-2">}</code>
+                            <code class="db pl4 blue-2">},</code>
+                            <code class="db pl4 blue-2">{</code>
+                            <code class="db pl5 blue-2">"correlationId": "567",</code>
+                            <code class="db pl5 blue-2">"emailAddress": "recipient-2@movile.com",</code>
+                            <code class="db pl5 blue-2">"emailName": "Recipient-2",</code>
+                            <code class="db pl5 blue-2">"extraInfo": "Extra e-mail info2"</code>
+                            <code class="db pl4 blue-2">{</code>
+                            <code class="db pl3 blue-2">],</code>
+                            <code class="db pl3 blue-2">"emailHtml": "<html> Hi, {{name}}, this is the email HTML body </html>",</code>
+                            <code class="db pl3 blue-2">"emailText": "Email text body",</code>
+                            <code class="db pl3 blue-2">"substitutionData": {</code>
+                            <code class="db pl4 blue-2">"name": "Recipient-1"</code>
+                            <code class="db pl3 blue-2">},</code>
+                            <code class="db pl3 blue-2">"attachments": [{</code>
+                            <code class="db pl4 blue-2">"data": "Q29uZ3JhdHVsYX2FuIGJhc2U2NCBkZWNvZGUh",</code>
+                            <code class="db pl4 blue-2">"name": "billing.pdf",</code>
+                            <code class="db pl4 blue-2">"type": "application/pdf"</code>
+                            <code class="db pl3 blue-2">}]</code>
+                            <code class="db pl2 blue-2">}'</code>
+                        </div>
+                        <div class="triggered-Python--js dn">
+                            <p class="mb4 ph3 pv2 measure bg-black-05 ba b--black-10">Chamada de voz em estrutura JSON (texto para áudio)</p>
+                            <code class="db">{</code>
+                            <code class="db pl2"><span class="blue-2">"audioUrl"</span>: <span class="blue-2">"string"</span>,</code>
+                            <code class="db pl2"><span class="blue-2">"destinations"</span>: [<span class="blue-2">"destination_block"</span>],</code>
+                            <code class="db pl2"><span class="blue-2">"campaignAlias"</span>: <span class="blue-2">"string"</span>,</code>
+                            <code class="db">}</code>
+                            <p class="mv4 ph3 pv2 measure bg-black-05 ba b--black-10">Chamada de voz em estrutura JSON (com áudio de URL)</p>
+                            <code class="db">{</code>
+                            <code class="db pl2"><span class="blue-2">"ttsMessage"</span>: <span class="blue-2">"string"</span>,</code>
+                            <code class="db pl2"><span class="blue-2">"destinations"</span>: [<span class="blue-2">"destination_block"</span>],</code>
+                            <code class="db pl2"><span class="blue-2">"campaignAlias"</span>: <span class="blue-2">"string"</span>,</code>
+                            <code class="db">}</code>
+                            <p class="mv4 ph3 pv2 measure bg-black-05 ba b--black-10">Chamada de voz em estrutura JSON (com áudio de arquivo</p>
+                            <code class="db">{</code>
+                            <code class="db pl2"><span class="blue-2">"audioFile"</span>: <span class="blue-2">"string"</span>,</code>
+                            <code class="db pl2"><span class="blue-2">"destinations"</span>: [<span class="blue-2">"destination_block"</span>],</code>
+                            <code class="db pl2"><span class="blue-2">"campaignAlias"</span>: <span class="blue-2">"string"</span>,</code>
+                            <code class="db">}</code>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Empresas -->
+    <section class="pv5 pt5 pb5-ns">
+        <article class="mw8 ph4 center relative">
+            <h2 class="f2 w-100 mv0 blue-2 tc">Conheça alguns dos nossos clientes</h2>
+            <div class="flex flex-wrap items-center justify-center client-container">
+                <img src="../img/clientes/caixa.png" alt="Logo Caixa" class="h3 mt4 client">
+                <img src="../img/clientes/itau.png" alt="Logo Itaú" class="h3 mt4 client">
+                <img src="../img/clientes/google.png" alt="Logo Google" class="h3 mt4 client">
+                <img src="../img/clientes/ifood.png" alt="Logo iFood" class="h3 mt4 client">
+                <img src="../img/clientes/voxage.png" alt="Logo Vox Age" class="h3 mt4 client">
+            </div>
+        </article>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="mt2-ns mw8 ph4 center">
+        <div class="Wallop Wallop--slide w-90-ns">
+            <div class="Wallop-list">
+             <div class="Wallop-item">
+                <a href="https://www.linkedin.com/in/lorenzbezrojas/"  target="_blank"><img src="../img/depoimentos/depoimento_sotran@2x.png" alt="Lorenz B." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+                <div class="lh-copy mt2 f4 flex-wrap flex pl4">
+                 O SMS é uma ótima maneira de enviar informações aos nossos parceiros e tem trazido grandes resultados para a empresa. Antes dessa ferramenta o processo era completamente manual, envolvia mais pessoas e custava quarenta por cento a mais. Estamos satisfeitos com o atendimento e a plataforma.<p class="lh-copy gray mt3 f5">Lorenz B., Gerente de Tecnologia da Informação, Sotran</p>
+             </div>
+         </div>
+         <div class="Wallop-item">
+            <a href="https://www.linkedin.com/in/rafaelbizzarro/"  target="_blank"><img src="../img/depoimentos/depoimento_swiss-park@2x.png" alt="Rafael B." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+            <blockquote class="lh-copy mt2 f4 flex-wrap flex pl4">
+                A ferramenta proporcionou boas experiências: a interface prática e simples permite realizar disparos de forma muito rápida economizando tempo no nosso dia a dia. Atendimento e suporte são outros diferenciais, o pronto atendimento para resolução de quaisquer dúvidas e problemas tornam o serviço excelente.<p class="lh-copy gray mt3 f5">Rafael B., Coordenador de Marketing, Swiss Park</p>
+            </blockquote>
+        </div>
+        <div class="Wallop-item">
+            <a href="https://www.linkedin.com/in/corassa/"  target="_blank"><img src="../img/depoimentos/depoimento_ufc@2x.png" alt="Rafael Corassa" class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+            <div class="lh-copy mt2 f4 flex-wrap flex pl4">
+             O Bot é uma das mais gratas surpresas que acompanhei em redes sociais nos últimos tempos. A facilidade de operar e a conversão da ferramenta são impressionantes. Os resultados apresentados para o UFC em tão pouco tempo de uso são surpreendentes. Expandimos o uso do Brasil para todo mundo.<p class="lh-copy gray mt3 f5">Rafael Corassa, Diretor Digital, UFC Latam</p>
+         </div>
+     </div>
+     <div class="Wallop-item">
+        <a href="https://www.linkedin.com/in/julianathome/"  target="_blank"><img src="../img/depoimentos/depoimento_ls-music@2x.png" alt="Juliana T." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+        <div class="lh-copy mt2 f4 flex-wrap flex pl4">
+         O Bot hoje é um dos nossos principais canais de comunicação com o público. Reverte em bons resultados para o artista. O Chatclub é uma ótima plataforma e estão sempre disponíveis para qualquer dúvida ou sugestão de ideias. Fazem parte das nossas estratégias de divulgação para qualquer novo produto.<p class="lh-copy gray mt3 f5">Juliana T., Marketing Digital, Luan Santana Music</p>
+     </div>
+ </div>
+ <div class="Wallop-item">
+    <a href="https://www.linkedin.com/in/paulo-novaes-1385a3b6/"  target="_blank"><img src="../img/depoimentos/depoimento_sccp@2x.png" alt="Paulo N." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+    <div class="lh-copy mt2 f4 flex-wrap flex pl4">
+        O Bot é uma ótima maneira de gerar engajamento com nosso público e tem trazido ótimos resultados para a marca. Estamos muito satisfeitos com o atendimento e plataforma do Chatclub.<p class="lh-copy gray mt3 f5">Paulo N., Assistente de Comunicação do Sport Club Corinthians Paulista</p>
+    </div>
+</div>
+<div class="Wallop-item">
+    <a href="https://www.linkedin.com/in/maraisabuenoferreira/"  target="_blank"><img src="../img/depoimentos/depoimento_eaa@2x.png" alt="Maraísa Bueno" class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+    <div class="lh-copy mt2 f4 flex-wrap flex pl4">
+     Estamos muito satisfeitos com o retorno que o ChatClub nos deu (e ainda nos dá). É uma ótima maneira de gerar engajamento e, editorialmente, nos direciona para a produção de novos conteúdos baseados no que já foi disparado e rendeu uma melhor taxa de conversão para o site. Além disso, a equipe do Chatclub sempre está disposta a nos ajudar, nos atendendo de prontidão e nos ajudando com as atualizações e o que há de melhor que a plataforma oferece.<p class="lh-copy gray mt3 f5">Maraísa Bueno - Redes Sociais - Editora Alto Astral</p>
+ </div>
+</div>
+<div class="Wallop-item">
+    <a href="https://www.youtube.com/watch?v=85wc89Kys5U"  target="_blank"><img src="../img/depoimentos/depoimento_wm@2x.png" alt="Fernanda G." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+    <div class="lh-copy mt2 f4 flex-wrap flex pl4">
+     Depois da implantação do SMS, identificamos que o tempo de resposta das propostas otimizaram em 40%.<p class="lh-copy gray mt3 f5">Fernanda G., Gerente de Produtos e UX, Webmotors</p>
+ </div>
+</div>
+<div class="Wallop-item">
+    <a href="https://www.linkedin.com/in/eduardolhotellier/"  target="_blank"><img src="../img/depoimentos/depoimento_get@2x.png" alt="Eduardo L." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+    <div class="lh-copy mt2 f4 flex-wrap flex pl4">
+     Começamos a enviar SMS pelo ChatClub e os profissionais passaram a fechar mais negócios.<p class="lh-copy gray mt3 f5">Eduardo L., CEO, GetNinjas</p>
+ </div>
+</div>
+<div class="Wallop-item">
+    <a href="https://www.linkedin.com/in/luishfernandes/"  target="_blank"><img src="../img/depoimentos/depoimento_colombo@2x.png" alt="Luís F." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+    <div class="lh-copy mt2 f4 flex-wrap flex pl4">
+     Iniciamos o projeto com o ChatClub com um teste para avaliar nossa base de clientes. Os resultados foram excelentes, o que consolidou toda uma nova estratégia de relacionamento dentro da empresa. Eles sempre nos atendem de forma diferenciada e estão prontos para todos os desafios do Varejo, que não são simples!<p class="lh-copy gray mt3 f5">Luís F., Marketing e CRM,  Lojas Colombo</p>
+ </div>
+</div>
+</div>
+<div class="mt3 nl3 nr3">
+    <button class="Wallop-buttonPrevious bg-white bn pa3">
+        <img src="../img/icons/arrow.svg" alt="" class="db h1 rotate-180">
+    </button>
+    <button class="Wallop-buttonNext bg-white bn pa3">
+        <img src="../img/icons/arrow.svg" alt="" class="db h1">
+    </button>
+</div>
+</div>
+</section>
+<div class="dvdr dvdr-blue mt4"></div>
+
+
+<!-- Dados -->
+<article class="grd-bg has-diagonal pb5 relative">
+    <!-- <img src="../img/lens.png" class="absolute bottom-0 w-100"> -->
+    <section class="pt5 mw8 ph4 center relative z-1">
+        <h2 class="f2 mv0 white tc">Iniciar contato</h2>
+        <p class="lh-copy white pt3-ns f6-ns pb4 tc">
+            Preencha os campos abaixo para termos informações básicas<br> a seu respeito em um primeiro contato: 
+        </p>
+        <div class="nl3 nr3">
+            <form class="w-100 flex-ns flex-wrap bg-white pt3 pb4 pl4 pr4">
+                <fieldset class="ph3 bn mt4 w-100-m w-50-ns">
+                    <legend class="gray ttu tracked f7">Dados pessoais</legend>
+                    <div class="mt3">
+                        <label for="nome" class="db">Nome completo*</label>
+                        <input class="f6 mt2 pa3 db w-100 b--black-20 ba" id="nome" name="nome" type="text" placeholder="Ex. Marina Barbosa">
+                    </div>
+                    <div class="mt4">
+                        <label for="email" class="db">Email*</label>
+                        <input class="f6 mt2 pa3 db w-100 b--black-20 ba" id="email" name="email" type="text" placeholder="seunome@empresa.com">
+                    </div>
+                    <div class="mt4">
+                        <label for="telefone" class="db">Telefone (com DDI e DDD)*</label>
+                        <input class="f6 mt2 pa3 db w-100 b--black-20 ba" id="telefone" name="telefone" type="tel" placeholder="+55 11 9 99999999">
+                    </div>
+                </fieldset>
+                <fieldset class="ph3 bn mt4 w-100-m w-50-ns">
+                    <legend class="gray ttu tracked f7">Dados da empresa</legend>
+                    <div class="mt3">
+                        <label for="empresa" class="db">Nome da empresa*</label>
+                        <input class="f6 mt2 pa3 db w-100 b--black-20 ba" id="empresa" name="empresa" type="text" placeholder="Sua empresa">
+                    </div>
+                    <div class="mt4 relative">
+                        <label for="telefone" class="db">Segmento*</label>
+                        <select class="f6 w-100 mt2 br0 pa3 b--black-20" style="-webkit-appearance: none;-moz-appearance: none;appearance: none;">
+                            <option value="Agência de comunicação, marketing digital e similares">Agência de comunicação, marketing digital e similares</option>
+                            <option value="Agropecuária">Agropecuária</option>
+                            <option value="Água, gás e saneamento">Água, gás e saneamento</option>
+                            <option value="Alimentos e bebidas">Alimentos e bebidas</option>
+                            <option value="Bancos e serviços financeiros">Bancos e serviços financeiros</option>
+                            <option value="Construção civil e intermediação">Construção civil e intermediação</option>
+                            <option value="Construção pesada e engenharia">Construção pesada e engenharia</option>
+                            <option value="E-Commerce">E-Commerce</option>
+                            <option value="Educação">Educação</option>
+                            <option value="Energia elétrica">Energia elétrica</option>
+                            <option value="Eventos e lazer">Eventos e lazer</option>
+                            <option value="Hotelaria">Hotelaria</option>
+                            <option value="Mineração">Mineração</option>
+                            <option value="Papel e madeira">Papel e madeira</option>
+                            <option value="Petróleo, gás e combustíveis">Petróleo, gás e combustíveis</option>
+                            <option value="Química e petroquímica">Química e petroquímica</option>
+                            <option value="Restaurantes">Restaurantes</option>
+                            <option value="Roupas, calçados e acessórios">Roupas, calçados e acessórios</option>
+                            <option value="Saúde">Saúde</option>
+                            <option value="Seguros">Seguros</option>
+                            <option value="Siderurgia e metalurgia">Siderurgia e metalurgia</option>
+                            <option value="Tecnologia da informação">Tecnologia da informação</option>
+                            <option value="Telecomunicações">Telecomunicações</option>
+                            <option value="Têxteis">Têxteis</option>
+                            <option value="Transporte e Logística">Transporte e Logística</option>
+                            <option value="Utilidades domésticas">Utilidades domésticas</option>
+                            <option value="Varejo">Varejo</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                        <img src="../../img/icons/caret-down.svg" alt="" class="absolute top-1 mt4 right-1">
+                    </div>
+                    <div class="mt4">
+                        <label for="pais" class="db">País*</label>
+                        <input class="f6 mt2 pa3 db w-100 b--black-20 ba" id="pais" name="pais" type="text" placeholder="Qual seu país?">
+                    </div>
+                </fieldset>
+                <fieldset class="ph3 bn mt4 w-100-m w-50-ns">
+                    <legend class="gray ttu tracked f7">Interesses</legend>
+                    <div class="mt3">
+                        <label class="db w-100">Quais produtos te interessam?*</label>
+                        <div class="mt3 mr4">
+                            <input class="f6 mt2 pa3" id="produto-sms" name="produto-sms" type="checkbox" value="SMS">
+                            <label for="produto-sms" class="pl2">SMS</label>
+                        </div>
+                        <div class="mt3 mr4">
+                            <input class="f6 mt2 pa3" id="produto-email" name="produto-email" type="checkbox" value="SMS">
+                            <label for="produto-email" class="pl2">Email</label>
+                        </div>
+                        <div class="mt3 mr4">
+                            <input class="f6 mt2 pa3" id="produto-voz" name="produto-voz" type="checkbox" value="SMS">
+                            <label for="produto-voz" class="pl2">Voz</label>
+                        </div>
+                        <div class="mt3 mr4">
+                            <input class="f6 mt2 pa3" id="produto-chatbot" name="produto-chatbot" type="checkbox" value="SMS">
+                            <label for="produto-chatbot" class="pl2">Chatbot</label>
+                        </div>
+                        <div class="mt3 mr4">
+                            <input class="f6 mt2 pa3" id="procuto-rcs" name="produto-rcs" type="checkbox" value="SMS">
+                            <label for="produto-rcs" class="pl2">RCS</label>
+                        </div>                        
+                    </div>
+                </fieldset>
+                <fieldset class="ph3 bn mt4 w-100-m w-50-ns">
+                    <legend class="gray ttu tracked f7">Como podemos te ajudar?</legend>
+                    <div class="mt3">
+                        <label class="db">Escreva sua mensagem*</label>
+                        <textarea class="f6 ba b--black-20 mt2 w-100 f6 lh-copy pa3" name="mensagem" id="mensagem" cols="30" rows="3"></textarea>
+                        <input type="submit" value="Enviar mensagem" class="inline-flex items-center shadow-0 ba b--blue-2 lh-copy bg-blue-2 dib pa3 f7 ttu tracked no-outline bg-blue-2-hover white mt4">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</article>
+
+    <!-- Our offices
+    <section class="bg-light-gray">
+        <article class="pt5 mw8 ph4 center">
+            <h4 class="f4">Nossos escritórios</h4>
+            <div class="nl3 nr3 nt4">
+                <div class="flex-ns flex-wrap">
+                    <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                        <div class="w1">
+                            <img src="../img/icons/pin.svg" class="db w-100" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f5 mb0">São Paulo, Brasil</h3>
+                            <ul class="pl0 list f6 mt2 lh-copy">
+                                <li><a href="mailto:messaging@movile.com" class="purple link">messaging@movile.com</a></li>
+                                <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+55 11 2163 0600</a></li>
+                                <li class="mt2 gray">R. Arquiteto Olavo Redig de Campos, 105, 26º Andar - Ed. EZ Tower Torre A</li>
+                                <li class="mt2 gray">CEP: 04.711-904</li>
+                                <li class="mt2 gray">Fax: +55.11.2163.0586</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                        <div class="w1">
+                            <img src="../img/icons/pin.svg" class="db w-100" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f5 mb0">​Brasília, Brasil</h3>
+                            <ul class="pl0 list f6 mt2 lh-copy">
+                                <li><a href="mailto:messaging@movile.com" class="purple link">messaging@movile.com</a></li>
+                                <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+55 11 2163 0600</a></li> -->
+                                <!--<li class="mt2 gray">Brasilia Shopping, Quadra SCN Quadra 5, Asa Norte sala 725</li>
+                                    <li class="mt2 gray">CEP: 70715-900</li>-->
+                                    <!-- <li class="mt2 gray">Fax: +55.11.2163.0586</li> -->
+                            <!--</ul>
+                        </div>
+                    </div>              
+                    <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                        <div class="w1">
+                            <img src="../img/icons/pin.svg" class="db w-100" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f5 mb0">​​​Miami, EUA</h3>
+                            <ul class="pl0 list f6 mt2 lh-copy">-->
+                                <!-- <li><a href="mailto:messaging@movile.com" class="purple link">messaging@movile.com</a></li> -->
+                                <!-- <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+55 11 2163 0600</a></li> -->
+                                <!--<li class="mt2 gray">201 S. Biscayne Blvd, #1200,  Miami, FL, 33131-4316</li>-->
+                                <!-- <li class="mt2 gray">CEP: 70715-900</li> -->
+                                <!-- <li class="mt2 gray">Fax: +55.11.2163.0586</li> -->
+                            <!--</ul>
+                        </div>
+                    </div>
+                    <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                        <div class="w1">
+                            <img src="../img/icons/pin.svg" class="db w-100" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f5 mb0">​​​Distrito Federal, México</h3>
+                            <ul class="pl0 list f6 mt2 lh-copy">
+                                <li><a href="mailto:messaging@movile.com" class="purple link">corporativo-mexico@movile.com</a></li>
+                                <li class="mt2"><a href="tel:+55 11 2163 0600" class="purple link">+52 55 2978 4083</a></li>
+                                <li class="mt2 gray">Arquímeses, number 130, Piso Mezzanine, Polanco IV sección, Delegación Miguel Hidalgo</li>
+                                <li class="mt2 gray">CP: 11550</li>
+                                <li class="mt2 gray">Fax: +52 55 2978 4083</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                        <div class="w1">
+                            <img src="../img/icons/pin.svg" class="db w-100" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f5 mb0">Bogotá, Colômbia</h3>
+                            <ul class="pl0 list f6 mt2 lh-copy">
+                                <li><a href="mailto:" class="purple link">tito.daza@movile.com</a></li>
+                                <li class="mt2"><a href="tel:" class="purple link">571 7457374</a></li>
+                                <li class="mt2 gray">Carrera 7 # 146-65, Piso 4 - Edifício Office Point</li>
+                                <li class="mt2 gray">CEP: 04.711-904</li>
+                                <li class="mt2 gray">Fax: 571 7457374</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-100 w-third-ns flex items-start mt5 ph3">
+                        <div class="w1">
+                            <img src="../img/icons/pin.svg" class="db w-100" alt="">
+                        </div>
+                        <div class="w-90 pl3 flex flex-column h-100">
+                            <h3 class="lh-title f5 mb0">Buenos Aires, Argentina</h3>
+                            <ul class="pl0 list f6 mt2 lh-copy">-->
+                                <!--<li><a href="mailto:" class="purple link">tito.daza@movile.com</a></li>-->
+                                <!--<li class="mt2"><a href="tel:" class="purple link">+54 11 2152 2121</a></li>
+                                <li class="mt2 gray">Costa Rica 5546, Piso 5 - Oficina 501 a la 504</li>
+                                <li class="mt2 gray">Cp C1414BTD</li>-->
+                                <!--<li class="mt2 gray">Fax: 571 7457374</li>-->
+                            <!--</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>-->
+
+    <!-- Footer -->
+    <footer class="bg-light-gray">
+        <article class="mw8 ph4 center pt5 pb5">
+            <div class="nl3 nr3">
+                <div class="flex flex-wrap">
+                    <div class="w-100 w-25-ns ph3">
+                        <ul class="list f7 pl0 flex flex-column-ns h-100">
+                            <li class="pl0 black-30 f6 gray mb3">&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> ChatClub</li>
+                            <li class="pl0 black-30 f6 gray mb2">Powered By</li>
+                            <li><a href="https://movile.com/#/" target="_blank"><img src="../img/movile-logo.png" class="w-25"></a></li>
+                        </ul>
+                    </div>
+                    <div class="w-100 w-25-ns mt4 mt0-ns ph3">
+                        <ul class="list f6 pl0">
+                            <li class="b pl0 link">A plataforma</li>
+                            <li class="pl0 mt3"><a href="./sms" class="link gray dim">SMS</a></li>
+                            <li class="pl0 mt3"><a href="./email" class="link gray dim">Email</a></li>
+                            <li class="pl0 mt3"><a href="./voz" class="link gray dim">Voz</a></li>
+                            <li class="pl0 mt3"><a href="./chatbot" class="link gray dim">Chatbot</a></li>
+                            <li class="pl0 mt3"><a href="./rcs" class="link gray dim">RCS</a></li>
+                            <li class="pl0 mt3"><a href="./adicionais" class="link gray dim">Serviços adicionais</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-100 w-25-ns mt4 mt0-ns ph3">
+                        <ul class="list f6 pl0">
+                            <li class="b pl0">Recursos</li>
+                            <li class="pl0 mt3"><a href="./quemsomos" class="link gray dim">Quem somos</a></li>
+                            <li class="pl0 mt3"><a href="https://support-messaging.zendesk.com" class="link gray dim">FAQ</a></li>
+                            <li class="pl0 mt3"><a href="./contato" class="link gray dim">Iniciar contato</a></li>
+                            <li class="pl0 mt3"><a href="https://support-messaging.movile.com/" target="_blank" class="link gray dim">Suporte ao cliente<img src="../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
+                            <li class="pl0 mt3"><a href="./blog" target="_blank" class="link gray dim">Blog<img src="../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="w-100 w-25-ns mt4 mt0-ns ph3">
+                        <ul class="list f6 pl0">
+                            <li class="b pl0">Documentação</li>
+                            <li class="pl0 mt3 dim"><a href="http://doc-messaging.movile.com/pt.html" class="link gray">API SMS<img src="../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
+                            <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/email" class="link gray dim">API Email<img src="../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
+                            <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/voice" class="link gray dim">API Voz<img src="../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </article>
+    </footer>
+    <script type=text/javascript src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type=text/javascript src="../js/custom.js"></script>
+    <script type=text/javascript src="../js/internal-tabs.js"></script>
+    <!-- Slider -->
+    <script type=text/javascript src="../js/Wallop.min.js"></script>
+    <script type=text/javascript>
+        // New instance of Wallop
+        var wallopEl = document.querySelector('.Wallop');
+        var wallop = new Wallop(wallopEl);
+
+                // To start Autoplay, just call the function below
+        // and pass in the number of seconds as interval
+        // if you want to start autoplay after a while
+        // you can wrap this in a setTimeout(); function
+        // autoplay(10000);
+
+        // This a a helper function to build a simple
+        // auto-play functionality. 
+      //   function autoplay(interval) {
+      //       var lastTime = 0;  
+
+      //       function frame(timestamp) {
+      //           var update = timestamp - lastTime >= interval;
+
+      //           if (update) {
+      //             wallop.next();
+      //             lastTime = timestamp;
+      //         }
+
+      //         requestAnimationFrame(frame);
+      //     }
+
+      //     requestAnimationFrame(frame);
+      // };
+  </script>
+</body>
+</html>
