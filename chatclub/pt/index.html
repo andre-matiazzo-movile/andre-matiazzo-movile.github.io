@@ -273,7 +273,6 @@
                 <!-- Serviços Adicionais -->
                 <div class="w-100 w-33-ns flex items-start mt4 ml2 ph3 pb4 pt4 shadow-2  ">
                     <div class="w-10">
-
                     </div>
                     <div class="w-80 flex flex-column h-100 pb2">
                         <h3 class="lh-title f4 mb0">Serviços adicionais</h3>
@@ -292,14 +291,15 @@
 
 <!-- Vantagens -->
 <section class="relative">
-    <div class="grd-bg has-diagonal absolute top-0 left-0 right-0 vh-50 h-auto-ns pt7 pb7 z-0"></div>
+    <div class="dn db-ns grd-bg has-diagonal absolute top-0 left-0 right-0 vh-50 h-auto-ns pt7 pb7 z-0"></div>
     <!-- <img src="../img/lens.png" class="absolute bottom-0 w-100" style="bottom: -2.5rem;"> -->
-    <article class="pt4 mw8 ph4 center relative z-1">
+    <article class="grd-bg-s pv4 mw8 ph4 center relative-ns z-1">
         <h2 class="f2 w-100 mv0 white lh-title pt4">Vantagens de ser cliente ChatClub</h2>
         <p class="lh-copy white pt3-ns f6-ns w-70 pb4">
             Além da integração simplificada com a sua plataforma e suporte 24x7, você terá à disposição uma ferramenta para controlar seus envios, campanhas e muito mais. 
         </p>
-        <div class="flex flex-wrap">
+        <!-- Desktop -->
+        <div class="dn flex-ns flex-wrap-ns">
             <div class="w-100 w-25-ns pl4-ns order-2-ns">
                 <p class="lh-copy white mt4 pt4-ns f6-ns tab-description first-tab-description">
                     Sabemos que é difícil fazer a gestão de vários fornecedores, por isso no ChatClub você tem todos os canais em um único lugar.
@@ -307,10 +307,14 @@
                 <p class="lh-copy white mt4 pt4-ns f6-ns tab-description third-tab-description dn">
                     Acompanhe o desempenho das suas campanhas e tenha acesso a dados que te ajudam na tomada de decisões.
                 </p>
-                <p class="lh-copy white mt4 pt4-ns f6-ns tab-description second-tab-description dn">
-                    Você trabalha de maneira independente sem precisar de nenhum software adicional
-                </p>
-                <a href="http://doc-messaging.movile.com/pt.html" class="dib white link ttu tracked f7 lh-solid bb b pb1 mt3">Documentação →</a>
+                <div class="tab-description second-tab-description dn">
+                    <p class="lh-copy white mt4 pt4-ns f6-ns">
+                        Você trabalha de maneira independente sem precisar de nenhum software adicional
+                    </p>
+                    <a href="http://doc-messaging.movile.com/pt.html" class="dib white link ttu tracked f7 lh-solid bb b pb1 mt3">
+                        Documentação →
+                    </a>
+                </div>
             </div>
             <div class="w-100 w-75-ns mt5 mt4-ns order-1-ns">
                 <div class="flex api-triggers--js">
@@ -320,11 +324,6 @@
                 </div>
                 <div class="shadow-0 bg-white ba b--black-10 API-channel-container" id="API_SMS">
                     <!-- SMS API Menu -->
-                    <!-- <div id="API_SMS--menu">
-                        <div class="flex ph3 bb b--black-10">
-                            <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black cURL-trigger--js">Conecte-se da melhor forma</a>
-                        </div>
-                    </div> -->
                     <div class="f7 lh-copy gray pa4 overflow-y-scroll channels-content--js" style="max-height: 75vh;">
                         <!-- SMS_cURL -->
                         <div class="triggered-cURL--js">
@@ -355,12 +354,6 @@
                     </div>
                 </div>
                 <div class="dn shadow-0 bg-white ba b--black-10 API-channel-container" id="API_Voice">
-                    <!-- Voice API Menu -->
-                    <!-- <div id="API_Voice--menu">
-                        <div class="flex ph3 bb b--black-10">
-                            <a href="javascript:;" class="link f6 b lh-solid mv3 mr3 black JSON-trigger--js">Relatórios em tempo real</a>
-                        </div>
-                    </div> -->
                     <div class="f7 lh-copy gray overflow-y-scroll channels-content--js" style="max-height: 75vh;">
                         <!-- Voice_JSON -->
                         <div class="triggered-JSON--js">
@@ -464,52 +457,71 @@
                     </div>
                 </div>
             </div>
-        </article>
-    </section>
-
-    <!-- Empresas -->
-    <section class="pv5 pt5 pb5-ns">
-        <article class="mw8 ph4 center relative">
-            <h2 class="f2 w-100 mv0 blue-2 tc">Conheça alguns dos nossos clientes</h2>
-            <div class="flex flex-wrap items-center justify-center client-container">
-                <img src="../img/clientes/caixa.png" alt="Logo Caixa" class="h3 mt4 client">
-                <img src="../img/clientes/itau.png" alt="Logo Itaú" class="h3 mt4 client">
-                <img src="../img/clientes/google.png" alt="Logo Google" class="h3 mt4 client">
-                <img src="../img/clientes/ifood.png" alt="Logo iFood" class="h3 mt4 client">
-                <img src="../img/clientes/voxage.png" alt="Logo Vox Age" class="h3 mt4 client">
-            </div>
-        </article>
-    </section>
-
-    <!-- Depoimentos -->
-    <section class="mt2-ns mw8 ph4 center">
-        <div class="Wallop Wallop--slide w-90-ns">
-            <div class="Wallop-list">
-             <div class="Wallop-item">
-                <a href="https://www.linkedin.com/in/lorenzbezrojas/"  target="_blank"><img src="../img/depoimentos/depoimento_sotran@2x.png" alt="Lorenz B." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
-                <div class="lh-copy mt2 f4 flex-wrap flex pl4">
-                 O SMS é uma ótima maneira de enviar informações aos nossos parceiros e tem trazido grandes resultados para a empresa. Antes dessa ferramenta o processo era completamente manual, envolvia mais pessoas e custava quarenta por cento a mais. Estamos satisfeitos com o atendimento e a plataforma.<p class="lh-copy gray mt3 f5">Lorenz B., Gerente de Tecnologia da Informação, Sotran</p>
-             </div>
-         </div>
-         <div class="Wallop-item">
-            <a href="https://www.linkedin.com/in/rafaelbizzarro/"  target="_blank"><img src="../img/depoimentos/depoimento_swiss-park@2x.png" alt="Rafael B." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
-            <blockquote class="lh-copy mt2 f4 flex-wrap flex pl4">
-                A ferramenta proporcionou boas experiências: a interface prática e simples permite realizar disparos de forma muito rápida economizando tempo no nosso dia a dia. Atendimento e suporte são outros diferenciais, o pronto atendimento para resolução de quaisquer dúvidas e problemas tornam o serviço excelente.<p class="lh-copy gray mt3 f5">Rafael B., Coordenador de Marketing, Swiss Park</p>
-            </blockquote>
         </div>
-        <div class="Wallop-item">
-            <a href="https://www.linkedin.com/in/corassa/"  target="_blank"><img src="../img/depoimentos/depoimento_ufc@2x.png" alt="Rafael Corassa" class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+        <!-- Mobile -->
+        <div class="dn-ns w-50-ns">
+            <div class="mt4 accordion">
+                <h3 class="white pointer"  id="sms_trigger--corp">Comunicação completa</h3>
+                <p class="lh-copy white f6 measure mt2">Sabemos que é difícil fazer a gestão de vários fornecedores, por isso no ChatClub você tem todos os canais em um único lugar.</p>
+            </div>
+            <div class="mt4 accordion">
+                <h3 class="white pointer" id="sms_trigger--mkt">Acompanhamento de resultados</h3>
+                <p class="lh-copy white f6 measure mt2 dn">
+                Acompanhe o desempenho das suas campanhas e tenha acesso a dados que te ajudam na tomada de decisões.</p>
+            </div>
+            <div class="mt4 accordion">
+                <h3 class="white pointer" id="sms_trigger--conc">Integrações simplificada</h3>
+                <p class="lh-copy white f6 measure mt2 dn">Você trabalha de maneira independente sem precisar de nenhum software adicional
+                    <span class="db mt3"><a href="http://doc-messaging.movile.com/pt.html" class="dib white link ttu tracked f7 lh-solid bb b pb1">Documentação →</a>
+            </span></p>
+        </div>
+    </div>
+</article>
+</section>
+
+<!-- Empresas -->
+<section class="pv5 pt5 pb5-ns">
+    <article class="mw8 ph4 center relative">
+        <h2 class="f2 w-100 mv0 blue-2 tc">Conheça alguns dos nossos clientes</h2>
+        <div class="flex flex-wrap items-center justify-center client-container">
+            <img src="../img/clientes/caixa.png" alt="Logo Caixa" class="h3 mt4 client">
+            <img src="../img/clientes/itau.png" alt="Logo Itaú" class="h3 mt4 client">
+            <img src="../img/clientes/google.png" alt="Logo Google" class="h3 mt4 client">
+            <img src="../img/clientes/ifood.png" alt="Logo iFood" class="h3 mt4 client">
+            <img src="../img/clientes/voxage.png" alt="Logo Vox Age" class="h3 mt4 client">
+        </div>
+    </article>
+</section>
+
+<!-- Depoimentos -->
+<section class="mt2-ns mw8 ph4 center">
+    <div class="Wallop Wallop--slide w-90-ns">
+        <div class="Wallop-list">
+         <div class="Wallop-item">
+            <a href="https://www.linkedin.com/in/lorenzbezrojas/"  target="_blank"><img src="../img/depoimentos/depoimento_sotran@2x.png" alt="Lorenz B." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
             <div class="lh-copy mt2 f4 flex-wrap flex pl4">
-             O Bot é uma das mais gratas surpresas que acompanhei em redes sociais nos últimos tempos. A facilidade de operar e a conversão da ferramenta são impressionantes. Os resultados apresentados para o UFC em tão pouco tempo de uso são surpreendentes. Expandimos o uso do Brasil para todo mundo.<p class="lh-copy gray mt3 f5">Rafael Corassa, Diretor Digital, UFC Latam</p>
+             O SMS é uma ótima maneira de enviar informações aos nossos parceiros e tem trazido grandes resultados para a empresa. Antes dessa ferramenta o processo era completamente manual, envolvia mais pessoas e custava quarenta por cento a mais. Estamos satisfeitos com o atendimento e a plataforma.<p class="lh-copy gray mt3 f5">Lorenz B., Gerente de Tecnologia da Informação, Sotran</p>
          </div>
      </div>
      <div class="Wallop-item">
-        <a href="https://www.linkedin.com/in/julianathome/"  target="_blank"><img src="../img/depoimentos/depoimento_ls-music@2x.png" alt="Juliana T." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+        <a href="https://www.linkedin.com/in/rafaelbizzarro/"  target="_blank"><img src="../img/depoimentos/depoimento_swiss-park@2x.png" alt="Rafael B." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+        <blockquote class="lh-copy mt2 f4 flex-wrap flex pl4">
+            A ferramenta proporcionou boas experiências: a interface prática e simples permite realizar disparos de forma muito rápida economizando tempo no nosso dia a dia. Atendimento e suporte são outros diferenciais, o pronto atendimento para resolução de quaisquer dúvidas e problemas tornam o serviço excelente.<p class="lh-copy gray mt3 f5">Rafael B., Coordenador de Marketing, Swiss Park</p>
+        </blockquote>
+    </div>
+    <div class="Wallop-item">
+        <a href="https://www.linkedin.com/in/corassa/"  target="_blank"><img src="../img/depoimentos/depoimento_ufc@2x.png" alt="Rafael Corassa" class="w2 flex flex-wrap mw-100 w-10 fl"></a>
         <div class="lh-copy mt2 f4 flex-wrap flex pl4">
-         O Bot hoje é um dos nossos principais canais de comunicação com o público. Reverte em bons resultados para o artista. O Chatclub é uma ótima plataforma e estão sempre disponíveis para qualquer dúvida ou sugestão de ideias. Fazem parte das nossas estratégias de divulgação para qualquer novo produto.<p class="lh-copy gray mt3 f5">Juliana T., Marketing Digital, Luan Santana Music</p>
+         O Bot é uma das mais gratas surpresas que acompanhei em redes sociais nos últimos tempos. A facilidade de operar e a conversão da ferramenta são impressionantes. Os resultados apresentados para o UFC em tão pouco tempo de uso são surpreendentes. Expandimos o uso do Brasil para todo mundo.<p class="lh-copy gray mt3 f5">Rafael Corassa, Diretor Digital, UFC Latam</p>
      </div>
  </div>
  <div class="Wallop-item">
+    <a href="https://www.linkedin.com/in/julianathome/"  target="_blank"><img src="../img/depoimentos/depoimento_ls-music@2x.png" alt="Juliana T." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
+    <div class="lh-copy mt2 f4 flex-wrap flex pl4">
+     O Bot hoje é um dos nossos principais canais de comunicação com o público. Reverte em bons resultados para o artista. O Chatclub é uma ótima plataforma e estão sempre disponíveis para qualquer dúvida ou sugestão de ideias. Fazem parte das nossas estratégias de divulgação para qualquer novo produto.<p class="lh-copy gray mt3 f5">Juliana T., Marketing Digital, Luan Santana Music</p>
+ </div>
+</div>
+<div class="Wallop-item">
     <a href="https://www.linkedin.com/in/paulo-novaes-1385a3b6/"  target="_blank"><img src="../img/depoimentos/depoimento_sccp@2x.png" alt="Paulo N." class="w2 flex flex-wrap mw-100 w-10 fl"></a>
     <div class="lh-copy mt2 f4 flex-wrap flex pl4">
         O Bot é uma ótima maneira de gerar engajamento com nosso público e tem trazido ótimos resultados para a marca. Estamos muito satisfeitos com o atendimento e plataforma do Chatclub.<p class="lh-copy gray mt3 f5">Paulo N., Assistente de Comunicação do Sport Club Corinthians Paulista</p>
@@ -769,11 +781,14 @@
             <div class="nl3 nr3">
                 <div class="flex flex-wrap">
                     <div class="w-100 w-25-ns ph3">
-                        <ul class="list f7 pl0 flex flex-column-ns h-100">
+                        <ul class="list f7 pl0 h-100">
                             <li class="pl0 black-30 f6 gray mb3">&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> ChatClub</li>
-                            <li class="pl0 black-30 f6 gray mb2">Powered By</li>
-                            <li><a href="https://movile.com/#/" target="_blank"><img src="../img/movile-logo.png" class="w-25"></a></li>
+                            <li class="pl0 black-30 f6 gray mb2">Powered By </li>
+                            <li class="list">
+                                <a href="https://movile.com/#/" target="_blank"><img src="../../img/movile-logo.png" class="w-20 w-60-m"></a>
+                            </li>
                         </ul>
+
                     </div>
                     <div class="w-100 w-25-ns mt4 mt0-ns ph3">
                         <ul class="list f6 pl0">
@@ -790,21 +805,21 @@
                         <ul class="list f6 pl0">
                             <li class="b pl0">Recursos</li>
                             <li class="pl0 mt3"><a href="./quemsomos" class="link gray dim">Quem somos</a></li>
-                            <li class="pl0 mt3"><a href="https://support-messaging.zendesk.com" class="link gray dim">FAQ</a></li>
+                            <li class="pl0 mt3"><a href="./faq" class="link gray dim">FAQ</a></li>
                             <li class="pl0 mt3"><a href="./contato" class="link gray dim">Iniciar contato</a></li>
-                            <li class="pl0 mt3"><a href="https://support-messaging.movile.com/" target="_blank" class="link gray dim">Suporte ao cliente<img src="../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
-                            <li class="pl0 mt3"><a href="./blog" target="_blank" class="link gray dim">Blog<img src="../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
+                            <li class="pl0 mt3"><a href="https://support-messaging.movile.com/" target="_blank" class="link gray dim is-external">Suporte ao cliente</a></li>
+                            <li class="pl0 mt3"><a href="https://blog.chatclub.me/" target="_blank" class="link gray dim is-external">Blog</a></li>
                         </ul>
                     </div>
                     <div class="w-100 w-25-ns mt4 mt0-ns ph3">
                         <ul class="list f6 pl0">
                             <li class="b pl0">Documentação</li>
-                            <li class="pl0 mt3 dim"><a href="http://doc-messaging.movile.com/pt.html" class="link gray">API SMS<img src="../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
-                            <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/email" class="link gray dim">API Email<img src="../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
-                            <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/voice" class="link gray dim">API Voz<img src="../img/icons/external.svg" class="db w-5 mr2 mt1 fl" alt=""></a></li>
+                            <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/pt.html" class="link gray dim is-external">API SMS</a></li>
+                            <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/email" class="link gray dim is-external">API Email</a></li>
+                            <li class="pl0 mt3"><a href="http://doc-messaging.movile.com/voice" class="link gray dim is-external">API Voz</a></li>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
         </article>

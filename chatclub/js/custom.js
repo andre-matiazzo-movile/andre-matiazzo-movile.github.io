@@ -50,12 +50,12 @@ $(document).ready(function() {
 
   // Accordions
   $('.accordion h3').on('click', function() {
-    $('.accordion h3').removeClass('black');
-    $('.accordion h3').addClass('gray');
+    // $('.accordion h3').removeClass('black');
+    // $('.accordion h3').addClass('gray');
     $('.accordion p').slideUp();
     $(this).parent().find('p').slideToggle();
-    $(this).removeClass('gray');
-    $(this).addClass('black');
+    // $(this).removeClass('gray');
+    // $(this).addClass('black');
     $('.sms_example').hide();
     if ($(this).is('#sms_trigger--corp')) {
       $('.sms_example--corp').fadeIn(150);
@@ -80,7 +80,7 @@ $(document).ready(function() {
             $('#menu__container a').not('.menu__dropdown a').addClass('black-ns');
             $('#menu-open span').addClass('bg-black');
             $('.has-caret').addClass('caret--black');
-            $('.is-external').not('.menu__dropdown .is-external').addClass('external--black');
+            $('.is-external').not('.menu__dropdown .is-external').not('footer .is-external').addClass('external--black');
           // Changes color of menu on top of document
         } else if (scrollAfter == 0) {
           $('.brand img').attr('src', '../../../img/chatclub-wh.svg');

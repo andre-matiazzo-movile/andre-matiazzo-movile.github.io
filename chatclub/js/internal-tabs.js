@@ -6,16 +6,24 @@ $(document).ready(function() {
     $(this).addClass('white b--blue');
     $('.API-channel-container').hide();
     $('.tab-description').hide()
+    $('.sms_example').hide();
     if ($(this).hasClass('trigger--sms')) {
       $('#API_SMS').show();
       $('.first-tab-description').show();
+      $('.sms_example--corp').fadeIn(150);
     } else if ($(this).hasClass('trigger--email')) {
       $('#API_Email').show();
       $('.second-tab-description').show();
       $('.cURL-trigger--js').addClass('blue-2');
+      $('.sms_example--mkt').fadeIn(150);
     } else if ($(this).hasClass('trigger--voice')) {
       $('#API_Voice').show();
       $('.third-tab-description').show();
+      $('.sms_example--conc').fadeIn(150);
+    } else if ($(this).hasClass('trigger--other')) {
+      $('#API_Other').show();
+      $('.third-tab-description').show();
+      $('.sms_example--flash').fadeIn(150);
     }
   });
 

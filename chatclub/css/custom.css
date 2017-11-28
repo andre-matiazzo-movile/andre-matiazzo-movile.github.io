@@ -31,6 +31,9 @@
     .blue-hover-2:hover {color: #315FCE;}
     .bg-blue-hover-2:hover { background-color: #315FCE; border-color: #315FCE;}
 
+    .b--yellow {border-color: #FFBE3E;}
+    .b--green {border-color: #06EEC7;}
+
     .f8 {font-size: 0.625rem;}
     .shadow-0 {box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);}
     /* FLEX GROW */
@@ -81,7 +84,7 @@
         left: 8px;
         width: 0;
         height: 0;
-        border-top: 12px solid #25D8E9;
+        border-top: 12px solid #7EE3F7;
         border-left: 12px solid transparent;
     }
 
@@ -91,6 +94,7 @@
 
     @media screen and (max-width: 30em) {
         .menu__container { height: 100vh; overflow-y: auto; }
+        .grd-bg-s {background: linear-gradient(to bottom, #315fce 0%,#7ee3f7 100%);}
     }
 
     @media screen and (min-width: 30em) {        
@@ -101,6 +105,7 @@
         .shadow-0-ns {box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);}
         .shadow-none-ns {box-shadow: none;}
         .header-bg > section {min-height: 85vh;}
+        
     }
 
     @media screen and (max-width: 60em) and (min-width: 30em) {
@@ -126,7 +131,8 @@
         background: linear-gradient(to bottom, #315fce 0%,#7ee3f7 100%);
     }
 
-    .grd-bg.has-diagonal::after {
+    .grd-bg.has-diagonal::after,
+    .grd-bg-ns.has-diagonal::after {
         position: absolute;
         bottom: 0;
         content: "";
