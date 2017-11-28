@@ -3,7 +3,7 @@ $(document).ready(function() {
   var scrollPosition = $(window).scrollTop();
   if (scrollPosition > '1') {
     $("nav").addClass("bg-white bb b--black-10");
-    $('.brand img').attr('src', '../../../img/chatclub.svg');
+    $('.brand img').attr('src', '../img/chatclub.svg');
     $('.menu__container a').not('.menu__dropdown a').addClass('black-ns');
     $('.cta-menu').removeClass('dn-ns');
     $('#menu-open span').addClass('bg-black');
@@ -76,7 +76,7 @@ $(document).ready(function() {
       setTimeout(function(){
         if (scrollAfter > scrollNow) {
             $("nav").addClass("bg-white bb b--black-10");
-            $('.brand img').attr('src', '../../../img/chatclub.svg');
+            $('.brand img').attr('src', '../img/chatclub.svg');
             $('#menu__container a').not('.menu__dropdown a').addClass('black-ns');
             $('#menu-open span').addClass('bg-black');
             $('.has-caret').addClass('caret--black');
