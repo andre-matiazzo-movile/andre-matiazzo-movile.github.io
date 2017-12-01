@@ -1,5 +1,5 @@
     body, input, select, textarea {
-        font-family: 'Soleil', Arial, sans-serif;
+        font-family: 'Montserrat', Arial, sans-serif;
         color: #314047;
     }
     * {margin: 0;}
@@ -15,8 +15,8 @@
     .purple-hover:hover {color: #8272FF;}
     .dark-purple {color: #6454E0;}
     .bg-dark-purple {background-color: #6454E0;}
-    .gray {color: #8994AC;}
-    .bg-gray {background-color: #8994AC;}
+    .gray {color: #6E7074;}
+    .bg-gray {background-color: #6E7074;}
     .bg-light-gray {background-color: #F3F4F6;}
 
     .blue {color: #7EE3F7;}

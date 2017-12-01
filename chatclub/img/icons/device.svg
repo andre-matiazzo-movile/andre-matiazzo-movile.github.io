@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="34px" viewBox="0 0 25 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>device</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Staging" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M2,32 L23,32 L23,2 L2,2 L2,32 Z M1.9125,34 L1.9125,34 C0.856255416,34 3.65984263e-15,33.1437446 -2.22044605e-16,32.0875 L0,32.0875 L-4.4408921e-16,1.9125 C-5.73441865e-16,0.856255416 0.856255416,1.94028982e-16 1.9125,0 L1.9125,0 L23.0875,1.11022302e-15 C24.1437446,9.16194042e-16 25,0.856255416 25,1.9125 L25,1.9125 L25,32.0875 C25,33.1437446 24.1437446,34 23.0875,34 L23.0875,34 L1.9125,34 Z M10,30 L16,30 C16.5522847,30 17,29.5522847 17,29 C17,28.4477153 16.5522847,28 16,28 L10,28 C9.44771525,28 9,28.4477153 9,29 C9,29.5522847 9.44771525,30 10,30 Z" id="device" fill="#315FCE"></path>
+    </g>
+</svg>
