@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="../../css/wallop--slide.css">
 
     <!-- Montserrat -->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
 <!-- Typekit
     <script src="https://use.typekit.net/ggk4dcn.js"></script>
@@ -230,9 +230,9 @@
             <div class="flex flex-wrap">
                 <div class="w-100 w-30-l pl4-l order-2-l">
                     <h3 class="lh-copy pt4-ns black b mb2">
-                       Vantagens do Bot via ChatClub
-                   </h3>
-                   <div class="w-100 flex items-start mt3">
+                     Vantagens do Bot via ChatClub
+                 </h3>
+                 <div class="w-100 flex items-start mt3">
                     <div class="w-32">
                         <img src="../../img/icons/check.svg" class="db w-100 mt1" alt="">
                     </div>
@@ -387,26 +387,26 @@
         // and pass in the number of seconds as interval
         // if you want to start autoplay after a while
         // you can wrap this in a setTimeout(); function
-        autoplay(10000);
+        //autoplay(10000);
 
         // This a a helper function to build a simple
         // auto-play functionality. 
-        function autoplay(interval) {
-            var lastTime = 0;  
+      //   function autoplay(interval) {
+      //       var lastTime = 0;  
 
-            function frame(timestamp) {
-                var update = timestamp - lastTime >= interval;
+      //       function frame(timestamp) {
+      //           var update = timestamp - lastTime >= interval;
 
-                if (update) {
-                  wallop.next();
-                  lastTime = timestamp;
-              }
+      //           if (update) {
+      //             wallop.next();
+      //             lastTime = timestamp;
+      //         }
 
-              requestAnimationFrame(frame);
-          }
+      //         requestAnimationFrame(frame);
+      //     }
 
-          requestAnimationFrame(frame);
-      };
+      //     requestAnimationFrame(frame);
+      // };
   </script>
 </body>
 </html>
